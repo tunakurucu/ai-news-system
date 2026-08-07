@@ -7,7 +7,7 @@ from services.news_filter import filter_news
 from services.news_categorizer import add_categories
 from services.statistics import generate_statistics
 from services.script_generator import generate_news_script
-from services.html_generator import generate_news_html
+from services.html_generator import generate_news_html, generate_search_html, get_css, get_js
 from services.archive_generator import generate_archive, generate_search_index
 from services.publisher import publish
 from services.newsletter_sender import send_newsletter
@@ -36,7 +36,8 @@ def main():
     stats = generate_statistics(categorized_news)
     script = generate_news_script(categorized_news)
     html = generate_news_html(categorized_news, stats)
-   
+    css = get_css()
+    js = get_js()
 
     latest_json_file = PROJECT_ROOT / "data" / "raw" / "latest-news.json"
     archive_json_file = PROJECT_ROOT / "data" / "raw" / f"{today}-news.json"
@@ -50,7 +51,10 @@ def main():
     latest_html_file = PROJECT_ROOT / "outputs" / "html" / "index.html"
     archive_html_file = PROJECT_ROOT / "outputs" / "html" / f"{today}-news.html"
     archive_page_file = PROJECT_ROOT / "outputs" / "html" / "archive.html"
+    search_page_file = PROJECT_ROOT / "outputs" / "html" / "search.html"
 
+    css_file = PROJECT_ROOT / "outputs" / "html" / "assets" / "css" / "news.css"
+    js_file = PROJECT_ROOT / "outputs" / "html" / "assets" / "js" / "news.js"
 
     save_json(categorized_news, latest_json_file)
     save_json(categorized_news, archive_json_file)
@@ -62,43 +66,44 @@ def main():
     save_text(script, archive_script_file)
 
     public_stats_file = (
-    PROJECT_ROOT
-    / "outputs"
-    / "html"
-    / "data"
-    / "stats"
-    / "latest-statistics.json"
+        PROJECT_ROOT
+        / "outputs"
+        / "html"
+        / "data"
+        / "stats"
+        / "latest-statistics.json"
     )
-    public_stats_file.parent.mkdir(
-    parents=True,
-    exist_ok=True
-    )
+    public_stats_file.parent.mkdir(parents=True, exist_ok=True)
+
     search_index_file = (
-    PROJECT_ROOT
-    / "data"
-    / "index"
-    / "search-index.json"
-)
+        PROJECT_ROOT
+        / "data"
+        / "index"
+        / "search-index.json"
+    )
     public_search_index_file = (
-    PROJECT_ROOT
-    / "outputs"
-    / "html"
-    / "data"
-    / "index"
-    / "search-index.json"
-)
-            
+        PROJECT_ROOT
+        / "outputs"
+        / "html"
+        / "data"
+        / "index"
+        / "search-index.json"
+    )
+
+    search_index = generate_search_index(PROJECT_ROOT)
+    search_html = generate_search_html(search_index)
+    archive_html = generate_archive(PROJECT_ROOT)
 
     save_json(stats, public_stats_file)
     save_text(html, latest_html_file)
     save_text(html, archive_html_file)
-
-    archive_html = generate_archive(PROJECT_ROOT)
-    search_index = generate_search_index(PROJECT_ROOT)
+    save_text(search_html, search_page_file)
+    save_text(archive_html, archive_page_file)
+    save_text(css, css_file)
+    save_text(js, js_file)
 
     save_json(search_index, public_search_index_file)
     save_json(search_index, search_index_file)
-    save_text(archive_html, archive_page_file)
 
     publish(PROJECT_ROOT)
 
@@ -129,6 +134,7 @@ def main():
     print(f"Güncel HTML: {latest_html_file}")
     print(f"Arşiv HTML: {archive_html_file}")
     print(f"Arşiv Sayfası: {archive_page_file}")
+    print(f"Arama Sayfası: {search_page_file}")
     print(f"Search Index: {search_index_file}")
     print("Yayın klasörü güncellendi:", PROJECT_ROOT / "docs")
 

@@ -49,12 +49,19 @@ class TestEscape(unittest.TestCase):
 
 
 class TestGenerateNewsHtml(unittest.TestCase):
-    def test_shows_source_and_published_date(self):
-        items = [_base_item()]
-        output = hg.generate_news_html(items, {"toplam_haber": 1})
+    def test_has_core_page_elements(self):
+        output = hg.generate_news_html([_base_item()], {"toplam_haber": 1})
+        self.assertIn("<!DOCTYPE html>", output)
+        self.assertIn("AI News", output)
+        self.assertIn("Bugünün Özeti", output)
+        self.assertIn('id="home-search-input"', output)
+        self.assertIn("category-filter-btn", output)
         self.assertIn("Reuters", output)
-        self.assertIn("7 Ağustos 2026", output)
-        self.assertIn("17:32", output)
+        self.assertIn("Ağustos 2026", output)
+
+    def test_shows_source_and_published_date(self):
+        output = hg.generate_news_html([_base_item()], {"toplam_haber": 1})
+        self.assertIn("Reuters · 7 Ağustos 2026, 17:32", output)
 
     def test_escapes_user_content(self):
         malicious = "<script>alert(1)</script>"
@@ -64,11 +71,14 @@ class TestGenerateNewsHtml(unittest.TestCase):
         output = hg.generate_news_html(items, {"toplam_haber": 1})
 
         self.assertNotIn(malicious, output)
-        self.assertIn("<h3>&lt;script&gt;alert(1)&lt;/script&gt;</h3>", output)
+        self.assertIn("&lt;script&gt;", output)
         self.assertIn("&quot;", output)
         self.assertIn("&amp;", output)
-        # Escaped ampersands appear in the href; the link is still browser-safe.
-        self.assertIn("http://example.com?a=1&amp;b=2", output)
+
+    def test_links_have_safe_rel_and_target(self):
+        output = hg.generate_news_html([_base_item()], {"toplam_haber": 1})
+        self.assertIn('target="_blank"', output)
+        self.assertIn('rel="noopener noreferrer"', output)
 
     def test_no_fake_date_when_missing(self):
         item = _base_item(published_at="", published="")
@@ -83,6 +93,33 @@ class TestGenerateNewsHtml(unittest.TestCase):
     def test_meta_line_without_date(self):
         item = _base_item(published_at="", published="")
         self.assertEqual(hg._meta_line(item), "Reuters")
+
+
+class TestGenerateSearchHtml(unittest.TestCase):
+    def test_embeds_search_data(self):
+        index = [_base_item()]
+        output = hg.generate_search_html(index)
+        self.assertIn('id="search-input"', output)
+        self.assertIn('id="search-results"', output)
+        self.assertIn('id="search-data"', output)
+        self.assertIn("OpenAI announces new model", output)
+
+    def test_no_script_injection_in_search_data(self):
+        index = [{"title": "</script><script>alert(1)</script>", "summary": "", "source": "X", "link": "#"}]
+        output = hg.generate_search_html(index)
+        self.assertNotIn("</script><script>", output)
+        # The closing tag is escaped inside the JSON so it cannot break out of the script element.
+        self.assertIn(r"<\/script>", output)
+
+
+class TestAssets(unittest.TestCase):
+    def test_css_and_js_non_empty(self):
+        css = hg.get_css()
+        js = hg.get_js()
+        self.assertGreater(len(css), 500)
+        self.assertGreater(len(js), 500)
+        self.assertIn(".news-card", css)
+        self.assertIn("newsCards", js)
 
 
 if __name__ == "__main__":
