@@ -70,7 +70,46 @@ def _entry_to_news(entry, source_name, fetched_at):
     }
 
 
+def _is_valid_entry(item):
+    """Require a title and an article URL; timestamp is captured when available."""
+    return bool(item.get("title")) and bool(item.get("link"))
+
+
+def _is_source_enabled(source):
+    """Backwards-compatible enabled check: default to True when missing."""
+    return bool(source.get("enabled", True))
+
+
+def _count_valid(entries, source_name, fetched_at, limit):
+    """Convert raw entries to normalized items and skip invalid ones."""
+    valid = []
+    skipped = 0
+    for entry in entries[:limit]:
+        try:
+            item = _entry_to_news(entry, source_name, fetched_at)
+        except Exception as e:
+            logger.error(f"Haber işlenirken hata {source_name}: {e}")
+            skipped += 1
+            continue
+
+        if _is_valid_entry(item):
+            valid.append(item)
+        else:
+            skipped += 1
+            logger.warning(f"Geçersiz haber atlanıyor {source_name}: title={bool(item.get('title'))}, link={bool(item.get('link'))}")
+
+    return valid, skipped
+
+
 def fetch_news(limit_per_source=10):
+    """Fetch, normalize, and validate news from configured RSS sources.
+
+    Prints a lightweight source-health summary after the run:
+      - OK: source returned one or more entries
+      - ZERO: source responded but returned no entries
+      - FAILED: source could not be reached or parsed
+      - DISABLED: source is marked enabled=false
+    """
     all_news = []
     fetched_at = datetime.now(timezone.utc).isoformat()
     sources = load_rss_sources()
@@ -79,20 +118,36 @@ def fetch_news(limit_per_source=10):
     print("Yüklenen kaynaklar:")
     print(sources)
 
+    source_results = []
+
     for source in sources:
         source_name = source.get("name", "Bilinmeyen")
         source_url = source.get("url", "").strip()
 
-        if not source_url:
-            logger.warning(f"Kaynak URL'si eksik: {source_name}")
+        if not _is_source_enabled(source):
+            message = f"{source_name}: DISABLED"
+            logger.info(message)
+            source_results.append({"source": source_name, "status": "disabled", "count": 0})
+            print(message)
             continue
 
+        if not source_url:
+            message = f"{source_name}: FAILED (kaynak URL'si eksik)"
+            logger.warning(message)
+            source_results.append({"source": source_name, "status": "failed", "count": 0})
+            print(message)
+            continue
+
+        feed = None
         try:
             logger.info(f"RSS çekiliyor: {source_name}")
             feed = feedparser.parse(source_url)
             logger.info(f"RSS tamamlandı: {source_name}")
         except Exception as e:
-            logger.error(f"RSS çekilemedi {source_name}: {e}")
+            message = f"{source_name}: FAILED ({e})"
+            logger.error(message)
+            source_results.append({"source": source_name, "status": "failed", "count": 0})
+            print(message)
             continue
 
         if feed.get("bozo"):
@@ -103,16 +158,30 @@ def fetch_news(limit_per_source=10):
             entries = feed.get("entries", []) or []
         else:
             entries = getattr(feed, "entries", []) or []
-        print(source_name, len(entries))
 
         if not entries:
+            message = f"{source_name}: ZERO (0 geçerli haber)"
             logger.warning(f"RSS kaynağı boş döndü: {source_name}")
+            source_results.append({"source": source_name, "status": "zero", "count": 0})
+            print(message)
             continue
 
-        for entry in entries[:limit_per_source]:
-            try:
-                all_news.append(_entry_to_news(entry, source_name, fetched_at))
-            except Exception as e:
-                logger.error(f"Haber işlenirken hata {source_name}: {e}")
+        valid_items, skipped = _count_valid(entries, source_name, fetched_at, limit_per_source)
+        all_news.extend(valid_items)
+
+        total_in_feed = len(entries)
+        returned = len(valid_items)
+        message = f"{source_name}: OK ({returned}/{limit_per_source} haber, kaynakta {total_in_feed} kayıt)"
+        logger.info(message)
+        source_results.append({"source": source_name, "status": "ok", "count": returned})
+        print(message)
+
+    # Attach the health summary for callers/tests that want to inspect it.
+    fetch_news.source_results = source_results
+
+    print("\n--- KAYNAK SAĞLIK ÖZETİ ---")
+    for result in source_results:
+        status_label = result["status"].upper()
+        print(f"{result['source']}: {status_label} ({result['count']} haber)")
 
     return all_news

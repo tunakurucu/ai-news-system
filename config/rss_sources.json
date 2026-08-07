@@ -1,16 +1,17 @@
 [
   {
     "name": "BBC Türkçe",
-    "url": "https://feeds.bbci.co.uk/turkce/rss.xml"
+    "url": "https://feeds.bbci.co.uk/turkce/rss.xml",
+    "enabled": true
   },
   {
     "name": "TRT Haber",
-    "url": "https://www.trthaber.com/sondakika_articles.rss"
+    "url": "https://www.trthaber.com/sondakika_articles.rss",
+    "enabled": true
   },
   {
     "name": "Anadolu Ajansı",
-    "url": "https://www.aa.com.tr/tr/rss/default?cat=sondakika"
-    }
-
-
+    "url": "https://www.aa.com.tr/tr/rss/default?cat=gundem",
+    "enabled": true
+  }
 ]

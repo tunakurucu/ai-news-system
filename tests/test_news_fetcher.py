@@ -9,6 +9,18 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 from services import news_fetcher as nf
 
 
+def _make_entry(title="Title", link="http://example.com", published=None, summary="Summary"):
+    entry = {
+        "title": title,
+        "summary": summary,
+        "link": link,
+    }
+    if published is not None:
+        entry["published"] = published
+        entry["published_parsed"] = (2026, 8, 7, 14, 32, 0, 0, 0, 0)
+    return entry
+
+
 class TestParsePublishedDatetime(unittest.TestCase):
     def test_parsed_tuple_returns_iso(self):
         entry = {
@@ -100,6 +112,11 @@ class TestFetchNews(unittest.TestCase):
         self.assertEqual(result[0]["source"], "Good Feed")
         self.assertEqual(result[0]["published_at"], "2026-08-07T14:32:00+00:00")
 
+        health = nf.fetch_news.source_results
+        statuses = {h["source"]: h["status"] for h in health}
+        self.assertEqual(statuses["Bad Feed"], "failed")
+        self.assertEqual(statuses["Good Feed"], "ok")
+
     @patch("services.news_fetcher.load_rss_sources")
     @patch("services.news_fetcher.feedparser.parse")
     def test_empty_malformed_feed_is_skipped(self, mock_parse, mock_load):
@@ -114,6 +131,61 @@ class TestFetchNews(unittest.TestCase):
 
         result = nf.fetch_news(limit_per_source=1)
         self.assertEqual(result, [])
+
+        health = nf.fetch_news.source_results
+        self.assertEqual(health[0]["status"], "zero")
+
+    @patch("services.news_fetcher.load_rss_sources")
+    @patch("services.news_fetcher.feedparser.parse")
+    def test_disabled_source_is_skipped(self, mock_parse, mock_load):
+        mock_load.return_value = [
+            {"name": "Disabled", "url": "http://disabled.example/rss", "enabled": False},
+            {"name": "Enabled", "url": "http://enabled.example/rss"},
+        ]
+
+        mock_parse.return_value = {
+            "entries": [_make_entry()],
+        }
+
+        result = nf.fetch_news(limit_per_source=1)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0]["source"], "Enabled")
+        self.assertEqual(mock_parse.call_count, 1)
+
+        health = nf.fetch_news.source_results
+        statuses = {h["source"]: h["status"] for h in health}
+        self.assertEqual(statuses["Disabled"], "disabled")
+        self.assertEqual(statuses["Enabled"], "ok")
+
+    @patch("services.news_fetcher.load_rss_sources")
+    @patch("services.news_fetcher.feedparser.parse")
+    def test_missing_url_is_reported_as_failed(self, mock_parse, mock_load):
+        mock_load.return_value = [
+            {"name": "No URL", "enabled": True},
+        ]
+
+        result = nf.fetch_news(limit_per_source=1)
+        self.assertEqual(result, [])
+        self.assertEqual(nf.fetch_news.source_results[0]["status"], "failed")
+
+    @patch("services.news_fetcher.load_rss_sources")
+    @patch("services.news_fetcher.feedparser.parse")
+    def test_invalid_entries_are_filtered_out(self, mock_parse, mock_load):
+        mock_load.return_value = [
+            {"name": "Mixed", "url": "http://mixed.example/rss"},
+        ]
+        mock_parse.return_value = {
+            "entries": [
+                {"title": "Has no link"},
+                {"link": "http://no-title.example"},
+                _make_entry(title="Valid", link="http://valid.example"),
+            ],
+        }
+
+        result = nf.fetch_news(limit_per_source=10)
+        self.assertEqual(len(result), 1)
+        self.assertEqual(result[0]["title"], "Valid")
+
 
 if __name__ == "__main__":
     unittest.main()
