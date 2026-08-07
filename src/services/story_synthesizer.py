@@ -11,7 +11,7 @@ from utils.logger import get_logger
 
 logger = get_logger()
 
-DEFAULT_MODEL = "gpt-4o-mini"
+DEFAULT_MODEL = "gpt-5-mini"
 MAX_TOKENS = 1024
 CACHE_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "cache" / "synthesis"
 
@@ -123,6 +123,12 @@ def _derive_citations(story):
     return citations
 
 
+def _is_reasoning_model(model):
+    """Return True for GPT-5 and o-series models that do not support temperature."""
+    name = (model or "").lower()
+    return name.startswith(("gpt-5", "o1", "o3", "o4"))
+
+
 def _build_messages(story):
     user_content = {
         "canonical_title": story.get("canonical_title", ""),
@@ -177,14 +183,18 @@ def synthesize_story(story, model=None, client=None, cache_dir=None):
 
     model = model or os.getenv("OPENAI_MODEL", DEFAULT_MODEL)
 
+    create_params = {
+        "model": model,
+        "messages": _build_messages(story),
+        "response_format": _OUTPUT_SCHEMA,
+        "max_completion_tokens": MAX_TOKENS,
+    }
+    # GPT-5 and o-series reasoning models do not support the temperature parameter.
+    if not _is_reasoning_model(model):
+        create_params["temperature"] = 0.2
+
     try:
-        response = client.chat.completions.create(
-            model=model,
-            messages=_build_messages(story),
-            response_format=_OUTPUT_SCHEMA,
-            max_tokens=MAX_TOKENS,
-            temperature=0.2,
-        )
+        response = client.chat.completions.create(**create_params)
         raw = response.choices[0].message.content
         parsed = json.loads(raw)
     except openai.APIError as e:
