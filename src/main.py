@@ -9,6 +9,7 @@ from services.news_categorizer import add_categories
 from services.statistics import generate_statistics
 from services.script_generator import generate_news_script
 from services.html_generator import generate_news_html, generate_search_html, get_css, get_js
+from services.story_clustering import generate_stories
 from services.archive_generator import generate_archive, generate_search_index
 from services.publisher import publish
 from services.newsletter_sender import send_newsletter
@@ -66,6 +67,7 @@ def main():
     categorized_news = add_categories(filtered_news)
 
     stats = generate_statistics(categorized_news)
+    stories = generate_stories(categorized_news)
     script = generate_news_script(categorized_news)
     html = generate_news_html(categorized_news, stats)
     css = get_css()
@@ -76,6 +78,9 @@ def main():
 
     latest_stats_file = PROJECT_ROOT / "data" / "stats" / "latest-statistics.json"
     archive_stats_file = PROJECT_ROOT / "data" / "stats" / f"{today}-statistics.json"
+
+    latest_stories_file = PROJECT_ROOT / "data" / "stories" / "latest-stories.json"
+    archive_stories_file = PROJECT_ROOT / "data" / "stories" / f"{today}-stories.json"
 
     latest_script_file = PROJECT_ROOT / "outputs" / "scripts" / "daily-news-script.txt"
     archive_script_file = PROJECT_ROOT / "outputs" / "scripts" / f"{today}-script.txt"
@@ -93,6 +98,9 @@ def main():
 
     save_json(stats, latest_stats_file)
     save_json(stats, archive_stats_file)
+
+    save_json(stories, latest_stories_file)
+    save_json(stories, archive_stories_file)
 
     save_text(script, latest_script_file)
     save_text(script, archive_script_file)
