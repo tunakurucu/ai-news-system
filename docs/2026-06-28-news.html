@@ -1,465 +1,433 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
     <link rel="stylesheet" href="assets/css/news.css">
     <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <header class="site-nav">
-        <div class="nav-inner">
-            <div class="brand">AI News</div>
-            <a href="index.html">Current News</a>
-            <a href="archive.html">Archive</a>
-            <a href="search.html">Search</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
         </div>
     </header>
 
     <main class="site-wrapper">
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-text">
             <h1>Günün Haberleri</h1>
-            <div class="search-box">
-                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            <p class="hero-date">28 Haziran 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 10</span><span class="stat-item"><strong>genel</strong> 10</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>&#x27;Dövüldük, soyulduk, kar fırtınasında bırakıldık&#x27;: Afgan göçmenlerden Türkiye sınırında kötü muamele iddiası</h3>
+        <p>Yaşları 13 ile 25 arasında değişen 12 göçmen, BBC Afghan Forensic&#x27;e, Avrupa&#x27;ya gitmeye çalışırken Türk sınır görevlileri tarafından dövülen, soyulan ve ardından kar altında kaderlerine terk edilen 50 kişi arasında olduklarını söyledi. Dışişleri Bakanlığı iddiaları reddetti</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 27 Haziran 2026, 10:50</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c04yg9qpev6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 28 Haziran 2026, 09:26</span>
             </div>
-
-            <div class="category-filters">
-                <button class="category-filter-btn active" data-category="all">Tümü</button>
-                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                <button class="category-filter-btn" data-category="genel">Genel</button>
+            <h3>Türkiye&#x27;nin yardım eli Venezuela&#x27;da</h3>
+            <p>Büyük depremlerle sarsılan Venezuela&#x27;ya ulaşan Türk arama kurtarma ekipleri, enkaz altında kalanlara ulaşmak için çalışmalarına başlıyor. Ekipler, &quot;Türk halkının yardımseverliğini ve dostluğunu getirdik&quot; mesajını verdi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/turkiyenin-yardim-eli-venezuelada-949556.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 27 Haziran 2026, 17:03</span>
             </div>
-        </section>
-
-        <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+            <h3>Venezuela&#x27;da peş peşe iki deprem: On binlerce kayıp olduğu bildiriliyor</h3>
+            <p>Venezuela&#x27;da 24 Haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde ölenlerin sayısı 920&#x27;ye yükseldi, en az 3360 yaralı var. Venezuela Devlet Başkanlığı görevini vekaleten yürüten Delcy Rodriguez, ülke genelinde olağanüstü hal ilan etti.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
-
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>10</span>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 28 Haziran 2026, 09:31</span>
+            </div>
+            <h3>Bakırköy&#x27;de dere yatağında binlerce ölü balık bulundu</h3>
+            <p>İstanbul&#x27;un Bakırköy ilçesinde sahile bağlantısı bulunan dere yatağında çok sayıda ölü balık tespit edildi. AFAD, Sahil Güvenlik ve belediye ekipleri bölgede inceleme yaparken, sudan alınan numuneler analiz için laboratuvara gönderildi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/turkiye/bakirkoyde-dere-yataginda-binlerce-olu-balik-bulundu-949557.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
-
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>10</span>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 27 Haziran 2026, 13:12</span>
+            </div>
+            <h3>DEM Parti&#x27;nin çerçeve yasa beklentisi: İtirazlar ve talepler neler?</h3>
+            <p>İktidarın &quot;Terörsüz Türkiye&quot; olarak adlandırdığı yeni çözüm sürecinin hukuki altyapısının ilk adımı olacak çerçeve yasaya ilişkin tartışmalar sürüyor. DEM Partililerle görüşen Ayşe Sayın Ankara&#x27;dan bildiriyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c30yj77grqjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-06-28 09:41</span>
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">10 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="&#x27;dövüldük, soyulduk, kar fırtınasında bırakıldık&#x27;: afgan göçmenlerden türkiye sınırında kötü muamele iddiası yaşları 13 ile 25 arasında değişen 12 göçmen, bbc afghan forensic&#x27;e, avrupa&#x27;ya gitmeye çalışırken türk sınır görevlileri tarafından dövülen, soyulan ve ardından kar altında kaderlerine terk edilen 50 kişi arasında olduklarını söyledi. dışişleri bakanlığı iddiaları reddetti dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 27 Haziran 2026, 10:50</span>
         </div>
+        <h3>&#x27;Dövüldük, soyulduk, kar fırtınasında bırakıldık&#x27;: Afgan göçmenlerden Türkiye sınırında kötü muamele iddiası</h3>
+        <p>Yaşları 13 ile 25 arasında değişen 12 göçmen, BBC Afghan Forensic&#x27;e, Avrupa&#x27;ya gitmeye çalışırken Türk sınır görevlileri tarafından dövülen, soyulan ve ardından kar altında kaderlerine terk edilen 50 kişi arasında olduklarını söyledi. Dışişleri Bakanlığı iddiaları reddetti</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Haziran 2026, 10:50</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c04yg9qpev6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;nin yardım eli venezuela&#x27;da büyük depremlerle sarsılan venezuela&#x27;ya ulaşan türk arama kurtarma ekipleri, enkaz altında kalanlara ulaşmak için çalışmalarına başlıyor. ekipler, &quot;türk halkının yardımseverliğini ve dostluğunu getirdik&quot; mesajını verdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 28 Haziran 2026, 09:26</span>
+        </div>
+        <h3>Türkiye&#x27;nin yardım eli Venezuela&#x27;da</h3>
+        <p>Büyük depremlerle sarsılan Venezuela&#x27;ya ulaşan Türk arama kurtarma ekipleri, enkaz altında kalanlara ulaşmak için çalışmalarına başlıyor. Ekipler, &quot;Türk halkının yardımseverliğini ve dostluğunu getirdik&quot; mesajını verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Haziran 2026, 09:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/turkiyenin-yardim-eli-venezuelada-949556.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="venezuela&#x27;da peş peşe iki deprem: on binlerce kayıp olduğu bildiriliyor venezuela&#x27;da 24 haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde ölenlerin sayısı 920&#x27;ye yükseldi, en az 3360 yaralı var. venezuela devlet başkanlığı görevini vekaleten yürüten delcy rodriguez, ülke genelinde olağanüstü hal ilan etti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 27 Haziran 2026, 17:03</span>
+        </div>
+        <h3>Venezuela&#x27;da peş peşe iki deprem: On binlerce kayıp olduğu bildiriliyor</h3>
+        <p>Venezuela&#x27;da 24 Haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde ölenlerin sayısı 920&#x27;ye yükseldi, en az 3360 yaralı var. Venezuela Devlet Başkanlığı görevini vekaleten yürüten Delcy Rodriguez, ülke genelinde olağanüstü hal ilan etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Haziran 2026, 17:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakırköy&#x27;de dere yatağında binlerce ölü balık bulundu i̇stanbul&#x27;un bakırköy ilçesinde sahile bağlantısı bulunan dere yatağında çok sayıda ölü balık tespit edildi. afad, sahil güvenlik ve belediye ekipleri bölgede inceleme yaparken, sudan alınan numuneler analiz için laboratuvara gönderildi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 28 Haziran 2026, 09:31</span>
+        </div>
+        <h3>Bakırköy&#x27;de dere yatağında binlerce ölü balık bulundu</h3>
+        <p>İstanbul&#x27;un Bakırköy ilçesinde sahile bağlantısı bulunan dere yatağında çok sayıda ölü balık tespit edildi. AFAD, Sahil Güvenlik ve belediye ekipleri bölgede inceleme yaparken, sudan alınan numuneler analiz için laboratuvara gönderildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Haziran 2026, 09:31</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/bakirkoyde-dere-yataginda-binlerce-olu-balik-bulundu-949557.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd, bir yük gemisine saldırının ardından i̇ran&#x27;ı vurdu abd başkan donald trump i̇ran&#x27;ı, hürmüz boğazı&#x27;nda bir yük gemisine düzenlenen saldırının ardından ateşkesi &quot;akılsızca ihlal etmekle&quot; suçladı. ardından abd ordusu i̇ran hedeflerine saldırılar düzenledi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 27 Haziran 2026, 10:44</span>
+        </div>
+        <h3>ABD, bir yük gemisine saldırının ardından İran&#x27;ı vurdu</h3>
+        <p>ABD Başkan Donald Trump İran&#x27;ı, Hürmüz Boğazı&#x27;nda bir yük gemisine düzenlenen saldırının ardından ateşkesi &quot;akılsızca ihlal etmekle&quot; suçladı. Ardından ABD ordusu İran hedeflerine saldırılar düzenledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Haziran 2026, 10:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cd0mk28d8vyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trump: i̇ran&#x27;da başlattığımız işi askeri olarak tamamlamak zorunda kalabiliriz abd başkanı donald trump, ateşkesi ihlal ettiği gerekçesiyle i̇ran&#x27;a yönelik saldırılara ilişkin, &quot;artık makul olamayacağımız bir nokta gelebilir ve başarıyla başlattığımız işi askeri olarak tamamlamak zorunda kalabiliriz. bu olursa artık i̇ran var olmaz.&quot; açıklamasında bulundu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 28 Haziran 2026, 09:00</span>
+        </div>
+        <h3>Trump: İran&#x27;da başlattığımız işi askeri olarak tamamlamak zorunda kalabiliriz</h3>
+        <p>ABD Başkanı Donald Trump, ateşkesi ihlal ettiği gerekçesiyle İran&#x27;a yönelik saldırılara ilişkin, &quot;Artık makul olamayacağımız bir nokta gelebilir ve başarıyla başlattığımız işi askeri olarak tamamlamak zorunda kalabiliriz. Bu olursa artık İran var olmaz.&quot; açıklamasında bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Haziran 2026, 09:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/trump-iranda-baslattigimiz-isi-askeri-olarak-tamamlamak-zorunda-kalabiliriz-949554.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran devrim muhafızları ordusu: bahreyn ve kuveyt&#x27;te abd üsleri vuruldu i̇ran devrim muhafızları ordusu, abd&#x27;nin i̇ran&#x27;a yönelik son saldırılarına karşılık olarak kuveyt ve bahreyn&#x27;deki abd askeri üslerine füze ve insansız hava araçlarıyla saldırı düzenlediklerini duyurdu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 28 Haziran 2026, 06:36</span>
+        </div>
+        <h3>İran Devrim Muhafızları Ordusu: Bahreyn ve Kuveyt&#x27;te ABD üsleri vuruldu</h3>
+        <p>İran Devrim Muhafızları Ordusu, ABD&#x27;nin İran&#x27;a yönelik son saldırılarına karşılık olarak Kuveyt ve Bahreyn&#x27;deki ABD askeri üslerine füze ve insansız hava araçlarıyla saldırı düzenlediklerini duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Haziran 2026, 06:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlari-ordusu-bahreyn-ve-kuveytte-abd-usleri-vuruldu-949553.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd, i̇ran&#x27;ı vurdu i̇ran devlet televizyonu, ülkenin güneyinde hürmüz boğazı yakınlarındaki sirik kentinde patlama sesleri duyulduğunu bildirirken, kentteki bir iletişim kulesinin saldırının hedefi olduğu belirtildi. abd ordusu, &quot;i̇ran’daki çok sayıda hedefe ek saldırılar düzenledik&quot; açıklamasını yaptı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 28 Haziran 2026, 00:35</span>
+        </div>
+        <h3>ABD, İran&#x27;ı vurdu</h3>
+        <p>İran devlet televizyonu, ülkenin güneyinde Hürmüz Boğazı yakınlarındaki Sirik kentinde patlama sesleri duyulduğunu bildirirken, kentteki bir iletişim kulesinin saldırının hedefi olduğu belirtildi. ABD ordusu, &quot;İran’daki çok sayıda hedefe ek saldırılar düzenledik&quot; açıklamasını yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Haziran 2026, 00:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-irani-vurdu-949551.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="venezuela&#x27;da 4,8 büyüklüğünde deprem venezuela&#x27;da 24 haziran&#x27;daki depremlerin ardından, 4,8 büyüklüğünde bir deprem meydana geldi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 23:24</span>
+        </div>
+        <h3>Venezuela&#x27;da 4,8 büyüklüğünde deprem</h3>
+        <p>Venezuela&#x27;da 24 Haziran&#x27;daki depremlerin ardından, 4,8 büyüklüğünde bir deprem meydana geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 23:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/venezuelada-48-buyuklugunde-deprem-949548.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail, yeni imzalanan çerçeve anlaşması uyarınca lübnan&#x27;daki iki bölgeden çekilecek i̇srail ve lübnan, abd arabuluculuğunda birkaç gün süren müzakerelerin ardından 26 haziran&#x27;da washington&#x27;da bir çerçeve anlaşması imzaladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 27 Haziran 2026, 17:45</span>
+        </div>
+        <h3>İsrail, yeni imzalanan çerçeve anlaşması uyarınca Lübnan&#x27;daki iki bölgeden çekilecek</h3>
+        <p>İsrail ve Lübnan, ABD arabuluculuğunda birkaç gün süren müzakerelerin ardından 26 Haziran&#x27;da Washington&#x27;da bir çerçeve anlaşması imzaladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Haziran 2026, 17:45</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cjdgr1v0g0mo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">10 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="dem parti&#x27;nin çerçeve yasa beklentisi: i̇tirazlar ve talepler neler? i̇ktidarın &quot;terörsüz türkiye&quot; olarak adlandırdığı yeni çözüm sürecinin hukuki altyapısının ilk adımı olacak çerçeve yasaya ilişkin tartışmalar sürüyor. dem partililerle görüşen ayşe sayın ankara&#x27;dan bildiriyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 27 Haziran 2026, 13:12</span>
+        </div>
+        <h3>DEM Parti&#x27;nin çerçeve yasa beklentisi: İtirazlar ve talepler neler?</h3>
+        <p>İktidarın &quot;Terörsüz Türkiye&quot; olarak adlandırdığı yeni çözüm sürecinin hukuki altyapısının ilk adımı olacak çerçeve yasaya ilişkin tartışmalar sürüyor. DEM Partililerle görüşen Ayşe Sayın Ankara&#x27;dan bildiriyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Haziran 2026, 13:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c30yj77grqjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ngiltere&#x27;de başbakanlar neden sürekli değişiyor? keir starmer, son 10 yılda görevden ayrılan altıncı i̇ngiltere başbakanı oldu. bbc&#x27;den rob watson, bu istikrarsızlığın ardındaki nedenleri inceliyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 27 Haziran 2026, 12:28</span>
+        </div>
+        <h3>İngiltere&#x27;de başbakanlar neden sürekli değişiyor?</h3>
+        <p>Keir Starmer, son 10 yılda görevden ayrılan altıncı İngiltere başbakanı oldu. BBC&#x27;den Rob Watson, bu istikrarsızlığın ardındaki nedenleri inceliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Haziran 2026, 12:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvgdr1qjypgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="öğretmenler 13 gündür sürdürdükleri açlık grevini sonlandırdı sendika tarafından yapılan açıklamada, &quot;arkadaşlarımızın, ailelerimizin hayatı ve yaşayabilecekleri olumsuz durumlar karşısında sorumlu davranıyor, kamuoyunun ve kamuoyunun temsiliyetini üstlenmiş aydın, akademisyen, sanatçı dostların çağrısına karşılık veriyor, ankara&#x27;daki direnişimize ara veriyor, açlık grevimizi sonlandırıyoruz&quot; denildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 27 Haziran 2026, 19:58</span>
+        </div>
+        <h3>Öğretmenler 13 gündür sürdürdükleri açlık grevini sonlandırdı</h3>
+        <p>Sendika tarafından yapılan açıklamada, &quot;Arkadaşlarımızın, ailelerimizin hayatı ve yaşayabilecekleri olumsuz durumlar karşısında sorumlu davranıyor, kamuoyunun ve kamuoyunun temsiliyetini üstlenmiş aydın, akademisyen, sanatçı dostların çağrısına karşılık veriyor, Ankara&#x27;daki direnişimize ara veriyor, açlık grevimizi sonlandırıyoruz&quot; denildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Haziran 2026, 19:58</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyekjg40gzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="faciaya dönüşen kaza: tır motosikletin üzerine devrildi, 2 ölü ağrı&#x27;nın patnos ilçesinde büyükbaş hayvan yüklü tır ile otomobilin çarpışması sonucu meydana gelen zincirleme kazada, tır motosikletin üzerine devrildi. kazada 2 kişi hayatını kaybetti, 3 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Haziran 2026, 09:16</span>
+        </div>
+        <h3>Faciaya dönüşen kaza: Tır motosikletin üzerine devrildi, 2 ölü</h3>
+        <p>Ağrı&#x27;nın Patnos ilçesinde büyükbaş hayvan yüklü tır ile otomobilin çarpışması sonucu meydana gelen zincirleme kazada, tır motosikletin üzerine devrildi. Kazada 2 kişi hayatını kaybetti, 3 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Haziran 2026, 09:16</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/faciaya-donusen-kaza-tir-motosikletin-uzerine-devrildi-2-olu-949555.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;sperm kardeşleri&#x27;: aynı sperm bağışçısından doğduklarını 20&#x27;lerinde fark ettiler natasha, gemma ve helen birbirlerini bulmanın &quot;bir peri masalı&quot; gibi olduğunu söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 27 Haziran 2026, 10:51</span>
+        </div>
+        <h3>&#x27;Sperm kardeşleri&#x27;: Aynı sperm bağışçısından doğduklarını 20&#x27;lerinde fark ettiler</h3>
+        <p>Natasha, Gemma ve Helen birbirlerini bulmanın &quot;bir peri masalı&quot; gibi olduğunu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Haziran 2026, 10:51</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cgqjn4yx0d7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="deniz göktaş&#x27;ın gösterisinden kesitlerin bulunduğu x paylaşımlarına erişim engeli komedyen deniz göktaş&#x27;ın son stad-up gösterisi ölü deniz&#x27;den x&#x27;te paylaşılan iki kesit türkiye&#x27;den görünmez kılındı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 27 Haziran 2026, 15:52</span>
+        </div>
+        <h3>Deniz Göktaş&#x27;ın gösterisinden kesitlerin bulunduğu X paylaşımlarına erişim engeli</h3>
+        <p>Komedyen Deniz Göktaş&#x27;ın son stad-up gösterisi Ölü Deniz&#x27;den X&#x27;te paylaşılan iki kesit Türkiye&#x27;den görünmez kılındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Haziran 2026, 15:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqx1qjqxy30o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hayallerimiz, öfkelerimiz ve kadir i̇nanır kadir i̇nanır 58 yıllık kariyerine 182 film, 12 dizi sığdırdı. yeşilçam&#x27;ın en üretken ama türkiye&#x27;nin en sancılı dönemlerinde kamera karşısındaydı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 26 Haziran 2026, 20:35</span>
+        </div>
+        <h3>Hayallerimiz, öfkelerimiz ve Kadir İnanır</h3>
+        <p>Kadir İnanır 58 yıllık kariyerine 182 film, 12 dizi sığdırdı. Yeşilçam&#x27;ın en üretken ama Türkiye&#x27;nin en sancılı dönemlerinde kamera karşısındaydı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Haziran 2026, 20:35</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yezked38yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kayseri&#x27;de bıçaklı saldırıya uğrayan 2 kişi öldü kayseri&#x27;nin merkez kocasinan ilçesinde cami avlusunda psikolojik rahatsızlığı olduğu ileri sürülen kişinin bıçaklı saldırısına uğrayan 2 kişi hayatını kaybetti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Haziran 2026, 02:56</span>
+        </div>
+        <h3>Kayseri&#x27;de bıçaklı saldırıya uğrayan 2 kişi öldü</h3>
+        <p>Kayseri&#x27;nin merkez Kocasinan ilçesinde cami avlusunda psikolojik rahatsızlığı olduğu ileri sürülen kişinin bıçaklı saldırısına uğrayan 2 kişi hayatını kaybetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Haziran 2026, 02:56</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/kayseride-bicakli-saldiriya-ugrayan-2-kisi-oldu-949552.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yurt dışına kaçmaya çalışan 6 fetö şüphelisi ve göçmen kaçakçısı yakalandı edirne&#x27;nin keşan ilçesinde yurt dışına kaçmaya çalışan 6 fetullahçı terör örgütü (fetö) şüphelisi ile göçmen kaçakçılığı yaptığı öne sürülen bir şüpheli yakalandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 23:42</span>
+        </div>
+        <h3>Yurt dışına kaçmaya çalışan 6 FETÖ şüphelisi ve göçmen kaçakçısı yakalandı</h3>
+        <p>Edirne&#x27;nin Keşan ilçesinde yurt dışına kaçmaya çalışan 6 Fetullahçı Terör Örgütü (FETÖ) şüphelisi ile göçmen kaçakçılığı yaptığı öne sürülen bir şüpheli yakalandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 23:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/yurt-disina-kacmaya-calisan-6-feto-suphelisi-ve-gocmen-kacakcisi-yakalandi-949549.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="büyükada&#x27;ya ziyaretçi akını havaların ısınmasıyla birlikte hafta sonu büyükada&#x27;da ziyaretçi yoğunluğu yaşandı. adalara gelen vatandaşlar, güzel havayı yürüyüş yaparak, bisiklet sürerek ve sahilde vakit geçirerek değerlendirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 22:27</span>
+        </div>
+        <h3>Büyükada&#x27;ya ziyaretçi akını</h3>
+        <p>Havaların ısınmasıyla birlikte hafta sonu Büyükada&#x27;da ziyaretçi yoğunluğu yaşandı. Adalara gelen vatandaşlar, güzel havayı yürüyüş yaparak, bisiklet sürerek ve sahilde vakit geçirerek değerlendirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 22:27</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/buyukadaya-ziyaretci-akini-949547.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c04yg9qpev6o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>'Dövüldük, soyulduk, kar fırtınasında bırakıldık': Afgan göçmenlerden Türkiye sınırında kötü muamele iddiası</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/gundem/turkiyenin-yardim-eli-venezuelada-949556.html" target="_blank">
-                <strong>Türkiye'nin yardım eli Venezuela'da</strong>
-            </a>
-        </li>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Venezuela'da peş peşe iki deprem: On binlerce kayıp olduğu bildiriliyor</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/turkiye/bakirkoyde-dere-yataginda-binlerce-olu-balik-bulundu-949557.html" target="_blank">
-                <strong>Bakırköy'de dere yatağında binlerce ölü balık bulundu</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c30yj77grqjo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>DEM Parti'nin çerçeve yasa beklentisi: İtirazlar ve talepler neler?</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            'dövüldük, soyulduk, kar fırtınasında bırakıldık': afgan göçmenlerden türkiye sınırında kötü muamele iddiası
-            yaşları 13 ile 25 arasında değişen 12 göçmen, bbc afghan forensic'e, avrupa'ya gitmeye çalışırken türk sınır görevlileri tarafından dövülen, soyulan ve ardından kar altında kaderlerine terk edilen 50 kişi arasında olduklarını söyledi. dışişleri bakanlığı iddiaları reddetti
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>'Dövüldük, soyulduk, kar fırtınasında bırakıldık': Afgan göçmenlerden Türkiye sınırında kötü muamele iddiası</h3>
-                    <p>Yaşları 13 ile 25 arasında değişen 12 göçmen, BBC Afghan Forensic'e, Avrupa'ya gitmeye çalışırken Türk sınır görevlileri tarafından dövülen, soyulan ve ardından kar altında kaderlerine terk edilen 50 kişi arasında olduklarını söyledi. Dışişleri Bakanlığı iddiaları reddetti</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c04yg9qpev6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye'nin yardım eli venezuela'da
-            büyük depremlerle sarsılan venezuela'ya ulaşan türk arama kurtarma ekipleri, enkaz altında kalanlara ulaşmak için çalışmalarına başlıyor. ekipler, "türk halkının yardımseverliğini ve dostluğunu getirdik" mesajını verdi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Türkiye'nin yardım eli Venezuela'da</h3>
-                    <p>Büyük depremlerle sarsılan Venezuela'ya ulaşan Türk arama kurtarma ekipleri, enkaz altında kalanlara ulaşmak için çalışmalarına başlıyor. Ekipler, "Türk halkının yardımseverliğini ve dostluğunu getirdik" mesajını verdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/turkiyenin-yardim-eli-venezuelada-949556.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            venezuela'da peş peşe iki deprem: on binlerce kayıp olduğu bildiriliyor
-            venezuela'da 24 haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde ölenlerin sayısı 920'ye yükseldi, en az 3360 yaralı var. venezuela devlet başkanlığı görevini vekaleten yürüten delcy rodriguez, ülke genelinde olağanüstü hal ilan etti.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Venezuela'da peş peşe iki deprem: On binlerce kayıp olduğu bildiriliyor</h3>
-                    <p>Venezuela'da 24 Haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde ölenlerin sayısı 920'ye yükseldi, en az 3360 yaralı var. Venezuela Devlet Başkanlığı görevini vekaleten yürüten Delcy Rodriguez, ülke genelinde olağanüstü hal ilan etti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            bakırköy'de dere yatağında binlerce ölü balık bulundu
-            i̇stanbul'un bakırköy ilçesinde sahile bağlantısı bulunan dere yatağında çok sayıda ölü balık tespit edildi. afad, sahil güvenlik ve belediye ekipleri bölgede inceleme yaparken, sudan alınan numuneler analiz için laboratuvara gönderildi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Bakırköy'de dere yatağında binlerce ölü balık bulundu</h3>
-                    <p>İstanbul'un Bakırköy ilçesinde sahile bağlantısı bulunan dere yatağında çok sayıda ölü balık tespit edildi. AFAD, Sahil Güvenlik ve belediye ekipleri bölgede inceleme yaparken, sudan alınan numuneler analiz için laboratuvara gönderildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/bakirkoyde-dere-yataginda-binlerce-olu-balik-bulundu-949557.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd, bir yük gemisine saldırının ardından i̇ran'ı vurdu
-            abd başkan donald trump i̇ran'ı, hürmüz boğazı'nda bir yük gemisine düzenlenen saldırının ardından ateşkesi "akılsızca ihlal etmekle" suçladı. ardından abd ordusu i̇ran hedeflerine saldırılar düzenledi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD, bir yük gemisine saldırının ardından İran'ı vurdu</h3>
-                    <p>ABD Başkan Donald Trump İran'ı, Hürmüz Boğazı'nda bir yük gemisine düzenlenen saldırının ardından ateşkesi "akılsızca ihlal etmekle" suçladı. Ardından ABD ordusu İran hedeflerine saldırılar düzenledi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cd0mk28d8vyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            trump: i̇ran'da başlattığımız işi askeri olarak tamamlamak zorunda kalabiliriz
-            abd başkanı donald trump, ateşkesi ihlal ettiği gerekçesiyle i̇ran'a yönelik saldırılara ilişkin, "artık makul olamayacağımız bir nokta gelebilir ve başarıyla başlattığımız işi askeri olarak tamamlamak zorunda kalabiliriz. bu olursa artık i̇ran var olmaz." açıklamasında bulundu.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Trump: İran'da başlattığımız işi askeri olarak tamamlamak zorunda kalabiliriz</h3>
-                    <p>ABD Başkanı Donald Trump, ateşkesi ihlal ettiği gerekçesiyle İran'a yönelik saldırılara ilişkin, "Artık makul olamayacağımız bir nokta gelebilir ve başarıyla başlattığımız işi askeri olarak tamamlamak zorunda kalabiliriz. Bu olursa artık İran var olmaz." açıklamasında bulundu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/trump-iranda-baslattigimiz-isi-askeri-olarak-tamamlamak-zorunda-kalabiliriz-949554.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ran devrim muhafızları ordusu: bahreyn ve kuveyt'te abd üsleri vuruldu
-            i̇ran devrim muhafızları ordusu, abd'nin i̇ran'a yönelik son saldırılarına karşılık olarak kuveyt ve bahreyn'deki abd askeri üslerine füze ve insansız hava araçlarıyla saldırı düzenlediklerini duyurdu.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>İran Devrim Muhafızları Ordusu: Bahreyn ve Kuveyt'te ABD üsleri vuruldu</h3>
-                    <p>İran Devrim Muhafızları Ordusu, ABD'nin İran'a yönelik son saldırılarına karşılık olarak Kuveyt ve Bahreyn'deki ABD askeri üslerine füze ve insansız hava araçlarıyla saldırı düzenlediklerini duyurdu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlari-ordusu-bahreyn-ve-kuveytte-abd-usleri-vuruldu-949553.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd, i̇ran'ı vurdu
-            i̇ran devlet televizyonu, ülkenin güneyinde hürmüz boğazı yakınlarındaki sirik kentinde patlama sesleri duyulduğunu bildirirken, kentteki bir iletişim kulesinin saldırının hedefi olduğu belirtildi. abd ordusu, "i̇ran’daki çok sayıda hedefe ek saldırılar düzenledik" açıklamasını yaptı.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD, İran'ı vurdu</h3>
-                    <p>İran devlet televizyonu, ülkenin güneyinde Hürmüz Boğazı yakınlarındaki Sirik kentinde patlama sesleri duyulduğunu bildirirken, kentteki bir iletişim kulesinin saldırının hedefi olduğu belirtildi. ABD ordusu, "İran’daki çok sayıda hedefe ek saldırılar düzenledik" açıklamasını yaptı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/abd-irani-vurdu-949551.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            venezuela'da 4,8 büyüklüğünde deprem
-            venezuela'da 24 haziran'daki depremlerin ardından, 4,8 büyüklüğünde bir deprem meydana geldi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Venezuela'da 4,8 büyüklüğünde deprem</h3>
-                    <p>Venezuela'da 24 Haziran'daki depremlerin ardından, 4,8 büyüklüğünde bir deprem meydana geldi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/venezuelada-48-buyuklugunde-deprem-949548.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇srail, yeni imzalanan çerçeve anlaşması uyarınca lübnan'daki iki bölgeden çekilecek
-            i̇srail ve lübnan, abd arabuluculuğunda birkaç gün süren müzakerelerin ardından 26 haziran'da washington'da bir çerçeve anlaşması imzaladı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>İsrail, yeni imzalanan çerçeve anlaşması uyarınca Lübnan'daki iki bölgeden çekilecek</h3>
-                    <p>İsrail ve Lübnan, ABD arabuluculuğunda birkaç gün süren müzakerelerin ardından 26 Haziran'da Washington'da bir çerçeve anlaşması imzaladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cjdgr1v0g0mo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            dem parti'nin çerçeve yasa beklentisi: i̇tirazlar ve talepler neler?
-            i̇ktidarın "terörsüz türkiye" olarak adlandırdığı yeni çözüm sürecinin hukuki altyapısının ilk adımı olacak çerçeve yasaya ilişkin tartışmalar sürüyor. dem partililerle görüşen ayşe sayın ankara'dan bildiriyor.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>DEM Parti'nin çerçeve yasa beklentisi: İtirazlar ve talepler neler?</h3>
-                    <p>İktidarın "Terörsüz Türkiye" olarak adlandırdığı yeni çözüm sürecinin hukuki altyapısının ilk adımı olacak çerçeve yasaya ilişkin tartışmalar sürüyor. DEM Partililerle görüşen Ayşe Sayın Ankara'dan bildiriyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c30yj77grqjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ngiltere'de başbakanlar neden sürekli değişiyor?
-            keir starmer, son 10 yılda görevden ayrılan altıncı i̇ngiltere başbakanı oldu. bbc'den rob watson, bu istikrarsızlığın ardındaki nedenleri inceliyor.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>İngiltere'de başbakanlar neden sürekli değişiyor?</h3>
-                    <p>Keir Starmer, son 10 yılda görevden ayrılan altıncı İngiltere başbakanı oldu. BBC'den Rob Watson, bu istikrarsızlığın ardındaki nedenleri inceliyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cvgdr1qjypgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            öğretmenler 13 gündür sürdürdükleri açlık grevini sonlandırdı
-            sendika tarafından yapılan açıklamada, "arkadaşlarımızın, ailelerimizin hayatı ve yaşayabilecekleri olumsuz durumlar karşısında sorumlu davranıyor, kamuoyunun ve kamuoyunun temsiliyetini üstlenmiş aydın, akademisyen, sanatçı dostların çağrısına karşılık veriyor, ankara'daki direnişimize ara veriyor, açlık grevimizi sonlandırıyoruz" denildi.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Öğretmenler 13 gündür sürdürdükleri açlık grevini sonlandırdı</h3>
-                    <p>Sendika tarafından yapılan açıklamada, "Arkadaşlarımızın, ailelerimizin hayatı ve yaşayabilecekleri olumsuz durumlar karşısında sorumlu davranıyor, kamuoyunun ve kamuoyunun temsiliyetini üstlenmiş aydın, akademisyen, sanatçı dostların çağrısına karşılık veriyor, Ankara'daki direnişimize ara veriyor, açlık grevimizi sonlandırıyoruz" denildi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/clyekjg40gzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            faciaya dönüşen kaza: tır motosikletin üzerine devrildi, 2 ölü
-            ağrı'nın patnos ilçesinde büyükbaş hayvan yüklü tır ile otomobilin çarpışması sonucu meydana gelen zincirleme kazada, tır motosikletin üzerine devrildi. kazada 2 kişi hayatını kaybetti, 3 kişi yaralandı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Faciaya dönüşen kaza: Tır motosikletin üzerine devrildi, 2 ölü</h3>
-                    <p>Ağrı'nın Patnos ilçesinde büyükbaş hayvan yüklü tır ile otomobilin çarpışması sonucu meydana gelen zincirleme kazada, tır motosikletin üzerine devrildi. Kazada 2 kişi hayatını kaybetti, 3 kişi yaralandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/faciaya-donusen-kaza-tir-motosikletin-uzerine-devrildi-2-olu-949555.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            'sperm kardeşleri': aynı sperm bağışçısından doğduklarını 20'lerinde fark ettiler
-            natasha, gemma ve helen birbirlerini bulmanın "bir peri masalı" gibi olduğunu söylüyor.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>'Sperm kardeşleri': Aynı sperm bağışçısından doğduklarını 20'lerinde fark ettiler</h3>
-                    <p>Natasha, Gemma ve Helen birbirlerini bulmanın "bir peri masalı" gibi olduğunu söylüyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cgqjn4yx0d7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            deniz göktaş'ın gösterisinden kesitlerin bulunduğu x paylaşımlarına erişim engeli
-            komedyen deniz göktaş'ın son stad-up gösterisi ölü deniz'den x'te paylaşılan iki kesit türkiye'den görünmez kılındı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Deniz Göktaş'ın gösterisinden kesitlerin bulunduğu X paylaşımlarına erişim engeli</h3>
-                    <p>Komedyen Deniz Göktaş'ın son stad-up gösterisi Ölü Deniz'den X'te paylaşılan iki kesit Türkiye'den görünmez kılındı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cqx1qjqxy30o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            hayallerimiz, öfkelerimiz ve kadir i̇nanır
-            kadir i̇nanır 58 yıllık kariyerine 182 film, 12 dizi sığdırdı. yeşilçam'ın en üretken ama türkiye'nin en sancılı dönemlerinde kamera karşısındaydı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Hayallerimiz, öfkelerimiz ve Kadir İnanır</h3>
-                    <p>Kadir İnanır 58 yıllık kariyerine 182 film, 12 dizi sığdırdı. Yeşilçam'ın en üretken ama Türkiye'nin en sancılı dönemlerinde kamera karşısındaydı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yezked38yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            kayseri'de bıçaklı saldırıya uğrayan 2 kişi öldü
-            kayseri'nin merkez kocasinan ilçesinde cami avlusunda psikolojik rahatsızlığı olduğu ileri sürülen kişinin bıçaklı saldırısına uğrayan 2 kişi hayatını kaybetti.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Kayseri'de bıçaklı saldırıya uğrayan 2 kişi öldü</h3>
-                    <p>Kayseri'nin merkez Kocasinan ilçesinde cami avlusunda psikolojik rahatsızlığı olduğu ileri sürülen kişinin bıçaklı saldırısına uğrayan 2 kişi hayatını kaybetti.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/kayseride-bicakli-saldiriya-ugrayan-2-kisi-oldu-949552.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            yurt dışına kaçmaya çalışan 6 fetö şüphelisi ve göçmen kaçakçısı yakalandı
-            edirne'nin keşan ilçesinde yurt dışına kaçmaya çalışan 6 fetullahçı terör örgütü (fetö) şüphelisi ile göçmen kaçakçılığı yaptığı öne sürülen bir şüpheli yakalandı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Yurt dışına kaçmaya çalışan 6 FETÖ şüphelisi ve göçmen kaçakçısı yakalandı</h3>
-                    <p>Edirne'nin Keşan ilçesinde yurt dışına kaçmaya çalışan 6 Fetullahçı Terör Örgütü (FETÖ) şüphelisi ile göçmen kaçakçılığı yaptığı öne sürülen bir şüpheli yakalandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/yurt-disina-kacmaya-calisan-6-feto-suphelisi-ve-gocmen-kacakcisi-yakalandi-949549.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            büyükada'ya ziyaretçi akını
-            havaların ısınmasıyla birlikte hafta sonu büyükada'da ziyaretçi yoğunluğu yaşandı. adalara gelen vatandaşlar, güzel havayı yürüyüş yaparak, bisiklet sürerek ve sahilde vakit geçirerek değerlendirdi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Büyükada'ya ziyaretçi akını</h3>
-                    <p>Havaların ısınmasıyla birlikte hafta sonu Büyükada'da ziyaretçi yoğunluğu yaşandı. Adalara gelen vatandaşlar, güzel havayı yürüyüş yaparak, bisiklet sürerek ve sahilde vakit geçirerek değerlendirdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/buyukadaya-ziyaretci-akini-949547.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

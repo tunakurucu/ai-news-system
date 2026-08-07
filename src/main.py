@@ -1,5 +1,6 @@
 from pathlib import Path
 from datetime import datetime
+import json
 
 from services.news_fetcher import fetch_news
 from services.news_cleaner import clean_news
@@ -19,6 +20,37 @@ import os
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
+
+def _load_json(path: Path):
+    with open(path, "r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+
+def _generate_historical_daily_pages(output_dir: Path) -> None:
+    raw_dir = PROJECT_ROOT / "data" / "raw"
+    stats_dir = PROJECT_ROOT / "data" / "stats"
+
+    for raw_file in sorted(raw_dir.glob("*-news.json")):
+        if raw_file.name == "latest-news.json":
+            continue
+
+        date_name = raw_file.stem.replace("-news", "")
+        items = _load_json(raw_file)
+
+        stats_file = stats_dir / f"{date_name}-statistics.json"
+        if stats_file.exists():
+            stats = _load_json(stats_file)
+        else:
+            stats = generate_statistics(items)
+
+        html = generate_news_html(
+            items,
+            stats,
+            page_heading="Günün Haberleri",
+            hero_date=date_name,
+            hero_lead="Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.",
+        )
+        save_text(html, output_dir / f"{date_name}-news.html")
 
 
 def main():
@@ -101,6 +133,7 @@ def main():
     save_text(archive_html, archive_page_file)
     save_text(css, css_file)
     save_text(js, js_file)
+    _generate_historical_daily_pages(PROJECT_ROOT / "outputs" / "html")
 
     save_json(search_index, public_search_index_file)
     save_json(search_index, search_index_file)

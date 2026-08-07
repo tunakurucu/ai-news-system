@@ -1,578 +1,451 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-        .search-box {
-    margin: 25px 0;
-    }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-            .category-filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 20px 0 30px;
-            }
-
-            .category-filter-btn {
-                padding: 8px 14px;
-                border: 1px solid #ddd;
-                border-radius: 999px;
-                background: #f7f7f7;
-                cursor: pointer;
-            }
-
-            .category-filter-btn.active {
-                background: #222;
-                color: white;
-            }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="home-search-input"
-        placeholder="Güncel haberlerde ara..."
-    >
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">4 Temmuz 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
 </div>
 
-<div class="category-filters">
-    <button class="category-filter-btn active" data-category="all">Tümü</button>
-    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-    <button class="category-filter-btn" data-category="dünya">Dünya</button>
-    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-    <button class="category-filter-btn" data-category="genel">Genel</button>
-</div>
-
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
         </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 7</span><span class="stat-item"><strong>teknoloji</strong> 3</span><span class="stat-item"><strong>genel</strong> 9</span><span class="stat-item"><strong>gümrük</strong> 1</span></div>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>7</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>teknoloji</strong>
-            <span>3</span>
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
         </div>
+        <h3>Ukrayna&#x27;dan St. Petersburg&#x27;a İHA saldırısı: Petrol terminali vuruldu</h3>
+        <p>Ukrayna Cumhurbaşkanı Volodimir Zelenskiy, Rusya&#x27;nın kuzeybatısındaki ikinci büyük şehri St. Petersburg&#x27;da bulunan önemli bir petrol terminalinin gece saatlerinde Ukrayna tarafından vurulduğunu açıkladı.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 4 Temmuz 2026, 19:12</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cn0784njj71o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 4 Temmuz 2026, 18:39</span>
+            </div>
+            <h3>ABD bağımsızlığının 250. yılını kutluyor</h3>
+            <p>Amerikan tarihinin en önemli dönüm noktalarından biri olan ülkenin bağımsızlığının 250&#x27;nci yıldönümünü kutlamak için ABD genelinde etkinlikler düzenleniyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c9q23g48d19o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">TRT Haber · 4 Temmuz 2026, 19:32</span>
+            </div>
+            <h3>Cumhurbaşkanı Erdoğan Kanada Başbakanı Carney ile görüştü</h3>
+            <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Kanada Başbakanı Mark Carney ile telefon görüşmesi gerçekleştirdi. Görüşmede, Türkiye-Kanada ilişkileri ile bölgesel ve küresel konular ele alındı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-kanada-basbakani-carney-ile-gorustu-950256.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 4 Temmuz 2026, 18:03</span>
+            </div>
+            <h3>Erzurum&#x27;da ormanlık alanlara girişler 30 Ekim&#x27;e kadar yasaklandı</h3>
+            <p>Erzurum Valiliği, yaz mevsiminde artan orman yangını riskine karşı milli park, mesire alanı, tabiat parkı ve orman parkları dışındaki tüm ormanlık alanlara girişleri, 3 Temmuz-30 Ekim tarihlerinde yasakladı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/turkiye/erzurumda-ormanlik-alanlara-girisler-30-ekime-kadar-yasaklandi-950252.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 4 Temmuz 2026, 13:15</span>
+            </div>
+            <h3>En fazla nüfusa sahip 10 ülkenin sekizi neden Dünya Kupası&#x27;nda yok?</h3>
+            <p>Yüksek nüfuslu birçok ülke, futbolun en büyük şöleninden sürekli mahrum kalıyor. Peki futbolda başarı için geniş bir oyuncu havuzu yeterli mi?</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c2lyr4wzlxyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>9</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>gümrük</strong>
-            <span>1</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">7 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="ukrayna&#x27;dan st. petersburg&#x27;a i̇ha saldırısı: petrol terminali vuruldu ukrayna cumhurbaşkanı volodimir zelenskiy, rusya&#x27;nın kuzeybatısındaki ikinci büyük şehri st. petersburg&#x27;da bulunan önemli bir petrol terminalinin gece saatlerinde ukrayna tarafından vurulduğunu açıkladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 19:12</span>
         </div>
-
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-07-04 23:15</span>
+        <h3>Ukrayna&#x27;dan St. Petersburg&#x27;a İHA saldırısı: Petrol terminali vuruldu</h3>
+        <p>Ukrayna Cumhurbaşkanı Volodimir Zelenskiy, Rusya&#x27;nın kuzeybatısındaki ikinci büyük şehri St. Petersburg&#x27;da bulunan önemli bir petrol terminalinin gece saatlerinde Ukrayna tarafından vurulduğunu açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 19:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cn0784njj71o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd bağımsızlığının 250. yılını kutluyor amerikan tarihinin en önemli dönüm noktalarından biri olan ülkenin bağımsızlığının 250&#x27;nci yıldönümünü kutlamak için abd genelinde etkinlikler düzenleniyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 18:39</span>
         </div>
+        <h3>ABD bağımsızlığının 250. yılını kutluyor</h3>
+        <p>Amerikan tarihinin en önemli dönüm noktalarından biri olan ülkenin bağımsızlığının 250&#x27;nci yıldönümünü kutlamak için ABD genelinde etkinlikler düzenleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 18:39</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9q23g48d19o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="en fazla nüfusa sahip 10 ülkenin sekizi neden dünya kupası&#x27;nda yok? yüksek nüfuslu birçok ülke, futbolun en büyük şöleninden sürekli mahrum kalıyor. peki futbolda başarı için geniş bir oyuncu havuzu yeterli mi? dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 13:15</span>
+        </div>
+        <h3>En fazla nüfusa sahip 10 ülkenin sekizi neden Dünya Kupası&#x27;nda yok?</h3>
+        <p>Yüksek nüfuslu birçok ülke, futbolun en büyük şöleninden sürekli mahrum kalıyor. Peki futbolda başarı için geniş bir oyuncu havuzu yeterli mi?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 13:15</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c2lyr4wzlxyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hamaney için tahran&#x27;da &#x27;veda ve cenaze&#x27; töreni devam ediyor suikaste uğrayan i̇ran&#x27;ın dini lideri ali hamaney için ölümünden yaklaşık dört ay sonra düzenlenen &quot;veda ve cenaze&quot; töreni tahran&#x27;da devam ediyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 14:41</span>
+        </div>
+        <h3>Hamaney için Tahran&#x27;da &#x27;veda ve cenaze&#x27; töreni devam ediyor</h3>
+        <p>Suikaste uğrayan İran&#x27;ın dini lideri Ali Hamaney için ölümünden yaklaşık dört ay sonra düzenlenen &quot;veda ve cenaze&quot; töreni Tahran&#x27;da devam ediyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 14:41</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyrxndzv9zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="taylor swift ve travis kelce new york&#x27;ta evlendi pop süperstarı taylor swift ve amerikan futbol oyuncusu travis kelce, komedyen adam sandler&#x27;ın yönettiği ve yıldızlarla dolu bir törenle resmen evlendi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 10:19</span>
+        </div>
+        <h3>Taylor Swift ve Travis Kelce New York&#x27;ta evlendi</h3>
+        <p>Pop süperstarı Taylor Swift ve Amerikan futbol oyuncusu Travis Kelce, komedyen Adam Sandler&#x27;ın yönettiği ve yıldızlarla dolu bir törenle resmen evlendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 10:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c0qy289n70qo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="u16 erkek hokey milli takımımız avrupa şampiyonu oldu türkiye, antalya&#x27;da düzenlen 16 yaş altı erkekler avrupa hokey 5&#x27;ler şampiyonası&#x27;nı zirvede tamamladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 4 Temmuz 2026, 19:43</span>
+        </div>
+        <h3>U16 Erkek Hokey Milli Takımımız Avrupa Şampiyonu oldu</h3>
+        <p>Türkiye, Antalya&#x27;da düzenlen 16 Yaş Altı Erkekler Avrupa Hokey 5&#x27;ler Şampiyonası&#x27;nı zirvede tamamladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Temmuz 2026, 19:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/u16-erkek-hokey-milli-takimimiz-avrupa-sampiyonu-oldu-950257.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="arkadaşlık bilekliklerinden alyansa taylor swift - travis kelce aşkı taylor swift ve travis kelce 3 haziran&#x27;da new york&#x27;taki madison square garden&#x27;da bir partiyle evlendi. peki aşkları nasıl başladı, ilişkilerinin dönüm noktaları neler oldu? dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 12:08</span>
+        </div>
+        <h3>Arkadaşlık bilekliklerinden alyansa Taylor Swift - Travis Kelce aşkı</h3>
+        <p>Taylor Swift ve Travis Kelce 3 Haziran&#x27;da New York&#x27;taki Madison Square Garden&#x27;da bir partiyle evlendi. Peki aşkları nasıl başladı, ilişkilerinin dönüm noktaları neler oldu?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 12:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cd0mr1419mko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cumhurbaşkanı erdoğan kanada başbakanı carney ile görüştü cumhurbaşkanı recep tayyip erdoğan, kanada başbakanı mark carney ile telefon görüşmesi gerçekleştirdi. görüşmede, türkiye-kanada ilişkileri ile bölgesel ve küresel konular ele alındı. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 4 Temmuz 2026, 19:32</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan Kanada Başbakanı Carney ile görüştü</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Kanada Başbakanı Mark Carney ile telefon görüşmesi gerçekleştirdi. Görüşmede, Türkiye-Kanada ilişkileri ile bölgesel ve küresel konular ele alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Temmuz 2026, 19:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-kanada-basbakani-carney-ile-gorustu-950256.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="japonya&#x27;da bir belediye başkanı doğum izni alacağını açıklayınca ülkenin gündemine oturdu eleştirilere rağmen, 35 yaşındaki shoko kawata, işini sevdiğini ve bebek sahibi olmak için izin almaktan gurur duyduğunu söylüyor. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 16:41</span>
+        </div>
+        <h3>Japonya&#x27;da bir belediye başkanı doğum izni alacağını açıklayınca ülkenin gündemine oturdu</h3>
+        <p>Eleştirilere rağmen, 35 yaşındaki Shoko Kawata, işini sevdiğini ve bebek sahibi olmak için izin almaktan gurur duyduğunu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 16:41</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yzr2442wyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan fidan katar başbakanı al sani ile görüştü dışişleri bakanı hakan fidan, katar başbakanı ve dışişleri bakanı şeyh muhammed bin abdurrahman al sani ile bugün bir telefon görüşmesi gerçekleştirdi. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 4 Temmuz 2026, 19:10</span>
+        </div>
+        <h3>Bakan Fidan Katar Başbakanı Al Sani ile görüştü</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, Katar Başbakanı ve Dışişleri Bakanı Şeyh Muhammed bin Abdurrahman Al Sani ile bugün bir telefon görüşmesi gerçekleştirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Temmuz 2026, 19:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-fidan-katar-basbakani-al-sani-ile-gorustu-950255.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">9 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="erzurum&#x27;da ormanlık alanlara girişler 30 ekim&#x27;e kadar yasaklandı erzurum valiliği, yaz mevsiminde artan orman yangını riskine karşı milli park, mesire alanı, tabiat parkı ve orman parkları dışındaki tüm ormanlık alanlara girişleri, 3 temmuz-30 ekim tarihlerinde yasakladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 4 Temmuz 2026, 18:03</span>
+        </div>
+        <h3>Erzurum&#x27;da ormanlık alanlara girişler 30 Ekim&#x27;e kadar yasaklandı</h3>
+        <p>Erzurum Valiliği, yaz mevsiminde artan orman yangını riskine karşı milli park, mesire alanı, tabiat parkı ve orman parkları dışındaki tüm ormanlık alanlara girişleri, 3 Temmuz-30 Ekim tarihlerinde yasakladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Temmuz 2026, 18:03</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/erzurumda-ormanlik-alanlara-girisler-30-ekime-kadar-yasaklandi-950252.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="depremlerde daha çok insanın ölmesi ile iklim değişikliği arasında bağlantı var mı? yerleşim bölgelerinde meydana gelen depremler genellikle aynı soruları gündeme getiriyor: depremler daha sık ve daha ölümcül hale mi geliyor ve bunun sorumlusu iklim değişikliği mi? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 14:43</span>
+        </div>
+        <h3>Depremlerde daha çok insanın ölmesi ile iklim değişikliği arasında bağlantı var mı?</h3>
+        <p>Yerleşim bölgelerinde meydana gelen depremler genellikle aynı soruları gündeme getiriyor: Depremler daha sık ve daha ölümcül hale mi geliyor ve bunun sorumlusu iklim değişikliği mi?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 14:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cn07kewg2pgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fifa 2026&#x27;da ilk çeyrek finalist fas 2026 fifa dünya kupası son 16 turunda kanada&#x27;yı 3-0 yenen fas, adını çeyrek finale yazdırdı. mücadeleye 2 gol atan azzedine ounahi damga vurdu. bu arada fas, dünya kupası&#x27;nda çeyrek finale iki kez çıkan ilk afrika ekibi oldu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 4 Temmuz 2026, 22:25</span>
+        </div>
+        <h3>FIFA 2026&#x27;da ilk çeyrek finalist Fas</h3>
+        <p>2026 FIFA Dünya Kupası son 16 turunda Kanada&#x27;yı 3-0 yenen Fas, adını çeyrek finale yazdırdı. Mücadeleye 2 gol atan Azzedine Ounahi damga vurdu. Bu arada Fas, Dünya Kupası&#x27;nda çeyrek finale iki kez çıkan ilk Afrika ekibi oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Temmuz 2026, 22:25</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/fifa-2026da-ilk-ceyrek-finalist-fas-950261.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kütahya&#x27;da binanın çatısına yıldırım düştü, yangın çıktı kütahya&#x27;da yıldırım düşmesi nedeniyle 9 katlı binanın çatısında çıkan yangın, ekipler tarafından söndürüldü. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 4 Temmuz 2026, 19:04</span>
+        </div>
+        <h3>Kütahya&#x27;da binanın çatısına yıldırım düştü, yangın çıktı</h3>
+        <p>Kütahya&#x27;da yıldırım düşmesi nedeniyle 9 katlı binanın çatısında çıkan yangın, ekipler tarafından söndürüldü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Temmuz 2026, 19:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/kutahyada-binanin-catisina-yildirim-dustu-yangin-cikti-950254.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="chp ankara milletvekili adnan beker partisinden istifa etti chp ankara milletvekili adnan beker, partisinden istifa ettiğini açıkladı. beker, bağımsız milletvekili olarak siyasi hayatına devam edeceğini belirtti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 17:07</span>
+        </div>
+        <h3>CHP Ankara milletvekili Adnan Beker partisinden istifa etti</h3>
+        <p>CHP Ankara Milletvekili Adnan Beker, partisinden istifa ettiğini açıkladı. Beker, bağımsız milletvekili olarak siyasi hayatına devam edeceğini belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 17:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c70y8eepd9wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yüksek protein ve yüksek lifli beslenme yararlı mı? bilmeniz gereken beş şey yüksek proteinli ve yüksek lifli besinleri bir arada tüketmek, sosyal medyada son zamanlarda popülerleşen sağlık trendlerinden biri. ve bunun olacağını muhtemelen tahmin ediyordunuz. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 10:50</span>
+        </div>
+        <h3>Yüksek protein ve yüksek lifli beslenme yararlı mı? Bilmeniz gereken beş şey</h3>
+        <p>Yüksek proteinli ve yüksek lifli besinleri bir arada tüketmek, sosyal medyada son zamanlarda popülerleşen sağlık trendlerinden biri. Ve bunun olacağını muhtemelen tahmin ediyordunuz.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 10:50</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx2vrwrepe8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sakarya ilk kez &#x27;türkiye kültür yolu festivali&#x27; ile buluştu türkiye kültür yolu festivali&#x27;nin dokuzuncu durağı olan sakarya, 4-12 temmuz tarihleri arasında ilk kez kültür, sanat ve gastronomiyi aynı rotada buluşturuyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 4 Temmuz 2026, 20:37</span>
+        </div>
+        <h3>Sakarya ilk kez &#x27;Türkiye Kültür Yolu Festivali&#x27; ile buluştu</h3>
+        <p>Türkiye Kültür Yolu Festivali&#x27;nin dokuzuncu durağı olan Sakarya, 4-12 Temmuz tarihleri arasında ilk kez kültür, sanat ve gastronomiyi aynı rotada buluşturuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Temmuz 2026, 20:37</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/kultur-sanat/sakarya-ilk-kez-turkiye-kultur-yolu-festivali-ile-bulustu-950260.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gazzeli çocuklar türkiye&#x27;nin desteğiyle yaz kamplarında umut buluyor soykırımcı i̇srail&#x27;in saldırıları ve ağır insani koşulların gölgesindeki gazze şeridi&#x27;nde, türkiye&#x27;nin desteğiyle yaklaşık 8 bin çocuğa ulaşmayı hedefleyen &quot;umut pınarları 2026&quot; yaz kampları başladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 4 Temmuz 2026, 20:21</span>
+        </div>
+        <h3>Gazzeli çocuklar Türkiye&#x27;nin desteğiyle yaz kamplarında umut buluyor</h3>
+        <p>Soykırımcı İsrail&#x27;in saldırıları ve ağır insani koşulların gölgesindeki Gazze Şeridi&#x27;nde, Türkiye&#x27;nin desteğiyle yaklaşık 8 bin çocuğa ulaşmayı hedefleyen &quot;Umut Pınarları 2026&quot; yaz kampları başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Temmuz 2026, 20:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/gazzeli-cocuklar-turkiyenin-destegiyle-yaz-kamplarinda-umut-buluyor-950258.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="karadeniz&#x27;deki 4 ilde denize girmek yasaklandı trabzon, giresun, rize ve artvin&#x27;de olumsuz hava koşulları nedeniyle yarın denize girilmesine izin verilmeyecek. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 4 Temmuz 2026, 18:47</span>
+        </div>
+        <h3>Karadeniz&#x27;deki 4 ilde denize girmek yasaklandı</h3>
+        <p>Trabzon, Giresun, Rize ve Artvin&#x27;de olumsuz hava koşulları nedeniyle yarın denize girilmesine izin verilmeyecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Temmuz 2026, 18:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/karadenizdeki-4-ilde-denize-girmek-yasaklandi-950253.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cn0784njj71o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Ukrayna'dan St. Petersburg'a İHA saldırısı: Petrol terminali vuruldu</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="zorlu: türkiye, dünyada güvenli liman olma özelliğini koruyan yegane ülkelerden biri ak parti genel başkan yardımcısı kürşad zorlu, chp grup başkanı özgür özel&#x27;e yönelik &quot;öngörülemeyen, türkiye değil. nedir o? sizin türkiye&#x27;yi her fırsatta dünyaya şikayet etme alışkanlığınızdır. güvenilmez olan da yine türkiye değil, rüşvet, irtikap ve benzeri birçok yozlaşma unsuruyla yarattığınız şaibe siyasetidir&quot; ifadelerini kullandı. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 4 Temmuz 2026, 20:25</span>
+        </div>
+        <h3>Zorlu: Türkiye, dünyada güvenli liman olma özelliğini koruyan yegane ülkelerden biri</h3>
+        <p>AK Parti Genel Başkan Yardımcısı Kürşad Zorlu, CHP Grup Başkanı Özgür Özel&#x27;e yönelik &quot;Öngörülemeyen, Türkiye değil. Nedir o? Sizin Türkiye&#x27;yi her fırsatta dünyaya şikayet etme alışkanlığınızdır. Güvenilmez olan da yine Türkiye değil, rüşvet, irtikap ve benzeri birçok yozlaşma unsuruyla yarattığınız şaibe siyasetidir&quot; ifadelerini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Temmuz 2026, 20:25</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/zorlu-turkiye-dunyada-guvenli-liman-olma-ozelligini-koruyan-yegane-ulkelerden-biri-950259.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c9q23g48d19o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>ABD bağımsızlığının 250. yılını kutluyor</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-kanada-basbakani-carney-ile-gorustu-950256.html" target="_blank">
-                <strong>Cumhurbaşkanı Erdoğan Kanada Başbakanı Carney ile görüştü</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/turkiye/erzurumda-ormanlik-alanlara-girisler-30-ekime-kadar-yasaklandi-950252.html" target="_blank">
-                <strong>Erzurum'da ormanlık alanlara girişler 30 Ekim'e kadar yasaklandı</strong>
-            </a>
-        </li>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c2lyr4wzlxyo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>En fazla nüfusa sahip 10 ülkenin sekizi neden Dünya Kupası'nda yok?</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            ukrayna'dan st. petersburg'a i̇ha saldırısı: petrol terminali vuruldu
-            ukrayna cumhurbaşkanı volodimir zelenskiy, rusya'nın kuzeybatısındaki ikinci büyük şehri st. petersburg'da bulunan önemli bir petrol terminalinin gece saatlerinde ukrayna tarafından vurulduğunu açıkladı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Ukrayna'dan St. Petersburg'a İHA saldırısı: Petrol terminali vuruldu</h3>
-                    <p>Ukrayna Cumhurbaşkanı Volodimir Zelenskiy, Rusya'nın kuzeybatısındaki ikinci büyük şehri St. Petersburg'da bulunan önemli bir petrol terminalinin gece saatlerinde Ukrayna tarafından vurulduğunu açıkladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cn0784njj71o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd bağımsızlığının 250. yılını kutluyor
-            amerikan tarihinin en önemli dönüm noktalarından biri olan ülkenin bağımsızlığının 250'nci yıldönümünü kutlamak için abd genelinde etkinlikler düzenleniyor.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD bağımsızlığının 250. yılını kutluyor</h3>
-                    <p>Amerikan tarihinin en önemli dönüm noktalarından biri olan ülkenin bağımsızlığının 250'nci yıldönümünü kutlamak için ABD genelinde etkinlikler düzenleniyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c9q23g48d19o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            en fazla nüfusa sahip 10 ülkenin sekizi neden dünya kupası'nda yok?
-            yüksek nüfuslu birçok ülke, futbolun en büyük şöleninden sürekli mahrum kalıyor. peki futbolda başarı için geniş bir oyuncu havuzu yeterli mi?
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>En fazla nüfusa sahip 10 ülkenin sekizi neden Dünya Kupası'nda yok?</h3>
-                    <p>Yüksek nüfuslu birçok ülke, futbolun en büyük şöleninden sürekli mahrum kalıyor. Peki futbolda başarı için geniş bir oyuncu havuzu yeterli mi?</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c2lyr4wzlxyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            hamaney için tahran'da 'veda ve cenaze' töreni devam ediyor
-            suikaste uğrayan i̇ran'ın dini lideri ali hamaney için ölümünden yaklaşık dört ay sonra düzenlenen "veda ve cenaze" töreni tahran'da devam ediyor.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Hamaney için Tahran'da 'veda ve cenaze' töreni devam ediyor</h3>
-                    <p>Suikaste uğrayan İran'ın dini lideri Ali Hamaney için ölümünden yaklaşık dört ay sonra düzenlenen "veda ve cenaze" töreni Tahran'da devam ediyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/clyrxndzv9zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            taylor swift ve travis kelce new york'ta evlendi
-            pop süperstarı taylor swift ve amerikan futbol oyuncusu travis kelce, komedyen adam sandler'ın yönettiği ve yıldızlarla dolu bir törenle resmen evlendi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Taylor Swift ve Travis Kelce New York'ta evlendi</h3>
-                    <p>Pop süperstarı Taylor Swift ve Amerikan futbol oyuncusu Travis Kelce, komedyen Adam Sandler'ın yönettiği ve yıldızlarla dolu bir törenle resmen evlendi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c0qy289n70qo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            u16 erkek hokey milli takımımız avrupa şampiyonu oldu
-            türkiye, antalya'da düzenlen 16 yaş altı erkekler avrupa hokey 5'ler şampiyonası'nı zirvede tamamladı.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>U16 Erkek Hokey Milli Takımımız Avrupa Şampiyonu oldu</h3>
-                    <p>Türkiye, Antalya'da düzenlen 16 Yaş Altı Erkekler Avrupa Hokey 5'ler Şampiyonası'nı zirvede tamamladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/u16-erkek-hokey-milli-takimimiz-avrupa-sampiyonu-oldu-950257.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            arkadaşlık bilekliklerinden alyansa taylor swift - travis kelce aşkı
-            taylor swift ve travis kelce 3 haziran'da new york'taki madison square garden'da bir partiyle evlendi. peki aşkları nasıl başladı, ilişkilerinin dönüm noktaları neler oldu?
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Arkadaşlık bilekliklerinden alyansa Taylor Swift - Travis Kelce aşkı</h3>
-                    <p>Taylor Swift ve Travis Kelce 3 Haziran'da New York'taki Madison Square Garden'da bir partiyle evlendi. Peki aşkları nasıl başladı, ilişkilerinin dönüm noktaları neler oldu?</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cd0mr1419mko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">TEKNOLOJI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            cumhurbaşkanı erdoğan kanada başbakanı carney ile görüştü
-            cumhurbaşkanı recep tayyip erdoğan, kanada başbakanı mark carney ile telefon görüşmesi gerçekleştirdi. görüşmede, türkiye-kanada ilişkileri ile bölgesel ve küresel konular ele alındı.
-            teknoloji
-            trt haber
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Cumhurbaşkanı Erdoğan Kanada Başbakanı Carney ile görüştü</h3>
-                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Kanada Başbakanı Mark Carney ile telefon görüşmesi gerçekleştirdi. Görüşmede, Türkiye-Kanada ilişkileri ile bölgesel ve küresel konular ele alındı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-kanada-basbakani-carney-ile-gorustu-950256.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            japonya'da bir belediye başkanı doğum izni alacağını açıklayınca ülkenin gündemine oturdu
-            eleştirilere rağmen, 35 yaşındaki shoko kawata, işini sevdiğini ve bebek sahibi olmak için izin almaktan gurur duyduğunu söylüyor.
-            teknoloji
-            bbc türkçe
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Japonya'da bir belediye başkanı doğum izni alacağını açıklayınca ülkenin gündemine oturdu</h3>
-                    <p>Eleştirilere rağmen, 35 yaşındaki Shoko Kawata, işini sevdiğini ve bebek sahibi olmak için izin almaktan gurur duyduğunu söylüyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yzr2442wyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            bakan fidan katar başbakanı al sani ile görüştü
-            dışişleri bakanı hakan fidan, katar başbakanı ve dışişleri bakanı şeyh muhammed bin abdurrahman al sani ile bugün bir telefon görüşmesi gerçekleştirdi.
-            teknoloji
-            trt haber
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Bakan Fidan Katar Başbakanı Al Sani ile görüştü</h3>
-                    <p>Dışişleri Bakanı Hakan Fidan, Katar Başbakanı ve Dışişleri Bakanı Şeyh Muhammed bin Abdurrahman Al Sani ile bugün bir telefon görüşmesi gerçekleştirdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/bakan-fidan-katar-basbakani-al-sani-ile-gorustu-950255.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            erzurum'da ormanlık alanlara girişler 30 ekim'e kadar yasaklandı
-            erzurum valiliği, yaz mevsiminde artan orman yangını riskine karşı milli park, mesire alanı, tabiat parkı ve orman parkları dışındaki tüm ormanlık alanlara girişleri, 3 temmuz-30 ekim tarihlerinde yasakladı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Erzurum'da ormanlık alanlara girişler 30 Ekim'e kadar yasaklandı</h3>
-                    <p>Erzurum Valiliği, yaz mevsiminde artan orman yangını riskine karşı milli park, mesire alanı, tabiat parkı ve orman parkları dışındaki tüm ormanlık alanlara girişleri, 3 Temmuz-30 Ekim tarihlerinde yasakladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/erzurumda-ormanlik-alanlara-girisler-30-ekime-kadar-yasaklandi-950252.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            depremlerde daha çok insanın ölmesi ile iklim değişikliği arasında bağlantı var mı?
-            yerleşim bölgelerinde meydana gelen depremler genellikle aynı soruları gündeme getiriyor: depremler daha sık ve daha ölümcül hale mi geliyor ve bunun sorumlusu iklim değişikliği mi?
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Depremlerde daha çok insanın ölmesi ile iklim değişikliği arasında bağlantı var mı?</h3>
-                    <p>Yerleşim bölgelerinde meydana gelen depremler genellikle aynı soruları gündeme getiriyor: Depremler daha sık ve daha ölümcül hale mi geliyor ve bunun sorumlusu iklim değişikliği mi?</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cn07kewg2pgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            fifa 2026'da ilk çeyrek finalist fas
-            2026 fifa dünya kupası son 16 turunda kanada'yı 3-0 yenen fas, adını çeyrek finale yazdırdı. mücadeleye 2 gol atan azzedine ounahi damga vurdu. bu arada fas, dünya kupası'nda çeyrek finale iki kez çıkan ilk afrika ekibi oldu.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>FIFA 2026'da ilk çeyrek finalist Fas</h3>
-                    <p>2026 FIFA Dünya Kupası son 16 turunda Kanada'yı 3-0 yenen Fas, adını çeyrek finale yazdırdı. Mücadeleye 2 gol atan Azzedine Ounahi damga vurdu. Bu arada Fas, Dünya Kupası'nda çeyrek finale iki kez çıkan ilk Afrika ekibi oldu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/fifa-2026da-ilk-ceyrek-finalist-fas-950261.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            kütahya'da binanın çatısına yıldırım düştü, yangın çıktı
-            kütahya'da yıldırım düşmesi nedeniyle 9 katlı binanın çatısında çıkan yangın, ekipler tarafından söndürüldü.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Kütahya'da binanın çatısına yıldırım düştü, yangın çıktı</h3>
-                    <p>Kütahya'da yıldırım düşmesi nedeniyle 9 katlı binanın çatısında çıkan yangın, ekipler tarafından söndürüldü.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/kutahyada-binanin-catisina-yildirim-dustu-yangin-cikti-950254.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            chp ankara milletvekili adnan beker partisinden istifa etti
-            chp ankara milletvekili adnan beker, partisinden istifa ettiğini açıkladı. beker, bağımsız milletvekili olarak siyasi hayatına devam edeceğini belirtti.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>CHP Ankara milletvekili Adnan Beker partisinden istifa etti</h3>
-                    <p>CHP Ankara Milletvekili Adnan Beker, partisinden istifa ettiğini açıkladı. Beker, bağımsız milletvekili olarak siyasi hayatına devam edeceğini belirtti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c70y8eepd9wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            yüksek protein ve yüksek lifli beslenme yararlı mı? bilmeniz gereken beş şey
-            yüksek proteinli ve yüksek lifli besinleri bir arada tüketmek, sosyal medyada son zamanlarda popülerleşen sağlık trendlerinden biri. ve bunun olacağını muhtemelen tahmin ediyordunuz.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Yüksek protein ve yüksek lifli beslenme yararlı mı? Bilmeniz gereken beş şey</h3>
-                    <p>Yüksek proteinli ve yüksek lifli besinleri bir arada tüketmek, sosyal medyada son zamanlarda popülerleşen sağlık trendlerinden biri. Ve bunun olacağını muhtemelen tahmin ediyordunuz.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cx2vrwrepe8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            sakarya ilk kez 'türkiye kültür yolu festivali' ile buluştu
-            türkiye kültür yolu festivali'nin dokuzuncu durağı olan sakarya, 4-12 temmuz tarihleri arasında ilk kez kültür, sanat ve gastronomiyi aynı rotada buluşturuyor.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Sakarya ilk kez 'Türkiye Kültür Yolu Festivali' ile buluştu</h3>
-                    <p>Türkiye Kültür Yolu Festivali'nin dokuzuncu durağı olan Sakarya, 4-12 Temmuz tarihleri arasında ilk kez kültür, sanat ve gastronomiyi aynı rotada buluşturuyor.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/kultur-sanat/sakarya-ilk-kez-turkiye-kultur-yolu-festivali-ile-bulustu-950260.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            gazzeli çocuklar türkiye'nin desteğiyle yaz kamplarında umut buluyor
-            soykırımcı i̇srail'in saldırıları ve ağır insani koşulların gölgesindeki gazze şeridi'nde, türkiye'nin desteğiyle yaklaşık 8 bin çocuğa ulaşmayı hedefleyen "umut pınarları 2026" yaz kampları başladı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Gazzeli çocuklar Türkiye'nin desteğiyle yaz kamplarında umut buluyor</h3>
-                    <p>Soykırımcı İsrail'in saldırıları ve ağır insani koşulların gölgesindeki Gazze Şeridi'nde, Türkiye'nin desteğiyle yaklaşık 8 bin çocuğa ulaşmayı hedefleyen "Umut Pınarları 2026" yaz kampları başladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/gazzeli-cocuklar-turkiyenin-destegiyle-yaz-kamplarinda-umut-buluyor-950258.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            karadeniz'deki 4 ilde denize girmek yasaklandı
-            trabzon, giresun, rize ve artvin'de olumsuz hava koşulları nedeniyle yarın denize girilmesine izin verilmeyecek.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Karadeniz'deki 4 ilde denize girmek yasaklandı</h3>
-                    <p>Trabzon, Giresun, Rize ve Artvin'de olumsuz hava koşulları nedeniyle yarın denize girilmesine izin verilmeyecek.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/karadenizdeki-4-ilde-denize-girmek-yasaklandi-950253.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GÜMRÜK</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            zorlu: türkiye, dünyada güvenli liman olma özelliğini koruyan yegane ülkelerden biri
-            ak parti genel başkan yardımcısı kürşad zorlu, chp grup başkanı özgür özel'e yönelik "öngörülemeyen, türkiye değil. nedir o? sizin türkiye'yi her fırsatta dünyaya şikayet etme alışkanlığınızdır. güvenilmez olan da yine türkiye değil, rüşvet, irtikap ve benzeri birçok yozlaşma unsuruyla yarattığınız şaibe siyasetidir" ifadelerini kullandı.
-            gümrük
-            trt haber
-            "
-                    data-category="gümrük"
-                >
-                    <h3>Zorlu: Türkiye, dünyada güvenli liman olma özelliğini koruyan yegane ülkelerden biri</h3>
-                    <p>AK Parti Genel Başkan Yardımcısı Kürşad Zorlu, CHP Grup Başkanı Özgür Özel'e yönelik "Öngörülemeyen, Türkiye değil. Nedir o? Sizin Türkiye'yi her fırsatta dünyaya şikayet etme alışkanlığınızdır. Güvenilmez olan da yine Türkiye değil, rüşvet, irtikap ve benzeri birçok yozlaşma unsuruyla yarattığınız şaibe siyasetidir" ifadelerini kullandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/zorlu-turkiye-dunyada-guvenli-liman-olma-ozelligini-koruyan-yegane-ulkelerden-biri-950259.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

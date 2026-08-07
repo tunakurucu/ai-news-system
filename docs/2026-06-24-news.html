@@ -2,197 +2,441 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
     <link rel="stylesheet" href="assets/css/news.css">
     <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <header class="site-nav">
-        <div class="nav-inner">
-            <div class="brand">AI News</div>
-            <a href="index.html">Current News</a>
-            <a href="archive.html">Archive</a>
-            <a href="search.html">Search</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
         </div>
     </header>
 
     <main class="site-wrapper">
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-text">
             <h1>Günün Haberleri</h1>
-            <div class="search-box">
-                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            <p class="hero-date">24 Haziran 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 6</span><span class="stat-item"><strong>ekonomi</strong> 3</span><span class="stat-item"><strong>genel</strong> 11</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Avrupa kavruluyor: İngiltere&#x27;de &#x27;kırmızı alarm&#x27;, Fransa&#x27;da boğulma kaynaklı ölümler</h3>
+        <p>İngiltere&#x27;de sıcaklıklar nedeniyle kırmızı alarm verildi. Fransa&#x27;da sıcak hava dalgası sırasında serinlemek için nehir ve kanallara girenlerin de aralarında bulunduğu en az 40 kişi boğularak hayatını kaybederken, Avrupa&#x27;nın birçok ülkesinde rekor sıcaklıklar ve kırmızı alarm uygulamaları sürüyor</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 24 Haziran 2026, 09:26</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cvg4qxq907do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 24 Haziran 2026, 11:58</span>
             </div>
-
-            <div class="category-filters">
-                <button class="category-filter-btn active" data-category="all">Tümü</button>
-                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                <button class="category-filter-btn" data-category="genel">Genel</button>
+            <h3>İstanbul&#x27;da kentsel dönüşüm kredisine 196 bin bağımsız bölüm için ön başvuru alındı</h3>
+            <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Kentsel Dönüşüm Başkanlığınca yürütülen İklim ve Afetlere Dayanıklı Şehirler Projesi (İADŞP) kapsamında riskli yapıların dönüşümü için 196 bin 324 konut ve iş yerine ilişkin ön başvuru alındı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-kentsel-donusum-kredisine-196-bin-bagimsiz-bolum-icin-on-basvuru-alindi-949183.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 24 Haziran 2026, 11:36</span>
             </div>
-        </section>
+            <h3>Türkiye veri merkezlerinde bölgesel üs olacak</h3>
+            <p>Dijital ekonomi ve yapay zekanın omurgasını oluşturan veri merkezleri konusunda küresel yarış yaşanırken Türkiye de güçlü enerji altyapısı ve dev yatırım projeleriyle bu alanda stratejik merkez olmayı hedefliyor.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/turkiye-veri-merkezlerinde-bolgesel-us-olacak-949181.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 24 Haziran 2026, 03:56</span>
+            </div>
+            <h3>Temmuz sonunda TBMM&#x27;den geçmesi hedeflenen &#x27;çözüm süreci yasasında&#x27; neler var?</h3>
+            <p>Yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa için Temmuz ayında adım atılması bekleniyor. AKP ve MHP kulislerinde, teklifin NATO Zirvesi sonrasında TBMM Başkanlığı&#x27;na sunulabileceği ve Meclis tatile girmeden yasalaşabileceği konuşuluyor</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cpd391ndxv8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 24 Haziran 2026, 13:07</span>
+            </div>
+            <h3>Türkiye&#x27;nin bölgesel enerji güvenliğindeki stratejik rolü güçleniyor</h3>
+            <p>Türkiye, enerji arz güvenliğinde bölgesel merkez olma hedefi doğrultusunda Avrupa ve Balkanlar&#x27;a uzanan stratejik konumunu güçlendirirken enerji piyasalarındaki tecrübesi ve gelişen altyapısıyla dikkati çekiyor.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyenin-bolgesel-enerji-guvenligindeki-stratejik-rolu-gucleniyor-949190.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stats-grid">
-                        <a href="archive.html">Archive</a>
-                        <a href="search.html">Search</a>
-                    </div>
-                </header>
+    </section>
 
-                <main class="site-wrapper">
-                    <section class="hero">
-                        <h1>Günün Haberleri</h1>
-                        <div class="search-box">
-                            <input type="text" id="home-search-input" placeholder="Search today's news...">
-                        </div>
-
-                        <div class="category-filters">
-                            <button class="category-filter-btn active" data-category="all">Tümü</button>
-                            <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                            <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                            <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                            <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                            <button class="category-filter-btn" data-category="genel">Genel</button>
-                        </div>
-                    </section>
-
-                    <div class="stats-grid">
-        <h3>İstanbul'da kentsel dönüşüm kredisine 196 bin bağımsız bölüm için ön başvuru alındı</h3>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="avrupa kavruluyor: i̇ngiltere&#x27;de &#x27;kırmızı alarm&#x27;, fransa&#x27;da boğulma kaynaklı ölümler i̇ngiltere&#x27;de sıcaklıklar nedeniyle kırmızı alarm verildi. fransa&#x27;da sıcak hava dalgası sırasında serinlemek için nehir ve kanallara girenlerin de aralarında bulunduğu en az 40 kişi boğularak hayatını kaybederken, avrupa&#x27;nın birçok ülkesinde rekor sıcaklıklar ve kırmızı alarm uygulamaları sürüyor dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 24 Haziran 2026, 09:26</span>
+        </div>
+        <h3>Avrupa kavruluyor: İngiltere&#x27;de &#x27;kırmızı alarm&#x27;, Fransa&#x27;da boğulma kaynaklı ölümler</h3>
+        <p>İngiltere&#x27;de sıcaklıklar nedeniyle kırmızı alarm verildi. Fransa&#x27;da sıcak hava dalgası sırasında serinlemek için nehir ve kanallara girenlerin de aralarında bulunduğu en az 40 kişi boğularak hayatını kaybederken, Avrupa&#x27;nın birçok ülkesinde rekor sıcaklıklar ve kırmızı alarm uygulamaları sürüyor</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Haziran 2026, 09:26</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvg4qxq907do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da kentsel dönüşüm kredisine 196 bin bağımsız bölüm için ön başvuru alındı çevre, şehircilik ve i̇klim değişikliği bakanlığı kentsel dönüşüm başkanlığınca yürütülen i̇klim ve afetlere dayanıklı şehirler projesi (i̇adşp) kapsamında riskli yapıların dönüşümü için 196 bin 324 konut ve iş yerine ilişkin ön başvuru alındı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 24 Haziran 2026, 11:58</span>
+        </div>
+        <h3>İstanbul&#x27;da kentsel dönüşüm kredisine 196 bin bağımsız bölüm için ön başvuru alındı</h3>
         <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Kentsel Dönüşüm Başkanlığınca yürütülen İklim ve Afetlere Dayanıklı Şehirler Projesi (İADŞP) kapsamında riskli yapıların dönüşümü için 196 bin 324 konut ve iş yerine ilişkin ön başvuru alındı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/istanbulda-kentsel-donusum-kredisine-196-bin-bagimsiz-bolum-icin-on-basvuru-alindi-949183.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Temmuz sonunda TBMM'den geçmesi hedeflenen 'çözüm süreci yasasında' neler var?</h3>
-        <p>Yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa için Temmuz ayında adım atılması bekleniyor. AKP ve MHP kulislerinde, teklifin NATO Zirvesi sonrasında TBMM Başkanlığı'na sunulabileceği ve Meclis tatile girmeden yasalaşabileceği konuşuluyor</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cpd391ndxv8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Haziran 2026, 11:58</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-kentsel-donusum-kredisine-196-bin-bagimsiz-bolum-icin-on-basvuru-alindi-949183.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
+</article>
+<article class="news-card" data-search="temmuz sonunda tbmm&#x27;den geçmesi hedeflenen &#x27;çözüm süreci yasasında&#x27; neler var? yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa için temmuz ayında adım atılması bekleniyor. akp ve mhp kulislerinde, teklifin nato zirvesi sonrasında tbmm başkanlığı&#x27;na sunulabileceği ve meclis tatile girmeden yasalaşabileceği konuşuluyor dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 24 Haziran 2026, 03:56</span>
+        </div>
+        <h3>Temmuz sonunda TBMM&#x27;den geçmesi hedeflenen &#x27;çözüm süreci yasasında&#x27; neler var?</h3>
+        <p>Yeni çözüm sürecinin hukuki zeminini oluşturacak çerçeve yasa için Temmuz ayında adım atılması bekleniyor. AKP ve MHP kulislerinde, teklifin NATO Zirvesi sonrasında TBMM Başkanlığı&#x27;na sunulabileceği ve Meclis tatile girmeden yasalaşabileceği konuşuluyor</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Haziran 2026, 03:56</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cpd391ndxv8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="marmara denizinin geleceği için kapsamlı çevre planı marmara denizi ve adalar özel çevre koruma bölgesi için hazırlanacak yönetim planıyla biyolojik çeşitliliğin korunması, ekosistemin iyileştirilmesi ve denizin bütüncül yaklaşımla yönetilmesi hedefleniyor. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 24 Haziran 2026, 12:34</span>
+        </div>
         <h3>Marmara Denizinin geleceği için kapsamlı çevre planı</h3>
         <p>Marmara Denizi ve Adalar Özel Çevre Koruma Bölgesi için hazırlanacak yönetim planıyla biyolojik çeşitliliğin korunması, ekosistemin iyileştirilmesi ve denizin bütüncül yaklaşımla yönetilmesi hedefleniyor.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/cevre/marmara-denizinin-gelecegi-icin-kapsamli-cevre-plani-949187.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>DSÖ: Avrupa'da sıcaklıklar küresel ortalamadan yaklaşık 2 kat hızlı artıyor</h3>
-        <p>Dünya Sağlık Örgütü (DSÖ) Genel Direktörü Tedros Adhanom Ghebreyesus, Avrupa'daki sıcaklıkların küresel ortalamadan yaklaşık 2 kat hızlı arttığını ve kıtadaki sıcak hava dalgası nedeniyle insanların sağlığının riske girdiğini bildirdi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/dso-avrupada-sicakliklar-kuresel-ortalamadan-yaklasik-2-kat-hizli-artiyor-949186.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Haziran 2026, 12:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/cevre/marmara-denizinin-gelecegi-icin-kapsamli-cevre-plani-949187.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>ABD Kongresi'nden Trump'a İran çıkışı: 'Ya savaşı bitir ya onayımızı al'</h3>
-        <p>Cumhuriyetçilerin kontrolündeki ABD Senatosu, Başkan Donald Trump'ın İran'daki savaşı durdurmasını ya da harekata devam etmeden önce Kongre'nin onayını almasını talep eden bir tasarıyı onayladı.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c4gy73408e2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="dsö: avrupa&#x27;da sıcaklıklar küresel ortalamadan yaklaşık 2 kat hızlı artıyor dünya sağlık örgütü (dsö) genel direktörü tedros adhanom ghebreyesus, avrupa&#x27;daki sıcaklıkların küresel ortalamadan yaklaşık 2 kat hızlı arttığını ve kıtadaki sıcak hava dalgası nedeniyle insanların sağlığının riske girdiğini bildirdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 24 Haziran 2026, 12:32</span>
+        </div>
+        <h3>DSÖ: Avrupa&#x27;da sıcaklıklar küresel ortalamadan yaklaşık 2 kat hızlı artıyor</h3>
+        <p>Dünya Sağlık Örgütü (DSÖ) Genel Direktörü Tedros Adhanom Ghebreyesus, Avrupa&#x27;daki sıcaklıkların küresel ortalamadan yaklaşık 2 kat hızlı arttığını ve kıtadaki sıcak hava dalgası nedeniyle insanların sağlığının riske girdiğini bildirdi.</p>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Haziran 2026, 12:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/dso-avrupada-sicakliklar-kuresel-ortalamadan-yaklasik-2-kat-hizli-artiyor-949186.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd kongresi&#x27;nden trump&#x27;a i̇ran çıkışı: &#x27;ya savaşı bitir ya onayımızı al&#x27; cumhuriyetçilerin kontrolündeki abd senatosu, başkan donald trump&#x27;ın i̇ran&#x27;daki savaşı durdurmasını ya da harekata devam etmeden önce kongre&#x27;nin onayını almasını talep eden bir tasarıyı onayladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 24 Haziran 2026, 12:57</span>
+        </div>
+        <h3>ABD Kongresi&#x27;nden Trump&#x27;a İran çıkışı: &#x27;Ya savaşı bitir ya onayımızı al&#x27;</h3>
+        <p>Cumhuriyetçilerin kontrolündeki ABD Senatosu, Başkan Donald Trump&#x27;ın İran&#x27;daki savaşı durdurmasını ya da harekata devam etmeden önce Kongre&#x27;nin onayını almasını talep eden bir tasarıyı onayladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Haziran 2026, 12:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gy73408e2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2 class="category-title">EKONOMI</h2>
-
-    <div class="news-card">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye veri merkezlerinde bölgesel üs olacak dijital ekonomi ve yapay zekanın omurgasını oluşturan veri merkezleri konusunda küresel yarış yaşanırken türkiye de güçlü enerji altyapısı ve dev yatırım projeleriyle bu alanda stratejik merkez olmayı hedefliyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 24 Haziran 2026, 11:36</span>
+        </div>
         <h3>Türkiye veri merkezlerinde bölgesel üs olacak</h3>
         <p>Dijital ekonomi ve yapay zekanın omurgasını oluşturan veri merkezleri konusunda küresel yarış yaşanırken Türkiye de güçlü enerji altyapısı ve dev yatırım projeleriyle bu alanda stratejik merkez olmayı hedefliyor.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/bilim-teknoloji/turkiye-veri-merkezlerinde-bolgesel-us-olacak-949181.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Türkiye'nin bölgesel enerji güvenliğindeki stratejik rolü güçleniyor</h3>
-        <p>Türkiye, enerji arz güvenliğinde bölgesel merkez olma hedefi doğrultusunda Avrupa ve Balkanlar'a uzanan stratejik konumunu güçlendirirken enerji piyasalarındaki tecrübesi ve gelişen altyapısıyla dikkati çekiyor.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/ekonomi/turkiyenin-bolgesel-enerji-guvenligindeki-stratejik-rolu-gucleniyor-949190.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Haziran 2026, 11:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/turkiye-veri-merkezlerinde-bolgesel-us-olacak-949181.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
+</article>
+<article class="news-card" data-search="türkiye&#x27;nin bölgesel enerji güvenliğindeki stratejik rolü güçleniyor türkiye, enerji arz güvenliğinde bölgesel merkez olma hedefi doğrultusunda avrupa ve balkanlar&#x27;a uzanan stratejik konumunu güçlendirirken enerji piyasalarındaki tecrübesi ve gelişen altyapısıyla dikkati çekiyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 24 Haziran 2026, 13:07</span>
+        </div>
+        <h3>Türkiye&#x27;nin bölgesel enerji güvenliğindeki stratejik rolü güçleniyor</h3>
+        <p>Türkiye, enerji arz güvenliğinde bölgesel merkez olma hedefi doğrultusunda Avrupa ve Balkanlar&#x27;a uzanan stratejik konumunu güçlendirirken enerji piyasalarındaki tecrübesi ve gelişen altyapısıyla dikkati çekiyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Haziran 2026, 13:07</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyenin-bolgesel-enerji-guvenligindeki-stratejik-rolu-gucleniyor-949190.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sentetik taşları gizleyene 858 bin liraya kadar ceza laboratuvar ortamında üretilen sentetik kıymetli taşları &quot;yapay üretim&quot; veya &quot;sentetik&quot; etiketi olmadan satarak tüketiciyi yanıltan kuyum işletmelerine 858 bin 620 liraya kadar idari para cezası uygulanabilecek. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 24 Haziran 2026, 12:54</span>
+        </div>
         <h3>Sentetik taşları gizleyene 858 bin liraya kadar ceza</h3>
-        <p>Laboratuvar ortamında üretilen sentetik kıymetli taşları "yapay üretim" veya "sentetik" etiketi olmadan satarak tüketiciyi yanıltan kuyum işletmelerine 858 bin 620 liraya kadar idari para cezası uygulanabilecek.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/sentetik-taslari-gizleyene-858-bin-liraya-kadar-ceza-949188.html" target="_blank">Haberi Oku</a>
+        <p>Laboratuvar ortamında üretilen sentetik kıymetli taşları &quot;yapay üretim&quot; veya &quot;sentetik&quot; etiketi olmadan satarak tüketiciyi yanıltan kuyum işletmelerine 858 bin 620 liraya kadar idari para cezası uygulanabilecek.</p>
     </div>
-
-    <h2 class="category-title">GENEL</h2>
-
-    <div class="news-card">
-        <h3>Cumhurbaşkanı Erdoğan: Bölgemizde barış eğer gelecekse, İsrail'e rağmen gelecek</h3>
-        <p>Cumhurbaşkanı Erdoğan, "Bölgemizde barış eğer gelecekse, İsrail'e rağmen gelecek. Bölgemizde huzur olacaksa İsrail'in fitnelerine rağmen olacak. Katliam şebekesi ne yaparsa yapsın bölgemizde sulh-u sükunun, adaletin, istikrarın, refahın egemen olmasını Allah'ın izniyle engelleyemeyecek." dedi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-bolgemizde-baris-eger-gelecekse-israile-ragmen-gelecek-949184.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Haziran 2026, 12:54</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/sentetik-taslari-gizleyene-858-bin-liraya-kadar-ceza-949188.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
+</article>
 
-    <div class="news-card">
-        <h3>Akdeniz'de 4,9 büyüklüğünde deprem</h3>
-        <p>Akdeniz'de saat 11.25'te 4,9 büyüklüğünde deprem meydana geldi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/akdenizde-49-buyuklugunde-deprem-949185.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">11 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cumhurbaşkanı erdoğan: bölgemizde barış eğer gelecekse, i̇srail&#x27;e rağmen gelecek cumhurbaşkanı erdoğan, &quot;bölgemizde barış eğer gelecekse, i̇srail&#x27;e rağmen gelecek. bölgemizde huzur olacaksa i̇srail&#x27;in fitnelerine rağmen olacak. katliam şebekesi ne yaparsa yapsın bölgemizde sulh-u sükunun, adaletin, istikrarın, refahın egemen olmasını allah&#x27;ın izniyle engelleyemeyecek.&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 24 Haziran 2026, 12:26</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan: Bölgemizde barış eğer gelecekse, İsrail&#x27;e rağmen gelecek</h3>
+        <p>Cumhurbaşkanı Erdoğan, &quot;Bölgemizde barış eğer gelecekse, İsrail&#x27;e rağmen gelecek. Bölgemizde huzur olacaksa İsrail&#x27;in fitnelerine rağmen olacak. Katliam şebekesi ne yaparsa yapsın bölgemizde sulh-u sükunun, adaletin, istikrarın, refahın egemen olmasını Allah&#x27;ın izniyle engelleyemeyecek.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Haziran 2026, 12:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-bolgemizde-baris-eger-gelecekse-israile-ragmen-gelecek-949184.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akdeniz&#x27;de 4,9 büyüklüğünde deprem akdeniz&#x27;de saat 11.25&#x27;te 4,9 büyüklüğünde deprem meydana geldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 24 Haziran 2026, 12:23</span>
+        </div>
+        <h3>Akdeniz&#x27;de 4,9 büyüklüğünde deprem</h3>
+        <p>Akdeniz&#x27;de saat 11.25&#x27;te 4,9 büyüklüğünde deprem meydana geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Haziran 2026, 12:23</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/akdenizde-49-buyuklugunde-deprem-949185.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="350 metrelik sondaj platformu i̇stanbul boğazından geçti i̇talya’dan romanya’ya götürülen ve toplam uzunluğu 350 metreye ulaşan sondaj platformu iskelesi, i̇stanbul boğazı’ndan geçiş yaptı. sondaj platformunun geçişi sırasında i̇stanbul boğazı geçici olarak çift yönlü trafiğe kapatıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 24 Haziran 2026, 11:52</span>
+        </div>
         <h3>350 metrelik sondaj platformu İstanbul Boğazından geçti</h3>
         <p>İtalya’dan Romanya’ya götürülen ve toplam uzunluğu 350 metreye ulaşan sondaj platformu iskelesi, İstanbul Boğazı’ndan geçiş yaptı. Sondaj platformunun geçişi sırasında İstanbul Boğazı geçici olarak çift yönlü trafiğe kapatıldı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/350-metrelik-sondaj-platformu-istanbul-bogazindan-gecti-949182.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Haziran 2026, 11:52</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/350-metrelik-sondaj-platformu-istanbul-bogazindan-gecti-949182.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kılıçdaroğlu: chp davaları siyasi değil, yolsuzluk davaları mutlak butlan kararıyla chp genel başkanlığı&#x27;na getirilen kemal kılıçdaroğlu partiye yönelik davaların &quot;siyasi&quot; olmadığını söyledi. kılıçdaroğlu &quot;yolsuzluk davası onlar&quot; dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Haziran 2026, 12:04</span>
+        </div>
         <h3>Kılıçdaroğlu: CHP davaları siyasi değil, yolsuzluk davaları</h3>
-        <p>Mutlak butlan kararıyla CHP Genel Başkanlığı'na getirilen Kemal Kılıçdaroğlu partiye yönelik davaların "siyasi" olmadığını söyledi. Kılıçdaroğlu "Yolsuzluk davası onlar" dedi.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cgl318g027no?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+        <p>Mutlak butlan kararıyla CHP Genel Başkanlığı&#x27;na getirilen Kemal Kılıçdaroğlu partiye yönelik davaların &quot;siyasi&quot; olmadığını söyledi. Kılıçdaroğlu &quot;Yolsuzluk davası onlar&quot; dedi.</p>
     </div>
-
-    <div class="news-card">
-        <h3>Gana-İngiltere maçında tecavüzle suçlanan Partey'ye seyirciden protesto</h3>
-        <p>Gana'nın turnuvadaki ilk maçını kaçıran Partey, bu yılki Dünya Kupası'ndaki ilk karşılaşmasına çıkarken İngiltere taraftarları tarafından yuhalandı.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c1k2kw1ezxzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Haziran 2026, 12:04</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cgl318g027no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Kolombiya'dan Dünya Kupası'nda iki maçta iki galibiyet, son 32 vizesi</h3>
-        <p>Daniel Munoz'un savunmaya çarpan şutu, Kolombiya'ya Demokratik Kongo Cumhuriyeti karşısında galibiyeti getirdi. Kolombiya, bu sonuçla beraber Dünya Kupası'nda son 32 turuna yükselmeyi de garantiledi</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cx212l0193mo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="gana-i̇ngiltere maçında tecavüzle suçlanan partey&#x27;ye seyirciden protesto gana&#x27;nın turnuvadaki ilk maçını kaçıran partey, bu yılki dünya kupası&#x27;ndaki ilk karşılaşmasına çıkarken i̇ngiltere taraftarları tarafından yuhalandı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Haziran 2026, 09:53</span>
+        </div>
+        <h3>Gana-İngiltere maçında tecavüzle suçlanan Partey&#x27;ye seyirciden protesto</h3>
+        <p>Gana&#x27;nın turnuvadaki ilk maçını kaçıran Partey, bu yılki Dünya Kupası&#x27;ndaki ilk karşılaşmasına çıkarken İngiltere taraftarları tarafından yuhalandı.</p>
     </div>
-
-    <div class="news-card">
-        <h3>Dünya Kupası'nda İngiltere'ye Gana sürprizi: Maçtan gol sesi çıkmadı</h3>
-        <p>İngiltere, Gana'nın disiplinli savunmasını aşamayarak golsüz berabere kaldı ve Dünya Kupası'nda son 32 turuna yükselme işini son grup maçına bıraktı</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c07yn18yn4go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Haziran 2026, 09:53</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c1k2kw1ezxzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
+</article>
+<article class="news-card" data-search="kolombiya&#x27;dan dünya kupası&#x27;nda iki maçta iki galibiyet, son 32 vizesi daniel munoz&#x27;un savunmaya çarpan şutu, kolombiya&#x27;ya demokratik kongo cumhuriyeti karşısında galibiyeti getirdi. kolombiya, bu sonuçla beraber dünya kupası&#x27;nda son 32 turuna yükselmeyi de garantiledi genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Haziran 2026, 07:23</span>
+        </div>
+        <h3>Kolombiya&#x27;dan Dünya Kupası&#x27;nda iki maçta iki galibiyet, son 32 vizesi</h3>
+        <p>Daniel Munoz&#x27;un savunmaya çarpan şutu, Kolombiya&#x27;ya Demokratik Kongo Cumhuriyeti karşısında galibiyeti getirdi. Kolombiya, bu sonuçla beraber Dünya Kupası&#x27;nda son 32 turuna yükselmeyi de garantiledi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Haziran 2026, 07:23</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx212l0193mo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dünya kupası&#x27;nda i̇ngiltere&#x27;ye gana sürprizi: maçtan gol sesi çıkmadı i̇ngiltere, gana&#x27;nın disiplinli savunmasını aşamayarak golsüz berabere kaldı ve dünya kupası&#x27;nda son 32 turuna yükselme işini son grup maçına bıraktı genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Haziran 2026, 04:23</span>
+        </div>
+        <h3>Dünya Kupası&#x27;nda İngiltere&#x27;ye Gana sürprizi: Maçtan gol sesi çıkmadı</h3>
+        <p>İngiltere, Gana&#x27;nın disiplinli savunmasını aşamayarak golsüz berabere kaldı ve Dünya Kupası&#x27;nda son 32 turuna yükselme işini son grup maçına bıraktı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Haziran 2026, 04:23</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c07yn18yn4go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hırvatistan ikinci maçında galibiyetle tanıştı; tur umutlarını son maça taşıdı ante budimir&#x27;in golüyle panama&#x27;yı 1-0 yenen hırvatistan, dünya kupası&#x27;nda son 32 turu umutlarını son maça taşıdı genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Haziran 2026, 04:31</span>
+        </div>
         <h3>Hırvatistan ikinci maçında galibiyetle tanıştı; tur umutlarını son maça taşıdı</h3>
-        <p>Ante Budimir'in golüyle Panama'yı 1-0 yenen Hırvatistan, Dünya Kupası'nda son 32 turu umutlarını son maça taşıdı</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c7v9v1pl4dzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+        <p>Ante Budimir&#x27;in golüyle Panama&#x27;yı 1-0 yenen Hırvatistan, Dünya Kupası&#x27;nda son 32 turu umutlarını son maça taşıdı</p>
     </div>
-
-    <div class="news-card">
-        <h3>Portekiz Özbekistan'ı 5-0 yendi, Ronaldo iki gol attı</h3>
-        <p>Cristiano Ronaldo, rekor niteliğindeki altıncı Dünya Kupası'nda oynadığı ikinci maçta golle tanıştı.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c3ey957e04zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Haziran 2026, 04:31</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c7v9v1pl4dzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>IBAN düzenlemesi 12. Yargı Paketi'ne ekleniyor: 400 bin dosyayı kapsayacak</h3>
-        <p>Adalet ve Kalkınma Partisi, 12. Yargı Paketi'nden son anda çıkardığı "IBAN kiralamanın" müstakil suç olarak tanımlanmasına ilişkin düzenlemeyi önergeyle pakete eklemeye hazırlanıyor.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cz75rvvyx0do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="portekiz özbekistan&#x27;ı 5-0 yendi, ronaldo iki gol attı cristiano ronaldo, rekor niteliğindeki altıncı dünya kupası&#x27;nda oynadığı ikinci maçta golle tanıştı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 22:12</span>
+        </div>
+        <h3>Portekiz Özbekistan&#x27;ı 5-0 yendi, Ronaldo iki gol attı</h3>
+        <p>Cristiano Ronaldo, rekor niteliğindeki altıncı Dünya Kupası&#x27;nda oynadığı ikinci maçta golle tanıştı.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 22:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3ey957e04zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="iban düzenlemesi 12. yargı paketi&#x27;ne ekleniyor: 400 bin dosyayı kapsayacak adalet ve kalkınma partisi, 12. yargı paketi&#x27;nden son anda çıkardığı &quot;iban kiralamanın&quot; müstakil suç olarak tanımlanmasına ilişkin düzenlemeyi önergeyle pakete eklemeye hazırlanıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 21:14</span>
+        </div>
+        <h3>IBAN düzenlemesi 12. Yargı Paketi&#x27;ne ekleniyor: 400 bin dosyayı kapsayacak</h3>
+        <p>Adalet ve Kalkınma Partisi, 12. Yargı Paketi&#x27;nden son anda çıkardığı &quot;IBAN kiralamanın&quot; müstakil suç olarak tanımlanmasına ilişkin düzenlemeyi önergeyle pakete eklemeye hazırlanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 21:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cz75rvvyx0do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ş yerinin önünde otururken kamyonet çarptı: kaza anı kamerada adana&#x27;da çalıştığı iş yerinin önünde sandalyede oturan kişi, kamyonetin çarpması sonucu yaralandı. kaza anı güvenlik kamerasına yansıdı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 24 Haziran 2026, 12:55</span>
+        </div>
         <h3>İş yerinin önünde otururken kamyonet çarptı: Kaza anı kamerada</h3>
-        <p>Adana'da çalıştığı iş yerinin önünde sandalyede oturan kişi, kamyonetin çarpması sonucu yaralandı. Kaza anı güvenlik kamerasına yansıdı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/is-yerinin-onunde-otururken-kamyonet-carpti-kaza-ani-kamerada-949189.html" target="_blank">Haberi Oku</a>
+        <p>Adana&#x27;da çalıştığı iş yerinin önünde sandalyede oturan kişi, kamyonetin çarpması sonucu yaralandı. Kaza anı güvenlik kamerasına yansıdı.</p>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Haziran 2026, 12:55</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/is-yerinin-onunde-otururken-kamyonet-carpti-kaza-ani-kamerada-949189.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

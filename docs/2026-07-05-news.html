@@ -1,578 +1,451 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-        .search-box {
-    margin: 25px 0;
-    }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-            .category-filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 20px 0 30px;
-            }
-
-            .category-filter-btn {
-                padding: 8px 14px;
-                border: 1px solid #ddd;
-                border-radius: 999px;
-                background: #f7f7f7;
-                cursor: pointer;
-            }
-
-            .category-filter-btn.active {
-                background: #222;
-                color: white;
-            }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="home-search-input"
-        placeholder="Güncel haberlerde ara..."
-    >
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">5 Temmuz 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
 </div>
 
-<div class="category-filters">
-    <button class="category-filter-btn active" data-category="all">Tümü</button>
-    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-    <button class="category-filter-btn" data-category="dünya">Dünya</button>
-    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-    <button class="category-filter-btn" data-category="genel">Genel</button>
-</div>
-
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
         </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 7</span><span class="stat-item"><strong>ekonomi</strong> 3</span><span class="stat-item"><strong>genel</strong> 8</span><span class="stat-item"><strong>teknoloji</strong> 2</span></div>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>7</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>3</span>
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
         </div>
+        <h3>Türkiye ve NATO: 1952&#x27;den bugüne krizlerle şekillenen stratejik ortaklık</h3>
+        <p>Türkiye’nin NATO’ya 1952’de katılımıyla başlayan ortaklık, Soğuk Savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. Ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen NATO’nun güvenlik mimarisinde kritik konumunu korudu.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 5 Temmuz 2026, 10:26</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/czj8wz12peko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 4 Temmuz 2026, 19:12</span>
+            </div>
+            <h3>Ukrayna&#x27;dan St. Petersburg&#x27;a İHA saldırısı: Petrol terminali vuruldu</h3>
+            <p>Ukrayna Cumhurbaşkanı Volodimir Zelenskiy, Rusya&#x27;nın kuzeybatısındaki ikinci büyük şehri St. Petersburg&#x27;da bulunan önemli bir petrol terminalinin gece saatlerinde Ukrayna tarafından vurulduğunu açıkladı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cn0784njj71o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 5 Temmuz 2026, 12:10</span>
+            </div>
+            <h3>İstanbul Maltepe&#x27;de 2 katlı restoranda yangın</h3>
+            <p>İstanbul Maltepe&#x27;de bir restoranda yangın çıktı. Restoranın tamamına yayılan yangını söndürmek için çok sayıda itfaiye ekibi müdahale etti. Alevler kontrol altına alınırken restoran kullanılamaz hale geldi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbul-maltepede-2-katli-restoranda-yangin-950284.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 5 Temmuz 2026, 11:53</span>
+            </div>
+            <h3>Altın yatırımcısının yüzü 5 hafta sonra güldü</h3>
+            <p>Altının onsu, ABD&#x27;de beklentilerin altında gelen tarım dışı istihdam verisinin ABD Merkez Bankasının (Fed) yakın zamanda faiz artırımına gitme olasılığını düşürmesiyle geçen hafta yüzde 2,5 artarak 4 bin 175 dolara çıktı ve 5 hafta sonra yatırımcısının yüzünü güldürdü.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/altin-yatirimcisinin-yuzu-5-hafta-sonra-guldu-950282.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 5 Temmuz 2026, 11:19</span>
+            </div>
+            <h3>ABD bağımsızlığının 250. yılını kutladı</h3>
+            <p>ABD genelinde, ülkenin bağımsızlığının 250&#x27;nci yıldönümünü kutlamak için havai fişekler ve uçak gösterileri dahil çeşitli etkinlikler düzenlendi. Ancak aşırı hava koşulları bazı gösterilere engel oldu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c9q23g48d19o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>8</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>teknoloji</strong>
-            <span>2</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">7 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye ve nato: 1952&#x27;den bugüne krizlerle şekillenen stratejik ortaklık türkiye’nin nato’ya 1952’de katılımıyla başlayan ortaklık, soğuk savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen nato’nun güvenlik mimarisinde kritik konumunu korudu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 5 Temmuz 2026, 10:26</span>
         </div>
-
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-07-05 13:05</span>
+        <h3>Türkiye ve NATO: 1952&#x27;den bugüne krizlerle şekillenen stratejik ortaklık</h3>
+        <p>Türkiye’nin NATO’ya 1952’de katılımıyla başlayan ortaklık, Soğuk Savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. Ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen NATO’nun güvenlik mimarisinde kritik konumunu korudu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 5 Temmuz 2026, 10:26</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/czj8wz12peko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ukrayna&#x27;dan st. petersburg&#x27;a i̇ha saldırısı: petrol terminali vuruldu ukrayna cumhurbaşkanı volodimir zelenskiy, rusya&#x27;nın kuzeybatısındaki ikinci büyük şehri st. petersburg&#x27;da bulunan önemli bir petrol terminalinin gece saatlerinde ukrayna tarafından vurulduğunu açıkladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 19:12</span>
         </div>
+        <h3>Ukrayna&#x27;dan St. Petersburg&#x27;a İHA saldırısı: Petrol terminali vuruldu</h3>
+        <p>Ukrayna Cumhurbaşkanı Volodimir Zelenskiy, Rusya&#x27;nın kuzeybatısındaki ikinci büyük şehri St. Petersburg&#x27;da bulunan önemli bir petrol terminalinin gece saatlerinde Ukrayna tarafından vurulduğunu açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 19:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cn0784njj71o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul maltepe&#x27;de 2 katlı restoranda yangın i̇stanbul maltepe&#x27;de bir restoranda yangın çıktı. restoranın tamamına yayılan yangını söndürmek için çok sayıda itfaiye ekibi müdahale etti. alevler kontrol altına alınırken restoran kullanılamaz hale geldi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 5 Temmuz 2026, 12:10</span>
+        </div>
+        <h3>İstanbul Maltepe&#x27;de 2 katlı restoranda yangın</h3>
+        <p>İstanbul Maltepe&#x27;de bir restoranda yangın çıktı. Restoranın tamamına yayılan yangını söndürmek için çok sayıda itfaiye ekibi müdahale etti. Alevler kontrol altına alınırken restoran kullanılamaz hale geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 5 Temmuz 2026, 12:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbul-maltepede-2-katli-restoranda-yangin-950284.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd bağımsızlığının 250. yılını kutladı abd genelinde, ülkenin bağımsızlığının 250&#x27;nci yıldönümünü kutlamak için havai fişekler ve uçak gösterileri dahil çeşitli etkinlikler düzenlendi. ancak aşırı hava koşulları bazı gösterilere engel oldu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 5 Temmuz 2026, 11:19</span>
+        </div>
+        <h3>ABD bağımsızlığının 250. yılını kutladı</h3>
+        <p>ABD genelinde, ülkenin bağımsızlığının 250&#x27;nci yıldönümünü kutlamak için havai fişekler ve uçak gösterileri dahil çeşitli etkinlikler düzenlendi. Ancak aşırı hava koşulları bazı gösterilere engel oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 5 Temmuz 2026, 11:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9q23g48d19o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="uraloğlu: 2053&#x27;te türkiye&#x27;yi hızlı trenle 48 saatte gezmek mümkün olacak ulaştırma ve altyapı bakanı abdulkadir uraloğlu, 2028 yılına kadar doğrudan hızlı trenle bağlanan il sayısını 11&#x27;den 27&#x27;ye yükselteceklerini belirterek, &quot;2053 yılında da ülkemizin dört bir yanını hızlı tren hatlarıyla birleştirerek 48 saatte tüm türkiye&#x27;yi gezeceğiz&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 5 Temmuz 2026, 12:01</span>
+        </div>
+        <h3>Uraloğlu: 2053&#x27;te Türkiye&#x27;yi hızlı trenle 48 saatte gezmek mümkün olacak</h3>
+        <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, 2028 yılına kadar doğrudan hızlı trenle bağlanan il sayısını 11&#x27;den 27&#x27;ye yükselteceklerini belirterek, &quot;2053 yılında da ülkemizin dört bir yanını hızlı tren hatlarıyla birleştirerek 48 saatte tüm Türkiye&#x27;yi gezeceğiz&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 5 Temmuz 2026, 12:01</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/uraloglu-2053te-turkiyeyi-hizli-trenle-48-saatte-gezmek-mumkun-olacak-950283.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hamaney için tahran&#x27;da &#x27;veda ve cenaze&#x27; töreni devam ediyor suikaste uğrayan i̇ran&#x27;ın dini lideri ali hamaney için ölümünden yaklaşık dört ay sonra düzenlenen &quot;veda ve cenaze&quot; töreni tahran&#x27;da devam ediyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 14:41</span>
+        </div>
+        <h3>Hamaney için Tahran&#x27;da &#x27;veda ve cenaze&#x27; töreni devam ediyor</h3>
+        <p>Suikaste uğrayan İran&#x27;ın dini lideri Ali Hamaney için ölümünden yaklaşık dört ay sonra düzenlenen &quot;veda ve cenaze&quot; töreni Tahran&#x27;da devam ediyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 14:41</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyrxndzv9zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yaşlı ve engelli aylıkları için 8,1 milyar liralık ödeme başladı temmuz ayına yönelik toplam 8,1 milyar lira tutarındaki yaşlı ve engelli aylıkları hesaplara yatırılmaya başlandı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 5 Temmuz 2026, 12:41</span>
+        </div>
+        <h3>Yaşlı ve engelli aylıkları için 8,1 milyar liralık ödeme başladı</h3>
+        <p>Temmuz ayına yönelik toplam 8,1 milyar lira tutarındaki yaşlı ve engelli aylıkları hesaplara yatırılmaya başlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 5 Temmuz 2026, 12:41</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/yasli-ve-engelli-ayliklari-icin-81-milyar-liralik-odeme-basladi-950286.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="altın yatırımcısının yüzü 5 hafta sonra güldü altının onsu, abd&#x27;de beklentilerin altında gelen tarım dışı istihdam verisinin abd merkez bankasının (fed) yakın zamanda faiz artırımına gitme olasılığını düşürmesiyle geçen hafta yüzde 2,5 artarak 4 bin 175 dolara çıktı ve 5 hafta sonra yatırımcısının yüzünü güldürdü. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 5 Temmuz 2026, 11:53</span>
+        </div>
+        <h3>Altın yatırımcısının yüzü 5 hafta sonra güldü</h3>
+        <p>Altının onsu, ABD&#x27;de beklentilerin altında gelen tarım dışı istihdam verisinin ABD Merkez Bankasının (Fed) yakın zamanda faiz artırımına gitme olasılığını düşürmesiyle geçen hafta yüzde 2,5 artarak 4 bin 175 dolara çıktı ve 5 hafta sonra yatırımcısının yüzünü güldürdü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 5 Temmuz 2026, 11:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/altin-yatirimcisinin-yuzu-5-hafta-sonra-guldu-950282.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hollanda genelkurmay başkanı: türkiye&#x27;nin nato içindeki rolü daha da büyüyecek hollanda genelkurmay başkanı onno eichelsheim, abd&#x27;nin bazı askeri kabiliyetlerini geri çekmesiyle türkiye&#x27;nin nato içindeki rolünün daha da artacağını belirterek, türk savunma sanayisinin ulaştığı kabiliyet seviyesinden etkilendiğini ve bu alanda iki ülke arasında güçlü bir iş birliği potansiyeli gördüğünü söyledi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 5 Temmuz 2026, 11:46</span>
+        </div>
+        <h3>Hollanda Genelkurmay Başkanı: Türkiye&#x27;nin NATO içindeki rolü daha da büyüyecek</h3>
+        <p>Hollanda Genelkurmay Başkanı Onno Eichelsheim, ABD&#x27;nin bazı askeri kabiliyetlerini geri çekmesiyle Türkiye&#x27;nin NATO içindeki rolünün daha da artacağını belirterek, Türk savunma sanayisinin ulaştığı kabiliyet seviyesinden etkilendiğini ve bu alanda iki ülke arasında güçlü bir iş birliği potansiyeli gördüğünü söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 5 Temmuz 2026, 11:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/hollanda-genelkurmay-baskani-turkiyenin-nato-icindeki-rolu-daha-da-buyuyecek-950285.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milli savaş yönetim sisteminden ilk nato ihracat başarısı türk savunma sanayiinin deniz platformlarındaki milli komuta-kontrol çözümü advent savaş yönetim sistemi, havelsan tarafından bir nato üyesi ülkeye ilk kez ihraç edildi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 5 Temmuz 2026, 11:46</span>
+        </div>
+        <h3>Milli savaş yönetim sisteminden ilk NATO ihracat başarısı</h3>
+        <p>Türk savunma sanayiinin deniz platformlarındaki milli komuta-kontrol çözümü ADVENT Savaş Yönetim Sistemi, HAVELSAN tarafından bir NATO üyesi ülkeye ilk kez ihraç edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 5 Temmuz 2026, 11:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/milli-savas-yonetim-sisteminden-ilk-nato-ihracat-basarisi-950281.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">8 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="komedyen deniz göktaş tutuklandı, tepkiler ne oldu? komedyen deniz göktaş &quot;cumhurbaşkanına hakaret&quot; ve &quot;halkı kin ve düşmanlığa alenen tahrik&quot; suçlamalarıyla 3 temmuz&#x27;da tutuklandı. i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında göktaş&#x27;ın ifadesi alındıktan sonra tutuklanmasını talebiyle sulh ceza hakimliğine sevk edildi. göktaş ifadesinde kendisine yöneltilen suçlamaları reddetti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 5 Temmuz 2026, 11:57</span>
+        </div>
+        <h3>Komedyen Deniz Göktaş tutuklandı, tepkiler ne oldu?</h3>
+        <p>Komedyen Deniz Göktaş &quot;cumhurbaşkanına hakaret&quot; ve &quot;halkı kin ve düşmanlığa alenen tahrik&quot; suçlamalarıyla 3 Temmuz&#x27;da tutuklandı. İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında Göktaş&#x27;ın ifadesi alındıktan sonra tutuklanmasını talebiyle sulh ceza hakimliğine sevk edildi. Göktaş ifadesinde kendisine yöneltilen suçlamaları reddetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 5 Temmuz 2026, 11:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yzjgg5l0yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="uzmanlara göre çocuklara daha fazla sebze yedirmenin en etkili altı yolu çocukların yeterince sebze yemesini sağlamak zor olabilir. neyse ki araştırmacılar çocuklukta beslenme alışkanlıklarını iyileştirmenin yeni yollarını araştırıyor ve bazı yenilikçi çözümler bulmuş durumda. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 5 Temmuz 2026, 10:28</span>
+        </div>
+        <h3>Uzmanlara göre çocuklara daha fazla sebze yedirmenin en etkili altı yolu</h3>
+        <p>Çocukların yeterince sebze yemesini sağlamak zor olabilir. Neyse ki araştırmacılar çocuklukta beslenme alışkanlıklarını iyileştirmenin yeni yollarını araştırıyor ve bazı yenilikçi çözümler bulmuş durumda.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 5 Temmuz 2026, 10:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cdxdgq9w136o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="depremlerde daha çok insanın ölmesi ile iklim değişikliği arasında bağlantı var mı? yerleşim bölgelerinde meydana gelen depremler genellikle aynı soruları gündeme getiriyor: depremler daha sık ve daha ölümcül hale mi geliyor ve bunun sorumlusu iklim değişikliği mi? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 14:43</span>
+        </div>
+        <h3>Depremlerde daha çok insanın ölmesi ile iklim değişikliği arasında bağlantı var mı?</h3>
+        <p>Yerleşim bölgelerinde meydana gelen depremler genellikle aynı soruları gündeme getiriyor: Depremler daha sık ve daha ölümcül hale mi geliyor ve bunun sorumlusu iklim değişikliği mi?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 14:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cn07kewg2pgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato&#x27;nun gözü ankara&#x27;da: liderler zirvesi başlıyor nato ittifak tarihinin en önemli toplantılarından birine sahne olan nato i̇stanbul 2004 zirvesi&#x27;nin ardından türkiye, bu kez de &quot;belirsizlikler çağı&quot; olarak adlandırılan dönemde dünya liderlerini ağırlayacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 5 Temmuz 2026, 11:24</span>
+        </div>
+        <h3>NATO&#x27;nun gözü Ankara&#x27;da: Liderler zirvesi başlıyor</h3>
+        <p>NATO ittifak tarihinin en önemli toplantılarından birine sahne olan NATO İstanbul 2004 Zirvesi&#x27;nin ardından Türkiye, bu kez de &quot;belirsizlikler çağı&quot; olarak adlandırılan dönemde dünya liderlerini ağırlayacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 5 Temmuz 2026, 11:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/natonun-gozu-ankarada-liderler-zirvesi-basliyor-950279.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="okyanusta 8 günlük ölüm kalım savaşı cook adaları’nda küçük alüminyum teknesinin motoru arızalanan junior apiuta apiuta, pasifik okyanusu’nda sekiz gün boyunca sürüklendikten sonra kurtarıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 5 Temmuz 2026, 11:03</span>
+        </div>
+        <h3>Okyanusta 8 günlük ölüm kalım savaşı</h3>
+        <p>Cook Adaları’nda küçük alüminyum teknesinin motoru arızalanan Junior Apiuta Apiuta, Pasifik Okyanusu’nda sekiz gün boyunca sürüklendikten sonra kurtarıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 5 Temmuz 2026, 11:03</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/okyanusta-8-gunluk-olum-kalim-savasi-950278.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;hayatı bir fanteziden ibaretti&#x27;: john le carré&#x27;nin dolandırıcı babası casus romanlarını nasıl şekillendirdi? yazar john le carré&#x27;nin hayatı ve romanları, elit bir hayat yaşayan dolandırıcı babası tarafından şekillendirildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 5 Temmuz 2026, 10:27</span>
+        </div>
+        <h3>&#x27;Hayatı bir fanteziden ibaretti&#x27;: John le Carré&#x27;nin dolandırıcı babası casus romanlarını nasıl şekillendirdi?</h3>
+        <p>Yazar John le Carré&#x27;nin hayatı ve romanları, elit bir hayat yaşayan dolandırıcı babası tarafından şekillendirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 5 Temmuz 2026, 10:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq61qj1lzz2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kocaeli&#x27;de terör şüphelisi 28 kişi yakalandı kocaeli&#x27;de terör örgütlerine yönelik operasyonda 28 şüpheli gözaltına alındı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 5 Temmuz 2026, 12:48</span>
+        </div>
+        <h3>Kocaeli&#x27;de terör şüphelisi 28 kişi yakalandı</h3>
+        <p>Kocaeli&#x27;de terör örgütlerine yönelik operasyonda 28 şüpheli gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 5 Temmuz 2026, 12:48</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/kocaelide-teror-suphelisi-28-kisi-yakalandi-950287.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇letişim başkanı duran, nato zirvesi programının detayını açıkladı i̇letişim başkanı burhanettin duran, 7-8 temmuz&#x27;da ankara&#x27;da düzenlenecek nato zirvesi&#x27;nin programına ilişkin takvimi açıkladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 5 Temmuz 2026, 11:34</span>
+        </div>
+        <h3>İletişim Başkanı Duran, NATO Zirvesi programının detayını açıkladı</h3>
+        <p>İletişim Başkanı Burhanettin Duran, 7-8 Temmuz&#x27;da Ankara&#x27;da düzenlenecek NATO Zirvesi&#x27;nin programına ilişkin takvimi açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 5 Temmuz 2026, 11:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/iletisim-baskani-duran-nato-zirvesi-programinin-detayini-acikladi-950280.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/czj8wz12peko?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Türkiye ve NATO: 1952'den bugüne krizlerle şekillenen stratejik ortaklık</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇nsanların görünüşü gelecekte nasıl değişecek? bilim insanları hala evrimleşmekte olduğumuzu söylüyor. fakat gen düzenleme gibi yeni teknolojiler sayesinde, gelecekteki görünümümüz beklenmedik şekillerde değişebilir. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 5 Temmuz 2026, 10:43</span>
+        </div>
+        <h3>İnsanların görünüşü gelecekte nasıl değişecek?</h3>
+        <p>Bilim insanları hala evrimleşmekte olduğumuzu söylüyor. Fakat gen düzenleme gibi yeni teknolojiler sayesinde, gelecekteki görünümümüz beklenmedik şekillerde değişebilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 5 Temmuz 2026, 10:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c78yj0mgrjyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="japonya&#x27;da bir belediye başkanı doğum izni alacağını açıklayınca ülkenin gündemine oturdu eleştirilere rağmen, 35 yaşındaki shoko kawata, işini sevdiğini ve bebek sahibi olmak için izin almaktan gurur duyduğunu söylüyor. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 4 Temmuz 2026, 16:41</span>
+        </div>
+        <h3>Japonya&#x27;da bir belediye başkanı doğum izni alacağını açıklayınca ülkenin gündemine oturdu</h3>
+        <p>Eleştirilere rağmen, 35 yaşındaki Shoko Kawata, işini sevdiğini ve bebek sahibi olmak için izin almaktan gurur duyduğunu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Temmuz 2026, 16:41</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yzr2442wyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cn0784njj71o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Ukrayna'dan St. Petersburg'a İHA saldırısı: Petrol terminali vuruldu</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/turkiye/istanbul-maltepede-2-katli-restoranda-yangin-950284.html" target="_blank">
-                <strong>İstanbul Maltepe'de 2 katlı restoranda yangın</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/ekonomi/altin-yatirimcisinin-yuzu-5-hafta-sonra-guldu-950282.html" target="_blank">
-                <strong>Altın yatırımcısının yüzü 5 hafta sonra güldü</strong>
-            </a>
-        </li>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c9q23g48d19o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>ABD bağımsızlığının 250. yılını kutladı</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye ve nato: 1952'den bugüne krizlerle şekillenen stratejik ortaklık
-            türkiye’nin nato’ya 1952’de katılımıyla başlayan ortaklık, soğuk savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen nato’nun güvenlik mimarisinde kritik konumunu korudu.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Türkiye ve NATO: 1952'den bugüne krizlerle şekillenen stratejik ortaklık</h3>
-                    <p>Türkiye’nin NATO’ya 1952’de katılımıyla başlayan ortaklık, Soğuk Savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. Ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen NATO’nun güvenlik mimarisinde kritik konumunu korudu.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/czj8wz12peko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            ukrayna'dan st. petersburg'a i̇ha saldırısı: petrol terminali vuruldu
-            ukrayna cumhurbaşkanı volodimir zelenskiy, rusya'nın kuzeybatısındaki ikinci büyük şehri st. petersburg'da bulunan önemli bir petrol terminalinin gece saatlerinde ukrayna tarafından vurulduğunu açıkladı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Ukrayna'dan St. Petersburg'a İHA saldırısı: Petrol terminali vuruldu</h3>
-                    <p>Ukrayna Cumhurbaşkanı Volodimir Zelenskiy, Rusya'nın kuzeybatısındaki ikinci büyük şehri St. Petersburg'da bulunan önemli bir petrol terminalinin gece saatlerinde Ukrayna tarafından vurulduğunu açıkladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cn0784njj71o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇stanbul maltepe'de 2 katlı restoranda yangın
-            i̇stanbul maltepe'de bir restoranda yangın çıktı. restoranın tamamına yayılan yangını söndürmek için çok sayıda itfaiye ekibi müdahale etti. alevler kontrol altına alınırken restoran kullanılamaz hale geldi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>İstanbul Maltepe'de 2 katlı restoranda yangın</h3>
-                    <p>İstanbul Maltepe'de bir restoranda yangın çıktı. Restoranın tamamına yayılan yangını söndürmek için çok sayıda itfaiye ekibi müdahale etti. Alevler kontrol altına alınırken restoran kullanılamaz hale geldi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/istanbul-maltepede-2-katli-restoranda-yangin-950284.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd bağımsızlığının 250. yılını kutladı
-            abd genelinde, ülkenin bağımsızlığının 250'nci yıldönümünü kutlamak için havai fişekler ve uçak gösterileri dahil çeşitli etkinlikler düzenlendi. ancak aşırı hava koşulları bazı gösterilere engel oldu.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD bağımsızlığının 250. yılını kutladı</h3>
-                    <p>ABD genelinde, ülkenin bağımsızlığının 250'nci yıldönümünü kutlamak için havai fişekler ve uçak gösterileri dahil çeşitli etkinlikler düzenlendi. Ancak aşırı hava koşulları bazı gösterilere engel oldu.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c9q23g48d19o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            uraloğlu: 2053'te türkiye'yi hızlı trenle 48 saatte gezmek mümkün olacak
-            ulaştırma ve altyapı bakanı abdulkadir uraloğlu, 2028 yılına kadar doğrudan hızlı trenle bağlanan il sayısını 11'den 27'ye yükselteceklerini belirterek, "2053 yılında da ülkemizin dört bir yanını hızlı tren hatlarıyla birleştirerek 48 saatte tüm türkiye'yi gezeceğiz" dedi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Uraloğlu: 2053'te Türkiye'yi hızlı trenle 48 saatte gezmek mümkün olacak</h3>
-                    <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, 2028 yılına kadar doğrudan hızlı trenle bağlanan il sayısını 11'den 27'ye yükselteceklerini belirterek, "2053 yılında da ülkemizin dört bir yanını hızlı tren hatlarıyla birleştirerek 48 saatte tüm Türkiye'yi gezeceğiz" dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/uraloglu-2053te-turkiyeyi-hizli-trenle-48-saatte-gezmek-mumkun-olacak-950283.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            hamaney için tahran'da 'veda ve cenaze' töreni devam ediyor
-            suikaste uğrayan i̇ran'ın dini lideri ali hamaney için ölümünden yaklaşık dört ay sonra düzenlenen "veda ve cenaze" töreni tahran'da devam ediyor.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Hamaney için Tahran'da 'veda ve cenaze' töreni devam ediyor</h3>
-                    <p>Suikaste uğrayan İran'ın dini lideri Ali Hamaney için ölümünden yaklaşık dört ay sonra düzenlenen "veda ve cenaze" töreni Tahran'da devam ediyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/clyrxndzv9zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            yaşlı ve engelli aylıkları için 8,1 milyar liralık ödeme başladı
-            temmuz ayına yönelik toplam 8,1 milyar lira tutarındaki yaşlı ve engelli aylıkları hesaplara yatırılmaya başlandı.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Yaşlı ve engelli aylıkları için 8,1 milyar liralık ödeme başladı</h3>
-                    <p>Temmuz ayına yönelik toplam 8,1 milyar lira tutarındaki yaşlı ve engelli aylıkları hesaplara yatırılmaya başlandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/yasli-ve-engelli-ayliklari-icin-81-milyar-liralik-odeme-basladi-950286.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">EKONOMI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            altın yatırımcısının yüzü 5 hafta sonra güldü
-            altının onsu, abd'de beklentilerin altında gelen tarım dışı istihdam verisinin abd merkez bankasının (fed) yakın zamanda faiz artırımına gitme olasılığını düşürmesiyle geçen hafta yüzde 2,5 artarak 4 bin 175 dolara çıktı ve 5 hafta sonra yatırımcısının yüzünü güldürdü.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Altın yatırımcısının yüzü 5 hafta sonra güldü</h3>
-                    <p>Altının onsu, ABD'de beklentilerin altında gelen tarım dışı istihdam verisinin ABD Merkez Bankasının (Fed) yakın zamanda faiz artırımına gitme olasılığını düşürmesiyle geçen hafta yüzde 2,5 artarak 4 bin 175 dolara çıktı ve 5 hafta sonra yatırımcısının yüzünü güldürdü.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/altin-yatirimcisinin-yuzu-5-hafta-sonra-guldu-950282.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            hollanda genelkurmay başkanı: türkiye'nin nato içindeki rolü daha da büyüyecek
-            hollanda genelkurmay başkanı onno eichelsheim, abd'nin bazı askeri kabiliyetlerini geri çekmesiyle türkiye'nin nato içindeki rolünün daha da artacağını belirterek, türk savunma sanayisinin ulaştığı kabiliyet seviyesinden etkilendiğini ve bu alanda iki ülke arasında güçlü bir iş birliği potansiyeli gördüğünü söyledi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Hollanda Genelkurmay Başkanı: Türkiye'nin NATO içindeki rolü daha da büyüyecek</h3>
-                    <p>Hollanda Genelkurmay Başkanı Onno Eichelsheim, ABD'nin bazı askeri kabiliyetlerini geri çekmesiyle Türkiye'nin NATO içindeki rolünün daha da artacağını belirterek, Türk savunma sanayisinin ulaştığı kabiliyet seviyesinden etkilendiğini ve bu alanda iki ülke arasında güçlü bir iş birliği potansiyeli gördüğünü söyledi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/hollanda-genelkurmay-baskani-turkiyenin-nato-icindeki-rolu-daha-da-buyuyecek-950285.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            milli savaş yönetim sisteminden ilk nato ihracat başarısı
-            türk savunma sanayiinin deniz platformlarındaki milli komuta-kontrol çözümü advent savaş yönetim sistemi, havelsan tarafından bir nato üyesi ülkeye ilk kez ihraç edildi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Milli savaş yönetim sisteminden ilk NATO ihracat başarısı</h3>
-                    <p>Türk savunma sanayiinin deniz platformlarındaki milli komuta-kontrol çözümü ADVENT Savaş Yönetim Sistemi, HAVELSAN tarafından bir NATO üyesi ülkeye ilk kez ihraç edildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/milli-savas-yonetim-sisteminden-ilk-nato-ihracat-basarisi-950281.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            komedyen deniz göktaş tutuklandı, tepkiler ne oldu?
-            komedyen deniz göktaş "cumhurbaşkanına hakaret" ve "halkı kin ve düşmanlığa alenen tahrik" suçlamalarıyla 3 temmuz'da tutuklandı. i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında göktaş'ın ifadesi alındıktan sonra tutuklanmasını talebiyle sulh ceza hakimliğine sevk edildi. göktaş ifadesinde kendisine yöneltilen suçlamaları reddetti.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Komedyen Deniz Göktaş tutuklandı, tepkiler ne oldu?</h3>
-                    <p>Komedyen Deniz Göktaş "cumhurbaşkanına hakaret" ve "halkı kin ve düşmanlığa alenen tahrik" suçlamalarıyla 3 Temmuz'da tutuklandı. İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında Göktaş'ın ifadesi alındıktan sonra tutuklanmasını talebiyle sulh ceza hakimliğine sevk edildi. Göktaş ifadesinde kendisine yöneltilen suçlamaları reddetti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yzjgg5l0yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            uzmanlara göre çocuklara daha fazla sebze yedirmenin en etkili altı yolu
-            çocukların yeterince sebze yemesini sağlamak zor olabilir. neyse ki araştırmacılar çocuklukta beslenme alışkanlıklarını iyileştirmenin yeni yollarını araştırıyor ve bazı yenilikçi çözümler bulmuş durumda.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Uzmanlara göre çocuklara daha fazla sebze yedirmenin en etkili altı yolu</h3>
-                    <p>Çocukların yeterince sebze yemesini sağlamak zor olabilir. Neyse ki araştırmacılar çocuklukta beslenme alışkanlıklarını iyileştirmenin yeni yollarını araştırıyor ve bazı yenilikçi çözümler bulmuş durumda.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cdxdgq9w136o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            depremlerde daha çok insanın ölmesi ile iklim değişikliği arasında bağlantı var mı?
-            yerleşim bölgelerinde meydana gelen depremler genellikle aynı soruları gündeme getiriyor: depremler daha sık ve daha ölümcül hale mi geliyor ve bunun sorumlusu iklim değişikliği mi?
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Depremlerde daha çok insanın ölmesi ile iklim değişikliği arasında bağlantı var mı?</h3>
-                    <p>Yerleşim bölgelerinde meydana gelen depremler genellikle aynı soruları gündeme getiriyor: Depremler daha sık ve daha ölümcül hale mi geliyor ve bunun sorumlusu iklim değişikliği mi?</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cn07kewg2pgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nato'nun gözü ankara'da: liderler zirvesi başlıyor
-            nato ittifak tarihinin en önemli toplantılarından birine sahne olan nato i̇stanbul 2004 zirvesi'nin ardından türkiye, bu kez de "belirsizlikler çağı" olarak adlandırılan dönemde dünya liderlerini ağırlayacak.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>NATO'nun gözü Ankara'da: Liderler zirvesi başlıyor</h3>
-                    <p>NATO ittifak tarihinin en önemli toplantılarından birine sahne olan NATO İstanbul 2004 Zirvesi'nin ardından Türkiye, bu kez de "belirsizlikler çağı" olarak adlandırılan dönemde dünya liderlerini ağırlayacak.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/natonun-gozu-ankarada-liderler-zirvesi-basliyor-950279.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            okyanusta 8 günlük ölüm kalım savaşı
-            cook adaları’nda küçük alüminyum teknesinin motoru arızalanan junior apiuta apiuta, pasifik okyanusu’nda sekiz gün boyunca sürüklendikten sonra kurtarıldı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Okyanusta 8 günlük ölüm kalım savaşı</h3>
-                    <p>Cook Adaları’nda küçük alüminyum teknesinin motoru arızalanan Junior Apiuta Apiuta, Pasifik Okyanusu’nda sekiz gün boyunca sürüklendikten sonra kurtarıldı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/okyanusta-8-gunluk-olum-kalim-savasi-950278.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            'hayatı bir fanteziden ibaretti': john le carré'nin dolandırıcı babası casus romanlarını nasıl şekillendirdi?
-            yazar john le carré'nin hayatı ve romanları, elit bir hayat yaşayan dolandırıcı babası tarafından şekillendirildi.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>'Hayatı bir fanteziden ibaretti': John le Carré'nin dolandırıcı babası casus romanlarını nasıl şekillendirdi?</h3>
-                    <p>Yazar John le Carré'nin hayatı ve romanları, elit bir hayat yaşayan dolandırıcı babası tarafından şekillendirildi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cq61qj1lzz2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            kocaeli'de terör şüphelisi 28 kişi yakalandı
-            kocaeli'de terör örgütlerine yönelik operasyonda 28 şüpheli gözaltına alındı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Kocaeli'de terör şüphelisi 28 kişi yakalandı</h3>
-                    <p>Kocaeli'de terör örgütlerine yönelik operasyonda 28 şüpheli gözaltına alındı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/kocaelide-teror-suphelisi-28-kisi-yakalandi-950287.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇letişim başkanı duran, nato zirvesi programının detayını açıkladı
-            i̇letişim başkanı burhanettin duran, 7-8 temmuz'da ankara'da düzenlenecek nato zirvesi'nin programına ilişkin takvimi açıkladı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>İletişim Başkanı Duran, NATO Zirvesi programının detayını açıkladı</h3>
-                    <p>İletişim Başkanı Burhanettin Duran, 7-8 Temmuz'da Ankara'da düzenlenecek NATO Zirvesi'nin programına ilişkin takvimi açıkladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/iletisim-baskani-duran-nato-zirvesi-programinin-detayini-acikladi-950280.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">TEKNOLOJI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            i̇nsanların görünüşü gelecekte nasıl değişecek?
-            bilim insanları hala evrimleşmekte olduğumuzu söylüyor. fakat gen düzenleme gibi yeni teknolojiler sayesinde, gelecekteki görünümümüz beklenmedik şekillerde değişebilir.
-            teknoloji
-            bbc türkçe
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>İnsanların görünüşü gelecekte nasıl değişecek?</h3>
-                    <p>Bilim insanları hala evrimleşmekte olduğumuzu söylüyor. Fakat gen düzenleme gibi yeni teknolojiler sayesinde, gelecekteki görünümümüz beklenmedik şekillerde değişebilir.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c78yj0mgrjyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            japonya'da bir belediye başkanı doğum izni alacağını açıklayınca ülkenin gündemine oturdu
-            eleştirilere rağmen, 35 yaşındaki shoko kawata, işini sevdiğini ve bebek sahibi olmak için izin almaktan gurur duyduğunu söylüyor.
-            teknoloji
-            bbc türkçe
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Japonya'da bir belediye başkanı doğum izni alacağını açıklayınca ülkenin gündemine oturdu</h3>
-                    <p>Eleştirilere rağmen, 35 yaşındaki Shoko Kawata, işini sevdiğini ve bebek sahibi olmak için izin almaktan gurur duyduğunu söylüyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yzr2442wyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

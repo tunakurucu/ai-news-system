@@ -2,191 +2,441 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
     <link rel="stylesheet" href="assets/css/news.css">
     <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <header class="site-nav">
-        <div class="nav-inner">
-            <div class="brand">AI News</div>
-            <a href="index.html">Current News</a>
-            <a href="archive.html">Archive</a>
-            <a href="search.html">Search</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
         </div>
     </header>
 
     <main class="site-wrapper">
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-text">
             <h1>Günün Haberleri</h1>
-            <div class="search-box">
-                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            <p class="hero-date">20 Haziran 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>genel</strong> 14</span><span class="stat-item"><strong>spor</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Harry Potter ve savaş esiri: Ukraynalı askerin kitaplarla hayatta kalma hikayesi</h3>
+        <p>Rus hapishanesinin nemli, gri bir hücresinde hapsedilmiş, ülkesinin hâlâ ayakta olup olmadığını, karısının ve küçük oğlunun akıbetini bilmesinin hiçbir yolu olmayan bir Ukraynalı deniz piyadesinin ruhunu, çocukluğundan beri koruduğu bir tutku ayakta tuttu.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 20 Haziran 2026, 11:15</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c8x2gjegnrdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 20 Haziran 2026, 20:20</span>
             </div>
-
-            <div class="category-filters">
-                <button class="category-filter-btn active" data-category="all">Tümü</button>
-                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                <button class="category-filter-btn" data-category="genel">Genel</button>
+            <h3>Uluslararası bilim olimpiyatlarında 21 öğrenci madalya ve ödül kazandı</h3>
+            <p>Bakan Kacır, TÜBİTAK bünyesinde yürütülen 2202 Bilim Olimpiyatları Programı kapsamında yetiştirilen gençlerin dünya sahnesinde 1 altın, 7 gümüş, 6 bronz madalya ve 7 mansiyon ödülüyle döndüğünü ve Türkiye&#x27;ye büyük bir gurur yaşattığını belirterek, madalya ve ödül kazananları tebrik etti.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/uluslararasi-bilim-olimpiyatlarinda-21-ogrenci-madalya-ve-odul-kazandi-948847.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 20 Haziran 2026, 19:38</span>
             </div>
-        </section>
+            <h3>Petro&#x27;dan Trump&#x27;a &#x27;İsrail&#x27;in Lübnan&#x27;a saldırılarını durdurun&#x27; çağrısı</h3>
+            <p>Kolombiya Cumhurbaşkanı Petro, ateşkese rağmen Lübnan&#x27;a yönelik saldırılarını sürdüren İsrail&#x27;in durdurulması için ABD Başkanı Donald Trump&#x27;a çağrıda bulundu.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/petrodan-trumpa-israilin-lubnana-saldirilarini-durdurun-cagrisi-948846.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 20 Haziran 2026, 19:57</span>
+            </div>
+            <h3>İskoçya&#x27;da İslam karşıtı olduğundan şüphelenilen saldırılarda beş kişi yaralandı</h3>
+            <p>İskoçya&#x27;nın başkenti Edinburgh&#x27;da İslam karşıtı olduğundan şüphelenilen bir dizi saldırıda beş erkek yaralandı. Başkent sokaklarında büyük bir silahla üstsüz dolaşan bir erkeğin saldırılarla bağlantılı olduğu düşünülüyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c9w21dj5we5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 20 Haziran 2026, 12:38</span>
+            </div>
+            <h3>İtalya basını: &#x27;Montella istifa mı edecek, kovulacak mı?&#x27;</h3>
+            <p>Türkiye&#x27;nin Dünya Kupası&#x27;ndaki ikinci maçında da golsüz yenilgiye uğraması ve turnuvadan elenmesi, Milli Takım Teknik Direktörü Vincenzo Montella&#x27;nın memleketi İtalya&#x27;da &quot;fiyasko&quot; ve &quot;felaket&quot; olarak yorumlandı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cj0gmz4ypqjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stats-grid">
-                        <a href="archive.html">Archive</a>
-                        <a href="search.html">Search</a>
-                    </div>
-                </header>
+    </section>
 
-                <main class="site-wrapper">
-                    <section class="hero">
-                        <h1>Günün Haberleri</h1>
-                        <div class="search-box">
-                            <input type="text" id="home-search-input" placeholder="Search today's news...">
-                        </div>
-
-                        <div class="category-filters">
-                            <button class="category-filter-btn active" data-category="all">Tümü</button>
-                            <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                            <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                            <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                            <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                            <button class="category-filter-btn" data-category="genel">Genel</button>
-                        </div>
-                    </section>
-
-                    <div class="stats-grid">
-    <div class="news-card">
-        <h3>Yusuf Ziya Gümüşel'in tahliyesine kadar geçen süreçte neler yaşandı, bundan sonra ne olabilir?</h3>
-        <p>Çocuğun nitelikli cinsel istismarı suçuyla bağlantılı olarak 18 yıl 9 ay hapis cezasına çarptırılan Hiranur Vakfı kurucusu Yusuf Ziya Gümüşel, 17 Haziran'da tahliye edildi. Peki süreçte şimdiye kadar neler yaşandı?</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c77y142n6z4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
     </div>
-
-    <div class="news-card">
+    <div class="news-list">
+        <article class="news-card" data-search="harry potter ve savaş esiri: ukraynalı askerin kitaplarla hayatta kalma hikayesi rus hapishanesinin nemli, gri bir hücresinde hapsedilmiş, ülkesinin hâlâ ayakta olup olmadığını, karısının ve küçük oğlunun akıbetini bilmesinin hiçbir yolu olmayan bir ukraynalı deniz piyadesinin ruhunu, çocukluğundan beri koruduğu bir tutku ayakta tuttu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 20 Haziran 2026, 11:15</span>
+        </div>
+        <h3>Harry Potter ve savaş esiri: Ukraynalı askerin kitaplarla hayatta kalma hikayesi</h3>
+        <p>Rus hapishanesinin nemli, gri bir hücresinde hapsedilmiş, ülkesinin hâlâ ayakta olup olmadığını, karısının ve küçük oğlunun akıbetini bilmesinin hiçbir yolu olmayan bir Ukraynalı deniz piyadesinin ruhunu, çocukluğundan beri koruduğu bir tutku ayakta tuttu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Haziran 2026, 11:15</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c8x2gjegnrdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="petro&#x27;dan trump&#x27;a &#x27;i̇srail&#x27;in lübnan&#x27;a saldırılarını durdurun&#x27; çağrısı kolombiya cumhurbaşkanı petro, ateşkese rağmen lübnan&#x27;a yönelik saldırılarını sürdüren i̇srail&#x27;in durdurulması için abd başkanı donald trump&#x27;a çağrıda bulundu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 20 Haziran 2026, 19:38</span>
+        </div>
+        <h3>Petro&#x27;dan Trump&#x27;a &#x27;İsrail&#x27;in Lübnan&#x27;a saldırılarını durdurun&#x27; çağrısı</h3>
+        <p>Kolombiya Cumhurbaşkanı Petro, ateşkese rağmen Lübnan&#x27;a yönelik saldırılarını sürdüren İsrail&#x27;in durdurulması için ABD Başkanı Donald Trump&#x27;a çağrıda bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Haziran 2026, 19:38</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/petrodan-trumpa-israilin-lubnana-saldirilarini-durdurun-cagrisi-948846.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yusuf ziya gümüşel&#x27;in tahliyesine kadar geçen süreçte neler yaşandı, bundan sonra ne olabilir? çocuğun nitelikli cinsel istismarı suçuyla bağlantılı olarak 18 yıl 9 ay hapis cezasına çarptırılan hiranur vakfı kurucusu yusuf ziya gümüşel, 17 haziran&#x27;da tahliye edildi. peki süreçte şimdiye kadar neler yaşandı? dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 19 Haziran 2026, 19:11</span>
+        </div>
+        <h3>Yusuf Ziya Gümüşel&#x27;in tahliyesine kadar geçen süreçte neler yaşandı, bundan sonra ne olabilir?</h3>
+        <p>Çocuğun nitelikli cinsel istismarı suçuyla bağlantılı olarak 18 yıl 9 ay hapis cezasına çarptırılan Hiranur Vakfı kurucusu Yusuf Ziya Gümüşel, 17 Haziran&#x27;da tahliye edildi. Peki süreçte şimdiye kadar neler yaşandı?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Haziran 2026, 19:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c77y142n6z4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd ordusu: hürmüz boğazı ticari gemi geçişlerine açık abd ordusu i̇ran&#x27;ın, i̇srail&#x27;in lübnan&#x27;a saldırıları nedeniyle hürmüz boğazı&#x27;nı geçişlere kapatacağı yönündeki açıklamasından kısa süre sonra &quot;boğazın gemi geçişlerine halen açık olduğu&quot; mesajını paylaştı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 20 Haziran 2026, 17:59</span>
+        </div>
         <h3>ABD ordusu: Hürmüz Boğazı ticari gemi geçişlerine açık</h3>
-        <p>ABD ordusu İran'ın, İsrail'in Lübnan'a saldırıları nedeniyle Hürmüz Boğazı'nı geçişlere kapatacağı yönündeki açıklamasından kısa süre sonra "boğazın gemi geçişlerine halen açık olduğu" mesajını paylaştı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/abd-ordusu-hurmuz-bogazi-ticari-gemi-gecislerine-acik-948842.html" target="_blank">Haberi Oku</a>
+        <p>ABD ordusu İran&#x27;ın, İsrail&#x27;in Lübnan&#x27;a saldırıları nedeniyle Hürmüz Boğazı&#x27;nı geçişlere kapatacağı yönündeki açıklamasından kısa süre sonra &quot;boğazın gemi geçişlerine halen açık olduğu&quot; mesajını paylaştı.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Haziran 2026, 17:59</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-ordusu-hurmuz-bogazi-ticari-gemi-gecislerine-acik-948842.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hac ön kayıt ve kayıt yenileme işlemleri için başvuru süresi uzatıldı diyanet i̇şleri başkanlığı, 2027 hac ön kayıt ve kayıt yenileme işlemleri için verilen sürenin 26 haziran mesai bitimine dek uzatıldığını duyurdu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 20 Haziran 2026, 17:46</span>
+        </div>
         <h3>Hac ön kayıt ve kayıt yenileme işlemleri için başvuru süresi uzatıldı</h3>
         <p>Diyanet İşleri Başkanlığı, 2027 hac ön kayıt ve kayıt yenileme işlemleri için verilen sürenin 26 Haziran mesai bitimine dek uzatıldığını duyurdu.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/hac-on-kayit-ve-kayit-yenileme-islemleri-icin-basvuru-suresi-uzatildi-948840.html" target="_blank">Haberi Oku</a>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Haziran 2026, 17:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/hac-on-kayit-ve-kayit-yenileme-islemleri-icin-basvuru-suresi-uzatildi-948840.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2 class="category-title">GENEL</h2>
-
-    <div class="news-card">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">14 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="uluslararası bilim olimpiyatlarında 21 öğrenci madalya ve ödül kazandı bakan kacır, tübi̇tak bünyesinde yürütülen 2202 bilim olimpiyatları programı kapsamında yetiştirilen gençlerin dünya sahnesinde 1 altın, 7 gümüş, 6 bronz madalya ve 7 mansiyon ödülüyle döndüğünü ve türkiye&#x27;ye büyük bir gurur yaşattığını belirterek, madalya ve ödül kazananları tebrik etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Haziran 2026, 20:20</span>
+        </div>
         <h3>Uluslararası bilim olimpiyatlarında 21 öğrenci madalya ve ödül kazandı</h3>
-        <p>Bakan Kacır, TÜBİTAK bünyesinde yürütülen 2202 Bilim Olimpiyatları Programı kapsamında yetiştirilen gençlerin dünya sahnesinde 1 altın, 7 gümüş, 6 bronz madalya ve 7 mansiyon ödülüyle döndüğünü ve Türkiye'ye büyük bir gurur yaşattığını belirterek, madalya ve ödül kazananları tebrik etti.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/bilim-teknoloji/uluslararasi-bilim-olimpiyatlarinda-21-ogrenci-madalya-ve-odul-kazandi-948847.html" target="_blank">Haberi Oku</a>
+        <p>Bakan Kacır, TÜBİTAK bünyesinde yürütülen 2202 Bilim Olimpiyatları Programı kapsamında yetiştirilen gençlerin dünya sahnesinde 1 altın, 7 gümüş, 6 bronz madalya ve 7 mansiyon ödülüyle döndüğünü ve Türkiye&#x27;ye büyük bir gurur yaşattığını belirterek, madalya ve ödül kazananları tebrik etti.</p>
     </div>
-
-    <div class="news-card">
-        <h3>İskoçya'da İslam karşıtı olduğundan şüphelenilen saldırılarda beş kişi yaralandı</h3>
-        <p>İskoçya'nın başkenti Edinburgh'da İslam karşıtı olduğundan şüphelenilen bir dizi saldırıda beş erkek yaralandı. Başkent sokaklarında büyük bir silahla üstsüz dolaşan bir erkeğin saldırılarla bağlantılı olduğu düşünülüyor.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c9w21dj5we5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Haziran 2026, 20:20</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/uluslararasi-bilim-olimpiyatlarinda-21-ogrenci-madalya-ve-odul-kazandi-948847.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>İtalya basını: 'Montella istifa mı edecek, kovulacak mı?'</h3>
-        <p>Türkiye'nin Dünya Kupası'ndaki ikinci maçında da golsüz yenilgiye uğraması ve turnuvadan elenmesi, Milli Takım Teknik Direktörü Vincenzo Montella'nın memleketi İtalya'da "fiyasko" ve "felaket" olarak yorumlandı.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cj0gmz4ypqjo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="i̇skoçya&#x27;da i̇slam karşıtı olduğundan şüphelenilen saldırılarda beş kişi yaralandı i̇skoçya&#x27;nın başkenti edinburgh&#x27;da i̇slam karşıtı olduğundan şüphelenilen bir dizi saldırıda beş erkek yaralandı. başkent sokaklarında büyük bir silahla üstsüz dolaşan bir erkeğin saldırılarla bağlantılı olduğu düşünülüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Haziran 2026, 19:57</span>
+        </div>
+        <h3>İskoçya&#x27;da İslam karşıtı olduğundan şüphelenilen saldırılarda beş kişi yaralandı</h3>
+        <p>İskoçya&#x27;nın başkenti Edinburgh&#x27;da İslam karşıtı olduğundan şüphelenilen bir dizi saldırıda beş erkek yaralandı. Başkent sokaklarında büyük bir silahla üstsüz dolaşan bir erkeğin saldırılarla bağlantılı olduğu düşünülüyor.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Haziran 2026, 19:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9w21dj5we5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇talya basını: &#x27;montella istifa mı edecek, kovulacak mı?&#x27; türkiye&#x27;nin dünya kupası&#x27;ndaki ikinci maçında da golsüz yenilgiye uğraması ve turnuvadan elenmesi, milli takım teknik direktörü vincenzo montella&#x27;nın memleketi i̇talya&#x27;da &quot;fiyasko&quot; ve &quot;felaket&quot; olarak yorumlandı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Haziran 2026, 12:38</span>
+        </div>
+        <h3>İtalya basını: &#x27;Montella istifa mı edecek, kovulacak mı?&#x27;</h3>
+        <p>Türkiye&#x27;nin Dünya Kupası&#x27;ndaki ikinci maçında da golsüz yenilgiye uğraması ve turnuvadan elenmesi, Milli Takım Teknik Direktörü Vincenzo Montella&#x27;nın memleketi İtalya&#x27;da &quot;fiyasko&quot; ve &quot;felaket&quot; olarak yorumlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Haziran 2026, 12:38</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj0gmz4ypqjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hizbullah: i̇srail, ateşkes ihlalinden bizi sorumlu tutarak saldırılarını haklı çıkarmaya çalışıyor hizbullah, i̇srail&#x27;in ateşkesi ihlal eden tarafın hizbullah olduğu yönündeki iddialarının asılsız olduğunu ve bununla lübnan&#x27;da sivillere karşı işlediği katliamları haklı çıkarmaya çalıştığını belirtti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Haziran 2026, 19:10</span>
+        </div>
         <h3>Hizbullah: İsrail, ateşkes ihlalinden bizi sorumlu tutarak saldırılarını haklı çıkarmaya çalışıyor</h3>
-        <p>Hizbullah, İsrail'in ateşkesi ihlal eden tarafın Hizbullah olduğu yönündeki iddialarının asılsız olduğunu ve bununla Lübnan'da sivillere karşı işlediği katliamları haklı çıkarmaya çalıştığını belirtti.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/hizbullah-israil-ateskes-ihlalinden-bizi-sorumlu-tutarak-saldirilarini-hakli-cikarmaya-calisiyor-948845.html" target="_blank">Haberi Oku</a>
+        <p>Hizbullah, İsrail&#x27;in ateşkesi ihlal eden tarafın Hizbullah olduğu yönündeki iddialarının asılsız olduğunu ve bununla Lübnan&#x27;da sivillere karşı işlediği katliamları haklı çıkarmaya çalıştığını belirtti.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Haziran 2026, 19:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/hizbullah-israil-ateskes-ihlalinden-bizi-sorumlu-tutarak-saldirilarini-hakli-cikarmaya-calisiyor-948845.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail basını: netanyahu, lübnana yönelik saldırıları durdurma talimatı verdi i̇srail basını, i̇srail başbakanı binyamin netanyahu&#x27;nun i̇srail ordusuna ateşkese rağmen lübnan’ın güneyine düzenlediği saldırıları durdurması yönünde talimat verdiğini duyurdu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Haziran 2026, 19:02</span>
+        </div>
         <h3>İsrail basını: Netanyahu, Lübnana yönelik saldırıları durdurma talimatı verdi</h3>
-        <p>İsrail basını, İsrail Başbakanı Binyamin Netanyahu'nun İsrail ordusuna ateşkese rağmen Lübnan’ın güneyine düzenlediği saldırıları durdurması yönünde talimat verdiğini duyurdu.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/israil-basini-netanyahu-lubnana-yonelik-saldirilari-durdurma-talimati-verdi-948843.html" target="_blank">Haberi Oku</a>
+        <p>İsrail basını, İsrail Başbakanı Binyamin Netanyahu&#x27;nun İsrail ordusuna ateşkese rağmen Lübnan’ın güneyine düzenlediği saldırıları durdurması yönünde talimat verdiğini duyurdu.</p>
     </div>
-
-    <div class="news-card">
-        <h3>Cemil Tugay'ın istifası: Yeni parti hazırlığı sürüyor, belediye başkanlarına geçiş baskısı yok</h3>
-        <p>CHP'de mutlak butlan kararının ardından yeni parti tartışmaları sürerken, İzmir Büyükşehir Belediye Başkanı Cemil Tugay'ın istifası gözleri diğer CHP'li belediye başkanlarına çevirdi.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c0myrdlwk7wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Haziran 2026, 19:02</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/israil-basini-netanyahu-lubnana-yonelik-saldirilari-durdurma-talimati-verdi-948843.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>İsrail'in Lübnan'a yeni saldırıları sonrası İran Hürmüz Boğazı'nı kapattı</h3>
-        <p>İran Devrim Muhafızları gemilerin Hürmüz Boğazı'na yaklaşmamaları, aksi halde güvenliklerinin tehlikede olacağı uyarısında bulundu.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/ce8k0znpgd3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="cemil tugay&#x27;ın istifası: yeni parti hazırlığı sürüyor, belediye başkanlarına geçiş baskısı yok chp&#x27;de mutlak butlan kararının ardından yeni parti tartışmaları sürerken, i̇zmir büyükşehir belediye başkanı cemil tugay&#x27;ın istifası gözleri diğer chp&#x27;li belediye başkanlarına çevirdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Haziran 2026, 10:54</span>
+        </div>
+        <h3>Cemil Tugay&#x27;ın istifası: Yeni parti hazırlığı sürüyor, belediye başkanlarına geçiş baskısı yok</h3>
+        <p>CHP&#x27;de mutlak butlan kararının ardından yeni parti tartışmaları sürerken, İzmir Büyükşehir Belediye Başkanı Cemil Tugay&#x27;ın istifası gözleri diğer CHP&#x27;li belediye başkanlarına çevirdi.</p>
     </div>
-
-    <div class="news-card">
-        <h3>'Kahraman değildi': Robin Hood'un karanlık kökenleri nasıl silindi?</h3>
-        <p>Robin Hood'un Ölümü filmi gösterime girdi. İngiliz folkloründe efsane haline gelen halk kahramanının kökeni nerelere dayanıyor?</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/ce8j1m210ypo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Haziran 2026, 10:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c0myrdlwk7wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Türkiye'de çok sayıda LGBTQ+ örgütün X hesabı engellendi</h3>
-        <p>Türkiye'de insan hakları, kadın hakları ve LGBTQ+ haklarında faaliyet gösteren çok sayıda örgütün X (eski adıyla Twitter) hesapları erişime engellendi.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c79yep0jn41o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="i̇srail&#x27;in lübnan&#x27;a yeni saldırıları sonrası i̇ran hürmüz boğazı&#x27;nı kapattı i̇ran devrim muhafızları gemilerin hürmüz boğazı&#x27;na yaklaşmamaları, aksi halde güvenliklerinin tehlikede olacağı uyarısında bulundu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Haziran 2026, 19:18</span>
+        </div>
+        <h3>İsrail&#x27;in Lübnan&#x27;a yeni saldırıları sonrası İran Hürmüz Boğazı&#x27;nı kapattı</h3>
+        <p>İran Devrim Muhafızları gemilerin Hürmüz Boğazı&#x27;na yaklaşmamaları, aksi halde güvenliklerinin tehlikede olacağı uyarısında bulundu.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Haziran 2026, 19:18</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ce8k0znpgd3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;kahraman değildi&#x27;: robin hood&#x27;un karanlık kökenleri nasıl silindi? robin hood&#x27;un ölümü filmi gösterime girdi. i̇ngiliz folkloründe efsane haline gelen halk kahramanının kökeni nerelere dayanıyor? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Haziran 2026, 14:54</span>
+        </div>
+        <h3>&#x27;Kahraman değildi&#x27;: Robin Hood&#x27;un karanlık kökenleri nasıl silindi?</h3>
+        <p>Robin Hood&#x27;un Ölümü filmi gösterime girdi. İngiliz folkloründe efsane haline gelen halk kahramanının kökeni nerelere dayanıyor?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Haziran 2026, 14:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ce8j1m210ypo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;de çok sayıda lgbtq+ örgütün x hesabı engellendi türkiye&#x27;de insan hakları, kadın hakları ve lgbtq+ haklarında faaliyet gösteren çok sayıda örgütün x (eski adıyla twitter) hesapları erişime engellendi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Haziran 2026, 18:27</span>
+        </div>
+        <h3>Türkiye&#x27;de çok sayıda LGBTQ+ örgütün X hesabı engellendi</h3>
+        <p>Türkiye&#x27;de insan hakları, kadın hakları ve LGBTQ+ haklarında faaliyet gösteren çok sayıda örgütün X (eski adıyla Twitter) hesapları erişime engellendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Haziran 2026, 18:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c79yep0jn41o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="herkesin gördüğü gökkuşağı neden birbirinden farklı? sizin gördüğünüz gökkuşağı, arkadaşınızın gördüğünden her zaman farklı olacak, hatta arkadaşınız tam yanınızda duruyor olsa bile. i̇şte nedeni. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Haziran 2026, 15:00</span>
+        </div>
         <h3>Herkesin gördüğü gökkuşağı neden birbirinden farklı?</h3>
         <p>Sizin gördüğünüz gökkuşağı, arkadaşınızın gördüğünden her zaman farklı olacak, hatta arkadaşınız tam yanınızda duruyor olsa bile. İşte nedeni.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/clyeg251806o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>İstanbul'da yamaç paraşütü yapan 2 kişi kayalıklara çarptı</h3>
-        <p>İstanbul Çatalca'da yamaç paraşütü yaparken rüzgarın etkisiyle kayalıklara çarpan 1'i çocuk 2 kişi yaralandı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/istanbulda-yamac-parasutu-yapan-2-kisi-kayaliklara-carpti-948849.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Haziran 2026, 15:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyeg251806o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Isparta'da tur otobüsü devrildi: 4 ölü</h3>
-        <p>Isparta'nın Gelendost ilçesinde tur otobüsünün devrilmesi sonucu ilk belirlemelere göre 4 kişi öldü, 3'ü ağır 15 kişi yaralandı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/ispartada-tur-otobusu-devrildi-4-olu-948848.html" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da yamaç paraşütü yapan 2 kişi kayalıklara çarptı i̇stanbul çatalca&#x27;da yamaç paraşütü yaparken rüzgarın etkisiyle kayalıklara çarpan 1&#x27;i çocuk 2 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Haziran 2026, 21:26</span>
+        </div>
+        <h3>İstanbul&#x27;da yamaç paraşütü yapan 2 kişi kayalıklara çarptı</h3>
+        <p>İstanbul Çatalca&#x27;da yamaç paraşütü yaparken rüzgarın etkisiyle kayalıklara çarpan 1&#x27;i çocuk 2 kişi yaralandı.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Haziran 2026, 21:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-yamac-parasutu-yapan-2-kisi-kayaliklara-carpti-948849.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="isparta&#x27;da tur otobüsü devrildi: 4 ölü isparta&#x27;nın gelendost ilçesinde tur otobüsünün devrilmesi sonucu ilk belirlemelere göre 4 kişi öldü, 3&#x27;ü ağır 15 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Haziran 2026, 20:45</span>
+        </div>
+        <h3>Isparta&#x27;da tur otobüsü devrildi: 4 ölü</h3>
+        <p>Isparta&#x27;nın Gelendost ilçesinde tur otobüsünün devrilmesi sonucu ilk belirlemelere göre 4 kişi öldü, 3&#x27;ü ağır 15 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Haziran 2026, 20:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/ispartada-tur-otobusu-devrildi-4-olu-948848.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="taşıma sınırını aşan kamyon sürücüsüne 60 bin lira ceza edirne&#x27;nin uzunköprü ilçesinde taşıma sınırını aşan kamyon sürücüsüne 60 bin lira ceza uygulandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Haziran 2026, 19:06</span>
+        </div>
         <h3>Taşıma sınırını aşan kamyon sürücüsüne 60 bin lira ceza</h3>
-        <p>Edirne'nin Uzunköprü ilçesinde taşıma sınırını aşan kamyon sürücüsüne 60 bin lira ceza uygulandı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/tasima-sinirini-asan-kamyon-surucusune-60-bin-lira-ceza-948844.html" target="_blank">Haberi Oku</a>
+        <p>Edirne&#x27;nin Uzunköprü ilçesinde taşıma sınırını aşan kamyon sürücüsüne 60 bin lira ceza uygulandı.</p>
     </div>
-
-    <div class="news-card">
-        <h3>Şanlıurfa'da hafif ticari araç devrildi: 2 ölü</h3>
-        <p>Şanlıurfa'nın Bozova ilçesinde devrilen hafif ticari araçtaki 2 kişi hayatını kaybetti, 2 kişi yaralandı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/sanliurfada-hafif-ticari-arac-devrildi-2-olu-948841.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Haziran 2026, 19:06</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/tasima-sinirini-asan-kamyon-surucusune-60-bin-lira-ceza-948844.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
+</article>
+<article class="news-card" data-search="şanlıurfa&#x27;da hafif ticari araç devrildi: 2 ölü şanlıurfa&#x27;nın bozova ilçesinde devrilen hafif ticari araçtaki 2 kişi hayatını kaybetti, 2 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Haziran 2026, 17:54</span>
+        </div>
+        <h3>Şanlıurfa&#x27;da hafif ticari araç devrildi: 2 ölü</h3>
+        <p>Şanlıurfa&#x27;nın Bozova ilçesinde devrilen hafif ticari araçtaki 2 kişi hayatını kaybetti, 2 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Haziran 2026, 17:54</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/sanliurfada-hafif-ticari-arac-devrildi-2-olu-948841.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2 class="category-title">SPOR</h2>
-
-    <div class="news-card">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="daha uzun, daha hızlı, daha yaşlı: elit futbolcuların vücutları 50 yılda nasıl değişti? uzmanlar, daha yoğun maç temposu ve tıptaki gelişmelerin elit oyuncuların fizyolojisini dönüştürdüğünü söylüyor. spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 20 Haziran 2026, 11:24</span>
+        </div>
         <h3>Daha uzun, daha hızlı, daha yaşlı: Elit futbolcuların vücutları 50 yılda nasıl değişti?</h3>
         <p>Uzmanlar, daha yoğun maç temposu ve tıptaki gelişmelerin elit oyuncuların fizyolojisini dönüştürdüğünü söylüyor.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cx2vwdz48q0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Haziran 2026, 11:24</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx2vwdz48q0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

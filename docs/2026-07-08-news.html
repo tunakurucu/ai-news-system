@@ -1,571 +1,442 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-        .search-box {
-    margin: 25px 0;
-    }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-            .category-filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 20px 0 30px;
-            }
-
-            .category-filter-btn {
-                padding: 8px 14px;
-                border: 1px solid #ddd;
-                border-radius: 999px;
-                background: #f7f7f7;
-                cursor: pointer;
-            }
-
-            .category-filter-btn.active {
-                background: #222;
-                color: white;
-            }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="home-search-input"
-        placeholder="Güncel haberlerde ara..."
-    >
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">8 Temmuz 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
 </div>
 
-<div class="category-filters">
-    <button class="category-filter-btn active" data-category="all">Tümü</button>
-    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-    <button class="category-filter-btn" data-category="dünya">Dünya</button>
-    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-    <button class="category-filter-btn" data-category="genel">Genel</button>
-</div>
-
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
         </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 11</span><span class="stat-item"><strong>ekonomi</strong> 2</span><span class="stat-item"><strong>genel</strong> 7</span></div>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>11</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>2</span>
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
         </div>
+        <h3>Zelenskiy NATO&#x27;dan hava savunma sistemi istedi</h3>
+        <p>Ukrayna Cumhurbaşkanı, Türkiye&#x27;deki NATO zirvesinde yaptığı konuşmada, Rusya&#x27;nın artan saldırılarına karşı Kiev&#x27;i korumak için müttefiklerine acilen hava savunma sistemini teslim etmeleri çağrısında bulundu.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 7 Temmuz 2026, 20:09</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c77yg1mnlr1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 8 Temmuz 2026, 19:57</span>
+            </div>
+            <h3>Yunanistan Başbakanı Miçotakis: Türkiye muhteşem bir NATO Zirvesi düzenlemiş</h3>
+            <p>Yunanistan Başbakanı Kiryakos Miçotakis, Türkiye ve Yunanistan arasında yapıcı bir ilişki kurmak için Cumhurbaşkanı Recep Tayyip Erdoğan ile iş birliğine devam edeceğini söyledi. Miçotakis, &quot;Türk misafirperverliğini her zaman takdir ediyorum ve bir kez daha söyleyeceğim, Türkiye, muhteşem bir NATO Zirvesi düzenlemiş&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/yunanistan-basbakani-micotakis-turkiye-muhtesem-bir-nato-zirvesi-duzenlemis-950689.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 8 Temmuz 2026, 18:59</span>
+            </div>
+            <h3>Meloni&#x27;den Cumhurbaşkanı Erdoğan&#x27;a &#x27;NATO&#x27; teşekkürü</h3>
+            <p>İtalya Başbakanı Giorgia Meloni, NATO’nun karşı karşıya bulunduğu zorlukların farkında ve kendini güçlendirmeye kararlı olduğunu, ülkesinin de İttifak&#x27;taki taahhütlerine sürdürülebilir şekilde ve önceliklerini kendilerinin belirleyeceği biçimde uyacağını söyledi. Meloni, Cumhurbaşkanı Erdoğan&#x27;a zirveye ev sahipliği yaptığı için teşekkür etti.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/meloniden-cumhurbaskani-erdogana-nato-tesekkuru-950683.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 8 Temmuz 2026, 18:58</span>
+            </div>
+            <h3>ABD Başkanı Donald Trump: Cumhurbaşkanı Erdoğan&#x27;a teşekkür ediyorum</h3>
+            <p>ABD Başkanı Donald Trump, Beştepe&#x27;de NATO Ankara Zirvesi sonrası basın toplantısında, &quot;Ankara&#x27;da çok başarılı bir NATO geçirdik. Erdoğan muazzam bir iş çıkardı. Cumhurbaşkanı Erdoğan’a bu fantastik başarılar için teşekkür ediyorum.&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-baskani-donald-trump-cumhurbaskani-erdogana-tesekkur-ediyorum-950682.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 8 Temmuz 2026, 11:26</span>
+            </div>
+            <h3>Netanyahu: &#x27;Türkiye&#x27;ye F-35 satışı Ortadoğu&#x27;da güç dengesini yok eder&#x27;</h3>
+            <p>İsrail Başbakanı Benjamin Netanyahu, ABD&#x27;nin Türkiye&#x27;ye F-35 savaş uçakları satmasının Ortadoğu&#x27;daki güç dengesini &quot;yok edeceğini&quot; söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c9v24x03dk9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>7</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-07-08 17:46</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">11 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="zelenskiy nato&#x27;dan hava savunma sistemi istedi ukrayna cumhurbaşkanı, türkiye&#x27;deki nato zirvesinde yaptığı konuşmada, rusya&#x27;nın artan saldırılarına karşı kiev&#x27;i korumak için müttefiklerine acilen hava savunma sistemini teslim etmeleri çağrısında bulundu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 20:09</span>
         </div>
+        <h3>Zelenskiy NATO&#x27;dan hava savunma sistemi istedi</h3>
+        <p>Ukrayna Cumhurbaşkanı, Türkiye&#x27;deki NATO zirvesinde yaptığı konuşmada, Rusya&#x27;nın artan saldırılarına karşı Kiev&#x27;i korumak için müttefiklerine acilen hava savunma sistemini teslim etmeleri çağrısında bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 20:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c77yg1mnlr1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yunanistan başbakanı miçotakis: türkiye muhteşem bir nato zirvesi düzenlemiş yunanistan başbakanı kiryakos miçotakis, türkiye ve yunanistan arasında yapıcı bir ilişki kurmak için cumhurbaşkanı recep tayyip erdoğan ile iş birliğine devam edeceğini söyledi. miçotakis, &quot;türk misafirperverliğini her zaman takdir ediyorum ve bir kez daha söyleyeceğim, türkiye, muhteşem bir nato zirvesi düzenlemiş&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 8 Temmuz 2026, 19:57</span>
+        </div>
+        <h3>Yunanistan Başbakanı Miçotakis: Türkiye muhteşem bir NATO Zirvesi düzenlemiş</h3>
+        <p>Yunanistan Başbakanı Kiryakos Miçotakis, Türkiye ve Yunanistan arasında yapıcı bir ilişki kurmak için Cumhurbaşkanı Recep Tayyip Erdoğan ile iş birliğine devam edeceğini söyledi. Miçotakis, &quot;Türk misafirperverliğini her zaman takdir ediyorum ve bir kez daha söyleyeceğim, Türkiye, muhteşem bir NATO Zirvesi düzenlemiş&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Temmuz 2026, 19:57</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/yunanistan-basbakani-micotakis-turkiye-muhtesem-bir-nato-zirvesi-duzenlemis-950689.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meloni&#x27;den cumhurbaşkanı erdoğan&#x27;a &#x27;nato&#x27; teşekkürü i̇talya başbakanı giorgia meloni, nato’nun karşı karşıya bulunduğu zorlukların farkında ve kendini güçlendirmeye kararlı olduğunu, ülkesinin de i̇ttifak&#x27;taki taahhütlerine sürdürülebilir şekilde ve önceliklerini kendilerinin belirleyeceği biçimde uyacağını söyledi. meloni, cumhurbaşkanı erdoğan&#x27;a zirveye ev sahipliği yaptığı için teşekkür etti. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 8 Temmuz 2026, 18:59</span>
+        </div>
+        <h3>Meloni&#x27;den Cumhurbaşkanı Erdoğan&#x27;a &#x27;NATO&#x27; teşekkürü</h3>
+        <p>İtalya Başbakanı Giorgia Meloni, NATO’nun karşı karşıya bulunduğu zorlukların farkında ve kendini güçlendirmeye kararlı olduğunu, ülkesinin de İttifak&#x27;taki taahhütlerine sürdürülebilir şekilde ve önceliklerini kendilerinin belirleyeceği biçimde uyacağını söyledi. Meloni, Cumhurbaşkanı Erdoğan&#x27;a zirveye ev sahipliği yaptığı için teşekkür etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Temmuz 2026, 18:59</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/meloniden-cumhurbaskani-erdogana-nato-tesekkuru-950683.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd başkanı donald trump: cumhurbaşkanı erdoğan&#x27;a teşekkür ediyorum abd başkanı donald trump, beştepe&#x27;de nato ankara zirvesi sonrası basın toplantısında, &quot;ankara&#x27;da çok başarılı bir nato geçirdik. erdoğan muazzam bir iş çıkardı. cumhurbaşkanı erdoğan’a bu fantastik başarılar için teşekkür ediyorum.&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 8 Temmuz 2026, 18:58</span>
+        </div>
+        <h3>ABD Başkanı Donald Trump: Cumhurbaşkanı Erdoğan&#x27;a teşekkür ediyorum</h3>
+        <p>ABD Başkanı Donald Trump, Beştepe&#x27;de NATO Ankara Zirvesi sonrası basın toplantısında, &quot;Ankara&#x27;da çok başarılı bir NATO geçirdik. Erdoğan muazzam bir iş çıkardı. Cumhurbaşkanı Erdoğan’a bu fantastik başarılar için teşekkür ediyorum.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Temmuz 2026, 18:58</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-baskani-donald-trump-cumhurbaskani-erdogana-tesekkur-ediyorum-950682.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="netanyahu: &#x27;türkiye&#x27;ye f-35 satışı ortadoğu&#x27;da güç dengesini yok eder&#x27; i̇srail başbakanı benjamin netanyahu, abd&#x27;nin türkiye&#x27;ye f-35 savaş uçakları satmasının ortadoğu&#x27;daki güç dengesini &quot;yok edeceğini&quot; söyledi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 8 Temmuz 2026, 11:26</span>
+        </div>
+        <h3>Netanyahu: &#x27;Türkiye&#x27;ye F-35 satışı Ortadoğu&#x27;da güç dengesini yok eder&#x27;</h3>
+        <p>İsrail Başbakanı Benjamin Netanyahu, ABD&#x27;nin Türkiye&#x27;ye F-35 savaş uçakları satmasının Ortadoğu&#x27;daki güç dengesini &quot;yok edeceğini&quot; söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Temmuz 2026, 11:26</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9v24x03dk9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trump-erdoğan görüşmesi: &#x27;yaptırımları kaldıracağız, f-35 satışını değerlendireceğiz&#x27; abd başkanı donald trump, cumhurbaşkanı recep tayyip erdoğan ile yaptığı görüşme sırasında basına yaptığı açıklamada türkiye&#x27;ye yönelik caatsa yaptırımlarının kaldırılacağını söyledi. trump ayrıca f-35 satışını da değerlendireceklerini belirtti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 16:47</span>
+        </div>
+        <h3>Trump-Erdoğan görüşmesi: &#x27;Yaptırımları kaldıracağız, F-35 satışını değerlendireceğiz&#x27;</h3>
+        <p>ABD Başkanı Donald Trump, Cumhurbaşkanı Recep Tayyip Erdoğan ile yaptığı görüşme sırasında basına yaptığı açıklamada Türkiye&#x27;ye yönelik CAATSA yaptırımlarının kaldırılacağını söyledi. Trump ayrıca F-35 satışını da değerlendireceklerini belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 16:47</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c33y078x83zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ngiltere başbakanı starmer: nato ankara&#x27;dan daha güçlü çıktı i̇ngiltere başbakanı keir starmer, ankara&#x27;da düzenlenen 36.⁠ nato devlet ve hükümet başkanları zirvesi&#x27;yle ilgili, &quot;nato, bu zirveden daha güçlü ve daha birlik içinde çıktı.&quot; ifadesini kullandı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 8 Temmuz 2026, 19:07</span>
+        </div>
+        <h3>İngiltere Başbakanı Starmer: NATO Ankara&#x27;dan daha güçlü çıktı</h3>
+        <p>İngiltere Başbakanı Keir Starmer, Ankara&#x27;da düzenlenen 36.⁠ NATO Devlet ve Hükümet Başkanları Zirvesi&#x27;yle ilgili, &quot;NATO, bu zirveden daha güçlü ve daha birlik içinde çıktı.&quot; ifadesini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Temmuz 2026, 19:07</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ingiltere-basbakani-starmer-nato-ankaradan-daha-guclu-cikti-950684.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato&#x27;nun ankara zirvesi bildirisi&#x27;nde neler var? nato&#x27;nun tüm üyelerinin onayıyla yayınlanan ankara zirvesi bildirisi, zirvede alınan tüm kararları yansıtıyor. abd başkanı donald trump&#x27;ın zirve öncesi bazı müttefiklere yönelik sert açıklamalarına rağmen bildiride sorun yaşanmadı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 8 Temmuz 2026, 18:44</span>
+        </div>
+        <h3>NATO&#x27;nun Ankara Zirvesi Bildirisi&#x27;nde neler var?</h3>
+        <p>NATO&#x27;nun tüm üyelerinin onayıyla yayınlanan Ankara Zirvesi Bildirisi, zirvede alınan tüm kararları yansıtıyor. ABD Başkanı Donald Trump&#x27;ın zirve öncesi bazı müttefiklere yönelik sert açıklamalarına rağmen bildiride sorun yaşanmadı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Temmuz 2026, 18:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckg04q901j2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran dışişleri bakan yardımcısı: katil trump ile anladığı dilden konuşmak gerekiyor i̇ran dışişleri bakan yardımcısı kazım garibabadi, abd başkanı donald trump’ın i̇ran’a yönelik yeni saldırı açıklaması hakkında, &quot;katil trump ile anladığı dilden konuşmak gerekiyor.&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 8 Temmuz 2026, 20:38</span>
+        </div>
+        <h3>İran Dışişleri Bakan Yardımcısı: Katil Trump ile anladığı dilden konuşmak gerekiyor</h3>
+        <p>İran Dışişleri Bakan Yardımcısı Kazım Garibabadi, ABD Başkanı Donald Trump’ın İran’a yönelik yeni saldırı açıklaması hakkında, &quot;Katil Trump ile anladığı dilden konuşmak gerekiyor.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Temmuz 2026, 20:38</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-disisleri-bakan-yardimcisi-katil-trump-ile-anladigi-dilden-konusmak-gerekiyor-950691.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd-i̇ran gerilimi yeniden tırmandı: &#x27;muhtemelen bu gece yine vuracağız&#x27; abd ve i̇ran arasında son iki gündür yeniden patlak veren çatışmaların ardından, abd başkanı donald trump, &quot;bence ateşkes bitti&quot; dedi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 8 Temmuz 2026, 17:32</span>
+        </div>
+        <h3>ABD-İran gerilimi yeniden tırmandı: &#x27;Muhtemelen bu gece yine vuracağız&#x27;</h3>
+        <p>ABD ve İran arasında son iki gündür yeniden patlak veren çatışmaların ardından, ABD Başkanı Donald Trump, &quot;Bence ateşkes bitti&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Temmuz 2026, 17:32</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/czdemgm5gjmo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ankara&#x27;daki nato zirvesi&#x27;nde karar günü: liderler dört konuya odaklanacak ankara&#x27;daki zirvede bugün liderler düzeyindeki resmi oturumlara geçiliyor. liderler dört ana konuya odaklanacak. tartışmaların seyrinde abd başkanı donald trump&#x27;ın ruh hali belirleyici olabilir. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 8 Temmuz 2026, 07:24</span>
+        </div>
+        <h3>Ankara&#x27;daki NATO Zirvesi&#x27;nde karar günü: Liderler dört konuya odaklanacak</h3>
+        <p>Ankara&#x27;daki zirvede bugün liderler düzeyindeki resmi oturumlara geçiliyor. Liderler dört ana konuya odaklanacak. Tartışmaların seyrinde ABD Başkanı Donald Trump&#x27;ın ruh hali belirleyici olabilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Temmuz 2026, 07:24</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9q29xz7z47o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="nato savunma forumu: türkiye ve müttefikler hangi anlaşmalara imza attı? nato müttefikleri ankara&#x27;daki liderler zirvesi kapsamında düzenlenen savunma forumu&#x27;nda on milyarlarca dolarlık anlaşmalar imzaladı. türkiye, bu anlaşmalar çerçevesinde atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 14:34</span>
+        </div>
+        <h3>NATO Savunma Forumu: Türkiye ve müttefikler hangi anlaşmalara imza attı?</h3>
+        <p>NATO müttefikleri Ankara&#x27;daki liderler zirvesi kapsamında düzenlenen Savunma Forumu&#x27;nda on milyarlarca dolarlık anlaşmalar imzaladı. Türkiye, bu anlaşmalar çerçevesinde Atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 14:34</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gyj0w77eyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rusya dizel yakıt ihracatını yasakladı rusya başbakan yardımcısı aleksandr novak, iç piyasada akaryakıt arzını artırmak amacıyla dizel yakıt ihracatını yasakladıklarını bildirdi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 8 Temmuz 2026, 20:06</span>
+        </div>
+        <h3>Rusya dizel yakıt ihracatını yasakladı</h3>
+        <p>Rusya Başbakan Yardımcısı Aleksandr Novak, iç piyasada akaryakıt arzını artırmak amacıyla dizel yakıt ihracatını yasakladıklarını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Temmuz 2026, 20:06</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/rusya-dizel-yakit-ihracatini-yasakladi-950690.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">7 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="nato&#x27;dan ortak savunma taahhüdü: 5. madde&#x27;ye bağlılık yinelendi ankara&#x27;nın ev sahipliğinde düzenlenen nato zirvesi&#x27;nin ikinci gününde liderler beştepe&#x27;de biraraya geliyor. müttefikler beklendiği gibi kolektif savunmaya odaklanan 5. maddeye yönelik “sarsılmaz kararlılıklarını” vurguladı genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe</span>
+        </div>
+        <h3>NATO&#x27;dan ortak savunma taahhüdü: 5. Madde&#x27;ye bağlılık yinelendi</h3>
+        <p>Ankara&#x27;nın ev sahipliğinde düzenlenen NATO Zirvesi&#x27;nin ikinci gününde liderler Beştepe&#x27;de biraraya geliyor. Müttefikler beklendiği gibi kolektif savunmaya odaklanan 5. maddeye yönelik “sarsılmaz kararlılıklarını” vurguladı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe</span>
+        <a class="read-link" href="https://www.bbc.co.uk/turkce/live/c1dy1ygwd9vt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan nato zirvesi sonrası konuşuyor cumhurbaşkanı recep tayyip erdoğan, nato ankara zirvesi sonrası basın toplantısı düzenliyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 8 Temmuz 2026, 19:50</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan NATO Zirvesi sonrası konuşuyor</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, NATO Ankara Zirvesi sonrası basın toplantısı düzenliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Temmuz 2026, 19:50</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-nato-zirvesi-sonrasi-konusuyor-950688.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yılmaz: türkiye, uluslararası alandaki müstesna konumunu ortaya koydu cumhurbaşkanı yardımcısı cevdet yılmaz, &quot;türkiye, güçlü diplomatik birikimi ve ev sahipliği kabiliyetiyle bir kez daha uluslararası alandaki müstesna konumunu ortaya koydu.&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 8 Temmuz 2026, 19:49</span>
+        </div>
+        <h3>Yılmaz: Türkiye, uluslararası alandaki müstesna konumunu ortaya koydu</h3>
+        <p>Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, &quot;Türkiye, güçlü diplomatik birikimi ve ev sahipliği kabiliyetiyle bir kez daha uluslararası alandaki müstesna konumunu ortaya koydu.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Temmuz 2026, 19:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/yilmaz-turkiye-uluslararasi-alandaki-mustesna-konumunu-ortaya-koydu-950687.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="liderler, zirve&#x27;deki aile fotoğrafını imzaladı cumhurbaşkanı recep tayyip erdoğan, 36. nato devlet ve hükümet başkanları zirvesi&#x27;nde çekilen aile fotoğrafını imzaladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 8 Temmuz 2026, 19:13</span>
+        </div>
+        <h3>Liderler, Zirve&#x27;deki aile fotoğrafını imzaladı</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, 36. NATO Devlet ve Hükümet Başkanları Zirvesi&#x27;nde çekilen aile fotoğrafını imzaladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Temmuz 2026, 19:13</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/liderler-zirvedeki-aile-fotografini-imzaladi-950685.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇bb davasında mahkeme salonundan çıkartılan i̇mamoğlu&#x27;na &#x27;kamu görevlisini tehdit&#x27; soruşturması ekrem i̇mamoğlu &quot;suç örgütü lideri&quot; olmakla suçlandığı i̇stanbul büyükşehir belediyesi (i̇bb) davasında mahkeme başkanıyla tartıştıktan sonra salondan çıkartıldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 8 Temmuz 2026, 20:31</span>
+        </div>
+        <h3>İBB davasında mahkeme salonundan çıkartılan İmamoğlu&#x27;na &#x27;kamu görevlisini tehdit&#x27; soruşturması</h3>
+        <p>Ekrem İmamoğlu &quot;suç örgütü lideri&quot; olmakla suçlandığı İstanbul Büyükşehir Belediyesi (İBB) davasında mahkeme başkanıyla tartıştıktan sonra salondan çıkartıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Temmuz 2026, 20:31</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c05yqd2y949o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail cezaevinde işkence gördüğünü söyleyen gazzeli doktorun hayatından endişe ediliyor doktor hussam abu safiya&#x27;nın avukatı bbc&#x27;ye yaptığı açıklamada müvekkilinin dövüldüğünü iddia etti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 8 Temmuz 2026, 13:34</span>
+        </div>
+        <h3>İsrail cezaevinde işkence gördüğünü söyleyen Gazzeli doktorun hayatından endişe ediliyor</h3>
+        <p>Doktor Hussam Abu Safiya&#x27;nın avukatı BBC&#x27;ye yaptığı açıklamada müvekkilinin dövüldüğünü iddia etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Temmuz 2026, 13:34</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c1jy1ywg1p6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bir sonraki nato zirvesi arnavutluk&#x27;ta gerçekleştirilecek nato genel sekreteri mark rutte, bir sonraki nato zirvesi&#x27;nin arnavutluk&#x27;ta düzenleneceğini açıkladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 8 Temmuz 2026, 19:39</span>
+        </div>
+        <h3>Bir sonraki NATO Zirvesi Arnavutluk&#x27;ta gerçekleştirilecek</h3>
+        <p>NATO Genel Sekreteri Mark Rutte, bir sonraki NATO Zirvesi&#x27;nin Arnavutluk&#x27;ta düzenleneceğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Temmuz 2026, 19:39</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bir-sonraki-nato-zirvesi-arnavutlukta-gerceklestirilecek-950686.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c77yg1mnlr1o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Zelenskiy NATO'dan hava savunma sistemi istedi</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/yunanistan-basbakani-micotakis-turkiye-muhtesem-bir-nato-zirvesi-duzenlemis-950689.html" target="_blank">
-                <strong>Yunanistan Başbakanı Miçotakis: Türkiye muhteşem bir NATO Zirvesi düzenlemiş</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/gundem/meloniden-cumhurbaskani-erdogana-nato-tesekkuru-950683.html" target="_blank">
-                <strong>Meloni'den Cumhurbaşkanı Erdoğan'a 'NATO' teşekkürü</strong>
-            </a>
-        </li>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/abd-baskani-donald-trump-cumhurbaskani-erdogana-tesekkur-ediyorum-950682.html" target="_blank">
-                <strong>ABD Başkanı Donald Trump: Cumhurbaşkanı Erdoğan'a teşekkür ediyorum</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c9v24x03dk9o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Netanyahu: 'Türkiye'ye F-35 satışı Ortadoğu'da güç dengesini yok eder'</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            zelenskiy nato'dan hava savunma sistemi istedi
-            ukrayna cumhurbaşkanı, türkiye'deki nato zirvesinde yaptığı konuşmada, rusya'nın artan saldırılarına karşı kiev'i korumak için müttefiklerine acilen hava savunma sistemini teslim etmeleri çağrısında bulundu.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Zelenskiy NATO'dan hava savunma sistemi istedi</h3>
-                    <p>Ukrayna Cumhurbaşkanı, Türkiye'deki NATO zirvesinde yaptığı konuşmada, Rusya'nın artan saldırılarına karşı Kiev'i korumak için müttefiklerine acilen hava savunma sistemini teslim etmeleri çağrısında bulundu.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c77yg1mnlr1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            yunanistan başbakanı miçotakis: türkiye muhteşem bir nato zirvesi düzenlemiş
-            yunanistan başbakanı kiryakos miçotakis, türkiye ve yunanistan arasında yapıcı bir ilişki kurmak için cumhurbaşkanı recep tayyip erdoğan ile iş birliğine devam edeceğini söyledi. miçotakis, "türk misafirperverliğini her zaman takdir ediyorum ve bir kez daha söyleyeceğim, türkiye, muhteşem bir nato zirvesi düzenlemiş" dedi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Yunanistan Başbakanı Miçotakis: Türkiye muhteşem bir NATO Zirvesi düzenlemiş</h3>
-                    <p>Yunanistan Başbakanı Kiryakos Miçotakis, Türkiye ve Yunanistan arasında yapıcı bir ilişki kurmak için Cumhurbaşkanı Recep Tayyip Erdoğan ile iş birliğine devam edeceğini söyledi. Miçotakis, "Türk misafirperverliğini her zaman takdir ediyorum ve bir kez daha söyleyeceğim, Türkiye, muhteşem bir NATO Zirvesi düzenlemiş" dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/yunanistan-basbakani-micotakis-turkiye-muhtesem-bir-nato-zirvesi-duzenlemis-950689.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            meloni'den cumhurbaşkanı erdoğan'a 'nato' teşekkürü
-            i̇talya başbakanı giorgia meloni, nato’nun karşı karşıya bulunduğu zorlukların farkında ve kendini güçlendirmeye kararlı olduğunu, ülkesinin de i̇ttifak'taki taahhütlerine sürdürülebilir şekilde ve önceliklerini kendilerinin belirleyeceği biçimde uyacağını söyledi. meloni, cumhurbaşkanı erdoğan'a zirveye ev sahipliği yaptığı için teşekkür etti.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Meloni'den Cumhurbaşkanı Erdoğan'a 'NATO' teşekkürü</h3>
-                    <p>İtalya Başbakanı Giorgia Meloni, NATO’nun karşı karşıya bulunduğu zorlukların farkında ve kendini güçlendirmeye kararlı olduğunu, ülkesinin de İttifak'taki taahhütlerine sürdürülebilir şekilde ve önceliklerini kendilerinin belirleyeceği biçimde uyacağını söyledi. Meloni, Cumhurbaşkanı Erdoğan'a zirveye ev sahipliği yaptığı için teşekkür etti.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/meloniden-cumhurbaskani-erdogana-nato-tesekkuru-950683.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd başkanı donald trump: cumhurbaşkanı erdoğan'a teşekkür ediyorum
-            abd başkanı donald trump, beştepe'de nato ankara zirvesi sonrası basın toplantısında, "ankara'da çok başarılı bir nato geçirdik. erdoğan muazzam bir iş çıkardı. cumhurbaşkanı erdoğan’a bu fantastik başarılar için teşekkür ediyorum." dedi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD Başkanı Donald Trump: Cumhurbaşkanı Erdoğan'a teşekkür ediyorum</h3>
-                    <p>ABD Başkanı Donald Trump, Beştepe'de NATO Ankara Zirvesi sonrası basın toplantısında, "Ankara'da çok başarılı bir NATO geçirdik. Erdoğan muazzam bir iş çıkardı. Cumhurbaşkanı Erdoğan’a bu fantastik başarılar için teşekkür ediyorum." dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/abd-baskani-donald-trump-cumhurbaskani-erdogana-tesekkur-ediyorum-950682.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            netanyahu: 'türkiye'ye f-35 satışı ortadoğu'da güç dengesini yok eder'
-            i̇srail başbakanı benjamin netanyahu, abd'nin türkiye'ye f-35 savaş uçakları satmasının ortadoğu'daki güç dengesini "yok edeceğini" söyledi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Netanyahu: 'Türkiye'ye F-35 satışı Ortadoğu'da güç dengesini yok eder'</h3>
-                    <p>İsrail Başbakanı Benjamin Netanyahu, ABD'nin Türkiye'ye F-35 savaş uçakları satmasının Ortadoğu'daki güç dengesini "yok edeceğini" söyledi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c9v24x03dk9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            trump-erdoğan görüşmesi: 'yaptırımları kaldıracağız, f-35 satışını değerlendireceğiz'
-            abd başkanı donald trump, cumhurbaşkanı recep tayyip erdoğan ile yaptığı görüşme sırasında basına yaptığı açıklamada türkiye'ye yönelik caatsa yaptırımlarının kaldırılacağını söyledi. trump ayrıca f-35 satışını da değerlendireceklerini belirtti.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Trump-Erdoğan görüşmesi: 'Yaptırımları kaldıracağız, F-35 satışını değerlendireceğiz'</h3>
-                    <p>ABD Başkanı Donald Trump, Cumhurbaşkanı Recep Tayyip Erdoğan ile yaptığı görüşme sırasında basına yaptığı açıklamada Türkiye'ye yönelik CAATSA yaptırımlarının kaldırılacağını söyledi. Trump ayrıca F-35 satışını da değerlendireceklerini belirtti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c33y078x83zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ngiltere başbakanı starmer: nato ankara'dan daha güçlü çıktı
-            i̇ngiltere başbakanı keir starmer, ankara'da düzenlenen 36.⁠ nato devlet ve hükümet başkanları zirvesi'yle ilgili, "nato, bu zirveden daha güçlü ve daha birlik içinde çıktı." ifadesini kullandı.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>İngiltere Başbakanı Starmer: NATO Ankara'dan daha güçlü çıktı</h3>
-                    <p>İngiltere Başbakanı Keir Starmer, Ankara'da düzenlenen 36.⁠ NATO Devlet ve Hükümet Başkanları Zirvesi'yle ilgili, "NATO, bu zirveden daha güçlü ve daha birlik içinde çıktı." ifadesini kullandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/ingiltere-basbakani-starmer-nato-ankaradan-daha-guclu-cikti-950684.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nato'nun ankara zirvesi bildirisi'nde neler var?
-            nato'nun tüm üyelerinin onayıyla yayınlanan ankara zirvesi bildirisi, zirvede alınan tüm kararları yansıtıyor. abd başkanı donald trump'ın zirve öncesi bazı müttefiklere yönelik sert açıklamalarına rağmen bildiride sorun yaşanmadı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>NATO'nun Ankara Zirvesi Bildirisi'nde neler var?</h3>
-                    <p>NATO'nun tüm üyelerinin onayıyla yayınlanan Ankara Zirvesi Bildirisi, zirvede alınan tüm kararları yansıtıyor. ABD Başkanı Donald Trump'ın zirve öncesi bazı müttefiklere yönelik sert açıklamalarına rağmen bildiride sorun yaşanmadı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/ckg04q901j2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ran dışişleri bakan yardımcısı: katil trump ile anladığı dilden konuşmak gerekiyor
-            i̇ran dışişleri bakan yardımcısı kazım garibabadi, abd başkanı donald trump’ın i̇ran’a yönelik yeni saldırı açıklaması hakkında, "katil trump ile anladığı dilden konuşmak gerekiyor." dedi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>İran Dışişleri Bakan Yardımcısı: Katil Trump ile anladığı dilden konuşmak gerekiyor</h3>
-                    <p>İran Dışişleri Bakan Yardımcısı Kazım Garibabadi, ABD Başkanı Donald Trump’ın İran’a yönelik yeni saldırı açıklaması hakkında, "Katil Trump ile anladığı dilden konuşmak gerekiyor." dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/iran-disisleri-bakan-yardimcisi-katil-trump-ile-anladigi-dilden-konusmak-gerekiyor-950691.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd-i̇ran gerilimi yeniden tırmandı: 'muhtemelen bu gece yine vuracağız'
-            abd ve i̇ran arasında son iki gündür yeniden patlak veren çatışmaların ardından, abd başkanı donald trump, "bence ateşkes bitti" dedi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD-İran gerilimi yeniden tırmandı: 'Muhtemelen bu gece yine vuracağız'</h3>
-                    <p>ABD ve İran arasında son iki gündür yeniden patlak veren çatışmaların ardından, ABD Başkanı Donald Trump, "Bence ateşkes bitti" dedi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/czdemgm5gjmo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            ankara'daki nato zirvesi'nde karar günü: liderler dört konuya odaklanacak
-            ankara'daki zirvede bugün liderler düzeyindeki resmi oturumlara geçiliyor. liderler dört ana konuya odaklanacak. tartışmaların seyrinde abd başkanı donald trump'ın ruh hali belirleyici olabilir.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Ankara'daki NATO Zirvesi'nde karar günü: Liderler dört konuya odaklanacak</h3>
-                    <p>Ankara'daki zirvede bugün liderler düzeyindeki resmi oturumlara geçiliyor. Liderler dört ana konuya odaklanacak. Tartışmaların seyrinde ABD Başkanı Donald Trump'ın ruh hali belirleyici olabilir.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c9q29xz7z47o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">EKONOMI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            nato savunma forumu: türkiye ve müttefikler hangi anlaşmalara imza attı?
-            nato müttefikleri ankara'daki liderler zirvesi kapsamında düzenlenen savunma forumu'nda on milyarlarca dolarlık anlaşmalar imzaladı. türkiye, bu anlaşmalar çerçevesinde atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>NATO Savunma Forumu: Türkiye ve müttefikler hangi anlaşmalara imza attı?</h3>
-                    <p>NATO müttefikleri Ankara'daki liderler zirvesi kapsamında düzenlenen Savunma Forumu'nda on milyarlarca dolarlık anlaşmalar imzaladı. Türkiye, bu anlaşmalar çerçevesinde Atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c4gyj0w77eyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            rusya dizel yakıt ihracatını yasakladı
-            rusya başbakan yardımcısı aleksandr novak, iç piyasada akaryakıt arzını artırmak amacıyla dizel yakıt ihracatını yasakladıklarını bildirdi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Rusya dizel yakıt ihracatını yasakladı</h3>
-                    <p>Rusya Başbakan Yardımcısı Aleksandr Novak, iç piyasada akaryakıt arzını artırmak amacıyla dizel yakıt ihracatını yasakladıklarını bildirdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/rusya-dizel-yakit-ihracatini-yasakladi-950690.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            nato'dan ortak savunma taahhüdü: 5. madde'ye bağlılık yinelendi
-            ankara'nın ev sahipliğinde düzenlenen nato zirvesi'nin ikinci gününde liderler beştepe'de biraraya geliyor. müttefikler beklendiği gibi kolektif savunmaya odaklanan 5. maddeye yönelik “sarsılmaz kararlılıklarını” vurguladı
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>NATO'dan ortak savunma taahhüdü: 5. Madde'ye bağlılık yinelendi</h3>
-                    <p>Ankara'nın ev sahipliğinde düzenlenen NATO Zirvesi'nin ikinci gününde liderler Beştepe'de biraraya geliyor. Müttefikler beklendiği gibi kolektif savunmaya odaklanan 5. maddeye yönelik “sarsılmaz kararlılıklarını” vurguladı</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.co.uk/turkce/live/c1dy1ygwd9vt?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            cumhurbaşkanı erdoğan nato zirvesi sonrası konuşuyor
-            cumhurbaşkanı recep tayyip erdoğan, nato ankara zirvesi sonrası basın toplantısı düzenliyor.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Cumhurbaşkanı Erdoğan NATO Zirvesi sonrası konuşuyor</h3>
-                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, NATO Ankara Zirvesi sonrası basın toplantısı düzenliyor.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-nato-zirvesi-sonrasi-konusuyor-950688.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            yılmaz: türkiye, uluslararası alandaki müstesna konumunu ortaya koydu
-            cumhurbaşkanı yardımcısı cevdet yılmaz, "türkiye, güçlü diplomatik birikimi ve ev sahipliği kabiliyetiyle bir kez daha uluslararası alandaki müstesna konumunu ortaya koydu." dedi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Yılmaz: Türkiye, uluslararası alandaki müstesna konumunu ortaya koydu</h3>
-                    <p>Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, "Türkiye, güçlü diplomatik birikimi ve ev sahipliği kabiliyetiyle bir kez daha uluslararası alandaki müstesna konumunu ortaya koydu." dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/yilmaz-turkiye-uluslararasi-alandaki-mustesna-konumunu-ortaya-koydu-950687.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            liderler, zirve'deki aile fotoğrafını imzaladı
-            cumhurbaşkanı recep tayyip erdoğan, 36. nato devlet ve hükümet başkanları zirvesi'nde çekilen aile fotoğrafını imzaladı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Liderler, Zirve'deki aile fotoğrafını imzaladı</h3>
-                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, 36. NATO Devlet ve Hükümet Başkanları Zirvesi'nde çekilen aile fotoğrafını imzaladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/liderler-zirvedeki-aile-fotografini-imzaladi-950685.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇bb davasında mahkeme salonundan çıkartılan i̇mamoğlu'na 'kamu görevlisini tehdit' soruşturması
-            ekrem i̇mamoğlu "suç örgütü lideri" olmakla suçlandığı i̇stanbul büyükşehir belediyesi (i̇bb) davasında mahkeme başkanıyla tartıştıktan sonra salondan çıkartıldı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>İBB davasında mahkeme salonundan çıkartılan İmamoğlu'na 'kamu görevlisini tehdit' soruşturması</h3>
-                    <p>Ekrem İmamoğlu "suç örgütü lideri" olmakla suçlandığı İstanbul Büyükşehir Belediyesi (İBB) davasında mahkeme başkanıyla tartıştıktan sonra salondan çıkartıldı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c05yqd2y949o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇srail cezaevinde işkence gördüğünü söyleyen gazzeli doktorun hayatından endişe ediliyor
-            doktor hussam abu safiya'nın avukatı bbc'ye yaptığı açıklamada müvekkilinin dövüldüğünü iddia etti.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>İsrail cezaevinde işkence gördüğünü söyleyen Gazzeli doktorun hayatından endişe ediliyor</h3>
-                    <p>Doktor Hussam Abu Safiya'nın avukatı BBC'ye yaptığı açıklamada müvekkilinin dövüldüğünü iddia etti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c1jy1ywg1p6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            bir sonraki nato zirvesi arnavutluk'ta gerçekleştirilecek
-            nato genel sekreteri mark rutte, bir sonraki nato zirvesi'nin arnavutluk'ta düzenleneceğini açıkladı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Bir sonraki NATO Zirvesi Arnavutluk'ta gerçekleştirilecek</h3>
-                    <p>NATO Genel Sekreteri Mark Rutte, bir sonraki NATO Zirvesi'nin Arnavutluk'ta düzenleneceğini açıkladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/bir-sonraki-nato-zirvesi-arnavutlukta-gerceklestirilecek-950686.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

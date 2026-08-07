@@ -1,571 +1,442 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-        .search-box {
-    margin: 25px 0;
-    }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-            .category-filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 20px 0 30px;
-            }
-
-            .category-filter-btn {
-                padding: 8px 14px;
-                border: 1px solid #ddd;
-                border-radius: 999px;
-                background: #f7f7f7;
-                cursor: pointer;
-            }
-
-            .category-filter-btn.active {
-                background: #222;
-                color: white;
-            }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="home-search-input"
-        placeholder="Güncel haberlerde ara..."
-    >
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">7 Temmuz 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
 </div>
 
-<div class="category-filters">
-    <button class="category-filter-btn active" data-category="all">Tümü</button>
-    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-    <button class="category-filter-btn" data-category="dünya">Dünya</button>
-    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-    <button class="category-filter-btn" data-category="genel">Genel</button>
-</div>
-
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
         </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>ekonomi</strong> 9</span><span class="stat-item"><strong>genel</strong> 6</span></div>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>5</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>9</span>
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
         </div>
+        <h3>Prens Harry&#x27;nin Buckingham Sarayı&#x27;nda kalma izni son dakika iptal edildi</h3>
+        <p>İngiltere Kralı 3. Charles&#x27;ın küçük oğlu Prens Harry, bir hafta sürecek çeşitli etkinliklere katılmak için İngiltere&#x27;de. Uzun süren karmaşanın ardından Prens Harry&#x27;nin Buckingham Sarayı&#x27;nda kalmayacağı açıklandı.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 7 Temmuz 2026, 13:06</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/clyejk29zz0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 5 Temmuz 2026, 10:26</span>
+            </div>
+            <h3>Türkiye ve NATO: 1952&#x27;den bugüne krizlerle şekillenen stratejik ortaklık</h3>
+            <p>Türkiye’nin NATO’ya 1952’de katılımıyla başlayan ortaklık, Soğuk Savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. Ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen NATO’nun güvenlik mimarisinde kritik konumunu korudu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/czj8wz12peko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 7 Temmuz 2026, 11:59</span>
+            </div>
+            <h3>NATO Genel Sekreteri Rutte&#x27;den Türkiye yorumu: &#x27;Demokrasi seçimlerden daha fazlasıdır&#x27;</h3>
+            <p>NATO Genel Sekreteri Mark Rutte, Ankara&#x27;daki liderler zirvesinden önce Cumhurbaşkanlığı Millet Kütüphanesi&#x27;nde basın toplantısı düzenledi. Rutte, Türkiye&#x27;nin ev sahipliğini övdü, zirve öncesi gözaltılar ve ülkedeki insan hakları ihlalleri hakkında ise &#x27;Demokrasi seçimden fazlasıdır&#x27; ifadelerini kullandı. NATO lideri ayrıca ittifakın zirvede on milyarlarca dolarlık yeni savunma anlaşması duyuracağını söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/clyeejkk379o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 7 Temmuz 2026, 15:26</span>
+            </div>
+            <h3>ROKETSAN Genel Müdürü: NATO&#x27;ya daha fazla katkı sağlayabiliriz</h3>
+            <p>ROKETSAN Genel Müdürü Murat İkinci, büyük şirketlerle iş birliği yoluyla, Türkiye&#x27;nin savunma alanındaki mevcut tedarik zinciri kullanılarak Avrupa&#x27;nın ihtiyaçlarının tedarik edilebileceğini belirterek, &quot;Eğer böyle bir iş birliği modelini açabilirsek bu çok hızlı bir şekilde 15-20 milyar dolarları geçecek&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/roketsan-genel-muduru-natoya-daha-fazla-katki-saglayabiliriz-950520.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 7 Temmuz 2026, 14:31</span>
+            </div>
+            <h3>Almanya: NATO müttefikleri Ukrayna&#x27;ya 140 milyar euro destek taahhüdünde bulunacak</h3>
+            <p>Almanya Dışişleri Bakanı Johann Wadephul, NATO müttefiklerinin 2026 ve gelecek yıl için Ukrayna&#x27;ya toplam 140 milyar avro tutarında destek sağlamayı taahhüt etmeye hazırlandığını açıkladı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/almanya-nato-muttefikleri-ukraynaya-140-milyar-euro-destek-taahhudunde-bulunacak-950511.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>6</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-07-07 12:39</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="prens harry&#x27;nin buckingham sarayı&#x27;nda kalma izni son dakika iptal edildi i̇ngiltere kralı 3. charles&#x27;ın küçük oğlu prens harry, bir hafta sürecek çeşitli etkinliklere katılmak için i̇ngiltere&#x27;de. uzun süren karmaşanın ardından prens harry&#x27;nin buckingham sarayı&#x27;nda kalmayacağı açıklandı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 13:06</span>
         </div>
+        <h3>Prens Harry&#x27;nin Buckingham Sarayı&#x27;nda kalma izni son dakika iptal edildi</h3>
+        <p>İngiltere Kralı 3. Charles&#x27;ın küçük oğlu Prens Harry, bir hafta sürecek çeşitli etkinliklere katılmak için İngiltere&#x27;de. Uzun süren karmaşanın ardından Prens Harry&#x27;nin Buckingham Sarayı&#x27;nda kalmayacağı açıklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 13:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyejk29zz0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye ve nato: 1952&#x27;den bugüne krizlerle şekillenen stratejik ortaklık türkiye’nin nato’ya 1952’de katılımıyla başlayan ortaklık, soğuk savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen nato’nun güvenlik mimarisinde kritik konumunu korudu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 5 Temmuz 2026, 10:26</span>
+        </div>
+        <h3>Türkiye ve NATO: 1952&#x27;den bugüne krizlerle şekillenen stratejik ortaklık</h3>
+        <p>Türkiye’nin NATO’ya 1952’de katılımıyla başlayan ortaklık, Soğuk Savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. Ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen NATO’nun güvenlik mimarisinde kritik konumunu korudu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 5 Temmuz 2026, 10:26</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/czj8wz12peko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato zirvesi neden önemli, ankara&#x27;da hangi kararlar alınabilir? bugün ankara&#x27;da başlayacak ve iki gün sürecek zirve, gerek ittifakın abd yönetiminin yaklaşımı nedeniyle içinden geçtiği zorlu dönem gerekse uluslararası konjonktür nedeniyle önem düzeyi en yüksek toplantılardan biri olarak görülüyor. brüksel&#x27;den güven özalp&#x27;ın haberi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 6 Temmuz 2026, 07:47</span>
+        </div>
+        <h3>NATO Zirvesi neden önemli, Ankara&#x27;da hangi kararlar alınabilir?</h3>
+        <p>Bugün Ankara&#x27;da başlayacak ve iki gün sürecek zirve, gerek ittifakın ABD yönetiminin yaklaşımı nedeniyle içinden geçtiği zorlu dönem gerekse uluslararası konjonktür nedeniyle önem düzeyi en yüksek toplantılardan biri olarak görülüyor. Brüksel&#x27;den Güven Özalp&#x27;ın haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 6 Temmuz 2026, 07:47</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c70yy6wxgl9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trump-erdoğan görüşmesi: abd başkanı ankara&#x27;da nato zirvesi kapsamında türkiye&#x27;yi ziyaret eden donald trump&#x27;ı taşıyan uçak, yenilenen etimesgut havalimanı&#x27;na iniş yaptı. trump&#x27;ı cumhurbaşkanı erdoğan resmi törenle karşıladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 15:01</span>
+        </div>
+        <h3>Trump-Erdoğan görüşmesi: ABD Başkanı Ankara&#x27;da</h3>
+        <p>NATO Zirvesi kapsamında Türkiye&#x27;yi ziyaret eden Donald Trump&#x27;ı taşıyan uçak, yenilenen Etimesgut Havalimanı&#x27;na iniş yaptı. Trump&#x27;ı Cumhurbaşkanı Erdoğan resmi törenle karşıladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 15:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c33y078x83zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd başkanı donald trump, beştepe&#x27;de resmi törenle karşılanıyor abd başkanı donald trump, cumhurbaşkanlığı külliyesi&#x27;nde resmi törenle karşılanıyor. törenin ardından erdoğan - trump zirvesi gerçekleşecek. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 7 Temmuz 2026, 15:30</span>
+        </div>
+        <h3>ABD Başkanı Donald Trump, Beştepe&#x27;de resmi törenle karşılanıyor</h3>
+        <p>ABD Başkanı Donald Trump, Cumhurbaşkanlığı Külliyesi&#x27;nde resmi törenle karşılanıyor. Törenin ardından Erdoğan - Trump Zirvesi gerçekleşecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 7 Temmuz 2026, 15:30</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-baskani-donald-trump-bestepede-resmi-torenle-karsilaniyor-950516.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">9 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="nato genel sekreteri rutte&#x27;den türkiye yorumu: &#x27;demokrasi seçimlerden daha fazlasıdır&#x27; nato genel sekreteri mark rutte, ankara&#x27;daki liderler zirvesinden önce cumhurbaşkanlığı millet kütüphanesi&#x27;nde basın toplantısı düzenledi. rutte, türkiye&#x27;nin ev sahipliğini övdü, zirve öncesi gözaltılar ve ülkedeki insan hakları ihlalleri hakkında ise &#x27;demokrasi seçimden fazlasıdır&#x27; ifadelerini kullandı. nato lideri ayrıca ittifakın zirvede on milyarlarca dolarlık yeni savunma anlaşması duyuracağını söyledi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 11:59</span>
+        </div>
+        <h3>NATO Genel Sekreteri Rutte&#x27;den Türkiye yorumu: &#x27;Demokrasi seçimlerden daha fazlasıdır&#x27;</h3>
+        <p>NATO Genel Sekreteri Mark Rutte, Ankara&#x27;daki liderler zirvesinden önce Cumhurbaşkanlığı Millet Kütüphanesi&#x27;nde basın toplantısı düzenledi. Rutte, Türkiye&#x27;nin ev sahipliğini övdü, zirve öncesi gözaltılar ve ülkedeki insan hakları ihlalleri hakkında ise &#x27;Demokrasi seçimden fazlasıdır&#x27; ifadelerini kullandı. NATO lideri ayrıca ittifakın zirvede on milyarlarca dolarlık yeni savunma anlaşması duyuracağını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 11:59</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyeejkk379o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="roketsan genel müdürü: nato&#x27;ya daha fazla katkı sağlayabiliriz roketsan genel müdürü murat i̇kinci, büyük şirketlerle iş birliği yoluyla, türkiye&#x27;nin savunma alanındaki mevcut tedarik zinciri kullanılarak avrupa&#x27;nın ihtiyaçlarının tedarik edilebileceğini belirterek, &quot;eğer böyle bir iş birliği modelini açabilirsek bu çok hızlı bir şekilde 15-20 milyar dolarları geçecek&quot; dedi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 7 Temmuz 2026, 15:26</span>
+        </div>
+        <h3>ROKETSAN Genel Müdürü: NATO&#x27;ya daha fazla katkı sağlayabiliriz</h3>
+        <p>ROKETSAN Genel Müdürü Murat İkinci, büyük şirketlerle iş birliği yoluyla, Türkiye&#x27;nin savunma alanındaki mevcut tedarik zinciri kullanılarak Avrupa&#x27;nın ihtiyaçlarının tedarik edilebileceğini belirterek, &quot;Eğer böyle bir iş birliği modelini açabilirsek bu çok hızlı bir şekilde 15-20 milyar dolarları geçecek&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 7 Temmuz 2026, 15:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/roketsan-genel-muduru-natoya-daha-fazla-katki-saglayabiliriz-950520.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="almanya: nato müttefikleri ukrayna&#x27;ya 140 milyar euro destek taahhüdünde bulunacak almanya dışişleri bakanı johann wadephul, nato müttefiklerinin 2026 ve gelecek yıl için ukrayna&#x27;ya toplam 140 milyar avro tutarında destek sağlamayı taahhüt etmeye hazırlandığını açıkladı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 7 Temmuz 2026, 14:31</span>
+        </div>
+        <h3>Almanya: NATO müttefikleri Ukrayna&#x27;ya 140 milyar euro destek taahhüdünde bulunacak</h3>
+        <p>Almanya Dışişleri Bakanı Johann Wadephul, NATO müttefiklerinin 2026 ve gelecek yıl için Ukrayna&#x27;ya toplam 140 milyar avro tutarında destek sağlamayı taahhüt etmeye hazırlandığını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 7 Temmuz 2026, 14:31</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/almanya-nato-muttefikleri-ukraynaya-140-milyar-euro-destek-taahhudunde-bulunacak-950511.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato savunma fuarı: türkiye ve müttefikler hangi anlaşmalara imza attı? nato müttefikleri ankara&#x27;daki liderler zirvesi kapsamında düzenlenen savunma forumu&#x27;nda on milyarlarca dolarlık anlaşmalar imzaladı. türkiye, bu anlaşmalar çerçevesinde atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 14:34</span>
+        </div>
+        <h3>NATO Savunma Fuarı: Türkiye ve müttefikler hangi anlaşmalara imza attı?</h3>
+        <p>NATO müttefikleri Ankara&#x27;daki liderler zirvesi kapsamında düzenlenen Savunma Forumu&#x27;nda on milyarlarca dolarlık anlaşmalar imzaladı. Türkiye, bu anlaşmalar çerçevesinde Atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 14:34</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gyj0w77eyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rutte: müttefikler türk savunma sanayii modelini kendi ülkelerinde uygulamak için inceliyor nato genel sekreteri mark rutte, türkiye&#x27;nin savunma sanayiinin organize edilme şeklini örnek göstererek, &quot;bence bu son derece ilgi çekici bir model. bildiğim kadarıyla bazı müttefikler de bunu kendi ülkelerinde uygulayıp uygulayamayacaklarını görmek için inceliyor&quot; değerlendirmesinde bulundu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 7 Temmuz 2026, 15:14</span>
+        </div>
+        <h3>Rutte: Müttefikler Türk savunma sanayii modelini kendi ülkelerinde uygulamak için inceliyor</h3>
+        <p>NATO Genel Sekreteri Mark Rutte, Türkiye&#x27;nin savunma sanayiinin organize edilme şeklini örnek göstererek, &quot;Bence bu son derece ilgi çekici bir model. Bildiğim kadarıyla bazı müttefikler de bunu kendi ülkelerinde uygulayıp uygulayamayacaklarını görmek için inceliyor&quot; değerlendirmesinde bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 7 Temmuz 2026, 15:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/rutte-muttefikler-turk-savunma-sanayii-modelini-kendi-ulkelerinde-uygulamak-icin-inceliyor-950519.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rutte: 32 ülkenin varlıklarını bir araya getiriyoruz nato genel sekreteri mark rutte, nato ile savunma sanayii arasında iş birliği inşa edilmesinin önemine işaret ederek, &quot;tek bir ülke, endüstriyel devrimi tek başına sağlayamaz. birlikte yapmak zorundayız. biz nato&#x27;yuz. bizler kabiliyetlerimizi, teknolojimizi, sanayimizi bir araya getiriyoruz. 32 ülkenin varlıklarını bir araya getiriyoruz&quot; dedi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 7 Temmuz 2026, 15:09</span>
+        </div>
+        <h3>Rutte: 32 ülkenin varlıklarını bir araya getiriyoruz</h3>
+        <p>NATO Genel Sekreteri Mark Rutte, NATO ile savunma sanayii arasında iş birliği inşa edilmesinin önemine işaret ederek, &quot;Tek bir ülke, endüstriyel devrimi tek başına sağlayamaz. Birlikte yapmak zorundayız. Biz NATO&#x27;yuz. Bizler kabiliyetlerimizi, teknolojimizi, sanayimizi bir araya getiriyoruz. 32 ülkenin varlıklarını bir araya getiriyoruz&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 7 Temmuz 2026, 15:09</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/rutte-32-ulkenin-varliklarini-bir-araya-getiriyoruz-950518.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cevdet yılmaz: savunma ihracatçısı ülkeler arasında ilk 10&#x27;a girmeyi hedefliyoruz cumhurbaşkanı yardımcısı cevdet yılmaz, &quot;müttefikler arasında savunma alanındaki ticari kısıtlamaları ve yaptırımları, mutlaka hep birlikte ortadan kaldırmalıyız. i̇ttifakın askeri hazırlık düzeyini artırmak istiyorsak, kolektif güvenliğimizi güçlendirmek istiyorsak bu anlamsız yaptırımları, kısıtlamaları hep birlikte masadan temizlemeliyiz&quot; dedi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 7 Temmuz 2026, 14:56</span>
+        </div>
+        <h3>Cevdet Yılmaz: Savunma ihracatçısı ülkeler arasında ilk 10&#x27;a girmeyi hedefliyoruz</h3>
+        <p>Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, &quot;Müttefikler arasında savunma alanındaki ticari kısıtlamaları ve yaptırımları, mutlaka hep birlikte ortadan kaldırmalıyız. İttifakın askeri hazırlık düzeyini artırmak istiyorsak, kolektif güvenliğimizi güçlendirmek istiyorsak bu anlamsız yaptırımları, kısıtlamaları hep birlikte masadan temizlemeliyiz&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 7 Temmuz 2026, 14:56</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cevdet-yilmaz-savunma-ihracatcisi-ulkeler-arasinda-ilk-10a-girmeyi-hedefliyoruz-950515.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato ülkelerinin iştahını kabartacak yatırım çağrısı sanayi ve teknoloji bakanı mehmet fatih kacır, nato ülkelerinin iştahını kabartacak yatırım çağrısını açıkladı. çağrı ile küresel savunma sanayii yatırımlarının türkiye’ye yönelmesi hedefleniyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 7 Temmuz 2026, 14:18</span>
+        </div>
+        <h3>NATO ülkelerinin iştahını kabartacak yatırım çağrısı</h3>
+        <p>Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, NATO ülkelerinin iştahını kabartacak yatırım çağrısını açıkladı. Çağrı ile küresel savunma sanayii yatırımlarının Türkiye’ye yönelmesi hedefleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 7 Temmuz 2026, 14:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/nato-ulkelerinin-istahini-kabartacak-yatirim-cagrisi-950510.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="satış öncesi &#x27;change&#x27; sürprizi: ruhsatı 2012, kasası 2013, beyni 2011 model çıktı nevşehir&#x27;de aracını satmak isteyen bir kişi, ekspertiz muayenesinde otomobilin şase numarasının değiştirildiğini (change) öğrenince şok yaşadı. yapılan incelemede tescil belgesi, üretim yılı ve fiziki yapısı farklı yıllara ait olduğu belirlenen otomobil, polis ekiplerince trafikten men edilerek muhafazaya alındı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 7 Temmuz 2026, 15:00</span>
+        </div>
+        <h3>Satış öncesi &#x27;change&#x27; sürprizi: Ruhsatı 2012, kasası 2013, beyni 2011 model çıktı</h3>
+        <p>Nevşehir&#x27;de aracını satmak isteyen bir kişi, ekspertiz muayenesinde otomobilin şase numarasının değiştirildiğini (change) öğrenince şok yaşadı. Yapılan incelemede tescil belgesi, üretim yılı ve fiziki yapısı farklı yıllara ait olduğu belirlenen otomobil, polis ekiplerince trafikten men edilerek muhafazaya alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 7 Temmuz 2026, 15:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/satis-oncesi-change-surprizi-ruhsati-2012-kasasi-2013-beyni-2011-model-cikti-950514.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="şam&#x27;da macron&#x27;un ziyareti sırasında iki patlama: 18 yaralı suriye&#x27;nin başkenti şam&#x27;da, fransa cumhurbaşkanı emmanuel macron&#x27;un geceyi geçirdiği otelin yakınında iki patlama meydana geldi. suriye resmi haber ajansı olayda aralarında dört polisin de bulunduğu 18 kişinin yaralandığını bildirdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 14:09</span>
+        </div>
+        <h3>Şam&#x27;da Macron&#x27;un ziyareti sırasında iki patlama: 18 yaralı</h3>
+        <p>Suriye&#x27;nin başkenti Şam&#x27;da, Fransa Cumhurbaşkanı Emmanuel Macron&#x27;un geceyi geçirdiği otelin yakınında iki patlama meydana geldi. Suriye resmi haber ajansı olayda aralarında dört polisin de bulunduğu 18 kişinin yaralandığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 14:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yz0417mm4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ankara&#x27;da nato protestosuna polis müdahalesi: çok sayıda gözaltı ankara&#x27;da düzenlenen nato zirvesi&#x27;ni protesto etmek isteyen gruba polis müdahale etti. müdahale sırasında çok sayıda kişi gözaltına alınırken, bazı milletvekilleri ve siyasi parti temsilcileri polis tarafından abluka altına alındı genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 14:51</span>
+        </div>
+        <h3>Ankara&#x27;da NATO protestosuna polis müdahalesi: Çok sayıda gözaltı</h3>
+        <p>Ankara&#x27;da düzenlenen NATO Zirvesi&#x27;ni protesto etmek isteyen gruba polis müdahale etti. Müdahale sırasında çok sayıda kişi gözaltına alınırken, bazı milletvekilleri ve siyasi parti temsilcileri polis tarafından abluka altına alındı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 14:51</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cn94nvyenr4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato zirvesi bugün ankara&#x27;da başlıyor: türkiye&#x27;nin beklentileri neler? nato zirvesi, hem gerçekleştiği dönem hem de yoğun gündemi nedeniyle &quot;tarihi&quot; olarak değerlendiriliyor. uzmanlar, türkiye&#x27;nin son dönemde artan uluslararası görünümü ve oynamak istediği rol açısından da zirvenin çok önemli olduğunu söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 07:08</span>
+        </div>
+        <h3>NATO Zirvesi bugün Ankara&#x27;da başlıyor: Türkiye&#x27;nin beklentileri neler?</h3>
+        <p>NATO Zirvesi, hem gerçekleştiği dönem hem de yoğun gündemi nedeniyle &quot;tarihi&quot; olarak değerlendiriliyor. Uzmanlar, Türkiye&#x27;nin son dönemde artan uluslararası görünümü ve oynamak istediği rol açısından da zirvenin çok önemli olduğunu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 07:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cddlqe90pqgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="karadağ dışişleri bakanı: nato zirvesi çok doğru bir ülkede yapılıyor karadağ dışişleri bakanı ervin i̇brahimovic, nato zirvesi&#x27;nin çok doğru bir zamanda, çok doğru bir ülkede yapıldığını belirtti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 7 Temmuz 2026, 15:05</span>
+        </div>
+        <h3>Karadağ Dışişleri Bakanı: NATO Zirvesi çok doğru bir ülkede yapılıyor</h3>
+        <p>Karadağ Dışişleri Bakanı Ervin İbrahimovic, NATO Zirvesi&#x27;nin çok doğru bir zamanda, çok doğru bir ülkede yapıldığını belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 7 Temmuz 2026, 15:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/karadag-disisleri-bakani-nato-zirvesi-cok-dogru-bir-ulkede-yapiliyor-950517.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="finlandiya cumhurbaşkanı stubb&#x27;tan zirveye ev sahipliği yapan türkiye&#x27;ye teşekkür finlandiya cumhurbaşkanı alexander stubb, nato zirvesi&#x27;ne ev sahipliği yapan türkiye&#x27;ye teşekkür etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 7 Temmuz 2026, 14:50</span>
+        </div>
+        <h3>Finlandiya Cumhurbaşkanı Stubb&#x27;tan zirveye ev sahipliği yapan Türkiye&#x27;ye teşekkür</h3>
+        <p>Finlandiya Cumhurbaşkanı Alexander Stubb, NATO Zirvesi&#x27;ne ev sahipliği yapan Türkiye&#x27;ye teşekkür etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 7 Temmuz 2026, 14:50</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/finlandiya-cumhurbaskani-stubbtan-zirveye-ev-sahipligi-yapan-turkiyeye-tesekkur-950513.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇bb davasında 63. gün: i̇mamoğlu duruşma salonuna getirilmedi i̇bb davasında, 59&#x27;u tutuklu toplam 414 sanığın yargılanmasına 63. gününde silivri&#x27;de devam ediliyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 12:33</span>
+        </div>
+        <h3>İBB davasında 63. gün: İmamoğlu duruşma salonuna getirilmedi</h3>
+        <p>İBB davasında, 59&#x27;u tutuklu toplam 414 sanığın yargılanmasına 63. gününde Silivri&#x27;de devam ediliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 12:33</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/czx5q8nld1vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/clyejk29zz0o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Prens Harry'nin Buckingham Sarayı'nda kalma izni son dakika iptal edildi</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/czj8wz12peko?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Türkiye ve NATO: 1952'den bugüne krizlerle şekillenen stratejik ortaklık</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/clyeejkk379o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>NATO Genel Sekreteri Rutte'den Türkiye yorumu: 'Demokrasi seçimlerden daha fazlasıdır'</strong>
-            </a>
-        </li>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/gundem/roketsan-genel-muduru-natoya-daha-fazla-katki-saglayabiliriz-950520.html" target="_blank">
-                <strong>ROKETSAN Genel Müdürü: NATO'ya daha fazla katkı sağlayabiliriz</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/almanya-nato-muttefikleri-ukraynaya-140-milyar-euro-destek-taahhudunde-bulunacak-950511.html" target="_blank">
-                <strong>Almanya: NATO müttefikleri Ukrayna'ya 140 milyar euro destek taahhüdünde bulunacak</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            prens harry'nin buckingham sarayı'nda kalma izni son dakika iptal edildi
-            i̇ngiltere kralı 3. charles'ın küçük oğlu prens harry, bir hafta sürecek çeşitli etkinliklere katılmak için i̇ngiltere'de. uzun süren karmaşanın ardından prens harry'nin buckingham sarayı'nda kalmayacağı açıklandı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Prens Harry'nin Buckingham Sarayı'nda kalma izni son dakika iptal edildi</h3>
-                    <p>İngiltere Kralı 3. Charles'ın küçük oğlu Prens Harry, bir hafta sürecek çeşitli etkinliklere katılmak için İngiltere'de. Uzun süren karmaşanın ardından Prens Harry'nin Buckingham Sarayı'nda kalmayacağı açıklandı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/clyejk29zz0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye ve nato: 1952'den bugüne krizlerle şekillenen stratejik ortaklık
-            türkiye’nin nato’ya 1952’de katılımıyla başlayan ortaklık, soğuk savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen nato’nun güvenlik mimarisinde kritik konumunu korudu.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Türkiye ve NATO: 1952'den bugüne krizlerle şekillenen stratejik ortaklık</h3>
-                    <p>Türkiye’nin NATO’ya 1952’de katılımıyla başlayan ortaklık, Soğuk Savaş’tan günümüze uzanan krizler ve jeopolitik gerilimlerle şekillendi. Ankara, ittifak içinde zaman zaman yaşanan siyasi ve askeri anlaşmazlıklara rağmen NATO’nun güvenlik mimarisinde kritik konumunu korudu.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/czj8wz12peko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nato zirvesi neden önemli, ankara'da hangi kararlar alınabilir?
-            bugün ankara'da başlayacak ve iki gün sürecek zirve, gerek ittifakın abd yönetiminin yaklaşımı nedeniyle içinden geçtiği zorlu dönem gerekse uluslararası konjonktür nedeniyle önem düzeyi en yüksek toplantılardan biri olarak görülüyor. brüksel'den güven özalp'ın haberi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>NATO Zirvesi neden önemli, Ankara'da hangi kararlar alınabilir?</h3>
-                    <p>Bugün Ankara'da başlayacak ve iki gün sürecek zirve, gerek ittifakın ABD yönetiminin yaklaşımı nedeniyle içinden geçtiği zorlu dönem gerekse uluslararası konjonktür nedeniyle önem düzeyi en yüksek toplantılardan biri olarak görülüyor. Brüksel'den Güven Özalp'ın haberi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c70yy6wxgl9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            trump-erdoğan görüşmesi: abd başkanı ankara'da
-            nato zirvesi kapsamında türkiye'yi ziyaret eden donald trump'ı taşıyan uçak, yenilenen etimesgut havalimanı'na iniş yaptı. trump'ı cumhurbaşkanı erdoğan resmi törenle karşıladı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Trump-Erdoğan görüşmesi: ABD Başkanı Ankara'da</h3>
-                    <p>NATO Zirvesi kapsamında Türkiye'yi ziyaret eden Donald Trump'ı taşıyan uçak, yenilenen Etimesgut Havalimanı'na iniş yaptı. Trump'ı Cumhurbaşkanı Erdoğan resmi törenle karşıladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c33y078x83zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd başkanı donald trump, beştepe'de resmi törenle karşılanıyor
-            abd başkanı donald trump, cumhurbaşkanlığı külliyesi'nde resmi törenle karşılanıyor. törenin ardından erdoğan - trump zirvesi gerçekleşecek.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD Başkanı Donald Trump, Beştepe'de resmi törenle karşılanıyor</h3>
-                    <p>ABD Başkanı Donald Trump, Cumhurbaşkanlığı Külliyesi'nde resmi törenle karşılanıyor. Törenin ardından Erdoğan - Trump Zirvesi gerçekleşecek.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/abd-baskani-donald-trump-bestepede-resmi-torenle-karsilaniyor-950516.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">EKONOMI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            nato genel sekreteri rutte'den türkiye yorumu: 'demokrasi seçimlerden daha fazlasıdır'
-            nato genel sekreteri mark rutte, ankara'daki liderler zirvesinden önce cumhurbaşkanlığı millet kütüphanesi'nde basın toplantısı düzenledi. rutte, türkiye'nin ev sahipliğini övdü, zirve öncesi gözaltılar ve ülkedeki insan hakları ihlalleri hakkında ise 'demokrasi seçimden fazlasıdır' ifadelerini kullandı. nato lideri ayrıca ittifakın zirvede on milyarlarca dolarlık yeni savunma anlaşması duyuracağını söyledi.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>NATO Genel Sekreteri Rutte'den Türkiye yorumu: 'Demokrasi seçimlerden daha fazlasıdır'</h3>
-                    <p>NATO Genel Sekreteri Mark Rutte, Ankara'daki liderler zirvesinden önce Cumhurbaşkanlığı Millet Kütüphanesi'nde basın toplantısı düzenledi. Rutte, Türkiye'nin ev sahipliğini övdü, zirve öncesi gözaltılar ve ülkedeki insan hakları ihlalleri hakkında ise 'Demokrasi seçimden fazlasıdır' ifadelerini kullandı. NATO lideri ayrıca ittifakın zirvede on milyarlarca dolarlık yeni savunma anlaşması duyuracağını söyledi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/clyeejkk379o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            roketsan genel müdürü: nato'ya daha fazla katkı sağlayabiliriz
-            roketsan genel müdürü murat i̇kinci, büyük şirketlerle iş birliği yoluyla, türkiye'nin savunma alanındaki mevcut tedarik zinciri kullanılarak avrupa'nın ihtiyaçlarının tedarik edilebileceğini belirterek, "eğer böyle bir iş birliği modelini açabilirsek bu çok hızlı bir şekilde 15-20 milyar dolarları geçecek" dedi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>ROKETSAN Genel Müdürü: NATO'ya daha fazla katkı sağlayabiliriz</h3>
-                    <p>ROKETSAN Genel Müdürü Murat İkinci, büyük şirketlerle iş birliği yoluyla, Türkiye'nin savunma alanındaki mevcut tedarik zinciri kullanılarak Avrupa'nın ihtiyaçlarının tedarik edilebileceğini belirterek, "Eğer böyle bir iş birliği modelini açabilirsek bu çok hızlı bir şekilde 15-20 milyar dolarları geçecek" dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/roketsan-genel-muduru-natoya-daha-fazla-katki-saglayabiliriz-950520.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            almanya: nato müttefikleri ukrayna'ya 140 milyar euro destek taahhüdünde bulunacak
-            almanya dışişleri bakanı johann wadephul, nato müttefiklerinin 2026 ve gelecek yıl için ukrayna'ya toplam 140 milyar avro tutarında destek sağlamayı taahhüt etmeye hazırlandığını açıkladı.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Almanya: NATO müttefikleri Ukrayna'ya 140 milyar euro destek taahhüdünde bulunacak</h3>
-                    <p>Almanya Dışişleri Bakanı Johann Wadephul, NATO müttefiklerinin 2026 ve gelecek yıl için Ukrayna'ya toplam 140 milyar avro tutarında destek sağlamayı taahhüt etmeye hazırlandığını açıkladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/almanya-nato-muttefikleri-ukraynaya-140-milyar-euro-destek-taahhudunde-bulunacak-950511.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nato savunma fuarı: türkiye ve müttefikler hangi anlaşmalara imza attı?
-            nato müttefikleri ankara'daki liderler zirvesi kapsamında düzenlenen savunma forumu'nda on milyarlarca dolarlık anlaşmalar imzaladı. türkiye, bu anlaşmalar çerçevesinde atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>NATO Savunma Fuarı: Türkiye ve müttefikler hangi anlaşmalara imza attı?</h3>
-                    <p>NATO müttefikleri Ankara'daki liderler zirvesi kapsamında düzenlenen Savunma Forumu'nda on milyarlarca dolarlık anlaşmalar imzaladı. Türkiye, bu anlaşmalar çerçevesinde Atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c4gyj0w77eyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            rutte: müttefikler türk savunma sanayii modelini kendi ülkelerinde uygulamak için inceliyor
-            nato genel sekreteri mark rutte, türkiye'nin savunma sanayiinin organize edilme şeklini örnek göstererek, "bence bu son derece ilgi çekici bir model. bildiğim kadarıyla bazı müttefikler de bunu kendi ülkelerinde uygulayıp uygulayamayacaklarını görmek için inceliyor" değerlendirmesinde bulundu.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Rutte: Müttefikler Türk savunma sanayii modelini kendi ülkelerinde uygulamak için inceliyor</h3>
-                    <p>NATO Genel Sekreteri Mark Rutte, Türkiye'nin savunma sanayiinin organize edilme şeklini örnek göstererek, "Bence bu son derece ilgi çekici bir model. Bildiğim kadarıyla bazı müttefikler de bunu kendi ülkelerinde uygulayıp uygulayamayacaklarını görmek için inceliyor" değerlendirmesinde bulundu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/rutte-muttefikler-turk-savunma-sanayii-modelini-kendi-ulkelerinde-uygulamak-icin-inceliyor-950519.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            rutte: 32 ülkenin varlıklarını bir araya getiriyoruz
-            nato genel sekreteri mark rutte, nato ile savunma sanayii arasında iş birliği inşa edilmesinin önemine işaret ederek, "tek bir ülke, endüstriyel devrimi tek başına sağlayamaz. birlikte yapmak zorundayız. biz nato'yuz. bizler kabiliyetlerimizi, teknolojimizi, sanayimizi bir araya getiriyoruz. 32 ülkenin varlıklarını bir araya getiriyoruz" dedi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Rutte: 32 ülkenin varlıklarını bir araya getiriyoruz</h3>
-                    <p>NATO Genel Sekreteri Mark Rutte, NATO ile savunma sanayii arasında iş birliği inşa edilmesinin önemine işaret ederek, "Tek bir ülke, endüstriyel devrimi tek başına sağlayamaz. Birlikte yapmak zorundayız. Biz NATO'yuz. Bizler kabiliyetlerimizi, teknolojimizi, sanayimizi bir araya getiriyoruz. 32 ülkenin varlıklarını bir araya getiriyoruz" dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/rutte-32-ulkenin-varliklarini-bir-araya-getiriyoruz-950518.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            cevdet yılmaz: savunma ihracatçısı ülkeler arasında ilk 10'a girmeyi hedefliyoruz
-            cumhurbaşkanı yardımcısı cevdet yılmaz, "müttefikler arasında savunma alanındaki ticari kısıtlamaları ve yaptırımları, mutlaka hep birlikte ortadan kaldırmalıyız. i̇ttifakın askeri hazırlık düzeyini artırmak istiyorsak, kolektif güvenliğimizi güçlendirmek istiyorsak bu anlamsız yaptırımları, kısıtlamaları hep birlikte masadan temizlemeliyiz" dedi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Cevdet Yılmaz: Savunma ihracatçısı ülkeler arasında ilk 10'a girmeyi hedefliyoruz</h3>
-                    <p>Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, "Müttefikler arasında savunma alanındaki ticari kısıtlamaları ve yaptırımları, mutlaka hep birlikte ortadan kaldırmalıyız. İttifakın askeri hazırlık düzeyini artırmak istiyorsak, kolektif güvenliğimizi güçlendirmek istiyorsak bu anlamsız yaptırımları, kısıtlamaları hep birlikte masadan temizlemeliyiz" dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/cevdet-yilmaz-savunma-ihracatcisi-ulkeler-arasinda-ilk-10a-girmeyi-hedefliyoruz-950515.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nato ülkelerinin iştahını kabartacak yatırım çağrısı
-            sanayi ve teknoloji bakanı mehmet fatih kacır, nato ülkelerinin iştahını kabartacak yatırım çağrısını açıkladı. çağrı ile küresel savunma sanayii yatırımlarının türkiye’ye yönelmesi hedefleniyor.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>NATO ülkelerinin iştahını kabartacak yatırım çağrısı</h3>
-                    <p>Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, NATO ülkelerinin iştahını kabartacak yatırım çağrısını açıkladı. Çağrı ile küresel savunma sanayii yatırımlarının Türkiye’ye yönelmesi hedefleniyor.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/nato-ulkelerinin-istahini-kabartacak-yatirim-cagrisi-950510.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            satış öncesi 'change' sürprizi: ruhsatı 2012, kasası 2013, beyni 2011 model çıktı
-            nevşehir'de aracını satmak isteyen bir kişi, ekspertiz muayenesinde otomobilin şase numarasının değiştirildiğini (change) öğrenince şok yaşadı. yapılan incelemede tescil belgesi, üretim yılı ve fiziki yapısı farklı yıllara ait olduğu belirlenen otomobil, polis ekiplerince trafikten men edilerek muhafazaya alındı.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Satış öncesi 'change' sürprizi: Ruhsatı 2012, kasası 2013, beyni 2011 model çıktı</h3>
-                    <p>Nevşehir'de aracını satmak isteyen bir kişi, ekspertiz muayenesinde otomobilin şase numarasının değiştirildiğini (change) öğrenince şok yaşadı. Yapılan incelemede tescil belgesi, üretim yılı ve fiziki yapısı farklı yıllara ait olduğu belirlenen otomobil, polis ekiplerince trafikten men edilerek muhafazaya alındı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/satis-oncesi-change-surprizi-ruhsati-2012-kasasi-2013-beyni-2011-model-cikti-950514.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            şam'da macron'un ziyareti sırasında iki patlama: 18 yaralı
-            suriye'nin başkenti şam'da, fransa cumhurbaşkanı emmanuel macron'un geceyi geçirdiği otelin yakınında iki patlama meydana geldi. suriye resmi haber ajansı olayda aralarında dört polisin de bulunduğu 18 kişinin yaralandığını bildirdi.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Şam'da Macron'un ziyareti sırasında iki patlama: 18 yaralı</h3>
-                    <p>Suriye'nin başkenti Şam'da, Fransa Cumhurbaşkanı Emmanuel Macron'un geceyi geçirdiği otelin yakınında iki patlama meydana geldi. Suriye resmi haber ajansı olayda aralarında dört polisin de bulunduğu 18 kişinin yaralandığını bildirdi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yz0417mm4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            ankara'da nato protestosuna polis müdahalesi: çok sayıda gözaltı
-            ankara'da düzenlenen nato zirvesi'ni protesto etmek isteyen gruba polis müdahale etti. müdahale sırasında çok sayıda kişi gözaltına alınırken, bazı milletvekilleri ve siyasi parti temsilcileri polis tarafından abluka altına alındı
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Ankara'da NATO protestosuna polis müdahalesi: Çok sayıda gözaltı</h3>
-                    <p>Ankara'da düzenlenen NATO Zirvesi'ni protesto etmek isteyen gruba polis müdahale etti. Müdahale sırasında çok sayıda kişi gözaltına alınırken, bazı milletvekilleri ve siyasi parti temsilcileri polis tarafından abluka altına alındı</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cn94nvyenr4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nato zirvesi bugün ankara'da başlıyor: türkiye'nin beklentileri neler?
-            nato zirvesi, hem gerçekleştiği dönem hem de yoğun gündemi nedeniyle "tarihi" olarak değerlendiriliyor. uzmanlar, türkiye'nin son dönemde artan uluslararası görünümü ve oynamak istediği rol açısından da zirvenin çok önemli olduğunu söylüyor.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>NATO Zirvesi bugün Ankara'da başlıyor: Türkiye'nin beklentileri neler?</h3>
-                    <p>NATO Zirvesi, hem gerçekleştiği dönem hem de yoğun gündemi nedeniyle "tarihi" olarak değerlendiriliyor. Uzmanlar, Türkiye'nin son dönemde artan uluslararası görünümü ve oynamak istediği rol açısından da zirvenin çok önemli olduğunu söylüyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cddlqe90pqgo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            karadağ dışişleri bakanı: nato zirvesi çok doğru bir ülkede yapılıyor
-            karadağ dışişleri bakanı ervin i̇brahimovic, nato zirvesi'nin çok doğru bir zamanda, çok doğru bir ülkede yapıldığını belirtti.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Karadağ Dışişleri Bakanı: NATO Zirvesi çok doğru bir ülkede yapılıyor</h3>
-                    <p>Karadağ Dışişleri Bakanı Ervin İbrahimovic, NATO Zirvesi'nin çok doğru bir zamanda, çok doğru bir ülkede yapıldığını belirtti.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/karadag-disisleri-bakani-nato-zirvesi-cok-dogru-bir-ulkede-yapiliyor-950517.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            finlandiya cumhurbaşkanı stubb'tan zirveye ev sahipliği yapan türkiye'ye teşekkür
-            finlandiya cumhurbaşkanı alexander stubb, nato zirvesi'ne ev sahipliği yapan türkiye'ye teşekkür etti.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Finlandiya Cumhurbaşkanı Stubb'tan zirveye ev sahipliği yapan Türkiye'ye teşekkür</h3>
-                    <p>Finlandiya Cumhurbaşkanı Alexander Stubb, NATO Zirvesi'ne ev sahipliği yapan Türkiye'ye teşekkür etti.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/finlandiya-cumhurbaskani-stubbtan-zirveye-ev-sahipligi-yapan-turkiyeye-tesekkur-950513.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇bb davasında 63. gün: i̇mamoğlu duruşma salonuna getirilmedi
-            i̇bb davasında, 59'u tutuklu toplam 414 sanığın yargılanmasına 63. gününde silivri'de devam ediliyor.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>İBB davasında 63. gün: İmamoğlu duruşma salonuna getirilmedi</h3>
-                    <p>İBB davasında, 59'u tutuklu toplam 414 sanığın yargılanmasına 63. gününde Silivri'de devam ediliyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/czx5q8nld1vo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -2,198 +2,450 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
     <link rel="stylesheet" href="assets/css/news.css">
     <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <header class="site-nav">
-        <div class="nav-inner">
-            <div class="brand">AI News</div>
-            <a href="index.html">Current News</a>
-            <a href="archive.html">Archive</a>
-            <a href="search.html">Search</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
         </div>
     </header>
 
     <main class="site-wrapper">
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-text">
             <h1>Günün Haberleri</h1>
-            <div class="search-box">
-                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            <p class="hero-date">23 Haziran 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>ekonomi</strong> 1</span><span class="stat-item"><strong>genel</strong> 12</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>spor</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>Bir maça 4 milyon dolar: Süper zenginlerin Dünya Kupası</h3>
+        <p>Çeşitli ülkelerden ünlüler, milyarderler ve teknoloji yöneticileri, Dünya Kupası maçlarını izlemek için ayrıcalık, gizlilik ve lüks arıyorlar ve fiyat, endişelerinin en küçüğü.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 23 Haziran 2026, 17:23</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c992gv0zrevo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 23 Haziran 2026, 22:11</span>
             </div>
-
-            <div class="category-filters">
-                <button class="category-filter-btn active" data-category="all">Tümü</button>
-                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                <button class="category-filter-btn" data-category="genel">Genel</button>
+            <h3>BM soruşturma komisyonu, İsrail&#x27;in Gazze&#x27;de çocukları kasıtlı hedef alarak soykırım işlediğini söylüyor</h3>
+            <p>Bir BM soruşturma komisyonu, İsrail&#x27;in Filistinli çocukları kasıtlı olarak hedef aldığını, bunun da Gazze Şeridi&#x27;nde soykırım, insanlığa karşı suçlar ve savaş suçlarına; işgal altındaki Batı Şeria&#x27;da ise savaş suçlarına yol açtığını söylüyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c2dyn4r2zzno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 23 Haziran 2026, 15:56</span>
             </div>
-        </section>
+            <h3>Avrupa&#x27;da kırmızı alarm: Sıcaklıklar 40 dereceyi aşacak, ölümler başladı</h3>
+            <p>Fransa ve İspanya başta olmak üzere Avrupa&#x27;nın birçok ülkesinde sıcaklıkların 40 derecenin üzerine çıkacağı beklentisiyle kırmızı alarm verildi. Bazı ülkelerde sıcak ve boğulma vakaları nedeniyle ölümler yaşanıyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cvg4qxq907do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 23 Haziran 2026, 22:31</span>
+            </div>
+            <h3>ABD, İran&#x27;ın bir sonraki Dünya Kupası maçı için ülkeye erken girişine izin verecek</h3>
+            <p>ABD İç Güvenlik Bakanlığı, 2026 Dünya Kupası&#x27;nda oynayan İran Milli Futbol Takımı&#x27;nın bir sonraki maçı için ülkeye daha erken seyahat etmesini engelleyen kısıtlamaları kaldıracağını duyurdu.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-iranin-bir-sonraki-dunya-kupasi-maci-icin-ulkeye-erken-girisine-izin-verecek-949132.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 23 Haziran 2026, 20:42</span>
+            </div>
+            <h3>ABD Dışişleri Bakanı: Hürmüz Boğazı&#x27;nda geçiş ücreti talep edilemez</h3>
+            <p>ABD Dışişleri Bakanı Marco Rubio, İran ve Umman arasında Hürmüz Boğazı&#x27;nın işletmesine ilişkin görüşmeler devam ederken &quot;Hürmüz Boğazı&#x27;nın uluslararası sular olduğunu ve herhangi bir ülkenin geçiş ücreti talep etme hakkı bulunmadığını&quot; belirtti.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-disisleri-bakani-hurmuz-bogazinda-gecis-ucreti-talep-edilemez-949126.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stats-grid">
-                        <a href="search.html">Search</a>
-                    </div>
-                </header>
+    </section>
 
-                <main class="site-wrapper">
-                    <section class="hero">
-                        <h1>Günün Haberleri</h1>
-                        <div class="search-box">
-                            <input type="text" id="home-search-input" placeholder="Search today's news...">
-                        </div>
-
-                        <div class="category-filters">
-                            <button class="category-filter-btn active" data-category="all">Tümü</button>
-                            <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                            <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                            <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                            <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                            <button class="category-filter-btn" data-category="genel">Genel</button>
-                        </div>
-                    </section>
-
-                    <div class="stats-grid">
-
-    <div class="news-card">
-        <h3>BM soruşturma komisyonu, İsrail'in Gazze'de çocukları kasıtlı hedef alarak soykırım işlediğini söylüyor</h3>
-        <p>Bir BM soruşturma komisyonu, İsrail'in Filistinli çocukları kasıtlı olarak hedef aldığını, bunun da Gazze Şeridi'nde soykırım, insanlığa karşı suçlar ve savaş suçlarına; işgal altındaki Batı Şeria'da ise savaş suçlarına yol açtığını söylüyor.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c2dyn4r2zzno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">1 haber</p>
     </div>
-
-    <div class="news-card">
-        <h3>DEM Parti kaynakları: 'Demirtaş Kılıçdaroğlu'nun cezaevi ziyaretini kabul etmeyecek'</h3>
-        <p>BBC Türkçe'nin ulaştığı DEM Parti kaynakları Selahattin Demirtaş'ın Kılıçdaroğlu ile görüşmeyeceğini söyledi. DEM Parti kaynakları, henüz kendilerine Kılıçdaroğlu tarafından herhangi bir görüşme talebi iletilmediğini ancak olası bir talebin Demirtaş tarafından kabul edilmeyeceğini belirtti.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c9329dpzje7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="news-list">
+        <article class="news-card" data-search="bir maça 4 milyon dolar: süper zenginlerin dünya kupası çeşitli ülkelerden ünlüler, milyarderler ve teknoloji yöneticileri, dünya kupası maçlarını izlemek için ayrıcalık, gizlilik ve lüks arıyorlar ve fiyat, endişelerinin en küçüğü. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 17:23</span>
+        </div>
+        <h3>Bir maça 4 milyon dolar: Süper zenginlerin Dünya Kupası</h3>
+        <p>Çeşitli ülkelerden ünlüler, milyarderler ve teknoloji yöneticileri, Dünya Kupası maçlarını izlemek için ayrıcalık, gizlilik ve lüks arıyorlar ve fiyat, endişelerinin en küçüğü.</p>
     </div>
-
-    <div class="news-card">
-        <h3>Mbappe'nin gecesi: Fransa kötü hava koşullarına rağmen Irak engelini rahat aştı</h3>
-        <p>Fransa, Philadelphia'da hava koşulları nedeniyle uzun süre duran karşılaşmada Irak'ı rahat bir şekilde mağlup etti. İki gol attığı maçta Fransız yıldız Kylian Mbappe, Dünya Kupası tarihinin en golcü oyuncuları listesinde ikinci sıraya ortak oldu</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c5yey6mny64o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 17:23</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c992gv0zrevo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
+</article>
 
-    <div class="news-card">
-        <h3>CHP Sözcüsü Sarı: Eylül'de olağan kongre sürecini başlatma kararı aldık</h3>
-        <p>CHP'de bugün Genel Başkan Kemal Kılıçdaroğlu kanadı Merkez Yönetim Kurulu (MYK) ve Parti Meclisi'ni (PM) toplarken Grup Başkanı Özgür Özel ise Meclis'te grup toplantısı yaptı. Parti Sözcüsü Sarı, Eylül'de olağan kongre sürecini başlatacaklarını açıklarken Özel ise "Ya bir yol bulacağız ya bir yol açacağız" diye konuştu.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cwyl19vzkn7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>İstanbul'da 6 katlı binada yangın</h3>
-        <p>İstanbul'da 6 katlı binada yangın çıktı. Beyoğlu'ndaki yangın itfaiye ekiplerince söndürüldü.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/istanbulda-6-katli-binada-yangin-949131.html" target="_blank">Haberi Oku</a>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">12 haber</p>
     </div>
-
-    <div class="news-card">
+    <div class="news-list">
+        <article class="news-card" data-search="bm soruşturma komisyonu, i̇srail&#x27;in gazze&#x27;de çocukları kasıtlı hedef alarak soykırım işlediğini söylüyor bir bm soruşturma komisyonu, i̇srail&#x27;in filistinli çocukları kasıtlı olarak hedef aldığını, bunun da gazze şeridi&#x27;nde soykırım, insanlığa karşı suçlar ve savaş suçlarına; işgal altındaki batı şeria&#x27;da ise savaş suçlarına yol açtığını söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 22:11</span>
+        </div>
+        <h3>BM soruşturma komisyonu, İsrail&#x27;in Gazze&#x27;de çocukları kasıtlı hedef alarak soykırım işlediğini söylüyor</h3>
+        <p>Bir BM soruşturma komisyonu, İsrail&#x27;in Filistinli çocukları kasıtlı olarak hedef aldığını, bunun da Gazze Şeridi&#x27;nde soykırım, insanlığa karşı suçlar ve savaş suçlarına; işgal altındaki Batı Şeria&#x27;da ise savaş suçlarına yol açtığını söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 22:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c2dyn4r2zzno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dem parti kaynakları: &#x27;demirtaş kılıçdaroğlu&#x27;nun cezaevi ziyaretini kabul etmeyecek&#x27; bbc türkçe&#x27;nin ulaştığı dem parti kaynakları selahattin demirtaş&#x27;ın kılıçdaroğlu ile görüşmeyeceğini söyledi. dem parti kaynakları, henüz kendilerine kılıçdaroğlu tarafından herhangi bir görüşme talebi iletilmediğini ancak olası bir talebin demirtaş tarafından kabul edilmeyeceğini belirtti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 17:55</span>
+        </div>
+        <h3>DEM Parti kaynakları: &#x27;Demirtaş Kılıçdaroğlu&#x27;nun cezaevi ziyaretini kabul etmeyecek&#x27;</h3>
+        <p>BBC Türkçe&#x27;nin ulaştığı DEM Parti kaynakları Selahattin Demirtaş&#x27;ın Kılıçdaroğlu ile görüşmeyeceğini söyledi. DEM Parti kaynakları, henüz kendilerine Kılıçdaroğlu tarafından herhangi bir görüşme talebi iletilmediğini ancak olası bir talebin Demirtaş tarafından kabul edilmeyeceğini belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 17:55</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9329dpzje7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mbappe&#x27;nin gecesi: fransa kötü hava koşullarına rağmen irak engelini rahat aştı fransa, philadelphia&#x27;da hava koşulları nedeniyle uzun süre duran karşılaşmada irak&#x27;ı rahat bir şekilde mağlup etti. i̇ki gol attığı maçta fransız yıldız kylian mbappe, dünya kupası tarihinin en golcü oyuncuları listesinde ikinci sıraya ortak oldu genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 05:17</span>
+        </div>
+        <h3>Mbappe&#x27;nin gecesi: Fransa kötü hava koşullarına rağmen Irak engelini rahat aştı</h3>
+        <p>Fransa, Philadelphia&#x27;da hava koşulları nedeniyle uzun süre duran karşılaşmada Irak&#x27;ı rahat bir şekilde mağlup etti. İki gol attığı maçta Fransız yıldız Kylian Mbappe, Dünya Kupası tarihinin en golcü oyuncuları listesinde ikinci sıraya ortak oldu</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 05:17</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yey6mny64o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="chp sözcüsü sarı: eylül&#x27;de olağan kongre sürecini başlatma kararı aldık chp&#x27;de bugün genel başkan kemal kılıçdaroğlu kanadı merkez yönetim kurulu (myk) ve parti meclisi&#x27;ni (pm) toplarken grup başkanı özgür özel ise meclis&#x27;te grup toplantısı yaptı. parti sözcüsü sarı, eylül&#x27;de olağan kongre sürecini başlatacaklarını açıklarken özel ise &quot;ya bir yol bulacağız ya bir yol açacağız&quot; diye konuştu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 17:06</span>
+        </div>
+        <h3>CHP Sözcüsü Sarı: Eylül&#x27;de olağan kongre sürecini başlatma kararı aldık</h3>
+        <p>CHP&#x27;de bugün Genel Başkan Kemal Kılıçdaroğlu kanadı Merkez Yönetim Kurulu (MYK) ve Parti Meclisi&#x27;ni (PM) toplarken Grup Başkanı Özgür Özel ise Meclis&#x27;te grup toplantısı yaptı. Parti Sözcüsü Sarı, Eylül&#x27;de olağan kongre sürecini başlatacaklarını açıklarken Özel ise &quot;Ya bir yol bulacağız ya bir yol açacağız&quot; diye konuştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 17:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwyl19vzkn7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da 6 katlı binada yangın i̇stanbul&#x27;da 6 katlı binada yangın çıktı. beyoğlu&#x27;ndaki yangın itfaiye ekiplerince söndürüldü. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Haziran 2026, 21:47</span>
+        </div>
+        <h3>İstanbul&#x27;da 6 katlı binada yangın</h3>
+        <p>İstanbul&#x27;da 6 katlı binada yangın çıktı. Beyoğlu&#x27;ndaki yangın itfaiye ekiplerince söndürüldü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Haziran 2026, 21:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-6-katli-binada-yangin-949131.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fransa, tarihinin en sıcak gününü geçirdi günlerdir aşırı sıcakların etkili olduğu fransa, ülke genelinde ortalama 29,8 derece hava sıcaklığıyla tarihinin en sıcak gününü geçirdi. paris&#x27;in simgelerinden eyfel kulesi aşırı sıcaklar nedeniyle ziyarete kapılarını erken kapattı. ülke genelinde yaklaşık 1800 okulda eğitime ara verildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Haziran 2026, 21:43</span>
+        </div>
         <h3>Fransa, tarihinin en sıcak gününü geçirdi</h3>
-        <p>Günlerdir aşırı sıcakların etkili olduğu Fransa, ülke genelinde ortalama 29,8 derece hava sıcaklığıyla tarihinin en sıcak gününü geçirdi. Paris'in simgelerinden Eyfel Kulesi aşırı sıcaklar nedeniyle ziyarete kapılarını erken kapattı. Ülke genelinde yaklaşık 1800 okulda eğitime ara verildi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/fransa-tarihinin-en-sicak-gununu-gecirdi-949130.html" target="_blank">Haberi Oku</a>
+        <p>Günlerdir aşırı sıcakların etkili olduğu Fransa, ülke genelinde ortalama 29,8 derece hava sıcaklığıyla tarihinin en sıcak gününü geçirdi. Paris&#x27;in simgelerinden Eyfel Kulesi aşırı sıcaklar nedeniyle ziyarete kapılarını erken kapattı. Ülke genelinde yaklaşık 1800 okulda eğitime ara verildi.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Haziran 2026, 21:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/fransa-tarihinin-en-sicak-gununu-gecirdi-949130.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="adalar ve silifke belediye başkanları görevden uzaklaştırıldı i̇çişleri bakanlığı, adalar belediye başkanı ali ercan akpolat ve silifke belediye başkanı mustafa turgut&#x27;un görevden uzaklaştırıldığını duyurdu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Haziran 2026, 20:18</span>
+        </div>
         <h3>Adalar ve Silifke Belediye Başkanları görevden uzaklaştırıldı</h3>
-        <p>İçişleri Bakanlığı, Adalar Belediye Başkanı Ali Ercan Akpolat ve Silifke Belediye Başkanı Mustafa Turgut'un görevden uzaklaştırıldığını duyurdu.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/adalar-ve-silifke-belediye-baskanlari-gorevden-uzaklastirildi-949125.html" target="_blank">Haberi Oku</a>
+        <p>İçişleri Bakanlığı, Adalar Belediye Başkanı Ali Ercan Akpolat ve Silifke Belediye Başkanı Mustafa Turgut&#x27;un görevden uzaklaştırıldığını duyurdu.</p>
     </div>
-
-    <div class="news-card">
-        <h3>IBAN düzenlemesi 12. Yargı Paketi'ne ekleniyor: 400 bin dosyayı kapsayacak</h3>
-        <p>Adalet ve Kalkınma Partisi, 12. Yargı Paketi'nden son anda çıkardığı "IBAN kiralamanın" müstakil suç olarak tanımlanmasına ilişkin düzenlemeyi önergeyle pakete eklemeye hazırlanıyor.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cz75rvvyx0do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Haziran 2026, 20:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/adalar-ve-silifke-belediye-baskanlari-gorevden-uzaklastirildi-949125.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Portekiz Özbekistan'ı 5-0 yendi, Ronaldo iki gol attı</h3>
-        <p>Cristiano Ronaldo, rekor niteliğindeki altıncı Dünya Kupası'nda oynadığı ikinci maçta golle tanıştı.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c3ey957e04zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="iban düzenlemesi 12. yargı paketi&#x27;ne ekleniyor: 400 bin dosyayı kapsayacak adalet ve kalkınma partisi, 12. yargı paketi&#x27;nden son anda çıkardığı &quot;iban kiralamanın&quot; müstakil suç olarak tanımlanmasına ilişkin düzenlemeyi önergeyle pakete eklemeye hazırlanıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 21:14</span>
+        </div>
+        <h3>IBAN düzenlemesi 12. Yargı Paketi&#x27;ne ekleniyor: 400 bin dosyayı kapsayacak</h3>
+        <p>Adalet ve Kalkınma Partisi, 12. Yargı Paketi&#x27;nden son anda çıkardığı &quot;IBAN kiralamanın&quot; müstakil suç olarak tanımlanmasına ilişkin düzenlemeyi önergeyle pakete eklemeye hazırlanıyor.</p>
     </div>
-
-    <div class="news-card">
-        <h3>Haaland'ın dublesi Norveç'i üst tura taşıdı</h3>
-        <p>Erling Haaland'ın iki gol attığı maçta Norveç, Senegal'i mağlup ederek Dünya Kupası'nda son 32 turuna yükselmeyi garantiledi</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/ce3p3enl4v9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 21:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cz75rvvyx0do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>İzmir'de 24 düzensiz göçmen yakalandı</h3>
-        <p>İzmir'in Urla ilçesinde kara üzerinde 24 düzensiz göçmen yakalandı, Seferihisar açıklarında sürüklenen bottaki 35 düzensiz göçmen kurtarıldı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/izmirde-24-duzensiz-gocmen-yakalandi-949134.html" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="portekiz özbekistan&#x27;ı 5-0 yendi, ronaldo iki gol attı cristiano ronaldo, rekor niteliğindeki altıncı dünya kupası&#x27;nda oynadığı ikinci maçta golle tanıştı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 22:12</span>
+        </div>
+        <h3>Portekiz Özbekistan&#x27;ı 5-0 yendi, Ronaldo iki gol attı</h3>
+        <p>Cristiano Ronaldo, rekor niteliğindeki altıncı Dünya Kupası&#x27;nda oynadığı ikinci maçta golle tanıştı.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 22:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3ey957e04zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="haaland&#x27;ın dublesi norveç&#x27;i üst tura taşıdı erling haaland&#x27;ın iki gol attığı maçta norveç, senegal&#x27;i mağlup ederek dünya kupası&#x27;nda son 32 turuna yükselmeyi garantiledi genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 05:25</span>
+        </div>
+        <h3>Haaland&#x27;ın dublesi Norveç&#x27;i üst tura taşıdı</h3>
+        <p>Erling Haaland&#x27;ın iki gol attığı maçta Norveç, Senegal&#x27;i mağlup ederek Dünya Kupası&#x27;nda son 32 turuna yükselmeyi garantiledi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 05:25</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ce3p3enl4v9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇zmir&#x27;de 24 düzensiz göçmen yakalandı i̇zmir&#x27;in urla ilçesinde kara üzerinde 24 düzensiz göçmen yakalandı, seferihisar açıklarında sürüklenen bottaki 35 düzensiz göçmen kurtarıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Haziran 2026, 23:15</span>
+        </div>
+        <h3>İzmir&#x27;de 24 düzensiz göçmen yakalandı</h3>
+        <p>İzmir&#x27;in Urla ilçesinde kara üzerinde 24 düzensiz göçmen yakalandı, Seferihisar açıklarında sürüklenen bottaki 35 düzensiz göçmen kurtarıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Haziran 2026, 23:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/izmirde-24-duzensiz-gocmen-yakalandi-949134.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="safranbolu yazıköy üzüm sirkesi tescillendi karabük&#x27;ün safranbolu ilçesine bağlı yazıköy&#x27;de geleneksel yöntemlerle üzümden yapılan sirke, türk patent ve marka kurumunca coğrafi işaretle tescillendi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Haziran 2026, 21:18</span>
+        </div>
         <h3>Safranbolu Yazıköy üzüm sirkesi tescillendi</h3>
-        <p>Karabük'ün Safranbolu ilçesine bağlı Yazıköy'de geleneksel yöntemlerle üzümden yapılan sirke, Türk Patent ve Marka Kurumunca coğrafi işaretle tescillendi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/yasam/safranbolu-yazikoy-uzum-sirkesi-tescillendi-949128.html" target="_blank">Haberi Oku</a>
+        <p>Karabük&#x27;ün Safranbolu ilçesine bağlı Yazıköy&#x27;de geleneksel yöntemlerle üzümden yapılan sirke, Türk Patent ve Marka Kurumunca coğrafi işaretle tescillendi.</p>
     </div>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-    <div class="news-card">
-        <h3>Avrupa'da kırmızı alarm: Sıcaklıklar 40 dereceyi aşacak, ölümler başladı</h3>
-        <p>Fransa ve İspanya başta olmak üzere Avrupa'nın birçok ülkesinde sıcaklıkların 40 derecenin üzerine çıkacağı beklentisiyle kırmızı alarm verildi. Bazı ülkelerde sıcak ve boğulma vakaları nedeniyle ölümler yaşanıyor.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cvg4qxq907do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Haziran 2026, 21:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/yasam/safranbolu-yazikoy-uzum-sirkesi-tescillendi-949128.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
+</article>
 
-    <div class="news-card">
-        <h3>ABD, İran'ın bir sonraki Dünya Kupası maçı için ülkeye erken girişine izin verecek</h3>
-        <p>ABD İç Güvenlik Bakanlığı, 2026 Dünya Kupası'nda oynayan İran Milli Futbol Takımı'nın bir sonraki maçı için ülkeye daha erken seyahat etmesini engelleyen kısıtlamaları kaldıracağını duyurdu.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/abd-iranin-bir-sonraki-dunya-kupasi-maci-icin-ulkeye-erken-girisine-izin-verecek-949132.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>ABD Dışişleri Bakanı: Hürmüz Boğazı'nda geçiş ücreti talep edilemez</h3>
-        <p>ABD Dışişleri Bakanı Marco Rubio, İran ve Umman arasında Hürmüz Boğazı'nın işletmesine ilişkin görüşmeler devam ederken "Hürmüz Boğazı'nın uluslararası sular olduğunu ve herhangi bir ülkenin geçiş ücreti talep etme hakkı bulunmadığını" belirtti.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/abd-disisleri-bakani-hurmuz-bogazinda-gecis-ucreti-talep-edilemez-949126.html" target="_blank">Haberi Oku</a>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
     </div>
-
-    <div class="news-card">
+    <div class="news-list">
+        <article class="news-card" data-search="avrupa&#x27;da kırmızı alarm: sıcaklıklar 40 dereceyi aşacak, ölümler başladı fransa ve i̇spanya başta olmak üzere avrupa&#x27;nın birçok ülkesinde sıcaklıkların 40 derecenin üzerine çıkacağı beklentisiyle kırmızı alarm verildi. bazı ülkelerde sıcak ve boğulma vakaları nedeniyle ölümler yaşanıyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 15:56</span>
+        </div>
+        <h3>Avrupa&#x27;da kırmızı alarm: Sıcaklıklar 40 dereceyi aşacak, ölümler başladı</h3>
+        <p>Fransa ve İspanya başta olmak üzere Avrupa&#x27;nın birçok ülkesinde sıcaklıkların 40 derecenin üzerine çıkacağı beklentisiyle kırmızı alarm verildi. Bazı ülkelerde sıcak ve boğulma vakaları nedeniyle ölümler yaşanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 15:56</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvg4qxq907do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd, i̇ran&#x27;ın bir sonraki dünya kupası maçı için ülkeye erken girişine izin verecek abd i̇ç güvenlik bakanlığı, 2026 dünya kupası&#x27;nda oynayan i̇ran milli futbol takımı&#x27;nın bir sonraki maçı için ülkeye daha erken seyahat etmesini engelleyen kısıtlamaları kaldıracağını duyurdu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 23 Haziran 2026, 22:31</span>
+        </div>
+        <h3>ABD, İran&#x27;ın bir sonraki Dünya Kupası maçı için ülkeye erken girişine izin verecek</h3>
+        <p>ABD İç Güvenlik Bakanlığı, 2026 Dünya Kupası&#x27;nda oynayan İran Milli Futbol Takımı&#x27;nın bir sonraki maçı için ülkeye daha erken seyahat etmesini engelleyen kısıtlamaları kaldıracağını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Haziran 2026, 22:31</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-iranin-bir-sonraki-dunya-kupasi-maci-icin-ulkeye-erken-girisine-izin-verecek-949132.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd dışişleri bakanı: hürmüz boğazı&#x27;nda geçiş ücreti talep edilemez abd dışişleri bakanı marco rubio, i̇ran ve umman arasında hürmüz boğazı&#x27;nın işletmesine ilişkin görüşmeler devam ederken &quot;hürmüz boğazı&#x27;nın uluslararası sular olduğunu ve herhangi bir ülkenin geçiş ücreti talep etme hakkı bulunmadığını&quot; belirtti. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 23 Haziran 2026, 20:42</span>
+        </div>
+        <h3>ABD Dışişleri Bakanı: Hürmüz Boğazı&#x27;nda geçiş ücreti talep edilemez</h3>
+        <p>ABD Dışişleri Bakanı Marco Rubio, İran ve Umman arasında Hürmüz Boğazı&#x27;nın işletmesine ilişkin görüşmeler devam ederken &quot;Hürmüz Boğazı&#x27;nın uluslararası sular olduğunu ve herhangi bir ülkenin geçiş ücreti talep etme hakkı bulunmadığını&quot; belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Haziran 2026, 20:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-disisleri-bakani-hurmuz-bogazinda-gecis-ucreti-talep-edilemez-949126.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meloni: trump ile olan tartışmayı körüklemek niyetinde değilim i̇talya başbakanı giorgia meloni, abd başkanı donald trump ile arasında son dönemde gelişen tartışmayı körüklemek niyetinde olmadığını söyledi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 23 Haziran 2026, 21:39</span>
+        </div>
         <h3>Meloni: Trump ile olan tartışmayı körüklemek niyetinde değilim</h3>
         <p>İtalya Başbakanı Giorgia Meloni, ABD Başkanı Donald Trump ile arasında son dönemde gelişen tartışmayı körüklemek niyetinde olmadığını söyledi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/meloni-trump-ile-olan-tartismayi-koruklemek-niyetinde-degilim-949129.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Adalar Belediye Başkan Vekili seçimi 27 Haziran'da yapılacak</h3>
-        <p>İstanbul Valiliği, Adalar İlçe Belediye Meclisi'nde yeni Belediye Başkan Vekili seçiminin 27 Haziran Cumartesi günü yapılacağını açıkladı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/adalar-belediye-baskan-vekili-secimi-27-haziranda-yapilacak-949127.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Haziran 2026, 21:39</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/meloni-trump-ile-olan-tartismayi-koruklemek-niyetinde-degilim-949129.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <h2 class="category-title">SPOR</h2>
-
-    <div class="news-card">
-        <h3>Lionel Messi, Dünya Kupası'nda en çok gol atan futbolcu oldu</h3>
-        <p>Dünya Kupası'ndaki ilk maçında hat-trick yapan Arjantin'in kaptanı Lionel Messi ikinci maçında Avusturya karşısında iki gol atarak takımını 2-0'lık galibiyete taşıdı, Dünya Kupası'nda altı maç üst üste gol atarak bu alandaki rekoru egale etti.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c5yz583ged0o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="adalar belediye başkan vekili seçimi 27 haziran&#x27;da yapılacak i̇stanbul valiliği, adalar i̇lçe belediye meclisi&#x27;nde yeni belediye başkan vekili seçiminin 27 haziran cumartesi günü yapılacağını açıkladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 23 Haziran 2026, 21:12</span>
+        </div>
+        <h3>Adalar Belediye Başkan Vekili seçimi 27 Haziran&#x27;da yapılacak</h3>
+        <p>İstanbul Valiliği, Adalar İlçe Belediye Meclisi&#x27;nde yeni Belediye Başkan Vekili seçiminin 27 Haziran Cumartesi günü yapılacağını açıkladı.</p>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Haziran 2026, 21:12</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/adalar-belediye-baskan-vekili-secimi-27-haziranda-yapilacak-949127.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <div class="news-card">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="lionel messi, dünya kupası&#x27;nda en çok gol atan futbolcu oldu dünya kupası&#x27;ndaki ilk maçında hat-trick yapan arjantin&#x27;in kaptanı lionel messi ikinci maçında avusturya karşısında iki gol atarak takımını 2-0&#x27;lık galibiyete taşıdı, dünya kupası&#x27;nda altı maç üst üste gol atarak bu alandaki rekoru egale etti. spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 23 Haziran 2026, 05:56</span>
+        </div>
+        <h3>Lionel Messi, Dünya Kupası&#x27;nda en çok gol atan futbolcu oldu</h3>
+        <p>Dünya Kupası&#x27;ndaki ilk maçında hat-trick yapan Arjantin&#x27;in kaptanı Lionel Messi ikinci maçında Avusturya karşısında iki gol atarak takımını 2-0&#x27;lık galibiyete taşıdı, Dünya Kupası&#x27;nda altı maç üst üste gol atarak bu alandaki rekoru egale etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Haziran 2026, 05:56</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yz583ged0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ronaldo tarihe geçti portekizli cristiano ronaldo, forma giydiği 6 dünya kupası&#x27;nda da gol atarak bunu başaran ilk futbolcu oldu. spor trt haber" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">TRT Haber · 23 Haziran 2026, 22:32</span>
+        </div>
         <h3>Ronaldo tarihe geçti</h3>
-        <p>Portekizli Cristiano Ronaldo, forma giydiği 6 Dünya Kupası'nda da gol atarak bunu başaran ilk futbolcu oldu.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/spor/ronaldo-tarihe-gecti-949133.html" target="_blank">Haberi Oku</a>
+        <p>Portekizli Cristiano Ronaldo, forma giydiği 6 Dünya Kupası&#x27;nda da gol atarak bunu başaran ilk futbolcu oldu.</p>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Haziran 2026, 22:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/spor/ronaldo-tarihe-gecti-949133.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

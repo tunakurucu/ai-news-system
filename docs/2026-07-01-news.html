@@ -1,578 +1,451 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-        .search-box {
-    margin: 25px 0;
-    }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-            .category-filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 20px 0 30px;
-            }
-
-            .category-filter-btn {
-                padding: 8px 14px;
-                border: 1px solid #ddd;
-                border-radius: 999px;
-                background: #f7f7f7;
-                cursor: pointer;
-            }
-
-            .category-filter-btn.active {
-                background: #222;
-                color: white;
-            }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="home-search-input"
-        placeholder="Güncel haberlerde ara..."
-    >
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">1 Temmuz 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
 </div>
 
-<div class="category-filters">
-    <button class="category-filter-btn active" data-category="all">Tümü</button>
-    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-    <button class="category-filter-btn" data-category="dünya">Dünya</button>
-    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-    <button class="category-filter-btn" data-category="genel">Genel</button>
-</div>
-
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
         </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>ekonomi</strong> 6</span><span class="stat-item"><strong>teknoloji</strong> 2</span><span class="stat-item"><strong>genel</strong> 6</span><span class="stat-item"><strong>dünya</strong> 6</span></div>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>6</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>teknoloji</strong>
-            <span>2</span>
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
         </div>
+        <h3>Memur ve emeklinin zam oranları belli oluyor</h3>
+        <p>Milyonlarca memur, emekli ve sosyal yardım alıcısını ilgilendiren temmuz ayı maaş artış oranları, cuma günü açıklanacak haziran ayı enflasyon verileriyle kesinlik kazanacak. 5 aylık verilere göre SSK ve Bağ-Kur emeklileri için yüzde 16,61, memurlar için ise yüzde 12,41&#x27;lik artış şimdiden netleşti.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 1 Temmuz 2026, 08:50</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/memur-ve-emeklinin-zam-oranlari-belli-oluyor-949855.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">TRT Haber · 1 Temmuz 2026, 08:42</span>
+            </div>
+            <h3>ABD&#x27;de yapay zeka kaynaklı istihdam kaybı rekor seviyeye ulaştı</h3>
+            <p>ABD&#x27;de yapay zeka gerekçesiyle işten çıkarılanların sayısı mayıs ayı itibarıyla 87 bin 714&#x27;e ulaşarak rekor kırdı. Yapay zeka, ülkede üç ay üst üste istihdam kayıplarının bir numaralı nedeni olarak kayıtlara geçti. Teknoloji sektöründeki toplam işten çıkarmalar, yılın ilk beş ayında geçen yılın aynı dönemine göre yüzde 66 artarak 123 bin 653 oldu.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/abdde-yapay-zeka-kaynakli-istihdam-kaybi-rekor-seviyeye-ulasti-949854.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 1 Temmuz 2026, 08:35</span>
+            </div>
+            <h3>NASA ay üssü planları için yaklaşık 600 milyon dolarlık yeni sözleşme imzaladı</h3>
+            <p>Ay yüzeyinde kalıcı bir varlık göstermeyi hedefleyen NASA, özel uzay şirketlerine yönelik fon fonlamalarına bir yenisini ekledi. Kurum, 2028 yılı sonlarında Ay yüzeyine bilimsel ekipman taşıyacak insansız iniş araçları için özel sektöre yaklaşık 600 milyon dolarlık yeni sözleşmeler dağıttığını açıkladı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/nasa-ay-ussu-planlari-icin-yaklasik-600-milyon-dolarlik-yeni-sozlesme-imzaladi-949852.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 1 Temmuz 2026, 05:17</span>
+            </div>
+            <h3>Erdoğan &#x27;çözüm süreci takvimini&#x27; açıkladı: Çerçeve yasa Meclis tatile girmeden çıkacak</h3>
+            <p>Cumhurbaşkanı Recep Tayyip Erdoğan, AKP&#x27;nin Sapanca&#x27;daki, &quot;Terörsüz Türkiye&quot; olarak adlandırdığı çözüm sürecinin hukuki altyapısını oluşturacak çerçeve yasanın Meclis yaz tatiline girmeden çıkarılacağına ilişkin net mesaj verdi. Düzenlemede neler olacak, af içeriyor mu?</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cz6venxlyl5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 1 Temmuz 2026, 07:15</span>
+            </div>
+            <h3>Trump, görevdeki ilk yılında kripto paradan 1 milyar dolardan fazla kazandı</h3>
+            <p>ABD Başkanı&#x27;nın 2025&#x27;teki kripto geliri, gayrimenkullerinden ve Trump temalı ürünlerden elde ettiği kazançları çok geride bıraktı. Trump&#x27;ın ikinci başkanlık döneminden önce 2,3 milyar dolar olan servetinin en az 6 milyar dolara çıktığı tahmin ediliyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gyq92ldyyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>6</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>6</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="memur ve emeklinin zam oranları belli oluyor milyonlarca memur, emekli ve sosyal yardım alıcısını ilgilendiren temmuz ayı maaş artış oranları, cuma günü açıklanacak haziran ayı enflasyon verileriyle kesinlik kazanacak. 5 aylık verilere göre ssk ve bağ-kur emeklileri için yüzde 16,61, memurlar için ise yüzde 12,41&#x27;lik artış şimdiden netleşti. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 1 Temmuz 2026, 08:50</span>
         </div>
-
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-07-01 09:17</span>
+        <h3>Memur ve emeklinin zam oranları belli oluyor</h3>
+        <p>Milyonlarca memur, emekli ve sosyal yardım alıcısını ilgilendiren temmuz ayı maaş artış oranları, cuma günü açıklanacak haziran ayı enflasyon verileriyle kesinlik kazanacak. 5 aylık verilere göre SSK ve Bağ-Kur emeklileri için yüzde 16,61, memurlar için ise yüzde 12,41&#x27;lik artış şimdiden netleşti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Temmuz 2026, 08:50</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/memur-ve-emeklinin-zam-oranlari-belli-oluyor-949855.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nasa ay üssü planları için yaklaşık 600 milyon dolarlık yeni sözleşme imzaladı ay yüzeyinde kalıcı bir varlık göstermeyi hedefleyen nasa, özel uzay şirketlerine yönelik fon fonlamalarına bir yenisini ekledi. kurum, 2028 yılı sonlarında ay yüzeyine bilimsel ekipman taşıyacak insansız iniş araçları için özel sektöre yaklaşık 600 milyon dolarlık yeni sözleşmeler dağıttığını açıkladı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 1 Temmuz 2026, 08:35</span>
         </div>
+        <h3>NASA ay üssü planları için yaklaşık 600 milyon dolarlık yeni sözleşme imzaladı</h3>
+        <p>Ay yüzeyinde kalıcı bir varlık göstermeyi hedefleyen NASA, özel uzay şirketlerine yönelik fon fonlamalarına bir yenisini ekledi. Kurum, 2028 yılı sonlarında Ay yüzeyine bilimsel ekipman taşıyacak insansız iniş araçları için özel sektöre yaklaşık 600 milyon dolarlık yeni sözleşmeler dağıttığını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Temmuz 2026, 08:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/nasa-ay-ussu-planlari-icin-yaklasik-600-milyon-dolarlik-yeni-sozlesme-imzaladi-949852.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trump, görevdeki ilk yılında kripto paradan 1 milyar dolardan fazla kazandı abd başkanı&#x27;nın 2025&#x27;teki kripto geliri, gayrimenkullerinden ve trump temalı ürünlerden elde ettiği kazançları çok geride bıraktı. trump&#x27;ın ikinci başkanlık döneminden önce 2,3 milyar dolar olan servetinin en az 6 milyar dolara çıktığı tahmin ediliyor. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 07:15</span>
+        </div>
+        <h3>Trump, görevdeki ilk yılında kripto paradan 1 milyar dolardan fazla kazandı</h3>
+        <p>ABD Başkanı&#x27;nın 2025&#x27;teki kripto geliri, gayrimenkullerinden ve Trump temalı ürünlerden elde ettiği kazançları çok geride bıraktı. Trump&#x27;ın ikinci başkanlık döneminden önce 2,3 milyar dolar olan servetinin en az 6 milyar dolara çıktığı tahmin ediliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 07:15</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gyq92ldyyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran&#x27;ın dondurulmuş varlıkları: para nerede ve neden önemli? bazı tahminlere göre değeri 100 milyar dolara kadar ulaşan bu fonlara erişim, tahran&#x27;ın temel taleplerinden biri oldu. fakat söz konusu fonlar, yaptırımlar ve bankacılık kısıtlamaları nedeniyle hâlâ erişilemez durumda. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 05:56</span>
+        </div>
+        <h3>İran&#x27;ın dondurulmuş varlıkları: Para nerede ve neden önemli?</h3>
+        <p>Bazı tahminlere göre değeri 100 milyar dolara kadar ulaşan bu fonlara erişim, Tahran&#x27;ın temel taleplerinden biri oldu. Fakat söz konusu fonlar, yaptırımlar ve bankacılık kısıtlamaları nedeniyle hâlâ erişilemez durumda.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 05:56</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cn94e18drrxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd ve i̇ran arasındaki 6 milyar dolarlık varlık görüşmeleri yeniden başlıyor i̇ran tarafından yapılan açıklamada, en az 6 milyar dolar değerindeki i̇ran varlıklarının serbest bırakılmasına yönelik abd ve i̇ranlı yetkililer arasındaki dolaylı görüşmelerin çarşamba günü doha&#x27;da yeniden başlayacağı bildirildi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 1 Temmuz 2026, 08:20</span>
+        </div>
+        <h3>ABD ve İran arasındaki 6 milyar dolarlık varlık görüşmeleri yeniden başlıyor</h3>
+        <p>İran tarafından yapılan açıklamada, en az 6 milyar dolar değerindeki İran varlıklarının serbest bırakılmasına yönelik ABD ve İranlı yetkililer arasındaki dolaylı görüşmelerin çarşamba günü Doha&#x27;da yeniden başlayacağı bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Temmuz 2026, 08:20</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-ve-iran-arasindaki-6-milyar-dolarlik-varlik-gorusmeleri-yeniden-basliyor-949849.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd, anthropic&#x27;in yapay zeka modelleri üzerindeki ihracat kontrolünü kaldırdı yapay zeka girişimi anthropic, abd yönetiminin yapay zeka modelleri &quot;claude fable 5&quot; ve &quot;mythos 5&quot; üzerindeki ihracat kontrollerini kaldırdığını bildirdi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 1 Temmuz 2026, 08:38</span>
+        </div>
+        <h3>ABD, Anthropic&#x27;in yapay zeka modelleri üzerindeki ihracat kontrolünü kaldırdı</h3>
+        <p>Yapay zeka girişimi Anthropic, ABD yönetiminin yapay zeka modelleri &quot;Claude Fable 5&quot; ve &quot;Mythos 5&quot; üzerindeki ihracat kontrollerini kaldırdığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Temmuz 2026, 08:38</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-anthropicin-yapay-zeka-modelleri-uzerindeki-ihracat-kontrolunu-kaldirdi-949853.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="abd&#x27;de yapay zeka kaynaklı istihdam kaybı rekor seviyeye ulaştı abd&#x27;de yapay zeka gerekçesiyle işten çıkarılanların sayısı mayıs ayı itibarıyla 87 bin 714&#x27;e ulaşarak rekor kırdı. yapay zeka, ülkede üç ay üst üste istihdam kayıplarının bir numaralı nedeni olarak kayıtlara geçti. teknoloji sektöründeki toplam işten çıkarmalar, yılın ilk beş ayında geçen yılın aynı dönemine göre yüzde 66 artarak 123 bin 653 oldu. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 1 Temmuz 2026, 08:42</span>
+        </div>
+        <h3>ABD&#x27;de yapay zeka kaynaklı istihdam kaybı rekor seviyeye ulaştı</h3>
+        <p>ABD&#x27;de yapay zeka gerekçesiyle işten çıkarılanların sayısı mayıs ayı itibarıyla 87 bin 714&#x27;e ulaşarak rekor kırdı. Yapay zeka, ülkede üç ay üst üste istihdam kayıplarının bir numaralı nedeni olarak kayıtlara geçti. Teknoloji sektöründeki toplam işten çıkarmalar, yılın ilk beş ayında geçen yılın aynı dönemine göre yüzde 66 artarak 123 bin 653 oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Temmuz 2026, 08:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abdde-yapay-zeka-kaynakli-istihdam-kaybi-rekor-seviyeye-ulasti-949854.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="venezuela depremlerinde yaklaşık &#x27;59 bin bina yıkıldı ya da hasar gördü&#x27; venezuela&#x27;da 24 haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 1.900&#x27;ü aştı, on binlerce kişi hâlâ kayıp. nasa&#x27;nın uydu görüntülerine göre yaklaşık 59 bin bina yıkıldı ya da hasar gördü. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 07:58</span>
+        </div>
+        <h3>Venezuela depremlerinde yaklaşık &#x27;59 bin bina yıkıldı ya da hasar gördü&#x27;</h3>
+        <p>Venezuela&#x27;da 24 Haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 1.900&#x27;ü aştı, on binlerce kişi hâlâ kayıp. NASA&#x27;nın uydu görüntülerine göre yaklaşık 59 bin bina yıkıldı ya da hasar gördü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 07:58</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="erdoğan &#x27;çözüm süreci takvimini&#x27; açıkladı: çerçeve yasa meclis tatile girmeden çıkacak cumhurbaşkanı recep tayyip erdoğan, akp&#x27;nin sapanca&#x27;daki, &quot;terörsüz türkiye&quot; olarak adlandırdığı çözüm sürecinin hukuki altyapısını oluşturacak çerçeve yasanın meclis yaz tatiline girmeden çıkarılacağına ilişkin net mesaj verdi. düzenlemede neler olacak, af içeriyor mu? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 05:17</span>
+        </div>
+        <h3>Erdoğan &#x27;çözüm süreci takvimini&#x27; açıkladı: Çerçeve yasa Meclis tatile girmeden çıkacak</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, AKP&#x27;nin Sapanca&#x27;daki, &quot;Terörsüz Türkiye&quot; olarak adlandırdığı çözüm sürecinin hukuki altyapısını oluşturacak çerçeve yasanın Meclis yaz tatiline girmeden çıkarılacağına ilişkin net mesaj verdi. Düzenlemede neler olacak, af içeriyor mu?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 05:17</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cz6venxlyl5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="chp, dem parti ve mhp ankara&#x27;daki nato zirvesi öncesinde ne mesajlar verdi? mhp lideri bahçeli, partisinin meclis&#x27;teki grup toplantısında ankara&#x27;da 7-8 temmuz&#x27;da yapılacak nato zirvesine dair açıklamalarda bulundu. bahçeli &quot;bugün nato yeni bir dönemin başındadır. türkiye&#x27;nin olmadığı denklem çöker&quot; dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 15:00</span>
+        </div>
+        <h3>CHP, DEM Parti ve MHP Ankara&#x27;daki NATO Zirvesi öncesinde ne mesajlar verdi?</h3>
+        <p>MHP lideri Bahçeli, partisinin Meclis&#x27;teki grup toplantısında Ankara&#x27;da 7-8 Temmuz&#x27;da yapılacak NATO zirvesine dair açıklamalarda bulundu. Bahçeli &quot;Bugün NATO yeni bir dönemin başındadır. Türkiye&#x27;nin olmadığı denklem çöker&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 15:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cy5v7lkkq44o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yunanistanda selanik yakınlarında çıkan orman yangınında ölenlerin sayısı 2ye yükseldi yunanistan&#x27;ın selanik iline yakın derveni bölgesinde dün çıkan orman yangınında yaşamını yitirenlerin sayısının 2&#x27;ye yükseldiği belirtildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 1 Temmuz 2026, 09:07</span>
+        </div>
+        <h3>Yunanistanda Selanik yakınlarında çıkan orman yangınında ölenlerin sayısı 2ye yükseldi</h3>
+        <p>Yunanistan&#x27;ın Selanik iline yakın Derveni bölgesinde dün çıkan orman yangınında yaşamını yitirenlerin sayısının 2&#x27;ye yükseldiği belirtildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Temmuz 2026, 09:07</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/yunanistanda-selanik-yakinlarinda-cikan-orman-yangininda-olenlerin-sayisi-2ye-yukseldi-949858.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bursa&#x27;da mobilya fabrikasını alevler sardı bursa&#x27;nın i̇negöl ilçesinde faaliyet gösteren bir mobilya fabrikasında çıkan yangın, itfaiye ekiplerinin yaklaşık 1 saat süren müdahalesiyle söndürüldü. yangında iş yerinde maddi hasar meydana geldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 1 Temmuz 2026, 08:28</span>
+        </div>
+        <h3>Bursa&#x27;da mobilya fabrikasını alevler sardı</h3>
+        <p>Bursa&#x27;nın İnegöl ilçesinde faaliyet gösteren bir mobilya fabrikasında çıkan yangın, itfaiye ekiplerinin yaklaşık 1 saat süren müdahalesiyle söndürüldü. Yangında iş yerinde maddi hasar meydana geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Temmuz 2026, 08:28</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/bursada-mobilya-fabrikasini-alevler-sardi-949850.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇şgalci i̇srail, lübnan&#x27;ın güneyindeki pilot bölgelerden çekilmeyi erteleme kararı aldı i̇srail yönetiminin, &quot;beyrut ile ortak bir denetim mekanizması üzerinde anlaşmaya varılmasının beklenmesi&quot; gerekçesiyle lübnan&#x27;ın güneyindeki iki pilot bölgeden ordusunu çekme işlemini erteleme kararı aldığı bildirildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 1 Temmuz 2026, 08:00</span>
+        </div>
+        <h3>İşgalci İsrail, Lübnan&#x27;ın güneyindeki pilot bölgelerden çekilmeyi erteleme kararı aldı</h3>
+        <p>İsrail yönetiminin, &quot;Beyrut ile ortak bir denetim mekanizması üzerinde anlaşmaya varılmasının beklenmesi&quot; gerekçesiyle Lübnan&#x27;ın güneyindeki iki pilot bölgeden ordusunu çekme işlemini erteleme kararı aldığı bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Temmuz 2026, 08:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/isgalci-israil-lubnanin-guneyindeki-pilot-bolgelerden-cekilmeyi-erteleme-karari-aldi-949847.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="murat ongun: &#x27;milyarlarca liralık yolsuzluk iddiasına tek bir kanıt yok&#x27; i̇stanbul büyükşehir belediyesi (i̇bb) hakkında yolsuzluk iddialarıyla açılan 400 kişiden fazla sanığın yargılandığı dava sanık savunmalarıyla devam ediyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 21:07</span>
+        </div>
+        <h3>Murat Ongun: &#x27;Milyarlarca liralık yolsuzluk iddiasına tek bir kanıt yok&#x27;</h3>
+        <p>İstanbul Büyükşehir Belediyesi (İBB) hakkında yolsuzluk iddialarıyla açılan 400 kişiden fazla sanığın yargılandığı dava sanık savunmalarıyla devam ediyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 21:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cy49w8pv2y4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/gundem/memur-ve-emeklinin-zam-oranlari-belli-oluyor-949855.html" target="_blank">
-                <strong>Memur ve emeklinin zam oranları belli oluyor</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="ab&#x27;den türkiye&#x27;ye kritik üçlü ziyarette hangi konular öne çıktı? türkiye, avrupa parlamentosu&#x27;nun gerginlik yaratan raporunun ardından brüksel&#x27;den üst düzey bir heyeti ağırladı. kaja kallas, marta kos ve magnus brunner&#x27;in ziyareti türkiye&#x27;ye yönelik önemli bir adım olarak görülüyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 02:05</span>
+        </div>
+        <h3>AB&#x27;den Türkiye&#x27;ye kritik üçlü ziyarette hangi konular öne çıktı?</h3>
+        <p>Türkiye, Avrupa Parlamentosu&#x27;nun gerginlik yaratan raporunun ardından Brüksel&#x27;den üst düzey bir heyeti ağırladı. Kaja Kallas, Marta Kos ve Magnus Brunner&#x27;in ziyareti Türkiye&#x27;ye yönelik önemli bir adım olarak görülüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 02:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr7xjlgnxl3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trump&#x27;tan abd yüksek mahkemesi kararına tepki: &#x27;mücadeleyi sürdüreceğim&#x27; abd başkanı donald trump&#x27;ın &#x27;ülkede doğan herkese vatandaşlık verilmesini sonlandırmak için&#x27; göreve gelir gelmez imzaladığı kararname yüksek mahkeme tarafından iptal edildi. karar için &quot;çok kötü&quot; diyen trump, mücadeleyi sürdüreceğini açıkladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 08:05</span>
+        </div>
+        <h3>Trump&#x27;tan ABD Yüksek Mahkemesi kararına tepki: &#x27;Mücadeleyi sürdüreceğim&#x27;</h3>
+        <p>ABD Başkanı Donald Trump&#x27;ın &#x27;ülkede doğan herkese vatandaşlık verilmesini sonlandırmak için&#x27; göreve gelir gelmez imzaladığı kararname Yüksek Mahkeme tarafından iptal edildi. Karar için &quot;çok kötü&quot; diyen Trump, mücadeleyi sürdüreceğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 08:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yz6r2y65jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gazze barış kurulu kıbrıs cumhuriyeti&#x27;nde toplanıyor, türkiye katılmıyor liderliğini abd başkanı donald trump&#x27;ın yaptığı gazze barış kurulu, i̇srail-hamas savaşını sonlandıran 20 maddelik anlaşmanın uygulama sürecinin canlandırılması amacıyla 30 haziran - 1 temmuz arasında kıbrıs cumhuriyeti&#x27;nde bir toplantı yapacak. barış kurulu&#x27;nun üyesi ve anlaşmanın garantörlerinden olan türkiye&#x27;nin toplantıya katılmayacağı bildirildi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 03:41</span>
+        </div>
+        <h3>Gazze Barış Kurulu Kıbrıs Cumhuriyeti&#x27;nde toplanıyor, Türkiye katılmıyor</h3>
+        <p>Liderliğini ABD Başkanı Donald Trump&#x27;ın yaptığı Gazze Barış Kurulu, İsrail-Hamas savaşını sonlandıran 20 maddelik anlaşmanın uygulama sürecinin canlandırılması amacıyla 30 Haziran - 1 Temmuz arasında Kıbrıs Cumhuriyeti&#x27;nde bir toplantı yapacak. Barış Kurulu&#x27;nun üyesi ve anlaşmanın garantörlerinden olan Türkiye&#x27;nin toplantıya katılmayacağı bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 03:41</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yzqxlrw8po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk ekipleri venezuela&#x27;da umut için görev başında venezuela&#x27;da meydana gelen depremlerin ardından bölgeye gönderilen türk silahlı kuvvetleri (tsk) i̇nsani yardım tugay komutanlığına bağlı arama kurtarma timleri çalışmalarını sürdürüyor. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 1 Temmuz 2026, 09:10</span>
+        </div>
+        <h3>Türk ekipleri Venezuela&#x27;da umut için görev başında</h3>
+        <p>Venezuela&#x27;da meydana gelen depremlerin ardından bölgeye gönderilen Türk Silahlı Kuvvetleri (TSK) İnsani Yardım Tugay Komutanlığına bağlı arama kurtarma timleri çalışmalarını sürdürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Temmuz 2026, 09:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/turk-ekipleri-venezuelada-umut-icin-gorev-basinda-949859.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="zeynep sönmez wimbledon&#x27;da ikinci tur maçına çıkıyor wimbledon tenis turnuvası&#x27;nın ilk gününde, milli tenisçi zeynep sönmez abd&#x27;li ann li ile karşılaştı ve maçı kazanıp ikinci tura yükseldi. sönmez 1 temmuz çarşamba günü abd&#x27;li claire liu ile karşı karşıya gelecek. maçın tsi̇ 14:30&#x27;da başlaması bekleniyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 03:25</span>
+        </div>
+        <h3>Zeynep Sönmez Wimbledon&#x27;da ikinci tur maçına çıkıyor</h3>
+        <p>Wimbledon Tenis Turnuvası&#x27;nın ilk gününde, Milli tenisçi Zeynep Sönmez ABD&#x27;li Ann Li ile karşılaştı ve maçı kazanıp ikinci tura yükseldi. Sönmez 1 Temmuz Çarşamba günü ABD&#x27;li Claire Liu ile karşı karşıya gelecek. Maçın TSİ 14:30&#x27;da başlaması bekleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 03:25</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cyv05nm9y72o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;deki müzik festivalindeki seyyar tuvalette bebek cesedi bulundu abd&#x27;nin michigan eyaletinde düzenlenen bir müzik festivalindeki seyyar tuvalette yeni doğmuş bir bebeğin cansız bedeni bulundu. polis, kırsal batı michigan&#x27;da gerçekleşen olaya ilişkin yürütülen soruşturmada kamuoyundan yardım talep etti. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 1 Temmuz 2026, 08:30</span>
+        </div>
+        <h3>ABD&#x27;deki müzik festivalindeki seyyar tuvalette bebek cesedi bulundu</h3>
+        <p>ABD&#x27;nin Michigan eyaletinde düzenlenen bir müzik festivalindeki seyyar tuvalette yeni doğmuş bir bebeğin cansız bedeni bulundu. Polis, kırsal batı Michigan&#x27;da gerçekleşen olaya ilişkin yürütülen soruşturmada kamuoyundan yardım talep etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Temmuz 2026, 08:30</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abddeki-muzik-festivalindeki-seyyar-tuvalette-bebek-cesedi-bulundu-949851.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/abdde-yapay-zeka-kaynakli-istihdam-kaybi-rekor-seviyeye-ulasti-949854.html" target="_blank">
-                <strong>ABD'de yapay zeka kaynaklı istihdam kaybı rekor seviyeye ulaştı</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/nasa-ay-ussu-planlari-icin-yaklasik-600-milyon-dolarlik-yeni-sozlesme-imzaladi-949852.html" target="_blank">
-                <strong>NASA ay üssü planları için yaklaşık 600 milyon dolarlık yeni sözleşme imzaladı</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cz6venxlyl5o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Erdoğan 'çözüm süreci takvimini' açıkladı: Çerçeve yasa Meclis tatile girmeden çıkacak</strong>
-            </a>
-        </li>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c4gyq92ldyyo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Trump, görevdeki ilk yılında kripto paradan 1 milyar dolardan fazla kazandı</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">EKONOMI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            memur ve emeklinin zam oranları belli oluyor
-            milyonlarca memur, emekli ve sosyal yardım alıcısını ilgilendiren temmuz ayı maaş artış oranları, cuma günü açıklanacak haziran ayı enflasyon verileriyle kesinlik kazanacak. 5 aylık verilere göre ssk ve bağ-kur emeklileri için yüzde 16,61, memurlar için ise yüzde 12,41'lik artış şimdiden netleşti.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Memur ve emeklinin zam oranları belli oluyor</h3>
-                    <p>Milyonlarca memur, emekli ve sosyal yardım alıcısını ilgilendiren temmuz ayı maaş artış oranları, cuma günü açıklanacak haziran ayı enflasyon verileriyle kesinlik kazanacak. 5 aylık verilere göre SSK ve Bağ-Kur emeklileri için yüzde 16,61, memurlar için ise yüzde 12,41'lik artış şimdiden netleşti.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/memur-ve-emeklinin-zam-oranlari-belli-oluyor-949855.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nasa ay üssü planları için yaklaşık 600 milyon dolarlık yeni sözleşme imzaladı
-            ay yüzeyinde kalıcı bir varlık göstermeyi hedefleyen nasa, özel uzay şirketlerine yönelik fon fonlamalarına bir yenisini ekledi. kurum, 2028 yılı sonlarında ay yüzeyine bilimsel ekipman taşıyacak insansız iniş araçları için özel sektöre yaklaşık 600 milyon dolarlık yeni sözleşmeler dağıttığını açıkladı.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>NASA ay üssü planları için yaklaşık 600 milyon dolarlık yeni sözleşme imzaladı</h3>
-                    <p>Ay yüzeyinde kalıcı bir varlık göstermeyi hedefleyen NASA, özel uzay şirketlerine yönelik fon fonlamalarına bir yenisini ekledi. Kurum, 2028 yılı sonlarında Ay yüzeyine bilimsel ekipman taşıyacak insansız iniş araçları için özel sektöre yaklaşık 600 milyon dolarlık yeni sözleşmeler dağıttığını açıkladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/nasa-ay-ussu-planlari-icin-yaklasik-600-milyon-dolarlik-yeni-sozlesme-imzaladi-949852.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            trump, görevdeki ilk yılında kripto paradan 1 milyar dolardan fazla kazandı
-            abd başkanı'nın 2025'teki kripto geliri, gayrimenkullerinden ve trump temalı ürünlerden elde ettiği kazançları çok geride bıraktı. trump'ın ikinci başkanlık döneminden önce 2,3 milyar dolar olan servetinin en az 6 milyar dolara çıktığı tahmin ediliyor.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Trump, görevdeki ilk yılında kripto paradan 1 milyar dolardan fazla kazandı</h3>
-                    <p>ABD Başkanı'nın 2025'teki kripto geliri, gayrimenkullerinden ve Trump temalı ürünlerden elde ettiği kazançları çok geride bıraktı. Trump'ın ikinci başkanlık döneminden önce 2,3 milyar dolar olan servetinin en az 6 milyar dolara çıktığı tahmin ediliyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c4gyq92ldyyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ran'ın dondurulmuş varlıkları: para nerede ve neden önemli?
-            bazı tahminlere göre değeri 100 milyar dolara kadar ulaşan bu fonlara erişim, tahran'ın temel taleplerinden biri oldu. fakat söz konusu fonlar, yaptırımlar ve bankacılık kısıtlamaları nedeniyle hâlâ erişilemez durumda.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>İran'ın dondurulmuş varlıkları: Para nerede ve neden önemli?</h3>
-                    <p>Bazı tahminlere göre değeri 100 milyar dolara kadar ulaşan bu fonlara erişim, Tahran'ın temel taleplerinden biri oldu. Fakat söz konusu fonlar, yaptırımlar ve bankacılık kısıtlamaları nedeniyle hâlâ erişilemez durumda.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cn94e18drrxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd ve i̇ran arasındaki 6 milyar dolarlık varlık görüşmeleri yeniden başlıyor
-            i̇ran tarafından yapılan açıklamada, en az 6 milyar dolar değerindeki i̇ran varlıklarının serbest bırakılmasına yönelik abd ve i̇ranlı yetkililer arasındaki dolaylı görüşmelerin çarşamba günü doha'da yeniden başlayacağı bildirildi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>ABD ve İran arasındaki 6 milyar dolarlık varlık görüşmeleri yeniden başlıyor</h3>
-                    <p>İran tarafından yapılan açıklamada, en az 6 milyar dolar değerindeki İran varlıklarının serbest bırakılmasına yönelik ABD ve İranlı yetkililer arasındaki dolaylı görüşmelerin çarşamba günü Doha'da yeniden başlayacağı bildirildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/abd-ve-iran-arasindaki-6-milyar-dolarlik-varlik-gorusmeleri-yeniden-basliyor-949849.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd, anthropic'in yapay zeka modelleri üzerindeki ihracat kontrolünü kaldırdı
-            yapay zeka girişimi anthropic, abd yönetiminin yapay zeka modelleri "claude fable 5" ve "mythos 5" üzerindeki ihracat kontrollerini kaldırdığını bildirdi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>ABD, Anthropic'in yapay zeka modelleri üzerindeki ihracat kontrolünü kaldırdı</h3>
-                    <p>Yapay zeka girişimi Anthropic, ABD yönetiminin yapay zeka modelleri "Claude Fable 5" ve "Mythos 5" üzerindeki ihracat kontrollerini kaldırdığını bildirdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/abd-anthropicin-yapay-zeka-modelleri-uzerindeki-ihracat-kontrolunu-kaldirdi-949853.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">TEKNOLOJI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            abd'de yapay zeka kaynaklı istihdam kaybı rekor seviyeye ulaştı
-            abd'de yapay zeka gerekçesiyle işten çıkarılanların sayısı mayıs ayı itibarıyla 87 bin 714'e ulaşarak rekor kırdı. yapay zeka, ülkede üç ay üst üste istihdam kayıplarının bir numaralı nedeni olarak kayıtlara geçti. teknoloji sektöründeki toplam işten çıkarmalar, yılın ilk beş ayında geçen yılın aynı dönemine göre yüzde 66 artarak 123 bin 653 oldu.
-            teknoloji
-            trt haber
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>ABD'de yapay zeka kaynaklı istihdam kaybı rekor seviyeye ulaştı</h3>
-                    <p>ABD'de yapay zeka gerekçesiyle işten çıkarılanların sayısı mayıs ayı itibarıyla 87 bin 714'e ulaşarak rekor kırdı. Yapay zeka, ülkede üç ay üst üste istihdam kayıplarının bir numaralı nedeni olarak kayıtlara geçti. Teknoloji sektöründeki toplam işten çıkarmalar, yılın ilk beş ayında geçen yılın aynı dönemine göre yüzde 66 artarak 123 bin 653 oldu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/abdde-yapay-zeka-kaynakli-istihdam-kaybi-rekor-seviyeye-ulasti-949854.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            venezuela depremlerinde yaklaşık '59 bin bina yıkıldı ya da hasar gördü'
-            venezuela'da 24 haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 1.900'ü aştı, on binlerce kişi hâlâ kayıp. nasa'nın uydu görüntülerine göre yaklaşık 59 bin bina yıkıldı ya da hasar gördü.
-            teknoloji
-            bbc türkçe
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Venezuela depremlerinde yaklaşık '59 bin bina yıkıldı ya da hasar gördü'</h3>
-                    <p>Venezuela'da 24 Haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 1.900'ü aştı, on binlerce kişi hâlâ kayıp. NASA'nın uydu görüntülerine göre yaklaşık 59 bin bina yıkıldı ya da hasar gördü.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            erdoğan 'çözüm süreci takvimini' açıkladı: çerçeve yasa meclis tatile girmeden çıkacak
-            cumhurbaşkanı recep tayyip erdoğan, akp'nin sapanca'daki, "terörsüz türkiye" olarak adlandırdığı çözüm sürecinin hukuki altyapısını oluşturacak çerçeve yasanın meclis yaz tatiline girmeden çıkarılacağına ilişkin net mesaj verdi. düzenlemede neler olacak, af içeriyor mu?
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Erdoğan 'çözüm süreci takvimini' açıkladı: Çerçeve yasa Meclis tatile girmeden çıkacak</h3>
-                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, AKP'nin Sapanca'daki, "Terörsüz Türkiye" olarak adlandırdığı çözüm sürecinin hukuki altyapısını oluşturacak çerçeve yasanın Meclis yaz tatiline girmeden çıkarılacağına ilişkin net mesaj verdi. Düzenlemede neler olacak, af içeriyor mu?</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cz6venxlyl5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            chp, dem parti ve mhp ankara'daki nato zirvesi öncesinde ne mesajlar verdi?
-            mhp lideri bahçeli, partisinin meclis'teki grup toplantısında ankara'da 7-8 temmuz'da yapılacak nato zirvesine dair açıklamalarda bulundu. bahçeli "bugün nato yeni bir dönemin başındadır. türkiye'nin olmadığı denklem çöker" dedi.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>CHP, DEM Parti ve MHP Ankara'daki NATO Zirvesi öncesinde ne mesajlar verdi?</h3>
-                    <p>MHP lideri Bahçeli, partisinin Meclis'teki grup toplantısında Ankara'da 7-8 Temmuz'da yapılacak NATO zirvesine dair açıklamalarda bulundu. Bahçeli "Bugün NATO yeni bir dönemin başındadır. Türkiye'nin olmadığı denklem çöker" dedi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cy5v7lkkq44o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            yunanistanda selanik yakınlarında çıkan orman yangınında ölenlerin sayısı 2ye yükseldi
-            yunanistan'ın selanik iline yakın derveni bölgesinde dün çıkan orman yangınında yaşamını yitirenlerin sayısının 2'ye yükseldiği belirtildi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Yunanistanda Selanik yakınlarında çıkan orman yangınında ölenlerin sayısı 2ye yükseldi</h3>
-                    <p>Yunanistan'ın Selanik iline yakın Derveni bölgesinde dün çıkan orman yangınında yaşamını yitirenlerin sayısının 2'ye yükseldiği belirtildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/yunanistanda-selanik-yakinlarinda-cikan-orman-yangininda-olenlerin-sayisi-2ye-yukseldi-949858.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            bursa'da mobilya fabrikasını alevler sardı
-            bursa'nın i̇negöl ilçesinde faaliyet gösteren bir mobilya fabrikasında çıkan yangın, itfaiye ekiplerinin yaklaşık 1 saat süren müdahalesiyle söndürüldü. yangında iş yerinde maddi hasar meydana geldi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Bursa'da mobilya fabrikasını alevler sardı</h3>
-                    <p>Bursa'nın İnegöl ilçesinde faaliyet gösteren bir mobilya fabrikasında çıkan yangın, itfaiye ekiplerinin yaklaşık 1 saat süren müdahalesiyle söndürüldü. Yangında iş yerinde maddi hasar meydana geldi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/bursada-mobilya-fabrikasini-alevler-sardi-949850.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇şgalci i̇srail, lübnan'ın güneyindeki pilot bölgelerden çekilmeyi erteleme kararı aldı
-            i̇srail yönetiminin, "beyrut ile ortak bir denetim mekanizması üzerinde anlaşmaya varılmasının beklenmesi" gerekçesiyle lübnan'ın güneyindeki iki pilot bölgeden ordusunu çekme işlemini erteleme kararı aldığı bildirildi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>İşgalci İsrail, Lübnan'ın güneyindeki pilot bölgelerden çekilmeyi erteleme kararı aldı</h3>
-                    <p>İsrail yönetiminin, "Beyrut ile ortak bir denetim mekanizması üzerinde anlaşmaya varılmasının beklenmesi" gerekçesiyle Lübnan'ın güneyindeki iki pilot bölgeden ordusunu çekme işlemini erteleme kararı aldığı bildirildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/isgalci-israil-lubnanin-guneyindeki-pilot-bolgelerden-cekilmeyi-erteleme-karari-aldi-949847.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            murat ongun: 'milyarlarca liralık yolsuzluk iddiasına tek bir kanıt yok'
-            i̇stanbul büyükşehir belediyesi (i̇bb) hakkında yolsuzluk iddialarıyla açılan 400 kişiden fazla sanığın yargılandığı dava sanık savunmalarıyla devam ediyor.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Murat Ongun: 'Milyarlarca liralık yolsuzluk iddiasına tek bir kanıt yok'</h3>
-                    <p>İstanbul Büyükşehir Belediyesi (İBB) hakkında yolsuzluk iddialarıyla açılan 400 kişiden fazla sanığın yargılandığı dava sanık savunmalarıyla devam ediyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cy49w8pv2y4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            ab'den türkiye'ye kritik üçlü ziyarette hangi konular öne çıktı?
-            türkiye, avrupa parlamentosu'nun gerginlik yaratan raporunun ardından brüksel'den üst düzey bir heyeti ağırladı. kaja kallas, marta kos ve magnus brunner'in ziyareti türkiye'ye yönelik önemli bir adım olarak görülüyor.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>AB'den Türkiye'ye kritik üçlü ziyarette hangi konular öne çıktı?</h3>
-                    <p>Türkiye, Avrupa Parlamentosu'nun gerginlik yaratan raporunun ardından Brüksel'den üst düzey bir heyeti ağırladı. Kaja Kallas, Marta Kos ve Magnus Brunner'in ziyareti Türkiye'ye yönelik önemli bir adım olarak görülüyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cr7xjlgnxl3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            trump'tan abd yüksek mahkemesi kararına tepki: 'mücadeleyi sürdüreceğim'
-            abd başkanı donald trump'ın 'ülkede doğan herkese vatandaşlık verilmesini sonlandırmak için' göreve gelir gelmez imzaladığı kararname yüksek mahkeme tarafından iptal edildi. karar için "çok kötü" diyen trump, mücadeleyi sürdüreceğini açıkladı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Trump'tan ABD Yüksek Mahkemesi kararına tepki: 'Mücadeleyi sürdüreceğim'</h3>
-                    <p>ABD Başkanı Donald Trump'ın 'ülkede doğan herkese vatandaşlık verilmesini sonlandırmak için' göreve gelir gelmez imzaladığı kararname Yüksek Mahkeme tarafından iptal edildi. Karar için "çok kötü" diyen Trump, mücadeleyi sürdüreceğini açıkladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yz6r2y65jo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            gazze barış kurulu kıbrıs cumhuriyeti'nde toplanıyor, türkiye katılmıyor
-            liderliğini abd başkanı donald trump'ın yaptığı gazze barış kurulu, i̇srail-hamas savaşını sonlandıran 20 maddelik anlaşmanın uygulama sürecinin canlandırılması amacıyla 30 haziran - 1 temmuz arasında kıbrıs cumhuriyeti'nde bir toplantı yapacak. barış kurulu'nun üyesi ve anlaşmanın garantörlerinden olan türkiye'nin toplantıya katılmayacağı bildirildi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Gazze Barış Kurulu Kıbrıs Cumhuriyeti'nde toplanıyor, Türkiye katılmıyor</h3>
-                    <p>Liderliğini ABD Başkanı Donald Trump'ın yaptığı Gazze Barış Kurulu, İsrail-Hamas savaşını sonlandıran 20 maddelik anlaşmanın uygulama sürecinin canlandırılması amacıyla 30 Haziran - 1 Temmuz arasında Kıbrıs Cumhuriyeti'nde bir toplantı yapacak. Barış Kurulu'nun üyesi ve anlaşmanın garantörlerinden olan Türkiye'nin toplantıya katılmayacağı bildirildi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yzqxlrw8po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            türk ekipleri venezuela'da umut için görev başında
-            venezuela'da meydana gelen depremlerin ardından bölgeye gönderilen türk silahlı kuvvetleri (tsk) i̇nsani yardım tugay komutanlığına bağlı arama kurtarma timleri çalışmalarını sürdürüyor.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Türk ekipleri Venezuela'da umut için görev başında</h3>
-                    <p>Venezuela'da meydana gelen depremlerin ardından bölgeye gönderilen Türk Silahlı Kuvvetleri (TSK) İnsani Yardım Tugay Komutanlığına bağlı arama kurtarma timleri çalışmalarını sürdürüyor.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/turk-ekipleri-venezuelada-umut-icin-gorev-basinda-949859.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            zeynep sönmez wimbledon'da ikinci tur maçına çıkıyor
-            wimbledon tenis turnuvası'nın ilk gününde, milli tenisçi zeynep sönmez abd'li ann li ile karşılaştı ve maçı kazanıp ikinci tura yükseldi. sönmez 1 temmuz çarşamba günü abd'li claire liu ile karşı karşıya gelecek. maçın tsi̇ 14:30'da başlaması bekleniyor.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Zeynep Sönmez Wimbledon'da ikinci tur maçına çıkıyor</h3>
-                    <p>Wimbledon Tenis Turnuvası'nın ilk gününde, Milli tenisçi Zeynep Sönmez ABD'li Ann Li ile karşılaştı ve maçı kazanıp ikinci tura yükseldi. Sönmez 1 Temmuz Çarşamba günü ABD'li Claire Liu ile karşı karşıya gelecek. Maçın TSİ 14:30'da başlaması bekleniyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cyv05nm9y72o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd'deki müzik festivalindeki seyyar tuvalette bebek cesedi bulundu
-            abd'nin michigan eyaletinde düzenlenen bir müzik festivalindeki seyyar tuvalette yeni doğmuş bir bebeğin cansız bedeni bulundu. polis, kırsal batı michigan'da gerçekleşen olaya ilişkin yürütülen soruşturmada kamuoyundan yardım talep etti.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD'deki müzik festivalindeki seyyar tuvalette bebek cesedi bulundu</h3>
-                    <p>ABD'nin Michigan eyaletinde düzenlenen bir müzik festivalindeki seyyar tuvalette yeni doğmuş bir bebeğin cansız bedeni bulundu. Polis, kırsal batı Michigan'da gerçekleşen olaya ilişkin yürütülen soruşturmada kamuoyundan yardım talep etti.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/abddeki-muzik-festivalindeki-seyyar-tuvalette-bebek-cesedi-bulundu-949851.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,578 +1,451 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-        .search-box {
-    margin: 25px 0;
-    }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-            .category-filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 20px 0 30px;
-            }
-
-            .category-filter-btn {
-                padding: 8px 14px;
-                border: 1px solid #ddd;
-                border-radius: 999px;
-                background: #f7f7f7;
-                cursor: pointer;
-            }
-
-            .category-filter-btn.active {
-                background: #222;
-                color: white;
-            }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="home-search-input"
-        placeholder="Güncel haberlerde ara..."
-    >
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">3 Temmuz 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
 </div>
 
-<div class="category-filters">
-    <button class="category-filter-btn active" data-category="all">Tümü</button>
-    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-    <button class="category-filter-btn" data-category="dünya">Dünya</button>
-    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-    <button class="category-filter-btn" data-category="genel">Genel</button>
-</div>
-
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
         </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>ekonomi</strong> 6</span><span class="stat-item"><strong>genel</strong> 5</span><span class="stat-item"><strong>dünya</strong> 8</span><span class="stat-item"><strong>teknoloji</strong> 1</span></div>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>6</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>5</span>
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
         </div>
+        <h3>Türkiye&#x27;den Euro Ödeme Alanı&#x27;na katılma başvurusu</h3>
+        <p>Türkiye ve Avrupa Birliği&#x27;nden ekonomi heyetleri bugün İstanbul Dolmabahçe&#x27;de Türkiye - AB Yüksek Düzeyli Ekonomik Diyalog toplantısı düzenledi. Toplantıda konuşan Hazine ve Maliye Bakanı Şimşek, Türkiye&#x27;nin Tek Euro Ödeme Alanı&#x27;na (SEPA) katılma başvurusu yaptığını söyledi.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 2 Temmuz 2026, 22:52</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cx2d9pvr93vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 3 Temmuz 2026, 10:44</span>
+            </div>
+            <h3>Yüzyılın Konut Projesi&#x27;nde konut belirleme kuraları başlıyor</h3>
+            <p>Cumhurbaşkanı Recep Tayyip Erdoğan’ın açıkladığı Yüzyılın Konut Projesi kapsamında, hak sahibi vatandaşların hangi etaptaki, hangi daireye sahip olacağının tespit edileceği konut belirleme kura süreci deprem bölgesi illerinden olan Adıyaman’da başlıyor.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/yuzyilin-konut-projesinde-konut-belirleme-kuralari-basliyor-950133.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 3 Temmuz 2026, 10:42</span>
+            </div>
+            <h3>Bakan Şimşek: Dış dengede kalıcı ve sürdürülebilir iyileşme destekleniyor</h3>
+            <p>Hazine ve Maliye Bakanı Mehmet Şimşek, haziranda takvim etkisinin de katkısıyla ihracat ve ithalatın güçlü seyrettiğini belirterek, &quot;Güçlenen makroekonomik çerçeve ve uyguladığımız politikalar sayesinde ekonomimizin şoklara karşı dayanıklılığı artmaya devam ederken dış dengede kalıcı ve sürdürülebilir iyileşme de desteklenmektedir&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/bakan-simsek-dis-dengede-kalici-ve-surdurulebilir-iyilesme-destekleniyor-950132.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 3 Temmuz 2026, 10:11</span>
+            </div>
+            <h3>TÜİK haziran enflasyonunu %32,11; ENAG %51,49 olarak açıkladı</h3>
+            <p>Türkiye İstatistik Kurumu (TÜİK) haziran ayı enflasyon verilerini yıllık %32,11 ve aylık %0,99 olarak açıkladı. Akademisyenlerden oluşan Enflasyon Araştırma Grubu&#x27;nun (ENAG) haziran ayı enflasyon verileri ise yıllık %51,49 ve aylık %1,94.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/clyerg468neo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 3 Temmuz 2026, 04:54</span>
+            </div>
+            <h3>Gözaltına alınan komedyen Deniz Göktaş&#x27;ın adliyeye sevk edilmesi bekleniyor</h3>
+            <p>Son gösterisi Ölü Deniz&#x27;deki ifadeleri nedeniyle hakkında soruşturma başlatılan komedyen Deniz Göktaş gözaltına alındı. İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturmada Göktaş&#x27;a &quot;Cumhurbaşkanına hakaret&quot; ile &quot;halkı kin ve düşmanlığa tahrik veya aşağılama&quot; suçlamaları yöneltiliyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yzjgg5l0yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>8</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>teknoloji</strong>
-            <span>1</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye&#x27;den euro ödeme alanı&#x27;na katılma başvurusu türkiye ve avrupa birliği&#x27;nden ekonomi heyetleri bugün i̇stanbul dolmabahçe&#x27;de türkiye - ab yüksek düzeyli ekonomik diyalog toplantısı düzenledi. toplantıda konuşan hazine ve maliye bakanı şimşek, türkiye&#x27;nin tek euro ödeme alanı&#x27;na (sepa) katılma başvurusu yaptığını söyledi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 2 Temmuz 2026, 22:52</span>
         </div>
-
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-07-03 11:28</span>
+        <h3>Türkiye&#x27;den Euro Ödeme Alanı&#x27;na katılma başvurusu</h3>
+        <p>Türkiye ve Avrupa Birliği&#x27;nden ekonomi heyetleri bugün İstanbul Dolmabahçe&#x27;de Türkiye - AB Yüksek Düzeyli Ekonomik Diyalog toplantısı düzenledi. Toplantıda konuşan Hazine ve Maliye Bakanı Şimşek, Türkiye&#x27;nin Tek Euro Ödeme Alanı&#x27;na (SEPA) katılma başvurusu yaptığını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 2 Temmuz 2026, 22:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx2d9pvr93vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan şimşek: dış dengede kalıcı ve sürdürülebilir iyileşme destekleniyor hazine ve maliye bakanı mehmet şimşek, haziranda takvim etkisinin de katkısıyla ihracat ve ithalatın güçlü seyrettiğini belirterek, &quot;güçlenen makroekonomik çerçeve ve uyguladığımız politikalar sayesinde ekonomimizin şoklara karşı dayanıklılığı artmaya devam ederken dış dengede kalıcı ve sürdürülebilir iyileşme de desteklenmektedir&quot; dedi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 3 Temmuz 2026, 10:42</span>
         </div>
+        <h3>Bakan Şimşek: Dış dengede kalıcı ve sürdürülebilir iyileşme destekleniyor</h3>
+        <p>Hazine ve Maliye Bakanı Mehmet Şimşek, haziranda takvim etkisinin de katkısıyla ihracat ve ithalatın güçlü seyrettiğini belirterek, &quot;Güçlenen makroekonomik çerçeve ve uyguladığımız politikalar sayesinde ekonomimizin şoklara karşı dayanıklılığı artmaya devam ederken dış dengede kalıcı ve sürdürülebilir iyileşme de desteklenmektedir&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Temmuz 2026, 10:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/bakan-simsek-dis-dengede-kalici-ve-surdurulebilir-iyilesme-destekleniyor-950132.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tüi̇k haziran enflasyonunu %32,11; enag %51,49 olarak açıkladı türkiye i̇statistik kurumu (tüi̇k) haziran ayı enflasyon verilerini yıllık %32,11 ve aylık %0,99 olarak açıkladı. akademisyenlerden oluşan enflasyon araştırma grubu&#x27;nun (enag) haziran ayı enflasyon verileri ise yıllık %51,49 ve aylık %1,94. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 3 Temmuz 2026, 10:11</span>
+        </div>
+        <h3>TÜİK haziran enflasyonunu %32,11; ENAG %51,49 olarak açıkladı</h3>
+        <p>Türkiye İstatistik Kurumu (TÜİK) haziran ayı enflasyon verilerini yıllık %32,11 ve aylık %0,99 olarak açıkladı. Akademisyenlerden oluşan Enflasyon Araştırma Grubu&#x27;nun (ENAG) haziran ayı enflasyon verileri ise yıllık %51,49 ve aylık %1,94.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Temmuz 2026, 10:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyerg468neo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="memur ve emekliler için zam farkı ve kira artış oranı netleşti memurlar, sözleşmeliler ve memur emeklilerinin maaşlarına yapılacak zam oranı haziran ayı enflasyonun verilerinin açıklanmasıyla netleşti. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 3 Temmuz 2026, 10:27</span>
+        </div>
+        <h3>Memur ve emekliler için zam farkı ve kira artış oranı netleşti</h3>
+        <p>Memurlar, sözleşmeliler ve memur emeklilerinin maaşlarına yapılacak zam oranı haziran ayı enflasyonun verilerinin açıklanmasıyla netleşti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Temmuz 2026, 10:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c1eyq6549n8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan şimşek: dezenflasyon süreci yeniden başladı hazine ve maliye bakanı mehmet şimşek, küresel enerji fiyatları nedeniyle bir süredir kesintiye uğrayan dezenflasyon sürecinin yeniden başladığını bildirdi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 3 Temmuz 2026, 11:05</span>
+        </div>
+        <h3>Bakan Şimşek: Dezenflasyon süreci yeniden başladı</h3>
+        <p>Hazine ve Maliye Bakanı Mehmet Şimşek, küresel enerji fiyatları nedeniyle bir süredir kesintiye uğrayan dezenflasyon sürecinin yeniden başladığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Temmuz 2026, 11:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/bakan-simsek-dezenflasyon-sureci-yeniden-basladi-950135.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="borsa güne yükselişle başladı borsa i̇stanbul&#x27;da bist 100 endeksi, güne yüzde 0,39 artışla 14.511,73 puandan başladı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 3 Temmuz 2026, 10:10</span>
+        </div>
+        <h3>Borsa güne yükselişle başladı</h3>
+        <p>Borsa İstanbul&#x27;da BIST 100 endeksi, güne yüzde 0,39 artışla 14.511,73 puandan başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Temmuz 2026, 10:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/borsa-gune-yukselisle-basladi-950125.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="yüzyılın konut projesi&#x27;nde konut belirleme kuraları başlıyor cumhurbaşkanı recep tayyip erdoğan’ın açıkladığı yüzyılın konut projesi kapsamında, hak sahibi vatandaşların hangi etaptaki, hangi daireye sahip olacağının tespit edileceği konut belirleme kura süreci deprem bölgesi illerinden olan adıyaman’da başlıyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 3 Temmuz 2026, 10:44</span>
+        </div>
+        <h3>Yüzyılın Konut Projesi&#x27;nde konut belirleme kuraları başlıyor</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan’ın açıkladığı Yüzyılın Konut Projesi kapsamında, hak sahibi vatandaşların hangi etaptaki, hangi daireye sahip olacağının tespit edileceği konut belirleme kura süreci deprem bölgesi illerinden olan Adıyaman’da başlıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Temmuz 2026, 10:44</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/yuzyilin-konut-projesinde-konut-belirleme-kuralari-basliyor-950133.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gözaltına alınan komedyen deniz göktaş&#x27;ın adliyeye sevk edilmesi bekleniyor son gösterisi ölü deniz&#x27;deki ifadeleri nedeniyle hakkında soruşturma başlatılan komedyen deniz göktaş gözaltına alındı. i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturmada göktaş&#x27;a &quot;cumhurbaşkanına hakaret&quot; ile &quot;halkı kin ve düşmanlığa tahrik veya aşağılama&quot; suçlamaları yöneltiliyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 3 Temmuz 2026, 04:54</span>
+        </div>
+        <h3>Gözaltına alınan komedyen Deniz Göktaş&#x27;ın adliyeye sevk edilmesi bekleniyor</h3>
+        <p>Son gösterisi Ölü Deniz&#x27;deki ifadeleri nedeniyle hakkında soruşturma başlatılan komedyen Deniz Göktaş gözaltına alındı. İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturmada Göktaş&#x27;a &quot;Cumhurbaşkanına hakaret&quot; ile &quot;halkı kin ve düşmanlığa tahrik veya aşağılama&quot; suçlamaları yöneltiliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Temmuz 2026, 04:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yzjgg5l0yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="şeker detoksu akımı: &#x27;her şeker düşmanınız değil&#x27; şeker detoksları daha temiz bir cilt, daha iyi uyku ve hızlı kilo kaybı vaat ediyor ancak tüm şekeri kesmek gerekli değil. i̇şte azaltmanız gereken şeker türleri ve bunun yerine yiyebilecekleriniz. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 3 Temmuz 2026, 07:12</span>
+        </div>
+        <h3>Şeker detoksu akımı: &#x27;Her şeker düşmanınız değil&#x27;</h3>
+        <p>Şeker detoksları daha temiz bir cilt, daha iyi uyku ve hızlı kilo kaybı vaat ediyor ancak tüm şekeri kesmek gerekli değil. İşte azaltmanız gereken şeker türleri ve bunun yerine yiyebilecekleriniz.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Temmuz 2026, 07:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c8r24geeny1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="şam&#x27;daki bir kafede meydana gelen bombalı saldırıda dokuz kişi öldü suriye resmi haber ajansı sana, şam&#x27;ın merkezindeki kalabalık bir kafede perşembe günü meydana gelen bombalı saldırıda dokuz kişinin öldüğünü duyurdu. saldırıyı kimin yaptığı henüz netlik kazanmadı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 3 Temmuz 2026, 06:45</span>
+        </div>
+        <h3>Şam&#x27;daki bir kafede meydana gelen bombalı saldırıda dokuz kişi öldü</h3>
+        <p>Suriye resmi haber ajansı SANA, Şam&#x27;ın merkezindeki kalabalık bir kafede perşembe günü meydana gelen bombalı saldırıda dokuz kişinin öldüğünü duyurdu. Saldırıyı kimin yaptığı henüz netlik kazanmadı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Temmuz 2026, 06:45</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvgm4zlnl6jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="pakistan&#x27;da yolcu otobüsünün uçuruma yuvarlandığı kazada 40 kişi öldü pakistan&#x27;ın belucistan eyaletinde yolcu otobüsünün uçuruma yuvarlanması sonucu ilk belirlemelere göre 40 kişi hayatını kaybetti, 8 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 3 Temmuz 2026, 10:13</span>
+        </div>
+        <h3>Pakistan&#x27;da yolcu otobüsünün uçuruma yuvarlandığı kazada 40 kişi öldü</h3>
+        <p>Pakistan&#x27;ın Belucistan eyaletinde yolcu otobüsünün uçuruma yuvarlanması sonucu ilk belirlemelere göre 40 kişi hayatını kaybetti, 8 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Temmuz 2026, 10:13</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/pakistanda-yolcu-otobusunun-ucuruma-yuvarlandigi-kazada-40-kisi-oldu-950126.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">8 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="deva lideri babacan: geniş ittifak için partilerle görüşüyoruz deva partisi genel başkanı ali babacan, gelecek ve saadet partileriyle oluşturdukları yeni yol grubu&#x27;nu seçimlere dönük daha geniş bir siyasi ittifaka dönüştürmek amacıyla yeniden refah partisi başta olmak üzere farklı siyasi partilerle görüşmeler yürüttüklerini açıkladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 3 Temmuz 2026, 05:56</span>
+        </div>
+        <h3>DEVA lideri Babacan: Geniş ittifak için partilerle görüşüyoruz</h3>
+        <p>DEVA Partisi Genel Başkanı Ali Babacan, Gelecek ve Saadet partileriyle oluşturdukları Yeni Yol Grubu&#x27;nu seçimlere dönük daha geniş bir siyasi ittifaka dönüştürmek amacıyla Yeniden Refah Partisi başta olmak üzere farklı siyasi partilerle görüşmeler yürüttüklerini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Temmuz 2026, 05:56</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c79yj77ep45o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="venezuela&#x27;da depremlerin 8. gününde bir kişi enkazdan kurtarıldı venezuela&#x27;da 24 haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 2.595&#x27;e yükseldi, on binlerce kişi hâlâ kayıp. ülkede 7 günlük yas ilan edilirken, ekipler 8. günde bir kişiyi enkazdan kurtarmayı başardı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 3 Temmuz 2026, 10:59</span>
+        </div>
+        <h3>Venezuela&#x27;da depremlerin 8. gününde bir kişi enkazdan kurtarıldı</h3>
+        <p>Venezuela&#x27;da 24 Haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 2.595&#x27;e yükseldi, on binlerce kişi hâlâ kayıp. Ülkede 7 günlük yas ilan edilirken, ekipler 8. günde bir kişiyi enkazdan kurtarmayı başardı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Temmuz 2026, 10:59</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hacda rahatsızlanan hasta ci̇mer&#x27;e başvurdu: 48 saat içinde yurda döndü hac ibadetini yerine getirmek için gittiği suudi arabistan’da rahatsızlanan n.a., ambulans uçakla türkiye’ye getirildi. kızının ci̇mer’e yaptığı başvuru ardından 2 günde yurda döndürülen n.a.’nın başakşehir çam ve sakura hastanesi yoğun bakım servisinde tedavisi sürüyor. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 3 Temmuz 2026, 10:59</span>
+        </div>
+        <h3>Hacda rahatsızlanan hasta CİMER&#x27;e başvurdu: 48 saat içinde yurda döndü</h3>
+        <p>Hac ibadetini yerine getirmek için gittiği Suudi Arabistan’da rahatsızlanan N.A., ambulans uçakla Türkiye’ye getirildi. Kızının CİMER’e yaptığı başvuru ardından 2 günde yurda döndürülen N.A.’nın Başakşehir Çam ve Sakura Hastanesi yoğun bakım servisinde tedavisi sürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Temmuz 2026, 10:59</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/hacda-rahatsizlanan-hasta-cimere-basvurdu-48-saat-icinde-yurda-dondu-950134.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="eşel mobil sistemi üç ay içinde kademeli olarak sonlandırılacak akaryakıt ürünlerinin ötv tutarlarının bu ürünlerdeki fiyat artışları doğrultusunda belirlenmesine imkan sağlayan eşel mobil sisteminin, üç ay içinde kademeli olarak sonlandırılmasına yönelik düzenleme yapıldı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 3 Temmuz 2026, 10:16</span>
+        </div>
+        <h3>Eşel mobil sistemi üç ay içinde kademeli olarak sonlandırılacak</h3>
+        <p>Akaryakıt ürünlerinin ÖTV tutarlarının bu ürünlerdeki fiyat artışları doğrultusunda belirlenmesine imkan sağlayan eşel mobil sisteminin, üç ay içinde kademeli olarak sonlandırılmasına yönelik düzenleme yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Temmuz 2026, 10:16</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/esel-mobil-sistemi-uc-ay-icinde-kademeli-olarak-sonlandirilacak-950128.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tahran&#x27;dan necef&#x27;e: ali hamaney&#x27;in cenazesi hakkında bilinenler suikaste uğrayan i̇ran&#x27;ın dini lideri ali hamaney için ölümünden yaklaşık dört ay sonra düzenlenecek &quot;veda ve cenaze&quot; töreninin 4 temmuz cumartesi günü tahran&#x27;da başlaması planlanıyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 3 Temmuz 2026, 06:03</span>
+        </div>
+        <h3>Tahran&#x27;dan Necef&#x27;e: Ali Hamaney&#x27;in cenazesi hakkında bilinenler</h3>
+        <p>Suikaste uğrayan İran&#x27;ın dini lideri Ali Hamaney için ölümünden yaklaşık dört ay sonra düzenlenecek &quot;veda ve cenaze&quot; töreninin 4 Temmuz Cumartesi günü Tahran&#x27;da başlaması planlanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Temmuz 2026, 06:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyrxndzv9zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rusya&#x27;nın kiev&#x27;e &#x27;şimdiye kadarki en büyük saldırılarında&#x27; en az 27 kişi öldü rusya&#x27;nın ukrayna&#x27;nın başkenti kiev&#x27;e çarşamba gece saatlerinde insansız hava araçları ve füzelerle düzenlediği büyük çaplı saldırılarda en az 27 kişi hayatını kaybetti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 3 Temmuz 2026, 03:59</span>
+        </div>
+        <h3>Rusya&#x27;nın Kiev&#x27;e &#x27;şimdiye kadarki en büyük saldırılarında&#x27; en az 27 kişi öldü</h3>
+        <p>Rusya&#x27;nın Ukrayna&#x27;nın başkenti Kiev&#x27;e çarşamba gece saatlerinde insansız hava araçları ve füzelerle düzenlediği büyük çaplı saldırılarda en az 27 kişi hayatını kaybetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Temmuz 2026, 03:59</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cn0784njj71o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="openaidan abd hükümetine yüzde 5 hisse teklifi chatgpt&#x27;nin geliştiricisi openai, şirketin yüzde 5&#x27;lik hissesini abd hükümetine devretmek için ilk görüşmelere başladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 3 Temmuz 2026, 10:21</span>
+        </div>
+        <h3>OpenAIdan ABD hükümetine yüzde 5 hisse teklifi</h3>
+        <p>ChatGPT&#x27;nin geliştiricisi OpenAI, şirketin yüzde 5&#x27;lik hissesini ABD hükümetine devretmek için ilk görüşmelere başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Temmuz 2026, 10:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/openaidan-abd-hukumetine-yuzde-5-hisse-teklifi-950129.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran meclis başkanı kalibaf: abd&#x27;nin hürmüz boğazı&#x27;na herhangi bir müdahalesine izin vermeyeceğiz i̇ran meclis ve müzakere heyeti başkanı muhammed bakır kalibaf, hürmüz boğazı’nın yönetimi konusunda kararlı olduklarını ve abd&#x27;nin müdahalesine izin vermeyeceklerini söyledi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 3 Temmuz 2026, 10:34</span>
+        </div>
+        <h3>İran Meclis Başkanı Kalibaf: ABD&#x27;nin Hürmüz Boğazı&#x27;na herhangi bir müdahalesine izin vermeyeceğiz</h3>
+        <p>İran Meclis ve Müzakere Heyeti Başkanı Muhammed Bakır Kalibaf, Hürmüz Boğazı’nın yönetimi konusunda kararlı olduklarını ve ABD&#x27;nin müdahalesine izin vermeyeceklerini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Temmuz 2026, 10:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-meclis-baskani-kalibaf-abdnin-hurmuz-bogazina-herhangi-bir-mudahalesine-izin-vermeyecegiz-950130.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cx2d9pvr93vo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Türkiye'den Euro Ödeme Alanı'na katılma başvurusu</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="uluslararası telefon dolandırıcılarına operasyon: 51 gözaltı i̇stanbul&#x27;da, uluslararası telefon dolandırıcılığı yaptığı tespit edilen suç örgütüne yönelik operasyonda 51 zanlı gözaltına alındı. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 3 Temmuz 2026, 11:14</span>
+        </div>
+        <h3>Uluslararası telefon dolandırıcılarına operasyon: 51 gözaltı</h3>
+        <p>İstanbul&#x27;da, uluslararası telefon dolandırıcılığı yaptığı tespit edilen suç örgütüne yönelik operasyonda 51 zanlı gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Temmuz 2026, 11:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/uluslararasi-telefon-dolandiricilarina-operasyon-51-gozalti-950136.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/gundem/yuzyilin-konut-projesinde-konut-belirleme-kuralari-basliyor-950133.html" target="_blank">
-                <strong>Yüzyılın Konut Projesi'nde konut belirleme kuraları başlıyor</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/ekonomi/bakan-simsek-dis-dengede-kalici-ve-surdurulebilir-iyilesme-destekleniyor-950132.html" target="_blank">
-                <strong>Bakan Şimşek: Dış dengede kalıcı ve sürdürülebilir iyileşme destekleniyor</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/clyerg468neo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>TÜİK haziran enflasyonunu %32,11; ENAG %51,49 olarak açıkladı</strong>
-            </a>
-        </li>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c5yzjgg5l0yo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Gözaltına alınan komedyen Deniz Göktaş'ın adliyeye sevk edilmesi bekleniyor</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">EKONOMI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye'den euro ödeme alanı'na katılma başvurusu
-            türkiye ve avrupa birliği'nden ekonomi heyetleri bugün i̇stanbul dolmabahçe'de türkiye - ab yüksek düzeyli ekonomik diyalog toplantısı düzenledi. toplantıda konuşan hazine ve maliye bakanı şimşek, türkiye'nin tek euro ödeme alanı'na (sepa) katılma başvurusu yaptığını söyledi.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Türkiye'den Euro Ödeme Alanı'na katılma başvurusu</h3>
-                    <p>Türkiye ve Avrupa Birliği'nden ekonomi heyetleri bugün İstanbul Dolmabahçe'de Türkiye - AB Yüksek Düzeyli Ekonomik Diyalog toplantısı düzenledi. Toplantıda konuşan Hazine ve Maliye Bakanı Şimşek, Türkiye'nin Tek Euro Ödeme Alanı'na (SEPA) katılma başvurusu yaptığını söyledi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cx2d9pvr93vo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            bakan şimşek: dış dengede kalıcı ve sürdürülebilir iyileşme destekleniyor
-            hazine ve maliye bakanı mehmet şimşek, haziranda takvim etkisinin de katkısıyla ihracat ve ithalatın güçlü seyrettiğini belirterek, "güçlenen makroekonomik çerçeve ve uyguladığımız politikalar sayesinde ekonomimizin şoklara karşı dayanıklılığı artmaya devam ederken dış dengede kalıcı ve sürdürülebilir iyileşme de desteklenmektedir" dedi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Bakan Şimşek: Dış dengede kalıcı ve sürdürülebilir iyileşme destekleniyor</h3>
-                    <p>Hazine ve Maliye Bakanı Mehmet Şimşek, haziranda takvim etkisinin de katkısıyla ihracat ve ithalatın güçlü seyrettiğini belirterek, "Güçlenen makroekonomik çerçeve ve uyguladığımız politikalar sayesinde ekonomimizin şoklara karşı dayanıklılığı artmaya devam ederken dış dengede kalıcı ve sürdürülebilir iyileşme de desteklenmektedir" dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/bakan-simsek-dis-dengede-kalici-ve-surdurulebilir-iyilesme-destekleniyor-950132.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            tüi̇k haziran enflasyonunu %32,11; enag %51,49 olarak açıkladı
-            türkiye i̇statistik kurumu (tüi̇k) haziran ayı enflasyon verilerini yıllık %32,11 ve aylık %0,99 olarak açıkladı. akademisyenlerden oluşan enflasyon araştırma grubu'nun (enag) haziran ayı enflasyon verileri ise yıllık %51,49 ve aylık %1,94.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>TÜİK haziran enflasyonunu %32,11; ENAG %51,49 olarak açıkladı</h3>
-                    <p>Türkiye İstatistik Kurumu (TÜİK) haziran ayı enflasyon verilerini yıllık %32,11 ve aylık %0,99 olarak açıkladı. Akademisyenlerden oluşan Enflasyon Araştırma Grubu'nun (ENAG) haziran ayı enflasyon verileri ise yıllık %51,49 ve aylık %1,94.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/clyerg468neo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            memur ve emekliler için zam farkı ve kira artış oranı netleşti
-            memurlar, sözleşmeliler ve memur emeklilerinin maaşlarına yapılacak zam oranı haziran ayı enflasyonun verilerinin açıklanmasıyla netleşti.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Memur ve emekliler için zam farkı ve kira artış oranı netleşti</h3>
-                    <p>Memurlar, sözleşmeliler ve memur emeklilerinin maaşlarına yapılacak zam oranı haziran ayı enflasyonun verilerinin açıklanmasıyla netleşti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c1eyq6549n8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            bakan şimşek: dezenflasyon süreci yeniden başladı
-            hazine ve maliye bakanı mehmet şimşek, küresel enerji fiyatları nedeniyle bir süredir kesintiye uğrayan dezenflasyon sürecinin yeniden başladığını bildirdi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Bakan Şimşek: Dezenflasyon süreci yeniden başladı</h3>
-                    <p>Hazine ve Maliye Bakanı Mehmet Şimşek, küresel enerji fiyatları nedeniyle bir süredir kesintiye uğrayan dezenflasyon sürecinin yeniden başladığını bildirdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/bakan-simsek-dezenflasyon-sureci-yeniden-basladi-950135.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            borsa güne yükselişle başladı
-            borsa i̇stanbul'da bist 100 endeksi, güne yüzde 0,39 artışla 14.511,73 puandan başladı.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Borsa güne yükselişle başladı</h3>
-                    <p>Borsa İstanbul'da BIST 100 endeksi, güne yüzde 0,39 artışla 14.511,73 puandan başladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/borsa-gune-yukselisle-basladi-950125.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            yüzyılın konut projesi'nde konut belirleme kuraları başlıyor
-            cumhurbaşkanı recep tayyip erdoğan’ın açıkladığı yüzyılın konut projesi kapsamında, hak sahibi vatandaşların hangi etaptaki, hangi daireye sahip olacağının tespit edileceği konut belirleme kura süreci deprem bölgesi illerinden olan adıyaman’da başlıyor.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Yüzyılın Konut Projesi'nde konut belirleme kuraları başlıyor</h3>
-                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan’ın açıkladığı Yüzyılın Konut Projesi kapsamında, hak sahibi vatandaşların hangi etaptaki, hangi daireye sahip olacağının tespit edileceği konut belirleme kura süreci deprem bölgesi illerinden olan Adıyaman’da başlıyor.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/yuzyilin-konut-projesinde-konut-belirleme-kuralari-basliyor-950133.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            gözaltına alınan komedyen deniz göktaş'ın adliyeye sevk edilmesi bekleniyor
-            son gösterisi ölü deniz'deki ifadeleri nedeniyle hakkında soruşturma başlatılan komedyen deniz göktaş gözaltına alındı. i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturmada göktaş'a "cumhurbaşkanına hakaret" ile "halkı kin ve düşmanlığa tahrik veya aşağılama" suçlamaları yöneltiliyor.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Gözaltına alınan komedyen Deniz Göktaş'ın adliyeye sevk edilmesi bekleniyor</h3>
-                    <p>Son gösterisi Ölü Deniz'deki ifadeleri nedeniyle hakkında soruşturma başlatılan komedyen Deniz Göktaş gözaltına alındı. İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturmada Göktaş'a "Cumhurbaşkanına hakaret" ile "halkı kin ve düşmanlığa tahrik veya aşağılama" suçlamaları yöneltiliyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yzjgg5l0yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            şeker detoksu akımı: 'her şeker düşmanınız değil'
-            şeker detoksları daha temiz bir cilt, daha iyi uyku ve hızlı kilo kaybı vaat ediyor ancak tüm şekeri kesmek gerekli değil. i̇şte azaltmanız gereken şeker türleri ve bunun yerine yiyebilecekleriniz.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Şeker detoksu akımı: 'Her şeker düşmanınız değil'</h3>
-                    <p>Şeker detoksları daha temiz bir cilt, daha iyi uyku ve hızlı kilo kaybı vaat ediyor ancak tüm şekeri kesmek gerekli değil. İşte azaltmanız gereken şeker türleri ve bunun yerine yiyebilecekleriniz.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c8r24geeny1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            şam'daki bir kafede meydana gelen bombalı saldırıda dokuz kişi öldü
-            suriye resmi haber ajansı sana, şam'ın merkezindeki kalabalık bir kafede perşembe günü meydana gelen bombalı saldırıda dokuz kişinin öldüğünü duyurdu. saldırıyı kimin yaptığı henüz netlik kazanmadı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Şam'daki bir kafede meydana gelen bombalı saldırıda dokuz kişi öldü</h3>
-                    <p>Suriye resmi haber ajansı SANA, Şam'ın merkezindeki kalabalık bir kafede perşembe günü meydana gelen bombalı saldırıda dokuz kişinin öldüğünü duyurdu. Saldırıyı kimin yaptığı henüz netlik kazanmadı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cvgm4zlnl6jo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            pakistan'da yolcu otobüsünün uçuruma yuvarlandığı kazada 40 kişi öldü
-            pakistan'ın belucistan eyaletinde yolcu otobüsünün uçuruma yuvarlanması sonucu ilk belirlemelere göre 40 kişi hayatını kaybetti, 8 kişi yaralandı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Pakistan'da yolcu otobüsünün uçuruma yuvarlandığı kazada 40 kişi öldü</h3>
-                    <p>Pakistan'ın Belucistan eyaletinde yolcu otobüsünün uçuruma yuvarlanması sonucu ilk belirlemelere göre 40 kişi hayatını kaybetti, 8 kişi yaralandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/pakistanda-yolcu-otobusunun-ucuruma-yuvarlandigi-kazada-40-kisi-oldu-950126.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            deva lideri babacan: geniş ittifak için partilerle görüşüyoruz
-            deva partisi genel başkanı ali babacan, gelecek ve saadet partileriyle oluşturdukları yeni yol grubu'nu seçimlere dönük daha geniş bir siyasi ittifaka dönüştürmek amacıyla yeniden refah partisi başta olmak üzere farklı siyasi partilerle görüşmeler yürüttüklerini açıkladı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>DEVA lideri Babacan: Geniş ittifak için partilerle görüşüyoruz</h3>
-                    <p>DEVA Partisi Genel Başkanı Ali Babacan, Gelecek ve Saadet partileriyle oluşturdukları Yeni Yol Grubu'nu seçimlere dönük daha geniş bir siyasi ittifaka dönüştürmek amacıyla Yeniden Refah Partisi başta olmak üzere farklı siyasi partilerle görüşmeler yürüttüklerini açıkladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c79yj77ep45o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            venezuela'da depremlerin 8. gününde bir kişi enkazdan kurtarıldı
-            venezuela'da 24 haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 2.595'e yükseldi, on binlerce kişi hâlâ kayıp. ülkede 7 günlük yas ilan edilirken, ekipler 8. günde bir kişiyi enkazdan kurtarmayı başardı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Venezuela'da depremlerin 8. gününde bir kişi enkazdan kurtarıldı</h3>
-                    <p>Venezuela'da 24 Haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 2.595'e yükseldi, on binlerce kişi hâlâ kayıp. Ülkede 7 günlük yas ilan edilirken, ekipler 8. günde bir kişiyi enkazdan kurtarmayı başardı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            hacda rahatsızlanan hasta ci̇mer'e başvurdu: 48 saat içinde yurda döndü
-            hac ibadetini yerine getirmek için gittiği suudi arabistan’da rahatsızlanan n.a., ambulans uçakla türkiye’ye getirildi. kızının ci̇mer’e yaptığı başvuru ardından 2 günde yurda döndürülen n.a.’nın başakşehir çam ve sakura hastanesi yoğun bakım servisinde tedavisi sürüyor.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Hacda rahatsızlanan hasta CİMER'e başvurdu: 48 saat içinde yurda döndü</h3>
-                    <p>Hac ibadetini yerine getirmek için gittiği Suudi Arabistan’da rahatsızlanan N.A., ambulans uçakla Türkiye’ye getirildi. Kızının CİMER’e yaptığı başvuru ardından 2 günde yurda döndürülen N.A.’nın Başakşehir Çam ve Sakura Hastanesi yoğun bakım servisinde tedavisi sürüyor.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/hacda-rahatsizlanan-hasta-cimere-basvurdu-48-saat-icinde-yurda-dondu-950134.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            eşel mobil sistemi üç ay içinde kademeli olarak sonlandırılacak
-            akaryakıt ürünlerinin ötv tutarlarının bu ürünlerdeki fiyat artışları doğrultusunda belirlenmesine imkan sağlayan eşel mobil sisteminin, üç ay içinde kademeli olarak sonlandırılmasına yönelik düzenleme yapıldı.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Eşel mobil sistemi üç ay içinde kademeli olarak sonlandırılacak</h3>
-                    <p>Akaryakıt ürünlerinin ÖTV tutarlarının bu ürünlerdeki fiyat artışları doğrultusunda belirlenmesine imkan sağlayan eşel mobil sisteminin, üç ay içinde kademeli olarak sonlandırılmasına yönelik düzenleme yapıldı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/esel-mobil-sistemi-uc-ay-icinde-kademeli-olarak-sonlandirilacak-950128.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            tahran'dan necef'e: ali hamaney'in cenazesi hakkında bilinenler
-            suikaste uğrayan i̇ran'ın dini lideri ali hamaney için ölümünden yaklaşık dört ay sonra düzenlenecek "veda ve cenaze" töreninin 4 temmuz cumartesi günü tahran'da başlaması planlanıyor.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Tahran'dan Necef'e: Ali Hamaney'in cenazesi hakkında bilinenler</h3>
-                    <p>Suikaste uğrayan İran'ın dini lideri Ali Hamaney için ölümünden yaklaşık dört ay sonra düzenlenecek "veda ve cenaze" töreninin 4 Temmuz Cumartesi günü Tahran'da başlaması planlanıyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/clyrxndzv9zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            rusya'nın kiev'e 'şimdiye kadarki en büyük saldırılarında' en az 27 kişi öldü
-            rusya'nın ukrayna'nın başkenti kiev'e çarşamba gece saatlerinde insansız hava araçları ve füzelerle düzenlediği büyük çaplı saldırılarda en az 27 kişi hayatını kaybetti.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Rusya'nın Kiev'e 'şimdiye kadarki en büyük saldırılarında' en az 27 kişi öldü</h3>
-                    <p>Rusya'nın Ukrayna'nın başkenti Kiev'e çarşamba gece saatlerinde insansız hava araçları ve füzelerle düzenlediği büyük çaplı saldırılarda en az 27 kişi hayatını kaybetti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cn0784njj71o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            openaidan abd hükümetine yüzde 5 hisse teklifi
-            chatgpt'nin geliştiricisi openai, şirketin yüzde 5'lik hissesini abd hükümetine devretmek için ilk görüşmelere başladı.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>OpenAIdan ABD hükümetine yüzde 5 hisse teklifi</h3>
-                    <p>ChatGPT'nin geliştiricisi OpenAI, şirketin yüzde 5'lik hissesini ABD hükümetine devretmek için ilk görüşmelere başladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/openaidan-abd-hukumetine-yuzde-5-hisse-teklifi-950129.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ran meclis başkanı kalibaf: abd'nin hürmüz boğazı'na herhangi bir müdahalesine izin vermeyeceğiz
-            i̇ran meclis ve müzakere heyeti başkanı muhammed bakır kalibaf, hürmüz boğazı’nın yönetimi konusunda kararlı olduklarını ve abd'nin müdahalesine izin vermeyeceklerini söyledi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>İran Meclis Başkanı Kalibaf: ABD'nin Hürmüz Boğazı'na herhangi bir müdahalesine izin vermeyeceğiz</h3>
-                    <p>İran Meclis ve Müzakere Heyeti Başkanı Muhammed Bakır Kalibaf, Hürmüz Boğazı’nın yönetimi konusunda kararlı olduklarını ve ABD'nin müdahalesine izin vermeyeceklerini söyledi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/iran-meclis-baskani-kalibaf-abdnin-hurmuz-bogazina-herhangi-bir-mudahalesine-izin-vermeyecegiz-950130.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">TEKNOLOJI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            uluslararası telefon dolandırıcılarına operasyon: 51 gözaltı
-            i̇stanbul'da, uluslararası telefon dolandırıcılığı yaptığı tespit edilen suç örgütüne yönelik operasyonda 51 zanlı gözaltına alındı.
-            teknoloji
-            trt haber
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Uluslararası telefon dolandırıcılarına operasyon: 51 gözaltı</h3>
-                    <p>İstanbul'da, uluslararası telefon dolandırıcılığı yaptığı tespit edilen suç örgütüne yönelik operasyonda 51 zanlı gözaltına alındı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/uluslararasi-telefon-dolandiricilarina-operasyon-51-gozalti-950136.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
