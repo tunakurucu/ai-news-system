@@ -1,472 +1,442 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
     <link rel="stylesheet" href="assets/css/news.css">
     <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <header class="site-nav">
-        <div class="nav-inner">
-            <div class="brand">AI News</div>
-            <a href="index.html">Current News</a>
-            <a href="archive.html">Archive</a>
-            <a href="search.html">Search</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
         </div>
     </header>
 
     <main class="site-wrapper">
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-text">
             <h1>Günün Haberleri</h1>
-            <div class="search-box">
-                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            <p class="hero-date">27 Haziran 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 7</span><span class="stat-item"><strong>ekonomi</strong> 3</span><span class="stat-item"><strong>genel</strong> 10</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Rutte&#x27;nin İran saldırılarına üs desteği sözleri Tahran&#x27;ı kızdırdı, Roma iddiaları yalanladı</h3>
+        <p>NATO Genel Sekreteri Mark Rutte, İran&#x27;a yönelik &quot;Epik Öfke&quot; operasyonunu desteklemek için İtalya&#x27;daki ABD üslerinden 500 ABD uçağının, Avrupa çapında da binlercesinin havalandığını söyleyince NATO ile İran arasında gerginliğe neden oldu.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 26 Haziran 2026, 15:47</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/clyw4m0elxzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 26 Haziran 2026, 14:10</span>
             </div>
-
-            <div class="category-filters">
-                <button class="category-filter-btn active" data-category="all">Tümü</button>
-                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                <button class="category-filter-btn" data-category="genel">Genel</button>
+            <h3>Dilovası parfüm fabrikası yangını soruşturmasında yedi kişi daha tutuklandı</h3>
+            <p>Kocaeli&#x27;nin Dilovası ilçesindeki bir kozmetik fabrikası yangınında yedi işçinin yaşamını yitirmesine ilişkin soruşturma kapsamında aralarında görevden uzaklaştırılan Dilovası Belediye Başkan Yardımcısı ve Zabıta Müdür Vekilinin de bulunduğu yedi şüpheli tutuklandı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c30yvn17y2yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 27 Haziran 2026, 09:22</span>
             </div>
-        </section>
-
-        <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+            <h3>ABDden siber güvenlik endişesi yaratan Anthropice şartlı izin</h3>
+            <p>Amerika Birleşik Devletleri hükümeti, ulusal güvenlik gerekçesiyle daha önce ihracat yasağı getirdiği güçlü Anthropic’e ait yapay zeka modeli Mythos&#x27;un belirli şirket ve kuruluşlara sınırlı olarak sunulmasına onay verdi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/abdden-siber-guvenlik-endisesi-yaratan-anthropice-sartli-izin-949493.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
-
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>7</span>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 27 Haziran 2026, 00:18</span>
+            </div>
+            <h3>Bakan Kurum: Eylül ayında kiralık konutlarımızı vatandaşlarımıza teslim edeceğiz</h3>
+            <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, &quot;Eylül ayında da kiralık konutlarımızı ihtiyaç sahibi vatandaşlarımıza teslim edeceğiz. Sosyal konutlarımızla hem vatandaşımızı uygun fiyatlarla konut sahibi yapıyoruz, hem deprem gerçeğiyle yaşayan ülkemizde milletimizi sağlam yuvalara kavuşturuyoruz.&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-kurum-eylul-ayinda-kiralik-konutlarimizi-vatandaslarimiza-teslim-edecegiz-949487.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
-
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>3</span>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 26 Haziran 2026, 17:36</span>
+            </div>
+            <h3>İtalya&#x27;dan kaçak gönderilen binlerce ton tekstil atığı Türkiye&#x27;de ele geçirildi</h3>
+            <p>İtalya&#x27;dan Türkiye&#x27;ye yasadışı yollarla tekstil atığı kaçakçılığını hedef alan uluslararası operasyonda Türkiye&#x27;de binlerce ton atık ele geçirildi. İtalya merkezli bir şirkete yapılan operasyonda da 12 milyon euro değerinde mal varlığı ve tır filosuna el koyuldu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yzpn3092yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>10</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-06-27 09:45</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">7 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="rutte&#x27;nin i̇ran saldırılarına üs desteği sözleri tahran&#x27;ı kızdırdı, roma iddiaları yalanladı nato genel sekreteri mark rutte, i̇ran&#x27;a yönelik &quot;epik öfke&quot; operasyonunu desteklemek için i̇talya&#x27;daki abd üslerinden 500 abd uçağının, avrupa çapında da binlercesinin havalandığını söyleyince nato ile i̇ran arasında gerginliğe neden oldu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 26 Haziran 2026, 15:47</span>
         </div>
+        <h3>Rutte&#x27;nin İran saldırılarına üs desteği sözleri Tahran&#x27;ı kızdırdı, Roma iddiaları yalanladı</h3>
+        <p>NATO Genel Sekreteri Mark Rutte, İran&#x27;a yönelik &quot;Epik Öfke&quot; operasyonunu desteklemek için İtalya&#x27;daki ABD üslerinden 500 ABD uçağının, Avrupa çapında da binlercesinin havalandığını söyleyince NATO ile İran arasında gerginliğe neden oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Haziran 2026, 15:47</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyw4m0elxzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dilovası parfüm fabrikası yangını soruşturmasında yedi kişi daha tutuklandı kocaeli&#x27;nin dilovası ilçesindeki bir kozmetik fabrikası yangınında yedi işçinin yaşamını yitirmesine ilişkin soruşturma kapsamında aralarında görevden uzaklaştırılan dilovası belediye başkan yardımcısı ve zabıta müdür vekilinin de bulunduğu yedi şüpheli tutuklandı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 26 Haziran 2026, 14:10</span>
+        </div>
+        <h3>Dilovası parfüm fabrikası yangını soruşturmasında yedi kişi daha tutuklandı</h3>
+        <p>Kocaeli&#x27;nin Dilovası ilçesindeki bir kozmetik fabrikası yangınında yedi işçinin yaşamını yitirmesine ilişkin soruşturma kapsamında aralarında görevden uzaklaştırılan Dilovası Belediye Başkan Yardımcısı ve Zabıta Müdür Vekilinin de bulunduğu yedi şüpheli tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Haziran 2026, 14:10</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c30yvn17y2yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="avrupa kavruluyor: almanya, belçika ve hollanda&#x27;da sıcaklık rekorları almanya, belçika ve hollanda&#x27;da sıcaklıklar cuma günü haziran ayı rekorlarını kırarken, avrupa&#x27;daki sıcak hava dalgası nedeniyle i̇spanya ve fransa&#x27;da can kaybı artmaya devam etti. sağlık riskleri nedeniyle konserler ve diğer kamusal etkinlikler iptal edildi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 26 Haziran 2026, 22:03</span>
+        </div>
+        <h3>Avrupa kavruluyor: Almanya, Belçika ve Hollanda&#x27;da sıcaklık rekorları</h3>
+        <p>Almanya, Belçika ve Hollanda&#x27;da sıcaklıklar cuma günü haziran ayı rekorlarını kırarken, Avrupa&#x27;daki sıcak hava dalgası nedeniyle İspanya ve Fransa&#x27;da can kaybı artmaya devam etti. Sağlık riskleri nedeniyle konserler ve diğer kamusal etkinlikler iptal edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Haziran 2026, 22:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c79y7ygve1wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="venezuela&#x27;da peş peşe iki deprem: can kaybı 920&#x27;ye yükseldi venezuela&#x27;da 24 haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 589 kişi öldü, 3000&#x27;e yakın yaralı var. ülke genelinde olağanüstü hal ilan edildi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 26 Haziran 2026, 21:06</span>
+        </div>
+        <h3>Venezuela&#x27;da peş peşe iki deprem: Can kaybı 920&#x27;ye yükseldi</h3>
+        <p>Venezuela&#x27;da 24 Haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 589 kişi öldü, 3000&#x27;e yakın yaralı var. Ülke genelinde olağanüstü hal ilan edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Haziran 2026, 21:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="wimbledon heyecanı kura çekimiyle başladı i̇ngiltere&#x27;nin başkenti londra&#x27;nın ev sahipliğini yaptığı wimbledon tenis turnuvası&#x27;nda heyecan kuralarla başladı. dünya sıralamasının 54&#x27;üncü sırasında bulunan zeynep sönmez, turnuvaya ana tablodan katılıyor. sönmez ilk maçını 28 haziran pazar günü türkiye saatiyle 13.00&#x27;te abd&#x27;li raket ann li ile yapacak. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 26 Haziran 2026, 14:53</span>
+        </div>
+        <h3>Wimbledon heyecanı kura çekimiyle başladı</h3>
+        <p>İngiltere&#x27;nin başkenti Londra&#x27;nın ev sahipliğini yaptığı Wimbledon Tenis Turnuvası&#x27;nda heyecan kuralarla başladı. Dünya sıralamasının 54&#x27;üncü sırasında bulunan Zeynep Sönmez, turnuvaya ana tablodan katılıyor. Sönmez ilk maçını 28 Haziran Pazar günü Türkiye saatiyle 13.00&#x27;te ABD&#x27;li raket Ann Li ile yapacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Haziran 2026, 14:53</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c2lyppe22q7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran devrim muhafızları ordusu: abd&#x27;nin saldırısına seçtiğimiz zaman ve yerde karşılık vereceğiz i̇ran devrim muhafızları ordusu, abd&#x27;nin, ülkelerinin güneyindeki hürmüzgan eyaletine bağlı sirik kentine saldırısının &quot;bertaraf edildiğini&quot; ve saldırıya &quot;seçecekleri zaman ve yerde karşılık vereceklerini&quot; duyurdu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 01:01</span>
+        </div>
+        <h3>İran Devrim Muhafızları Ordusu: ABD&#x27;nin saldırısına seçtiğimiz zaman ve yerde karşılık vereceğiz</h3>
+        <p>İran Devrim Muhafızları Ordusu, ABD&#x27;nin, ülkelerinin güneyindeki Hürmüzgan eyaletine bağlı Sirik kentine saldırısının &quot;bertaraf edildiğini&quot; ve saldırıya &quot;seçecekleri zaman ve yerde karşılık vereceklerini&quot; duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 01:01</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlari-ordusu-abdnin-saldirisina-sectigimiz-zaman-ve-yerde-karsilik-verecegiz-949490.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran devrim muhafızları ordusu: abd ordusunun bölgedeki konuşlanma noktalarını vurduk i̇ran devrim muhafızları ordusu, ülkenin güneyine düzenlenen saldırıya karşılık abd ordusunun konuşlandığı noktaları vurduğunu duyurdu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 09:12</span>
+        </div>
+        <h3>İran Devrim Muhafızları Ordusu: ABD ordusunun bölgedeki konuşlanma noktalarını vurduk</h3>
+        <p>İran Devrim Muhafızları Ordusu, ülkenin güneyine düzenlenen saldırıya karşılık ABD ordusunun konuşlandığı noktaları vurduğunu duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 09:12</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlari-ordusu-abd-ordusunun-bolgedeki-konuslanma-noktalarini-vurduk-949491.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="abdden siber güvenlik endişesi yaratan anthropice şartlı izin amerika birleşik devletleri hükümeti, ulusal güvenlik gerekçesiyle daha önce ihracat yasağı getirdiği güçlü anthropic’e ait yapay zeka modeli mythos&#x27;un belirli şirket ve kuruluşlara sınırlı olarak sunulmasına onay verdi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 09:22</span>
+        </div>
+        <h3>ABDden siber güvenlik endişesi yaratan Anthropice şartlı izin</h3>
+        <p>Amerika Birleşik Devletleri hükümeti, ulusal güvenlik gerekçesiyle daha önce ihracat yasağı getirdiği güçlü Anthropic’e ait yapay zeka modeli Mythos&#x27;un belirli şirket ve kuruluşlara sınırlı olarak sunulmasına onay verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 09:22</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abdden-siber-guvenlik-endisesi-yaratan-anthropice-sartli-izin-949493.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇talya&#x27;dan kaçak gönderilen binlerce ton tekstil atığı türkiye&#x27;de ele geçirildi i̇talya&#x27;dan türkiye&#x27;ye yasadışı yollarla tekstil atığı kaçakçılığını hedef alan uluslararası operasyonda türkiye&#x27;de binlerce ton atık ele geçirildi. i̇talya merkezli bir şirkete yapılan operasyonda da 12 milyon euro değerinde mal varlığı ve tır filosuna el koyuldu. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 26 Haziran 2026, 17:36</span>
+        </div>
+        <h3>İtalya&#x27;dan kaçak gönderilen binlerce ton tekstil atığı Türkiye&#x27;de ele geçirildi</h3>
+        <p>İtalya&#x27;dan Türkiye&#x27;ye yasadışı yollarla tekstil atığı kaçakçılığını hedef alan uluslararası operasyonda Türkiye&#x27;de binlerce ton atık ele geçirildi. İtalya merkezli bir şirkete yapılan operasyonda da 12 milyon euro değerinde mal varlığı ve tır filosuna el koyuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Haziran 2026, 17:36</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yzpn3092yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="reuters: trump kaan için 700 milyon dolarlık motor satışını kongre&#x27;ye bildirdi reuters haber ajansı, abd başkanı donald trump&#x27;ın türkiye&#x27;ye 700 milyon doların üzerindeki değere sahip onlarca jet motoru satma isteğini kongre&#x27;ye resmen bildirdiğini duyurdu. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 26 Haziran 2026, 12:37</span>
+        </div>
+        <h3>Reuters: Trump KAAN için 700 milyon dolarlık motor satışını Kongre&#x27;ye bildirdi</h3>
+        <p>Reuters Haber ajansı, ABD Başkanı Donald Trump&#x27;ın Türkiye&#x27;ye 700 milyon doların üzerindeki değere sahip onlarca jet motoru satma isteğini Kongre&#x27;ye resmen bildirdiğini duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Haziran 2026, 12:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cpd323jyx20o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">10 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan kurum: eylül ayında kiralık konutlarımızı vatandaşlarımıza teslim edeceğiz çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, &quot;eylül ayında da kiralık konutlarımızı ihtiyaç sahibi vatandaşlarımıza teslim edeceğiz. sosyal konutlarımızla hem vatandaşımızı uygun fiyatlarla konut sahibi yapıyoruz, hem deprem gerçeğiyle yaşayan ülkemizde milletimizi sağlam yuvalara kavuşturuyoruz.&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 00:18</span>
+        </div>
+        <h3>Bakan Kurum: Eylül ayında kiralık konutlarımızı vatandaşlarımıza teslim edeceğiz</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, &quot;Eylül ayında da kiralık konutlarımızı ihtiyaç sahibi vatandaşlarımıza teslim edeceğiz. Sosyal konutlarımızla hem vatandaşımızı uygun fiyatlarla konut sahibi yapıyoruz, hem deprem gerçeğiyle yaşayan ülkemizde milletimizi sağlam yuvalara kavuşturuyoruz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 00:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-kurum-eylul-ayinda-kiralik-konutlarimizi-vatandaslarimiza-teslim-edecegiz-949487.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kreş ve gündüz bakımevleri yönetmeliği yürürlüğe girdi aile ve sosyal hizmetler bakanlığı tarafından hazırlanan &quot;kamu kurum ve kuruluşlarınca 2828 sayılı sosyal hizmetler kanununa göre açılacak kreş ve gündüz bakımevleri hakkında yönetmelik&quot;, resmî gazete&#x27;de yayımlanarak yürürlüğe girdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 09:24</span>
+        </div>
+        <h3>Kreş ve Gündüz Bakımevleri Yönetmeliği yürürlüğe girdi</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanlığı tarafından hazırlanan &quot;Kamu Kurum ve Kuruluşlarınca 2828 Sayılı Sosyal Hizmetler Kanununa Göre Açılacak Kreş ve Gündüz Bakımevleri Hakkında Yönetmelik&quot;, Resmî Gazete&#x27;de yayımlanarak yürürlüğe girdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 09:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/kres-ve-gunduz-bakimevleri-yonetmeligi-yururluge-girdi-949492.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk sinemasının usta ismi kadir i̇nanır hayatını kaybetti türk sinemasının usta ismi kadir i̇nanır, tedavi gördüğü hastanede hayatını kaybetti. 77 yaşındaki yıldız oyuncu 14 mayıs&#x27;ta zatürre rahatsızlığı nedeniyle hastaneye kaldırılmış, kısa bir süre sonra da akciğerindeki enfeksiyon nedeniyle yoğun bakıma alınmıştı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 26 Haziran 2026, 22:51</span>
+        </div>
+        <h3>Türk sinemasının usta ismi Kadir İnanır hayatını kaybetti</h3>
+        <p>Türk sinemasının usta ismi Kadir İnanır, tedavi gördüğü hastanede hayatını kaybetti. 77 yaşındaki yıldız oyuncu 14 Mayıs&#x27;ta zatürre rahatsızlığı nedeniyle hastaneye kaldırılmış, kısa bir süre sonra da akciğerindeki enfeksiyon nedeniyle yoğun bakıma alınmıştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Haziran 2026, 22:51</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c39y7g10pexo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="böcek ailesi davasında karar: dört sanık hakkında 12 yıldan 18 yıla kadar hapis almanya&#x27;dan türkiye&#x27;ye tatile gelen ve kaldıkları oteldeki ilaçlama yüzünden zehirlenerek hayatını kaybeden dört kişilik böcek ailesinin ölümüne ilişkin davada karar açıklandı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 26 Haziran 2026, 17:11</span>
+        </div>
+        <h3>Böcek ailesi davasında karar: Dört sanık hakkında 12 yıldan 18 yıla kadar hapis</h3>
+        <p>Almanya&#x27;dan Türkiye&#x27;ye tatile gelen ve kaldıkları oteldeki ilaçlama yüzünden zehirlenerek hayatını kaybeden dört kişilik Böcek ailesinin ölümüne ilişkin davada karar açıklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Haziran 2026, 17:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cy01z59pr05o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan gürlek: ceza infaz kurumlarında bağımlılıkla mücadeleye yönelik özel alanlar oluşturuyoruz adalet bakanı akın gürlek, &quot;ceza infaz kurumlarımızda bağımlılıkla mücadeleye yönelik özel alanlar oluşturuyor, hükümlü ve tutuklulara kapsamlı psiko-sosyal destek sunuyoruz.&quot; ifadesine yer verdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 00:26</span>
+        </div>
+        <h3>Bakan Gürlek: Ceza infaz kurumlarında bağımlılıkla mücadeleye yönelik özel alanlar oluşturuyoruz</h3>
+        <p>Adalet Bakanı Akın Gürlek, &quot;Ceza infaz kurumlarımızda bağımlılıkla mücadeleye yönelik özel alanlar oluşturuyor, hükümlü ve tutuklulara kapsamlı psiko-sosyal destek sunuyoruz.&quot; ifadesine yer verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 00:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-gurlek-ceza-infaz-kurumlarinda-bagimlilikla-mucadeleye-yonelik-ozel-alanlar-olusturuyoruz-949488.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hayallerimiz, öfkelerimiz ve kadir i̇nanır kadir i̇nanır 58 yıllık kariyerine 182 film, 12 dizi sığdırdı. yeşilçam&#x27;ın en üretken ama türkiye&#x27;nin en sancılı dönemlerinde kamera karşısındaydı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 26 Haziran 2026, 20:35</span>
+        </div>
+        <h3>Hayallerimiz, öfkelerimiz ve Kadir İnanır</h3>
+        <p>Kadir İnanır 58 yıllık kariyerine 182 film, 12 dizi sığdırdı. Yeşilçam&#x27;ın en üretken ama Türkiye&#x27;nin en sancılı dönemlerinde kamera karşısındaydı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Haziran 2026, 20:35</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yezked38yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ankara&#x27;da bazı yollar trafiğe kapatılacak ankara emniyet müdürlüğü, kentte düzenlenecek etkinlik kapsamında bazı yolların araç trafiğine kapatılacağını bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 09:36</span>
+        </div>
+        <h3>Ankara&#x27;da bazı yollar trafiğe kapatılacak</h3>
+        <p>Ankara Emniyet Müdürlüğü, kentte düzenlenecek etkinlik kapsamında bazı yolların araç trafiğine kapatılacağını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 09:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/ankarada-bazi-yollar-trafige-kapatilacak-949496.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bozcaada&#x27;ya 1932 kişilik araçların geçişi yasaklandı kuzey ege&#x27;nin turizm merkezlerinden çanakkale&#x27;nin bozcaada ilçesine yaz dönemi boyunca 19 ila 32 kişilik midibüs ve otobüslerin geçişi yasaklandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 09:34</span>
+        </div>
+        <h3>Bozcaada&#x27;ya 1932 kişilik araçların geçişi yasaklandı</h3>
+        <p>Kuzey Ege&#x27;nin turizm merkezlerinden Çanakkale&#x27;nin Bozcaada ilçesine yaz dönemi boyunca 19 ila 32 kişilik midibüs ve otobüslerin geçişi yasaklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 09:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/bozcaadaya-19-32-kisilik-araclarin-gecisi-yasaklandi-949495.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="masak, türk uyruklu olmayan kişilerin kimlik tespiti uzaktan yapılabilecek suç gelirleriyle mücadele kapsamında yükümlü kuruluşlar, türk uyruklu olmayan gerçek kişilerin kimlik tespitini uzaktan gerçekleştirebilecek. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 09:28</span>
+        </div>
+        <h3>MASAK, Türk uyruklu olmayan kişilerin kimlik tespiti uzaktan yapılabilecek</h3>
+        <p>Suç gelirleriyle mücadele kapsamında yükümlü kuruluşlar, Türk uyruklu olmayan gerçek kişilerin kimlik tespitini uzaktan gerçekleştirebilecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 09:28</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/masak-turk-uyruklu-olmayan-kisilerin-kimlik-tespiti-uzaktan-yapilabilecek-949494.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="terör örgütlerine yönelik operasyonlarda 178 şüpheli tutuklandı ankara cumhuriyet başsavcılığı koordinesinde, terör örgütlerine yönelik yürütülen soruşturma kapsamında gözaltına alınan 225 şüpheliden 178&#x27;i tutuklandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Haziran 2026, 00:49</span>
+        </div>
+        <h3>Terör örgütlerine yönelik operasyonlarda 178 şüpheli tutuklandı</h3>
+        <p>Ankara Cumhuriyet Başsavcılığı koordinesinde, terör örgütlerine yönelik yürütülen soruşturma kapsamında gözaltına alınan 225 şüpheliden 178&#x27;i tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Haziran 2026, 00:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/teror-orgutlerine-yonelik-operasyonlarda-178-supheli-tutuklandi-949489.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/clyw4m0elxzo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Rutte'nin İran saldırılarına üs desteği sözleri Tahran'ı kızdırdı, Roma iddiaları yalanladı</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c30yvn17y2yo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Dilovası parfüm fabrikası yangını soruşturmasında yedi kişi daha tutuklandı</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/abdden-siber-guvenlik-endisesi-yaratan-anthropice-sartli-izin-949493.html" target="_blank">
-                <strong>ABDden siber güvenlik endişesi yaratan Anthropice şartlı izin</strong>
-            </a>
-        </li>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/gundem/bakan-kurum-eylul-ayinda-kiralik-konutlarimizi-vatandaslarimiza-teslim-edecegiz-949487.html" target="_blank">
-                <strong>Bakan Kurum: Eylül ayında kiralık konutlarımızı vatandaşlarımıza teslim edeceğiz</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c5yzpn3092yo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>İtalya'dan kaçak gönderilen binlerce ton tekstil atığı Türkiye'de ele geçirildi</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            rutte'nin i̇ran saldırılarına üs desteği sözleri tahran'ı kızdırdı, roma iddiaları yalanladı
-            nato genel sekreteri mark rutte, i̇ran'a yönelik "epik öfke" operasyonunu desteklemek için i̇talya'daki abd üslerinden 500 abd uçağının, avrupa çapında da binlercesinin havalandığını söyleyince nato ile i̇ran arasında gerginliğe neden oldu.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Rutte'nin İran saldırılarına üs desteği sözleri Tahran'ı kızdırdı, Roma iddiaları yalanladı</h3>
-                    <p>NATO Genel Sekreteri Mark Rutte, İran'a yönelik "Epik Öfke" operasyonunu desteklemek için İtalya'daki ABD üslerinden 500 ABD uçağının, Avrupa çapında da binlercesinin havalandığını söyleyince NATO ile İran arasında gerginliğe neden oldu.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/clyw4m0elxzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            dilovası parfüm fabrikası yangını soruşturmasında yedi kişi daha tutuklandı
-            kocaeli'nin dilovası ilçesindeki bir kozmetik fabrikası yangınında yedi işçinin yaşamını yitirmesine ilişkin soruşturma kapsamında aralarında görevden uzaklaştırılan dilovası belediye başkan yardımcısı ve zabıta müdür vekilinin de bulunduğu yedi şüpheli tutuklandı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Dilovası parfüm fabrikası yangını soruşturmasında yedi kişi daha tutuklandı</h3>
-                    <p>Kocaeli'nin Dilovası ilçesindeki bir kozmetik fabrikası yangınında yedi işçinin yaşamını yitirmesine ilişkin soruşturma kapsamında aralarında görevden uzaklaştırılan Dilovası Belediye Başkan Yardımcısı ve Zabıta Müdür Vekilinin de bulunduğu yedi şüpheli tutuklandı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c30yvn17y2yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            avrupa kavruluyor: almanya, belçika ve hollanda'da sıcaklık rekorları
-            almanya, belçika ve hollanda'da sıcaklıklar cuma günü haziran ayı rekorlarını kırarken, avrupa'daki sıcak hava dalgası nedeniyle i̇spanya ve fransa'da can kaybı artmaya devam etti. sağlık riskleri nedeniyle konserler ve diğer kamusal etkinlikler iptal edildi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Avrupa kavruluyor: Almanya, Belçika ve Hollanda'da sıcaklık rekorları</h3>
-                    <p>Almanya, Belçika ve Hollanda'da sıcaklıklar cuma günü haziran ayı rekorlarını kırarken, Avrupa'daki sıcak hava dalgası nedeniyle İspanya ve Fransa'da can kaybı artmaya devam etti. Sağlık riskleri nedeniyle konserler ve diğer kamusal etkinlikler iptal edildi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c79y7ygve1wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            venezuela'da peş peşe iki deprem: can kaybı 920'ye yükseldi
-            venezuela'da 24 haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 589 kişi öldü, 3000'e yakın yaralı var. ülke genelinde olağanüstü hal ilan edildi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Venezuela'da peş peşe iki deprem: Can kaybı 920'ye yükseldi</h3>
-                    <p>Venezuela'da 24 Haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 589 kişi öldü, 3000'e yakın yaralı var. Ülke genelinde olağanüstü hal ilan edildi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            wimbledon heyecanı kura çekimiyle başladı
-            i̇ngiltere'nin başkenti londra'nın ev sahipliğini yaptığı wimbledon tenis turnuvası'nda heyecan kuralarla başladı. dünya sıralamasının 54'üncü sırasında bulunan zeynep sönmez, turnuvaya ana tablodan katılıyor. sönmez ilk maçını 28 haziran pazar günü türkiye saatiyle 13.00'te abd'li raket ann li ile yapacak.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Wimbledon heyecanı kura çekimiyle başladı</h3>
-                    <p>İngiltere'nin başkenti Londra'nın ev sahipliğini yaptığı Wimbledon Tenis Turnuvası'nda heyecan kuralarla başladı. Dünya sıralamasının 54'üncü sırasında bulunan Zeynep Sönmez, turnuvaya ana tablodan katılıyor. Sönmez ilk maçını 28 Haziran Pazar günü Türkiye saatiyle 13.00'te ABD'li raket Ann Li ile yapacak.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c2lyppe22q7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ran devrim muhafızları ordusu: abd'nin saldırısına seçtiğimiz zaman ve yerde karşılık vereceğiz
-            i̇ran devrim muhafızları ordusu, abd'nin, ülkelerinin güneyindeki hürmüzgan eyaletine bağlı sirik kentine saldırısının "bertaraf edildiğini" ve saldırıya "seçecekleri zaman ve yerde karşılık vereceklerini" duyurdu.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>İran Devrim Muhafızları Ordusu: ABD'nin saldırısına seçtiğimiz zaman ve yerde karşılık vereceğiz</h3>
-                    <p>İran Devrim Muhafızları Ordusu, ABD'nin, ülkelerinin güneyindeki Hürmüzgan eyaletine bağlı Sirik kentine saldırısının "bertaraf edildiğini" ve saldırıya "seçecekleri zaman ve yerde karşılık vereceklerini" duyurdu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlari-ordusu-abdnin-saldirisina-sectigimiz-zaman-ve-yerde-karsilik-verecegiz-949490.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ran devrim muhafızları ordusu: abd ordusunun bölgedeki konuşlanma noktalarını vurduk
-            i̇ran devrim muhafızları ordusu, ülkenin güneyine düzenlenen saldırıya karşılık abd ordusunun konuşlandığı noktaları vurduğunu duyurdu.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>İran Devrim Muhafızları Ordusu: ABD ordusunun bölgedeki konuşlanma noktalarını vurduk</h3>
-                    <p>İran Devrim Muhafızları Ordusu, ülkenin güneyine düzenlenen saldırıya karşılık ABD ordusunun konuşlandığı noktaları vurduğunu duyurdu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlari-ordusu-abd-ordusunun-bolgedeki-konuslanma-noktalarini-vurduk-949491.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">EKONOMI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            abdden siber güvenlik endişesi yaratan anthropice şartlı izin
-            amerika birleşik devletleri hükümeti, ulusal güvenlik gerekçesiyle daha önce ihracat yasağı getirdiği güçlü anthropic’e ait yapay zeka modeli mythos'un belirli şirket ve kuruluşlara sınırlı olarak sunulmasına onay verdi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>ABDden siber güvenlik endişesi yaratan Anthropice şartlı izin</h3>
-                    <p>Amerika Birleşik Devletleri hükümeti, ulusal güvenlik gerekçesiyle daha önce ihracat yasağı getirdiği güçlü Anthropic’e ait yapay zeka modeli Mythos'un belirli şirket ve kuruluşlara sınırlı olarak sunulmasına onay verdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/abdden-siber-guvenlik-endisesi-yaratan-anthropice-sartli-izin-949493.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇talya'dan kaçak gönderilen binlerce ton tekstil atığı türkiye'de ele geçirildi
-            i̇talya'dan türkiye'ye yasadışı yollarla tekstil atığı kaçakçılığını hedef alan uluslararası operasyonda türkiye'de binlerce ton atık ele geçirildi. i̇talya merkezli bir şirkete yapılan operasyonda da 12 milyon euro değerinde mal varlığı ve tır filosuna el koyuldu.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>İtalya'dan kaçak gönderilen binlerce ton tekstil atığı Türkiye'de ele geçirildi</h3>
-                    <p>İtalya'dan Türkiye'ye yasadışı yollarla tekstil atığı kaçakçılığını hedef alan uluslararası operasyonda Türkiye'de binlerce ton atık ele geçirildi. İtalya merkezli bir şirkete yapılan operasyonda da 12 milyon euro değerinde mal varlığı ve tır filosuna el koyuldu.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yzpn3092yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            reuters: trump kaan için 700 milyon dolarlık motor satışını kongre'ye bildirdi
-            reuters haber ajansı, abd başkanı donald trump'ın türkiye'ye 700 milyon doların üzerindeki değere sahip onlarca jet motoru satma isteğini kongre'ye resmen bildirdiğini duyurdu.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Reuters: Trump KAAN için 700 milyon dolarlık motor satışını Kongre'ye bildirdi</h3>
-                    <p>Reuters Haber ajansı, ABD Başkanı Donald Trump'ın Türkiye'ye 700 milyon doların üzerindeki değere sahip onlarca jet motoru satma isteğini Kongre'ye resmen bildirdiğini duyurdu.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cpd323jyx20o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            bakan kurum: eylül ayında kiralık konutlarımızı vatandaşlarımıza teslim edeceğiz
-            çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, "eylül ayında da kiralık konutlarımızı ihtiyaç sahibi vatandaşlarımıza teslim edeceğiz. sosyal konutlarımızla hem vatandaşımızı uygun fiyatlarla konut sahibi yapıyoruz, hem deprem gerçeğiyle yaşayan ülkemizde milletimizi sağlam yuvalara kavuşturuyoruz." dedi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Bakan Kurum: Eylül ayında kiralık konutlarımızı vatandaşlarımıza teslim edeceğiz</h3>
-                    <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, "Eylül ayında da kiralık konutlarımızı ihtiyaç sahibi vatandaşlarımıza teslim edeceğiz. Sosyal konutlarımızla hem vatandaşımızı uygun fiyatlarla konut sahibi yapıyoruz, hem deprem gerçeğiyle yaşayan ülkemizde milletimizi sağlam yuvalara kavuşturuyoruz." dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/bakan-kurum-eylul-ayinda-kiralik-konutlarimizi-vatandaslarimiza-teslim-edecegiz-949487.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            kreş ve gündüz bakımevleri yönetmeliği yürürlüğe girdi
-            aile ve sosyal hizmetler bakanlığı tarafından hazırlanan "kamu kurum ve kuruluşlarınca 2828 sayılı sosyal hizmetler kanununa göre açılacak kreş ve gündüz bakımevleri hakkında yönetmelik", resmî gazete'de yayımlanarak yürürlüğe girdi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Kreş ve Gündüz Bakımevleri Yönetmeliği yürürlüğe girdi</h3>
-                    <p>Aile ve Sosyal Hizmetler Bakanlığı tarafından hazırlanan "Kamu Kurum ve Kuruluşlarınca 2828 Sayılı Sosyal Hizmetler Kanununa Göre Açılacak Kreş ve Gündüz Bakımevleri Hakkında Yönetmelik", Resmî Gazete'de yayımlanarak yürürlüğe girdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/kres-ve-gunduz-bakimevleri-yonetmeligi-yururluge-girdi-949492.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            türk sinemasının usta ismi kadir i̇nanır hayatını kaybetti
-            türk sinemasının usta ismi kadir i̇nanır, tedavi gördüğü hastanede hayatını kaybetti. 77 yaşındaki yıldız oyuncu 14 mayıs'ta zatürre rahatsızlığı nedeniyle hastaneye kaldırılmış, kısa bir süre sonra da akciğerindeki enfeksiyon nedeniyle yoğun bakıma alınmıştı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Türk sinemasının usta ismi Kadir İnanır hayatını kaybetti</h3>
-                    <p>Türk sinemasının usta ismi Kadir İnanır, tedavi gördüğü hastanede hayatını kaybetti. 77 yaşındaki yıldız oyuncu 14 Mayıs'ta zatürre rahatsızlığı nedeniyle hastaneye kaldırılmış, kısa bir süre sonra da akciğerindeki enfeksiyon nedeniyle yoğun bakıma alınmıştı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c39y7g10pexo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            böcek ailesi davasında karar: dört sanık hakkında 12 yıldan 18 yıla kadar hapis
-            almanya'dan türkiye'ye tatile gelen ve kaldıkları oteldeki ilaçlama yüzünden zehirlenerek hayatını kaybeden dört kişilik böcek ailesinin ölümüne ilişkin davada karar açıklandı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Böcek ailesi davasında karar: Dört sanık hakkında 12 yıldan 18 yıla kadar hapis</h3>
-                    <p>Almanya'dan Türkiye'ye tatile gelen ve kaldıkları oteldeki ilaçlama yüzünden zehirlenerek hayatını kaybeden dört kişilik Böcek ailesinin ölümüne ilişkin davada karar açıklandı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cy01z59pr05o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            bakan gürlek: ceza infaz kurumlarında bağımlılıkla mücadeleye yönelik özel alanlar oluşturuyoruz
-            adalet bakanı akın gürlek, "ceza infaz kurumlarımızda bağımlılıkla mücadeleye yönelik özel alanlar oluşturuyor, hükümlü ve tutuklulara kapsamlı psiko-sosyal destek sunuyoruz." ifadesine yer verdi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Bakan Gürlek: Ceza infaz kurumlarında bağımlılıkla mücadeleye yönelik özel alanlar oluşturuyoruz</h3>
-                    <p>Adalet Bakanı Akın Gürlek, "Ceza infaz kurumlarımızda bağımlılıkla mücadeleye yönelik özel alanlar oluşturuyor, hükümlü ve tutuklulara kapsamlı psiko-sosyal destek sunuyoruz." ifadesine yer verdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-ceza-infaz-kurumlarinda-bagimlilikla-mucadeleye-yonelik-ozel-alanlar-olusturuyoruz-949488.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            hayallerimiz, öfkelerimiz ve kadir i̇nanır
-            kadir i̇nanır 58 yıllık kariyerine 182 film, 12 dizi sığdırdı. yeşilçam'ın en üretken ama türkiye'nin en sancılı dönemlerinde kamera karşısındaydı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Hayallerimiz, öfkelerimiz ve Kadir İnanır</h3>
-                    <p>Kadir İnanır 58 yıllık kariyerine 182 film, 12 dizi sığdırdı. Yeşilçam'ın en üretken ama Türkiye'nin en sancılı dönemlerinde kamera karşısındaydı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yezked38yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            ankara'da bazı yollar trafiğe kapatılacak
-            ankara emniyet müdürlüğü, kentte düzenlenecek etkinlik kapsamında bazı yolların araç trafiğine kapatılacağını bildirdi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Ankara'da bazı yollar trafiğe kapatılacak</h3>
-                    <p>Ankara Emniyet Müdürlüğü, kentte düzenlenecek etkinlik kapsamında bazı yolların araç trafiğine kapatılacağını bildirdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/ankarada-bazi-yollar-trafige-kapatilacak-949496.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            bozcaada'ya 1932 kişilik araçların geçişi yasaklandı
-            kuzey ege'nin turizm merkezlerinden çanakkale'nin bozcaada ilçesine yaz dönemi boyunca 19 ila 32 kişilik midibüs ve otobüslerin geçişi yasaklandı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Bozcaada'ya 1932 kişilik araçların geçişi yasaklandı</h3>
-                    <p>Kuzey Ege'nin turizm merkezlerinden Çanakkale'nin Bozcaada ilçesine yaz dönemi boyunca 19 ila 32 kişilik midibüs ve otobüslerin geçişi yasaklandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/bozcaadaya-19-32-kisilik-araclarin-gecisi-yasaklandi-949495.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            masak, türk uyruklu olmayan kişilerin kimlik tespiti uzaktan yapılabilecek
-            suç gelirleriyle mücadele kapsamında yükümlü kuruluşlar, türk uyruklu olmayan gerçek kişilerin kimlik tespitini uzaktan gerçekleştirebilecek.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>MASAK, Türk uyruklu olmayan kişilerin kimlik tespiti uzaktan yapılabilecek</h3>
-                    <p>Suç gelirleriyle mücadele kapsamında yükümlü kuruluşlar, Türk uyruklu olmayan gerçek kişilerin kimlik tespitini uzaktan gerçekleştirebilecek.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/masak-turk-uyruklu-olmayan-kisilerin-kimlik-tespiti-uzaktan-yapilabilecek-949494.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            terör örgütlerine yönelik operasyonlarda 178 şüpheli tutuklandı
-            ankara cumhuriyet başsavcılığı koordinesinde, terör örgütlerine yönelik yürütülen soruşturma kapsamında gözaltına alınan 225 şüpheliden 178'i tutuklandı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Terör örgütlerine yönelik operasyonlarda 178 şüpheli tutuklandı</h3>
-                    <p>Ankara Cumhuriyet Başsavcılığı koordinesinde, terör örgütlerine yönelik yürütülen soruşturma kapsamında gözaltına alınan 225 şüpheliden 178'i tutuklandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/teror-orgutlerine-yonelik-operasyonlarda-178-supheli-tutuklandi-949489.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

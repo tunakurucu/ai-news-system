@@ -1,585 +1,460 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-        .search-box {
-    margin: 25px 0;
-    }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-            .category-filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 20px 0 30px;
-            }
-
-            .category-filter-btn {
-                padding: 8px 14px;
-                border: 1px solid #ddd;
-                border-radius: 999px;
-                background: #f7f7f7;
-                cursor: pointer;
-            }
-
-            .category-filter-btn.active {
-                background: #222;
-                color: white;
-            }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="home-search-input"
-        placeholder="Güncel haberlerde ara..."
-    >
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">10 Temmuz 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
 </div>
 
-<div class="category-filters">
-    <button class="category-filter-btn active" data-category="all">Tümü</button>
-    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-    <button class="category-filter-btn" data-category="dünya">Dünya</button>
-    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-    <button class="category-filter-btn" data-category="genel">Genel</button>
-</div>
-
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
         </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 8</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>genel</strong> 7</span><span class="stat-item"><strong>ekonomi</strong> 3</span><span class="stat-item"><strong>gümrük</strong> 1</span></div>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>8</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>teknoloji</strong>
-            <span>1</span>
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
         </div>
+        <h3>Türkiye, Kıbrıs&#x27;ın kuzeyinde doğalgaz boru hattı inşa edecek</h3>
+        <p>Türkiye ve Kıbrıs&#x27;ın kuzeyindeki Türk yönetimi, yaklaşık 100 kilometrelik bir doğalgaz boru hattı için anlaşma imzalayacak. Enerji Bakanı Alparslan Bayraktar, hattın Alanya&#x27;dan başlayarak Kıbrıs&#x27;ın kuzeyine uzanmasını planladıklarını açıklamış, 2028&#x27;de faaliyete başlamasının planlandığını söylemişti.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 10 Temmuz 2026, 12:25</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c892jz3kgn5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 10 Temmuz 2026, 12:38</span>
+            </div>
+            <h3>Türkiye&#x27;den AP&#x27;nin Kıbrıs kararına tepki: &#x27;Alçakça iftiralar barındırıyor, yok hükmünde&#x27;</h3>
+            <p>Türkiye, Avrupa Parlamentosu&#x27;nun (AP) 8 Temmuz&#x27;da Kıbrıs&#x27;la ilgili olarak aldığı karara tepki gösterdi. Dışişleri Bakanlığı&#x27;ndan 9 Temmuz&#x27;da yapılan açıklamada, karar için &quot;yok hükmünde&quot; denildi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ceqd8vq1l7lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 10 Temmuz 2026, 07:24</span>
+            </div>
+            <h3>ABD-İran ateşkesi neden kalıcı olamadı, tarafların pozisyonları ne?</h3>
+            <p>Hürmüz Boğazı, Lübnan ve yatırım fonu; Tahran ile Washington&#x27;ın hala karşılıklı tavizlerin getireceği ortak faydalara odaklanmak yerine, savaş sonrası düzeni şekillendirmek için sert bir rekabet içinde kilitli kaldığını gösteriyor. Bu da yıpratıcı çatışmadan çıkış yolunu bulmayı zorlaştırıyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cyv0zg82m8ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">BBC Türkçe · 10 Temmuz 2026, 07:06</span>
+            </div>
+            <h3>Netanyahu Cumhurbaşkanı Erdoğan&#x27;ı Trump&#x27;a şikayet etti</h3>
+            <p>İki lider NATO Zirvesi sonrası telefonda görüştü. AFP&#x27;ye göre Netanyahu, &quot;Cumhurbaşkanı Recep Tayyip Erdoğan ve çevresinin, İsrail devletinin varlığını sorgulayan ve İsrail sınırları boyunca güvenlik bölgeleri kurulması gerektiğine yönelik açıklamalar yaptığını&quot; söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/crlw6pp2r4lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 10 Temmuz 2026, 07:09</span>
+            </div>
+            <h3>Andy Burnham&#x27;ın 20 Temmuz&#x27;da İngiltere Başbakanı olması bekleniyor</h3>
+            <p>İngiltere&#x27;de eski Manchester Belediye Başkanı Andy Burnham, iktidardaki İşçi Partisi&#x27;nin milletvekillerinin büyük çoğunluğu tarafından genel başkanlığa aday gösterildi. Partinin 403 milletvekilinden 322&#x27;si, Burnham&#x27;a destek verdi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c621m52lmv1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>7</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>3</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">8 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye, kıbrıs&#x27;ın kuzeyinde doğalgaz boru hattı inşa edecek türkiye ve kıbrıs&#x27;ın kuzeyindeki türk yönetimi, yaklaşık 100 kilometrelik bir doğalgaz boru hattı için anlaşma imzalayacak. enerji bakanı alparslan bayraktar, hattın alanya&#x27;dan başlayarak kıbrıs&#x27;ın kuzeyine uzanmasını planladıklarını açıklamış, 2028&#x27;de faaliyete başlamasının planlandığını söylemişti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 10 Temmuz 2026, 12:25</span>
         </div>
-
-        <div class="stat-card">
-            <strong>gümrük</strong>
-            <span>1</span>
+        <h3>Türkiye, Kıbrıs&#x27;ın kuzeyinde doğalgaz boru hattı inşa edecek</h3>
+        <p>Türkiye ve Kıbrıs&#x27;ın kuzeyindeki Türk yönetimi, yaklaşık 100 kilometrelik bir doğalgaz boru hattı için anlaşma imzalayacak. Enerji Bakanı Alparslan Bayraktar, hattın Alanya&#x27;dan başlayarak Kıbrıs&#x27;ın kuzeyine uzanmasını planladıklarını açıklamış, 2028&#x27;de faaliyete başlamasının planlandığını söylemişti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Temmuz 2026, 12:25</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c892jz3kgn5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;den ap&#x27;nin kıbrıs kararına tepki: &#x27;alçakça iftiralar barındırıyor, yok hükmünde&#x27; türkiye, avrupa parlamentosu&#x27;nun (ap) 8 temmuz&#x27;da kıbrıs&#x27;la ilgili olarak aldığı karara tepki gösterdi. dışişleri bakanlığı&#x27;ndan 9 temmuz&#x27;da yapılan açıklamada, karar için &quot;yok hükmünde&quot; denildi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 10 Temmuz 2026, 12:38</span>
         </div>
-
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-07-10 13:16</span>
+        <h3>Türkiye&#x27;den AP&#x27;nin Kıbrıs kararına tepki: &#x27;Alçakça iftiralar barındırıyor, yok hükmünde&#x27;</h3>
+        <p>Türkiye, Avrupa Parlamentosu&#x27;nun (AP) 8 Temmuz&#x27;da Kıbrıs&#x27;la ilgili olarak aldığı karara tepki gösterdi. Dışişleri Bakanlığı&#x27;ndan 9 Temmuz&#x27;da yapılan açıklamada, karar için &quot;yok hükmünde&quot; denildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Temmuz 2026, 12:38</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ceqd8vq1l7lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd-i̇ran ateşkesi neden kalıcı olamadı, tarafların pozisyonları ne? hürmüz boğazı, lübnan ve yatırım fonu; tahran ile washington&#x27;ın hala karşılıklı tavizlerin getireceği ortak faydalara odaklanmak yerine, savaş sonrası düzeni şekillendirmek için sert bir rekabet içinde kilitli kaldığını gösteriyor. bu da yıpratıcı çatışmadan çıkış yolunu bulmayı zorlaştırıyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 10 Temmuz 2026, 07:24</span>
         </div>
+        <h3>ABD-İran ateşkesi neden kalıcı olamadı, tarafların pozisyonları ne?</h3>
+        <p>Hürmüz Boğazı, Lübnan ve yatırım fonu; Tahran ile Washington&#x27;ın hala karşılıklı tavizlerin getireceği ortak faydalara odaklanmak yerine, savaş sonrası düzeni şekillendirmek için sert bir rekabet içinde kilitli kaldığını gösteriyor. Bu da yıpratıcı çatışmadan çıkış yolunu bulmayı zorlaştırıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Temmuz 2026, 07:24</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cyv0zg82m8ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd, suriye&#x27;yi &#x27;teröre destek veren ülkeler&#x27; listesinden çıkarıyor abd başkanı donald trump, ülkesinin suriye&#x27;yi &quot;teröre destek veren ülkeler&quot; listesinden çıkaracağını açıkladı. trump bu kararını, nato zirvesi için gittiği ankara&#x27;da görüştüğü suriye&#x27;de geçiş yönetiminin devlet başkanı ahmed şara&#x27;ya iletti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Temmuz 2026, 07:01</span>
+        </div>
+        <h3>ABD, Suriye&#x27;yi &#x27;teröre destek veren ülkeler&#x27; listesinden çıkarıyor</h3>
+        <p>ABD Başkanı Donald Trump, ülkesinin Suriye&#x27;yi &quot;teröre destek veren ülkeler&quot; listesinden çıkaracağını açıkladı. Trump bu kararını, NATO Zirvesi için gittiği Ankara&#x27;da görüştüğü Suriye&#x27;de geçiş yönetiminin Devlet Başkanı Ahmed Şara&#x27;ya iletti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Temmuz 2026, 07:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cjeg8v0e9g4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ak parti sözcüsü çelik: türk silahlı kuvvetlerine yönelik alçakça bir iftiradır ak parti genel başkan yardımcısı ve parti sözcüsü ömer çelik, &quot;kahraman türk silahlı kuvvetleri tarihi şan ve şereflerle dolu asil bir ocaktır. avrupa parlamentosu’nda kabul edilen sözde karar, kahraman türk silahlı kuvvetlerine yönelik alçakça bir iftiradır. bu sözde kararı kınıyoruz&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 10 Temmuz 2026, 13:00</span>
+        </div>
+        <h3>AK Parti Sözcüsü Çelik: Türk Silahlı Kuvvetlerine yönelik alçakça bir iftiradır</h3>
+        <p>AK Parti Genel Başkan Yardımcısı ve Parti Sözcüsü Ömer Çelik, &quot;Kahraman Türk Silahlı Kuvvetleri tarihi şan ve şereflerle dolu asil bir ocaktır. Avrupa Parlamentosu’nda kabul edilen sözde karar, kahraman Türk Silahlı Kuvvetlerine yönelik alçakça bir iftiradır. Bu sözde kararı kınıyoruz&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Temmuz 2026, 13:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/ak-parti-sozcusu-celik-turk-silahli-kuvvetlerine-yonelik-alcakca-bir-iftiradir-950854.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ak parti sözcüsü çelik&#x27;ten avrupa parlamentosunun kararına tepki ak parti genel başkan yardımcısı ve parti sözcüsü ömer çelik, &quot;avrupa parlamentosunda kabul edilen sözde karar, kahraman türk silahlı kuvvetlerine yönelik alçakça bir iftiradır. bu sözde kararı kınıyoruz.&quot; ifadesini kullandı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 10 Temmuz 2026, 12:14</span>
+        </div>
+        <h3>AK Parti Sözcüsü Çelik&#x27;ten Avrupa Parlamentosunun kararına tepki</h3>
+        <p>AK Parti Genel Başkan Yardımcısı ve Parti Sözcüsü Ömer Çelik, &quot;Avrupa Parlamentosunda kabul edilen sözde karar, kahraman Türk Silahlı Kuvvetlerine yönelik alçakça bir iftiradır. Bu sözde kararı kınıyoruz.&quot; ifadesini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Temmuz 2026, 12:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/ak-parti-sozcusu-celikten-avrupa-parlamentosunun-kararina-tepki-950848.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hamaney&#x27;in cenazesi meşhed&#x27;de toprağa verildi, oğlu görülmedi suikasta uğrayan i̇ran&#x27;ın dini lideri ali hamaney için ölümünden yaklaşık dört ay sonra düzenlenen &quot;veda ve cenaze&quot; töreni tamamlandı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Temmuz 2026, 22:42</span>
+        </div>
+        <h3>Hamaney&#x27;in cenazesi Meşhed&#x27;de toprağa verildi, oğlu görülmedi</h3>
+        <p>Suikasta uğrayan İran&#x27;ın dini lideri Ali Hamaney için ölümünden yaklaşık dört ay sonra düzenlenen &quot;veda ve cenaze&quot; töreni tamamlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Temmuz 2026, 22:42</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyrxndzv9zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran&#x27;ın eski lideri hamaney bir hafta süren törenlerin ardından meşhed&#x27;de defnedildi abd-i̇srail saldırılarında hayatını kaybeden i̇ran&#x27;ın eski lideri ayetullah ali hamaney, i̇ran ve irak&#x27;ın çeşitli kentlerinde bir hafta süren cenaze törenlerinin ardından doğum yeri olan meşhed kentinde defnedildi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 10 Temmuz 2026, 12:52</span>
+        </div>
+        <h3>İran&#x27;ın eski lideri Hamaney bir hafta süren törenlerin ardından Meşhed&#x27;de defnedildi</h3>
+        <p>ABD-İsrail saldırılarında hayatını kaybeden İran&#x27;ın eski lideri Ayetullah Ali Hamaney, İran ve Irak&#x27;ın çeşitli kentlerinde bir hafta süren cenaze törenlerinin ardından doğum yeri olan Meşhed kentinde defnedildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Temmuz 2026, 12:52</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iranin-eski-lideri-hamaney-bir-hafta-suren-torenlerin-ardindan-meshedde-defnedildi-950855.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="netanyahu cumhurbaşkanı erdoğan&#x27;ı trump&#x27;a şikayet etti i̇ki lider nato zirvesi sonrası telefonda görüştü. afp&#x27;ye göre netanyahu, &quot;cumhurbaşkanı recep tayyip erdoğan ve çevresinin, i̇srail devletinin varlığını sorgulayan ve i̇srail sınırları boyunca güvenlik bölgeleri kurulması gerektiğine yönelik açıklamalar yaptığını&quot; söyledi. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 10 Temmuz 2026, 07:06</span>
+        </div>
+        <h3>Netanyahu Cumhurbaşkanı Erdoğan&#x27;ı Trump&#x27;a şikayet etti</h3>
+        <p>İki lider NATO Zirvesi sonrası telefonda görüştü. AFP&#x27;ye göre Netanyahu, &quot;Cumhurbaşkanı Recep Tayyip Erdoğan ve çevresinin, İsrail devletinin varlığını sorgulayan ve İsrail sınırları boyunca güvenlik bölgeleri kurulması gerektiğine yönelik açıklamalar yaptığını&quot; söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Temmuz 2026, 07:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/crlw6pp2r4lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">7 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="andy burnham&#x27;ın 20 temmuz&#x27;da i̇ngiltere başbakanı olması bekleniyor i̇ngiltere&#x27;de eski manchester belediye başkanı andy burnham, iktidardaki i̇şçi partisi&#x27;nin milletvekillerinin büyük çoğunluğu tarafından genel başkanlığa aday gösterildi. partinin 403 milletvekilinden 322&#x27;si, burnham&#x27;a destek verdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 10 Temmuz 2026, 07:09</span>
+        </div>
+        <h3>Andy Burnham&#x27;ın 20 Temmuz&#x27;da İngiltere Başbakanı olması bekleniyor</h3>
+        <p>İngiltere&#x27;de eski Manchester Belediye Başkanı Andy Burnham, iktidardaki İşçi Partisi&#x27;nin milletvekillerinin büyük çoğunluğu tarafından genel başkanlığa aday gösterildi. Partinin 403 milletvekilinden 322&#x27;si, Burnham&#x27;a destek verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Temmuz 2026, 07:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c621m52lmv1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan gürlek: faili meçhul dosyaları yeniden ve çok yönlü olarak inceleyerek aydınlatıyoruz bakan gürlek, diyarbakır’ın çermik ilçesinde 18 nisan 2016 tarihinde başından vurularak öldürülen 22 yaşındaki mehmet emin karaalp’in faili meçhul kalan cinayetinin, 10 yıl sonra yeniden ele alınarak ve aydınlatıldığını duyurdu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 10 Temmuz 2026, 12:58</span>
+        </div>
+        <h3>Bakan Gürlek: Faili meçhul dosyaları yeniden ve çok yönlü olarak inceleyerek aydınlatıyoruz</h3>
+        <p>Bakan Gürlek, Diyarbakır’ın Çermik ilçesinde 18 Nisan 2016 tarihinde başından vurularak öldürülen 22 yaşındaki Mehmet Emin Karaalp’in faili meçhul kalan cinayetinin, 10 yıl sonra yeniden ele alınarak ve aydınlatıldığını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Temmuz 2026, 12:58</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-gurlek-faili-mechul-dosyalari-yeniden-ve-cok-yonlu-olarak-inceleyerek-aydinlatiyoruz-950853.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="lgs sonuçları açıklandı: 452 öğrenci tam puan aldı bir milyondan fazla öğrencinin katıldığı liselere geçiş sistemi (lgs) kapsamındaki merkezi sınavın sonuçları açıklandı genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 10 Temmuz 2026, 11:41</span>
+        </div>
+        <h3>LGS sonuçları açıklandı: 452 öğrenci tam puan aldı</h3>
+        <p>Bir milyondan fazla öğrencinin katıldığı Liselere Geçiş Sistemi (LGS) kapsamındaki merkezi sınavın sonuçları açıklandı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Temmuz 2026, 11:41</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c8d2mr6lvglo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan ersoy&#x27;dan ayasofya&#x27;nın yeniden ibadete açılmasının 6. yılına ilişkin paylaşım kültür ve turizm bakanı mehmet nuri ersoy, ayasofya-i kebir cami-i şerifi&#x27;nin yeniden ibadete açılmasının 6&#x27;ncı yıl dönümüne ilişkin paylaşımda bulundu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 10 Temmuz 2026, 12:45</span>
+        </div>
+        <h3>Bakan Ersoy&#x27;dan Ayasofya&#x27;nın yeniden ibadete açılmasının 6. yılına ilişkin paylaşım</h3>
+        <p>Kültür ve Turizm Bakanı Mehmet Nuri Ersoy, Ayasofya-i Kebir Cami-i Şerifi&#x27;nin yeniden ibadete açılmasının 6&#x27;ncı yıl dönümüne ilişkin paylaşımda bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Temmuz 2026, 12:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-ersoydan-ayasofyanin-yeniden-ibadete-acilmasinin-6-yilina-iliskin-paylasim-950851.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milli eğitim bakanlığı lgs raporunu yayımladı milli eğitim bakanlığınca (meb) liselere geçiş sistemi (lgs) kapsamındaki merkezi sınavda tüm soruları doğru yanıtlayan 452 öğrencinin, ülke genelindeki 383 farklı binada sınava girdiği belirlendi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 10 Temmuz 2026, 11:52</span>
+        </div>
+        <h3>Milli Eğitim Bakanlığı LGS raporunu yayımladı</h3>
+        <p>Milli Eğitim Bakanlığınca (MEB) Liselere Geçiş Sistemi (LGS) kapsamındaki merkezi sınavda tüm soruları doğru yanıtlayan 452 öğrencinin, ülke genelindeki 383 farklı binada sınava girdiği belirlendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Temmuz 2026, 11:52</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/milli-egitim-bakanligi-lgs-raporunu-yayimladi-950847.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="reuters: türkiye, bazı nato üyelerinin savunma bankası girişimine katılmıyor reuters haber ajansına konuşan bir türk yetkili, nato müttefiklerinden oluşacak küresel savunma bankası girişimine katılmayacaklarını söyledi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 10 Temmuz 2026, 12:42</span>
+        </div>
+        <h3>Reuters: Türkiye, bazı NATO üyelerinin savunma bankası girişimine katılmıyor</h3>
+        <p>Reuters haber ajansına konuşan bir Türk yetkili, NATO müttefiklerinden oluşacak küresel savunma bankası girişimine katılmayacaklarını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Temmuz 2026, 12:42</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gyd2np25yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dünya kupası&#x27;nda fransa&#x27;nın yarı finaldeki rakibi belli oluyor dünya kupası&#x27;nda yarı finale yükselen ilk takım fransa oldu. fransa, turnuvada boston&#x27;da oynanan ilk çeyrek final maçında fas&#x27;ı 2-0 mağlup etti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 10 Temmuz 2026, 08:24</span>
+        </div>
+        <h3>Dünya Kupası&#x27;nda Fransa&#x27;nın yarı finaldeki rakibi belli oluyor</h3>
+        <p>Dünya Kupası&#x27;nda yarı finale yükselen ilk takım Fransa oldu. Fransa, turnuvada Boston&#x27;da oynanan ilk çeyrek final maçında Fas&#x27;ı 2-0 mağlup etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Temmuz 2026, 08:24</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yey6mny64o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c892jz3kgn5o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Türkiye, Kıbrıs'ın kuzeyinde doğalgaz boru hattı inşa edecek</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="ticaret bakanlığından ambalajlı su fiyatlarına yönelik inceleme ticaret bakanlığı ekipleri, plastik, cam ve metal ambalajlı içeceklerde uygulanan depozito katılım payının güncellenmesi sonrasında haksız fiyat artışlarının önüne geçilmesi amacıyla denetim gerçekleştirdi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 10 Temmuz 2026, 13:05</span>
+        </div>
+        <h3>Ticaret Bakanlığından Ambalajlı su fiyatlarına yönelik inceleme</h3>
+        <p>Ticaret Bakanlığı ekipleri, plastik, cam ve metal ambalajlı içeceklerde uygulanan depozito katılım payının güncellenmesi sonrasında haksız fiyat artışlarının önüne geçilmesi amacıyla denetim gerçekleştirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Temmuz 2026, 13:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/ticaret-bakanligindan-ambalajli-su-fiyatlarina-yonelik-inceleme-950856.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="savunma sanayii başkanı görgün&#x27;den hava savunmada yerlilik vurgusu savunma sanayii başkanı haluk görgün, başkanlığın koordinasyonunda hayata geçirilen yerli ve milli projelerle türkiye&#x27;nin çok katmanlı hava savunma mimarisini güçlendirdiklerini vurguladı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 10 Temmuz 2026, 12:47</span>
+        </div>
+        <h3>Savunma Sanayii Başkanı Görgün&#x27;den hava savunmada yerlilik vurgusu</h3>
+        <p>Savunma Sanayii Başkanı Haluk Görgün, Başkanlığın koordinasyonunda hayata geçirilen yerli ve milli projelerle Türkiye&#x27;nin çok katmanlı hava savunma mimarisini güçlendirdiklerini vurguladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Temmuz 2026, 12:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/savunma/savunma-sanayii-baskani-gorgunden-hava-savunmada-yerlilik-vurgusu-950852.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk lirasıyla dış ticaret 6 ayda 773 milyar liraya ulaştı türk lirasıyla dış ticaret, yılın ilk yarısında geçen yılın aynı dönemine kıyasla yüzde 10,7 artarak 772 milyar 945 milyon lirayı buldu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 10 Temmuz 2026, 11:50</span>
+        </div>
+        <h3>Türk lirasıyla dış ticaret 6 ayda 773 milyar liraya ulaştı</h3>
+        <p>Türk lirasıyla dış ticaret, yılın ilk yarısında geçen yılın aynı dönemine kıyasla yüzde 10,7 artarak 772 milyar 945 milyon lirayı buldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Temmuz 2026, 11:50</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turk-lirasiyla-dis-ticaret-6-ayda-773-milyar-liraya-ulasti-950849.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/ceqd8vq1l7lo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Türkiye'den AP'nin Kıbrıs kararına tepki: 'Alçakça iftiralar barındırıyor, yok hükmünde'</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇stanbul&#x27;da niğde tanıtım günleri başladı niğde valiliği himayesinde, niğde dernekler federasyonu (ni̇ğdef) öncülüğünde düzenlenen niğde tanıtım günleri, atatürk havalimanı millet bahçesi&#x27;ndeki törenle ziyaretçilere kapılarını açtı. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 10 Temmuz 2026, 12:35</span>
+        </div>
+        <h3>İstanbul&#x27;da Niğde Tanıtım Günleri başladı</h3>
+        <p>Niğde Valiliği himayesinde, Niğde Dernekler Federasyonu (NİĞDEF) öncülüğünde düzenlenen Niğde Tanıtım Günleri, Atatürk Havalimanı Millet Bahçesi&#x27;ndeki törenle ziyaretçilere kapılarını açtı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Temmuz 2026, 12:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-nigde-tanitim-gunleri-basladi-950850.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cyv0zg82m8ro?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>ABD-İran ateşkesi neden kalıcı olamadı, tarafların pozisyonları ne?</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/crlw6pp2r4lo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Netanyahu Cumhurbaşkanı Erdoğan'ı Trump'a şikayet etti</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c621m52lmv1o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Andy Burnham'ın 20 Temmuz'da İngiltere Başbakanı olması bekleniyor</strong>
-            </a>
-        </li>
 
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye, kıbrıs'ın kuzeyinde doğalgaz boru hattı inşa edecek
-            türkiye ve kıbrıs'ın kuzeyindeki türk yönetimi, yaklaşık 100 kilometrelik bir doğalgaz boru hattı için anlaşma imzalayacak. enerji bakanı alparslan bayraktar, hattın alanya'dan başlayarak kıbrıs'ın kuzeyine uzanmasını planladıklarını açıklamış, 2028'de faaliyete başlamasının planlandığını söylemişti.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Türkiye, Kıbrıs'ın kuzeyinde doğalgaz boru hattı inşa edecek</h3>
-                    <p>Türkiye ve Kıbrıs'ın kuzeyindeki Türk yönetimi, yaklaşık 100 kilometrelik bir doğalgaz boru hattı için anlaşma imzalayacak. Enerji Bakanı Alparslan Bayraktar, hattın Alanya'dan başlayarak Kıbrıs'ın kuzeyine uzanmasını planladıklarını açıklamış, 2028'de faaliyete başlamasının planlandığını söylemişti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c892jz3kgn5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye'den ap'nin kıbrıs kararına tepki: 'alçakça iftiralar barındırıyor, yok hükmünde'
-            türkiye, avrupa parlamentosu'nun (ap) 8 temmuz'da kıbrıs'la ilgili olarak aldığı karara tepki gösterdi. dışişleri bakanlığı'ndan 9 temmuz'da yapılan açıklamada, karar için "yok hükmünde" denildi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Türkiye'den AP'nin Kıbrıs kararına tepki: 'Alçakça iftiralar barındırıyor, yok hükmünde'</h3>
-                    <p>Türkiye, Avrupa Parlamentosu'nun (AP) 8 Temmuz'da Kıbrıs'la ilgili olarak aldığı karara tepki gösterdi. Dışişleri Bakanlığı'ndan 9 Temmuz'da yapılan açıklamada, karar için "yok hükmünde" denildi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/ceqd8vq1l7lo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd-i̇ran ateşkesi neden kalıcı olamadı, tarafların pozisyonları ne?
-            hürmüz boğazı, lübnan ve yatırım fonu; tahran ile washington'ın hala karşılıklı tavizlerin getireceği ortak faydalara odaklanmak yerine, savaş sonrası düzeni şekillendirmek için sert bir rekabet içinde kilitli kaldığını gösteriyor. bu da yıpratıcı çatışmadan çıkış yolunu bulmayı zorlaştırıyor.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD-İran ateşkesi neden kalıcı olamadı, tarafların pozisyonları ne?</h3>
-                    <p>Hürmüz Boğazı, Lübnan ve yatırım fonu; Tahran ile Washington'ın hala karşılıklı tavizlerin getireceği ortak faydalara odaklanmak yerine, savaş sonrası düzeni şekillendirmek için sert bir rekabet içinde kilitli kaldığını gösteriyor. Bu da yıpratıcı çatışmadan çıkış yolunu bulmayı zorlaştırıyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cyv0zg82m8ro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd, suriye'yi 'teröre destek veren ülkeler' listesinden çıkarıyor
-            abd başkanı donald trump, ülkesinin suriye'yi "teröre destek veren ülkeler" listesinden çıkaracağını açıkladı. trump bu kararını, nato zirvesi için gittiği ankara'da görüştüğü suriye'de geçiş yönetiminin devlet başkanı ahmed şara'ya iletti.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD, Suriye'yi 'teröre destek veren ülkeler' listesinden çıkarıyor</h3>
-                    <p>ABD Başkanı Donald Trump, ülkesinin Suriye'yi "teröre destek veren ülkeler" listesinden çıkaracağını açıkladı. Trump bu kararını, NATO Zirvesi için gittiği Ankara'da görüştüğü Suriye'de geçiş yönetiminin Devlet Başkanı Ahmed Şara'ya iletti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cjeg8v0e9g4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            ak parti sözcüsü çelik: türk silahlı kuvvetlerine yönelik alçakça bir iftiradır
-            ak parti genel başkan yardımcısı ve parti sözcüsü ömer çelik, "kahraman türk silahlı kuvvetleri tarihi şan ve şereflerle dolu asil bir ocaktır. avrupa parlamentosu’nda kabul edilen sözde karar, kahraman türk silahlı kuvvetlerine yönelik alçakça bir iftiradır. bu sözde kararı kınıyoruz" dedi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>AK Parti Sözcüsü Çelik: Türk Silahlı Kuvvetlerine yönelik alçakça bir iftiradır</h3>
-                    <p>AK Parti Genel Başkan Yardımcısı ve Parti Sözcüsü Ömer Çelik, "Kahraman Türk Silahlı Kuvvetleri tarihi şan ve şereflerle dolu asil bir ocaktır. Avrupa Parlamentosu’nda kabul edilen sözde karar, kahraman Türk Silahlı Kuvvetlerine yönelik alçakça bir iftiradır. Bu sözde kararı kınıyoruz" dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/ak-parti-sozcusu-celik-turk-silahli-kuvvetlerine-yonelik-alcakca-bir-iftiradir-950854.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            ak parti sözcüsü çelik'ten avrupa parlamentosunun kararına tepki
-            ak parti genel başkan yardımcısı ve parti sözcüsü ömer çelik, "avrupa parlamentosunda kabul edilen sözde karar, kahraman türk silahlı kuvvetlerine yönelik alçakça bir iftiradır. bu sözde kararı kınıyoruz." ifadesini kullandı.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>AK Parti Sözcüsü Çelik'ten Avrupa Parlamentosunun kararına tepki</h3>
-                    <p>AK Parti Genel Başkan Yardımcısı ve Parti Sözcüsü Ömer Çelik, "Avrupa Parlamentosunda kabul edilen sözde karar, kahraman Türk Silahlı Kuvvetlerine yönelik alçakça bir iftiradır. Bu sözde kararı kınıyoruz." ifadesini kullandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/ak-parti-sozcusu-celikten-avrupa-parlamentosunun-kararina-tepki-950848.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            hamaney'in cenazesi meşhed'de toprağa verildi, oğlu görülmedi
-            suikasta uğrayan i̇ran'ın dini lideri ali hamaney için ölümünden yaklaşık dört ay sonra düzenlenen "veda ve cenaze" töreni tamamlandı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Hamaney'in cenazesi Meşhed'de toprağa verildi, oğlu görülmedi</h3>
-                    <p>Suikasta uğrayan İran'ın dini lideri Ali Hamaney için ölümünden yaklaşık dört ay sonra düzenlenen "veda ve cenaze" töreni tamamlandı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/clyrxndzv9zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ran'ın eski lideri hamaney bir hafta süren törenlerin ardından meşhed'de defnedildi
-            abd-i̇srail saldırılarında hayatını kaybeden i̇ran'ın eski lideri ayetullah ali hamaney, i̇ran ve irak'ın çeşitli kentlerinde bir hafta süren cenaze törenlerinin ardından doğum yeri olan meşhed kentinde defnedildi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>İran'ın eski lideri Hamaney bir hafta süren törenlerin ardından Meşhed'de defnedildi</h3>
-                    <p>ABD-İsrail saldırılarında hayatını kaybeden İran'ın eski lideri Ayetullah Ali Hamaney, İran ve Irak'ın çeşitli kentlerinde bir hafta süren cenaze törenlerinin ardından doğum yeri olan Meşhed kentinde defnedildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/iranin-eski-lideri-hamaney-bir-hafta-suren-torenlerin-ardindan-meshedde-defnedildi-950855.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">TEKNOLOJI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            netanyahu cumhurbaşkanı erdoğan'ı trump'a şikayet etti
-            i̇ki lider nato zirvesi sonrası telefonda görüştü. afp'ye göre netanyahu, "cumhurbaşkanı recep tayyip erdoğan ve çevresinin, i̇srail devletinin varlığını sorgulayan ve i̇srail sınırları boyunca güvenlik bölgeleri kurulması gerektiğine yönelik açıklamalar yaptığını" söyledi.
-            teknoloji
-            bbc türkçe
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Netanyahu Cumhurbaşkanı Erdoğan'ı Trump'a şikayet etti</h3>
-                    <p>İki lider NATO Zirvesi sonrası telefonda görüştü. AFP'ye göre Netanyahu, "Cumhurbaşkanı Recep Tayyip Erdoğan ve çevresinin, İsrail devletinin varlığını sorgulayan ve İsrail sınırları boyunca güvenlik bölgeleri kurulması gerektiğine yönelik açıklamalar yaptığını" söyledi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/crlw6pp2r4lo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            andy burnham'ın 20 temmuz'da i̇ngiltere başbakanı olması bekleniyor
-            i̇ngiltere'de eski manchester belediye başkanı andy burnham, iktidardaki i̇şçi partisi'nin milletvekillerinin büyük çoğunluğu tarafından genel başkanlığa aday gösterildi. partinin 403 milletvekilinden 322'si, burnham'a destek verdi.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Andy Burnham'ın 20 Temmuz'da İngiltere Başbakanı olması bekleniyor</h3>
-                    <p>İngiltere'de eski Manchester Belediye Başkanı Andy Burnham, iktidardaki İşçi Partisi'nin milletvekillerinin büyük çoğunluğu tarafından genel başkanlığa aday gösterildi. Partinin 403 milletvekilinden 322'si, Burnham'a destek verdi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c621m52lmv1o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            bakan gürlek: faili meçhul dosyaları yeniden ve çok yönlü olarak inceleyerek aydınlatıyoruz
-            bakan gürlek, diyarbakır’ın çermik ilçesinde 18 nisan 2016 tarihinde başından vurularak öldürülen 22 yaşındaki mehmet emin karaalp’in faili meçhul kalan cinayetinin, 10 yıl sonra yeniden ele alınarak ve aydınlatıldığını duyurdu.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Bakan Gürlek: Faili meçhul dosyaları yeniden ve çok yönlü olarak inceleyerek aydınlatıyoruz</h3>
-                    <p>Bakan Gürlek, Diyarbakır’ın Çermik ilçesinde 18 Nisan 2016 tarihinde başından vurularak öldürülen 22 yaşındaki Mehmet Emin Karaalp’in faili meçhul kalan cinayetinin, 10 yıl sonra yeniden ele alınarak ve aydınlatıldığını duyurdu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/bakan-gurlek-faili-mechul-dosyalari-yeniden-ve-cok-yonlu-olarak-inceleyerek-aydinlatiyoruz-950853.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            lgs sonuçları açıklandı: 452 öğrenci tam puan aldı
-            bir milyondan fazla öğrencinin katıldığı liselere geçiş sistemi (lgs) kapsamındaki merkezi sınavın sonuçları açıklandı
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>LGS sonuçları açıklandı: 452 öğrenci tam puan aldı</h3>
-                    <p>Bir milyondan fazla öğrencinin katıldığı Liselere Geçiş Sistemi (LGS) kapsamındaki merkezi sınavın sonuçları açıklandı</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c8d2mr6lvglo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            bakan ersoy'dan ayasofya'nın yeniden ibadete açılmasının 6. yılına ilişkin paylaşım
-            kültür ve turizm bakanı mehmet nuri ersoy, ayasofya-i kebir cami-i şerifi'nin yeniden ibadete açılmasının 6'ncı yıl dönümüne ilişkin paylaşımda bulundu.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Bakan Ersoy'dan Ayasofya'nın yeniden ibadete açılmasının 6. yılına ilişkin paylaşım</h3>
-                    <p>Kültür ve Turizm Bakanı Mehmet Nuri Ersoy, Ayasofya-i Kebir Cami-i Şerifi'nin yeniden ibadete açılmasının 6'ncı yıl dönümüne ilişkin paylaşımda bulundu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/bakan-ersoydan-ayasofyanin-yeniden-ibadete-acilmasinin-6-yilina-iliskin-paylasim-950851.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            milli eğitim bakanlığı lgs raporunu yayımladı
-            milli eğitim bakanlığınca (meb) liselere geçiş sistemi (lgs) kapsamındaki merkezi sınavda tüm soruları doğru yanıtlayan 452 öğrencinin, ülke genelindeki 383 farklı binada sınava girdiği belirlendi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Milli Eğitim Bakanlığı LGS raporunu yayımladı</h3>
-                    <p>Milli Eğitim Bakanlığınca (MEB) Liselere Geçiş Sistemi (LGS) kapsamındaki merkezi sınavda tüm soruları doğru yanıtlayan 452 öğrencinin, ülke genelindeki 383 farklı binada sınava girdiği belirlendi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/egitim/milli-egitim-bakanligi-lgs-raporunu-yayimladi-950847.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            reuters: türkiye, bazı nato üyelerinin savunma bankası girişimine katılmıyor
-            reuters haber ajansına konuşan bir türk yetkili, nato müttefiklerinden oluşacak küresel savunma bankası girişimine katılmayacaklarını söyledi.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Reuters: Türkiye, bazı NATO üyelerinin savunma bankası girişimine katılmıyor</h3>
-                    <p>Reuters haber ajansına konuşan bir Türk yetkili, NATO müttefiklerinden oluşacak küresel savunma bankası girişimine katılmayacaklarını söyledi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c4gyd2np25yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            dünya kupası'nda fransa'nın yarı finaldeki rakibi belli oluyor
-            dünya kupası'nda yarı finale yükselen ilk takım fransa oldu. fransa, turnuvada boston'da oynanan ilk çeyrek final maçında fas'ı 2-0 mağlup etti.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Dünya Kupası'nda Fransa'nın yarı finaldeki rakibi belli oluyor</h3>
-                    <p>Dünya Kupası'nda yarı finale yükselen ilk takım Fransa oldu. Fransa, turnuvada Boston'da oynanan ilk çeyrek final maçında Fas'ı 2-0 mağlup etti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yey6mny64o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">EKONOMI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            ticaret bakanlığından ambalajlı su fiyatlarına yönelik inceleme
-            ticaret bakanlığı ekipleri, plastik, cam ve metal ambalajlı içeceklerde uygulanan depozito katılım payının güncellenmesi sonrasında haksız fiyat artışlarının önüne geçilmesi amacıyla denetim gerçekleştirdi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Ticaret Bakanlığından Ambalajlı su fiyatlarına yönelik inceleme</h3>
-                    <p>Ticaret Bakanlığı ekipleri, plastik, cam ve metal ambalajlı içeceklerde uygulanan depozito katılım payının güncellenmesi sonrasında haksız fiyat artışlarının önüne geçilmesi amacıyla denetim gerçekleştirdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/ticaret-bakanligindan-ambalajli-su-fiyatlarina-yonelik-inceleme-950856.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            savunma sanayii başkanı görgün'den hava savunmada yerlilik vurgusu
-            savunma sanayii başkanı haluk görgün, başkanlığın koordinasyonunda hayata geçirilen yerli ve milli projelerle türkiye'nin çok katmanlı hava savunma mimarisini güçlendirdiklerini vurguladı.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Savunma Sanayii Başkanı Görgün'den hava savunmada yerlilik vurgusu</h3>
-                    <p>Savunma Sanayii Başkanı Haluk Görgün, Başkanlığın koordinasyonunda hayata geçirilen yerli ve milli projelerle Türkiye'nin çok katmanlı hava savunma mimarisini güçlendirdiklerini vurguladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/savunma/savunma-sanayii-baskani-gorgunden-hava-savunmada-yerlilik-vurgusu-950852.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            türk lirasıyla dış ticaret 6 ayda 773 milyar liraya ulaştı
-            türk lirasıyla dış ticaret, yılın ilk yarısında geçen yılın aynı dönemine kıyasla yüzde 10,7 artarak 772 milyar 945 milyon lirayı buldu.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Türk lirasıyla dış ticaret 6 ayda 773 milyar liraya ulaştı</h3>
-                    <p>Türk lirasıyla dış ticaret, yılın ilk yarısında geçen yılın aynı dönemine kıyasla yüzde 10,7 artarak 772 milyar 945 milyon lirayı buldu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/turk-lirasiyla-dis-ticaret-6-ayda-773-milyar-liraya-ulasti-950849.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GÜMRÜK</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            i̇stanbul'da niğde tanıtım günleri başladı
-            niğde valiliği himayesinde, niğde dernekler federasyonu (ni̇ğdef) öncülüğünde düzenlenen niğde tanıtım günleri, atatürk havalimanı millet bahçesi'ndeki törenle ziyaretçilere kapılarını açtı.
-            gümrük
-            trt haber
-            "
-                    data-category="gümrük"
-                >
-                    <h3>İstanbul'da Niğde Tanıtım Günleri başladı</h3>
-                    <p>Niğde Valiliği himayesinde, Niğde Dernekler Federasyonu (NİĞDEF) öncülüğünde düzenlenen Niğde Tanıtım Günleri, Atatürk Havalimanı Millet Bahçesi'ndeki törenle ziyaretçilere kapılarını açtı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/istanbulda-nigde-tanitim-gunleri-basladi-950850.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

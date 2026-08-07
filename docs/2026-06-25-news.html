@@ -1,486 +1,460 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
     <link rel="stylesheet" href="assets/css/news.css">
     <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <header class="site-nav">
-        <div class="nav-inner">
-            <div class="brand">AI News</div>
-            <a href="index.html">Current News</a>
-            <a href="archive.html">Archive</a>
-            <a href="search.html">Search</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
         </div>
     </header>
 
     <main class="site-wrapper">
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-text">
             <h1>Günün Haberleri</h1>
-            <div class="search-box">
-                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            <p class="hero-date">25 Haziran 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>genel</strong> 12</span><span class="stat-item"><strong>ekonomi</strong> 1</span><span class="stat-item"><strong>spor</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Rusya: Batı Avrupa, Ukrayna&#x27;da barışın sağlanmasında en büyük engel</h3>
+        <p>Rusya Dışişleri Bakanlığı Sözcüsü Mariya Zaharova, Batı Avrupa&#x27;nın Ukrayna&#x27;da barışın sağlanmasında en büyük engel olduğunu belirterek, &quot;Terör saldırılarını destekleyerek, barışçıl arabulucu olmak mümkün değil.&quot; dedi.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 25 Haziran 2026, 23:16</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/rusya-bati-avrupa-ukraynada-barisin-saglanmasinda-en-buyuk-engel-949358.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 25 Haziran 2026, 21:18</span>
             </div>
-
-            <div class="category-filters">
-                <button class="category-filter-btn active" data-category="all">Tümü</button>
-                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                <button class="category-filter-btn" data-category="genel">Genel</button>
+            <h3>Venezuela&#x27;da 7,2 ve 7,5 büyüklüğünde iki deprem: Can kaybı 188&#x27;e yükseldi</h3>
+            <p>Venezuela&#x27;da 24 Haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 188 kişi öldü, 1500&#x27;den fazla yaralı var. Venezuela Devlet Başkanlığı görevini vekaleten yürüten Delcy Rodriguez, ülke genelinde olağanüstü hal ilan edildiğini duyurdu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">TRT Haber · 25 Haziran 2026, 22:14</span>
             </div>
-        </section>
-
-        <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+            <h3>Fidan&#x27;dan depremle sarsılan Venezuela&#x27;ya destek mesajı</h3>
+            <p>Dışişleri Bakanı Hakan Fidan, Venezuela Dışişleri Bakanı Yvan Gil ile yaşanan deprem felaketine ve ihtiyaç duyulan yardıma dair telefonda görüştü.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/fidandan-depremle-sarsilan-venezuelaya-destek-mesaji-949353.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
-
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>5</span>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 25 Haziran 2026, 22:00</span>
+            </div>
+            <h3>Yusuf Ziya Gümüşel ve Kadir İstekli&#x27;ye &#x27;sahte kemik yaşı raporu&#x27; davasında beşer yıl hapis: Karar neden önemli?</h3>
+            <p>Hiranur Vakfı kurucusu Yusuf Ziya Gümüşel ve reşit olmayan kızını evlendirdiği Kadir İstekli dahil dört sanık, çocuğun kemik yaşını büyütmek üzere evrakta sahtecilik yapmaktan beşer yıl hapis cezasına çaptırıldı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cx2wd5drv6lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
-
-        <div class="stat-card">
-            <strong>teknoloji</strong>
-            <span>1</span>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 25 Haziran 2026, 15:13</span>
+            </div>
+            <h3>Türkiye Dünya Kupası&#x27;nda son maçında ABD&#x27;yle karşılaşacak</h3>
+            <p>2026 FIFA Dünya Kupası&#x27;ndan elenen Türkiye A Milli Futbol Takımı, turnuvada D Grubu&#x27;nda üçüncü ve son maçında TSİ 05.00&#x27;te ev sahiplerinden ABD ile karşı karşıya gelecek. Los Angeles&#x27;taki SoFi Stadyumu&#x27;nda oynanacak maçı Cezayir Futbol Federasyonu&#x27;ndan Mustapha Ghorbal yönetecek.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c9826y6grz2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>12</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>1</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="rusya: batı avrupa, ukrayna&#x27;da barışın sağlanmasında en büyük engel rusya dışişleri bakanlığı sözcüsü mariya zaharova, batı avrupa&#x27;nın ukrayna&#x27;da barışın sağlanmasında en büyük engel olduğunu belirterek, &quot;terör saldırılarını destekleyerek, barışçıl arabulucu olmak mümkün değil.&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 25 Haziran 2026, 23:16</span>
         </div>
-
-        <div class="stat-card">
-            <strong>spor</strong>
-            <span>1</span>
+        <h3>Rusya: Batı Avrupa, Ukrayna&#x27;da barışın sağlanmasında en büyük engel</h3>
+        <p>Rusya Dışişleri Bakanlığı Sözcüsü Mariya Zaharova, Batı Avrupa&#x27;nın Ukrayna&#x27;da barışın sağlanmasında en büyük engel olduğunu belirterek, &quot;Terör saldırılarını destekleyerek, barışçıl arabulucu olmak mümkün değil.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Haziran 2026, 23:16</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/rusya-bati-avrupa-ukraynada-barisin-saglanmasinda-en-buyuk-engel-949358.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="venezuela&#x27;da 7,2 ve 7,5 büyüklüğünde iki deprem: can kaybı 188&#x27;e yükseldi venezuela&#x27;da 24 haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 188 kişi öldü, 1500&#x27;den fazla yaralı var. venezuela devlet başkanlığı görevini vekaleten yürüten delcy rodriguez, ülke genelinde olağanüstü hal ilan edildiğini duyurdu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 25 Haziran 2026, 21:18</span>
         </div>
-
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-06-25 23:29</span>
+        <h3>Venezuela&#x27;da 7,2 ve 7,5 büyüklüğünde iki deprem: Can kaybı 188&#x27;e yükseldi</h3>
+        <p>Venezuela&#x27;da 24 Haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 188 kişi öldü, 1500&#x27;den fazla yaralı var. Venezuela Devlet Başkanlığı görevini vekaleten yürüten Delcy Rodriguez, ülke genelinde olağanüstü hal ilan edildiğini duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Haziran 2026, 21:18</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yusuf ziya gümüşel ve kadir i̇stekli&#x27;ye &#x27;sahte kemik yaşı raporu&#x27; davasında beşer yıl hapis: karar neden önemli? hiranur vakfı kurucusu yusuf ziya gümüşel ve reşit olmayan kızını evlendirdiği kadir i̇stekli dahil dört sanık, çocuğun kemik yaşını büyütmek üzere evrakta sahtecilik yapmaktan beşer yıl hapis cezasına çaptırıldı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 25 Haziran 2026, 22:00</span>
         </div>
+        <h3>Yusuf Ziya Gümüşel ve Kadir İstekli&#x27;ye &#x27;sahte kemik yaşı raporu&#x27; davasında beşer yıl hapis: Karar neden önemli?</h3>
+        <p>Hiranur Vakfı kurucusu Yusuf Ziya Gümüşel ve reşit olmayan kızını evlendirdiği Kadir İstekli dahil dört sanık, çocuğun kemik yaşını büyütmek üzere evrakta sahtecilik yapmaktan beşer yıl hapis cezasına çaptırıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Haziran 2026, 22:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx2wd5drv6lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye dünya kupası&#x27;nda son maçında abd&#x27;yle karşılaşacak 2026 fifa dünya kupası&#x27;ndan elenen türkiye a milli futbol takımı, turnuvada d grubu&#x27;nda üçüncü ve son maçında tsi̇ 05.00&#x27;te ev sahiplerinden abd ile karşı karşıya gelecek. los angeles&#x27;taki sofi stadyumu&#x27;nda oynanacak maçı cezayir futbol federasyonu&#x27;ndan mustapha ghorbal yönetecek. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 25 Haziran 2026, 15:13</span>
+        </div>
+        <h3>Türkiye Dünya Kupası&#x27;nda son maçında ABD&#x27;yle karşılaşacak</h3>
+        <p>2026 FIFA Dünya Kupası&#x27;ndan elenen Türkiye A Milli Futbol Takımı, turnuvada D Grubu&#x27;nda üçüncü ve son maçında TSİ 05.00&#x27;te ev sahiplerinden ABD ile karşı karşıya gelecek. Los Angeles&#x27;taki SoFi Stadyumu&#x27;nda oynanacak maçı Cezayir Futbol Federasyonu&#x27;ndan Mustapha Ghorbal yönetecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Haziran 2026, 15:13</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9826y6grz2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul havalimanı liderliğini sürdürüyor i̇stanbul havalimanı, 15-21 haziran&#x27;da günlük ortalama 1502 uçuşla avrupa&#x27;nın en yoğun havalimanı olarak kayıtlara geçti. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 25 Haziran 2026, 21:45</span>
+        </div>
+        <h3>İstanbul Havalimanı liderliğini sürdürüyor</h3>
+        <p>İstanbul Havalimanı, 15-21 Haziran&#x27;da günlük ortalama 1502 uçuşla Avrupa&#x27;nın en yoğun havalimanı olarak kayıtlara geçti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Haziran 2026, 21:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbul-havalimani-liderligini-surduruyor-949351.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="fidan&#x27;dan depremle sarsılan venezuela&#x27;ya destek mesajı dışişleri bakanı hakan fidan, venezuela dışişleri bakanı yvan gil ile yaşanan deprem felaketine ve ihtiyaç duyulan yardıma dair telefonda görüştü. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 25 Haziran 2026, 22:14</span>
+        </div>
+        <h3>Fidan&#x27;dan depremle sarsılan Venezuela&#x27;ya destek mesajı</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, Venezuela Dışişleri Bakanı Yvan Gil ile yaşanan deprem felaketine ve ihtiyaç duyulan yardıma dair telefonda görüştü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Haziran 2026, 22:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/fidandan-depremle-sarsilan-venezuelaya-destek-mesaji-949353.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">12 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="haiti iki kez öne geçti, fas son sözü söyledi soufiane rahimi ve gessime yassine&#x27;in maçın son bölümünde attığı goller, haiti&#x27;nin fas karşısında ilk puanını almasının önüne geçti. dünya kupası c grubu son maçında fas, atlanta&#x27;da haiti&#x27;yi 4-2 mağlup etti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Haziran 2026, 07:26</span>
+        </div>
+        <h3>Haiti iki kez öne geçti, Fas son sözü söyledi</h3>
+        <p>Soufiane Rahimi ve Gessime Yassine&#x27;in maçın son bölümünde attığı goller, Haiti&#x27;nin Fas karşısında ilk puanını almasının önüne geçti. Dünya Kupası C Grubu son maçında Fas, Atlanta&#x27;da Haiti&#x27;yi 4-2 mağlup etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Haziran 2026, 07:26</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c98r85zyg2yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çelik, uclg başkanlığına seçilen altay&#x27;ı tebrik etti ak parti genel başkan yardımcısı ve parti sözcüsü ömer çelik, birleşmiş kentler ve yerel yönetimler dünya teşkilatı (uclg) başkanlığına seçilen konya büyükşehir belediye başkanı uğur i̇brahim altay&#x27;ı tebrik etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Haziran 2026, 23:17</span>
+        </div>
+        <h3>Çelik, UCLG Başkanlığına seçilen Altay&#x27;ı tebrik etti</h3>
+        <p>AK Parti Genel Başkan Yardımcısı ve Parti Sözcüsü Ömer Çelik, Birleşmiş Kentler ve Yerel Yönetimler Dünya Teşkilatı (UCLG) Başkanlığına seçilen Konya Büyükşehir Belediye Başkanı Uğur İbrahim Altay&#x27;ı tebrik etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Haziran 2026, 23:17</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/celik-uclg-baskanligina-secilen-altayi-tebrik-etti-949355.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="venezuela&#x27;daki depremlerde en az 188 kişi öldü, bin 520 kişi yaralandı venezuela geçici devlet başkanı delcy rodriguez, ülkedeki depremlerde en az 188 kişinin yaşamını yitirdiğini, bin 520 kişinin yaralandığını bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Haziran 2026, 21:04</span>
+        </div>
+        <h3>Venezuela&#x27;daki depremlerde en az 188 kişi öldü, bin 520 kişi yaralandı</h3>
+        <p>Venezuela Geçici Devlet Başkanı Delcy Rodriguez, ülkedeki depremlerde en az 188 kişinin yaşamını yitirdiğini, bin 520 kişinin yaralandığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Haziran 2026, 21:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/venezueladaki-depremlerde-en-az-188-kisi-oldu-bin-520-kisi-yaralandi-949350.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇letişim başkanlığından sofya&#x27;da nato paneli i̇letişim başkanlığı, bulgaristan’ın başkenti sofya’da, center for the study of democracy democracy (csd) isimli düşünce kuruluşu iş birliğinde “nato’da bölgesel güvenliği yeniden düşünmek: dayanıklılık, i̇ş birliği ve türkiye-bulgaristan ekseni” başlıklı yuvarlak masa toplantısı düzenledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Haziran 2026, 20:24</span>
+        </div>
+        <h3>İletişim Başkanlığından Sofya&#x27;da NATO paneli</h3>
+        <p>İletişim Başkanlığı, Bulgaristan’ın başkenti Sofya’da, Center for the Study of Democracy Democracy (CSD) isimli düşünce kuruluşu iş birliğinde “NATO’da Bölgesel Güvenliği Yeniden Düşünmek: Dayanıklılık, İş Birliği ve Türkiye-Bulgaristan Ekseni” başlıklı yuvarlak masa toplantısı düzenledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Haziran 2026, 20:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/iletisim-baskanligindan-sofyada-nato-paneli-949349.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="104 maçı canlı takip edin hiçbir golü kaçırmayın: takvim ve anlık sonuçlar genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 4 Haziran 2026, 10:01</span>
+        </div>
+        <h3>104 maçı canlı takip edin</h3>
+        <p>Hiçbir golü kaçırmayın: Takvim ve anlık sonuçlar</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Haziran 2026, 10:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq8pljlkx0wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato zirvesi öncesi ankara&#x27;da 103 kişi tutuklandı ankara&#x27;da gelecek ay düzenlenmesi planlanan nato zirvesi öncesinde ankara ve i̇stanbul&#x27;da yapılan operasyonlarda 233 kişi gözaltına alındı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Haziran 2026, 23:08</span>
+        </div>
+        <h3>NATO zirvesi öncesi Ankara&#x27;da 103 kişi tutuklandı</h3>
+        <p>Ankara&#x27;da gelecek ay düzenlenmesi planlanan NATO zirvesi öncesinde Ankara ve İstanbul&#x27;da yapılan operasyonlarda 233 kişi gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Haziran 2026, 23:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwyd855ee7po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nevşehir, keçiören ve keşan belediye başkanları akp&#x27;ye geçti i̇yi̇ partili nevşehir belediye başkanı rasim arı ile chp&#x27;den istifa eden keçiören belediye başkanı mesut özarslan ve keşan belediye başkanı mehmet özcan akp&#x27;ye katıldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Haziran 2026, 16:01</span>
+        </div>
+        <h3>Nevşehir, Keçiören ve Keşan belediye başkanları AKP&#x27;ye geçti</h3>
+        <p>İYİ Partili Nevşehir Belediye Başkanı Rasim Arı ile CHP&#x27;den istifa eden Keçiören Belediye Başkanı Mesut Özarslan ve Keşan Belediye Başkanı Mehmet Özcan AKP&#x27;ye katıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Haziran 2026, 16:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cly89jlg531o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇skoçya&#x27;nın dünya kupası&#x27;nda tur umutları tehlikede i̇skoçya&#x27;nın dünya kupası&#x27;nda tarihinde ilk kez eleme turlarına yükselme umutları, miami&#x27;de brezilya&#x27;ya 3-0 mağlup olmasının ardından büyük tehlikeye girdi genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Haziran 2026, 06:59</span>
+        </div>
+        <h3>İskoçya&#x27;nın Dünya Kupası&#x27;nda tur umutları tehlikede</h3>
+        <p>İskoçya&#x27;nın Dünya Kupası&#x27;nda tarihinde ilk kez eleme turlarına yükselme umutları, Miami&#x27;de Brezilya&#x27;ya 3-0 mağlup olmasının ardından büyük tehlikeye girdi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Haziran 2026, 06:59</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx2vlxvxnd4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meksika üçte üç yaptı, çekya&#x27;yı dünya kupası&#x27;nın dışına itti meksika, ikinci yarıda bulduğu üç golle çekya&#x27;yı dünya kupası&#x27;ndan eledi ve grup aşamasını üçte üç yaparak tamamladı genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Haziran 2026, 07:08</span>
+        </div>
+        <h3>Meksika üçte üç yaptı, Çekya&#x27;yı Dünya Kupası&#x27;nın dışına itti</h3>
+        <p>Meksika, ikinci yarıda bulduğu üç golle Çekya&#x27;yı Dünya Kupası&#x27;ndan eledi ve grup aşamasını üçte üç yaparak tamamladı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Haziran 2026, 07:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5y71y5eq9ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="konya büyükşehir belediye başkanı altay uclg başkanı oldu konya büyükşehir belediye başkanı uğur i̇brahim altay, birleşmiş kentler ve yerel yönetimler dünya teşkilatı (uclg) başkanlığına seçildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Haziran 2026, 23:12</span>
+        </div>
+        <h3>Konya Büyükşehir Belediye Başkanı Altay UCLG başkanı oldu</h3>
+        <p>Konya Büyükşehir Belediye Başkanı Uğur İbrahim Altay, Birleşmiş Kentler ve Yerel Yönetimler Dünya Teşkilatı (UCLG) Başkanlığına seçildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Haziran 2026, 23:12</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/konya-buyuksehir-belediye-baskani-altay-uclg-baskani-oldu-949357.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="terör örgütlerine yönelik operasyonlarda 103 tutuklama ankara cumhuriyet başsavcılığı koordinesinde, terör örgütlerine yönelik yürütülen soruşturma kapsamında gözaltına alınan 225 şüpheliden 103&#x27;ü tutuklandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Haziran 2026, 22:48</span>
+        </div>
+        <h3>Terör örgütlerine yönelik operasyonlarda 103 tutuklama</h3>
+        <p>Ankara Cumhuriyet Başsavcılığı koordinesinde, terör örgütlerine yönelik yürütülen soruşturma kapsamında gözaltına alınan 225 şüpheliden 103&#x27;ü tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Haziran 2026, 22:48</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/teror-orgutlerine-yonelik-operasyonlarda-103-tutuklama-949354.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fransa tarihinin en sıcak gecesini yaşadı fransa&#x27;da &quot;hava durumu kayıtlarının alınmaya başladığı 1947&#x27;den bu yana en sıcak gece&quot; yaşandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Haziran 2026, 20:20</span>
+        </div>
+        <h3>Fransa tarihinin en sıcak gecesini yaşadı</h3>
+        <p>Fransa&#x27;da &quot;hava durumu kayıtlarının alınmaya başladığı 1947&#x27;den bu yana en sıcak gece&quot; yaşandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Haziran 2026, 20:20</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/fransa-tarihinin-en-sicak-gecesini-yasadi-949348.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/dunya/rusya-bati-avrupa-ukraynada-barisin-saglanmasinda-en-buyuk-engel-949358.html" target="_blank">
-                <strong>Rusya: Batı Avrupa, Ukrayna'da barışın sağlanmasında en büyük engel</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="rutte: aselsan, türkiye&#x27;nin savunma sanayisi devrimine öncülük ediyor nato genel sekreteri mark rutte, türkiye&#x27;nin en büyük savunma elektroniği şirketi aselsan&#x27;ın nato&#x27;nun her üyesine fayda sağlayacak savunma sanayisi devrimine öncülük ettiğini, ankara zirvesi&#x27;nde büyük bir savunma sanayisi günü düzenleneceğini söyledi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 25 Haziran 2026, 21:53</span>
+        </div>
+        <h3>Rutte: ASELSAN, Türkiye&#x27;nin savunma sanayisi devrimine öncülük ediyor</h3>
+        <p>NATO Genel Sekreteri Mark Rutte, Türkiye&#x27;nin en büyük savunma elektroniği şirketi ASELSAN&#x27;ın NATO&#x27;nun her üyesine fayda sağlayacak savunma sanayisi devrimine öncülük ettiğini, Ankara Zirvesi&#x27;nde büyük bir savunma sanayisi günü düzenleneceğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Haziran 2026, 21:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/rutte-aselsan-turkiyenin-savunma-sanayisi-devrimine-onculuk-ediyor-949352.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Venezuela'da 7,2 ve 7,5 büyüklüğünde iki deprem: Can kaybı 188'e yükseldi</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="montella: i̇stifa etmeyeceğim, daha da güçlendim türkiye a milli erkek futbol takımı teknik direktörü vincenzo montella, takımının ikinci maçlar sonunda 2026 dünya kupası&#x27;ndan elenmesinin ardından görevinden istifa etmeyeceğini söyledi spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 25 Haziran 2026, 04:39</span>
+        </div>
+        <h3>Montella: İstifa etmeyeceğim, daha da güçlendim</h3>
+        <p>Türkiye A Milli Erkek Futbol Takımı Teknik Direktörü Vincenzo Montella, takımının ikinci maçlar sonunda 2026 Dünya Kupası&#x27;ndan elenmesinin ardından görevinden istifa etmeyeceğini söyledi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Haziran 2026, 04:39</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj0g70g17m9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/gundem/fidandan-depremle-sarsilan-venezuelaya-destek-mesaji-949353.html" target="_blank">
-                <strong>Fidan'dan depremle sarsılan Venezuela'ya destek mesajı</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cx2wd5drv6lo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Yusuf Ziya Gümüşel ve Kadir İstekli'ye 'sahte kemik yaşı raporu' davasında beşer yıl hapis: Karar neden önemli?</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c9826y6grz2o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Türkiye Dünya Kupası'nda son maçında ABD'yle karşılaşacak</strong>
-            </a>
-        </li>
 
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            rusya: batı avrupa, ukrayna'da barışın sağlanmasında en büyük engel
-            rusya dışişleri bakanlığı sözcüsü mariya zaharova, batı avrupa'nın ukrayna'da barışın sağlanmasında en büyük engel olduğunu belirterek, "terör saldırılarını destekleyerek, barışçıl arabulucu olmak mümkün değil." dedi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Rusya: Batı Avrupa, Ukrayna'da barışın sağlanmasında en büyük engel</h3>
-                    <p>Rusya Dışişleri Bakanlığı Sözcüsü Mariya Zaharova, Batı Avrupa'nın Ukrayna'da barışın sağlanmasında en büyük engel olduğunu belirterek, "Terör saldırılarını destekleyerek, barışçıl arabulucu olmak mümkün değil." dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/rusya-bati-avrupa-ukraynada-barisin-saglanmasinda-en-buyuk-engel-949358.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            venezuela'da 7,2 ve 7,5 büyüklüğünde iki deprem: can kaybı 188'e yükseldi
-            venezuela'da 24 haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 188 kişi öldü, 1500'den fazla yaralı var. venezuela devlet başkanlığı görevini vekaleten yürüten delcy rodriguez, ülke genelinde olağanüstü hal ilan edildiğini duyurdu.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Venezuela'da 7,2 ve 7,5 büyüklüğünde iki deprem: Can kaybı 188'e yükseldi</h3>
-                    <p>Venezuela'da 24 Haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde en az 188 kişi öldü, 1500'den fazla yaralı var. Venezuela Devlet Başkanlığı görevini vekaleten yürüten Delcy Rodriguez, ülke genelinde olağanüstü hal ilan edildiğini duyurdu.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            yusuf ziya gümüşel ve kadir i̇stekli'ye 'sahte kemik yaşı raporu' davasında beşer yıl hapis: karar neden önemli?
-            hiranur vakfı kurucusu yusuf ziya gümüşel ve reşit olmayan kızını evlendirdiği kadir i̇stekli dahil dört sanık, çocuğun kemik yaşını büyütmek üzere evrakta sahtecilik yapmaktan beşer yıl hapis cezasına çaptırıldı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Yusuf Ziya Gümüşel ve Kadir İstekli'ye 'sahte kemik yaşı raporu' davasında beşer yıl hapis: Karar neden önemli?</h3>
-                    <p>Hiranur Vakfı kurucusu Yusuf Ziya Gümüşel ve reşit olmayan kızını evlendirdiği Kadir İstekli dahil dört sanık, çocuğun kemik yaşını büyütmek üzere evrakta sahtecilik yapmaktan beşer yıl hapis cezasına çaptırıldı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cx2wd5drv6lo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye dünya kupası'nda son maçında abd'yle karşılaşacak
-            2026 fifa dünya kupası'ndan elenen türkiye a milli futbol takımı, turnuvada d grubu'nda üçüncü ve son maçında tsi̇ 05.00'te ev sahiplerinden abd ile karşı karşıya gelecek. los angeles'taki sofi stadyumu'nda oynanacak maçı cezayir futbol federasyonu'ndan mustapha ghorbal yönetecek.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Türkiye Dünya Kupası'nda son maçında ABD'yle karşılaşacak</h3>
-                    <p>2026 FIFA Dünya Kupası'ndan elenen Türkiye A Milli Futbol Takımı, turnuvada D Grubu'nda üçüncü ve son maçında TSİ 05.00'te ev sahiplerinden ABD ile karşı karşıya gelecek. Los Angeles'taki SoFi Stadyumu'nda oynanacak maçı Cezayir Futbol Federasyonu'ndan Mustapha Ghorbal yönetecek.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c9826y6grz2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇stanbul havalimanı liderliğini sürdürüyor
-            i̇stanbul havalimanı, 15-21 haziran'da günlük ortalama 1502 uçuşla avrupa'nın en yoğun havalimanı olarak kayıtlara geçti.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>İstanbul Havalimanı liderliğini sürdürüyor</h3>
-                    <p>İstanbul Havalimanı, 15-21 Haziran'da günlük ortalama 1502 uçuşla Avrupa'nın en yoğun havalimanı olarak kayıtlara geçti.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/istanbul-havalimani-liderligini-surduruyor-949351.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">TEKNOLOJI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            fidan'dan depremle sarsılan venezuela'ya destek mesajı
-            dışişleri bakanı hakan fidan, venezuela dışişleri bakanı yvan gil ile yaşanan deprem felaketine ve ihtiyaç duyulan yardıma dair telefonda görüştü.
-            teknoloji
-            trt haber
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Fidan'dan depremle sarsılan Venezuela'ya destek mesajı</h3>
-                    <p>Dışişleri Bakanı Hakan Fidan, Venezuela Dışişleri Bakanı Yvan Gil ile yaşanan deprem felaketine ve ihtiyaç duyulan yardıma dair telefonda görüştü.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/fidandan-depremle-sarsilan-venezuelaya-destek-mesaji-949353.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            haiti iki kez öne geçti, fas son sözü söyledi
-            soufiane rahimi ve gessime yassine'in maçın son bölümünde attığı goller, haiti'nin fas karşısında ilk puanını almasının önüne geçti. dünya kupası c grubu son maçında fas, atlanta'da haiti'yi 4-2 mağlup etti.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Haiti iki kez öne geçti, Fas son sözü söyledi</h3>
-                    <p>Soufiane Rahimi ve Gessime Yassine'in maçın son bölümünde attığı goller, Haiti'nin Fas karşısında ilk puanını almasının önüne geçti. Dünya Kupası C Grubu son maçında Fas, Atlanta'da Haiti'yi 4-2 mağlup etti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c98r85zyg2yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            çelik, uclg başkanlığına seçilen altay'ı tebrik etti
-            ak parti genel başkan yardımcısı ve parti sözcüsü ömer çelik, birleşmiş kentler ve yerel yönetimler dünya teşkilatı (uclg) başkanlığına seçilen konya büyükşehir belediye başkanı uğur i̇brahim altay'ı tebrik etti.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Çelik, UCLG Başkanlığına seçilen Altay'ı tebrik etti</h3>
-                    <p>AK Parti Genel Başkan Yardımcısı ve Parti Sözcüsü Ömer Çelik, Birleşmiş Kentler ve Yerel Yönetimler Dünya Teşkilatı (UCLG) Başkanlığına seçilen Konya Büyükşehir Belediye Başkanı Uğur İbrahim Altay'ı tebrik etti.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/celik-uclg-baskanligina-secilen-altayi-tebrik-etti-949355.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            venezuela'daki depremlerde en az 188 kişi öldü, bin 520 kişi yaralandı
-            venezuela geçici devlet başkanı delcy rodriguez, ülkedeki depremlerde en az 188 kişinin yaşamını yitirdiğini, bin 520 kişinin yaralandığını bildirdi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Venezuela'daki depremlerde en az 188 kişi öldü, bin 520 kişi yaralandı</h3>
-                    <p>Venezuela Geçici Devlet Başkanı Delcy Rodriguez, ülkedeki depremlerde en az 188 kişinin yaşamını yitirdiğini, bin 520 kişinin yaralandığını bildirdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/venezueladaki-depremlerde-en-az-188-kisi-oldu-bin-520-kisi-yaralandi-949350.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇letişim başkanlığından sofya'da nato paneli
-            i̇letişim başkanlığı, bulgaristan’ın başkenti sofya’da, center for the study of democracy democracy (csd) isimli düşünce kuruluşu iş birliğinde “nato’da bölgesel güvenliği yeniden düşünmek: dayanıklılık, i̇ş birliği ve türkiye-bulgaristan ekseni” başlıklı yuvarlak masa toplantısı düzenledi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>İletişim Başkanlığından Sofya'da NATO paneli</h3>
-                    <p>İletişim Başkanlığı, Bulgaristan’ın başkenti Sofya’da, Center for the Study of Democracy Democracy (CSD) isimli düşünce kuruluşu iş birliğinde “NATO’da Bölgesel Güvenliği Yeniden Düşünmek: Dayanıklılık, İş Birliği ve Türkiye-Bulgaristan Ekseni” başlıklı yuvarlak masa toplantısı düzenledi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/iletisim-baskanligindan-sofyada-nato-paneli-949349.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            104 maçı canlı takip edin
-            hiçbir golü kaçırmayın: takvim ve anlık sonuçlar
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>104 maçı canlı takip edin</h3>
-                    <p>Hiçbir golü kaçırmayın: Takvim ve anlık sonuçlar</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cq8pljlkx0wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nato zirvesi öncesi ankara'da 103 kişi tutuklandı
-            ankara'da gelecek ay düzenlenmesi planlanan nato zirvesi öncesinde ankara ve i̇stanbul'da yapılan operasyonlarda 233 kişi gözaltına alındı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>NATO zirvesi öncesi Ankara'da 103 kişi tutuklandı</h3>
-                    <p>Ankara'da gelecek ay düzenlenmesi planlanan NATO zirvesi öncesinde Ankara ve İstanbul'da yapılan operasyonlarda 233 kişi gözaltına alındı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cwyd855ee7po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nevşehir, keçiören ve keşan belediye başkanları akp'ye geçti
-            i̇yi̇ partili nevşehir belediye başkanı rasim arı ile chp'den istifa eden keçiören belediye başkanı mesut özarslan ve keşan belediye başkanı mehmet özcan akp'ye katıldı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Nevşehir, Keçiören ve Keşan belediye başkanları AKP'ye geçti</h3>
-                    <p>İYİ Partili Nevşehir Belediye Başkanı Rasim Arı ile CHP'den istifa eden Keçiören Belediye Başkanı Mesut Özarslan ve Keşan Belediye Başkanı Mehmet Özcan AKP'ye katıldı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cly89jlg531o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇skoçya'nın dünya kupası'nda tur umutları tehlikede
-            i̇skoçya'nın dünya kupası'nda tarihinde ilk kez eleme turlarına yükselme umutları, miami'de brezilya'ya 3-0 mağlup olmasının ardından büyük tehlikeye girdi
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>İskoçya'nın Dünya Kupası'nda tur umutları tehlikede</h3>
-                    <p>İskoçya'nın Dünya Kupası'nda tarihinde ilk kez eleme turlarına yükselme umutları, Miami'de Brezilya'ya 3-0 mağlup olmasının ardından büyük tehlikeye girdi</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cx2vlxvxnd4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            meksika üçte üç yaptı, çekya'yı dünya kupası'nın dışına itti
-            meksika, ikinci yarıda bulduğu üç golle çekya'yı dünya kupası'ndan eledi ve grup aşamasını üçte üç yaparak tamamladı
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Meksika üçte üç yaptı, Çekya'yı Dünya Kupası'nın dışına itti</h3>
-                    <p>Meksika, ikinci yarıda bulduğu üç golle Çekya'yı Dünya Kupası'ndan eledi ve grup aşamasını üçte üç yaparak tamamladı</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5y71y5eq9ro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            konya büyükşehir belediye başkanı altay uclg başkanı oldu
-            konya büyükşehir belediye başkanı uğur i̇brahim altay, birleşmiş kentler ve yerel yönetimler dünya teşkilatı (uclg) başkanlığına seçildi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Konya Büyükşehir Belediye Başkanı Altay UCLG başkanı oldu</h3>
-                    <p>Konya Büyükşehir Belediye Başkanı Uğur İbrahim Altay, Birleşmiş Kentler ve Yerel Yönetimler Dünya Teşkilatı (UCLG) Başkanlığına seçildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/konya-buyuksehir-belediye-baskani-altay-uclg-baskani-oldu-949357.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            terör örgütlerine yönelik operasyonlarda 103 tutuklama
-            ankara cumhuriyet başsavcılığı koordinesinde, terör örgütlerine yönelik yürütülen soruşturma kapsamında gözaltına alınan 225 şüpheliden 103'ü tutuklandı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Terör örgütlerine yönelik operasyonlarda 103 tutuklama</h3>
-                    <p>Ankara Cumhuriyet Başsavcılığı koordinesinde, terör örgütlerine yönelik yürütülen soruşturma kapsamında gözaltına alınan 225 şüpheliden 103'ü tutuklandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/teror-orgutlerine-yonelik-operasyonlarda-103-tutuklama-949354.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            fransa tarihinin en sıcak gecesini yaşadı
-            fransa'da "hava durumu kayıtlarının alınmaya başladığı 1947'den bu yana en sıcak gece" yaşandı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Fransa tarihinin en sıcak gecesini yaşadı</h3>
-                    <p>Fransa'da "hava durumu kayıtlarının alınmaya başladığı 1947'den bu yana en sıcak gece" yaşandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/fransa-tarihinin-en-sicak-gecesini-yasadi-949348.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">EKONOMI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            rutte: aselsan, türkiye'nin savunma sanayisi devrimine öncülük ediyor
-            nato genel sekreteri mark rutte, türkiye'nin en büyük savunma elektroniği şirketi aselsan'ın nato'nun her üyesine fayda sağlayacak savunma sanayisi devrimine öncülük ettiğini, ankara zirvesi'nde büyük bir savunma sanayisi günü düzenleneceğini söyledi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Rutte: ASELSAN, Türkiye'nin savunma sanayisi devrimine öncülük ediyor</h3>
-                    <p>NATO Genel Sekreteri Mark Rutte, Türkiye'nin en büyük savunma elektroniği şirketi ASELSAN'ın NATO'nun her üyesine fayda sağlayacak savunma sanayisi devrimine öncülük ettiğini, Ankara Zirvesi'nde büyük bir savunma sanayisi günü düzenleneceğini söyledi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/rutte-aselsan-turkiyenin-savunma-sanayisi-devrimine-onculuk-ediyor-949352.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">SPOR</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            montella: i̇stifa etmeyeceğim, daha da güçlendim
-            türkiye a milli erkek futbol takımı teknik direktörü vincenzo montella, takımının ikinci maçlar sonunda 2026 dünya kupası'ndan elenmesinin ardından görevinden istifa etmeyeceğini söyledi
-            spor
-            bbc türkçe
-            "
-                    data-category="spor"
-                >
-                    <h3>Montella: İstifa etmeyeceğim, daha da güçlendim</h3>
-                    <p>Türkiye A Milli Erkek Futbol Takımı Teknik Direktörü Vincenzo Montella, takımının ikinci maçlar sonunda 2026 Dünya Kupası'ndan elenmesinin ardından görevinden istifa etmeyeceğini söyledi</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cj0g70g17m9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -2,193 +2,450 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
     <link rel="stylesheet" href="assets/css/news.css">
     <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <header class="site-nav">
-        <div class="nav-inner">
-            <div class="brand">AI News</div>
-            <a href="index.html">Current News</a>
-            <a href="archive.html">Archive</a>
-            <a href="search.html">Search</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
         </div>
     </header>
 
     <main class="site-wrapper">
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-text">
             <h1>Günün Haberleri</h1>
-            <div class="search-box">
-                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            <p class="hero-date">17 Haziran 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>ekonomi</strong> 4</span><span class="stat-item"><strong>dünya</strong> 6</span><span class="stat-item"><strong>genel</strong> 9</span><span class="stat-item"><strong>spor</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>ABDİran mutabakatında Hürmüz, Lübnan ve 300 milyar dolarlık fon belirsizliği</h3>
+        <p>İran ile ABD arasında varılan mutabakata ait olduğu iddia edilen metinde, İran&#x27;ın büyük ekonomik imtiyazlar aldığı görülürken Lübnan&#x27;da İsrail işgalinin sonlandırılması ve İran&#x27;ın yeniden yapılandırılması için oluşturulması öngörülen 300 milyar dolarlık fon ve Hürmüz Boğazı&#x27;nın gelecekteki statüsü gibi bazı konularda belirsizlikler göze çarpıyor.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 17 Haziran 2026, 12:45</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-iran-mutabakatinda-hurmuz-lubnan-ve-300-milyar-dolarlik-fon-belirsizligi-948478.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 17 Haziran 2026, 12:22</span>
             </div>
-
-            <div class="category-filters">
-                <button class="category-filter-btn active" data-category="all">Tümü</button>
-                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                <button class="category-filter-btn" data-category="genel">Genel</button>
+            <h3>Yılmaz: Orta vadede önemli kazançlar sağlayacağımız bir döneme giriyoruz</h3>
+            <p>Cumhurbaşkanı Yardımcısı Yılmaz, &quot;Savaşlar bölgedeki ülkelere de Türkiye’ye de ekonomik olarak maliyetler getirdi. Ama inşallah orta vadede çok daha önemli kazançlar sağlayacağımız bir döneme giriyoruz. Bunu da hep birlikte değerlendirmek durumundayız. Burada da yine inşaat sektörümüze çok önemli görevler düşüyor&quot; açıklamasını yaptı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/yilmaz-orta-vadede-onemli-kazanclar-saglayacagimiz-bir-doneme-giriyoruz-948477.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 17 Haziran 2026, 13:04</span>
             </div>
-        </section>
+            <h3>Yerel kalkınma teşvik programı çağrı sonuçları açıklandı</h3>
+            <p>Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, Yerel Kalkınma Hamlesi Teşvik Programı 2025 Çağrısı sonuçlarının belli olduğunu bildirdi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/yerel-kalkinma-tesvik-programi-cagri-sonuclari-aciklandi-948481.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 17 Haziran 2026, 05:21</span>
+            </div>
+            <h3>Tahran&#x27;ın &#x27;zafer&#x27; olarak sunduğu anlaşmayla ilgili İranlılar ne düşünüyor?</h3>
+            <p>Birçok İranlı için anlaşmanın başarısı sloganlarla ölçülmeyecek. İranlılar savaşın durup durmadığıyla ve bunun günlük hayatlarını nasıl etkilediğiyle daha ilgililer.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c0jyz1zdwx3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 16 Haziran 2026, 20:27</span>
+            </div>
+            <h3>&#x27;Netanyahu açısından siyasi kabus&#x27;: ABD-İran anlaşması İsrail için ne anlama geliyor?</h3>
+            <p>Donald Trump&#x27;ın İranla ateşkes anlaşması İsrail Başbakanı&#x27;nı yeni bir siyaset ve güvenlik ikilemiyle karşı karşıya bıraktı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c74yk2g3l7ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stats-grid">
-                        <a href="archive.html">Archive</a>
-                        <a href="search.html">Search</a>
-                    </div>
-                </header>
+    </section>
 
-                <main class="site-wrapper">
-                    <section class="hero">
-                        <h1>Günün Haberleri</h1>
-                        <div class="search-box">
-                            <input type="text" id="home-search-input" placeholder="Search today's news...">
-                        </div>
-
-                        <div class="category-filters">
-                            <button class="category-filter-btn active" data-category="all">Tümü</button>
-                            <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                            <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                            <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                            <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                            <button class="category-filter-btn" data-category="genel">Genel</button>
-                        </div>
-                    </section>
-
-                    <div class="stats-grid">
-    <div class="news-card">
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">4 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="abdi̇ran mutabakatında hürmüz, lübnan ve 300 milyar dolarlık fon belirsizliği i̇ran ile abd arasında varılan mutabakata ait olduğu iddia edilen metinde, i̇ran&#x27;ın büyük ekonomik imtiyazlar aldığı görülürken lübnan&#x27;da i̇srail işgalinin sonlandırılması ve i̇ran&#x27;ın yeniden yapılandırılması için oluşturulması öngörülen 300 milyar dolarlık fon ve hürmüz boğazı&#x27;nın gelecekteki statüsü gibi bazı konularda belirsizlikler göze çarpıyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 17 Haziran 2026, 12:45</span>
+        </div>
+        <h3>ABDİran mutabakatında Hürmüz, Lübnan ve 300 milyar dolarlık fon belirsizliği</h3>
+        <p>İran ile ABD arasında varılan mutabakata ait olduğu iddia edilen metinde, İran&#x27;ın büyük ekonomik imtiyazlar aldığı görülürken Lübnan&#x27;da İsrail işgalinin sonlandırılması ve İran&#x27;ın yeniden yapılandırılması için oluşturulması öngörülen 300 milyar dolarlık fon ve Hürmüz Boğazı&#x27;nın gelecekteki statüsü gibi bazı konularda belirsizlikler göze çarpıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Haziran 2026, 12:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abd-iran-mutabakatinda-hurmuz-lubnan-ve-300-milyar-dolarlik-fon-belirsizligi-948478.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yılmaz: orta vadede önemli kazançlar sağlayacağımız bir döneme giriyoruz cumhurbaşkanı yardımcısı yılmaz, &quot;savaşlar bölgedeki ülkelere de türkiye’ye de ekonomik olarak maliyetler getirdi. ama inşallah orta vadede çok daha önemli kazançlar sağlayacağımız bir döneme giriyoruz. bunu da hep birlikte değerlendirmek durumundayız. burada da yine inşaat sektörümüze çok önemli görevler düşüyor&quot; açıklamasını yaptı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 17 Haziran 2026, 12:22</span>
+        </div>
+        <h3>Yılmaz: Orta vadede önemli kazançlar sağlayacağımız bir döneme giriyoruz</h3>
+        <p>Cumhurbaşkanı Yardımcısı Yılmaz, &quot;Savaşlar bölgedeki ülkelere de Türkiye’ye de ekonomik olarak maliyetler getirdi. Ama inşallah orta vadede çok daha önemli kazançlar sağlayacağımız bir döneme giriyoruz. Bunu da hep birlikte değerlendirmek durumundayız. Burada da yine inşaat sektörümüze çok önemli görevler düşüyor&quot; açıklamasını yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Haziran 2026, 12:22</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/yilmaz-orta-vadede-onemli-kazanclar-saglayacagimiz-bir-doneme-giriyoruz-948477.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yerel kalkınma teşvik programı çağrı sonuçları açıklandı sanayi ve teknoloji bakanı mehmet fatih kacır, yerel kalkınma hamlesi teşvik programı 2025 çağrısı sonuçlarının belli olduğunu bildirdi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 17 Haziran 2026, 13:04</span>
+        </div>
         <h3>Yerel kalkınma teşvik programı çağrı sonuçları açıklandı</h3>
         <p>Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, Yerel Kalkınma Hamlesi Teşvik Programı 2025 Çağrısı sonuçlarının belli olduğunu bildirdi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/ekonomi/yerel-kalkinma-tesvik-programi-cagri-sonuclari-aciklandi-948481.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Haziran 2026, 13:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/yerel-kalkinma-tesvik-programi-cagri-sonuclari-aciklandi-948481.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan bolat: hizmet ihracatında ilk 6 ülke arasındayız ticaret bakanı ömer bolat, türkiye&#x27;nin geçen yıl 122,6 milyar dolara ulaşan hizmet ihracatıyla dünyada en çok hizmet ticareti fazlası sağlayan ilk 6 ülke arasında yer aldığını açıkladı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 17 Haziran 2026, 12:58</span>
+        </div>
         <h3>Bakan Bolat: Hizmet ihracatında ilk 6 ülke arasındayız</h3>
-        <p>Ticaret Bakanı Ömer Bolat, Türkiye'nin geçen yıl 122,6 milyar dolara ulaşan hizmet ihracatıyla dünyada en çok hizmet ticareti fazlası sağlayan ilk 6 ülke arasında yer aldığını açıkladı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/ekonomi/bakan-bolat-hizmet-ihracatinda-ilk-6-ulke-arasindayiz-948480.html" target="_blank">Haberi Oku</a>
+        <p>Ticaret Bakanı Ömer Bolat, Türkiye&#x27;nin geçen yıl 122,6 milyar dolara ulaşan hizmet ihracatıyla dünyada en çok hizmet ticareti fazlası sağlayan ilk 6 ülke arasında yer aldığını açıkladı.</p>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Haziran 2026, 12:58</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/bakan-bolat-hizmet-ihracatinda-ilk-6-ulke-arasindayiz-948480.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2 class="category-title">DÜNYA</h2>
-
-    <div class="news-card">
-        <h3>Tahran'ın 'zafer' olarak sunduğu anlaşmayla ilgili İranlılar ne düşünüyor?</h3>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="tahran&#x27;ın &#x27;zafer&#x27; olarak sunduğu anlaşmayla ilgili i̇ranlılar ne düşünüyor? birçok i̇ranlı için anlaşmanın başarısı sloganlarla ölçülmeyecek. i̇ranlılar savaşın durup durmadığıyla ve bunun günlük hayatlarını nasıl etkilediğiyle daha ilgililer. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 17 Haziran 2026, 05:21</span>
+        </div>
+        <h3>Tahran&#x27;ın &#x27;zafer&#x27; olarak sunduğu anlaşmayla ilgili İranlılar ne düşünüyor?</h3>
         <p>Birçok İranlı için anlaşmanın başarısı sloganlarla ölçülmeyecek. İranlılar savaşın durup durmadığıyla ve bunun günlük hayatlarını nasıl etkilediğiyle daha ilgililer.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c0jyz1zdwx3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>'Netanyahu açısından siyasi kabus': ABD-İran anlaşması İsrail için ne anlama geliyor?</h3>
-        <p>Donald Trump'ın İranla ateşkes anlaşması İsrail Başbakanı'nı yeni bir siyaset ve güvenlik ikilemiyle karşı karşıya bıraktı.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c74yk2g3l7ko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Haziran 2026, 05:21</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c0jyz1zdwx3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
+</article>
+<article class="news-card" data-search="&#x27;netanyahu açısından siyasi kabus&#x27;: abd-i̇ran anlaşması i̇srail için ne anlama geliyor? donald trump&#x27;ın i̇ranla ateşkes anlaşması i̇srail başbakanı&#x27;nı yeni bir siyaset ve güvenlik ikilemiyle karşı karşıya bıraktı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 16 Haziran 2026, 20:27</span>
+        </div>
+        <h3>&#x27;Netanyahu açısından siyasi kabus&#x27;: ABD-İran anlaşması İsrail için ne anlama geliyor?</h3>
+        <p>Donald Trump&#x27;ın İranla ateşkes anlaşması İsrail Başbakanı&#x27;nı yeni bir siyaset ve güvenlik ikilemiyle karşı karşıya bıraktı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 16 Haziran 2026, 20:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c74yk2g3l7ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="iea: küresel petrol arzı mayısta abd/i̇sraili̇ran savaşı öncesinin 13,6 milyon varil altında kaldı uluslararası enerji ajansı (iea), küresel petrol arzının mayısta önceki aya göre günlük yaklaşık 600 bin varil azalışla 94 milyon 470 bin varile gerilediğini ve bu seviyenin abd/i̇srail-i̇ran savaşı öncesi dönemin günlük yaklaşık 13 milyon 600 bin varil altında kaldığını bildirdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 17 Haziran 2026, 11:52</span>
+        </div>
         <h3>IEA: Küresel petrol arzı mayısta ABD/İsrailİran Savaşı öncesinin 13,6 milyon varil altında kaldı</h3>
         <p>Uluslararası Enerji Ajansı (IEA), küresel petrol arzının mayısta önceki aya göre günlük yaklaşık 600 bin varil azalışla 94 milyon 470 bin varile gerilediğini ve bu seviyenin ABD/İsrail-İran Savaşı öncesi dönemin günlük yaklaşık 13 milyon 600 bin varil altında kaldığını bildirdi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/iea-kuresel-petrol-arzi-mayista-abdisrail-iran-savasi-oncesinin-136-milyon-varil-altinda-kaldi-948474.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Haziran 2026, 11:52</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iea-kuresel-petrol-arzi-mayista-abdisrail-iran-savasi-oncesinin-136-milyon-varil-altinda-kaldi-948474.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="regl ağrıları için doğru ilaç hangisi? i̇ngiltere&#x27;de süpermarket verilerini kullanan bir araştırma, kadınların regl ağrıları için yanlış ilacın satın alıyor olabileceğini gösteriyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 17 Haziran 2026, 04:34</span>
+        </div>
         <h3>Regl ağrıları için doğru ilaç hangisi?</h3>
-        <p>İngiltere'de süpermarket verilerini kullanan bir araştırma, kadınların regl ağrıları için yanlış ilacın satın alıyor olabileceğini gösteriyor.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c982g12yjz6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+        <p>İngiltere&#x27;de süpermarket verilerini kullanan bir araştırma, kadınların regl ağrıları için yanlış ilacın satın alıyor olabileceğini gösteriyor.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Haziran 2026, 04:34</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c982g12yjz6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="can holding soruşturması: remzi sanver tahliye edildi can holding soruşturması kapsamında tutuklanan remzi sanver için tahliye kararı verildi. sanver eski bilgi üniversitesi rektörü ve hür ve kabul edilmiş masonlar derneği başkanı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 17 Haziran 2026, 09:54</span>
+        </div>
         <h3>Can Holding soruşturması: Remzi Sanver tahliye edildi</h3>
         <p>Can Holding soruşturması kapsamında tutuklanan Remzi Sanver için tahliye kararı verildi. Sanver eski Bilgi Üniversitesi Rektörü ve Hür ve Kabul Edilmiş Masonlar Derneği Başkanı.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cr7x80ve57zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Haziran 2026, 09:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr7x80ve57zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran medyası: abd ile varılan mutabakatın metni imzalar atıldıktan sonra yayımlanacak i̇ran ile abd arasında cuma günü imzalanması planlanan mutabakat metninin imza sonrası kamuoyuyla paylaşılacağı belirtildi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 17 Haziran 2026, 12:56</span>
+        </div>
         <h3>İran medyası: ABD ile varılan mutabakatın metni imzalar atıldıktan sonra yayımlanacak</h3>
         <p>İran ile ABD arasında cuma günü imzalanması planlanan mutabakat metninin imza sonrası kamuoyuyla paylaşılacağı belirtildi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/iran-medyasi-abd-ile-varilan-mutabakatin-metni-imzalar-atildiktan-sonra-yayimlanacak-948479.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <h2 class="category-title">GENEL</h2>
-
-    <div class="news-card">
-        <h3>Seferihisar Belediyesine 'rüşvet' operasyonu, altı kişi gözaltında</h3>
-        <p>İzmir'de CHP'li Seferihisar Belediyesi'ne "rüşvet" iddiasıyla başlatılan soruşturma kapsamında, şafak operasyonu düzenlendi. Operasyonda, aralarında başkan yardımcısının da bulunduğu altı kişi gözaltına alındı.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c1eygdvp8w8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Haziran 2026, 12:56</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-medyasi-abd-ile-varilan-mutabakatin-metni-imzalar-atildiktan-sonra-yayimlanacak-948479.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
+</article>
 
-    <div class="news-card">
-        <h3>CHP'de kritik gün: Olağanüstü kurultay imzaları sunuldu, Özel 'CHP'nin kalbini vermeyiz' dedi</h3>
-        <p>Mutlak butlan kararıyla CHP Genel Başkanlığı düşürülen partinin Grup Başkanı Özgür Özel "CHP'nin kalbini kimseye verme niyetimiz yok" derken, hukuki ve siyasi mücadeleyesi sürdüreceklerini vurguladı. Ancak Özel yeni parti üzerinde de çalıştıklarını söyledi. Bu arada, olağanüstü kurultay isteyen delegelerin imzaları Genel Merkez'e sunuldu.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cgevnnyxl84o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">9 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="seferihisar belediyesine &#x27;rüşvet&#x27; operasyonu, altı kişi gözaltında i̇zmir&#x27;de chp&#x27;li seferihisar belediyesi&#x27;ne &quot;rüşvet&quot; iddiasıyla başlatılan soruşturma kapsamında, şafak operasyonu düzenlendi. operasyonda, aralarında başkan yardımcısının da bulunduğu altı kişi gözaltına alındı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Haziran 2026, 11:40</span>
+        </div>
+        <h3>Seferihisar Belediyesine &#x27;rüşvet&#x27; operasyonu, altı kişi gözaltında</h3>
+        <p>İzmir&#x27;de CHP&#x27;li Seferihisar Belediyesi&#x27;ne &quot;rüşvet&quot; iddiasıyla başlatılan soruşturma kapsamında, şafak operasyonu düzenlendi. Operasyonda, aralarında başkan yardımcısının da bulunduğu altı kişi gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Haziran 2026, 11:40</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c1eygdvp8w8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="chp&#x27;de kritik gün: olağanüstü kurultay imzaları sunuldu, özel &#x27;chp&#x27;nin kalbini vermeyiz&#x27; dedi mutlak butlan kararıyla chp genel başkanlığı düşürülen partinin grup başkanı özgür özel &quot;chp&#x27;nin kalbini kimseye verme niyetimiz yok&quot; derken, hukuki ve siyasi mücadeleyesi sürdüreceklerini vurguladı. ancak özel yeni parti üzerinde de çalıştıklarını söyledi. bu arada, olağanüstü kurultay isteyen delegelerin imzaları genel merkez&#x27;e sunuldu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Haziran 2026, 12:37</span>
+        </div>
+        <h3>CHP&#x27;de kritik gün: Olağanüstü kurultay imzaları sunuldu, Özel &#x27;CHP&#x27;nin kalbini vermeyiz&#x27; dedi</h3>
+        <p>Mutlak butlan kararıyla CHP Genel Başkanlığı düşürülen partinin Grup Başkanı Özgür Özel &quot;CHP&#x27;nin kalbini kimseye verme niyetimiz yok&quot; derken, hukuki ve siyasi mücadeleyesi sürdüreceklerini vurguladı. Ancak Özel yeni parti üzerinde de çalıştıklarını söyledi. Bu arada, olağanüstü kurultay isteyen delegelerin imzaları Genel Merkez&#x27;e sunuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Haziran 2026, 12:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cgevnnyxl84o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan kurum, haymana ve gölbaşı belediye başkanlarını kabul etti çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, haymana ve gölbaşı belediye başkanlarını kabul etti. görüşmelerde, ilçelerde yürütülen çalışmalar ele alındı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Haziran 2026, 12:00</span>
+        </div>
         <h3>Bakan Kurum, Haymana ve Gölbaşı belediye başkanlarını kabul etti</h3>
         <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, Haymana ve Gölbaşı Belediye Başkanlarını kabul etti. Görüşmelerde, ilçelerde yürütülen çalışmalar ele alındı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/bakan-kurum-haymana-ve-golbasi-belediye-baskanlarini-kabul-etti-948475.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Haziran 2026, 12:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/bakan-kurum-haymana-ve-golbasi-belediye-baskanlarini-kabul-etti-948475.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mülki idarede yeni sınıflandırma ve kadro düzenlemesi i̇çişleri bakanlığınca, bazı ilçelerin mülki idare amirleri atama ve yer değiştirme işlemlerinde esas alınan sınıflarında değişikliğe gidildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Haziran 2026, 11:25</span>
+        </div>
         <h3>Mülki idarede yeni sınıflandırma ve kadro düzenlemesi</h3>
         <p>İçişleri Bakanlığınca, bazı ilçelerin mülki idare amirleri atama ve yer değiştirme işlemlerinde esas alınan sınıflarında değişikliğe gidildi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/mulki-idarede-yeni-siniflandirma-ve-kadro-duzenlemesi-948472.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Haziran 2026, 11:25</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/mulki-idarede-yeni-siniflandirma-ve-kadro-duzenlemesi-948472.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="104 maçı canlı takip edin hiçbir golü kaçırmayın: takvim ve anlık sonuçlar genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 4 Haziran 2026, 10:01</span>
+        </div>
         <h3>104 maçı canlı takip edin</h3>
         <p>Hiçbir golü kaçırmayın: Takvim ve anlık sonuçlar</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cq8pljlkx0wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Baykar-Leonardo ortak girişimine İtalya'dan şartlı onay: 'AB ve NATO çizgisi'</h3>
-        <p>İtalyan savunma ve havacılık şirketi Leonardo ile Türkiye'den Baykar arasında geçen yıl varılan ortak girişim anlaşmasına İtalya hükümetinden şartlı onay geldi. Övgü Pınar Roma'dan aktarıyor.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c05yn12524qo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Haziran 2026, 10:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq8pljlkx0wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
+</article>
+<article class="news-card" data-search="baykar-leonardo ortak girişimine i̇talya&#x27;dan şartlı onay: &#x27;ab ve nato çizgisi&#x27; i̇talyan savunma ve havacılık şirketi leonardo ile türkiye&#x27;den baykar arasında geçen yıl varılan ortak girişim anlaşmasına i̇talya hükümetinden şartlı onay geldi. övgü pınar roma&#x27;dan aktarıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Haziran 2026, 12:55</span>
+        </div>
+        <h3>Baykar-Leonardo ortak girişimine İtalya&#x27;dan şartlı onay: &#x27;AB ve NATO çizgisi&#x27;</h3>
+        <p>İtalyan savunma ve havacılık şirketi Leonardo ile Türkiye&#x27;den Baykar arasında geçen yıl varılan ortak girişim anlaşmasına İtalya hükümetinden şartlı onay geldi. Övgü Pınar Roma&#x27;dan aktarıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Haziran 2026, 12:55</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c05yn12524qo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="2026 dünya kupası: i̇ngiltere ilk maçına çıkıyor i̇ngiltere, 2026 dünya kupası l grubu&#x27;ndaki ilk maçında bu akşam hırvatistan ile karşı karşıya gelecek. takımın stratejisi ne olacak? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Haziran 2026, 12:17</span>
+        </div>
         <h3>2026 Dünya Kupası: İngiltere ilk maçına çıkıyor</h3>
-        <p>İngiltere, 2026 Dünya Kupası L Grubu'ndaki ilk maçında bu akşam Hırvatistan ile karşı karşıya gelecek. Takımın stratejisi ne olacak?</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c07yn18yn4go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+        <p>İngiltere, 2026 Dünya Kupası L Grubu&#x27;ndaki ilk maçında bu akşam Hırvatistan ile karşı karşıya gelecek. Takımın stratejisi ne olacak?</p>
     </div>
-
-    <div class="news-card">
-        <h3>Bolu'da maden ocağında göçük</h3>
-        <p>Bolu'nun Mengen ilçesinde özel maden ocağında göçük meydana geldi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/boluda-maden-ocaginda-gocuk-948476.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Haziran 2026, 12:17</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c07yn18yn4go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
+</article>
+<article class="news-card" data-search="bolu&#x27;da maden ocağında göçük bolu&#x27;nun mengen ilçesinde özel maden ocağında göçük meydana geldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Haziran 2026, 12:06</span>
+        </div>
+        <h3>Bolu&#x27;da maden ocağında göçük</h3>
+        <p>Bolu&#x27;nun Mengen ilçesinde özel maden ocağında göçük meydana geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Haziran 2026, 12:06</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/boluda-maden-ocaginda-gocuk-948476.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="atatürk baraj göleti çevresindeki bazı kafeler su altında kaldı adıyaman&#x27;ın kahta ilçesinde atatürk baraj göleti&#x27;nde su seviyesinin yükselmesi sonucu kıyıdaki bazı kafe ve lokantalar kısmen su altında kaldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Haziran 2026, 11:31</span>
+        </div>
         <h3>Atatürk Baraj Göleti çevresindeki bazı kafeler su altında kaldı</h3>
-        <p>Adıyaman'ın Kahta ilçesinde Atatürk Baraj Göleti'nde su seviyesinin yükselmesi sonucu kıyıdaki bazı kafe ve lokantalar kısmen su altında kaldı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/ataturk-baraj-goleti-cevresindeki-bazi-kafeler-su-altinda-kaldi-948473.html" target="_blank">Haberi Oku</a>
+        <p>Adıyaman&#x27;ın Kahta ilçesinde Atatürk Baraj Göleti&#x27;nde su seviyesinin yükselmesi sonucu kıyıdaki bazı kafe ve lokantalar kısmen su altında kaldı.</p>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Haziran 2026, 11:31</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/ataturk-baraj-goleti-cevresindeki-bazi-kafeler-su-altinda-kaldi-948473.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2 class="category-title">SPOR</h2>
-
-    <div class="news-card">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="test | futbolun kurallarını ne kadar iyi biliyorsunuz? futbol basit bir oyun, değil mi? kuralları hepimiz biliyoruz, öyle değil mi? yoksa bilmiyor muyuz? bu yılki fifa dünya kupası sürerken, bu kısa ama son derece zor testle kendinizi sınayın. spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 16 Haziran 2026, 14:12</span>
+        </div>
         <h3>TEST | Futbolun kurallarını ne kadar iyi biliyorsunuz?</h3>
         <p>Futbol basit bir oyun, değil mi? Kuralları hepimiz biliyoruz, öyle değil mi? Yoksa bilmiyor muyuz? Bu yılki FIFA Dünya Kupası sürerken, bu kısa ama son derece zor testle kendinizi sınayın.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c70yeej099eo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 16 Haziran 2026, 14:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c70yeej099eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

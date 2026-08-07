@@ -1,472 +1,442 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
     <link rel="stylesheet" href="assets/css/news.css">
     <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <header class="site-nav">
-        <div class="nav-inner">
-            <div class="brand">AI News</div>
-            <a href="index.html">Current News</a>
-            <a href="archive.html">Archive</a>
-            <a href="search.html">Search</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
         </div>
     </header>
 
     <main class="site-wrapper">
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-text">
             <h1>Günün Haberleri</h1>
-            <div class="search-box">
-                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            <p class="hero-date">29 Haziran 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>dünya</strong> 10</span><span class="stat-item"><strong>genel</strong> 9</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">TEKNOLOJI</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan&#x27;ın yapay zeka asistanı BİLGE vitrine çıkıyor</h3>
+        <p>TÜBİTAK BİLGEM tarafından geliştirilen Türkiye&#x27;nin yerli ve milli büyük dil modeli BİLGE, Cumhurbaşkanı Erdoğan&#x27;ın kişisel yapay zeka asistanı olarak devlet hizmetine giriyor. Milli yapay zekanın, son rötuşların ardından genel kullanıma açılması bekleniyor.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 29 Haziran 2026, 11:32</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/cumhurbaskani-erdoganin-yapay-zeka-asistani-bilge-vitrine-cikiyor-949648.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 29 Haziran 2026, 02:14</span>
             </div>
-
-            <div class="category-filters">
-                <button class="category-filter-btn active" data-category="all">Tümü</button>
-                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                <button class="category-filter-btn" data-category="genel">Genel</button>
+            <h3>Türkiye&#x27;den, İsrail hükümetinin 1915 olaylarını &#x27;soykırım&#x27; olarak tanıma kararına tepki</h3>
+            <p>İsrail kabinesi, 1915 olaylarını &quot;soykırım&quot; olarak tanıma önerisini oybirliğiyle kabul etti. Kararın yürürlüğe girmesi için parlamentoda onaylanması gerekiyor. Türkiye karara tepki göstererek, İsrail&#x27;i &quot;kendi suçlarını örtbas etmeye çalışmakla&quot; suçladı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cqx1yw113x3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 29 Haziran 2026, 06:37</span>
             </div>
-        </section>
-
-        <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+            <h3>Avrupa kavruluyor: Aşırı sıcaklık bağlantılı ölümler 1.300&#x27;ü aştı</h3>
+            <p>Almanya, Belçika ve Hollanda&#x27;da sıcaklıklar haziran ayı rekorlarını kırarken, Avrupa&#x27;daki sıcak hava dalgası nedeniyle İspanya ve Fransa&#x27;da can kaybı artmaya devam etti. Dünya Sağlık Örgütü, sıcak hava dalgasının yüzlerce ek ölüme sebep olmuş olabileceğini açıkladı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c79y7ygve1wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
-
-        <div class="stat-card">
-            <strong>teknoloji</strong>
-            <span>1</span>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 29 Haziran 2026, 12:28</span>
+            </div>
+            <h3>İstanbul Onur Yürüyüşü&#x27;nde gözaltına alınanlar serbest bırakıldı</h3>
+            <p>&quot;Açık s&#x27;açık yürüyoruz&quot; temasıyla düzenlenen 24&#x27;üncü İstanbul Onur Yürüyüşü için 28 Haziran Pazar günü İstanbul Kadıköy&#x27;de toplanan gruplara polisin müdahale etmesiyle gözaltına alınanlar gece saatlerinde serbest bırakıldı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c1jyerrkl61o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
-
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>10</span>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 29 Haziran 2026, 03:31</span>
+            </div>
+            <h3>Venezuela depremlerinde ölü sayısı 1.450&#x27;yi aştı, on binlerce kişi kayıp</h3>
+            <p>Venezuela&#x27;da 24 Haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde ölenlerin sayısı 1.450&#x27;yi aştı, on binlerce kişinin kayıp olduğu bildiriliyor. Arama kurtarma çalışmalarına Türkiye&#x27;den de ekipler katılıyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
         </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>9</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-06-29 12:43</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cumhurbaşkanı erdoğan&#x27;ın yapay zeka asistanı bi̇lge vitrine çıkıyor tübi̇tak bi̇lgem tarafından geliştirilen türkiye&#x27;nin yerli ve milli büyük dil modeli bi̇lge, cumhurbaşkanı erdoğan&#x27;ın kişisel yapay zeka asistanı olarak devlet hizmetine giriyor. milli yapay zekanın, son rötuşların ardından genel kullanıma açılması bekleniyor. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 29 Haziran 2026, 11:32</span>
         </div>
+        <h3>Cumhurbaşkanı Erdoğan&#x27;ın yapay zeka asistanı BİLGE vitrine çıkıyor</h3>
+        <p>TÜBİTAK BİLGEM tarafından geliştirilen Türkiye&#x27;nin yerli ve milli büyük dil modeli BİLGE, Cumhurbaşkanı Erdoğan&#x27;ın kişisel yapay zeka asistanı olarak devlet hizmetine giriyor. Milli yapay zekanın, son rötuşların ardından genel kullanıma açılması bekleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Haziran 2026, 11:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/cumhurbaskani-erdoganin-yapay-zeka-asistani-bilge-vitrine-cikiyor-949648.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">10 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye&#x27;den, i̇srail hükümetinin 1915 olaylarını &#x27;soykırım&#x27; olarak tanıma kararına tepki i̇srail kabinesi, 1915 olaylarını &quot;soykırım&quot; olarak tanıma önerisini oybirliğiyle kabul etti. kararın yürürlüğe girmesi için parlamentoda onaylanması gerekiyor. türkiye karara tepki göstererek, i̇srail&#x27;i &quot;kendi suçlarını örtbas etmeye çalışmakla&quot; suçladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Haziran 2026, 02:14</span>
+        </div>
+        <h3>Türkiye&#x27;den, İsrail hükümetinin 1915 olaylarını &#x27;soykırım&#x27; olarak tanıma kararına tepki</h3>
+        <p>İsrail kabinesi, 1915 olaylarını &quot;soykırım&quot; olarak tanıma önerisini oybirliğiyle kabul etti. Kararın yürürlüğe girmesi için parlamentoda onaylanması gerekiyor. Türkiye karara tepki göstererek, İsrail&#x27;i &quot;kendi suçlarını örtbas etmeye çalışmakla&quot; suçladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Haziran 2026, 02:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqx1yw113x3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="avrupa kavruluyor: aşırı sıcaklık bağlantılı ölümler 1.300&#x27;ü aştı almanya, belçika ve hollanda&#x27;da sıcaklıklar haziran ayı rekorlarını kırarken, avrupa&#x27;daki sıcak hava dalgası nedeniyle i̇spanya ve fransa&#x27;da can kaybı artmaya devam etti. dünya sağlık örgütü, sıcak hava dalgasının yüzlerce ek ölüme sebep olmuş olabileceğini açıkladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Haziran 2026, 06:37</span>
+        </div>
+        <h3>Avrupa kavruluyor: Aşırı sıcaklık bağlantılı ölümler 1.300&#x27;ü aştı</h3>
+        <p>Almanya, Belçika ve Hollanda&#x27;da sıcaklıklar haziran ayı rekorlarını kırarken, Avrupa&#x27;daki sıcak hava dalgası nedeniyle İspanya ve Fransa&#x27;da can kaybı artmaya devam etti. Dünya Sağlık Örgütü, sıcak hava dalgasının yüzlerce ek ölüme sebep olmuş olabileceğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Haziran 2026, 06:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c79y7ygve1wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul onur yürüyüşü&#x27;nde gözaltına alınanlar serbest bırakıldı &quot;açık s&#x27;açık yürüyoruz&quot; temasıyla düzenlenen 24&#x27;üncü i̇stanbul onur yürüyüşü için 28 haziran pazar günü i̇stanbul kadıköy&#x27;de toplanan gruplara polisin müdahale etmesiyle gözaltına alınanlar gece saatlerinde serbest bırakıldı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Haziran 2026, 12:28</span>
+        </div>
+        <h3>İstanbul Onur Yürüyüşü&#x27;nde gözaltına alınanlar serbest bırakıldı</h3>
+        <p>&quot;Açık s&#x27;açık yürüyoruz&quot; temasıyla düzenlenen 24&#x27;üncü İstanbul Onur Yürüyüşü için 28 Haziran Pazar günü İstanbul Kadıköy&#x27;de toplanan gruplara polisin müdahale etmesiyle gözaltına alınanlar gece saatlerinde serbest bırakıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Haziran 2026, 12:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c1jyerrkl61o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="venezuela depremlerinde ölü sayısı 1.450&#x27;yi aştı, on binlerce kişi kayıp venezuela&#x27;da 24 haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde ölenlerin sayısı 1.450&#x27;yi aştı, on binlerce kişinin kayıp olduğu bildiriliyor. arama kurtarma çalışmalarına türkiye&#x27;den de ekipler katılıyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Haziran 2026, 03:31</span>
+        </div>
+        <h3>Venezuela depremlerinde ölü sayısı 1.450&#x27;yi aştı, on binlerce kişi kayıp</h3>
+        <p>Venezuela&#x27;da 24 Haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde ölenlerin sayısı 1.450&#x27;yi aştı, on binlerce kişinin kayıp olduğu bildiriliyor. Arama kurtarma çalışmalarına Türkiye&#x27;den de ekipler katılıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Haziran 2026, 03:31</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk hekimlerden dünya literatürüne girmeye aday beyin tümörü ameliyatı gazi üniversitesi (gü) tıp fakültesi hekimlerinden doç. dr. emrah çeltikçi ve doç. dr. melih şahin&#x27;in ortaklaşa gerçekleştirdiği burun deliğinden girilerek yapılan beyin tümörü ameliyatı dünya literatürüne girmesi için değerlendirmeye alındı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 29 Haziran 2026, 12:22</span>
+        </div>
+        <h3>Türk hekimlerden dünya literatürüne girmeye aday beyin tümörü ameliyatı</h3>
+        <p>Gazi Üniversitesi (GÜ) Tıp Fakültesi hekimlerinden Doç. Dr. Emrah Çeltikçi ve Doç. Dr. Melih Şahin&#x27;in ortaklaşa gerçekleştirdiği burun deliğinden girilerek yapılan beyin tümörü ameliyatı dünya literatürüne girmesi için değerlendirmeye alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Haziran 2026, 12:22</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/saglik/turk-hekimlerden-dunya-literaturune-girmeye-aday-beyin-tumoru-ameliyati-949654.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ş hayatında daha mutlu hissetmek için beş dakikalık yürüyüşler yapın araştırmaya göre, her saat başı yapılacak beş dakikalık kısa bir yürüyüş, çalışanların ruh halini, dikkat seviyesini ve verimliliğini artırırken yorgunluğu da azaltabiliyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Haziran 2026, 06:57</span>
+        </div>
+        <h3>İş hayatında daha mutlu hissetmek için beş dakikalık yürüyüşler yapın</h3>
+        <p>Araştırmaya göre, her saat başı yapılacak beş dakikalık kısa bir yürüyüş, çalışanların ruh halini, dikkat seviyesini ve verimliliğini artırırken yorgunluğu da azaltabiliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Haziran 2026, 06:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cly7qqqld18o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kadir i̇nanır son yolculuğuna uğurlandı türk sinemasının usta ismi kadir i̇nanır son yolculuğuna uğurlandı. hayat arkadaşı jülide kural, kadir i̇nanır için düzenlenen törende yaptığı konuşmada, &#x27;memleketine vasiyeti barıştır&#x27; dedi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 28 Haziran 2026, 17:29</span>
+        </div>
+        <h3>Kadir İnanır son yolculuğuna uğurlandı</h3>
+        <p>Türk sinemasının usta ismi Kadir İnanır son yolculuğuna uğurlandı. Hayat arkadaşı Jülide Kural, Kadir İnanır için düzenlenen törende yaptığı konuşmada, &#x27;Memleketine vasiyeti barıştır&#x27; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Haziran 2026, 17:29</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c39y7g10pexo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ankara nato liderler zirvesi için güvenlik hattı başkentte, nato liderler zirvesi için yürütülen güvenlik tedbirleri kapsamında polis ekiplerince belirli noktalarda asayiş ve trafik denetimleri devam ediyor. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 29 Haziran 2026, 11:57</span>
+        </div>
+        <h3>Ankara NATO Liderler Zirvesi için güvenlik hattı</h3>
+        <p>Başkentte, NATO Liderler Zirvesi için yürütülen güvenlik tedbirleri kapsamında polis ekiplerince belirli noktalarda asayiş ve trafik denetimleri devam ediyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Haziran 2026, 11:57</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/ankara-nato-liderler-zirvesi-icin-guvenlik-hatti-949651.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd ve i̇ran karşılıklı saldırıları &#x27;yeniden durdurup müzakere masasına oturacak&#x27; abd&#x27;li yetkililerden, abd ile i̇ran arasında hafta sonunda yeniden alevlenen karşılıklı saldırıların durdurulacağı ve müzakere masasına geri dönüleceği açıklamaları geldi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Haziran 2026, 07:33</span>
+        </div>
+        <h3>ABD ve İran karşılıklı saldırıları &#x27;yeniden durdurup müzakere masasına oturacak&#x27;</h3>
+        <p>ABD&#x27;li yetkililerden, ABD ile İran arasında hafta sonunda yeniden alevlenen karşılıklı saldırıların durdurulacağı ve müzakere masasına geri dönüleceği açıklamaları geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Haziran 2026, 07:33</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cd0mk28d8vyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="zeynep sönmez wimbledon&#x27;da ilk tur maçına çıkıyor teniste sezonun üçüncü grand slam turnuvası olan wimbledon 29 haziran pazartesi günü başlıyor. milli tenisçi zeynep sönmez de bugün korta çıkacak. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Haziran 2026, 09:11</span>
+        </div>
+        <h3>Zeynep Sönmez Wimbledon&#x27;da ilk tur maçına çıkıyor</h3>
+        <p>Teniste sezonun üçüncü grand slam turnuvası olan Wimbledon 29 Haziran Pazartesi günü başlıyor. Milli tenisçi Zeynep Sönmez de bugün korta çıkacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Haziran 2026, 09:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cyv05nm9y72o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">9 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cumhurbaşkanı erdoğan, türk dünyası haftası&#x27;nın açılışına mesaj gönderdi cumhurbaşkanı erdoğan, &quot;türkiye&#x27;nin en samimi arzusu türk dünyasının ortak tarihimize, dilimize ve kültürümüze sahip çıkması, kadim geçmişimizden aldığımız güç ile türk yüzyılı&#x27;nı inşa etmesidir&quot; diye konuştu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Haziran 2026, 11:36</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, Türk Dünyası Haftası&#x27;nın açılışına mesaj gönderdi</h3>
+        <p>Cumhurbaşkanı Erdoğan, &quot;Türkiye&#x27;nin en samimi arzusu Türk dünyasının ortak tarihimize, dilimize ve kültürümüze sahip çıkması, kadim geçmişimizden aldığımız güç ile Türk Yüzyılı&#x27;nı inşa etmesidir&quot; diye konuştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Haziran 2026, 11:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-turk-dunyasi-haftasinin-acilisina-mesaj-gonderdi-949647.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="chp genel merkezi&#x27;nde işten çıkarmalar: parti yönetimi ve işsiz kalanlar ne diyor? mayıs ayında mahkemenin mutlak butlan kararıyla chp genel başkanlığı görevine geri dönen kemal kılıçdaroğlu ve ekibinin, genel merkezde çalışan personelden bazılarını işten çıkarması partide tartışma yarattı. bazı çalışanlar hukuki süreç başlattıklarını doğruladı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 29 Haziran 2026, 06:09</span>
+        </div>
+        <h3>CHP Genel Merkezi&#x27;nde işten çıkarmalar: Parti yönetimi ve işsiz kalanlar ne diyor?</h3>
+        <p>Mayıs ayında mahkemenin mutlak butlan kararıyla CHP Genel Başkanlığı görevine geri dönen Kemal Kılıçdaroğlu ve ekibinin, genel merkezde çalışan personelden bazılarını işten çıkarması partide tartışma yarattı. Bazı çalışanlar hukuki süreç başlattıklarını doğruladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Haziran 2026, 06:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3ryj08rl09o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="wimbledon heyecanı başlıyor i̇ngiltere&#x27;nin başkenti londra&#x27;nın ev sahipliğini yaptığı wimbledon tenis turnuvası&#x27;nda ana tablo maçları başlıyor. dünya sıralamasının 54&#x27;üncü sırasında bulunan zeynep sönmez, turnuvaya ana tablodan katılıyor. i̇ngiltere&#x27;nin en büyük umudu emma raducanu ise sakatlığı nedeniyle son anda turnuvaya katılamayacağını açıkladı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 29 Haziran 2026, 09:38</span>
+        </div>
+        <h3>Wimbledon heyecanı başlıyor</h3>
+        <p>İngiltere&#x27;nin başkenti Londra&#x27;nın ev sahipliğini yaptığı Wimbledon Tenis Turnuvası&#x27;nda ana tablo maçları başlıyor. Dünya sıralamasının 54&#x27;üncü sırasında bulunan Zeynep Sönmez, turnuvaya ana tablodan katılıyor. İngiltere&#x27;nin en büyük umudu Emma Raducanu ise sakatlığı nedeniyle son anda turnuvaya katılamayacağını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Haziran 2026, 09:38</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c2lyppe22q7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trafik sigortasında yeni dönem trafik sigortasında tazminat süreçleri sil baştan yenileniyor. seddk tarafından hayata geçirilecek &#x27;ortak hasar i̇hbar merkezi&#x27; ile kaza bildirimleri tek noktada toplanırken, değer kaybı ödemeleri de artık başvuru gerektirmeden, otomatik hesaplama yöntemiyle doğrudan hak sahiplerine ulaştırılacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Haziran 2026, 12:29</span>
+        </div>
+        <h3>Trafik sigortasında yeni dönem</h3>
+        <p>Trafik sigortasında tazminat süreçleri sil baştan yenileniyor. SEDDK tarafından hayata geçirilecek &#x27;Ortak Hasar İhbar Merkezi&#x27; ile kaza bildirimleri tek noktada toplanırken, değer kaybı ödemeleri de artık başvuru gerektirmeden, otomatik hesaplama yöntemiyle doğrudan hak sahiplerine ulaştırılacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Haziran 2026, 12:29</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/trafik-sigortasinda-yeni-donem-949657.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kahramanmaraş&#x27;taki 6 asırlık çarşı yeniden esnafıyla buluştu kahramanmaraş&#x27;ta, 6 şubat 2023&#x27;te meydana gelen depremlerde hasar gören tarihi kapalı çarşı, tamamlanan restorasyon çalışmalarının ardından yeniden esnafıyla buluştu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Haziran 2026, 12:10</span>
+        </div>
+        <h3>Kahramanmaraş&#x27;taki 6 asırlık çarşı yeniden esnafıyla buluştu</h3>
+        <p>Kahramanmaraş&#x27;ta, 6 Şubat 2023&#x27;te meydana gelen depremlerde hasar gören Tarihi Kapalı Çarşı, tamamlanan restorasyon çalışmalarının ardından yeniden esnafıyla buluştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Haziran 2026, 12:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/kahramanmarastaki-6-asirlik-carsi-yeniden-esnafiyla-bulustu-949655.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="filenin efeleri dünyada ilk 10&#x27;da 2026 fivb milletler ligi&#x27;nin (vnl) polonya&#x27;da düzenlenen ikinci etabında 4&#x27;te 3 yaparak 7. sıraya yükselen a milli erkek voleybol takımı, fivb dünya sıralamasında da 9. sıraya çıkarak ilk 10 takım içerisine girdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Haziran 2026, 11:42</span>
+        </div>
+        <h3>Filenin Efeleri dünyada ilk 10&#x27;da</h3>
+        <p>2026 FIVB Milletler Ligi&#x27;nin (VNL) Polonya&#x27;da düzenlenen ikinci etabında 4&#x27;te 3 yaparak 7. sıraya yükselen A Milli Erkek Voleybol Takımı, FIVB dünya sıralamasında da 9. sıraya çıkarak ilk 10 takım içerisine girdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Haziran 2026, 11:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/filenin-efeleri-dunyada-ilk-10da-949649.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="katil i̇srail&#x27;in gazze şeridindeki saldırılarında can kaybı 73 bin 58&#x27;e yükseldi soykırımcı i̇srail ordusunun ekim 2023&#x27;ten bu yana gazze şeridi&#x27;ne düzenlediği saldırılarda hayatını kaybedenlerin sayısı 73 bin 58&#x27;e ulaştı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Haziran 2026, 12:26</span>
+        </div>
+        <h3>Katil İsrail&#x27;in Gazze Şeridindeki saldırılarında can kaybı 73 bin 58&#x27;e yükseldi</h3>
+        <p>Soykırımcı İsrail ordusunun Ekim 2023&#x27;ten bu yana Gazze Şeridi&#x27;ne düzenlediği saldırılarda hayatını kaybedenlerin sayısı 73 bin 58&#x27;e ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Haziran 2026, 12:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/katil-israilin-gazze-seridindeki-saldirilarinda-can-kaybi-73-bin-58e-yukseldi-949656.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dsö, hantavirüs salgınıyla ilgili durumun istikrarlı olduğunu ve sona yaklaşıldığını bildirdi dünya sağlık örgütü (dsö) genel direktörü tedros adhanom ghebreyesus, hantavirüs salgınıyla ilgili durumun istikrarlı olduğunu ve salgında sona yaklaşıldığını bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Haziran 2026, 12:15</span>
+        </div>
+        <h3>DSÖ, hantavirüs salgınıyla ilgili durumun istikrarlı olduğunu ve sona yaklaşıldığını bildirdi</h3>
+        <p>Dünya Sağlık Örgütü (DSÖ) Genel Direktörü Tedros Adhanom Ghebreyesus, hantavirüs salgınıyla ilgili durumun istikrarlı olduğunu ve salgında sona yaklaşıldığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Haziran 2026, 12:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/dso-hantavirus-salginiyla-ilgili-durumun-istikrarli-oldugunu-ve-sona-yaklasildigini-bildirdi-949653.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="5g abone sayısı 43 milyonu aştı türkiye&#x27;de 5g abone sayısı 43 milyonu aşarken, elektronik haberleşme sektöründeki yatırım miktarı geçen yılın aynı dönemine göre yüzde 1300 arttı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Haziran 2026, 11:58</span>
+        </div>
+        <h3>5G abone sayısı 43 milyonu aştı</h3>
+        <p>Türkiye&#x27;de 5G abone sayısı 43 milyonu aşarken, elektronik haberleşme sektöründeki yatırım miktarı geçen yılın aynı dönemine göre yüzde 1300 arttı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Haziran 2026, 11:58</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/5g-abone-sayisi-43-milyonu-asti-949652.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.trthaber.com/haber/bilim-teknoloji/cumhurbaskani-erdoganin-yapay-zeka-asistani-bilge-vitrine-cikiyor-949648.html" target="_blank">
-                <strong>Cumhurbaşkanı Erdoğan'ın yapay zeka asistanı BİLGE vitrine çıkıyor</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cqx1yw113x3o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Türkiye'den, İsrail hükümetinin 1915 olaylarını 'soykırım' olarak tanıma kararına tepki</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c79y7ygve1wo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Avrupa kavruluyor: Aşırı sıcaklık bağlantılı ölümler 1.300'ü aştı</strong>
-            </a>
-        </li>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c1jyerrkl61o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>İstanbul Onur Yürüyüşü'nde gözaltına alınanlar serbest bırakıldı</strong>
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Venezuela depremlerinde ölü sayısı 1.450'yi aştı, on binlerce kişi kayıp</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">TEKNOLOJI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            cumhurbaşkanı erdoğan'ın yapay zeka asistanı bi̇lge vitrine çıkıyor
-            tübi̇tak bi̇lgem tarafından geliştirilen türkiye'nin yerli ve milli büyük dil modeli bi̇lge, cumhurbaşkanı erdoğan'ın kişisel yapay zeka asistanı olarak devlet hizmetine giriyor. milli yapay zekanın, son rötuşların ardından genel kullanıma açılması bekleniyor.
-            teknoloji
-            trt haber
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Cumhurbaşkanı Erdoğan'ın yapay zeka asistanı BİLGE vitrine çıkıyor</h3>
-                    <p>TÜBİTAK BİLGEM tarafından geliştirilen Türkiye'nin yerli ve milli büyük dil modeli BİLGE, Cumhurbaşkanı Erdoğan'ın kişisel yapay zeka asistanı olarak devlet hizmetine giriyor. Milli yapay zekanın, son rötuşların ardından genel kullanıma açılması bekleniyor.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/cumhurbaskani-erdoganin-yapay-zeka-asistani-bilge-vitrine-cikiyor-949648.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye'den, i̇srail hükümetinin 1915 olaylarını 'soykırım' olarak tanıma kararına tepki
-            i̇srail kabinesi, 1915 olaylarını "soykırım" olarak tanıma önerisini oybirliğiyle kabul etti. kararın yürürlüğe girmesi için parlamentoda onaylanması gerekiyor. türkiye karara tepki göstererek, i̇srail'i "kendi suçlarını örtbas etmeye çalışmakla" suçladı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Türkiye'den, İsrail hükümetinin 1915 olaylarını 'soykırım' olarak tanıma kararına tepki</h3>
-                    <p>İsrail kabinesi, 1915 olaylarını "soykırım" olarak tanıma önerisini oybirliğiyle kabul etti. Kararın yürürlüğe girmesi için parlamentoda onaylanması gerekiyor. Türkiye karara tepki göstererek, İsrail'i "kendi suçlarını örtbas etmeye çalışmakla" suçladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cqx1yw113x3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            avrupa kavruluyor: aşırı sıcaklık bağlantılı ölümler 1.300'ü aştı
-            almanya, belçika ve hollanda'da sıcaklıklar haziran ayı rekorlarını kırarken, avrupa'daki sıcak hava dalgası nedeniyle i̇spanya ve fransa'da can kaybı artmaya devam etti. dünya sağlık örgütü, sıcak hava dalgasının yüzlerce ek ölüme sebep olmuş olabileceğini açıkladı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Avrupa kavruluyor: Aşırı sıcaklık bağlantılı ölümler 1.300'ü aştı</h3>
-                    <p>Almanya, Belçika ve Hollanda'da sıcaklıklar haziran ayı rekorlarını kırarken, Avrupa'daki sıcak hava dalgası nedeniyle İspanya ve Fransa'da can kaybı artmaya devam etti. Dünya Sağlık Örgütü, sıcak hava dalgasının yüzlerce ek ölüme sebep olmuş olabileceğini açıkladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c79y7ygve1wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇stanbul onur yürüyüşü'nde gözaltına alınanlar serbest bırakıldı
-            "açık s'açık yürüyoruz" temasıyla düzenlenen 24'üncü i̇stanbul onur yürüyüşü için 28 haziran pazar günü i̇stanbul kadıköy'de toplanan gruplara polisin müdahale etmesiyle gözaltına alınanlar gece saatlerinde serbest bırakıldı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>İstanbul Onur Yürüyüşü'nde gözaltına alınanlar serbest bırakıldı</h3>
-                    <p>"Açık s'açık yürüyoruz" temasıyla düzenlenen 24'üncü İstanbul Onur Yürüyüşü için 28 Haziran Pazar günü İstanbul Kadıköy'de toplanan gruplara polisin müdahale etmesiyle gözaltına alınanlar gece saatlerinde serbest bırakıldı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c1jyerrkl61o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            venezuela depremlerinde ölü sayısı 1.450'yi aştı, on binlerce kişi kayıp
-            venezuela'da 24 haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde ölenlerin sayısı 1.450'yi aştı, on binlerce kişinin kayıp olduğu bildiriliyor. arama kurtarma çalışmalarına türkiye'den de ekipler katılıyor.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Venezuela depremlerinde ölü sayısı 1.450'yi aştı, on binlerce kişi kayıp</h3>
-                    <p>Venezuela'da 24 Haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde ölenlerin sayısı 1.450'yi aştı, on binlerce kişinin kayıp olduğu bildiriliyor. Arama kurtarma çalışmalarına Türkiye'den de ekipler katılıyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            türk hekimlerden dünya literatürüne girmeye aday beyin tümörü ameliyatı
-            gazi üniversitesi (gü) tıp fakültesi hekimlerinden doç. dr. emrah çeltikçi ve doç. dr. melih şahin'in ortaklaşa gerçekleştirdiği burun deliğinden girilerek yapılan beyin tümörü ameliyatı dünya literatürüne girmesi için değerlendirmeye alındı.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Türk hekimlerden dünya literatürüne girmeye aday beyin tümörü ameliyatı</h3>
-                    <p>Gazi Üniversitesi (GÜ) Tıp Fakültesi hekimlerinden Doç. Dr. Emrah Çeltikçi ve Doç. Dr. Melih Şahin'in ortaklaşa gerçekleştirdiği burun deliğinden girilerek yapılan beyin tümörü ameliyatı dünya literatürüne girmesi için değerlendirmeye alındı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/saglik/turk-hekimlerden-dunya-literaturune-girmeye-aday-beyin-tumoru-ameliyati-949654.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ş hayatında daha mutlu hissetmek için beş dakikalık yürüyüşler yapın
-            araştırmaya göre, her saat başı yapılacak beş dakikalık kısa bir yürüyüş, çalışanların ruh halini, dikkat seviyesini ve verimliliğini artırırken yorgunluğu da azaltabiliyor.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>İş hayatında daha mutlu hissetmek için beş dakikalık yürüyüşler yapın</h3>
-                    <p>Araştırmaya göre, her saat başı yapılacak beş dakikalık kısa bir yürüyüş, çalışanların ruh halini, dikkat seviyesini ve verimliliğini artırırken yorgunluğu da azaltabiliyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cly7qqqld18o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            kadir i̇nanır son yolculuğuna uğurlandı
-            türk sinemasının usta ismi kadir i̇nanır son yolculuğuna uğurlandı. hayat arkadaşı jülide kural, kadir i̇nanır için düzenlenen törende yaptığı konuşmada, 'memleketine vasiyeti barıştır' dedi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Kadir İnanır son yolculuğuna uğurlandı</h3>
-                    <p>Türk sinemasının usta ismi Kadir İnanır son yolculuğuna uğurlandı. Hayat arkadaşı Jülide Kural, Kadir İnanır için düzenlenen törende yaptığı konuşmada, 'Memleketine vasiyeti barıştır' dedi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c39y7g10pexo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            ankara nato liderler zirvesi için güvenlik hattı
-            başkentte, nato liderler zirvesi için yürütülen güvenlik tedbirleri kapsamında polis ekiplerince belirli noktalarda asayiş ve trafik denetimleri devam ediyor.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Ankara NATO Liderler Zirvesi için güvenlik hattı</h3>
-                    <p>Başkentte, NATO Liderler Zirvesi için yürütülen güvenlik tedbirleri kapsamında polis ekiplerince belirli noktalarda asayiş ve trafik denetimleri devam ediyor.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/ankara-nato-liderler-zirvesi-icin-guvenlik-hatti-949651.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd ve i̇ran karşılıklı saldırıları 'yeniden durdurup müzakere masasına oturacak'
-            abd'li yetkililerden, abd ile i̇ran arasında hafta sonunda yeniden alevlenen karşılıklı saldırıların durdurulacağı ve müzakere masasına geri dönüleceği açıklamaları geldi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD ve İran karşılıklı saldırıları 'yeniden durdurup müzakere masasına oturacak'</h3>
-                    <p>ABD'li yetkililerden, ABD ile İran arasında hafta sonunda yeniden alevlenen karşılıklı saldırıların durdurulacağı ve müzakere masasına geri dönüleceği açıklamaları geldi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cd0mk28d8vyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            zeynep sönmez wimbledon'da ilk tur maçına çıkıyor
-            teniste sezonun üçüncü grand slam turnuvası olan wimbledon 29 haziran pazartesi günü başlıyor. milli tenisçi zeynep sönmez de bugün korta çıkacak.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Zeynep Sönmez Wimbledon'da ilk tur maçına çıkıyor</h3>
-                    <p>Teniste sezonun üçüncü grand slam turnuvası olan Wimbledon 29 Haziran Pazartesi günü başlıyor. Milli tenisçi Zeynep Sönmez de bugün korta çıkacak.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cyv05nm9y72o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            cumhurbaşkanı erdoğan, türk dünyası haftası'nın açılışına mesaj gönderdi
-            cumhurbaşkanı erdoğan, "türkiye'nin en samimi arzusu türk dünyasının ortak tarihimize, dilimize ve kültürümüze sahip çıkması, kadim geçmişimizden aldığımız güç ile türk yüzyılı'nı inşa etmesidir" diye konuştu.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Cumhurbaşkanı Erdoğan, Türk Dünyası Haftası'nın açılışına mesaj gönderdi</h3>
-                    <p>Cumhurbaşkanı Erdoğan, "Türkiye'nin en samimi arzusu Türk dünyasının ortak tarihimize, dilimize ve kültürümüze sahip çıkması, kadim geçmişimizden aldığımız güç ile Türk Yüzyılı'nı inşa etmesidir" diye konuştu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-turk-dunyasi-haftasinin-acilisina-mesaj-gonderdi-949647.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            chp genel merkezi'nde işten çıkarmalar: parti yönetimi ve işsiz kalanlar ne diyor?
-            mayıs ayında mahkemenin mutlak butlan kararıyla chp genel başkanlığı görevine geri dönen kemal kılıçdaroğlu ve ekibinin, genel merkezde çalışan personelden bazılarını işten çıkarması partide tartışma yarattı. bazı çalışanlar hukuki süreç başlattıklarını doğruladı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>CHP Genel Merkezi'nde işten çıkarmalar: Parti yönetimi ve işsiz kalanlar ne diyor?</h3>
-                    <p>Mayıs ayında mahkemenin mutlak butlan kararıyla CHP Genel Başkanlığı görevine geri dönen Kemal Kılıçdaroğlu ve ekibinin, genel merkezde çalışan personelden bazılarını işten çıkarması partide tartışma yarattı. Bazı çalışanlar hukuki süreç başlattıklarını doğruladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c3ryj08rl09o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            wimbledon heyecanı başlıyor
-            i̇ngiltere'nin başkenti londra'nın ev sahipliğini yaptığı wimbledon tenis turnuvası'nda ana tablo maçları başlıyor. dünya sıralamasının 54'üncü sırasında bulunan zeynep sönmez, turnuvaya ana tablodan katılıyor. i̇ngiltere'nin en büyük umudu emma raducanu ise sakatlığı nedeniyle son anda turnuvaya katılamayacağını açıkladı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Wimbledon heyecanı başlıyor</h3>
-                    <p>İngiltere'nin başkenti Londra'nın ev sahipliğini yaptığı Wimbledon Tenis Turnuvası'nda ana tablo maçları başlıyor. Dünya sıralamasının 54'üncü sırasında bulunan Zeynep Sönmez, turnuvaya ana tablodan katılıyor. İngiltere'nin en büyük umudu Emma Raducanu ise sakatlığı nedeniyle son anda turnuvaya katılamayacağını açıkladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c2lyppe22q7o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            trafik sigortasında yeni dönem
-            trafik sigortasında tazminat süreçleri sil baştan yenileniyor. seddk tarafından hayata geçirilecek 'ortak hasar i̇hbar merkezi' ile kaza bildirimleri tek noktada toplanırken, değer kaybı ödemeleri de artık başvuru gerektirmeden, otomatik hesaplama yöntemiyle doğrudan hak sahiplerine ulaştırılacak.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Trafik sigortasında yeni dönem</h3>
-                    <p>Trafik sigortasında tazminat süreçleri sil baştan yenileniyor. SEDDK tarafından hayata geçirilecek 'Ortak Hasar İhbar Merkezi' ile kaza bildirimleri tek noktada toplanırken, değer kaybı ödemeleri de artık başvuru gerektirmeden, otomatik hesaplama yöntemiyle doğrudan hak sahiplerine ulaştırılacak.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/trafik-sigortasinda-yeni-donem-949657.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            kahramanmaraş'taki 6 asırlık çarşı yeniden esnafıyla buluştu
-            kahramanmaraş'ta, 6 şubat 2023'te meydana gelen depremlerde hasar gören tarihi kapalı çarşı, tamamlanan restorasyon çalışmalarının ardından yeniden esnafıyla buluştu.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Kahramanmaraş'taki 6 asırlık çarşı yeniden esnafıyla buluştu</h3>
-                    <p>Kahramanmaraş'ta, 6 Şubat 2023'te meydana gelen depremlerde hasar gören Tarihi Kapalı Çarşı, tamamlanan restorasyon çalışmalarının ardından yeniden esnafıyla buluştu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/kahramanmarastaki-6-asirlik-carsi-yeniden-esnafiyla-bulustu-949655.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            filenin efeleri dünyada ilk 10'da
-            2026 fivb milletler ligi'nin (vnl) polonya'da düzenlenen ikinci etabında 4'te 3 yaparak 7. sıraya yükselen a milli erkek voleybol takımı, fivb dünya sıralamasında da 9. sıraya çıkarak ilk 10 takım içerisine girdi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Filenin Efeleri dünyada ilk 10'da</h3>
-                    <p>2026 FIVB Milletler Ligi'nin (VNL) Polonya'da düzenlenen ikinci etabında 4'te 3 yaparak 7. sıraya yükselen A Milli Erkek Voleybol Takımı, FIVB dünya sıralamasında da 9. sıraya çıkarak ilk 10 takım içerisine girdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/filenin-efeleri-dunyada-ilk-10da-949649.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            katil i̇srail'in gazze şeridindeki saldırılarında can kaybı 73 bin 58'e yükseldi
-            soykırımcı i̇srail ordusunun ekim 2023'ten bu yana gazze şeridi'ne düzenlediği saldırılarda hayatını kaybedenlerin sayısı 73 bin 58'e ulaştı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Katil İsrail'in Gazze Şeridindeki saldırılarında can kaybı 73 bin 58'e yükseldi</h3>
-                    <p>Soykırımcı İsrail ordusunun Ekim 2023'ten bu yana Gazze Şeridi'ne düzenlediği saldırılarda hayatını kaybedenlerin sayısı 73 bin 58'e ulaştı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/katil-israilin-gazze-seridindeki-saldirilarinda-can-kaybi-73-bin-58e-yukseldi-949656.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            dsö, hantavirüs salgınıyla ilgili durumun istikrarlı olduğunu ve sona yaklaşıldığını bildirdi
-            dünya sağlık örgütü (dsö) genel direktörü tedros adhanom ghebreyesus, hantavirüs salgınıyla ilgili durumun istikrarlı olduğunu ve salgında sona yaklaşıldığını bildirdi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>DSÖ, hantavirüs salgınıyla ilgili durumun istikrarlı olduğunu ve sona yaklaşıldığını bildirdi</h3>
-                    <p>Dünya Sağlık Örgütü (DSÖ) Genel Direktörü Tedros Adhanom Ghebreyesus, hantavirüs salgınıyla ilgili durumun istikrarlı olduğunu ve salgında sona yaklaşıldığını bildirdi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/dso-hantavirus-salginiyla-ilgili-durumun-istikrarli-oldugunu-ve-sona-yaklasildigini-bildirdi-949653.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            5g abone sayısı 43 milyonu aştı
-            türkiye'de 5g abone sayısı 43 milyonu aşarken, elektronik haberleşme sektöründeki yatırım miktarı geçen yılın aynı dönemine göre yüzde 1300 arttı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>5G abone sayısı 43 milyonu aştı</h3>
-                    <p>Türkiye'de 5G abone sayısı 43 milyonu aşarken, elektronik haberleşme sektöründeki yatırım miktarı geçen yılın aynı dönemine göre yüzde 1300 arttı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/5g-abone-sayisi-43-milyonu-asti-949652.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

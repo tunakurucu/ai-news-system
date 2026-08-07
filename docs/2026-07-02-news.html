@@ -1,585 +1,460 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-        .search-box {
-    margin: 25px 0;
-    }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-            .category-filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 20px 0 30px;
-            }
-
-            .category-filter-btn {
-                padding: 8px 14px;
-                border: 1px solid #ddd;
-                border-radius: 999px;
-                background: #f7f7f7;
-                cursor: pointer;
-            }
-
-            .category-filter-btn.active {
-                background: #222;
-                color: white;
-            }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="home-search-input"
-        placeholder="Güncel haberlerde ara..."
-    >
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">2 Temmuz 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
 </div>
 
-<div class="category-filters">
-    <button class="category-filter-btn active" data-category="all">Tümü</button>
-    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-    <button class="category-filter-btn" data-category="dünya">Dünya</button>
-    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-    <button class="category-filter-btn" data-category="genel">Genel</button>
-</div>
-
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
         </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>genel</strong> 11</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>teknoloji</strong> 2</span><span class="stat-item"><strong>spor</strong> 1</span><span class="stat-item"><strong>ekonomi</strong> 1</span></div>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>11</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>5</span>
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">GENEL</span>
         </div>
+        <h3>Somali Savunma Bakanlığı: &#x27;Türk F-16&#x27;ları Eş Şebab militanlarını vurdu&#x27;</h3>
+        <p>Somali Savunma Bakanlığı, Türkiye&#x27;ye ait F-16 savaş jetlerinin Eş-Şebab örgütüne ait mevzileri vurduğunu açıkladı. Saldırıda 35 kişinin öldüğü, 20&#x27;den fazla kişinin ağır yaralandığı belirtildi. Bakanlığın X hesabı üzerinden yapılan paylaşım daha sonra kaldırıldı.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 1 Temmuz 2026, 14:57</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cm2dr993ed3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 2 Temmuz 2026, 05:58</span>
+            </div>
+            <h3>Yusuf Ziya Gümüşel&#x27;in tahliyesi dindar kadınlar arasında nasıl tartışılıyor?</h3>
+            <p>Reşit olmayan kızını &quot;evlendirmesiyle&quot; ilgili davada hüküm giyen Hiranur Vakfı&#x27;nın kurucusu Yusuf Ziya Gümüşel geçtiğimiz günlerde sağlık koşulları gerekçesiyle tahliye edildi. BBC Türkçe kararı kendini dindar olarak tanımlayan veya geçmişte cemaatler içinde bulunmuş kadınlarla konuştu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cvgeqez7d3po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 2 Temmuz 2026, 05:29</span>
+            </div>
+            <h3>Madımak Katliamı&#x27;nın 33. yılı: 2 Temmuz 1993&#x27;te Sivas&#x27;ta neler yaşandı?</h3>
+            <p>2 Temmuz 1993, bir katliam tarihi olarak hafızalara kazındı. O gün, Pir Sultan Abdal Şenliklerine katılmak için Sivas&#x27;a giden aydın ve sanatçılardan 33&#x27;ü, kaldıkları otelin yakılması sonucu hayatını kaybetmişti. Olayda iki otel görevlisi de yaşamını yitirmiş, iki saldırgan da ölmüştü.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cpv3zw02g7ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 1 Temmuz 2026, 14:50</span>
+            </div>
+            <h3>Van Barosu Rojin Kabaiş dosyasından neden çekildi, taraflar ne diyor?</h3>
+            <p>Ekim 2024&#x27;te dosyayı takibe başlayan Baro, son kararına gerekçe olarak, Rojin Kabaiş&#x27;in ailesiyle, &quot;sağlıklı iletişim ve koordinasyonun sürdürülememesini&quot; gösterdi. Rojin Kabaiş&#x27;in babası Nizamettin Kabaiş ise Van Barosu Başkanı Sinan Özaraz&#x27;ın &quot;dosya ile ilgilenmediğini ve delillerin karartılmasına göz yumduğunu&quot; öne sürdü. Özaraz bu iddiaları reddetti. BBC Türkçe, Nizamettin Kabaiş ve Sinan Özaraz ile konuştu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yz6e5j101o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">BBC Türkçe · 2 Temmuz 2026, 09:00</span>
+            </div>
+            <h3>Venezuela depremlerinde 2000 kişi öldü, 59 bin bina yıkıldı ya da hasar gördü</h3>
+            <p>Venezuela&#x27;da 24 Haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 2000&#x27;i aştı, on binlerce kişi hâlâ kayıp. NASA&#x27;nın uydu görüntülerine göre yaklaşık 59 bin bina yıkıldı ya da hasar gördü.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>teknoloji</strong>
-            <span>2</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>spor</strong>
-            <span>1</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">11 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="somali savunma bakanlığı: &#x27;türk f-16&#x27;ları eş şebab militanlarını vurdu&#x27; somali savunma bakanlığı, türkiye&#x27;ye ait f-16 savaş jetlerinin eş-şebab örgütüne ait mevzileri vurduğunu açıkladı. saldırıda 35 kişinin öldüğü, 20&#x27;den fazla kişinin ağır yaralandığı belirtildi. bakanlığın x hesabı üzerinden yapılan paylaşım daha sonra kaldırıldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 14:57</span>
         </div>
-
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>1</span>
+        <h3>Somali Savunma Bakanlığı: &#x27;Türk F-16&#x27;ları Eş Şebab militanlarını vurdu&#x27;</h3>
+        <p>Somali Savunma Bakanlığı, Türkiye&#x27;ye ait F-16 savaş jetlerinin Eş-Şebab örgütüne ait mevzileri vurduğunu açıkladı. Saldırıda 35 kişinin öldüğü, 20&#x27;den fazla kişinin ağır yaralandığı belirtildi. Bakanlığın X hesabı üzerinden yapılan paylaşım daha sonra kaldırıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 14:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm2dr993ed3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="van barosu rojin kabaiş dosyasından neden çekildi, taraflar ne diyor? ekim 2024&#x27;te dosyayı takibe başlayan baro, son kararına gerekçe olarak, rojin kabaiş&#x27;in ailesiyle, &quot;sağlıklı iletişim ve koordinasyonun sürdürülememesini&quot; gösterdi. rojin kabaiş&#x27;in babası nizamettin kabaiş ise van barosu başkanı sinan özaraz&#x27;ın &quot;dosya ile ilgilenmediğini ve delillerin karartılmasına göz yumduğunu&quot; öne sürdü. özaraz bu iddiaları reddetti. bbc türkçe, nizamettin kabaiş ve sinan özaraz ile konuştu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 14:50</span>
         </div>
-
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-07-02 11:01</span>
+        <h3>Van Barosu Rojin Kabaiş dosyasından neden çekildi, taraflar ne diyor?</h3>
+        <p>Ekim 2024&#x27;te dosyayı takibe başlayan Baro, son kararına gerekçe olarak, Rojin Kabaiş&#x27;in ailesiyle, &quot;sağlıklı iletişim ve koordinasyonun sürdürülememesini&quot; gösterdi. Rojin Kabaiş&#x27;in babası Nizamettin Kabaiş ise Van Barosu Başkanı Sinan Özaraz&#x27;ın &quot;dosya ile ilgilenmediğini ve delillerin karartılmasına göz yumduğunu&quot; öne sürdü. Özaraz bu iddiaları reddetti. BBC Türkçe, Nizamettin Kabaiş ve Sinan Özaraz ile konuştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 14:50</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yz6e5j101o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="suriye devlet başkanı, yeni parlamentonun son 70 üyesini atadı geçtiğimiz ekim ayında bölgesel seçim kurulları tarafından yalnızca altı kadın adayın seçilmesinin ardından, 15 kadın atandı.yeni milletvekillerinin 13&#x27;ü 2024&#x27;te devrilen beşar esad&#x27;ın iktidarı döneminde hapis yatmış kişler. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 2 Temmuz 2026, 04:55</span>
         </div>
+        <h3>Suriye Devlet Başkanı, yeni parlamentonun son 70 üyesini atadı</h3>
+        <p>Geçtiğimiz Ekim ayında bölgesel seçim kurulları tarafından yalnızca altı kadın adayın seçilmesinin ardından, 15 kadın atandı.Yeni milletvekillerinin 13&#x27;ü 2024&#x27;te devrilen Beşar Esad&#x27;ın iktidarı döneminde hapis yatmış kişler.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 2 Temmuz 2026, 04:55</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c1jy7dwkg7po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meb, mesem verilerini paylaştı: &#x27;3 bin 80 iş kazasının 13&#x27;ü ölümle sonuçlandı&#x27; millî eğitim bakanlığı, mesem programı kapsamında 3 bin 80 iş kazası yaşandığını, bunların 13&#x27;ünün ölümle sonuçlandığını açıkladı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 17:37</span>
+        </div>
+        <h3>MEB, MESEM verilerini paylaştı: &#x27;3 bin 80 iş kazasının 13&#x27;ü ölümle sonuçlandı&#x27;</h3>
+        <p>Millî Eğitim Bakanlığı, MESEM Programı kapsamında 3 bin 80 iş kazası yaşandığını, bunların 13&#x27;ünün ölümle sonuçlandığını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 17:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c77yeg8y235o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tüdses ile türk dünyası&#x27;nın ortak hafızası dijital ortamda geleceğe taşınacak ak parti genel başkan yardımcısı kürşad zorlu, türk dünyası sivil toplum destek sistemi&#x27;ne ilişkin, &quot;i̇lk aşamada türkiye&#x27;de faaliyet gösteren, 8 türk devletini temsil eden 826 sivil toplum kuruluşu ve yaklaşık 88 bin üye tüdses çatısı altında yer alıyor. hedefimiz, platformun tüm türk devletleri teşkilatı ülkelerinde yaygınlaşmasıdır&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 2 Temmuz 2026, 10:46</span>
+        </div>
+        <h3>TÜDSES ile Türk Dünyası&#x27;nın ortak hafızası dijital ortamda geleceğe taşınacak</h3>
+        <p>AK Parti Genel Başkan Yardımcısı Kürşad Zorlu, Türk Dünyası Sivil Toplum Destek Sistemi&#x27;ne ilişkin, &quot;İlk aşamada Türkiye&#x27;de faaliyet gösteren, 8 Türk devletini temsil eden 826 sivil toplum kuruluşu ve yaklaşık 88 bin üye TÜDSES çatısı altında yer alıyor. Hedefimiz, platformun tüm Türk Devletleri Teşkilatı ülkelerinde yaygınlaşmasıdır&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 2 Temmuz 2026, 10:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turk-dunyasi/tudses-ile-turk-dunyasinin-ortak-hafizasi-dijital-ortamda-gelecege-tasinacak-950003.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fransa&#x27;da çıkan yangında yaklaşık 900 hektarlık alan küle döndü fransa&#x27;nın güneyindeki herault kentinde çıkan ve komşu aude vilayetine yayılan orman yangınında yaklaşık 900 hektarlık alan küle döndü. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 2 Temmuz 2026, 10:42</span>
+        </div>
+        <h3>Fransa&#x27;da çıkan yangında yaklaşık 900 hektarlık alan küle döndü</h3>
+        <p>Fransa&#x27;nın güneyindeki Herault kentinde çıkan ve komşu Aude vilayetine yayılan orman yangınında yaklaşık 900 hektarlık alan küle döndü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 2 Temmuz 2026, 10:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/fransada-cikan-yanginda-yaklasik-900-hektarlik-alan-kule-dondu-950002.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sosyal medyada göçmen kaçakçılığı ilanı veren 4 şüpheli yakalandı düzensiz göçmenlerin türkiye&#x27;ye yasa dışı yollarla girişine ve farklı ülkelere kaçak olarak geçirilmesine aracılık edildiğine ilişkin sosyal medya paylaşımlarının tespit edilmesi üzerine başlatılan soruşturma kapsamında suriye uyruklu 4 şüpheli gözaltına alındı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 2 Temmuz 2026, 10:47</span>
+        </div>
+        <h3>Sosyal medyada göçmen kaçakçılığı ilanı veren 4 şüpheli yakalandı</h3>
+        <p>Düzensiz göçmenlerin Türkiye&#x27;ye yasa dışı yollarla girişine ve farklı ülkelere kaçak olarak geçirilmesine aracılık edildiğine ilişkin sosyal medya paylaşımlarının tespit edilmesi üzerine başlatılan soruşturma kapsamında Suriye uyruklu 4 şüpheli gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 2 Temmuz 2026, 10:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/sosyal-medyada-gocmen-kacakciligi-ilani-veren-4-supheli-yakalandi-950001.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;de geçen yıl 659 gazete resmi ilan yayımladı türkiye genelinde, geçen yıl resmi ilan yayımlayan gazetelerin sayısı 659 olarak belirlendi. resmi ilan yayımlayan internet haber sitesi sayısı 2024&#x27;te 349 iken, geçen yıl yüzde 2,3 artışla 357&#x27;ye ulaştı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 2 Temmuz 2026, 10:36</span>
+        </div>
+        <h3>Türkiye&#x27;de geçen yıl 659 gazete resmi ilan yayımladı</h3>
+        <p>Türkiye genelinde, geçen yıl resmi ilan yayımlayan gazetelerin sayısı 659 olarak belirlendi. Resmi ilan yayımlayan internet haber sitesi sayısı 2024&#x27;te 349 iken, geçen yıl yüzde 2,3 artışla 357&#x27;ye ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 2 Temmuz 2026, 10:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/turkiyede-gecen-yil-659-gazete-resmi-ilan-yayimladi-950000.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="100 milyon lira dolandırdılar, &#x27;operasyon bitti&#x27; deyip tatlı ikram ettiler bursa&#x27;nın mudanya ilçesinde, kendilerini polis olarak tanıtıp bir çiftten 3 ayda yaklaşık 100 milyon lira değerinde nakit, ziynet eşyası ve gayrimenkul dolandırdığı gerekçesiyle gözaltına alınan 14 şüpheliden 6&#x27;sı tutuklandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 2 Temmuz 2026, 10:26</span>
+        </div>
+        <h3>100 milyon lira dolandırdılar, &#x27;operasyon bitti&#x27; deyip tatlı ikram ettiler</h3>
+        <p>Bursa&#x27;nın Mudanya ilçesinde, kendilerini polis olarak tanıtıp bir çiftten 3 ayda yaklaşık 100 milyon lira değerinde nakit, ziynet eşyası ve gayrimenkul dolandırdığı gerekçesiyle gözaltına alınan 14 şüpheliden 6&#x27;sı tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 2 Temmuz 2026, 10:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/100-milyon-lira-dolandirdilar-operasyon-bitti-deyip-tatli-ikram-ettiler-949998.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hindistan tatilinden beyninde 38 parazitle döndü doktorlar, lowri&#x27;nin baş ağrıları, nöbetleri ve psikozunun domuz tenyası larvalarının neden olduğu bir enfeksiyondan kaynaklandığını teşhis etti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 2 Temmuz 2026, 06:54</span>
+        </div>
+        <h3>Hindistan tatilinden beyninde 38 parazitle döndü</h3>
+        <p>Doktorlar, Lowri&#x27;nin baş ağrıları, nöbetleri ve psikozunun domuz tenyası larvalarının neden olduğu bir enfeksiyondan kaynaklandığını teşhis etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 2 Temmuz 2026, 06:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cd95g1q8qj4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kabataşbağcılar tramvay hattı&#x27;nda seferler aksadı t1 kabataş-bağcılar tramvay hattı&#x27;nda meydana gelen teknik arıza nedeniyle seferlerde bir süre aksama meydana geldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 2 Temmuz 2026, 10:02</span>
+        </div>
+        <h3>KabataşBağcılar Tramvay Hattı&#x27;nda seferler aksadı</h3>
+        <p>T1 Kabataş-Bağcılar Tramvay Hattı&#x27;nda meydana gelen teknik arıza nedeniyle seferlerde bir süre aksama meydana geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 2 Temmuz 2026, 10:02</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/kabatas-bagcilar-tramvay-hattinda-seferler-aksadi-949994.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="yusuf ziya gümüşel&#x27;in tahliyesi dindar kadınlar arasında nasıl tartışılıyor? reşit olmayan kızını &quot;evlendirmesiyle&quot; ilgili davada hüküm giyen hiranur vakfı&#x27;nın kurucusu yusuf ziya gümüşel geçtiğimiz günlerde sağlık koşulları gerekçesiyle tahliye edildi. bbc türkçe kararı kendini dindar olarak tanımlayan veya geçmişte cemaatler içinde bulunmuş kadınlarla konuştu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 2 Temmuz 2026, 05:58</span>
+        </div>
+        <h3>Yusuf Ziya Gümüşel&#x27;in tahliyesi dindar kadınlar arasında nasıl tartışılıyor?</h3>
+        <p>Reşit olmayan kızını &quot;evlendirmesiyle&quot; ilgili davada hüküm giyen Hiranur Vakfı&#x27;nın kurucusu Yusuf Ziya Gümüşel geçtiğimiz günlerde sağlık koşulları gerekçesiyle tahliye edildi. BBC Türkçe kararı kendini dindar olarak tanımlayan veya geçmişte cemaatler içinde bulunmuş kadınlarla konuştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 2 Temmuz 2026, 05:58</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvgeqez7d3po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="madımak katliamı&#x27;nın 33. yılı: 2 temmuz 1993&#x27;te sivas&#x27;ta neler yaşandı? 2 temmuz 1993, bir katliam tarihi olarak hafızalara kazındı. o gün, pir sultan abdal şenliklerine katılmak için sivas&#x27;a giden aydın ve sanatçılardan 33&#x27;ü, kaldıkları otelin yakılması sonucu hayatını kaybetmişti. olayda iki otel görevlisi de yaşamını yitirmiş, iki saldırgan da ölmüştü. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 2 Temmuz 2026, 05:29</span>
+        </div>
+        <h3>Madımak Katliamı&#x27;nın 33. yılı: 2 Temmuz 1993&#x27;te Sivas&#x27;ta neler yaşandı?</h3>
+        <p>2 Temmuz 1993, bir katliam tarihi olarak hafızalara kazındı. O gün, Pir Sultan Abdal Şenliklerine katılmak için Sivas&#x27;a giden aydın ve sanatçılardan 33&#x27;ü, kaldıkları otelin yakılması sonucu hayatını kaybetmişti. Olayda iki otel görevlisi de yaşamını yitirmiş, iki saldırgan da ölmüştü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 2 Temmuz 2026, 05:29</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cpv3zw02g7ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="12 dev adam dünya kupası yolunda bosna hersek&#x27;e konuk oluyor a milli erkek basketbol takımımız, fiba 2027 dünya kupası avrupa elemeleri 1. tur c grubu&#x27;ndaki beşinci maçında bugün bosna hersek&#x27;e konuk olacak. tsi̇ 21.00&#x27;de başlayacak müsabaka, trt 1&#x27;den canlı yayınlanacak. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 2 Temmuz 2026, 10:21</span>
+        </div>
+        <h3>12 Dev Adam Dünya Kupası yolunda Bosna Hersek&#x27;e konuk oluyor</h3>
+        <p>A Milli Erkek Basketbol Takımımız, FIBA 2027 Dünya Kupası Avrupa Elemeleri 1. Tur C Grubu&#x27;ndaki beşinci maçında bugün Bosna Hersek&#x27;e konuk olacak. TSİ 21.00&#x27;de başlayacak müsabaka, TRT 1&#x27;den canlı yayınlanacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 2 Temmuz 2026, 10:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/12-dev-adam-dunya-kupasi-yolunda-bosna-herseke-konuk-oluyor-949997.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="lastikleri patlayınca başkasının yedek lastiğini çaldılar hatay&#x27;ın samandağ ilçesinde park halindeki bir otomobilin yedek lastiğini çaldıkları iddiasıyla gözaltına alınan 4 şüphelinin, emniyetteki ifadelerinde kendi araçlarının lastiği patladığı ve açık lastikçi bulamadıkları için bu yönteme başvurduklarını iddia ettiği öğrenildi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 2 Temmuz 2026, 10:10</span>
+        </div>
+        <h3>Lastikleri patlayınca başkasının yedek lastiğini çaldılar</h3>
+        <p>Hatay&#x27;ın Samandağ ilçesinde park halindeki bir otomobilin yedek lastiğini çaldıkları iddiasıyla gözaltına alınan 4 şüphelinin, emniyetteki ifadelerinde kendi araçlarının lastiği patladığı ve açık lastikçi bulamadıkları için bu yönteme başvurduklarını iddia ettiği öğrenildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 2 Temmuz 2026, 10:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/lastikleri-patlayinca-baskasinin-yedek-lastigini-caldilar-949996.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="665. tarihi kırkpınar yağlı güreşleri için kayıtlar başladı 665. tarihi kırkpınar yağlı güreşleri&#x27;nde mücadele edecek pehlivanların kayıt işlemleri başladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 2 Temmuz 2026, 10:53</span>
+        </div>
+        <h3>665. Tarihi Kırkpınar Yağlı Güreşleri için kayıtlar başladı</h3>
+        <p>665. Tarihi Kırkpınar Yağlı Güreşleri&#x27;nde mücadele edecek pehlivanların kayıt işlemleri başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 2 Temmuz 2026, 10:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/665-tarihi-kirkpinar-yagli-guresleri-icin-kayitlar-basladi-950004.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="venezuela depremlerinde 2000 kişi öldü, 59 bin bina yıkıldı ya da hasar gördü venezuela&#x27;da 24 haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 2000&#x27;i aştı, on binlerce kişi hâlâ kayıp. nasa&#x27;nın uydu görüntülerine göre yaklaşık 59 bin bina yıkıldı ya da hasar gördü. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 2 Temmuz 2026, 09:00</span>
+        </div>
+        <h3>Venezuela depremlerinde 2000 kişi öldü, 59 bin bina yıkıldı ya da hasar gördü</h3>
+        <p>Venezuela&#x27;da 24 Haziran&#x27;da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 2000&#x27;i aştı, on binlerce kişi hâlâ kayıp. NASA&#x27;nın uydu görüntülerine göre yaklaşık 59 bin bina yıkıldı ya da hasar gördü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 2 Temmuz 2026, 09:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ufo&#x27;lara yanıt bulmaya her zamankinden daha mı yakınız? 2 temmuz dünya ufo günü&#x27;nde bbc&#x27;ye konuşan bir uzay ve havacılık uzmanı, modern teknoloji sayesinde gökyüzünde neler olduğunu anlamak adına her zamankinden daha güçlü bir konumda olduğumuzu söylüyor. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 2 Temmuz 2026, 02:57</span>
+        </div>
+        <h3>UFO&#x27;lara yanıt bulmaya her zamankinden daha mı yakınız?</h3>
+        <p>2 Temmuz Dünya UFO Günü&#x27;nde BBC&#x27;ye konuşan bir uzay ve havacılık uzmanı, modern teknoloji sayesinde gökyüzünde neler olduğunu anlamak adına her zamankinden daha güçlü bir konumda olduğumuzu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 2 Temmuz 2026, 02:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c75rrlqpl2do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cm2dr993ed3o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Somali Savunma Bakanlığı: 'Türk F-16'ları Eş Şebab militanlarını vurdu'</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye dünya kupası&#x27;nda neden başarısız oldu? türkiye, 2026 dünya kupası&#x27;nda ilk iki maçında avustralya ve paraguay&#x27;a yenilerek turnuvaya grup aşamasında veda etti. a milli takım&#x27;ın başarısızlığının ardından teknik direktör vincenzo montella&#x27;nın tercihleri ve türkiye futbol federasyonu&#x27;nun hazırlık planlaması tartışma konusu oldu. bbc türkçe, spor yorumcularıyla türkiye&#x27;nin neden başarısız olduğunu konuştu spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 1 Temmuz 2026, 19:41</span>
+        </div>
+        <h3>Türkiye Dünya Kupası&#x27;nda neden başarısız oldu?</h3>
+        <p>Türkiye, 2026 Dünya Kupası&#x27;nda ilk iki maçında Avustralya ve Paraguay&#x27;a yenilerek turnuvaya grup aşamasında veda etti. A Milli Takım&#x27;ın başarısızlığının ardından teknik direktör Vincenzo Montella&#x27;nın tercihleri ve Türkiye Futbol Federasyonu&#x27;nun hazırlık planlaması tartışma konusu oldu. BBC Türkçe, spor yorumcularıyla Türkiye&#x27;nin neden başarısız olduğunu konuştu</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Temmuz 2026, 19:41</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cgk62pde4j5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cvgeqez7d3po?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Yusuf Ziya Gümüşel'in tahliyesi dindar kadınlar arasında nasıl tartışılıyor?</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="borsa güne yükselişle başladı borsa i̇stanbul&#x27;da bist 100 endeksi, güne yüzde 0,22 artışla 14.382,06 puandan başladı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 2 Temmuz 2026, 10:08</span>
+        </div>
+        <h3>Borsa güne yükselişle başladı</h3>
+        <p>Borsa İstanbul&#x27;da BIST 100 endeksi, güne yüzde 0,22 artışla 14.382,06 puandan başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 2 Temmuz 2026, 10:08</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/borsa-gune-yukselisle-basladi-949995.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cpv3zw02g7ro?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Madımak Katliamı'nın 33. yılı: 2 Temmuz 1993'te Sivas'ta neler yaşandı?</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c5yz6e5j101o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Van Barosu Rojin Kabaiş dosyasından neden çekildi, taraflar ne diyor?</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Venezuela depremlerinde 2000 kişi öldü, 59 bin bina yıkıldı ya da hasar gördü</strong>
-            </a>
-        </li>
 
-    </ul>
-
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            somali savunma bakanlığı: 'türk f-16'ları eş şebab militanlarını vurdu'
-            somali savunma bakanlığı, türkiye'ye ait f-16 savaş jetlerinin eş-şebab örgütüne ait mevzileri vurduğunu açıkladı. saldırıda 35 kişinin öldüğü, 20'den fazla kişinin ağır yaralandığı belirtildi. bakanlığın x hesabı üzerinden yapılan paylaşım daha sonra kaldırıldı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Somali Savunma Bakanlığı: 'Türk F-16'ları Eş Şebab militanlarını vurdu'</h3>
-                    <p>Somali Savunma Bakanlığı, Türkiye'ye ait F-16 savaş jetlerinin Eş-Şebab örgütüne ait mevzileri vurduğunu açıkladı. Saldırıda 35 kişinin öldüğü, 20'den fazla kişinin ağır yaralandığı belirtildi. Bakanlığın X hesabı üzerinden yapılan paylaşım daha sonra kaldırıldı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cm2dr993ed3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            van barosu rojin kabaiş dosyasından neden çekildi, taraflar ne diyor?
-            ekim 2024'te dosyayı takibe başlayan baro, son kararına gerekçe olarak, rojin kabaiş'in ailesiyle, "sağlıklı iletişim ve koordinasyonun sürdürülememesini" gösterdi. rojin kabaiş'in babası nizamettin kabaiş ise van barosu başkanı sinan özaraz'ın "dosya ile ilgilenmediğini ve delillerin karartılmasına göz yumduğunu" öne sürdü. özaraz bu iddiaları reddetti. bbc türkçe, nizamettin kabaiş ve sinan özaraz ile konuştu.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Van Barosu Rojin Kabaiş dosyasından neden çekildi, taraflar ne diyor?</h3>
-                    <p>Ekim 2024'te dosyayı takibe başlayan Baro, son kararına gerekçe olarak, Rojin Kabaiş'in ailesiyle, "sağlıklı iletişim ve koordinasyonun sürdürülememesini" gösterdi. Rojin Kabaiş'in babası Nizamettin Kabaiş ise Van Barosu Başkanı Sinan Özaraz'ın "dosya ile ilgilenmediğini ve delillerin karartılmasına göz yumduğunu" öne sürdü. Özaraz bu iddiaları reddetti. BBC Türkçe, Nizamettin Kabaiş ve Sinan Özaraz ile konuştu.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c5yz6e5j101o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            suriye devlet başkanı, yeni parlamentonun son 70 üyesini atadı
-            geçtiğimiz ekim ayında bölgesel seçim kurulları tarafından yalnızca altı kadın adayın seçilmesinin ardından, 15 kadın atandı.yeni milletvekillerinin 13'ü 2024'te devrilen beşar esad'ın iktidarı döneminde hapis yatmış kişler.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Suriye Devlet Başkanı, yeni parlamentonun son 70 üyesini atadı</h3>
-                    <p>Geçtiğimiz Ekim ayında bölgesel seçim kurulları tarafından yalnızca altı kadın adayın seçilmesinin ardından, 15 kadın atandı.Yeni milletvekillerinin 13'ü 2024'te devrilen Beşar Esad'ın iktidarı döneminde hapis yatmış kişler.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c1jy7dwkg7po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            meb, mesem verilerini paylaştı: '3 bin 80 iş kazasının 13'ü ölümle sonuçlandı'
-            millî eğitim bakanlığı, mesem programı kapsamında 3 bin 80 iş kazası yaşandığını, bunların 13'ünün ölümle sonuçlandığını açıkladı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>MEB, MESEM verilerini paylaştı: '3 bin 80 iş kazasının 13'ü ölümle sonuçlandı'</h3>
-                    <p>Millî Eğitim Bakanlığı, MESEM Programı kapsamında 3 bin 80 iş kazası yaşandığını, bunların 13'ünün ölümle sonuçlandığını açıkladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c77yeg8y235o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            tüdses ile türk dünyası'nın ortak hafızası dijital ortamda geleceğe taşınacak
-            ak parti genel başkan yardımcısı kürşad zorlu, türk dünyası sivil toplum destek sistemi'ne ilişkin, "i̇lk aşamada türkiye'de faaliyet gösteren, 8 türk devletini temsil eden 826 sivil toplum kuruluşu ve yaklaşık 88 bin üye tüdses çatısı altında yer alıyor. hedefimiz, platformun tüm türk devletleri teşkilatı ülkelerinde yaygınlaşmasıdır" dedi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>TÜDSES ile Türk Dünyası'nın ortak hafızası dijital ortamda geleceğe taşınacak</h3>
-                    <p>AK Parti Genel Başkan Yardımcısı Kürşad Zorlu, Türk Dünyası Sivil Toplum Destek Sistemi'ne ilişkin, "İlk aşamada Türkiye'de faaliyet gösteren, 8 Türk devletini temsil eden 826 sivil toplum kuruluşu ve yaklaşık 88 bin üye TÜDSES çatısı altında yer alıyor. Hedefimiz, platformun tüm Türk Devletleri Teşkilatı ülkelerinde yaygınlaşmasıdır" dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turk-dunyasi/tudses-ile-turk-dunyasinin-ortak-hafizasi-dijital-ortamda-gelecege-tasinacak-950003.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            fransa'da çıkan yangında yaklaşık 900 hektarlık alan küle döndü
-            fransa'nın güneyindeki herault kentinde çıkan ve komşu aude vilayetine yayılan orman yangınında yaklaşık 900 hektarlık alan küle döndü.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Fransa'da çıkan yangında yaklaşık 900 hektarlık alan küle döndü</h3>
-                    <p>Fransa'nın güneyindeki Herault kentinde çıkan ve komşu Aude vilayetine yayılan orman yangınında yaklaşık 900 hektarlık alan küle döndü.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/fransada-cikan-yanginda-yaklasik-900-hektarlik-alan-kule-dondu-950002.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            sosyal medyada göçmen kaçakçılığı ilanı veren 4 şüpheli yakalandı
-            düzensiz göçmenlerin türkiye'ye yasa dışı yollarla girişine ve farklı ülkelere kaçak olarak geçirilmesine aracılık edildiğine ilişkin sosyal medya paylaşımlarının tespit edilmesi üzerine başlatılan soruşturma kapsamında suriye uyruklu 4 şüpheli gözaltına alındı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Sosyal medyada göçmen kaçakçılığı ilanı veren 4 şüpheli yakalandı</h3>
-                    <p>Düzensiz göçmenlerin Türkiye'ye yasa dışı yollarla girişine ve farklı ülkelere kaçak olarak geçirilmesine aracılık edildiğine ilişkin sosyal medya paylaşımlarının tespit edilmesi üzerine başlatılan soruşturma kapsamında Suriye uyruklu 4 şüpheli gözaltına alındı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/sosyal-medyada-gocmen-kacakciligi-ilani-veren-4-supheli-yakalandi-950001.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye'de geçen yıl 659 gazete resmi ilan yayımladı
-            türkiye genelinde, geçen yıl resmi ilan yayımlayan gazetelerin sayısı 659 olarak belirlendi. resmi ilan yayımlayan internet haber sitesi sayısı 2024'te 349 iken, geçen yıl yüzde 2,3 artışla 357'ye ulaştı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Türkiye'de geçen yıl 659 gazete resmi ilan yayımladı</h3>
-                    <p>Türkiye genelinde, geçen yıl resmi ilan yayımlayan gazetelerin sayısı 659 olarak belirlendi. Resmi ilan yayımlayan internet haber sitesi sayısı 2024'te 349 iken, geçen yıl yüzde 2,3 artışla 357'ye ulaştı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/turkiyede-gecen-yil-659-gazete-resmi-ilan-yayimladi-950000.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            100 milyon lira dolandırdılar, 'operasyon bitti' deyip tatlı ikram ettiler
-            bursa'nın mudanya ilçesinde, kendilerini polis olarak tanıtıp bir çiftten 3 ayda yaklaşık 100 milyon lira değerinde nakit, ziynet eşyası ve gayrimenkul dolandırdığı gerekçesiyle gözaltına alınan 14 şüpheliden 6'sı tutuklandı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>100 milyon lira dolandırdılar, 'operasyon bitti' deyip tatlı ikram ettiler</h3>
-                    <p>Bursa'nın Mudanya ilçesinde, kendilerini polis olarak tanıtıp bir çiftten 3 ayda yaklaşık 100 milyon lira değerinde nakit, ziynet eşyası ve gayrimenkul dolandırdığı gerekçesiyle gözaltına alınan 14 şüpheliden 6'sı tutuklandı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/100-milyon-lira-dolandirdilar-operasyon-bitti-deyip-tatli-ikram-ettiler-949998.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            hindistan tatilinden beyninde 38 parazitle döndü
-            doktorlar, lowri'nin baş ağrıları, nöbetleri ve psikozunun domuz tenyası larvalarının neden olduğu bir enfeksiyondan kaynaklandığını teşhis etti.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Hindistan tatilinden beyninde 38 parazitle döndü</h3>
-                    <p>Doktorlar, Lowri'nin baş ağrıları, nöbetleri ve psikozunun domuz tenyası larvalarının neden olduğu bir enfeksiyondan kaynaklandığını teşhis etti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cd95g1q8qj4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            kabataşbağcılar tramvay hattı'nda seferler aksadı
-            t1 kabataş-bağcılar tramvay hattı'nda meydana gelen teknik arıza nedeniyle seferlerde bir süre aksama meydana geldi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>KabataşBağcılar Tramvay Hattı'nda seferler aksadı</h3>
-                    <p>T1 Kabataş-Bağcılar Tramvay Hattı'nda meydana gelen teknik arıza nedeniyle seferlerde bir süre aksama meydana geldi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/kabatas-bagcilar-tramvay-hattinda-seferler-aksadi-949994.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            yusuf ziya gümüşel'in tahliyesi dindar kadınlar arasında nasıl tartışılıyor?
-            reşit olmayan kızını "evlendirmesiyle" ilgili davada hüküm giyen hiranur vakfı'nın kurucusu yusuf ziya gümüşel geçtiğimiz günlerde sağlık koşulları gerekçesiyle tahliye edildi. bbc türkçe kararı kendini dindar olarak tanımlayan veya geçmişte cemaatler içinde bulunmuş kadınlarla konuştu.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Yusuf Ziya Gümüşel'in tahliyesi dindar kadınlar arasında nasıl tartışılıyor?</h3>
-                    <p>Reşit olmayan kızını "evlendirmesiyle" ilgili davada hüküm giyen Hiranur Vakfı'nın kurucusu Yusuf Ziya Gümüşel geçtiğimiz günlerde sağlık koşulları gerekçesiyle tahliye edildi. BBC Türkçe kararı kendini dindar olarak tanımlayan veya geçmişte cemaatler içinde bulunmuş kadınlarla konuştu.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cvgeqez7d3po?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            madımak katliamı'nın 33. yılı: 2 temmuz 1993'te sivas'ta neler yaşandı?
-            2 temmuz 1993, bir katliam tarihi olarak hafızalara kazındı. o gün, pir sultan abdal şenliklerine katılmak için sivas'a giden aydın ve sanatçılardan 33'ü, kaldıkları otelin yakılması sonucu hayatını kaybetmişti. olayda iki otel görevlisi de yaşamını yitirmiş, iki saldırgan da ölmüştü.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Madımak Katliamı'nın 33. yılı: 2 Temmuz 1993'te Sivas'ta neler yaşandı?</h3>
-                    <p>2 Temmuz 1993, bir katliam tarihi olarak hafızalara kazındı. O gün, Pir Sultan Abdal Şenliklerine katılmak için Sivas'a giden aydın ve sanatçılardan 33'ü, kaldıkları otelin yakılması sonucu hayatını kaybetmişti. Olayda iki otel görevlisi de yaşamını yitirmiş, iki saldırgan da ölmüştü.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cpv3zw02g7ro?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            12 dev adam dünya kupası yolunda bosna hersek'e konuk oluyor
-            a milli erkek basketbol takımımız, fiba 2027 dünya kupası avrupa elemeleri 1. tur c grubu'ndaki beşinci maçında bugün bosna hersek'e konuk olacak. tsi̇ 21.00'de başlayacak müsabaka, trt 1'den canlı yayınlanacak.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>12 Dev Adam Dünya Kupası yolunda Bosna Hersek'e konuk oluyor</h3>
-                    <p>A Milli Erkek Basketbol Takımımız, FIBA 2027 Dünya Kupası Avrupa Elemeleri 1. Tur C Grubu'ndaki beşinci maçında bugün Bosna Hersek'e konuk olacak. TSİ 21.00'de başlayacak müsabaka, TRT 1'den canlı yayınlanacak.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/12-dev-adam-dunya-kupasi-yolunda-bosna-herseke-konuk-oluyor-949997.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            lastikleri patlayınca başkasının yedek lastiğini çaldılar
-            hatay'ın samandağ ilçesinde park halindeki bir otomobilin yedek lastiğini çaldıkları iddiasıyla gözaltına alınan 4 şüphelinin, emniyetteki ifadelerinde kendi araçlarının lastiği patladığı ve açık lastikçi bulamadıkları için bu yönteme başvurduklarını iddia ettiği öğrenildi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Lastikleri patlayınca başkasının yedek lastiğini çaldılar</h3>
-                    <p>Hatay'ın Samandağ ilçesinde park halindeki bir otomobilin yedek lastiğini çaldıkları iddiasıyla gözaltına alınan 4 şüphelinin, emniyetteki ifadelerinde kendi araçlarının lastiği patladığı ve açık lastikçi bulamadıkları için bu yönteme başvurduklarını iddia ettiği öğrenildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/lastikleri-patlayinca-baskasinin-yedek-lastigini-caldilar-949996.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            665. tarihi kırkpınar yağlı güreşleri için kayıtlar başladı
-            665. tarihi kırkpınar yağlı güreşleri'nde mücadele edecek pehlivanların kayıt işlemleri başladı.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>665. Tarihi Kırkpınar Yağlı Güreşleri için kayıtlar başladı</h3>
-                    <p>665. Tarihi Kırkpınar Yağlı Güreşleri'nde mücadele edecek pehlivanların kayıt işlemleri başladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/665-tarihi-kirkpinar-yagli-guresleri-icin-kayitlar-basladi-950004.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">TEKNOLOJI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            venezuela depremlerinde 2000 kişi öldü, 59 bin bina yıkıldı ya da hasar gördü
-            venezuela'da 24 haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 2000'i aştı, on binlerce kişi hâlâ kayıp. nasa'nın uydu görüntülerine göre yaklaşık 59 bin bina yıkıldı ya da hasar gördü.
-            teknoloji
-            bbc türkçe
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Venezuela depremlerinde 2000 kişi öldü, 59 bin bina yıkıldı ya da hasar gördü</h3>
-                    <p>Venezuela'da 24 Haziran'da peş peşe meydana gelen 7,2 ve 7,5 büyüklüğündeki iki depremde hayatını kaybedenlerin sayısı resmi verilere göre 2000'i aştı, on binlerce kişi hâlâ kayıp. NASA'nın uydu görüntülerine göre yaklaşık 59 bin bina yıkıldı ya da hasar gördü.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cj3gy31vz8yo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            ufo'lara yanıt bulmaya her zamankinden daha mı yakınız?
-            2 temmuz dünya ufo günü'nde bbc'ye konuşan bir uzay ve havacılık uzmanı, modern teknoloji sayesinde gökyüzünde neler olduğunu anlamak adına her zamankinden daha güçlü bir konumda olduğumuzu söylüyor.
-            teknoloji
-            bbc türkçe
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>UFO'lara yanıt bulmaya her zamankinden daha mı yakınız?</h3>
-                    <p>2 Temmuz Dünya UFO Günü'nde BBC'ye konuşan bir uzay ve havacılık uzmanı, modern teknoloji sayesinde gökyüzünde neler olduğunu anlamak adına her zamankinden daha güçlü bir konumda olduğumuzu söylüyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c75rrlqpl2do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">SPOR</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye dünya kupası'nda neden başarısız oldu?
-            türkiye, 2026 dünya kupası'nda ilk iki maçında avustralya ve paraguay'a yenilerek turnuvaya grup aşamasında veda etti. a milli takım'ın başarısızlığının ardından teknik direktör vincenzo montella'nın tercihleri ve türkiye futbol federasyonu'nun hazırlık planlaması tartışma konusu oldu. bbc türkçe, spor yorumcularıyla türkiye'nin neden başarısız olduğunu konuştu
-            spor
-            bbc türkçe
-            "
-                    data-category="spor"
-                >
-                    <h3>Türkiye Dünya Kupası'nda neden başarısız oldu?</h3>
-                    <p>Türkiye, 2026 Dünya Kupası'nda ilk iki maçında Avustralya ve Paraguay'a yenilerek turnuvaya grup aşamasında veda etti. A Milli Takım'ın başarısızlığının ardından teknik direktör Vincenzo Montella'nın tercihleri ve Türkiye Futbol Federasyonu'nun hazırlık planlaması tartışma konusu oldu. BBC Türkçe, spor yorumcularıyla Türkiye'nin neden başarısız olduğunu konuştu</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cgk62pde4j5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">EKONOMI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            borsa güne yükselişle başladı
-            borsa i̇stanbul'da bist 100 endeksi, güne yüzde 0,22 artışla 14.382,06 puandan başladı.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Borsa güne yükselişle başladı</h3>
-                    <p>Borsa İstanbul'da BIST 100 endeksi, güne yüzde 0,22 artışla 14.382,06 puandan başladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/borsa-gune-yukselisle-basladi-949995.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

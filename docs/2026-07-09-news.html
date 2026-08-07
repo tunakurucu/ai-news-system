@@ -1,585 +1,460 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-        .search-box {
-    margin: 25px 0;
-    }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-            .category-filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 20px 0 30px;
-            }
-
-            .category-filter-btn {
-                padding: 8px 14px;
-                border: 1px solid #ddd;
-                border-radius: 999px;
-                background: #f7f7f7;
-                cursor: pointer;
-            }
-
-            .category-filter-btn.active {
-                background: #222;
-                color: white;
-            }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="home-search-input"
-        placeholder="Güncel haberlerde ara..."
-    >
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">9 Temmuz 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
 </div>
 
-<div class="category-filters">
-    <button class="category-filter-btn active" data-category="all">Tümü</button>
-    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-    <button class="category-filter-btn" data-category="dünya">Dünya</button>
-    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-    <button class="category-filter-btn" data-category="genel">Genel</button>
-</div>
-
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
         </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>ekonomi</strong> 5</span><span class="stat-item"><strong>dünya</strong> 8</span><span class="stat-item"><strong>genel</strong> 4</span><span class="stat-item"><strong>teknoloji</strong> 2</span><span class="stat-item"><strong>gümrük</strong> 1</span></div>
 
-        <div class="stat-card">
-            <strong>ekonomi</strong>
-            <span>5</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>8</span>
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
         </div>
+        <h3>ABD&#x27;nin Türkiye&#x27;ye yaptırımları kaldırması için nasıl bir yol haritası izlenecek?</h3>
+        <p>ABD Başkanı Donald Trump&#x27;ın Türkiye&#x27;ye yaptığı ilk resmi ziyarette gündeme getirdiği &quot;Yaptırımların kaldırılmasının zamanı geldi&quot; açıklaması, Ankara-Washington hattında savunma sanayi işbirliğinde yeni bir ivmelenmeye neden oldu. ABD&#x27;de 3 Kasım&#x27;da ara seçimlerin yapılacak olması, bu alanda zorlu ve yoğun bir yol haritası gerektiriyor.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 9 Temmuz 2026, 07:08</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gylzjdx0lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 8 Temmuz 2026, 23:03</span>
+            </div>
+            <h3>Cumhurbaşkanı Erdoğan: F-35&#x27;ler Türkiye&#x27;ye teslim edildiğinde tüm dünya &#x27;ABD sözünü tuttu&#x27; diyecek</h3>
+            <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Ankara&#x27;daki NATO Zirvesi&#x27;nin son gününde yaptığı basın toplantısında, ABD ile F-35&#x27;ler konusundaki müzakerelerin olumlu geçtiğini söyleyerek, &quot;F-35&#x27;ler Türkiye&#x27;ye teslim edildiğinde tüm dünya &#x27;ABD sözünü tuttu&#x27; diyecek&quot; dedi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c33y078x83zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe</span>
+            </div>
+            <h3>NATO Zirvesi&#x27;nin ikinci gününde neler yaşandı?</h3>
+            <p>Ankara&#x27;nın ev sahipliğinde düzenlenen NATO Zirvesi&#x27;nin ikinci gününde liderler Beştepe&#x27;de biraraya geldi. Müttefikler beklendiği gibi kolektif savunmaya odaklanan 5. maddeye yönelik “sarsılmaz kararlılıklarını” vurguladı. Cumhurbaşkanı Erdoğan, zirvenin başarıyla tamamlandığını duyurdu.</p>
+            <a class="read-link" href="https://www.bbc.co.uk/turkce/live/c1dy1ygwd9vt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 7 Temmuz 2026, 14:34</span>
+            </div>
+            <h3>NATO Savunma Forumu: Türkiye ve müttefikler hangi anlaşmalara imza attı?</h3>
+            <p>NATO müttefikleri Ankara&#x27;daki liderler zirvesi kapsamında düzenlenen Savunma Forumu&#x27;nda on milyarlarca dolarlık anlaşmalar imzaladı. Türkiye, bu anlaşmalar çerçevesinde Atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gyj0w77eyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 9 Temmuz 2026, 07:01</span>
+            </div>
+            <h3>ABD, Suriye&#x27;yi &#x27;teröre destek veren ülkeler&#x27; listesinden çıkarıyor</h3>
+            <p>ABD Başkanı Donald Trump, ülkesinin Suriye&#x27;yi &quot;teröre destek veren ülkeler&quot; listesinden çıkaracağını açıkladı. Trump bu kararını, NATO Zirvesi için gittiği Ankara&#x27;da görüştüğü Suriye&#x27;de geçiş yönetiminin Devlet Başkanı Ahmed Şara&#x27;ya iletti.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cjeg8v0e9g4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>4</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>teknoloji</strong>
-            <span>2</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="abd&#x27;nin türkiye&#x27;ye yaptırımları kaldırması için nasıl bir yol haritası izlenecek? abd başkanı donald trump&#x27;ın türkiye&#x27;ye yaptığı ilk resmi ziyarette gündeme getirdiği &quot;yaptırımların kaldırılmasının zamanı geldi&quot; açıklaması, ankara-washington hattında savunma sanayi işbirliğinde yeni bir ivmelenmeye neden oldu. abd&#x27;de 3 kasım&#x27;da ara seçimlerin yapılacak olması, bu alanda zorlu ve yoğun bir yol haritası gerektiriyor. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 9 Temmuz 2026, 07:08</span>
         </div>
-
-        <div class="stat-card">
-            <strong>gümrük</strong>
-            <span>1</span>
+        <h3>ABD&#x27;nin Türkiye&#x27;ye yaptırımları kaldırması için nasıl bir yol haritası izlenecek?</h3>
+        <p>ABD Başkanı Donald Trump&#x27;ın Türkiye&#x27;ye yaptığı ilk resmi ziyarette gündeme getirdiği &quot;Yaptırımların kaldırılmasının zamanı geldi&quot; açıklaması, Ankara-Washington hattında savunma sanayi işbirliğinde yeni bir ivmelenmeye neden oldu. ABD&#x27;de 3 Kasım&#x27;da ara seçimlerin yapılacak olması, bu alanda zorlu ve yoğun bir yol haritası gerektiriyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Temmuz 2026, 07:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gylzjdx0lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato savunma forumu: türkiye ve müttefikler hangi anlaşmalara imza attı? nato müttefikleri ankara&#x27;daki liderler zirvesi kapsamında düzenlenen savunma forumu&#x27;nda on milyarlarca dolarlık anlaşmalar imzaladı. türkiye, bu anlaşmalar çerçevesinde atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 7 Temmuz 2026, 14:34</span>
         </div>
-
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-07-09 09:33</span>
+        <h3>NATO Savunma Forumu: Türkiye ve müttefikler hangi anlaşmalara imza attı?</h3>
+        <p>NATO müttefikleri Ankara&#x27;daki liderler zirvesi kapsamında düzenlenen Savunma Forumu&#x27;nda on milyarlarca dolarlık anlaşmalar imzaladı. Türkiye, bu anlaşmalar çerçevesinde Atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Temmuz 2026, 14:34</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gyj0w77eyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="su ürünleri ihracatı ilk yarıda 1 milyar doları aştı türkiye&#x27;nin su ürünleri ihracatı, yılın ilk altı ayında yüzde 14 artışla 1 milyar 110 milyon 366 bin dolara ulaşarak ilk kez ocak-haziran döneminde 1 milyar dolar sınırını aştı ve cumhuriyet tarihinin en yüksek ilk yarı ihracat geliri elde edildi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 9 Temmuz 2026, 11:18</span>
         </div>
+        <h3>Su ürünleri ihracatı ilk yarıda 1 milyar doları aştı</h3>
+        <p>Türkiye&#x27;nin su ürünleri ihracatı, yılın ilk altı ayında yüzde 14 artışla 1 milyar 110 milyon 366 bin dolara ulaşarak ilk kez ocak-haziran döneminde 1 milyar dolar sınırını aştı ve Cumhuriyet tarihinin en yüksek ilk yarı ihracat geliri elde edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Temmuz 2026, 11:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/su-urunleri-ihracati-ilk-yarida-1-milyar-dolari-asti-950749.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="erdoğan, starmer ve liderlere özel üretim tabanca hediye etti cumhurbaşkanı recep tayyip erdoğan, nato zirvesi sırasında liderlere özel üretim tabancalar hediye etti. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 9 Temmuz 2026, 10:43</span>
+        </div>
+        <h3>Erdoğan, Starmer ve liderlere özel üretim tabanca hediye etti</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, NATO zirvesi sırasında liderlere özel üretim tabancalar hediye etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Temmuz 2026, 10:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c7vy4nyjdgno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="otomotiv sektöründen 8 milyar dolarlık yan sanayi ürünü ihracatı türkiye&#x27;den ocak-haziran döneminde 8 milyar 86 milyon 142 bin dolarlık otomotiv tedarik (yan sanayi) ürünü ihraç edildi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 9 Temmuz 2026, 11:35</span>
+        </div>
+        <h3>Otomotiv sektöründen 8 milyar dolarlık yan sanayi ürünü ihracatı</h3>
+        <p>Türkiye&#x27;den ocak-haziran döneminde 8 milyar 86 milyon 142 bin dolarlık otomotiv tedarik (yan sanayi) ürünü ihraç edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Temmuz 2026, 11:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/otomotiv-sektorunden-8-milyar-dolarlik-yan-sanayi-urunu-ihracati-950754.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">8 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cumhurbaşkanı erdoğan: f-35&#x27;ler türkiye&#x27;ye teslim edildiğinde tüm dünya &#x27;abd sözünü tuttu&#x27; diyecek cumhurbaşkanı recep tayyip erdoğan, ankara&#x27;daki nato zirvesi&#x27;nin son gününde yaptığı basın toplantısında, abd ile f-35&#x27;ler konusundaki müzakerelerin olumlu geçtiğini söyleyerek, &quot;f-35&#x27;ler türkiye&#x27;ye teslim edildiğinde tüm dünya &#x27;abd sözünü tuttu&#x27; diyecek&quot; dedi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 8 Temmuz 2026, 23:03</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan: F-35&#x27;ler Türkiye&#x27;ye teslim edildiğinde tüm dünya &#x27;ABD sözünü tuttu&#x27; diyecek</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Ankara&#x27;daki NATO Zirvesi&#x27;nin son gününde yaptığı basın toplantısında, ABD ile F-35&#x27;ler konusundaki müzakerelerin olumlu geçtiğini söyleyerek, &quot;F-35&#x27;ler Türkiye&#x27;ye teslim edildiğinde tüm dünya &#x27;ABD sözünü tuttu&#x27; diyecek&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Temmuz 2026, 23:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c33y078x83zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd, suriye&#x27;yi &#x27;teröre destek veren ülkeler&#x27; listesinden çıkarıyor abd başkanı donald trump, ülkesinin suriye&#x27;yi &quot;teröre destek veren ülkeler&quot; listesinden çıkaracağını açıkladı. trump bu kararını, nato zirvesi için gittiği ankara&#x27;da görüştüğü suriye&#x27;de geçiş yönetiminin devlet başkanı ahmed şara&#x27;ya iletti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Temmuz 2026, 07:01</span>
+        </div>
+        <h3>ABD, Suriye&#x27;yi &#x27;teröre destek veren ülkeler&#x27; listesinden çıkarıyor</h3>
+        <p>ABD Başkanı Donald Trump, ülkesinin Suriye&#x27;yi &quot;teröre destek veren ülkeler&quot; listesinden çıkaracağını açıkladı. Trump bu kararını, NATO Zirvesi için gittiği Ankara&#x27;da görüştüğü Suriye&#x27;de geçiş yönetiminin Devlet Başkanı Ahmed Şara&#x27;ya iletti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Temmuz 2026, 07:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cjeg8v0e9g4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato zirvesi&#x27;nde ankara&#x27;da 145 uçuş gerçekleşti ulaştırma ve altyapı bakanı abdulkadir uraloğlu, nato ankara zirvesi kapsamında 6-8 temmuz&#x27;da, esenboğa havalimanı ve ankara havalimanı&#x27;nda 83 iniş 62 kalkış olmak üzere toplam 145 uçuş yapıldığını açıkladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 9 Temmuz 2026, 11:36</span>
+        </div>
+        <h3>NATO Zirvesi&#x27;nde Ankara&#x27;da 145 uçuş gerçekleşti</h3>
+        <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, NATO Ankara Zirvesi kapsamında 6-8 Temmuz&#x27;da, Esenboğa Havalimanı ve Ankara Havalimanı&#x27;nda 83 iniş 62 kalkış olmak üzere toplam 145 uçuş yapıldığını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Temmuz 2026, 11:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/nato-zirvesinde-ankarada-145-ucus-gerceklesti-950755.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran: abd&#x27;nin son saldırıları açık bir savaş suçu i̇ran dışişleri bakanlığı, abd ordusunun ülkenin güneyindeki kıyı eyaletlerinde bazı noktalar ile meşhed demir yolu güzergahındaki 2 köprüye düzenlediği saldırıları kınadı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 9 Temmuz 2026, 11:27</span>
+        </div>
+        <h3>İran: ABD&#x27;nin son saldırıları açık bir savaş suçu</h3>
+        <p>İran Dışişleri Bakanlığı, ABD ordusunun ülkenin güneyindeki kıyı eyaletlerinde bazı noktalar ile Meşhed demir yolu güzergahındaki 2 köprüye düzenlediği saldırıları kınadı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Temmuz 2026, 11:27</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-abdnin-son-saldirilari-acik-bir-savas-sucu-950752.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="almanya başbakanı, ülkesinin abd&#x27;den tomahawk füzeleri satın alacağını duyurdu almanya başbakanı friedrich merz, nato&#x27;nun birlik ve caydırıcılık açısından güçlendiğini belirterek ülkesinin, abd&#x27;den tomahawk seyir füzeleri satın alacağını ve bunların ülkede konuşlandırılacağını söyledi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 9 Temmuz 2026, 11:24</span>
+        </div>
+        <h3>Almanya Başbakanı, ülkesinin ABD&#x27;den Tomahawk füzeleri satın alacağını duyurdu</h3>
+        <p>Almanya Başbakanı Friedrich Merz, NATO&#x27;nun birlik ve caydırıcılık açısından güçlendiğini belirterek ülkesinin, ABD&#x27;den Tomahawk seyir füzeleri satın alacağını ve bunların ülkede konuşlandırılacağını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Temmuz 2026, 11:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/almanya-basbakani-ulkesinin-abdden-tomahawk-fuzeleri-satin-alacagini-duyurdu-950750.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd ve i̇ran&#x27;dan karşılıklı saldırılar: tahran, körfez&#x27;deki üsleri hedef aldı abd, hürmüz boğazı ve çevresinde i̇ran&#x27;a karşı yeni hava saldırıları başlattı. abd merkez komutanlığı (centcom), x üzerinden yaptığı açıklamada, saldırıların hürmüz boğazı&#x27;nda &quot;ticari gemilere ve sivil mürettebata yönelik son dönemdeki haksız saldırganlığa&quot; yanıt olarak düzenlendiğini açıkladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Temmuz 2026, 09:39</span>
+        </div>
+        <h3>ABD ve İran&#x27;dan karşılıklı saldırılar: Tahran, Körfez&#x27;deki üsleri hedef aldı</h3>
+        <p>ABD, Hürmüz Boğazı ve çevresinde İran&#x27;a karşı yeni hava saldırıları başlattı. ABD Merkez Komutanlığı (CENTCOM), X üzerinden yaptığı açıklamada, saldırıların Hürmüz Boğazı&#x27;nda &quot;ticari gemilere ve sivil mürettebata yönelik son dönemdeki haksız saldırganlığa&quot; yanıt olarak düzenlendiğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Temmuz 2026, 09:39</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c0my308zd4go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sıcak hava dalgaları neden kadınları daha fazla etkiliyor? uzmanlar, kadınlar için sıcağa bağlı riskler konusunda farkındalığın artırılması ve onları korumaya yönelik daha hedefli çabaların gösterilmesi çağrısında bulunuyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Temmuz 2026, 07:11</span>
+        </div>
+        <h3>Sıcak hava dalgaları neden kadınları daha fazla etkiliyor?</h3>
+        <p>Uzmanlar, kadınlar için sıcağa bağlı riskler konusunda farkındalığın artırılması ve onları korumaya yönelik daha hedefli çabaların gösterilmesi çağrısında bulunuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Temmuz 2026, 07:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3vy4r6e2p5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato&#x27;nun ankara zirvesi bildirisi&#x27;nde neler var? nato&#x27;nun tüm üyelerinin onayıyla yayınlanan ankara zirvesi bildirisi, zirvede alınan tüm kararları yansıtıyor. abd başkanı donald trump&#x27;ın zirve öncesi bazı müttefiklere yönelik sert açıklamalarına rağmen bildiride sorun yaşanmadı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 8 Temmuz 2026, 18:44</span>
+        </div>
+        <h3>NATO&#x27;nun Ankara Zirvesi Bildirisi&#x27;nde neler var?</h3>
+        <p>NATO&#x27;nun tüm üyelerinin onayıyla yayınlanan Ankara Zirvesi Bildirisi, zirvede alınan tüm kararları yansıtıyor. ABD Başkanı Donald Trump&#x27;ın zirve öncesi bazı müttefiklere yönelik sert açıklamalarına rağmen bildiride sorun yaşanmadı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Temmuz 2026, 18:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckg04q901j2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">4 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="nato zirvesi&#x27;nin ikinci gününde neler yaşandı? ankara&#x27;nın ev sahipliğinde düzenlenen nato zirvesi&#x27;nin ikinci gününde liderler beştepe&#x27;de biraraya geldi. müttefikler beklendiği gibi kolektif savunmaya odaklanan 5. maddeye yönelik “sarsılmaz kararlılıklarını” vurguladı. cumhurbaşkanı erdoğan, zirvenin başarıyla tamamlandığını duyurdu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe</span>
+        </div>
+        <h3>NATO Zirvesi&#x27;nin ikinci gününde neler yaşandı?</h3>
+        <p>Ankara&#x27;nın ev sahipliğinde düzenlenen NATO Zirvesi&#x27;nin ikinci gününde liderler Beştepe&#x27;de biraraya geldi. Müttefikler beklendiği gibi kolektif savunmaya odaklanan 5. maddeye yönelik “sarsılmaz kararlılıklarını” vurguladı. Cumhurbaşkanı Erdoğan, zirvenin başarıyla tamamlandığını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe</span>
+        <a class="read-link" href="https://www.bbc.co.uk/turkce/live/c1dy1ygwd9vt?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, karadağ başbakanı spajic&#x27;i kabul etti cumhurbaşkanı recep tayyip erdoğan, karadağ başbakanı milojko spajic&#x27;i kabul etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 9 Temmuz 2026, 12:07</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, Karadağ Başbakanı Spajic&#x27;i kabul etti</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Karadağ Başbakanı Milojko Spajic&#x27;i kabul etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Temmuz 2026, 12:07</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-karadag-basbakani-spajici-kabul-etti-950759.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dünya kupası&#x27;nda arjantin kollanıyor mu? mısır, arjantin&#x27;e karşı önyargılı davranıldığını ve yıldız oyuncuları lionel messi&#x27;ye ayrıcalık tanındığını öne sürdü. bu iddia doğru mu? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 9 Temmuz 2026, 07:12</span>
+        </div>
+        <h3>Dünya Kupası&#x27;nda Arjantin kollanıyor mu?</h3>
+        <p>Mısır, Arjantin&#x27;e karşı önyargılı davranıldığını ve yıldız oyuncuları Lionel Messi&#x27;ye ayrıcalık tanındığını öne sürdü. Bu iddia doğru mu?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Temmuz 2026, 07:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c621jz46pzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mevlana müzesi 1 milyon 442 bin 502 ziyaretçiyi ağırladı türk-i̇slam düşünürü ve mutasavvıf mevlana celaleddin-i rumi&#x27;nin kabrinin bulunduğu mevlana müzesi, yılın ilk yarısında 1 milyon 442 bin 502 ziyaretçiyi ağırladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 9 Temmuz 2026, 11:27</span>
+        </div>
+        <h3>Mevlana Müzesi 1 milyon 442 bin 502 ziyaretçiyi ağırladı</h3>
+        <p>Türk-İslam düşünürü ve mutasavvıf Mevlana Celaleddin-i Rumi&#x27;nin kabrinin bulunduğu Mevlana Müzesi, yılın ilk yarısında 1 milyon 442 bin 502 ziyaretçiyi ağırladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Temmuz 2026, 11:27</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/kultur-sanat/mevlana-muzesi-1-milyon-442-bin-502-ziyaretciyi-agirladi-950751.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c4gylzjdx0lo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>ABD'nin Türkiye'ye yaptırımları kaldırması için nasıl bir yol haritası izlenecek?</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan uraloğlu: türksat 6a üzerinden 69 televizyon kanalına hizmet sunuyoruz ulaştırma ve altyapı bakanı abdulkadir uraloğlu, &quot;türksat 6a ile ülkemizi haberleşme uydusu tasarlayıp üretebilen dünyadaki 11 ülke arasına taşıdık. bugün yalnızca türksat 6a üzerinden güney asya kapsamasındaki 10 ülkede 69 televizyon kanalına yayın hizmeti sunuyoruz&quot; dedi. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 9 Temmuz 2026, 11:49</span>
+        </div>
+        <h3>Bakan Uraloğlu: Türksat 6A üzerinden 69 televizyon kanalına hizmet sunuyoruz</h3>
+        <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, &quot;Türksat 6A ile ülkemizi haberleşme uydusu tasarlayıp üretebilen dünyadaki 11 ülke arasına taşıdık. Bugün yalnızca Türksat 6A üzerinden Güney Asya kapsamasındaki 10 ülkede 69 televizyon kanalına yayın hizmeti sunuyoruz&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Temmuz 2026, 11:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/bakan-uraloglu-turksat-6a-uzerinden-69-televizyon-kanalina-hizmet-sunuyoruz-950756.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇mece, nato&#x27;nun uzaydaki yeni gözü olacak türkiye&#x27;nin 7-8 temmuz&#x27;da ev sahipliği yaptığı nato ankara zirvesi&#x27;nde uzayla ilgili projeler de masaya yatırılırken tübi̇tak uzay&#x27;ın i̇mece uyduları ile aselsan&#x27;ın leo uydu ağının, teşkilatın teknoloji mimarisinde rol üstlenmesi kararlaştırıldı. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 9 Temmuz 2026, 11:31</span>
+        </div>
+        <h3>İMECE, NATO&#x27;nun uzaydaki yeni gözü olacak</h3>
+        <p>Türkiye&#x27;nin 7-8 Temmuz&#x27;da ev sahipliği yaptığı NATO Ankara Zirvesi&#x27;nde uzayla ilgili projeler de masaya yatırılırken TÜBİTAK UZAY&#x27;ın İMECE uyduları ile ASELSAN&#x27;ın LEO uydu ağının, teşkilatın teknoloji mimarisinde rol üstlenmesi kararlaştırıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Temmuz 2026, 11:31</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/imece-natonun-uzaydaki-yeni-gozu-olacak-950753.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c33y078x83zo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Cumhurbaşkanı Erdoğan: F-35'ler Türkiye'ye teslim edildiğinde tüm dünya 'ABD sözünü tuttu' diyecek</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="vergi borcunu yapılandıran araç sahipleri muayenelerini yaptırabilecek tüvtürk, gelir i̇daresi başkanlığı (gi̇b) tarafından yürütülen vergi borcu yapılandırması kapsamında, yapılandırmadan yararlanan araç sahiplerinin araç muayenelerini yaptırabileceğini hatırlattı. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 9 Temmuz 2026, 12:17</span>
+        </div>
+        <h3>Vergi borcunu yapılandıran araç sahipleri muayenelerini yaptırabilecek</h3>
+        <p>TÜVTÜRK, Gelir İdaresi Başkanlığı (GİB) tarafından yürütülen vergi borcu yapılandırması kapsamında, yapılandırmadan yararlanan araç sahiplerinin araç muayenelerini yaptırabileceğini hatırlattı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Temmuz 2026, 12:17</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/vergi-borcunu-yapilandiran-arac-sahipleri-muayenelerini-yaptirabilecek-950760.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.co.uk/turkce/live/c1dy1ygwd9vt?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>NATO Zirvesi'nin ikinci gününde neler yaşandı?</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c4gyj0w77eyo?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>NATO Savunma Forumu: Türkiye ve müttefikler hangi anlaşmalara imza attı?</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cjeg8v0e9g4o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>ABD, Suriye'yi 'teröre destek veren ülkeler' listesinden çıkarıyor</strong>
-            </a>
-        </li>
 
-    </ul>
-
-    <h2 class="category-title">EKONOMI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            abd'nin türkiye'ye yaptırımları kaldırması için nasıl bir yol haritası izlenecek?
-            abd başkanı donald trump'ın türkiye'ye yaptığı ilk resmi ziyarette gündeme getirdiği "yaptırımların kaldırılmasının zamanı geldi" açıklaması, ankara-washington hattında savunma sanayi işbirliğinde yeni bir ivmelenmeye neden oldu. abd'de 3 kasım'da ara seçimlerin yapılacak olması, bu alanda zorlu ve yoğun bir yol haritası gerektiriyor.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>ABD'nin Türkiye'ye yaptırımları kaldırması için nasıl bir yol haritası izlenecek?</h3>
-                    <p>ABD Başkanı Donald Trump'ın Türkiye'ye yaptığı ilk resmi ziyarette gündeme getirdiği "Yaptırımların kaldırılmasının zamanı geldi" açıklaması, Ankara-Washington hattında savunma sanayi işbirliğinde yeni bir ivmelenmeye neden oldu. ABD'de 3 Kasım'da ara seçimlerin yapılacak olması, bu alanda zorlu ve yoğun bir yol haritası gerektiriyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c4gylzjdx0lo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nato savunma forumu: türkiye ve müttefikler hangi anlaşmalara imza attı?
-            nato müttefikleri ankara'daki liderler zirvesi kapsamında düzenlenen savunma forumu'nda on milyarlarca dolarlık anlaşmalar imzaladı. türkiye, bu anlaşmalar çerçevesinde atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>NATO Savunma Forumu: Türkiye ve müttefikler hangi anlaşmalara imza attı?</h3>
-                    <p>NATO müttefikleri Ankara'daki liderler zirvesi kapsamında düzenlenen Savunma Forumu'nda on milyarlarca dolarlık anlaşmalar imzaladı. Türkiye, bu anlaşmalar çerçevesinde Atmaca seyir füzesi, gözlem uyduları ve başka savunma teçhizatı konusunda taahhütler verdi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c4gyj0w77eyo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            su ürünleri ihracatı ilk yarıda 1 milyar doları aştı
-            türkiye'nin su ürünleri ihracatı, yılın ilk altı ayında yüzde 14 artışla 1 milyar 110 milyon 366 bin dolara ulaşarak ilk kez ocak-haziran döneminde 1 milyar dolar sınırını aştı ve cumhuriyet tarihinin en yüksek ilk yarı ihracat geliri elde edildi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Su ürünleri ihracatı ilk yarıda 1 milyar doları aştı</h3>
-                    <p>Türkiye'nin su ürünleri ihracatı, yılın ilk altı ayında yüzde 14 artışla 1 milyar 110 milyon 366 bin dolara ulaşarak ilk kez ocak-haziran döneminde 1 milyar dolar sınırını aştı ve Cumhuriyet tarihinin en yüksek ilk yarı ihracat geliri elde edildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/su-urunleri-ihracati-ilk-yarida-1-milyar-dolari-asti-950749.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            erdoğan, starmer ve liderlere özel üretim tabanca hediye etti
-            cumhurbaşkanı recep tayyip erdoğan, nato zirvesi sırasında liderlere özel üretim tabancalar hediye etti.
-            ekonomi
-            bbc türkçe
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Erdoğan, Starmer ve liderlere özel üretim tabanca hediye etti</h3>
-                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, NATO zirvesi sırasında liderlere özel üretim tabancalar hediye etti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c7vy4nyjdgno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            otomotiv sektöründen 8 milyar dolarlık yan sanayi ürünü ihracatı
-            türkiye'den ocak-haziran döneminde 8 milyar 86 milyon 142 bin dolarlık otomotiv tedarik (yan sanayi) ürünü ihraç edildi.
-            ekonomi
-            trt haber
-            "
-                    data-category="ekonomi"
-                >
-                    <h3>Otomotiv sektöründen 8 milyar dolarlık yan sanayi ürünü ihracatı</h3>
-                    <p>Türkiye'den ocak-haziran döneminde 8 milyar 86 milyon 142 bin dolarlık otomotiv tedarik (yan sanayi) ürünü ihraç edildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/otomotiv-sektorunden-8-milyar-dolarlik-yan-sanayi-urunu-ihracati-950754.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            cumhurbaşkanı erdoğan: f-35'ler türkiye'ye teslim edildiğinde tüm dünya 'abd sözünü tuttu' diyecek
-            cumhurbaşkanı recep tayyip erdoğan, ankara'daki nato zirvesi'nin son gününde yaptığı basın toplantısında, abd ile f-35'ler konusundaki müzakerelerin olumlu geçtiğini söyleyerek, "f-35'ler türkiye'ye teslim edildiğinde tüm dünya 'abd sözünü tuttu' diyecek" dedi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Cumhurbaşkanı Erdoğan: F-35'ler Türkiye'ye teslim edildiğinde tüm dünya 'ABD sözünü tuttu' diyecek</h3>
-                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Ankara'daki NATO Zirvesi'nin son gününde yaptığı basın toplantısında, ABD ile F-35'ler konusundaki müzakerelerin olumlu geçtiğini söyleyerek, "F-35'ler Türkiye'ye teslim edildiğinde tüm dünya 'ABD sözünü tuttu' diyecek" dedi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c33y078x83zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd, suriye'yi 'teröre destek veren ülkeler' listesinden çıkarıyor
-            abd başkanı donald trump, ülkesinin suriye'yi "teröre destek veren ülkeler" listesinden çıkaracağını açıkladı. trump bu kararını, nato zirvesi için gittiği ankara'da görüştüğü suriye'de geçiş yönetiminin devlet başkanı ahmed şara'ya iletti.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD, Suriye'yi 'teröre destek veren ülkeler' listesinden çıkarıyor</h3>
-                    <p>ABD Başkanı Donald Trump, ülkesinin Suriye'yi "teröre destek veren ülkeler" listesinden çıkaracağını açıkladı. Trump bu kararını, NATO Zirvesi için gittiği Ankara'da görüştüğü Suriye'de geçiş yönetiminin Devlet Başkanı Ahmed Şara'ya iletti.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cjeg8v0e9g4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nato zirvesi'nde ankara'da 145 uçuş gerçekleşti
-            ulaştırma ve altyapı bakanı abdulkadir uraloğlu, nato ankara zirvesi kapsamında 6-8 temmuz'da, esenboğa havalimanı ve ankara havalimanı'nda 83 iniş 62 kalkış olmak üzere toplam 145 uçuş yapıldığını açıkladı.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>NATO Zirvesi'nde Ankara'da 145 uçuş gerçekleşti</h3>
-                    <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, NATO Ankara Zirvesi kapsamında 6-8 Temmuz'da, Esenboğa Havalimanı ve Ankara Havalimanı'nda 83 iniş 62 kalkış olmak üzere toplam 145 uçuş yapıldığını açıkladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/nato-zirvesinde-ankarada-145-ucus-gerceklesti-950755.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ran: abd'nin son saldırıları açık bir savaş suçu
-            i̇ran dışişleri bakanlığı, abd ordusunun ülkenin güneyindeki kıyı eyaletlerinde bazı noktalar ile meşhed demir yolu güzergahındaki 2 köprüye düzenlediği saldırıları kınadı.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>İran: ABD'nin son saldırıları açık bir savaş suçu</h3>
-                    <p>İran Dışişleri Bakanlığı, ABD ordusunun ülkenin güneyindeki kıyı eyaletlerinde bazı noktalar ile Meşhed demir yolu güzergahındaki 2 köprüye düzenlediği saldırıları kınadı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/iran-abdnin-son-saldirilari-acik-bir-savas-sucu-950752.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            almanya başbakanı, ülkesinin abd'den tomahawk füzeleri satın alacağını duyurdu
-            almanya başbakanı friedrich merz, nato'nun birlik ve caydırıcılık açısından güçlendiğini belirterek ülkesinin, abd'den tomahawk seyir füzeleri satın alacağını ve bunların ülkede konuşlandırılacağını söyledi.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Almanya Başbakanı, ülkesinin ABD'den Tomahawk füzeleri satın alacağını duyurdu</h3>
-                    <p>Almanya Başbakanı Friedrich Merz, NATO'nun birlik ve caydırıcılık açısından güçlendiğini belirterek ülkesinin, ABD'den Tomahawk seyir füzeleri satın alacağını ve bunların ülkede konuşlandırılacağını söyledi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/almanya-basbakani-ulkesinin-abdden-tomahawk-fuzeleri-satin-alacagini-duyurdu-950750.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            abd ve i̇ran'dan karşılıklı saldırılar: tahran, körfez'deki üsleri hedef aldı
-            abd, hürmüz boğazı ve çevresinde i̇ran'a karşı yeni hava saldırıları başlattı. abd merkez komutanlığı (centcom), x üzerinden yaptığı açıklamada, saldırıların hürmüz boğazı'nda "ticari gemilere ve sivil mürettebata yönelik son dönemdeki haksız saldırganlığa" yanıt olarak düzenlendiğini açıkladı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>ABD ve İran'dan karşılıklı saldırılar: Tahran, Körfez'deki üsleri hedef aldı</h3>
-                    <p>ABD, Hürmüz Boğazı ve çevresinde İran'a karşı yeni hava saldırıları başlattı. ABD Merkez Komutanlığı (CENTCOM), X üzerinden yaptığı açıklamada, saldırıların Hürmüz Boğazı'nda "ticari gemilere ve sivil mürettebata yönelik son dönemdeki haksız saldırganlığa" yanıt olarak düzenlendiğini açıkladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c0my308zd4go?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            sıcak hava dalgaları neden kadınları daha fazla etkiliyor?
-            uzmanlar, kadınlar için sıcağa bağlı riskler konusunda farkındalığın artırılması ve onları korumaya yönelik daha hedefli çabaların gösterilmesi çağrısında bulunuyor.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Sıcak hava dalgaları neden kadınları daha fazla etkiliyor?</h3>
-                    <p>Uzmanlar, kadınlar için sıcağa bağlı riskler konusunda farkındalığın artırılması ve onları korumaya yönelik daha hedefli çabaların gösterilmesi çağrısında bulunuyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c3vy4r6e2p5o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            nato'nun ankara zirvesi bildirisi'nde neler var?
-            nato'nun tüm üyelerinin onayıyla yayınlanan ankara zirvesi bildirisi, zirvede alınan tüm kararları yansıtıyor. abd başkanı donald trump'ın zirve öncesi bazı müttefiklere yönelik sert açıklamalarına rağmen bildiride sorun yaşanmadı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>NATO'nun Ankara Zirvesi Bildirisi'nde neler var?</h3>
-                    <p>NATO'nun tüm üyelerinin onayıyla yayınlanan Ankara Zirvesi Bildirisi, zirvede alınan tüm kararları yansıtıyor. ABD Başkanı Donald Trump'ın zirve öncesi bazı müttefiklere yönelik sert açıklamalarına rağmen bildiride sorun yaşanmadı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/ckg04q901j2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            nato zirvesi'nin ikinci gününde neler yaşandı?
-            ankara'nın ev sahipliğinde düzenlenen nato zirvesi'nin ikinci gününde liderler beştepe'de biraraya geldi. müttefikler beklendiği gibi kolektif savunmaya odaklanan 5. maddeye yönelik “sarsılmaz kararlılıklarını” vurguladı. cumhurbaşkanı erdoğan, zirvenin başarıyla tamamlandığını duyurdu.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>NATO Zirvesi'nin ikinci gününde neler yaşandı?</h3>
-                    <p>Ankara'nın ev sahipliğinde düzenlenen NATO Zirvesi'nin ikinci gününde liderler Beştepe'de biraraya geldi. Müttefikler beklendiği gibi kolektif savunmaya odaklanan 5. maddeye yönelik “sarsılmaz kararlılıklarını” vurguladı. Cumhurbaşkanı Erdoğan, zirvenin başarıyla tamamlandığını duyurdu.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.co.uk/turkce/live/c1dy1ygwd9vt?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            cumhurbaşkanı erdoğan, karadağ başbakanı spajic'i kabul etti
-            cumhurbaşkanı recep tayyip erdoğan, karadağ başbakanı milojko spajic'i kabul etti.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Cumhurbaşkanı Erdoğan, Karadağ Başbakanı Spajic'i kabul etti</h3>
-                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Karadağ Başbakanı Milojko Spajic'i kabul etti.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-karadag-basbakani-spajici-kabul-etti-950759.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            dünya kupası'nda arjantin kollanıyor mu?
-            mısır, arjantin'e karşı önyargılı davranıldığını ve yıldız oyuncuları lionel messi'ye ayrıcalık tanındığını öne sürdü. bu iddia doğru mu?
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Dünya Kupası'nda Arjantin kollanıyor mu?</h3>
-                    <p>Mısır, Arjantin'e karşı önyargılı davranıldığını ve yıldız oyuncuları Lionel Messi'ye ayrıcalık tanındığını öne sürdü. Bu iddia doğru mu?</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c621jz46pzxo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            mevlana müzesi 1 milyon 442 bin 502 ziyaretçiyi ağırladı
-            türk-i̇slam düşünürü ve mutasavvıf mevlana celaleddin-i rumi'nin kabrinin bulunduğu mevlana müzesi, yılın ilk yarısında 1 milyon 442 bin 502 ziyaretçiyi ağırladı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Mevlana Müzesi 1 milyon 442 bin 502 ziyaretçiyi ağırladı</h3>
-                    <p>Türk-İslam düşünürü ve mutasavvıf Mevlana Celaleddin-i Rumi'nin kabrinin bulunduğu Mevlana Müzesi, yılın ilk yarısında 1 milyon 442 bin 502 ziyaretçiyi ağırladı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/kultur-sanat/mevlana-muzesi-1-milyon-442-bin-502-ziyaretciyi-agirladi-950751.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">TEKNOLOJI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            bakan uraloğlu: türksat 6a üzerinden 69 televizyon kanalına hizmet sunuyoruz
-            ulaştırma ve altyapı bakanı abdulkadir uraloğlu, "türksat 6a ile ülkemizi haberleşme uydusu tasarlayıp üretebilen dünyadaki 11 ülke arasına taşıdık. bugün yalnızca türksat 6a üzerinden güney asya kapsamasındaki 10 ülkede 69 televizyon kanalına yayın hizmeti sunuyoruz" dedi.
-            teknoloji
-            trt haber
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Bakan Uraloğlu: Türksat 6A üzerinden 69 televizyon kanalına hizmet sunuyoruz</h3>
-                    <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, "Türksat 6A ile ülkemizi haberleşme uydusu tasarlayıp üretebilen dünyadaki 11 ülke arasına taşıdık. Bugün yalnızca Türksat 6A üzerinden Güney Asya kapsamasındaki 10 ülkede 69 televizyon kanalına yayın hizmeti sunuyoruz" dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/bakan-uraloglu-turksat-6a-uzerinden-69-televizyon-kanalina-hizmet-sunuyoruz-950756.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇mece, nato'nun uzaydaki yeni gözü olacak
-            türkiye'nin 7-8 temmuz'da ev sahipliği yaptığı nato ankara zirvesi'nde uzayla ilgili projeler de masaya yatırılırken tübi̇tak uzay'ın i̇mece uyduları ile aselsan'ın leo uydu ağının, teşkilatın teknoloji mimarisinde rol üstlenmesi kararlaştırıldı.
-            teknoloji
-            trt haber
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>İMECE, NATO'nun uzaydaki yeni gözü olacak</h3>
-                    <p>Türkiye'nin 7-8 Temmuz'da ev sahipliği yaptığı NATO Ankara Zirvesi'nde uzayla ilgili projeler de masaya yatırılırken TÜBİTAK UZAY'ın İMECE uyduları ile ASELSAN'ın LEO uydu ağının, teşkilatın teknoloji mimarisinde rol üstlenmesi kararlaştırıldı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/bilim-teknoloji/imece-natonun-uzaydaki-yeni-gozu-olacak-950753.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GÜMRÜK</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            vergi borcunu yapılandıran araç sahipleri muayenelerini yaptırabilecek
-            tüvtürk, gelir i̇daresi başkanlığı (gi̇b) tarafından yürütülen vergi borcu yapılandırması kapsamında, yapılandırmadan yararlanan araç sahiplerinin araç muayenelerini yaptırabileceğini hatırlattı.
-            gümrük
-            trt haber
-            "
-                    data-category="gümrük"
-                >
-                    <h3>Vergi borcunu yapılandıran araç sahipleri muayenelerini yaptırabilecek</h3>
-                    <p>TÜVTÜRK, Gelir İdaresi Başkanlığı (GİB) tarafından yürütülen vergi borcu yapılandırması kapsamında, yapılandırmadan yararlanan araç sahiplerinin araç muayenelerini yaptırabileceğini hatırlattı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/ekonomi/vergi-borcunu-yapilandiran-arac-sahipleri-muayenelerini-yaptirabilecek-950760.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

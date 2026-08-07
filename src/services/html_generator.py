@@ -10,6 +10,11 @@ _TURKISH_MONTHS = [
     "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"
 ]
 
+_DEFAULT_HERO_LEAD = (
+    "RSS kaynaklarından derlenen günün en önemli haberleri. "
+    "Kaynakları ve yayınlanma zamanlarını açık biçimde görebilirsiniz."
+)
+
 _CATEGORIES = [
     ("all", "Tümü"),
     ("ekonomi", "Ekonomi"),
@@ -82,6 +87,15 @@ def _format_date_tr(dt):
     return f"{dt.day} {_TURKISH_MONTHS[dt.month - 1]} {dt.year}"
 
 
+def _format_iso_date(date_text):
+    """Format YYYY-MM-DD as a Turkish date."""
+    try:
+        dt = datetime.strptime(date_text, "%Y-%m-%d")
+    except Exception:
+        return _escape(date_text)
+    return _format_date_tr(dt)
+
+
 def _meta_line(item):
     """Build 'Source · date' metadata, falling back to source only."""
     source = _escape(item.get("source", ""))
@@ -144,8 +158,8 @@ def _page(title, body, active=None):
 """
 
 
-def _card(item):
-    """Render a single news card."""
+def _news_item(item, compact=False):
+    """Render a feed-style article item."""
     search_text = re.sub(
         r"\s+",
         " ",
@@ -162,67 +176,99 @@ def _card(item):
     summary = _escape(item.get("summary", ""))
     meta = _meta_line(item)
     link = (item.get("link") or "").strip() or "#"
+    compact_cls = " news-card-compact" if compact else ""
 
-    return f"""<article class="news-card" data-search="{_escape(search_text)}" data-category="{_escape(item.get('category', 'genel'))}">
-    <span class="category-badge">{category}</span>
-    <h3>{title}</h3>
-    <p>{summary}</p>
-    <div class="card-footer">
-        <span class="source">{meta}</span>
-        <a class="read-link" href="{_escape(link)}" target="_blank" rel="noopener noreferrer">Haberi oku →</a>
+    return f"""<article class="news-card{compact_cls}" data-search="{_escape(search_text)}" data-category="{_escape(item.get('category', 'genel'))}">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">{category}</span>
+            <span class="source source-inline">{meta}</span>
+        </div>
+        <h3>{title}</h3>
+        <p>{summary}</p>
     </div>
-</article>
-"""
-
-
-def _featured_card(item, large=False):
-    """Render a featured/top-story card."""
-    category = _escape(item.get("category", "genel").upper())
-    title = _escape(item.get("title", ""))
-    summary = _escape(item.get("summary", ""))
-    meta = _meta_line(item)
-    link = (item.get("link") or "").strip() or "#"
-
-    return f"""<article class="featured-card">
-    <span class="category-badge">{category}</span>
-    <h3>{title}</h3>
-    {'<p>' + summary + '</p>' if summary else ''}
     <div class="card-footer">
-        <span class="source">{meta}</span>
-        <a class="read-link" href="{_escape(link)}" target="_blank" rel="noopener noreferrer">Haberi oku →</a>
+        <span class="source source-block">{meta}</span>
+        <a class="read-link" href="{_escape(link)}" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
 </article>
 """
 
 
 def _stats_html(stats):
-    """Render a compact stats bar."""
+    """Render a compact editorial stats line."""
     if not stats:
         return ""
-    pills = []
+    items = []
     for key, value in stats.items():
         if key == "generated_at":
             continue
-        pills.append(
-            f'<span class="stat-pill"><strong>{_escape(key)}</strong> {_escape(value)}</span>'
+        label = _escape(key.replace("_", " "))
+        items.append(
+            f'<span class="stat-item"><strong>{label}</strong> {_escape(value)}</span>'
         )
-    if not pills:
+    if not items:
         return ""
-    return f'<div class="stats-bar">{"".join(pills)}</div>\n'
+    return (
+        '<div class="stats-bar" aria-label="Günlük istatistikler">'
+        f'{"".join(items)}</div>\n'
+    )
 
 
 def _featured_html(top_news):
-    """Render the top-stories section."""
+    """Render the daily briefing section."""
     if not top_news:
         return '<p class="empty-state">Bugün için öne çıkan haber bulunamadı.</p>'
+    lead = top_news[0]
+    remaining = top_news[1:5]
 
-    main = _featured_card(top_news[0], large=True)
-    side = "".join([_featured_card(item) for item in top_news[1:5]])
+    lead_meta = _meta_line(lead)
+    lead_summary = _escape(lead.get("summary", ""))
+    lead_title = _escape(lead.get("title", ""))
+    lead_link = _escape((lead.get("link") or "").strip() or "#")
+    lead_category = _escape(lead.get("category", "genel").upper())
 
-    return f"""<div class="featured-grid">
-    <div class="featured-main">{main}</div>
-    <div class="featured-side">{side}</div>
-</div>
+    if remaining:
+        items = []
+        for index, item in enumerate(remaining, start=2):
+            items.append(
+                f"""<li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">{index}</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">{_escape(item.get("category", "genel").upper())}</span>
+                <span class="source">{_meta_line(item)}</span>
+            </div>
+            <h3>{_escape(item.get("title", ""))}</h3>
+            <p>{_escape(item.get("summary", ""))}</p>
+            <a class="read-link" href="{_escape((item.get("link") or "").strip() or "#")}" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li>"""
+            )
+        side_html = f'<ol class="briefing-list">{"".join(items)}</ol>'
+    else:
+        side_html = '<p class="empty-state">Daha fazla öne çıkan haber bulunmuyor.</p>'
+
+    return f"""<section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">{lead_category}</span>
+        </div>
+        <h3>{lead_title}</h3>
+        <p>{lead_summary}</p>
+        <div class="card-footer">
+            <span class="source">{lead_meta}</span>
+            <a class="read-link" href="{lead_link}" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        {side_html}
+    </aside>
+</section>
 """
 
 
@@ -230,11 +276,16 @@ def _category_sections_html(grouped_news):
     """Render grouped news cards by category."""
     sections = []
     for category, items in grouped_news.items():
-        cards = "".join([_card(item) for item in items])
+        cards = "".join([_news_item(item) for item in items])
         sections.append(
             f"""<section class="category-section">
-    <h2 class="category-title">{_escape(category.upper())}</h2>
-    {cards}
+    <div class="category-heading">
+        <h2 class="category-title">{_escape(category.upper())}</h2>
+        <p class="category-count">{len(items)} haber</p>
+    </div>
+    <div class="news-list">
+        {cards}
+    </div>
 </section>
 """
         )
@@ -254,14 +305,14 @@ def _category_filter_buttons():
 
 def _search_box(input_id, placeholder):
     return f"""<div class="search-box">
-    <span class="search-icon" aria-hidden="true">🔍</span>
+    <span class="search-icon" aria-hidden="true">Ara</span>
     <input type="text" id="{input_id}" placeholder="{_escape(placeholder)}" autocomplete="off">
 </div>
 """
 
 
-def generate_news_html(news_items, stats):
-    """Generate the redesigned homepage."""
+def generate_news_html(news_items, stats, page_heading="Bugünün Haberleri", hero_date=None, hero_lead=None):
+    """Generate the redesigned homepage or a dated daily page."""
     top_news = sorted(
         news_items,
         key=lambda x: x.get("importance_score", 0),
@@ -273,12 +324,18 @@ def generate_news_html(news_items, stats):
         category = item.get("category", "genel")
         grouped_news.setdefault(category, []).append(item)
 
+    if hero_date:
+        display_date = _format_iso_date(hero_date)
+    else:
+        display_date = _format_today()
+    lead_text = hero_lead or _DEFAULT_HERO_LEAD
+
     body = f"""<main class="site-wrapper">
     <section class="hero">
         <div class="hero-text">
-            <h1>Bugünün Haberleri</h1>
-            <p class="hero-date">{_format_today()}</p>
-            <p class="hero-lead">RSS kaynaklarından derlenen güncel haber özetleri. Kaynakları ve yayınlanma zamanlarını görebilirsiniz.</p>
+            <h1>{_escape(page_heading)}</h1>
+            <p class="hero-date">{_escape(display_date)}</p>
+            <p class="hero-lead">{_escape(lead_text)}</p>
         </div>
         {_search_box('home-search-input', 'Güncel haberlerde ara...')}
         <div class="category-filters">
@@ -289,6 +346,7 @@ def generate_news_html(news_items, stats):
 
     <section class="section">
         <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
         {_featured_html(top_news)}
     </section>
 
@@ -296,7 +354,7 @@ def generate_news_html(news_items, stats):
 </main>
 """
 
-    return _page("Günün Haberleri", body, active="index")
+    return _page(page_heading, body, active="index")
 
 
 def generate_search_html(search_index=None):
@@ -312,10 +370,13 @@ def generate_search_html(search_index=None):
     body = f"""<main class="site-wrapper">
     <section class="hero hero-small">
         <h1>Haber Arama</h1>
-        <p class="hero-lead">Arşivdeki ve bugünün haberlerinde başlık, özet, kategori veya kaynak ara.</p>
+        <p class="hero-lead">Başlık, özet, kategori veya kaynağa göre arayın. Sonuçlar ana akıştaki aynı okunabilir düzenle listelenir.</p>
         {_search_box('search-input', 'Başlık, konu, kategori veya kaynak ara...')}
     </section>
 
+    <div class="results-toolbar">
+        <p id="search-results-meta" class="results-meta" aria-live="polite"></p>
+    </div>
     <div id="search-results"></div>
 
     <script type="application/json" id="search-data">{data_json}</script>
@@ -337,31 +398,46 @@ def generate_archive_html(project_root):
 
     archive_files.sort(reverse=True)
 
-    cards = []
+    groups = {}
     for file in archive_files:
         date_name = file.stem.replace("-news", "")
         try:
             dt = datetime.strptime(date_name, "%Y-%m-%d")
             display = _format_date_tr(dt)
+            group_label = f"{_TURKISH_MONTHS[dt.month - 1]} {dt.year}"
         except Exception:
             display = _escape(date_name)
+            group_label = "Arşiv"
 
         href = f"{date_name}-news.html"
-        cards.append(
-            f'<a class="archive-card" href="{_escape(href)}">'
-            f'<span class="archive-date">{_escape(display)}</span>'
-            f'</a>'
+        groups.setdefault(group_label, []).append(
+            f"""<li class="archive-entry">
+    <a href="{_escape(href)}">
+        <span class="archive-date">{_escape(display)}</span>
+        <span class="archive-arrow" aria-hidden="true">›</span>
+    </a>
+</li>"""
         )
 
-    if not cards:
+    if not groups:
         grid = '<p class="empty-state">Henüz arşivlenmiş haber bulunmuyor.</p>'
     else:
-        grid = f'<div class="archive-grid">{"".join(cards)}</div>'
+        sections = []
+        for label, items in groups.items():
+            sections.append(
+                f"""<section class="archive-group">
+    <h2 class="archive-group-title">{_escape(label)}</h2>
+    <ul class="archive-list">
+        {"".join(items)}
+    </ul>
+</section>"""
+            )
+        grid = "".join(sections)
 
     body = f"""<main class="site-wrapper">
     <section class="hero hero-small">
         <h1>Haber Arşivi</h1>
-        <p class="hero-lead">Geçmiş günlere ait haber özetlerine göz atın.</p>
+        <p class="hero-lead">Geçmiş günleri tarih sırasıyla tarayın. Her tarih aynı güncel tasarımla oluşturulmuş günlük sayfaya gider.</p>
     </section>
     {grid}
 </main>
@@ -373,15 +449,19 @@ def generate_archive_html(project_root):
 def get_css():
     """Return the shared site stylesheet."""
     return """:root {
-    --bg: #F5F7FA;
+    --bg: #f3f1ec;
     --card: #FFFFFF;
-    --primary: #2563EB;
-    --primary-hover: #1D4ED8;
-    --border: #E5E7EB;
-    --text: #111827;
-    --muted: #6B7280;
-    --max-width: 1200px;
-    --radius: 16px;
+    --primary: #1f4db8;
+    --primary-hover: #173f98;
+    --border: #d9d3c7;
+    --border-strong: #bbb2a2;
+    --text: #181818;
+    --muted: #5f5a52;
+    --muted-strong: #413b34;
+    --surface: #f8f6f1;
+    --max-width: 1180px;
+    --reading-width: 760px;
+    --radius: 10px;
 }
 
 * {
@@ -396,19 +476,26 @@ body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-    font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.55;
+    line-height: 1.6;
     min-height: 100vh;
 }
 
 a {
-    color: var(--primary);
+    color: inherit;
     text-decoration: none;
 }
 
 a:hover {
-    color: var(--primary-hover);
+    color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+    outline: 3px solid rgba(31, 77, 184, 0.22);
+    outline-offset: 2px;
 }
 
 .site-wrapper,
@@ -424,8 +511,8 @@ a:hover {
     position: sticky;
     top: 0;
     z-index: 50;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: rgba(248, 246, 241, 0.96);
+    backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
 }
 
@@ -439,15 +526,15 @@ a:hover {
 }
 
 .brand {
-    font-size: 22px;
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    font-size: 20px;
+    font-weight: 750;
+    letter-spacing: -0.01em;
     color: var(--text);
     margin-right: auto;
 }
 
 .brand:hover {
-    color: var(--primary);
+    color: var(--text);
 }
 
 .nav-links {
@@ -458,16 +545,18 @@ a:hover {
 
 .nav-links a {
     color: var(--muted);
-    font-weight: 500;
-    padding: 8px 14px;
-    border-radius: 8px;
-    transition: color 0.15s, background 0.15s;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s, border-color 0.15s;
+    border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
     color: var(--primary);
-    background: rgba(37, 99, 235, 0.06);
+    background: rgba(31, 77, 184, 0.06);
+    border-bottom-color: rgba(31, 77, 184, 0.35);
 }
 
 .header-date {
@@ -497,58 +586,62 @@ a:hover {
 
 /* Hero */
 .hero {
-    padding: 56px 0 24px;
+    padding: 42px 0 18px;
 }
 
 .hero-small {
-    padding: 40px 0 16px;
+    padding: 34px 0 10px;
 }
 
 .hero h1 {
-    font-size: 42px;
-    font-weight: 800;
+    font-size: 54px;
+    font-weight: 780;
     letter-spacing: -0.03em;
-    margin: 0 0 8px;
+    margin: 0 0 10px;
     line-height: 1.1;
+    max-width: 12ch;
 }
 
 .hero-date {
-    color: var(--muted);
-    font-size: 16px;
-    margin: 0 0 12px;
-    font-weight: 500;
+    color: var(--muted-strong);
+    font-size: 17px;
+    margin: 0 0 14px;
+    font-weight: 600;
 }
 
 .hero-lead {
     color: var(--muted);
-    font-size: 18px;
-    max-width: 640px;
-    margin: 0 0 28px;
-    line-height: 1.5;
+    font-size: 21px;
+    max-width: 720px;
+    margin: 0 0 24px;
+    line-height: 1.52;
 }
 
 /* Search */
 .search-box {
     position: relative;
-    max-width: 720px;
-    margin: 0 0 20px;
+    max-width: 700px;
+    margin: 0 0 18px;
 }
 
 .search-icon {
     position: absolute;
-    left: 18px;
+    left: 16px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 18px;
-    opacity: 0.5;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
     pointer-events: none;
 }
 
 .search-box input {
     width: 100%;
-    padding: 16px 20px 16px 50px;
+    padding: 16px 18px 16px 54px;
     border: 1px solid var(--border);
-    border-radius: 999px;
+    border-radius: var(--radius);
     background: var(--card);
     font-size: 16px;
     color: var(--text);
@@ -557,244 +650,345 @@ a:hover {
 }
 
 .search-box input:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.08);
+    border-color: var(--border-strong);
+    box-shadow: 0 0 0 4px rgba(31, 77, 184, 0.08);
 }
 
 /* Category filters */
 .category-filters {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 24px;
+    gap: 8px;
+    margin-bottom: 16px;
 }
 
 .category-filter-btn {
-    padding: 8px 16px;
+    padding: 8px 12px;
     border: 1px solid var(--border);
-    border-radius: 999px;
-    background: transparent;
+    border-radius: 7px;
+    background: rgba(255, 255, 255, 0.55);
     color: var(--muted);
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     cursor: pointer;
     transition: color 0.15s, background 0.15s, border-color 0.15s;
 }
 
 .category-filter-btn:hover {
-    color: var(--primary);
-    background: rgba(37, 99, 235, 0.06);
-    border-color: rgba(37, 99, 235, 0.2);
+    color: var(--muted-strong);
+    background: rgba(255, 255, 255, 0.92);
+    border-color: var(--border-strong);
 }
 
 .category-filter-btn.active {
-    background: var(--primary);
+    background: var(--text);
     color: #fff;
-    border-color: var(--primary);
+    border-color: var(--text);
 }
 
 /* Stats */
 .stats-bar {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 8px;
+    gap: 10px 14px;
+    margin-bottom: 4px;
+    padding-top: 4px;
 }
 
-.stat-pill {
+.stat-item {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    padding: 6px 14px;
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    background: var(--card);
+    gap: 7px;
     color: var(--muted);
-    font-size: 13px;
+    font-size: 14px;
 }
 
-.stat-pill strong {
-    color: var(--text);
+.stat-item strong {
+    color: var(--muted-strong);
     font-weight: 700;
+    text-transform: capitalize;
 }
 
 /* Sections */
 .section {
-    margin: 56px 0 40px;
+    margin: 42px 0 28px;
 }
 
 .section-title {
     font-size: 13px;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     color: var(--muted);
-    margin: 0 0 18px;
+    margin: 0 0 10px;
     font-weight: 700;
 }
 
-/* Featured */
-.featured-grid {
+.section-intro {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 700px;
+}
+
+.briefing-shell {
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 20px;
+    grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+    gap: 28px;
+    align-items: start;
 }
 
-.featured-main,
-.featured-side {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.featured-card {
+.briefing-lead {
     background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-    box-shadow: 0 4px 12px rgba(16, 24, 40, 0.03);
-    transition: transform 0.12s, box-shadow 0.12s;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    border-radius: 12px;
+    padding: 26px 28px 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+}
+
+.briefing-kicker,
+.category-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.briefing-kicker {
+    color: var(--muted-strong);
+}
+
+.eyebrow-row {
     display: flex;
-    flex-direction: column;
-    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px 14px;
 }
 
-.featured-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 32px rgba(16, 24, 40, 0.08);
+.briefing-lead h3 {
+    font-size: 42px;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin: 14px 0 16px;
+    max-width: 13ch;
 }
 
-.featured-main {
-    justify-content: center;
+.briefing-lead p {
+    font-size: 21px;
+    line-height: 1.5;
+    color: var(--muted-strong);
+    margin: 0 0 18px;
+    max-width: 28ch;
 }
 
-.featured-main h3 {
-    font-size: 28px;
+.briefing-side {
+    border-top: 2px solid var(--text);
+    padding-top: 10px;
 }
 
-.featured-card h3 {
-    font-size: 20px;
-    line-height: 1.25;
-    margin: 0 0 10px;
+.briefing-side-title {
+    margin: 0 0 14px;
+    font-size: 18px;
     letter-spacing: -0.01em;
 }
 
-.featured-card p {
+.briefing-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.briefing-item {
+    border-top: 1px solid var(--border);
+    padding: 16px 0;
+}
+
+.briefing-item:first-child {
+    border-top: 0;
+    padding-top: 0;
+}
+
+.briefing-item article {
+    display: grid;
+    grid-template-columns: 32px minmax(0, 1fr);
+    gap: 14px;
+}
+
+.briefing-rank {
     color: var(--muted);
-    margin: 0 0 16px;
-    line-height: 1.55;
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 2px;
+}
+
+.briefing-copy h3 {
+    margin: 6px 0 8px;
+    font-size: 25px;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+}
+
+.briefing-copy p {
+    margin: 0 0 10px;
+    color: var(--muted);
+    line-height: 1.5;
 }
 
 /* Category sections */
 .category-section {
-    margin-bottom: 48px;
+    margin-bottom: 38px;
+}
+
+.category-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--border-strong);
 }
 
 .category-title {
-    font-size: 28px;
-    font-weight: 800;
-    margin: 0 0 20px;
-    padding-bottom: 12px;
-    border-bottom: 1px solid var(--border);
-    letter-spacing: -0.01em;
+    font-size: 24px;
+    font-weight: 760;
+    margin: 0;
+    letter-spacing: -0.02em;
+}
+
+.category-count {
+    margin: 0;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.news-list {
+    display: block;
 }
 
 /* News cards */
 .news-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 24px;
-    margin-bottom: 16px;
-    box-shadow: 0 4px 12px rgba(16, 24, 40, 0.03);
-    transition: transform 0.12s, box-shadow 0.12s;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 18px;
+    padding: 18px 0;
+    margin: 0;
+    border-bottom: 1px solid var(--border);
 }
 
-.news-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 32px rgba(16, 24, 40, 0.08);
-}
-
-.category-badge {
-    display: inline-block;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-    color: var(--primary);
-    background: rgba(37, 99, 235, 0.06);
-    padding: 4px 8px;
-    border-radius: 6px;
-    margin-bottom: 12px;
+.news-card-compact h3 {
+    font-size: 24px;
 }
 
 .news-card h3 {
-    font-size: 22px;
-    line-height: 1.25;
-    margin: 0 0 10px;
-    letter-spacing: -0.01em;
+    font-size: 31px;
+    line-height: 1.16;
+    margin: 10px 0 10px;
+    letter-spacing: -0.025em;
+    max-width: 24ch;
 }
 
 .news-card p {
-    color: var(--muted);
-    margin: 0 0 16px;
-    line-height: 1.6;
+    color: var(--muted-strong);
+    margin: 0;
+    line-height: 1.58;
+    max-width: var(--reading-width);
 }
 
 .card-footer {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-end;
     justify-content: space-between;
-    gap: 16px;
-    flex-wrap: wrap;
+    gap: 12px;
+    min-width: 156px;
 }
 
 .source {
     color: var(--muted);
     font-size: 14px;
+    line-height: 1.45;
+}
+
+.source-inline {
+    display: inline;
+}
+
+.source-block {
+    display: none;
 }
 
 .read-link {
     color: var(--primary);
     font-weight: 600;
     white-space: nowrap;
+    align-self: flex-end;
 }
 
 .read-link:hover {
     color: var(--primary-hover);
 }
 
-/* Archive */
-.archive-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 16px;
-    margin: 24px 0 48px;
-}
-
-.archive-card {
+/* Search */
+.results-toolbar {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 22px 18px;
-    text-align: center;
-    font-weight: 600;
-    color: var(--text);
-    box-shadow: 0 4px 12px rgba(16, 24, 40, 0.03);
-    transition: transform 0.12s, box-shadow 0.12s, border-color 0.12s;
+    justify-content: space-between;
+    margin: 10px 0 2px;
 }
 
-.archive-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(16, 24, 40, 0.08);
-    border-color: var(--primary);
+.results-meta {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* Archive */
+.archive-group {
+    margin: 28px 0 34px;
+}
+
+.archive-group-title {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: var(--muted-strong);
+    letter-spacing: -0.01em;
+}
+
+.archive-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid var(--border);
+}
+
+.archive-entry {
+    border-bottom: 1px solid var(--border);
+}
+
+.archive-entry a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 14px 0;
+}
+
+.archive-entry a:hover .archive-date,
+.archive-entry a:hover .archive-arrow {
     color: var(--primary);
 }
 
 .archive-date {
-    font-size: 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.archive-arrow {
+    color: var(--muted);
+    font-size: 22px;
 }
 
 /* Empty state */
@@ -808,8 +1002,8 @@ a:hover {
 /* Footer */
 .site-footer {
     border-top: 1px solid var(--border);
-    background: var(--card);
-    margin-top: 80px;
+    background: transparent;
+    margin-top: 68px;
     padding: 28px 0;
     color: var(--muted);
     font-size: 14px;
@@ -837,16 +1031,60 @@ a:hover {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-    .featured-grid {
+@media (max-width: 1024px) {
+    .briefing-shell {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .briefing-lead h3 {
+        max-width: 100%;
+    }
+
+    .news-card {
         grid-template-columns: 1fr;
     }
 
+    .card-footer {
+        align-items: flex-start;
+        min-width: 0;
+        padding-top: 2px;
+    }
+
+    .source-inline {
+        display: none;
+    }
+
+    .source-block {
+        display: inline;
+    }
+
+    .read-link {
+        align-self: flex-start;
+    }
+}
+
+@media (max-width: 900px) {
     .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-lead {
+        font-size: 18px;
+    }
+
+    .briefing-lead h3 {
         font-size: 34px;
     }
 
-    .featured-main h3 {
+    .briefing-lead p {
+        font-size: 19px;
+        max-width: 100%;
+    }
+
+    .briefing-copy h3,
+    .news-card h3,
+    .news-card-compact h3 {
         font-size: 24px;
     }
 }
@@ -869,12 +1107,12 @@ a:hover {
         top: 100%;
         left: 0;
         right: 0;
-        background: rgba(255, 255, 255, 0.98);
+        background: rgba(248, 246, 241, 0.98);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid var(--border);
         flex-direction: column;
         align-items: flex-start;
-        padding: 12px 16px 20px;
+        padding: 12px 16px 18px;
         gap: 4px;
     }
 
@@ -892,28 +1130,72 @@ a:hover {
     }
 
     .hero {
-        padding: 36px 0 16px;
+        padding: 26px 0 10px;
     }
 
     .hero h1 {
-        font-size: 28px;
+        font-size: 32px;
+        max-width: 100%;
     }
 
     .hero-lead {
         font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    .search-box input {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .stats-bar {
+        gap: 8px 12px;
+    }
+
+    .section {
+        margin: 28px 0 22px;
+    }
+
+    .section-intro {
+        font-size: 15px;
+        margin-bottom: 14px;
+    }
+
+    .briefing-lead {
+        padding: 18px 18px 16px;
+    }
+
+    .briefing-lead h3 {
+        font-size: 27px;
+        margin-top: 10px;
+        margin-bottom: 12px;
+    }
+
+    .briefing-lead p {
+        font-size: 17px;
+    }
+
+    .briefing-copy h3,
+    .news-card h3,
+    .news-card-compact h3 {
+        font-size: 21px;
+    }
+
+    .briefing-item article {
+        grid-template-columns: 24px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .category-heading {
+        align-items: flex-end;
+    }
+
+    .category-title {
+        font-size: 20px;
     }
 
     .news-card {
-        padding: 18px;
-    }
-
-    .news-card h3 {
-        font-size: 18px;
-    }
-
-    .card-footer {
-        flex-direction: column;
-        align-items: flex-start;
+        padding: 14px 0;
         gap: 10px;
     }
 
@@ -921,6 +1203,29 @@ a:hover {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
+    }
+
+    .archive-date {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-filters {
+        margin-bottom: 12px;
+    }
+
+    .category-filter-btn {
+        padding: 8px 11px;
+        font-size: 12px;
+    }
+
+    .hero-date,
+    .source,
+    .results-meta,
+    .category-count,
+    .stat-item {
+        font-size: 13px;
     }
 }
 """
@@ -944,6 +1249,7 @@ def get_js():
     const homeSearchInput = document.querySelector("#home-search-input");
     const newsCards = document.querySelectorAll(".news-card");
     const categoryButtons = document.querySelectorAll(".category-filter-btn");
+    const categorySections = document.querySelectorAll(".category-section");
     let selectedCategory = "all";
 
     function filterHome() {
@@ -957,6 +1263,13 @@ def get_js():
             const matchesCategory = selectedCategory === "all" || category === selectedCategory;
 
             card.style.display = matchesSearch && matchesCategory ? "" : "none";
+        });
+
+        categorySections.forEach(function (section) {
+            const visibleCards = Array.from(section.querySelectorAll(".news-card")).filter(function (card) {
+                return card.style.display !== "none";
+            });
+            section.style.display = visibleCards.length ? "" : "none";
         });
     }
 
@@ -983,6 +1296,7 @@ def get_js():
     const searchInput = document.querySelector("#search-input");
     const resultsContainer = document.querySelector("#search-results");
     const searchDataEl = document.querySelector("#search-data");
+    const resultsMeta = document.querySelector("#search-results-meta");
 
     if (searchInput && resultsContainer && searchDataEl) {
         let newsData = [];
@@ -1018,23 +1332,30 @@ def get_js():
             const card = document.createElement("article");
             card.className = "news-card";
 
-            const category = item.category ? '<span class="category-badge">' + escapeHtml(item.category.toUpperCase()) + "</span>" : "";
+            const category = item.category ? '<span class="category-label">' + escapeHtml(item.category.toUpperCase()) + "</span>" : "";
             const meta = [item.source, formatPublished(item)].filter(Boolean).join(" · ");
             const title = escapeHtml(item.title || "");
             const summary = escapeHtml(item.summary || "");
             const link = escapeHtml(item.link || "#");
 
-            card.innerHTML = category +
+            card.innerHTML =
+                '<div class="news-card-body">' +
+                '<div class="eyebrow-row">' + category + '<span class="source source-inline">' + escapeHtml(meta) + '</span></div>' +
                 "<h3>" + title + "</h3>" +
                 "<p>" + summary + "</p>" +
-                '<div class="card-footer"><span class="source">' + escapeHtml(meta) + '</span>' +
-                '<a class="read-link" href="' + link + '" target="_blank" rel="noopener noreferrer">Haberi oku →</a></div>';
+                '</div>' +
+                '<div class="card-footer"><span class="source source-block">' + escapeHtml(meta) + '</span>' +
+                '<a class="read-link" href="' + link + '" target="_blank" rel="noopener noreferrer">Haberi oku</a></div>';
 
             return card;
         }
 
         function showResults(items) {
             resultsContainer.innerHTML = "";
+            if (resultsMeta) {
+                const count = items ? items.length : 0;
+                resultsMeta.textContent = count + " sonuç";
+            }
 
             if (!items || !items.length) {
                 resultsContainer.innerHTML = '<p class="empty-state">Sonuç bulunamadı.</p>';

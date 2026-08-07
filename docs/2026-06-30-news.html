@@ -1,578 +1,451 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 1000px;
-            margin: 40px auto;
-            line-height: 1.6;
-        }
-
-        .stats-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-bottom: 30px;
-        }
-
-        .stat-card {
-            border: 1px solid #ddd;
-            padding: 12px 20px;
-            border-radius: 8px;
-            min-width: 140px;
-            background: #f7f7f7;
-        }
-
-        .stat-card strong {
-            display: block;
-            color: #444;
-        }
-
-        .stat-card span {
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .featured-list {
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            padding: 16px 24px;
-            background: #fafafa;
-            margin-bottom: 35px;
-        }
-
-        .featured-list li {
-            margin-bottom: 8px;
-        }
-
-        .category-title {
-            margin-top: 40px;
-            border-bottom: 2px solid #222;
-            padding-bottom: 6px;
-        }
-
-        .news-card {
-            border: 1px solid #ddd;
-            padding: 16px;
-            margin-bottom: 16px;
-            border-radius: 8px;
-        }
-
-        .news-card h3 {
-            margin-top: 0;
-        }
-
-        .source {
-            font-size: 13px;
-            color: #777;
-            margin-bottom: 8px;
-        }
-
-        a {
-            color: #0066cc;
-        }
-        .search-box {
-    margin: 25px 0;
-    }
-
-        .search-box input {
-            width: 100%;
-            padding: 12px 14px;
-            font-size: 16px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-        }
-
-            .category-filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 20px 0 30px;
-            }
-
-            .category-filter-btn {
-                padding: 8px 14px;
-                border: 1px solid #ddd;
-                border-radius: 999px;
-                background: #f7f7f7;
-                cursor: pointer;
-            }
-
-            .category-filter-btn.active {
-                background: #222;
-                color: white;
-            }
-    </style>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
 </head>
 <body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
+        </div>
+    </header>
 
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="home-search-input"
-        placeholder="Güncel haberlerde ara..."
-    >
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">30 Haziran 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
 </div>
 
-<div class="category-filters">
-    <button class="category-filter-btn active" data-category="all">Tümü</button>
-    <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-    <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-    <button class="category-filter-btn" data-category="dünya">Dünya</button>
-    <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-    <button class="category-filter-btn" data-category="genel">Genel</button>
-</div>
-
-
-    <div class="stats-grid">
-
-        <div class="stat-card">
-            <strong>toplam_haber</strong>
-            <span>20</span>
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
         </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 6</span><span class="stat-item"><strong>genel</strong> 12</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>gümrük</strong> 1</span></div>
 
-        <div class="stat-card">
-            <strong>dünya</strong>
-            <span>6</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>genel</strong>
-            <span>12</span>
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
         </div>
+        <h3>AB&#x27;den Türkiye&#x27;ye kritik üçlü ziyaret</h3>
+        <p>Türkiye, Avrupa Parlamentosu&#x27;nun gerginlik yaratan raporunun ardından Brüksel&#x27;den üst düzey bir heyeti ağırlıyor. Kaja Kallas, Marta Kos ve Magnus Brunner temaslarda bulunmak için Ankara&#x27;da. Üçlünün ziyareti Türkiye&#x27;ye yönelik önemli bir adım olarak görülüyor.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 30 Haziran 2026, 16:08</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cr7xjlgnxl3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 30 Haziran 2026, 11:14</span>
+            </div>
+            <h3>Aşırı sağcı siyasetçiler neden El Salvador&#x27;daki mega hapishaneleri örnek alıyor?</h3>
+            <p>Başkan Nayib Bukele’nin kitlesel tutuklamalara ve devasa hapishanelere dayalı &quot;demir yumruk&quot; politikası, Latin Amerika ve Avrupa’daki sağcı liderler arasında giderek daha fazla benimseniyor. Fakat bu politikanın diğer ülkelerdeki uygulamaları benzer sonuçlar vermedi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c1kyl2yn7v9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 30 Haziran 2026, 05:57</span>
+            </div>
+            <h3>27 uçuş, 24 maç: FIFA Başkanı Infantino&#x27;nun seyahatlerinin çevreye maliyeti</h3>
+            <p>FIFA Başkanı Gianni Infantino, 2026 Dünya Kupası kapsamında Kuzey Amerika genelinde iki haftayı biraz aşkın bir süre içinde 24 maça katılmak için binlerce kilometrelik uçuşlar yaptı. Bu uçuşların çevreye maliyetini inceledik.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c33y8j8lyp8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 30 Haziran 2026, 17:11</span>
+            </div>
+            <h3>Paraguay&#x27;ın Dünya Kupası kahramanı: Oğlunun tedavisi için malzemelerini satmak zorunda kalan kaleci</h3>
+            <p>Orlando Gill Paraguay&#x27;ın Dünya Kupası kahramanı haline geldi ama daha 18 ay önce futbol dünyasında adı sanı bilinmeyen bir isimdi ve oğlunun erken doğumunun ardından ailesini geçindirebilmek için futbol malzemelerini satmak zorunda kalmıştı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c6210qnznjno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 30 Haziran 2026, 12:46</span>
+            </div>
+            <h3>İki belediye başkanı hakkında sokak hayvanlarının &#x27;etkin şekilde toplanmadığı&#x27; gerekçesiyle soruşturma izni</h3>
+            <p>İçişleri Bakanlığı, sokak köpeklerinin saldırıları ve sokak hayvanlarının &quot;etkin şekilde toplanmaması&quot; gerekçesiyle Muğla&#x27;da CHP&#x27;li Köyceğiz Belediyesi ve Erzurum&#x27;da AKP&#x27;li Narman Belediyesi başkanları hakkında soruşturma izni verdi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c2ky8j39k11o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stat-card">
-            <strong>teknoloji</strong>
-            <span>1</span>
-        </div>
+    </section>
 
-        <div class="stat-card">
-            <strong>gümrük</strong>
-            <span>1</span>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="ab&#x27;den türkiye&#x27;ye kritik üçlü ziyaret türkiye, avrupa parlamentosu&#x27;nun gerginlik yaratan raporunun ardından brüksel&#x27;den üst düzey bir heyeti ağırlıyor. kaja kallas, marta kos ve magnus brunner temaslarda bulunmak için ankara&#x27;da. üçlünün ziyareti türkiye&#x27;ye yönelik önemli bir adım olarak görülüyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 16:08</span>
         </div>
-
-        <div class="stat-card">
-            <strong>generated_at</strong>
-            <span>2026-06-30 17:18</span>
+        <h3>AB&#x27;den Türkiye&#x27;ye kritik üçlü ziyaret</h3>
+        <p>Türkiye, Avrupa Parlamentosu&#x27;nun gerginlik yaratan raporunun ardından Brüksel&#x27;den üst düzey bir heyeti ağırlıyor. Kaja Kallas, Marta Kos ve Magnus Brunner temaslarda bulunmak için Ankara&#x27;da. Üçlünün ziyareti Türkiye&#x27;ye yönelik önemli bir adım olarak görülüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 16:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr7xjlgnxl3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="aşırı sağcı siyasetçiler neden el salvador&#x27;daki mega hapishaneleri örnek alıyor? başkan nayib bukele’nin kitlesel tutuklamalara ve devasa hapishanelere dayalı &quot;demir yumruk&quot; politikası, latin amerika ve avrupa’daki sağcı liderler arasında giderek daha fazla benimseniyor. fakat bu politikanın diğer ülkelerdeki uygulamaları benzer sonuçlar vermedi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 11:14</span>
         </div>
+        <h3>Aşırı sağcı siyasetçiler neden El Salvador&#x27;daki mega hapishaneleri örnek alıyor?</h3>
+        <p>Başkan Nayib Bukele’nin kitlesel tutuklamalara ve devasa hapishanelere dayalı &quot;demir yumruk&quot; politikası, Latin Amerika ve Avrupa’daki sağcı liderler arasında giderek daha fazla benimseniyor. Fakat bu politikanın diğer ülkelerdeki uygulamaları benzer sonuçlar vermedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 11:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c1kyl2yn7v9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="27 uçuş, 24 maç: fifa başkanı infantino&#x27;nun seyahatlerinin çevreye maliyeti fifa başkanı gianni infantino, 2026 dünya kupası kapsamında kuzey amerika genelinde iki haftayı biraz aşkın bir süre içinde 24 maça katılmak için binlerce kilometrelik uçuşlar yaptı. bu uçuşların çevreye maliyetini inceledik. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 05:57</span>
+        </div>
+        <h3>27 uçuş, 24 maç: FIFA Başkanı Infantino&#x27;nun seyahatlerinin çevreye maliyeti</h3>
+        <p>FIFA Başkanı Gianni Infantino, 2026 Dünya Kupası kapsamında Kuzey Amerika genelinde iki haftayı biraz aşkın bir süre içinde 24 maça katılmak için binlerce kilometrelik uçuşlar yaptı. Bu uçuşların çevreye maliyetini inceledik.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 05:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c33y8j8lyp8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="paraguay&#x27;ın dünya kupası kahramanı: oğlunun tedavisi için malzemelerini satmak zorunda kalan kaleci orlando gill paraguay&#x27;ın dünya kupası kahramanı haline geldi ama daha 18 ay önce futbol dünyasında adı sanı bilinmeyen bir isimdi ve oğlunun erken doğumunun ardından ailesini geçindirebilmek için futbol malzemelerini satmak zorunda kalmıştı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 17:11</span>
+        </div>
+        <h3>Paraguay&#x27;ın Dünya Kupası kahramanı: Oğlunun tedavisi için malzemelerini satmak zorunda kalan kaleci</h3>
+        <p>Orlando Gill Paraguay&#x27;ın Dünya Kupası kahramanı haline geldi ama daha 18 ay önce futbol dünyasında adı sanı bilinmeyen bir isimdi ve oğlunun erken doğumunun ardından ailesini geçindirebilmek için futbol malzemelerini satmak zorunda kalmıştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 17:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6210qnznjno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan ab yüksek temsilcisi kallas&#x27;ı kabul etti cumhurbaşkanı recep tayyip erdoğan, cumhurbaşkanlığı külliyesi&#x27;nde avrupa birliği (ab) dış i̇lişkiler ve güvenlik politikası yüksek temsilcisi kaja kallas&#x27;ı kabul etti. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 30 Haziran 2026, 15:46</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan AB Yüksek Temsilcisi Kallas&#x27;ı kabul etti</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Cumhurbaşkanlığı Külliyesi&#x27;nde Avrupa Birliği (AB) Dış İlişkiler ve Güvenlik Politikası Yüksek Temsilcisi Kaja Kallas&#x27;ı kabul etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Haziran 2026, 15:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-ab-yuksek-temsilcisi-kallasi-kabul-etti-949800.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="pençekilit harekatı bölgesindeki araç kazasında yaralanan asker şehit oldu milli savunma bakanlığı (msb), pençe-kilit harekatı bölgesinde 22 mayıs&#x27;ta meydana gelen askeri araç kazasında yaralanan uzman çavuş abdurrahman hilal&#x27;in şehit olduğunu duyurdu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 30 Haziran 2026, 15:08</span>
+        </div>
+        <h3>PençeKilit Harekatı bölgesindeki araç kazasında yaralanan asker şehit oldu</h3>
+        <p>Milli Savunma Bakanlığı (MSB), Pençe-Kilit Harekatı bölgesinde 22 Mayıs&#x27;ta meydana gelen askeri araç kazasında yaralanan Uzman Çavuş Abdurrahman Hilal&#x27;in şehit olduğunu duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Haziran 2026, 15:08</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/pence-kilit-harekati-bolgesindeki-arac-kazasinda-yaralanan-asker-sehit-oldu-949796.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
     </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">12 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇ki belediye başkanı hakkında sokak hayvanlarının &#x27;etkin şekilde toplanmadığı&#x27; gerekçesiyle soruşturma izni i̇çişleri bakanlığı, sokak köpeklerinin saldırıları ve sokak hayvanlarının &quot;etkin şekilde toplanmaması&quot; gerekçesiyle muğla&#x27;da chp&#x27;li köyceğiz belediyesi ve erzurum&#x27;da akp&#x27;li narman belediyesi başkanları hakkında soruşturma izni verdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 12:46</span>
+        </div>
+        <h3>İki belediye başkanı hakkında sokak hayvanlarının &#x27;etkin şekilde toplanmadığı&#x27; gerekçesiyle soruşturma izni</h3>
+        <p>İçişleri Bakanlığı, sokak köpeklerinin saldırıları ve sokak hayvanlarının &quot;etkin şekilde toplanmaması&quot; gerekçesiyle Muğla&#x27;da CHP&#x27;li Köyceğiz Belediyesi ve Erzurum&#x27;da AKP&#x27;li Narman Belediyesi başkanları hakkında soruşturma izni verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 12:46</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c2ky8j39k11o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran: hürmüz boğazındaki mayın temizleme konusu i̇ranın sorumluluğunda i̇ran dışişleri bakanlığı sözcüsü i̇smail bekayi, hürmüz boğazı’ndaki mayınların temizlenmesine ilişkin, &quot;hürmüz boğazı’ndaki mayın temizleme konusu i̇ran’ın sorumluluğundadır. bu konuya başkalarının müdahale etmesine gerek yok.&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Haziran 2026, 15:46</span>
+        </div>
+        <h3>İran: Hürmüz Boğazındaki mayın temizleme konusu İranın sorumluluğunda</h3>
+        <p>İran Dışişleri Bakanlığı Sözcüsü İsmail Bekayi, Hürmüz Boğazı’ndaki mayınların temizlenmesine ilişkin, &quot;Hürmüz Boğazı’ndaki mayın temizleme konusu İran’ın sorumluluğundadır. Bu konuya başkalarının müdahale etmesine gerek yok.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Haziran 2026, 15:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-hurmuz-bogazindaki-mayin-temizleme-konusu-iranin-sorumlulugunda-949799.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="chp, dem parti ve mhp ankara&#x27;daki nato zirvesi öncesinde ne mesajlar verdi? mhp lideri bahçeli, partisinin meclis&#x27;teki grup toplantısında ankara&#x27;da 7-8 temmuz&#x27;da yapılacak nato zirvesine dair açıklamalarda bulundu. bahçeli &quot;bugün nato yeni bir dönemin başındadır. türkiye&#x27;nin olmadığı denklem çöker&quot; dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 15:00</span>
+        </div>
+        <h3>CHP, DEM Parti ve MHP Ankara&#x27;daki NATO Zirvesi öncesinde ne mesajlar verdi?</h3>
+        <p>MHP lideri Bahçeli, partisinin Meclis&#x27;teki grup toplantısında Ankara&#x27;da 7-8 Temmuz&#x27;da yapılacak NATO zirvesine dair açıklamalarda bulundu. Bahçeli &quot;Bugün NATO yeni bir dönemin başındadır. Türkiye&#x27;nin olmadığı denklem çöker&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 15:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cy5v7lkkq44o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ngiltere&#x27;den savunmaya 15 milyar sterlinlik ek bütçe i̇ngiltere başbakanı keir starmer savunmaya 15 milyar sterlinlik ek bir bütçe ayırdıklarını açıkladı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 15:41</span>
+        </div>
+        <h3>İngiltere&#x27;den savunmaya 15 milyar sterlinlik ek bütçe</h3>
+        <p>İngiltere Başbakanı Keir Starmer savunmaya 15 milyar sterlinlik ek bir bütçe ayırdıklarını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 15:41</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c621wrndk3ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hakkındaki tedbir kararı kaldırılan gökhan günaydın chp grup başkanvekili görevine döndü chp&#x27;de mutlak butlan kararının ardından tedbirli olarak disipline sevk edildiği gerekçesiyle grup başkanvekilliği görevinden alınan chp i̇stanbul milletvekili gökhan günaydın, hakkındaki tedbir kararının kaldırılmasına ilişkin yazının tbmm başkanlığı&#x27;na ulaşmasının ardından grup başkanvekili görevine döndü. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 14:00</span>
+        </div>
+        <h3>Hakkındaki tedbir kararı kaldırılan Gökhan Günaydın CHP Grup Başkanvekili görevine döndü</h3>
+        <p>CHP&#x27;de mutlak butlan kararının ardından tedbirli olarak disipline sevk edildiği gerekçesiyle grup başkanvekilliği görevinden alınan CHP İstanbul Milletvekili Gökhan Günaydın, hakkındaki tedbir kararının kaldırılmasına ilişkin yazının TBMM Başkanlığı&#x27;na ulaşmasının ardından grup başkanvekili görevine döndü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 14:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c30yn1z21gmo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="komedyen deniz göktaş hakkında soruşturma başlatıldı komedyen deniz göktaş hakkında i̇stanbul cumhuriyet başsavcılığı tarafından soruşturma başlatıldı. soruşturmaya &quot;bir kısım sosyal medya platformlarında yayınlamış olduğu içeriklerde suç unsuru ifadeler&quot; tespit edilmesi sebep gösterildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 16:48</span>
+        </div>
+        <h3>Komedyen Deniz Göktaş hakkında soruşturma başlatıldı</h3>
+        <p>Komedyen Deniz Göktaş hakkında İstanbul Cumhuriyet Başsavcılığı tarafından soruşturma başlatıldı. Soruşturmaya &quot;Bir kısım sosyal medya platformlarında yayınlamış olduğu içeriklerde suç unsuru ifadeler&quot; tespit edilmesi sebep gösterildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 16:48</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyr993zz65o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan şimşek, mayıs ayı iş gücü verilerini değerlendirdi hazine ve maliye bakanı mehmet şimşek, istihdamı korumak ve iş gücüne katılımı artırmak amacıyla aktif iş gücü politikalarını uygulamaya devam ettiklerini belirtti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Haziran 2026, 16:04</span>
+        </div>
+        <h3>Bakan Şimşek, mayıs ayı iş gücü verilerini değerlendirdi</h3>
+        <p>Hazine ve Maliye Bakanı Mehmet Şimşek, istihdamı korumak ve iş gücüne katılımı artırmak amacıyla aktif iş gücü politikalarını uygulamaya devam ettiklerini belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Haziran 2026, 16:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-simsek-mayis-ayi-is-gucu-verilerini-degerlendirdi-949802.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="demokratik kongo cumhuriyeti&#x27;nde ebola taşıyan yaklaşık 300 kişi kayıp demokratik kongo cumhuriyeti&#x27;nde ebola testi pozitif çıkan yaklaşık 300 kişinin nerede olduğunun bilinmemesi ve virüsün kamplara sıçraması, eylül ayına kadar binlerce can kaybının yaşanabileceği endişesini artırdı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Haziran 2026, 15:23</span>
+        </div>
+        <h3>Demokratik Kongo Cumhuriyeti&#x27;nde Ebola taşıyan yaklaşık 300 kişi kayıp</h3>
+        <p>Demokratik Kongo Cumhuriyeti&#x27;nde ebola testi pozitif çıkan yaklaşık 300 kişinin nerede olduğunun bilinmemesi ve virüsün kamplara sıçraması, eylül ayına kadar binlerce can kaybının yaşanabileceği endişesini artırdı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Haziran 2026, 15:23</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/demokratik-kongo-cumhuriyetinde-ebola-tasiyan-yaklasik-300-kisi-kayip-949798.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="şile belediyesi soruşturmasında 14 şüpheli tutuklandı i̇stanbul şile belediyesi&#x27;ne yönelik süren soruşturma kapsamında gözaltına alınan 17 kişiden 13&#x27;ü tutuklanırken, dört kişi adli kontrolle serbest bırakıldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Haziran 2026, 15:45</span>
+        </div>
+        <h3>Şile Belediyesi soruşturmasında 14 şüpheli tutuklandı</h3>
+        <p>İstanbul Şile Belediyesi&#x27;ne yönelik süren soruşturma kapsamında gözaltına alınan 17 kişiden 13&#x27;ü tutuklanırken, dört kişi adli kontrolle serbest bırakıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Haziran 2026, 15:45</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj0mn38n54vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çekmecede unutulan fosil antarktikanın ilk dinazoru çıktı i̇ngiliz antarktika araştırması arşivlerinde 40 yıl boyunca incelenmeden bekleyen bir kemik fosilinin, antarktika kıtasında keşfedilen ilk dinozor kalıntısı olduğu ortaya çıktı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Haziran 2026, 17:02</span>
+        </div>
+        <h3>Çekmecede unutulan fosil Antarktikanın ilk dinazoru çıktı</h3>
+        <p>İngiliz Antarktika Araştırması arşivlerinde 40 yıl boyunca incelenmeden bekleyen bir kemik fosilinin, Antarktika kıtasında keşfedilen ilk dinozor kalıntısı olduğu ortaya çıktı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Haziran 2026, 17:02</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/cekmecede-unutulan-fosil-antarktikanin-ilk-dinazoru-cikti-949805.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="başkentte atlı polisler devriyede başkentte emniyet genel müdürlüğü bünyesinde görevli atlı polisler, kızılay ve kuğulu park&#x27;ta devriye görevi yapıyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Haziran 2026, 16:26</span>
+        </div>
+        <h3>Başkentte atlı polisler devriyede</h3>
+        <p>Başkentte Emniyet Genel Müdürlüğü bünyesinde görevli atlı polisler, Kızılay ve Kuğulu Park&#x27;ta devriye görevi yapıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Haziran 2026, 16:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/baskentte-atli-polisler-devriyede-949804.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇şgalci i̇srail, haremi i̇brahim camisi&#x27;nde 10 gündür ezan okunmasını engelliyor soykırımcı i̇srail&#x27;in işgal altındaki batı şeria&#x27;nın güneyinde yer alan el halil kentindeki harem-i i̇brahim camisi&#x27;nde 10 gündür ezan okunmasını engellediği belirtildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Haziran 2026, 16:12</span>
+        </div>
+        <h3>İşgalci İsrail, Haremi İbrahim Camisi&#x27;nde 10 gündür ezan okunmasını engelliyor</h3>
+        <p>Soykırımcı İsrail&#x27;in işgal altındaki Batı Şeria&#x27;nın güneyinde yer alan El Halil kentindeki Harem-i İbrahim Camisi&#x27;nde 10 gündür ezan okunmasını engellediği belirtildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Haziran 2026, 16:12</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/isgalci-israil-harem-i-ibrahim-camisinde-10-gundur-ezan-okunmasini-engelliyor-949803.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2>🔥 Öne Çıkan Haberler</h2>
-    <ul class="featured-list">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye ile katar arasında stratejik ortaklık anlaşması imzalandı ulaştırma ve altyapı bakanı abdulkadir uraloğlu, türksat ile katar merkezli uydu şirketi es&#x27;hailsat arasında es&#x27;hail-3/türksat-biruni uydusuna yönelik stratejik ortaklık anlaşması imzalandığını duyurdu. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 30 Haziran 2026, 15:20</span>
+        </div>
+        <h3>Türkiye ile Katar arasında stratejik ortaklık anlaşması imzalandı</h3>
+        <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Türksat ile Katar merkezli uydu şirketi Es&#x27;hailSat arasında Es&#x27;hail-3/Türksat-Biruni uydusuna yönelik stratejik ortaklık anlaşması imzalandığını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Haziran 2026, 15:20</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/turkiye-ile-katar-arasinda-stratejik-ortaklik-anlasmasi-imzalandi-949797.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/cr7xjlgnxl3o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>AB'den Türkiye'ye kritik üçlü ziyaret</strong>
-            </a>
-        </li>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="sahil güvenlik gemi ve botları 24 limanda ziyarete açılıyor sahil güvenlik komutanlığı, yarın 24 limanda bazı gemi ve botların ziyarete açılacağını duyurdu. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 30 Haziran 2026, 15:55</span>
+        </div>
+        <h3>Sahil güvenlik gemi ve botları 24 limanda ziyarete açılıyor</h3>
+        <p>Sahil Güvenlik Komutanlığı, yarın 24 limanda bazı gemi ve botların ziyarete açılacağını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Haziran 2026, 15:55</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/sahil-guvenlik-gemi-ve-botlari-24-limanda-ziyarete-aciliyor-949801.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c1kyl2yn7v9o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Aşırı sağcı siyasetçiler neden El Salvador'daki mega hapishaneleri örnek alıyor?</strong>
-            </a>
-        </li>
+    </div>
+</section>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c33y8j8lyp8o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>27 uçuş, 24 maç: FIFA Başkanı Infantino'nun seyahatlerinin çevreye maliyeti</strong>
-            </a>
-        </li>
+</main>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c6210qnznjno?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>Paraguay'ın Dünya Kupası kahramanı: Oğlunun tedavisi için malzemelerini satmak zorunda kalan kaleci</strong>
-            </a>
-        </li>
 
-        <li>
-            <a href="https://www.bbc.com/turkce/articles/c2ky8j39k11o?at_medium=RSS&at_campaign=rss" target="_blank">
-                <strong>İki belediye başkanı hakkında sokak hayvanlarının 'etkin şekilde toplanmadığı' gerekçesiyle soruşturma izni</strong>
-            </a>
-        </li>
-
-    </ul>
-
-    <h2 class="category-title">DÜNYA</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            ab'den türkiye'ye kritik üçlü ziyaret
-            türkiye, avrupa parlamentosu'nun gerginlik yaratan raporunun ardından brüksel'den üst düzey bir heyeti ağırlıyor. kaja kallas, marta kos ve magnus brunner temaslarda bulunmak için ankara'da. üçlünün ziyareti türkiye'ye yönelik önemli bir adım olarak görülüyor.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>AB'den Türkiye'ye kritik üçlü ziyaret</h3>
-                    <p>Türkiye, Avrupa Parlamentosu'nun gerginlik yaratan raporunun ardından Brüksel'den üst düzey bir heyeti ağırlıyor. Kaja Kallas, Marta Kos ve Magnus Brunner temaslarda bulunmak için Ankara'da. Üçlünün ziyareti Türkiye'ye yönelik önemli bir adım olarak görülüyor.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cr7xjlgnxl3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            aşırı sağcı siyasetçiler neden el salvador'daki mega hapishaneleri örnek alıyor?
-            başkan nayib bukele’nin kitlesel tutuklamalara ve devasa hapishanelere dayalı "demir yumruk" politikası, latin amerika ve avrupa’daki sağcı liderler arasında giderek daha fazla benimseniyor. fakat bu politikanın diğer ülkelerdeki uygulamaları benzer sonuçlar vermedi.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Aşırı sağcı siyasetçiler neden El Salvador'daki mega hapishaneleri örnek alıyor?</h3>
-                    <p>Başkan Nayib Bukele’nin kitlesel tutuklamalara ve devasa hapishanelere dayalı "demir yumruk" politikası, Latin Amerika ve Avrupa’daki sağcı liderler arasında giderek daha fazla benimseniyor. Fakat bu politikanın diğer ülkelerdeki uygulamaları benzer sonuçlar vermedi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c1kyl2yn7v9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            27 uçuş, 24 maç: fifa başkanı infantino'nun seyahatlerinin çevreye maliyeti
-            fifa başkanı gianni infantino, 2026 dünya kupası kapsamında kuzey amerika genelinde iki haftayı biraz aşkın bir süre içinde 24 maça katılmak için binlerce kilometrelik uçuşlar yaptı. bu uçuşların çevreye maliyetini inceledik.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>27 uçuş, 24 maç: FIFA Başkanı Infantino'nun seyahatlerinin çevreye maliyeti</h3>
-                    <p>FIFA Başkanı Gianni Infantino, 2026 Dünya Kupası kapsamında Kuzey Amerika genelinde iki haftayı biraz aşkın bir süre içinde 24 maça katılmak için binlerce kilometrelik uçuşlar yaptı. Bu uçuşların çevreye maliyetini inceledik.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c33y8j8lyp8o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            paraguay'ın dünya kupası kahramanı: oğlunun tedavisi için malzemelerini satmak zorunda kalan kaleci
-            orlando gill paraguay'ın dünya kupası kahramanı haline geldi ama daha 18 ay önce futbol dünyasında adı sanı bilinmeyen bir isimdi ve oğlunun erken doğumunun ardından ailesini geçindirebilmek için futbol malzemelerini satmak zorunda kalmıştı.
-            dünya
-            bbc türkçe
-            "
-                    data-category="dünya"
-                >
-                    <h3>Paraguay'ın Dünya Kupası kahramanı: Oğlunun tedavisi için malzemelerini satmak zorunda kalan kaleci</h3>
-                    <p>Orlando Gill Paraguay'ın Dünya Kupası kahramanı haline geldi ama daha 18 ay önce futbol dünyasında adı sanı bilinmeyen bir isimdi ve oğlunun erken doğumunun ardından ailesini geçindirebilmek için futbol malzemelerini satmak zorunda kalmıştı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c6210qnznjno?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            cumhurbaşkanı erdoğan ab yüksek temsilcisi kallas'ı kabul etti
-            cumhurbaşkanı recep tayyip erdoğan, cumhurbaşkanlığı külliyesi'nde avrupa birliği (ab) dış i̇lişkiler ve güvenlik politikası yüksek temsilcisi kaja kallas'ı kabul etti.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>Cumhurbaşkanı Erdoğan AB Yüksek Temsilcisi Kallas'ı kabul etti</h3>
-                    <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Cumhurbaşkanlığı Külliyesi'nde Avrupa Birliği (AB) Dış İlişkiler ve Güvenlik Politikası Yüksek Temsilcisi Kaja Kallas'ı kabul etti.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-ab-yuksek-temsilcisi-kallasi-kabul-etti-949800.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            pençekilit harekatı bölgesindeki araç kazasında yaralanan asker şehit oldu
-            milli savunma bakanlığı (msb), pençe-kilit harekatı bölgesinde 22 mayıs'ta meydana gelen askeri araç kazasında yaralanan uzman çavuş abdurrahman hilal'in şehit olduğunu duyurdu.
-            dünya
-            trt haber
-            "
-                    data-category="dünya"
-                >
-                    <h3>PençeKilit Harekatı bölgesindeki araç kazasında yaralanan asker şehit oldu</h3>
-                    <p>Milli Savunma Bakanlığı (MSB), Pençe-Kilit Harekatı bölgesinde 22 Mayıs'ta meydana gelen askeri araç kazasında yaralanan Uzman Çavuş Abdurrahman Hilal'in şehit olduğunu duyurdu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/pence-kilit-harekati-bolgesindeki-arac-kazasinda-yaralanan-asker-sehit-oldu-949796.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GENEL</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ki belediye başkanı hakkında sokak hayvanlarının 'etkin şekilde toplanmadığı' gerekçesiyle soruşturma izni
-            i̇çişleri bakanlığı, sokak köpeklerinin saldırıları ve sokak hayvanlarının "etkin şekilde toplanmaması" gerekçesiyle muğla'da chp'li köyceğiz belediyesi ve erzurum'da akp'li narman belediyesi başkanları hakkında soruşturma izni verdi.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>İki belediye başkanı hakkında sokak hayvanlarının 'etkin şekilde toplanmadığı' gerekçesiyle soruşturma izni</h3>
-                    <p>İçişleri Bakanlığı, sokak köpeklerinin saldırıları ve sokak hayvanlarının "etkin şekilde toplanmaması" gerekçesiyle Muğla'da CHP'li Köyceğiz Belediyesi ve Erzurum'da AKP'li Narman Belediyesi başkanları hakkında soruşturma izni verdi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c2ky8j39k11o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ran: hürmüz boğazındaki mayın temizleme konusu i̇ranın sorumluluğunda
-            i̇ran dışişleri bakanlığı sözcüsü i̇smail bekayi, hürmüz boğazı’ndaki mayınların temizlenmesine ilişkin, "hürmüz boğazı’ndaki mayın temizleme konusu i̇ran’ın sorumluluğundadır. bu konuya başkalarının müdahale etmesine gerek yok." dedi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>İran: Hürmüz Boğazındaki mayın temizleme konusu İranın sorumluluğunda</h3>
-                    <p>İran Dışişleri Bakanlığı Sözcüsü İsmail Bekayi, Hürmüz Boğazı’ndaki mayınların temizlenmesine ilişkin, "Hürmüz Boğazı’ndaki mayın temizleme konusu İran’ın sorumluluğundadır. Bu konuya başkalarının müdahale etmesine gerek yok." dedi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/iran-hurmuz-bogazindaki-mayin-temizleme-konusu-iranin-sorumlulugunda-949799.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            chp, dem parti ve mhp ankara'daki nato zirvesi öncesinde ne mesajlar verdi?
-            mhp lideri bahçeli, partisinin meclis'teki grup toplantısında ankara'da 7-8 temmuz'da yapılacak nato zirvesine dair açıklamalarda bulundu. bahçeli "bugün nato yeni bir dönemin başındadır. türkiye'nin olmadığı denklem çöker" dedi.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>CHP, DEM Parti ve MHP Ankara'daki NATO Zirvesi öncesinde ne mesajlar verdi?</h3>
-                    <p>MHP lideri Bahçeli, partisinin Meclis'teki grup toplantısında Ankara'da 7-8 Temmuz'da yapılacak NATO zirvesine dair açıklamalarda bulundu. Bahçeli "Bugün NATO yeni bir dönemin başındadır. Türkiye'nin olmadığı denklem çöker" dedi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cy5v7lkkq44o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇ngiltere'den savunmaya 15 milyar sterlinlik ek bütçe
-            i̇ngiltere başbakanı keir starmer savunmaya 15 milyar sterlinlik ek bir bütçe ayırdıklarını açıkladı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>İngiltere'den savunmaya 15 milyar sterlinlik ek bütçe</h3>
-                    <p>İngiltere Başbakanı Keir Starmer savunmaya 15 milyar sterlinlik ek bir bütçe ayırdıklarını açıkladı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c621wrndk3ko?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            hakkındaki tedbir kararı kaldırılan gökhan günaydın chp grup başkanvekili görevine döndü
-            chp'de mutlak butlan kararının ardından tedbirli olarak disipline sevk edildiği gerekçesiyle grup başkanvekilliği görevinden alınan chp i̇stanbul milletvekili gökhan günaydın, hakkındaki tedbir kararının kaldırılmasına ilişkin yazının tbmm başkanlığı'na ulaşmasının ardından grup başkanvekili görevine döndü.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Hakkındaki tedbir kararı kaldırılan Gökhan Günaydın CHP Grup Başkanvekili görevine döndü</h3>
-                    <p>CHP'de mutlak butlan kararının ardından tedbirli olarak disipline sevk edildiği gerekçesiyle grup başkanvekilliği görevinden alınan CHP İstanbul Milletvekili Gökhan Günaydın, hakkındaki tedbir kararının kaldırılmasına ilişkin yazının TBMM Başkanlığı'na ulaşmasının ardından grup başkanvekili görevine döndü.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/c30yn1z21gmo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            komedyen deniz göktaş hakkında soruşturma başlatıldı
-            komedyen deniz göktaş hakkında i̇stanbul cumhuriyet başsavcılığı tarafından soruşturma başlatıldı. soruşturmaya "bir kısım sosyal medya platformlarında yayınlamış olduğu içeriklerde suç unsuru ifadeler" tespit edilmesi sebep gösterildi.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Komedyen Deniz Göktaş hakkında soruşturma başlatıldı</h3>
-                    <p>Komedyen Deniz Göktaş hakkında İstanbul Cumhuriyet Başsavcılığı tarafından soruşturma başlatıldı. Soruşturmaya "Bir kısım sosyal medya platformlarında yayınlamış olduğu içeriklerde suç unsuru ifadeler" tespit edilmesi sebep gösterildi.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/clyr993zz65o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            bakan şimşek, mayıs ayı iş gücü verilerini değerlendirdi
-            hazine ve maliye bakanı mehmet şimşek, istihdamı korumak ve iş gücüne katılımı artırmak amacıyla aktif iş gücü politikalarını uygulamaya devam ettiklerini belirtti.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Bakan Şimşek, mayıs ayı iş gücü verilerini değerlendirdi</h3>
-                    <p>Hazine ve Maliye Bakanı Mehmet Şimşek, istihdamı korumak ve iş gücüne katılımı artırmak amacıyla aktif iş gücü politikalarını uygulamaya devam ettiklerini belirtti.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/gundem/bakan-simsek-mayis-ayi-is-gucu-verilerini-degerlendirdi-949802.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            demokratik kongo cumhuriyeti'nde ebola taşıyan yaklaşık 300 kişi kayıp
-            demokratik kongo cumhuriyeti'nde ebola testi pozitif çıkan yaklaşık 300 kişinin nerede olduğunun bilinmemesi ve virüsün kamplara sıçraması, eylül ayına kadar binlerce can kaybının yaşanabileceği endişesini artırdı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Demokratik Kongo Cumhuriyeti'nde Ebola taşıyan yaklaşık 300 kişi kayıp</h3>
-                    <p>Demokratik Kongo Cumhuriyeti'nde ebola testi pozitif çıkan yaklaşık 300 kişinin nerede olduğunun bilinmemesi ve virüsün kamplara sıçraması, eylül ayına kadar binlerce can kaybının yaşanabileceği endişesini artırdı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/demokratik-kongo-cumhuriyetinde-ebola-tasiyan-yaklasik-300-kisi-kayip-949798.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            şile belediyesi soruşturmasında 14 şüpheli tutuklandı
-            i̇stanbul şile belediyesi'ne yönelik süren soruşturma kapsamında gözaltına alınan 17 kişiden 13'ü tutuklanırken, dört kişi adli kontrolle serbest bırakıldı.
-            genel
-            bbc türkçe
-            "
-                    data-category="genel"
-                >
-                    <h3>Şile Belediyesi soruşturmasında 14 şüpheli tutuklandı</h3>
-                    <p>İstanbul Şile Belediyesi'ne yönelik süren soruşturma kapsamında gözaltına alınan 17 kişiden 13'ü tutuklanırken, dört kişi adli kontrolle serbest bırakıldı.</p>
-                    <div class="source">Kaynak: BBC Türkçe</div>
-                    <a href="https://www.bbc.com/turkce/articles/cj0mn38n54vo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            çekmecede unutulan fosil antarktikanın ilk dinazoru çıktı
-            i̇ngiliz antarktika araştırması arşivlerinde 40 yıl boyunca incelenmeden bekleyen bir kemik fosilinin, antarktika kıtasında keşfedilen ilk dinozor kalıntısı olduğu ortaya çıktı.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Çekmecede unutulan fosil Antarktikanın ilk dinazoru çıktı</h3>
-                    <p>İngiliz Antarktika Araştırması arşivlerinde 40 yıl boyunca incelenmeden bekleyen bir kemik fosilinin, Antarktika kıtasında keşfedilen ilk dinozor kalıntısı olduğu ortaya çıktı.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/cekmecede-unutulan-fosil-antarktikanin-ilk-dinazoru-cikti-949805.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            başkentte atlı polisler devriyede
-            başkentte emniyet genel müdürlüğü bünyesinde görevli atlı polisler, kızılay ve kuğulu park'ta devriye görevi yapıyor.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>Başkentte atlı polisler devriyede</h3>
-                    <p>Başkentte Emniyet Genel Müdürlüğü bünyesinde görevli atlı polisler, Kızılay ve Kuğulu Park'ta devriye görevi yapıyor.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/baskentte-atli-polisler-devriyede-949804.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-                <div
-                    class="news-card"
-                    data-search="
-            i̇şgalci i̇srail, haremi i̇brahim camisi'nde 10 gündür ezan okunmasını engelliyor
-            soykırımcı i̇srail'in işgal altındaki batı şeria'nın güneyinde yer alan el halil kentindeki harem-i i̇brahim camisi'nde 10 gündür ezan okunmasını engellediği belirtildi.
-            genel
-            trt haber
-            "
-                    data-category="genel"
-                >
-                    <h3>İşgalci İsrail, Haremi İbrahim Camisi'nde 10 gündür ezan okunmasını engelliyor</h3>
-                    <p>Soykırımcı İsrail'in işgal altındaki Batı Şeria'nın güneyinde yer alan El Halil kentindeki Harem-i İbrahim Camisi'nde 10 gündür ezan okunmasını engellediği belirtildi.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/dunya/isgalci-israil-harem-i-ibrahim-camisinde-10-gundur-ezan-okunmasini-engelliyor-949803.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">TEKNOLOJI</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            türkiye ile katar arasında stratejik ortaklık anlaşması imzalandı
-            ulaştırma ve altyapı bakanı abdulkadir uraloğlu, türksat ile katar merkezli uydu şirketi es'hailsat arasında es'hail-3/türksat-biruni uydusuna yönelik stratejik ortaklık anlaşması imzalandığını duyurdu.
-            teknoloji
-            trt haber
-            "
-                    data-category="teknoloji"
-                >
-                    <h3>Türkiye ile Katar arasında stratejik ortaklık anlaşması imzalandı</h3>
-                    <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Türksat ile Katar merkezli uydu şirketi Es'hailSat arasında Es'hail-3/Türksat-Biruni uydusuna yönelik stratejik ortaklık anlaşması imzalandığını duyurdu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/turkiye-ile-katar-arasinda-stratejik-ortaklik-anlasmasi-imzalandi-949797.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-    <h2 class="category-title">GÜMRÜK</h2>
-
-                <div
-                    class="news-card"
-                    data-search="
-            sahil güvenlik gemi ve botları 24 limanda ziyarete açılıyor
-            sahil güvenlik komutanlığı, yarın 24 limanda bazı gemi ve botların ziyarete açılacağını duyurdu.
-            gümrük
-            trt haber
-            "
-                    data-category="gümrük"
-                >
-                    <h3>Sahil güvenlik gemi ve botları 24 limanda ziyarete açılıyor</h3>
-                    <p>Sahil Güvenlik Komutanlığı, yarın 24 limanda bazı gemi ve botların ziyarete açılacağını duyurdu.</p>
-                    <div class="source">Kaynak: TRT Haber</div>
-                    <a href="https://www.trthaber.com/haber/turkiye/sahil-guvenlik-gemi-ve-botlari-24-limanda-ziyarete-aciliyor-949801.html" target="_blank">Haberi Oku</a>
-                </div>
-            
-        <script>
-            const homeSearchInput = document.querySelector("#home-search-input");
-            const newsCards = document.querySelectorAll(".news-card");
-            const categoryButtons = document.querySelectorAll(".category-filter-btn");
-
-            let selectedCategory = "all";
-
-            function filterNews() {
-                const query = homeSearchInput.value.toLowerCase();
-
-                newsCards.forEach(function (card) {
-                    const text = card.dataset.search || "";
-                    const category = card.dataset.category || "genel";
-
-                    const matchesSearch = text.includes(query);
-                    const matchesCategory =
-                        selectedCategory === "all" || category === selectedCategory;
-
-                    if (matchesSearch && matchesCategory) {
-                        card.style.display = "block";
-                    } else {
-                        card.style.display = "none";
-                    }
-                });
-            }
-
-            homeSearchInput.addEventListener("input", filterNews);
-
-            categoryButtons.forEach(function (button) {
-                button.addEventListener("click", function () {
-                    categoryButtons.forEach(function (btn) {
-                        btn.classList.remove("active");
-                    });
-
-                    button.classList.add("active");
-                    selectedCategory = button.dataset.category;
-
-                    filterNews();
-                });
-            });
-        </script>
-
-    </body>
-    </html>
-    
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

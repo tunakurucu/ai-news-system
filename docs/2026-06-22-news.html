@@ -2,191 +2,441 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
     <link rel="stylesheet" href="assets/css/news.css">
     <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <header class="site-nav">
-        <div class="nav-inner">
-            <div class="brand">AI News</div>
-            <a href="index.html">Current News</a>
-            <a href="archive.html">Archive</a>
-            <a href="search.html">Search</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
         </div>
     </header>
 
     <main class="site-wrapper">
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-text">
             <h1>Günün Haberleri</h1>
-            <div class="search-box">
-                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            <p class="hero-date">22 Haziran 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 11</span><span class="stat-item"><strong>genel</strong> 8</span><span class="stat-item"><strong>spor</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>İngiltere&#x27;nin başbakan koltuğunda istikrar krizi: Son 10 yılda 6 başbakan görev yaptı</h3>
+        <p>İngiltere&#x27;de son 10 yılda yaşanan siyasi hareketlilik ve lider değişimleri, ülke tarihinin en hareketli dönemlerinden birini beraberinde getirdi. Haziran 2016&#x27;dan bu yana geçen süreçte, Muhafazakar Parti ile İşçi Partisi hükümetleri altında toplam 5 kez başbakan değişti ve bu süreçte 6 farklı isim başbakanlık koltuğuna oturdu.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 22 Haziran 2026, 12:04</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/ingilterenin-basbakan-koltugunda-istikrar-krizi-son-10-yilda-6-basbakan-gorev-yapti-948954.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 22 Haziran 2026, 07:06</span>
             </div>
-
-            <div class="category-filters">
-                <button class="category-filter-btn active" data-category="all">Tümü</button>
-                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                <button class="category-filter-btn" data-category="genel">Genel</button>
+            <h3>ABD-İran görüşmelerinin ilk turu tamamlandı</h3>
+            <p>ABD ile İran arasında savaşı sona erdirecek nihai bir anlaşmaya ulaşmayı amaçlayan ilk tur müzakereler tamamlandı. Arabulucu ülkeler Katar ve Pakistan, görüşmelerde &quot;cesaret verici ilerleme&quot; kaydedildiğini açıkladı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ce8k0znpgd3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 22 Haziran 2026, 05:09</span>
             </div>
-        </section>
+            <h3>Türkiye, Mısır, Suudi Arabistan ve Pakistan dışişleri bakanları Kahire&#x27;de biraraya geldi</h3>
+            <p>Türkiye, Mısır, Suudi Arabistan ve Pakistan dışişleri bakanları Kahire&#x27;de biraraya geldi. Toplantıda bölgesel gelişmelerin değerlendirildiği ve ABD ile İran arasında varılan mutabakatın uygulanma sürecinin ele alındığı bildirildi</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cvgq92veyzwo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 21 Haziran 2026, 13:57</span>
+            </div>
+            <h3>İtalya Başbakanı Meloni&#x27;den Trump&#x27;a: &#x27;Dostun olmak popülariteme iyi gelmedi&#x27;</h3>
+            <p>ABD Başkanı Donald Trump&#x27;ın, İtalya Başbakanı Giorgia Meloni hakkında &quot;benimle fotoğraf çektirmek için yalvardı&quot; demesinin ardından başlayan karşılıklı atışma yeni mesajlarla devam ediyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/clyez3knx02o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 22 Haziran 2026, 11:43</span>
+            </div>
+            <h3>Lübnan Cumhurbaşkanı Avn, ABD ve Katarlı yetkililerle ateşkesin kalıcı hale getirilmesini görüştü</h3>
+            <p>Lübnan Cumhurbaşkanı Joseph Avn, ABD ve Katarlı yetkililerle Lübnan&#x27;da ateşkesin kalıcı hale getirilmesi, İsrail&#x27;in saldırılarının durdurulması ve bu amaçla bir mekanizma oluşturulması konularını ele aldı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/lubnan-cumhurbaskani-avn-abd-ve-katarli-yetkililerle-ateskesin-kalici-hale-getirilmesini-gorustu-948950.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stats-grid">
-                        <a href="archive.html">Archive</a>
-                        <a href="search.html">Search</a>
-                    </div>
-                </header>
+    </section>
 
-                <main class="site-wrapper">
-                    <section class="hero">
-                        <h1>Günün Haberleri</h1>
-                        <div class="search-box">
-                            <input type="text" id="home-search-input" placeholder="Search today's news...">
-                        </div>
-
-                        <div class="category-filters">
-                            <button class="category-filter-btn active" data-category="all">Tümü</button>
-                            <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                            <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                            <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                            <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                            <button class="category-filter-btn" data-category="genel">Genel</button>
-                        </div>
-                    </section>
-
-                    <div class="stats-grid">
-    <div class="news-card">
-        <h3>Türkiye, Mısır, Suudi Arabistan ve Pakistan dışişleri bakanları Kahire'de biraraya geldi</h3>
-        <p>Türkiye, Mısır, Suudi Arabistan ve Pakistan dışişleri bakanları Kahire'de biraraya geldi. Toplantıda bölgesel gelişmelerin değerlendirildiği ve ABD ile İran arasında varılan mutabakatın uygulanma sürecinin ele alındığı bildirildi</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cvgq92veyzwo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">11 haber</p>
     </div>
-
-    <div class="news-card">
-        <h3>İtalya Başbakanı Meloni'den Trump'a: 'Dostun olmak popülariteme iyi gelmedi'</h3>
-        <p>ABD Başkanı Donald Trump'ın, İtalya Başbakanı Giorgia Meloni hakkında "benimle fotoğraf çektirmek için yalvardı" demesinin ardından başlayan karşılıklı atışma yeni mesajlarla devam ediyor.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/clyez3knx02o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇ngiltere&#x27;nin başbakan koltuğunda istikrar krizi: son 10 yılda 6 başbakan görev yaptı i̇ngiltere&#x27;de son 10 yılda yaşanan siyasi hareketlilik ve lider değişimleri, ülke tarihinin en hareketli dönemlerinden birini beraberinde getirdi. haziran 2016&#x27;dan bu yana geçen süreçte, muhafazakar parti ile i̇şçi partisi hükümetleri altında toplam 5 kez başbakan değişti ve bu süreçte 6 farklı isim başbakanlık koltuğuna oturdu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Haziran 2026, 12:04</span>
+        </div>
+        <h3>İngiltere&#x27;nin başbakan koltuğunda istikrar krizi: Son 10 yılda 6 başbakan görev yaptı</h3>
+        <p>İngiltere&#x27;de son 10 yılda yaşanan siyasi hareketlilik ve lider değişimleri, ülke tarihinin en hareketli dönemlerinden birini beraberinde getirdi. Haziran 2016&#x27;dan bu yana geçen süreçte, Muhafazakar Parti ile İşçi Partisi hükümetleri altında toplam 5 kez başbakan değişti ve bu süreçte 6 farklı isim başbakanlık koltuğuna oturdu.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Haziran 2026, 12:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ingilterenin-basbakan-koltugunda-istikrar-krizi-son-10-yilda-6-basbakan-gorev-yapti-948954.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd-i̇ran görüşmelerinin ilk turu tamamlandı abd ile i̇ran arasında savaşı sona erdirecek nihai bir anlaşmaya ulaşmayı amaçlayan ilk tur müzakereler tamamlandı. arabulucu ülkeler katar ve pakistan, görüşmelerde &quot;cesaret verici ilerleme&quot; kaydedildiğini açıkladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 22 Haziran 2026, 07:06</span>
+        </div>
+        <h3>ABD-İran görüşmelerinin ilk turu tamamlandı</h3>
+        <p>ABD ile İran arasında savaşı sona erdirecek nihai bir anlaşmaya ulaşmayı amaçlayan ilk tur müzakereler tamamlandı. Arabulucu ülkeler Katar ve Pakistan, görüşmelerde &quot;cesaret verici ilerleme&quot; kaydedildiğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Haziran 2026, 07:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ce8k0znpgd3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye, mısır, suudi arabistan ve pakistan dışişleri bakanları kahire&#x27;de biraraya geldi türkiye, mısır, suudi arabistan ve pakistan dışişleri bakanları kahire&#x27;de biraraya geldi. toplantıda bölgesel gelişmelerin değerlendirildiği ve abd ile i̇ran arasında varılan mutabakatın uygulanma sürecinin ele alındığı bildirildi dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 22 Haziran 2026, 05:09</span>
+        </div>
+        <h3>Türkiye, Mısır, Suudi Arabistan ve Pakistan dışişleri bakanları Kahire&#x27;de biraraya geldi</h3>
+        <p>Türkiye, Mısır, Suudi Arabistan ve Pakistan dışişleri bakanları Kahire&#x27;de biraraya geldi. Toplantıda bölgesel gelişmelerin değerlendirildiği ve ABD ile İran arasında varılan mutabakatın uygulanma sürecinin ele alındığı bildirildi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Haziran 2026, 05:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvgq92veyzwo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇talya başbakanı meloni&#x27;den trump&#x27;a: &#x27;dostun olmak popülariteme iyi gelmedi&#x27; abd başkanı donald trump&#x27;ın, i̇talya başbakanı giorgia meloni hakkında &quot;benimle fotoğraf çektirmek için yalvardı&quot; demesinin ardından başlayan karşılıklı atışma yeni mesajlarla devam ediyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 21 Haziran 2026, 13:57</span>
+        </div>
+        <h3>İtalya Başbakanı Meloni&#x27;den Trump&#x27;a: &#x27;Dostun olmak popülariteme iyi gelmedi&#x27;</h3>
+        <p>ABD Başkanı Donald Trump&#x27;ın, İtalya Başbakanı Giorgia Meloni hakkında &quot;benimle fotoğraf çektirmek için yalvardı&quot; demesinin ardından başlayan karşılıklı atışma yeni mesajlarla devam ediyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Haziran 2026, 13:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyez3knx02o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="lübnan cumhurbaşkanı avn, abd ve katarlı yetkililerle ateşkesin kalıcı hale getirilmesini görüştü lübnan cumhurbaşkanı joseph avn, abd ve katarlı yetkililerle lübnan&#x27;da ateşkesin kalıcı hale getirilmesi, i̇srail&#x27;in saldırılarının durdurulması ve bu amaçla bir mekanizma oluşturulması konularını ele aldı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Haziran 2026, 11:43</span>
+        </div>
         <h3>Lübnan Cumhurbaşkanı Avn, ABD ve Katarlı yetkililerle ateşkesin kalıcı hale getirilmesini görüştü</h3>
-        <p>Lübnan Cumhurbaşkanı Joseph Avn, ABD ve Katarlı yetkililerle Lübnan'da ateşkesin kalıcı hale getirilmesi, İsrail'in saldırılarının durdurulması ve bu amaçla bir mekanizma oluşturulması konularını ele aldı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/lubnan-cumhurbaskani-avn-abd-ve-katarli-yetkililerle-ateskesin-kalici-hale-getirilmesini-gorustu-948950.html" target="_blank">Haberi Oku</a>
+        <p>Lübnan Cumhurbaşkanı Joseph Avn, ABD ve Katarlı yetkililerle Lübnan&#x27;da ateşkesin kalıcı hale getirilmesi, İsrail&#x27;in saldırılarının durdurulması ve bu amaçla bir mekanizma oluşturulması konularını ele aldı.</p>
     </div>
-
-    <div class="news-card">
-        <h3>Hadrianapolis Antik Kenti'nde 1750 yıllık pitos mezar bulundu</h3>
-        <p>Karabük'ün Eskipazar ilçesindeki Hadrianapolis Antik Kenti'nde bulunan 1750 yıllık pitos (küp) mezar; içindeki kandil, sikke, kemik toka gibi buluntularla bölgenin ölü gömme geleneklerine ışık tutacak.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/kultur-sanat/hadrianapolis-antik-kentinde-1750-yillik-pitos-mezar-bulundu-948949.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Haziran 2026, 11:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/lubnan-cumhurbaskani-avn-abd-ve-katarli-yetkililerle-ateskesin-kalici-hale-getirilmesini-gorustu-948950.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Ukrayna donanması, Türk sahipli yük gemisinin Rus İHA'sıyla vurulduğunu duyurdu</h3>
-        <p>Ukrayna donanması, Türkiye'den Ukrayna'ya gitmekte olan Panama bandıralı Türk kuru yük gemisi Victress'in Rusya'ya ait bir insansız hava aracıyla (İHA) vurulduğunu duyurdu.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cg4wxrvxlz9o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="hadrianapolis antik kenti&#x27;nde 1750 yıllık pitos mezar bulundu karabük&#x27;ün eskipazar ilçesindeki hadrianapolis antik kenti&#x27;nde bulunan 1750 yıllık pitos (küp) mezar; içindeki kandil, sikke, kemik toka gibi buluntularla bölgenin ölü gömme geleneklerine ışık tutacak. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Haziran 2026, 11:16</span>
+        </div>
+        <h3>Hadrianapolis Antik Kenti&#x27;nde 1750 yıllık pitos mezar bulundu</h3>
+        <p>Karabük&#x27;ün Eskipazar ilçesindeki Hadrianapolis Antik Kenti&#x27;nde bulunan 1750 yıllık pitos (küp) mezar; içindeki kandil, sikke, kemik toka gibi buluntularla bölgenin ölü gömme geleneklerine ışık tutacak.</p>
     </div>
-
-    <div class="news-card">
-        <h3>Aşırı sıcakların etkisi altındaki Fransa'da 13 kişi boğularak öldü</h3>
-        <p>Fransa'da aşırı sıcaklar etkisini sürdürürken hafta sonundan bu yana serinlemek için suya giren 13 kişinin boğulduğu bildirildi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/asiri-sicaklarin-etkisi-altindaki-fransada-13-kisi-bogularak-oldu-948957.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Haziran 2026, 11:16</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/kultur-sanat/hadrianapolis-antik-kentinde-1750-yillik-pitos-mezar-bulundu-948949.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Rusya: Son 24 saatte Moskova yakınlarında Ukrayna'ya ait 84 İHA'yı vurduk</h3>
-        <p>Moskova Belediye Başkanı Sergey Sobyanin, son 24 saatte başkent yakınlarında Ukrayna'ya ait 84 insansız hava aracının (İHA) etkisiz hale getirildiğini bildirdi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/rusya-son-24-saatte-moskova-yakinlarinda-ukraynaya-ait-84-ihayi-vurduk-948955.html" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="ukrayna donanması, türk sahipli yük gemisinin rus i̇ha&#x27;sıyla vurulduğunu duyurdu ukrayna donanması, türkiye&#x27;den ukrayna&#x27;ya gitmekte olan panama bandıralı türk kuru yük gemisi victress&#x27;in rusya&#x27;ya ait bir insansız hava aracıyla (i̇ha) vurulduğunu duyurdu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 22 Haziran 2026, 09:43</span>
+        </div>
+        <h3>Ukrayna donanması, Türk sahipli yük gemisinin Rus İHA&#x27;sıyla vurulduğunu duyurdu</h3>
+        <p>Ukrayna donanması, Türkiye&#x27;den Ukrayna&#x27;ya gitmekte olan Panama bandıralı Türk kuru yük gemisi Victress&#x27;in Rusya&#x27;ya ait bir insansız hava aracıyla (İHA) vurulduğunu duyurdu.</p>
     </div>
-
-    <div class="news-card">
-        <h3>İsrail basını: İsrail ordusunun, Lübnan'ın güneyindeki bazı bölgelerden çekilmesi ele alınacak</h3>
-        <p>İsrail basını, bu hafta Tel Aviv ile Beyrut yönetimleri arasında ABD arabuluculuğunda yapılacak görüşmelerde, İsrail ordusunu işgal ettiği bazı "pilot" bölgelerden çekilerek buralarda kontrolü Lübnan ordusuna devretmesinin ele alınacağını aktardı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/israil-basini-israil-ordusunun-lubnanin-guneyindeki-bazi-bolgelerden-cekilmesi-ele-alinacak-948952.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Haziran 2026, 09:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cg4wxrvxlz9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
+</article>
+<article class="news-card" data-search="aşırı sıcakların etkisi altındaki fransa&#x27;da 13 kişi boğularak öldü fransa&#x27;da aşırı sıcaklar etkisini sürdürürken hafta sonundan bu yana serinlemek için suya giren 13 kişinin boğulduğu bildirildi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Haziran 2026, 12:35</span>
+        </div>
+        <h3>Aşırı sıcakların etkisi altındaki Fransa&#x27;da 13 kişi boğularak öldü</h3>
+        <p>Fransa&#x27;da aşırı sıcaklar etkisini sürdürürken hafta sonundan bu yana serinlemek için suya giren 13 kişinin boğulduğu bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Haziran 2026, 12:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/asiri-sicaklarin-etkisi-altindaki-fransada-13-kisi-bogularak-oldu-948957.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rusya: son 24 saatte moskova yakınlarında ukrayna&#x27;ya ait 84 i̇ha&#x27;yı vurduk moskova belediye başkanı sergey sobyanin, son 24 saatte başkent yakınlarında ukrayna&#x27;ya ait 84 insansız hava aracının (i̇ha) etkisiz hale getirildiğini bildirdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Haziran 2026, 12:21</span>
+        </div>
+        <h3>Rusya: Son 24 saatte Moskova yakınlarında Ukrayna&#x27;ya ait 84 İHA&#x27;yı vurduk</h3>
+        <p>Moskova Belediye Başkanı Sergey Sobyanin, son 24 saatte başkent yakınlarında Ukrayna&#x27;ya ait 84 insansız hava aracının (İHA) etkisiz hale getirildiğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Haziran 2026, 12:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/rusya-son-24-saatte-moskova-yakinlarinda-ukraynaya-ait-84-ihayi-vurduk-948955.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail basını: i̇srail ordusunun, lübnan&#x27;ın güneyindeki bazı bölgelerden çekilmesi ele alınacak i̇srail basını, bu hafta tel aviv ile beyrut yönetimleri arasında abd arabuluculuğunda yapılacak görüşmelerde, i̇srail ordusunu işgal ettiği bazı &quot;pilot&quot; bölgelerden çekilerek buralarda kontrolü lübnan ordusuna devretmesinin ele alınacağını aktardı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Haziran 2026, 11:53</span>
+        </div>
+        <h3>İsrail basını: İsrail ordusunun, Lübnan&#x27;ın güneyindeki bazı bölgelerden çekilmesi ele alınacak</h3>
+        <p>İsrail basını, bu hafta Tel Aviv ile Beyrut yönetimleri arasında ABD arabuluculuğunda yapılacak görüşmelerde, İsrail ordusunu işgal ettiği bazı &quot;pilot&quot; bölgelerden çekilerek buralarda kontrolü Lübnan ordusuna devretmesinin ele alınacağını aktardı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Haziran 2026, 11:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/israil-basini-israil-ordusunun-lubnanin-guneyindeki-bazi-bolgelerden-cekilmesi-ele-alinacak-948952.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="adalar belediyesi soruşturması: 39 kişi adliyeye sevk edildi adalar belediyesi&#x27;ne yönelik başlatılan soruşturma kapsamında 19 haziran&#x27;da i̇stanbul dahil dört ilde düzenlenen operasyonlarda gözaltına alınan 39 kişi adliyeye sevk edildi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 22 Haziran 2026, 10:50</span>
+        </div>
         <h3>Adalar Belediyesi soruşturması: 39 kişi adliyeye sevk edildi</h3>
-        <p>Adalar Belediyesi'ne yönelik başlatılan soruşturma kapsamında 19 Haziran'da İstanbul dahil dört ilde düzenlenen operasyonlarda gözaltına alınan 39 kişi adliyeye sevk edildi.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/ce95vy3dk0zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+        <p>Adalar Belediyesi&#x27;ne yönelik başlatılan soruşturma kapsamında 19 Haziran&#x27;da İstanbul dahil dört ilde düzenlenen operasyonlarda gözaltına alınan 39 kişi adliyeye sevk edildi.</p>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Haziran 2026, 10:50</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ce95vy3dk0zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2 class="category-title">GENEL</h2>
-
-    <div class="news-card">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">8 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇ngiltere başbakanı keir starmer istifa etti i̇ngiltere&#x27;de başbakan ve iktidardaki i̇şçi partisi&#x27;nin lideri keir starmer görevinden istifa etti. starmer yeni bir lider seçilene dek görevini sürdürecek. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Haziran 2026, 12:31</span>
+        </div>
         <h3>İngiltere Başbakanı Keir Starmer istifa etti</h3>
-        <p>İngiltere'de Başbakan ve iktidardaki İşçi Partisi'nin lideri Keir Starmer görevinden istifa etti. Starmer yeni bir lider seçilene dek görevini sürdürecek.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c9v2ddwlzw3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+        <p>İngiltere&#x27;de Başbakan ve iktidardaki İşçi Partisi&#x27;nin lideri Keir Starmer görevinden istifa etti. Starmer yeni bir lider seçilene dek görevini sürdürecek.</p>
     </div>
-
-    <div class="news-card">
-        <h3>Ayı saldırısından sağ çıkan Hugh Glass'ın hikâyesi neden hâlâ ilgi çekiyor?</h3>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Haziran 2026, 12:31</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9v2ddwlzw3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ayı saldırısından sağ çıkan hugh glass&#x27;ın hikâyesi neden hâlâ ilgi çekiyor? 1823 yılında bir boz ayının saldırısından sağ kurtulan, ölüme terk edilmesine rağmen yüzlerce kilometre sürünerek hayatta kalan hugh glass’ın olağanüstü hikâyesi, 200 yıl sonra bile insanları büyülemeye devam ediyor genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Haziran 2026, 04:31</span>
+        </div>
+        <h3>Ayı saldırısından sağ çıkan Hugh Glass&#x27;ın hikâyesi neden hâlâ ilgi çekiyor?</h3>
         <p>1823 yılında bir boz ayının saldırısından sağ kurtulan, ölüme terk edilmesine rağmen yüzlerce kilometre sürünerek hayatta kalan Hugh Glass’ın olağanüstü hikâyesi, 200 yıl sonra bile insanları büyülemeye devam ediyor</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cgrk9n242yeo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Kolombiya'da başkanlık seçimlerini Trump'ın desteklediği aday kazandı</h3>
-        <p>Donald Trump'ın desteklediği sağcı aday Abelardo de la Espriella, Kolombiya'daki başkanlık seçimini çok az farkla kazanırken, sonuç ülkenin güvenlik politikalarında sert bir değişimin habercisi olarak görülüyor</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c621w85012lo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Haziran 2026, 04:31</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cgrk9n242yeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>'Mesele sadece çıplaklık değil': Fotoğraf ve video yoluyla istismar ne anlama geliyor?</h3>
+</article>
+<article class="news-card" data-search="kolombiya&#x27;da başkanlık seçimlerini trump&#x27;ın desteklediği aday kazandı donald trump&#x27;ın desteklediği sağcı aday abelardo de la espriella, kolombiya&#x27;daki başkanlık seçimini çok az farkla kazanırken, sonuç ülkenin güvenlik politikalarında sert bir değişimin habercisi olarak görülüyor genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Haziran 2026, 07:31</span>
+        </div>
+        <h3>Kolombiya&#x27;da başkanlık seçimlerini Trump&#x27;ın desteklediği aday kazandı</h3>
+        <p>Donald Trump&#x27;ın desteklediği sağcı aday Abelardo de la Espriella, Kolombiya&#x27;daki başkanlık seçimini çok az farkla kazanırken, sonuç ülkenin güvenlik politikalarında sert bir değişimin habercisi olarak görülüyor</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Haziran 2026, 07:31</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c621w85012lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;mesele sadece çıplaklık değil&#x27;: fotoğraf ve video yoluyla istismar ne anlama geliyor? yeni bir rapora göre, kadınların izinsiz paylaşılan görüntülerden gördüğü zarar yalnızca çıplak fotoğraflarla sınırlı değil; sıradan görünen görüntüler de muhafazakâr toplumlarda hayat değiştiren sonuçlara yol açabiliyor genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Haziran 2026, 04:32</span>
+        </div>
+        <h3>&#x27;Mesele sadece çıplaklık değil&#x27;: Fotoğraf ve video yoluyla istismar ne anlama geliyor?</h3>
         <p>Yeni bir rapora göre, kadınların izinsiz paylaşılan görüntülerden gördüğü zarar yalnızca çıplak fotoğraflarla sınırlı değil; sıradan görünen görüntüler de muhafazakâr toplumlarda hayat değiştiren sonuçlara yol açabiliyor</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c4gyml1d0m2o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Haziran 2026, 04:32</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gyml1d0m2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="başörtülülere hakaret eden kişi hakkında tutuklama talebi sosyal medya platformlarında başörtülülere yönelik ifadeleri nedeniyle &quot;halkı kin ve düşmanlığa tahrik veya aşağılama&quot; suçundan başlatılan soruşturma kapsamında gözaltına alınan şüpheli hatice öncel, tutuklanması talebiyle sulh ceza hakimliğine sevk edildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Haziran 2026, 12:36</span>
+        </div>
         <h3>Başörtülülere hakaret eden kişi hakkında tutuklama talebi</h3>
-        <p>Sosyal medya platformlarında başörtülülere yönelik ifadeleri nedeniyle "halkı kin ve düşmanlığa tahrik veya aşağılama" suçundan başlatılan soruşturma kapsamında gözaltına alınan şüpheli Hatice Öncel, tutuklanması talebiyle sulh ceza hakimliğine sevk edildi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/basortululere-hakaret-eden-kisi-hakkinda-tutuklama-talebi-948958.html" target="_blank">Haberi Oku</a>
+        <p>Sosyal medya platformlarında başörtülülere yönelik ifadeleri nedeniyle &quot;halkı kin ve düşmanlığa tahrik veya aşağılama&quot; suçundan başlatılan soruşturma kapsamında gözaltına alınan şüpheli Hatice Öncel, tutuklanması talebiyle sulh ceza hakimliğine sevk edildi.</p>
     </div>
-
-    <div class="news-card">
-        <h3>İstanbul'da tekstil atölyesinde yangın</h3>
-        <p>İstanbul Fatih'te tekstil atölyesinde çıkan yangında dumandan etkilenen 2 kişi hastaneye kaldırıldı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/istanbulda-tekstil-atolyesinde-yangin-948956.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Haziran 2026, 12:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/basortululere-hakaret-eden-kisi-hakkinda-tutuklama-talebi-948958.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da tekstil atölyesinde yangın i̇stanbul fatih&#x27;te tekstil atölyesinde çıkan yangında dumandan etkilenen 2 kişi hastaneye kaldırıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Haziran 2026, 12:22</span>
+        </div>
+        <h3>İstanbul&#x27;da tekstil atölyesinde yangın</h3>
+        <p>İstanbul Fatih&#x27;te tekstil atölyesinde çıkan yangında dumandan etkilenen 2 kişi hastaneye kaldırıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Haziran 2026, 12:22</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-tekstil-atolyesinde-yangin-948956.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yumurta kabuğundan implantlarda kullanılabilecek biyomalzeme ürettiler gaziantep üniversitesi mühendislik fakültesi öğrencileri, yumurta kabuğundan elde ettikleri hidroksiapatit (kemik ve dişlerin temel mineral bileşeni) ile implant uygulamalarında kullanılabilecek biyomalzeme üretti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Haziran 2026, 11:44</span>
+        </div>
         <h3>Yumurta kabuğundan implantlarda kullanılabilecek biyomalzeme ürettiler</h3>
         <p>Gaziantep Üniversitesi Mühendislik Fakültesi öğrencileri, yumurta kabuğundan elde ettikleri hidroksiapatit (kemik ve dişlerin temel mineral bileşeni) ile implant uygulamalarında kullanılabilecek biyomalzeme üretti.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/bilim-teknoloji/yumurta-kabugundan-implantlarda-kullanilabilecek-biyomalzeme-urettiler-948951.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Çanakkale Boğazı'ndan 350 metrelik dev geçiş</h3>
-        <p>İtalya'dan Romanya'ya götürülen, toplam uzunluğu 350 metreye ulaşan sondaj platformu iskelesi Çanakkale Boğazı'ndan geçiş yaptı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/canakkale-bogazindan-350-metrelik-dev-gecis-948953.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Haziran 2026, 11:44</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/yumurta-kabugundan-implantlarda-kullanilabilecek-biyomalzeme-urettiler-948951.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
+</article>
+<article class="news-card" data-search="çanakkale boğazı&#x27;ndan 350 metrelik dev geçiş i̇talya&#x27;dan romanya&#x27;ya götürülen, toplam uzunluğu 350 metreye ulaşan sondaj platformu iskelesi çanakkale boğazı&#x27;ndan geçiş yaptı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Haziran 2026, 12:07</span>
+        </div>
+        <h3>Çanakkale Boğazı&#x27;ndan 350 metrelik dev geçiş</h3>
+        <p>İtalya&#x27;dan Romanya&#x27;ya götürülen, toplam uzunluğu 350 metreye ulaşan sondaj platformu iskelesi Çanakkale Boğazı&#x27;ndan geçiş yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Haziran 2026, 12:07</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/canakkale-bogazindan-350-metrelik-dev-gecis-948953.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2 class="category-title">SPOR</h2>
-
-    <div class="news-card">
-        <h3>Maradona'nın 'Tanrı'nın eli' golü simgeleşti, peki ya harika ikinci golü?</h3>
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="maradona&#x27;nın &#x27;tanrı&#x27;nın eli&#x27; golü simgeleşti, peki ya harika ikinci golü? hayatımda izlediğim ilk futbol maçı, spor tarihinin en tartışmalı maçlarından biriydi. spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 22 Haziran 2026, 04:52</span>
+        </div>
+        <h3>Maradona&#x27;nın &#x27;Tanrı&#x27;nın eli&#x27; golü simgeleşti, peki ya harika ikinci golü?</h3>
         <p>Hayatımda izlediğim ilk futbol maçı, spor tarihinin en tartışmalı maçlarından biriydi.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cyv0m286vedo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Haziran 2026, 04:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cyv0m286vedo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

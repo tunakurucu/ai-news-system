@@ -2,178 +2,459 @@
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Günün Haberleri</title>
     <link rel="stylesheet" href="assets/css/news.css">
     <script src="assets/js/news.js" defer></script>
 </head>
 <body>
-    <header class="site-nav">
-        <div class="nav-inner">
-            <div class="brand">AI News</div>
-            <a href="index.html">Current News</a>
-            <a href="archive.html">Archive</a>
-            <a href="search.html">Search</a>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">7 Ağustos 2026</div>
         </div>
     </header>
 
     <main class="site-wrapper">
-        <section class="hero">
+    <section class="hero">
+        <div class="hero-text">
             <h1>Günün Haberleri</h1>
-            <div class="search-box">
-                <input type="text" id="home-search-input" placeholder="Search today's news...">
+            <p class="hero-date">19 Haziran 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 20</span><span class="stat-item"><strong>dünya</strong> 7</span><span class="stat-item"><strong>ekonomi</strong> 1</span><span class="stat-item"><strong>genel</strong> 10</span><span class="stat-item"><strong>gümrük</strong> 1</span><span class="stat-item"><strong>spor</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Trump&#x27;ın &#x27;Meloni bana fotoğraf için yalvardı&#x27; sözü kriz çıkardı</h3>
+        <p>ABD Başkanı Donald Trump, İtalya Başbakanı Giorgia Meloni&#x27;nin Fransa&#x27;da yapılan G7 zirvesinde kendisiyle fotoğraf çektirmek için yalvardığını söyleyince iki ülke arasında son aylarda yaşanan gerilim yeni bir seviyeye tırmandı.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 19 Haziran 2026, 20:52</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cx24j9k7vjjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 19 Haziran 2026, 20:47</span>
             </div>
-
-            <div class="category-filters">
-                <button class="category-filter-btn active" data-category="all">Tümü</button>
-                <button class="category-filter-btn" data-category="ekonomi">Ekonomi</button>
-                <button class="category-filter-btn" data-category="teknoloji">Teknoloji</button>
-                <button class="category-filter-btn" data-category="dünya">Dünya</button>
-                <button class="category-filter-btn" data-category="gümrük">Gümrük</button>
-                <button class="category-filter-btn" data-category="genel">Genel</button>
+            <h3>Bakan Bolat: İtalya ile aramızdaki ikili ticaret hacmi yaklaşık 30 milyar dolar seviyesinde</h3>
+            <p>Ticaret Bakanı Bolat, Türkiye ile İtalya arasındaki ikili ticaret hacminin 30 milyar dolar seviyesinde olduğunu belirterek, &quot;İtalya&#x27;daki muhataplarımız ve her iki ülkenin özel sektörleri el ele çalışarak iddialı ama son derece ulaşılabilir olan 40 milyar dolarlık hedefi gerçekleştireceğiz&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/bakan-bolat-italya-ile-aramizdaki-ikili-ticaret-hacmi-yaklasik-30-milyar-dolar-seviyesinde-948757.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 19 Haziran 2026, 14:19</span>
             </div>
-        </section>
+            <h3>İngiltere&#x27;de Andy Burnham ara seçimi kazandı: İşçi Partisi liderliği ve başbakanlık yarışı kızışıyor mu?</h3>
+            <p>İngiltere&#x27;de iktidardaki İşçi Partisi&#x27;nde liderlik ve başbakanlık tartışmaları, Başbakan Kier Starmer&#x27;ın olası en önemli rakiplerinden biri olarak görülen Andy Burnham&#x27;ın ara seçimi kazanıp milletvekili olmasıyla yeniden alevlendi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/crlwj1ye84do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 19 Haziran 2026, 16:20</span>
+            </div>
+            <h3>Türkiye Dünya Kupası&#x27;nda kritik virajda, rakip Paraguay</h3>
+            <p>Dünya Kupası&#x27;ndaki ilk maçında Avustralya&#x27;ya 2-0 yenilen Türkiye turnuvadaki en kritik maçında Güney Amerika temsilcisi Paraguay&#x27;la karşılaşacak. ABD&#x27;de San Francisco Bay Area Stadyumu&#x27;nda oynanacak maç TSİ 06.00&#x27;da başlayacak.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c39yxn11g1vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 19 Haziran 2026, 21:03</span>
+            </div>
+            <h3>WP: ABD istihbaratı, Netanyahu&#x27;nun ABDİran barış çabalarını baltalayabileceği konusunda uyarı yaptı</h3>
+            <p>ABD istihbarat kurumlarının, İsrail Başbakanı Binyamin Netanyahu&#x27;nun İran ile kalıcı barışı sağlama çabalarını baltalayacak adımlar atma olasılığının yüksek olduğu konusunda Washington yönetimine uyarıda bulunduğu iddia edildi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/wp-abd-istihbarati-netanyahunun-abd-iran-baris-cabalarini-baltalayabilecegi-konusunda-uyari-yapti-948759.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
 
-        <div class="stats-grid">
-        <h3>Türkiye Dünya Kupası'nda kritik virajda, rakip Paraguay</h3>
-        <p>Dünya Kupası'ndaki ilk maçında Avustralya'ya 2-0 yenilen Türkiye turnuvadaki en kritik maçında Güney Amerika temsilcisi Paraguay'la karşılaşacak. ABD'de San Francisco Bay Area Stadyumu'nda oynanacak maç TSİ 06.00'da başlayacak.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c39yxn11g1vo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">7 haber</p>
     </div>
-
-    <div class="news-card">
-        <h3>WP: ABD istihbaratı, Netanyahu'nun ABDİran barış çabalarını baltalayabileceği konusunda uyarı yaptı</h3>
-        <p>ABD istihbarat kurumlarının, İsrail Başbakanı Binyamin Netanyahu'nun İran ile kalıcı barışı sağlama çabalarını baltalayacak adımlar atma olasılığının yüksek olduğu konusunda Washington yönetimine uyarıda bulunduğu iddia edildi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/wp-abd-istihbarati-netanyahunun-abd-iran-baris-cabalarini-baltalayabilecegi-konusunda-uyari-yapti-948759.html" target="_blank">Haberi Oku</a>
+    <div class="news-list">
+        <article class="news-card" data-search="trump&#x27;ın &#x27;meloni bana fotoğraf için yalvardı&#x27; sözü kriz çıkardı abd başkanı donald trump, i̇talya başbakanı giorgia meloni&#x27;nin fransa&#x27;da yapılan g7 zirvesinde kendisiyle fotoğraf çektirmek için yalvardığını söyleyince iki ülke arasında son aylarda yaşanan gerilim yeni bir seviyeye tırmandı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 19 Haziran 2026, 20:52</span>
+        </div>
+        <h3>Trump&#x27;ın &#x27;Meloni bana fotoğraf için yalvardı&#x27; sözü kriz çıkardı</h3>
+        <p>ABD Başkanı Donald Trump, İtalya Başbakanı Giorgia Meloni&#x27;nin Fransa&#x27;da yapılan G7 zirvesinde kendisiyle fotoğraf çektirmek için yalvardığını söyleyince iki ülke arasında son aylarda yaşanan gerilim yeni bir seviyeye tırmandı.</p>
     </div>
-
-    <div class="news-card">
-        <h3>İsrail'den, Yafa'daki elBahr Camisi'ne ezanları susturmak için para cezası</h3>
-        <p>İsrail makamları, Tel Aviv'in "1948 Arapları" olarak bilinen İsrail vatandaşı Filistinlilerin yoğunluklu yaşadığı Yafa bölgesindeki el-Bahr Camisi'ne ezanları susturmak için hoparlörden yüksek sesle ezan okunduğu gerekçesiyle para cezası kesti.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/israilden-yafadaki-el-bahr-camisine-ezanlari-susturmak-icin-para-cezasi-948753.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Haziran 2026, 20:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx24j9k7vjjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Yusuf Ziya Gümüşel'in tahliyesine kadar geçen süreçte neler yaşandı, bundan sonra ne olabilir?</h3>
-        <p>Çocuğun nitelikli cinsel istismarı suçuyla bağlantılı olarak 18 yıl 9 ay hapis cezasına çarptırılan Hiranur Vakfı kurucusu Yusuf Ziya Gümüşel, 17 Haziran'da tahliye edildi. Peki süreçte şimdiye kadar neler yaşandı?</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/c77y142n6z4o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="türkiye dünya kupası&#x27;nda kritik virajda, rakip paraguay dünya kupası&#x27;ndaki ilk maçında avustralya&#x27;ya 2-0 yenilen türkiye turnuvadaki en kritik maçında güney amerika temsilcisi paraguay&#x27;la karşılaşacak. abd&#x27;de san francisco bay area stadyumu&#x27;nda oynanacak maç tsi̇ 06.00&#x27;da başlayacak. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 19 Haziran 2026, 16:20</span>
+        </div>
+        <h3>Türkiye Dünya Kupası&#x27;nda kritik virajda, rakip Paraguay</h3>
+        <p>Dünya Kupası&#x27;ndaki ilk maçında Avustralya&#x27;ya 2-0 yenilen Türkiye turnuvadaki en kritik maçında Güney Amerika temsilcisi Paraguay&#x27;la karşılaşacak. ABD&#x27;de San Francisco Bay Area Stadyumu&#x27;nda oynanacak maç TSİ 06.00&#x27;da başlayacak.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Haziran 2026, 16:20</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c39yxn11g1vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="wp: abd istihbaratı, netanyahu&#x27;nun abdi̇ran barış çabalarını baltalayabileceği konusunda uyarı yaptı abd istihbarat kurumlarının, i̇srail başbakanı binyamin netanyahu&#x27;nun i̇ran ile kalıcı barışı sağlama çabalarını baltalayacak adımlar atma olasılığının yüksek olduğu konusunda washington yönetimine uyarıda bulunduğu iddia edildi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 19 Haziran 2026, 21:03</span>
+        </div>
+        <h3>WP: ABD istihbaratı, Netanyahu&#x27;nun ABDİran barış çabalarını baltalayabileceği konusunda uyarı yaptı</h3>
+        <p>ABD istihbarat kurumlarının, İsrail Başbakanı Binyamin Netanyahu&#x27;nun İran ile kalıcı barışı sağlama çabalarını baltalayacak adımlar atma olasılığının yüksek olduğu konusunda Washington yönetimine uyarıda bulunduğu iddia edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Haziran 2026, 21:03</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/wp-abd-istihbarati-netanyahunun-abd-iran-baris-cabalarini-baltalayabilecegi-konusunda-uyari-yapti-948759.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail&#x27;den, yafa&#x27;daki elbahr camisi&#x27;ne ezanları susturmak için para cezası i̇srail makamları, tel aviv&#x27;in &quot;1948 arapları&quot; olarak bilinen i̇srail vatandaşı filistinlilerin yoğunluklu yaşadığı yafa bölgesindeki el-bahr camisi&#x27;ne ezanları susturmak için hoparlörden yüksek sesle ezan okunduğu gerekçesiyle para cezası kesti. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 19 Haziran 2026, 20:01</span>
+        </div>
+        <h3>İsrail&#x27;den, Yafa&#x27;daki elBahr Camisi&#x27;ne ezanları susturmak için para cezası</h3>
+        <p>İsrail makamları, Tel Aviv&#x27;in &quot;1948 Arapları&quot; olarak bilinen İsrail vatandaşı Filistinlilerin yoğunluklu yaşadığı Yafa bölgesindeki el-Bahr Camisi&#x27;ne ezanları susturmak için hoparlörden yüksek sesle ezan okunduğu gerekçesiyle para cezası kesti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Haziran 2026, 20:01</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/israilden-yafadaki-el-bahr-camisine-ezanlari-susturmak-icin-para-cezasi-948753.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yusuf ziya gümüşel&#x27;in tahliyesine kadar geçen süreçte neler yaşandı, bundan sonra ne olabilir? çocuğun nitelikli cinsel istismarı suçuyla bağlantılı olarak 18 yıl 9 ay hapis cezasına çarptırılan hiranur vakfı kurucusu yusuf ziya gümüşel, 17 haziran&#x27;da tahliye edildi. peki süreçte şimdiye kadar neler yaşandı? dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 19 Haziran 2026, 19:11</span>
+        </div>
+        <h3>Yusuf Ziya Gümüşel&#x27;in tahliyesine kadar geçen süreçte neler yaşandı, bundan sonra ne olabilir?</h3>
+        <p>Çocuğun nitelikli cinsel istismarı suçuyla bağlantılı olarak 18 yıl 9 ay hapis cezasına çarptırılan Hiranur Vakfı kurucusu Yusuf Ziya Gümüşel, 17 Haziran&#x27;da tahliye edildi. Peki süreçte şimdiye kadar neler yaşandı?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Haziran 2026, 19:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c77y142n6z4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kaçırılan i̇bb kültür a.ş. yöneticisi erhan karaal kurtarıldı 17 haziran çarşamba günü i̇stanbul maltepe&#x27;de kimliği belirsiz kişilerce kaçırılan i̇stanbul büyükşehir belediyesi kültür a.ş. genel müdür yardımcısı vekili erhan karaal polis ekiplerinin çalışması sonucu bulundu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 19 Haziran 2026, 11:14</span>
+        </div>
         <h3>Kaçırılan İBB Kültür A.Ş. yöneticisi Erhan Karaal kurtarıldı</h3>
-        <p>17 Haziran Çarşamba günü İstanbul Maltepe'de kimliği belirsiz kişilerce kaçırılan İstanbul Büyükşehir Belediyesi Kültür A.Ş. Genel Müdür Yardımcısı Vekili Erhan Karaal polis ekiplerinin çalışması sonucu bulundu.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cwylwd75k70o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+        <p>17 Haziran Çarşamba günü İstanbul Maltepe&#x27;de kimliği belirsiz kişilerce kaçırılan İstanbul Büyükşehir Belediyesi Kültür A.Ş. Genel Müdür Yardımcısı Vekili Erhan Karaal polis ekiplerinin çalışması sonucu bulundu.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Haziran 2026, 11:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwylwd75k70o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail ve hizbullah ateşkeste uzlaştı hizbullah ve i̇srail bir ateşkeste uzlaştı. bir abd&#x27;li yetkilinin bbc&#x27;ye verdiği bilgiye göre ateşkes bugün yerel saatle 16:00&#x27;da yürürlüğe girdi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 19 Haziran 2026, 19:44</span>
+        </div>
         <h3>İsrail ve Hizbullah ateşkeste uzlaştı</h3>
-        <p>Hizbullah ve İsrail bir ateşkeste uzlaştı. Bir ABD'li yetkilinin BBC'ye verdiği bilgiye göre ateşkes bugün yerel saatle 16:00'da yürürlüğe girdi.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/ce8k0znpgd3o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+        <p>Hizbullah ve İsrail bir ateşkeste uzlaştı. Bir ABD&#x27;li yetkilinin BBC&#x27;ye verdiği bilgiye göre ateşkes bugün yerel saatle 16:00&#x27;da yürürlüğe girdi.</p>
     </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Haziran 2026, 19:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ce8k0znpgd3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
 
-    <h2 class="category-title">EKONOMI</h2>
-
-    <div class="news-card">
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan bolat: i̇talya ile aramızdaki ikili ticaret hacmi yaklaşık 30 milyar dolar seviyesinde ticaret bakanı bolat, türkiye ile i̇talya arasındaki ikili ticaret hacminin 30 milyar dolar seviyesinde olduğunu belirterek, &quot;i̇talya&#x27;daki muhataplarımız ve her iki ülkenin özel sektörleri el ele çalışarak iddialı ama son derece ulaşılabilir olan 40 milyar dolarlık hedefi gerçekleştireceğiz&quot; dedi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 19 Haziran 2026, 20:47</span>
+        </div>
         <h3>Bakan Bolat: İtalya ile aramızdaki ikili ticaret hacmi yaklaşık 30 milyar dolar seviyesinde</h3>
-        <p>Ticaret Bakanı Bolat, Türkiye ile İtalya arasındaki ikili ticaret hacminin 30 milyar dolar seviyesinde olduğunu belirterek, "İtalya'daki muhataplarımız ve her iki ülkenin özel sektörleri el ele çalışarak iddialı ama son derece ulaşılabilir olan 40 milyar dolarlık hedefi gerçekleştireceğiz" dedi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/ekonomi/bakan-bolat-italya-ile-aramizdaki-ikili-ticaret-hacmi-yaklasik-30-milyar-dolar-seviyesinde-948757.html" target="_blank">Haberi Oku</a>
+        <p>Ticaret Bakanı Bolat, Türkiye ile İtalya arasındaki ikili ticaret hacminin 30 milyar dolar seviyesinde olduğunu belirterek, &quot;İtalya&#x27;daki muhataplarımız ve her iki ülkenin özel sektörleri el ele çalışarak iddialı ama son derece ulaşılabilir olan 40 milyar dolarlık hedefi gerçekleştireceğiz&quot; dedi.</p>
     </div>
-
-    <h2 class="category-title">GENEL</h2>
-
-    <div class="news-card">
-        <h3>İngiltere'de Andy Burnham ara seçimi kazandı: İşçi Partisi liderliği ve başbakanlık yarışı kızışıyor mu?</h3>
-        <p>İngiltere'de iktidardaki İşçi Partisi'nde liderlik ve başbakanlık tartışmaları, Başbakan Kier Starmer'ın olası en önemli rakiplerinden biri olarak görülen Andy Burnham'ın ara seçimi kazanıp milletvekili olmasıyla yeniden alevlendi.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/crlwj1ye84do?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Haziran 2026, 20:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/bakan-bolat-italya-ile-aramizdaki-ikili-ticaret-hacmi-yaklasik-30-milyar-dolar-seviyesinde-948757.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
+</article>
 
-    <div class="news-card">
-        <h3>İletişim Başkanı Burhanettin Duran'dan Birlikte Güçlüyüz, Birlikte Türkiyeyiz paylaşımı</h3>
-        <p>İletişim Başkanı Burhanettin Duran, sosyal medya hesabı üzerinden "Birlikte Güçlüyüz, Birlikte Türkiye’yiz" paylaşımı yaptı. Duran, paylaşımında "Cumhurbaşkanımız Sayın Recep Tayyip Erdoğan’ın "Güçlü Türkiye" vizyonuyla; şehirlerimiz ve renklerimiz ne kadar farklı olursa olsun, aynı hedef doğrultusunda tek yürek oluyoruz" ifadelerini kullandı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/iletisim-baskani-burhanettin-durandan-birlikte-gucluyuz-birlikte-turkiyeyiz-paylasimi-948755.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Öğretmenlere bakanlık önünde polis müdahalesi: 'Gözaltılar var'</h3>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">10 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇ngiltere&#x27;de andy burnham ara seçimi kazandı: i̇şçi partisi liderliği ve başbakanlık yarışı kızışıyor mu? i̇ngiltere&#x27;de iktidardaki i̇şçi partisi&#x27;nde liderlik ve başbakanlık tartışmaları, başbakan kier starmer&#x27;ın olası en önemli rakiplerinden biri olarak görülen andy burnham&#x27;ın ara seçimi kazanıp milletvekili olmasıyla yeniden alevlendi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 19 Haziran 2026, 14:19</span>
+        </div>
+        <h3>İngiltere&#x27;de Andy Burnham ara seçimi kazandı: İşçi Partisi liderliği ve başbakanlık yarışı kızışıyor mu?</h3>
+        <p>İngiltere&#x27;de iktidardaki İşçi Partisi&#x27;nde liderlik ve başbakanlık tartışmaları, Başbakan Kier Starmer&#x27;ın olası en önemli rakiplerinden biri olarak görülen Andy Burnham&#x27;ın ara seçimi kazanıp milletvekili olmasıyla yeniden alevlendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Haziran 2026, 14:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/crlwj1ye84do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇letişim başkanı burhanettin duran&#x27;dan birlikte güçlüyüz, birlikte türkiyeyiz paylaşımı i̇letişim başkanı burhanettin duran, sosyal medya hesabı üzerinden &quot;birlikte güçlüyüz, birlikte türkiye’yiz&quot; paylaşımı yaptı. duran, paylaşımında &quot;cumhurbaşkanımız sayın recep tayyip erdoğan’ın &quot;güçlü türkiye&quot; vizyonuyla; şehirlerimiz ve renklerimiz ne kadar farklı olursa olsun, aynı hedef doğrultusunda tek yürek oluyoruz&quot; ifadelerini kullandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 19 Haziran 2026, 20:25</span>
+        </div>
+        <h3>İletişim Başkanı Burhanettin Duran&#x27;dan Birlikte Güçlüyüz, Birlikte Türkiyeyiz paylaşımı</h3>
+        <p>İletişim Başkanı Burhanettin Duran, sosyal medya hesabı üzerinden &quot;Birlikte Güçlüyüz, Birlikte Türkiye’yiz&quot; paylaşımı yaptı. Duran, paylaşımında &quot;Cumhurbaşkanımız Sayın Recep Tayyip Erdoğan’ın &quot;Güçlü Türkiye&quot; vizyonuyla; şehirlerimiz ve renklerimiz ne kadar farklı olursa olsun, aynı hedef doğrultusunda tek yürek oluyoruz&quot; ifadelerini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Haziran 2026, 20:25</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/iletisim-baskani-burhanettin-durandan-birlikte-gucluyuz-birlikte-turkiyeyiz-paylasimi-948755.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="öğretmenlere bakanlık önünde polis müdahalesi: &#x27;gözaltılar var&#x27; özel sektör öğretmenleri sendikası, açıklama yapmak üzere gittikleri çalışma ve sosyal güvenlik bakanlığı önünde polis müdahalesi ile karşılaştıklarını ve gözaltılar olduğunu duyurdu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 19 Haziran 2026, 19:50</span>
+        </div>
+        <h3>Öğretmenlere bakanlık önünde polis müdahalesi: &#x27;Gözaltılar var&#x27;</h3>
         <p>Özel Sektör Öğretmenleri Sendikası, açıklama yapmak üzere gittikleri Çalışma ve Sosyal Güvenlik Bakanlığı önünde polis müdahalesi ile karşılaştıklarını ve gözaltılar olduğunu duyurdu.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/clyekjg40gzo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Emine Erdoğan, YKS'ye girecek öğrencilere başarılar diledi</h3>
-        <p>Cumhurbaşkanı Recep Tayyip Erdoğan'ın eşi Emine Erdoğan, Yükseköğretim Kurumları Sınavı'na (YKS) girecek öğrencilere başarılar diledi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/gundem/emine-erdogan-yksye-girecek-ogrencilere-basarilar-diledi-948760.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Haziran 2026, 19:50</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/clyekjg40gzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>İstanbul'da binanın çatısında yangın: 10 kişi hastaneye kaldırıldı</h3>
-        <p>İstanbul Küçükçekmece'de sitedeki binanın çatısında çıkan yangında dumandan etkilenen 11 kişi ile birinci kattan atlayan 1 kişi hastaneye kaldırıldı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/istanbulda-binanin-catisinda-yangin-10-kisi-hastaneye-kaldirildi-948751.html" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="emine erdoğan, yks&#x27;ye girecek öğrencilere başarılar diledi cumhurbaşkanı recep tayyip erdoğan&#x27;ın eşi emine erdoğan, yükseköğretim kurumları sınavı&#x27;na (yks) girecek öğrencilere başarılar diledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 19 Haziran 2026, 21:07</span>
+        </div>
+        <h3>Emine Erdoğan, YKS&#x27;ye girecek öğrencilere başarılar diledi</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın eşi Emine Erdoğan, Yükseköğretim Kurumları Sınavı&#x27;na (YKS) girecek öğrencilere başarılar diledi.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Haziran 2026, 21:07</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/emine-erdogan-yksye-girecek-ogrencilere-basarilar-diledi-948760.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da binanın çatısında yangın: 10 kişi hastaneye kaldırıldı i̇stanbul küçükçekmece&#x27;de sitedeki binanın çatısında çıkan yangında dumandan etkilenen 11 kişi ile birinci kattan atlayan 1 kişi hastaneye kaldırıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 19 Haziran 2026, 18:50</span>
+        </div>
+        <h3>İstanbul&#x27;da binanın çatısında yangın: 10 kişi hastaneye kaldırıldı</h3>
+        <p>İstanbul Küçükçekmece&#x27;de sitedeki binanın çatısında çıkan yangında dumandan etkilenen 11 kişi ile birinci kattan atlayan 1 kişi hastaneye kaldırıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Haziran 2026, 18:50</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-binanin-catisinda-yangin-10-kisi-hastaneye-kaldirildi-948751.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="104 maçı canlı takip edin hiçbir golü kaçırmayın: takvim ve anlık sonuçlar genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 4 Haziran 2026, 10:01</span>
+        </div>
         <h3>104 maçı canlı takip edin</h3>
         <p>Hiçbir golü kaçırmayın: Takvim ve anlık sonuçlar</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/cq8pljlkx0wo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>CHP'li Adalar Belediyesi'ne operasyon: Başkan dahil 41 gözaltı</h3>
-        <p>CHP'li belediyelere yönelik operasyonlara bir yenisi daha eklendi. Adalar Belediyesi'ne yönelik başlatılan soruşturma kapsamında sabah saatlerinde İstanbul dahil dört ilde operasyon düzenlendi.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/ce95vy3dk0zo?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Haziran 2026, 10:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq8pljlkx0wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>Fas'ın PSG'li yıldızı Hakimi tecavüz suçlamasıyla yargılanacak</h3>
-        <p>Paris Saint-Germain oyuncusu ve Fas milli takımının kaptanı Achraf Hakimi, Fransa'da tecavüz suçlamasıyla yargılanacak.</p>
-        <div class="source">Kaynak: BBC Türkçe</div>
-        <a href="https://www.bbc.com/turkce/articles/czxqy2ngzd6o?at_medium=RSS&at_campaign=rss" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="chp&#x27;li adalar belediyesi&#x27;ne operasyon: başkan dahil 41 gözaltı chp&#x27;li belediyelere yönelik operasyonlara bir yenisi daha eklendi. adalar belediyesi&#x27;ne yönelik başlatılan soruşturma kapsamında sabah saatlerinde i̇stanbul dahil dört ilde operasyon düzenlendi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 19 Haziran 2026, 12:58</span>
+        </div>
+        <h3>CHP&#x27;li Adalar Belediyesi&#x27;ne operasyon: Başkan dahil 41 gözaltı</h3>
+        <p>CHP&#x27;li belediyelere yönelik operasyonlara bir yenisi daha eklendi. Adalar Belediyesi&#x27;ne yönelik başlatılan soruşturma kapsamında sabah saatlerinde İstanbul dahil dört ilde operasyon düzenlendi.</p>
     </div>
-
-    <div class="news-card">
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Haziran 2026, 12:58</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ce95vy3dk0zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fas&#x27;ın psg&#x27;li yıldızı hakimi tecavüz suçlamasıyla yargılanacak paris saint-germain oyuncusu ve fas milli takımının kaptanı achraf hakimi, fransa&#x27;da tecavüz suçlamasıyla yargılanacak. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 19 Haziran 2026, 16:19</span>
+        </div>
+        <h3>Fas&#x27;ın PSG&#x27;li yıldızı Hakimi tecavüz suçlamasıyla yargılanacak</h3>
+        <p>Paris Saint-Germain oyuncusu ve Fas milli takımının kaptanı Achraf Hakimi, Fransa&#x27;da tecavüz suçlamasıyla yargılanacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Haziran 2026, 16:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/czxqy2ngzd6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bm: hizbullah ile i̇srail arasındaki ateşkes haberlerini memnuniyetle karşılıyoruz birleşmiş milletler (bm), lübnan’da hizbullah ile i̇srail arasında varıldığı belirtilen ateşkes haberlerini memnuniyetle karşıladıklarını bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 19 Haziran 2026, 20:25</span>
+        </div>
         <h3>BM: Hizbullah ile İsrail arasındaki ateşkes haberlerini memnuniyetle karşılıyoruz</h3>
         <p>Birleşmiş Milletler (BM), Lübnan’da Hizbullah ile İsrail arasında varıldığı belirtilen ateşkes haberlerini memnuniyetle karşıladıklarını bildirdi.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/bm-hizbullah-ile-israil-arasindaki-ateskes-haberlerini-memnuniyetle-karsiliyoruz-948756.html" target="_blank">Haberi Oku</a>
     </div>
-
-    <div class="news-card">
-        <h3>İstanbul'da bir tırda yaklaşık 130 kilogram uyuşturucu ele geçirildi</h3>
-        <p>İstanbul'da bir tırın dorsesine gizlenmiş yaklaşık 130 kilogram uyuşturucunun ele geçirildiği operasyonda 2 şüpheli yakalandı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/istanbulda-bir-tirda-yaklasik-130-kilogram-uyusturucu-ele-gecirildi-948750.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Haziran 2026, 20:25</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/bm-hizbullah-ile-israil-arasindaki-ateskes-haberlerini-memnuniyetle-karsiliyoruz-948756.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
-
-    <h2 class="category-title">GÜMRÜK</h2>
-
-    <div class="news-card">
-        <h3>KadıköySabiha Gökçen Havalimanı Hattı'nda metro raydan çıktı</h3>
-        <p>M4 Kadıköy-Sabiha Gökçen Havalimanı Hattı'nda sefer yapan metro raydan çıktı. Olay yerine itfaiye, sağlık ve metro ekipleri sevk edildi. 3 kişi hastaneye kaldırıldı.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/turkiye/kadikoy-sabiha-gokcen-havalimani-hattinda-metro-raydan-cikti-948754.html" target="_blank">Haberi Oku</a>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da bir tırda yaklaşık 130 kilogram uyuşturucu ele geçirildi i̇stanbul&#x27;da bir tırın dorsesine gizlenmiş yaklaşık 130 kilogram uyuşturucunun ele geçirildiği operasyonda 2 şüpheli yakalandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 19 Haziran 2026, 18:47</span>
+        </div>
+        <h3>İstanbul&#x27;da bir tırda yaklaşık 130 kilogram uyuşturucu ele geçirildi</h3>
+        <p>İstanbul&#x27;da bir tırın dorsesine gizlenmiş yaklaşık 130 kilogram uyuşturucunun ele geçirildiği operasyonda 2 şüpheli yakalandı.</p>
     </div>
-
-    <h2 class="category-title">SPOR</h2>
-
-    <div class="news-card">
-        <h3>İran, Dünya Kupası'ndaki kısıtlamalar nedeniyle FIFAya şikayette bulunacak</h3>
-        <p>İran Futbol Federasyonu, 2026 FIFA Dünya Kupası'nda milli takıma uygulanan kısıtlamalar nedeniyle FIFA'ya şikayette bulunmaya hazırlanıyor.</p>
-        <div class="source">Kaynak: TRT Haber</div>
-        <a href="https://www.trthaber.com/haber/dunya/iran-dunya-kupasindaki-kisitlamalar-nedeniyle-fifaya-sikayette-bulunacak-948749.html" target="_blank">Haberi Oku</a>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Haziran 2026, 18:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-bir-tirda-yaklasik-130-kilogram-uyusturucu-ele-gecirildi-948750.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
     </div>
+</article>
 
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="kadıköysabiha gökçen havalimanı hattı&#x27;nda metro raydan çıktı m4 kadıköy-sabiha gökçen havalimanı hattı&#x27;nda sefer yapan metro raydan çıktı. olay yerine itfaiye, sağlık ve metro ekipleri sevk edildi. 3 kişi hastaneye kaldırıldı. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 19 Haziran 2026, 20:15</span>
+        </div>
+        <h3>KadıköySabiha Gökçen Havalimanı Hattı&#x27;nda metro raydan çıktı</h3>
+        <p>M4 Kadıköy-Sabiha Gökçen Havalimanı Hattı&#x27;nda sefer yapan metro raydan çıktı. Olay yerine itfaiye, sağlık ve metro ekipleri sevk edildi. 3 kişi hastaneye kaldırıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Haziran 2026, 20:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/kadikoy-sabiha-gokcen-havalimani-hattinda-metro-raydan-cikti-948754.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇ran, dünya kupası&#x27;ndaki kısıtlamalar nedeniyle fifaya şikayette bulunacak i̇ran futbol federasyonu, 2026 fifa dünya kupası&#x27;nda milli takıma uygulanan kısıtlamalar nedeniyle fifa&#x27;ya şikayette bulunmaya hazırlanıyor. spor trt haber" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">TRT Haber · 19 Haziran 2026, 18:24</span>
+        </div>
+        <h3>İran, Dünya Kupası&#x27;ndaki kısıtlamalar nedeniyle FIFAya şikayette bulunacak</h3>
+        <p>İran Futbol Federasyonu, 2026 FIFA Dünya Kupası&#x27;nda milli takıma uygulanan kısıtlamalar nedeniyle FIFA&#x27;ya şikayette bulunmaya hazırlanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Haziran 2026, 18:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-dunya-kupasindaki-kisitlamalar-nedeniyle-fifaya-sikayette-bulunacak-948749.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
