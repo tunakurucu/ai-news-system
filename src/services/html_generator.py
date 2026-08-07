@@ -1,3 +1,67 @@
+import html
+import re
+from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
+
+_TURKISH_MONTHS = [
+    "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
+    "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"
+]
+
+
+def _escape(value):
+    """Escape source-controlled text for safe HTML insertion."""
+    if value is None:
+        return ""
+    return html.escape(str(value), quote=True)
+
+
+def _format_published(item):
+    """Format a Turkish publication date like '7 Ağustos 2026, 17:32'."""
+    raw = item.get("published_at") or item.get("published") or ""
+    raw = str(raw).strip()
+    if not raw:
+        return ""
+
+    dt = None
+    try:
+        iso = raw
+        if iso.endswith("Z"):
+            iso = iso[:-1] + "+00:00"
+        dt = datetime.fromisoformat(iso)
+    except Exception:
+        pass
+
+    if dt is None:
+        try:
+            from email.utils import parsedate_to_datetime
+            dt = parsedate_to_datetime(raw)
+        except Exception:
+            pass
+
+    if dt is None:
+        return ""
+
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+
+    try:
+        dt = dt.astimezone(ZoneInfo("Europe/Istanbul"))
+    except Exception:
+        pass
+
+    return f"{dt.day} {_TURKISH_MONTHS[dt.month - 1]} {dt.year}, {dt.hour:02d}:{dt.minute:02d}"
+
+
+def _meta_line(item):
+    """Build 'Source · date' metadata with a safe fallback."""
+    source = _escape(item.get("source", ""))
+    date = _format_published(item)
+    if date:
+        return f"{source} · {date}"
+    return source
+
+
 def generate_news_html(news_items, stats):
     html = """
 <!DOCTYPE html>
@@ -76,9 +140,10 @@ def generate_news_html(news_items, stats):
         a {
             color: #0066cc;
         }
+
         .search-box {
-    margin: 25px 0;
-    }
+            margin: 25px 0;
+        }
 
         .search-box input {
             width: 100%;
@@ -88,41 +153,39 @@ def generate_news_html(news_items, stats):
             border-radius: 8px;
         }
 
-            .category-filters {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 10px;
-                margin: 20px 0 30px;
-            }
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0 30px;
+        }
 
-            .category-filter-btn {
-                padding: 8px 14px;
-                border: 1px solid #ddd;
-                border-radius: 999px;
-                background: #f7f7f7;
-                cursor: pointer;
-            }
+        .category-filter-btn {
+            padding: 8px 14px;
+            border: 1px solid #ddd;
+            border-radius: 999px;
+            background: #f7f7f7;
+            cursor: pointer;
+        }
 
-            .category-filter-btn.active {
-                background: #222;
-                color: white;
-            }
+        .category-filter-btn.active {
+            background: #222;
+            color: white;
+        }
     </style>
 </head>
 <body>
 
-        <nav>
-            <a href="index.html">Güncel Haberler</a> |
-            <a href="archive.html">Arşiv</a> |
-            <a href="search.html">Arama</a>
-        </nav>
-    <h1>Günün Haberleri</h1>
-    <div class="search-box">
-    <input
-        type="text"
-        id="home-search-input"
-        placeholder="Güncel haberlerde ara..."
-    >
+<nav>
+    <a href="index.html">Güncel Haberler</a> |
+    <a href="archive.html">Arşiv</a> |
+    <a href="search.html">Arama</a>
+</nav>
+
+<h1>Günün Haberleri</h1>
+
+<div class="search-box">
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara...">
 </div>
 
 <div class="category-filters">
@@ -143,8 +206,8 @@ def generate_news_html(news_items, stats):
     for key, value in stats.items():
         html += f"""
         <div class="stat-card">
-            <strong>{key}</strong>
-            <span>{value}</span>
+            <strong>{_escape(key)}</strong>
+            <span>{_escape(value)}</span>
         </div>
 """
 
@@ -164,10 +227,11 @@ def generate_news_html(news_items, stats):
 """
 
     for item in top_news:
+        link = (item.get("link") or "").strip() or "#"
         html += f"""
         <li>
-            <a href="{item.get("link", "")}" target="_blank">
-                <strong>{item.get("title", "")}</strong>
+            <a href="{_escape(link)}" target="_blank" rel="noopener noreferrer">
+                <strong>{_escape(item.get("title", ""))}</strong>
             </a>
         </li>
 """
@@ -180,37 +244,39 @@ def generate_news_html(news_items, stats):
 
     for item in news_items:
         category = item.get("category", "genel")
-
         if category not in grouped_news:
             grouped_news[category] = []
-
         grouped_news[category].append(item)
 
     for category, items in grouped_news.items():
         html += f"""
-    <h2 class="category-title">{category.upper()}</h2>
+    <h2 class="category-title">{_escape(category.upper())}</h2>
 """
 
         for item in items:
-            search_text = f"""
-            {item.get("title", "")}
-            {item.get("summary", "")}
-            {item.get("category", "")}
-            {item.get("source", "")}
-            """.lower()
+            search_text = " ".join([
+                str(item.get("title", "")),
+                str(item.get("summary", "")),
+                str(item.get("category", "")),
+                str(item.get("source", "")),
+            ]).lower()
+            search_text = re.sub(r"\s+", " ", search_text).strip()
+
+            link = (item.get("link") or "").strip() or "#"
 
             html += f"""
                 <div
                     class="news-card"
-                    data-search="{search_text}"
-                    data-category="{item.get("category", "genel")}"
+                    data-search="{_escape(search_text)}"
+                    data-category="{_escape(item.get('category', 'genel'))}"
                 >
-                    <h3>{item.get("title", "")}</h3>
-                    <p>{item.get("summary", "")}</p>
-                    <div class="source">Kaynak: {item.get("source", "")}</div>
-                    <a href="{item.get("link", "")}" target="_blank">Haberi Oku</a>
+                    <h3>{_escape(item.get("title", ""))}</h3>
+                    <p>{_escape(item.get("summary", ""))}</p>
+                    <div class="source">{_meta_line(item)}</div>
+                    <a href="{_escape(link)}" target="_blank" rel="noopener noreferrer">Haberi Oku</a>
                 </div>
-            """           
+            """
+
     html += """
         <script>
             const homeSearchInput = document.querySelector("#home-search-input");
