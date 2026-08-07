@@ -12,7 +12,9 @@ from utils.logger import get_logger
 logger = get_logger()
 
 DEFAULT_MODEL = "gpt-5-mini"
-MAX_TOKENS = 1024
+DEFAULT_MAX_TOKENS = 1024
+REASONING_MAX_TOKENS = 4096
+CACHE_VERSION = "2"
 CACHE_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "cache" / "synthesis"
 
 
@@ -26,7 +28,7 @@ _OUTPUT_SCHEMA = {
             "properties": {
                 "brief_summary": {
                     "type": "string",
-                    "description": "1-2 cümlelik özlü konuşma/uylum uygun özet: ne oldu, temel bilgi.",
+                    "description": "1-2 cümlelik özlü özet: ne oldu, temel bilgi.",
                 },
                 "detailed_summary": {
                     "type": "string",
@@ -35,11 +37,11 @@ _OUTPUT_SCHEMA = {
                 "key_facts": {
                     "type": "array",
                     "items": {"type": "string"},
-                    "description": "Kaynak metinlere dayanan 3-6 somut ve tekrar etmeyen bilgi maddesi.",
+                    "description": "Olayın kendisine ait, kaynak metinlerde desteklenen 3-6 somut ve tekrar etmeyen bilgi noktası. Yalnızca yayın tarihi, kaynak adı, URL veya makale başlığı gibi meta verileri tekrar etme.",
                 },
                 "why_it_matters": {
                     "type": "string",
-                    "description": "Gelişmenin pratik önemi; uydurma spekülasyon içermemeli. Kaynak desteklemezse tutarlı ve gerçekçi kal.",
+                    "description": "Gelişmenin pratik önemi; ancak kaynaklarda açıkça desteklenen veya doğrudan çıkarılabilir sonuçlar. Desteklenmeyen genel bilgi, tahmin veya spekülasyon ekleme. Kaynaklar anlamlı bir önem ifade etmiyorsa boş string döndür.",
                 },
             },
             "required": ["brief_summary", "detailed_summary", "key_facts", "why_it_matters"],
@@ -55,18 +57,22 @@ _SYSTEM_PROMPT = (
     "- Sadece sana iletilen kaynak metinleri kullan; dış bilgi, tahmin veya çıkarım ekleme.\n"
     "- Eksik bilgi varsa atla; uydurma.\n"
     "- Kişi, kurum, tarih, sayı ve iddiaları doğru aktar.\n"
-    "- Kaynaklar arasında önemli bir fark veya çelişki varsa kısça belirt.\n"
+    "- Kaynaklar arasında önemli bir fark veya çelişki varsa kısaca belirt.\n"
     "- brief_summary 1-2 cümle, detailed_summary birkaç kısa paragraf olsun.\n"
-    "- key_facts 3-6 maddelik, somut ve tekrar etmeyen bilgi noktaları içersin.\n"
-    "- why_it_matters bölümünde kaynaklarda desteklenmeyen spekülatif siyasi, ekonomik veya jeopolitik sonuç çıkarma.\n"
+    "- key_facts 3-6 maddelik, OLAYIN KENDİSİNE ait somut ve tekrar etmeyen bilgi noktaları içersin. "
+    "Yalnızca yayın tarihi, kaynak adı, URL veya makale başlığı gibi meta verileri tekrar etme; bunlar yalnızca haber değeri taşıdığında kullanılabilir.\n"
+    "- why_it_matters bölümünde, kaynaklarda açıkça desteklenen veya doğrudan çıkarılabilir pratik önemi yaz. "
+    "Desteklenmeyen genel bilgi, muhtemel ama kanıtlanmamış sonuç veya spekülatif siyasi/ekonomik/jeopolitik etki ekleme. "
+    "Kaynaklar anlamlı bir önem ifade etmiyorsa, yalnızca verili gerçeklere dayanan çok kısa ve tutarlı bir ifade yaz; hiçbir şey yazamıyorsan boş string döndür.\n"
     "- Yazım tarzı: tarafsız, olgun, editoryal, gereksiz sıfat ve yapay dolgu cümlelerden kaçın.\n"
     "- Çıktı JSON formatında ve aşağıdaki alanları içermeli: brief_summary, detailed_summary, key_facts, why_it_matters.\n"
 )
 
 
 def _cache_key(story):
-    """Deterministic cache key from story content, independent of story_id."""
+    """Deterministic cache key from story content and cache version."""
     payload = {
+        "cache_version": CACHE_VERSION,
         "canonical_title": story.get("canonical_title", ""),
         "category": story.get("category", "genel"),
         "articles": [
@@ -129,6 +135,11 @@ def _is_reasoning_model(model):
     return name.startswith(("gpt-5", "o1", "o3", "o4"))
 
 
+def _max_completion_tokens(model):
+    """Return the completion-token budget appropriate for the model family."""
+    return REASONING_MAX_TOKENS if _is_reasoning_model(model) else DEFAULT_MAX_TOKENS
+
+
 def _build_messages(story):
     user_content = {
         "canonical_title": story.get("canonical_title", ""),
@@ -187,7 +198,7 @@ def synthesize_story(story, model=None, client=None, cache_dir=None):
         "model": model,
         "messages": _build_messages(story),
         "response_format": _OUTPUT_SCHEMA,
-        "max_completion_tokens": MAX_TOKENS,
+        "max_completion_tokens": _max_completion_tokens(model),
     }
     # GPT-5 and o-series reasoning models do not support the temperature parameter.
     if not _is_reasoning_model(model):
@@ -195,7 +206,15 @@ def synthesize_story(story, model=None, client=None, cache_dir=None):
 
     try:
         response = client.chat.completions.create(**create_params)
-        raw = response.choices[0].message.content
+        message = response.choices[0].message
+        finish_reason = getattr(response.choices[0], "finish_reason", None)
+        raw = getattr(message, "content", None)
+        if raw is None or raw == "":
+            logger.error(
+                f"OpenAI cevabı boş döndü (finish_reason={finish_reason}). "
+                "Sentez atlanıyor."
+            )
+            return story
         parsed = json.loads(raw)
     except openai.APIError as e:
         logger.error(f"OpenAI API hatası: {e}")

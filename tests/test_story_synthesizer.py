@@ -193,6 +193,69 @@ class TestSynthesizeStory(unittest.TestCase):
             results = ss.synthesize_stories(stories)
         self.assertEqual(results, stories)
 
+    @patch.dict(os.environ, {"OPENAI_API_KEY": "fake-key"}, clear=False)
+    def test_empty_response_content_returns_story_unchanged(self):
+        story = _make_story([_make_article()])
+        client = MagicMock()
+        response = MagicMock()
+        response.choices = [MagicMock()]
+        response.choices[0].message.content = None
+        response.choices[0].finish_reason = "length"
+        client.chat.completions.create.return_value = response
+
+        with _temp_cache() as cache_dir:
+            result = ss.synthesize_story(story, client=client, cache_dir=cache_dir)
+        self.assertEqual(result, story)
+
+    @patch.dict(os.environ, {"OPENAI_API_KEY": "fake-key"}, clear=False)
+    def test_reasoning_model_uses_higher_completion_budget(self):
+        story = _make_story([_make_article()])
+        client = _mock_client({
+            "brief_summary": "Kısa.",
+            "detailed_summary": "Detay.",
+            "key_facts": ["Fakt"],
+            "why_it_matters": "Önem.",
+        })
+
+        with _temp_cache() as cache_dir:
+            ss.synthesize_story(story, model="gpt-5-mini", client=client, cache_dir=cache_dir)
+
+        call_args = client.chat.completions.create.call_args
+        self.assertEqual(call_args.kwargs["max_completion_tokens"], 4096)
+        self.assertNotIn("temperature", call_args.kwargs)
+
+    @patch.dict(os.environ, {"OPENAI_API_KEY": "fake-key"}, clear=False)
+    def test_non_reasoning_model_uses_lower_completion_budget(self):
+        story = _make_story([_make_article()])
+        client = _mock_client({
+            "brief_summary": "Kısa.",
+            "detailed_summary": "Detay.",
+            "key_facts": ["Fakt"],
+            "why_it_matters": "Önem.",
+        })
+
+        with _temp_cache() as cache_dir:
+            ss.synthesize_story(story, model="gpt-4o-mini", client=client, cache_dir=cache_dir)
+
+        call_args = client.chat.completions.create.call_args
+        self.assertEqual(call_args.kwargs["max_completion_tokens"], 1024)
+        self.assertEqual(call_args.kwargs["temperature"], 0.2)
+
+    @patch.dict(os.environ, {"OPENAI_API_KEY": "fake-key"}, clear=False)
+    def test_cache_key_changes_with_version(self):
+        story = _make_story([_make_article()])
+
+        original_version = ss.CACHE_VERSION
+        try:
+            ss.CACHE_VERSION = "v1"
+            key_v1 = ss._cache_key(story)
+            ss.CACHE_VERSION = "v2"
+            key_v2 = ss._cache_key(story)
+        finally:
+            ss.CACHE_VERSION = original_version
+
+        self.assertNotEqual(key_v1, key_v2)
+
 
 if __name__ == "__main__":
     unittest.main()
