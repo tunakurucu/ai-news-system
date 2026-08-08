@@ -10,6 +10,7 @@ from services.statistics import generate_statistics
 from services.script_generator import generate_news_script
 from services.html_generator import generate_news_html, generate_search_html, get_css, get_js
 from services.story_clustering import generate_stories
+from services.story_synthesizer import synthesize_stories
 from services.archive_generator import generate_archive, generate_search_index
 from services.publisher import publish
 from services.newsletter_sender import send_newsletter
@@ -68,6 +69,7 @@ def main():
 
     stats = generate_statistics(categorized_news)
     stories = generate_stories(categorized_news)
+    stories = synthesize_stories(stories)
     script = generate_news_script(categorized_news)
     html = generate_news_html(categorized_news, stats)
     css = get_css()
