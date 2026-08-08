@@ -247,14 +247,33 @@ class TestSynthesizeStory(unittest.TestCase):
 
         original_version = ss.CACHE_VERSION
         try:
-            ss.CACHE_VERSION = "v1"
-            key_v1 = ss._cache_key(story)
-            ss.CACHE_VERSION = "v2"
+            ss.CACHE_VERSION = "2"
             key_v2 = ss._cache_key(story)
+            ss.CACHE_VERSION = "3"
+            key_v3 = ss._cache_key(story)
         finally:
             ss.CACHE_VERSION = original_version
 
-        self.assertNotEqual(key_v1, key_v2)
+        self.assertNotEqual(key_v2, key_v3)
+
+    def test_cache_version_is_current(self):
+        self.assertEqual(ss.CACHE_VERSION, "3")
+
+    def test_system_prompt_forbids_unsupported_significance(self):
+        prompt = ss._SYSTEM_PROMPT.lower()
+        self.assertIn("niyet", prompt)
+        self.assertIn("motivasyon", prompt)
+        self.assertIn("strateji", prompt)
+        self.assertIn("desteklenmeyen gelecekteki", prompt)
+
+    def test_key_facts_prompt_avoids_metadata_filler(self):
+        prompt = ss._SYSTEM_PROMPT.lower()
+        description = ss._OUTPUT_SCHEMA["json_schema"]["schema"]["properties"]["key_facts"]["description"].lower()
+        self.assertIn("kaynak adı", prompt)
+        self.assertIn("yayın tarihi", prompt)
+        self.assertIn("url", prompt)
+        self.assertIn("kaynak adı", description)
+        self.assertIn("hedef sayıya ulaşmak", description)
 
 
 if __name__ == "__main__":

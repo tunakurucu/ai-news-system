@@ -14,7 +14,7 @@ logger = get_logger()
 DEFAULT_MODEL = "gpt-5-mini"
 DEFAULT_MAX_TOKENS = 1024
 REASONING_MAX_TOKENS = 4096
-CACHE_VERSION = "2"
+CACHE_VERSION = "3"
 CACHE_DIR = Path(__file__).resolve().parent.parent.parent / "data" / "cache" / "synthesis"
 
 
@@ -37,11 +37,11 @@ _OUTPUT_SCHEMA = {
                 "key_facts": {
                     "type": "array",
                     "items": {"type": "string"},
-                    "description": "Olayın kendisine ait, kaynak metinlerde desteklenen 3-6 somut ve tekrar etmeyen bilgi noktası. Yalnızca yayın tarihi, kaynak adı, URL veya makale başlığı gibi meta verileri tekrar etme.",
+                    "description": "Olayın kendisine ait 3-6 somut bilgi noktası. Kaynak adı, yayın tarihi, URL veya makale başlığı gibi meta verileri tekrar etme. Kaynak yetersizse daha az madde yaz; hedef sayıya ulaşmak için uydurma veya 'kaynak daha fazla ayrıntı vermiyor' gibi dolgu kullanma.",
                 },
                 "why_it_matters": {
                     "type": "string",
-                    "description": "Gelişmenin pratik önemi; ancak kaynaklarda açıkça desteklenen veya doğrudan çıkarılabilir sonuçlar. Desteklenmeyen genel bilgi, tahmin veya spekülasyon ekleme. Kaynaklar anlamlı bir önem ifade etmiyorsa boş string döndür.",
+                    "description": "Gelişmenin kaynak metinlerde açıkça belirtilen veya verilen gerçeklerden doğrudan, yakın çıkarım gerektirmeden izlenen önemi. Kişi/kurumun niyet, motivasyon, strateji, amaç veya istenen kamu tepkisi çıkarımı yapma. Desteklenmeyen gelecekteki siyasi, sosyal, ekonomik, hukuki, güvenlik, sağlık veya pratik etkiler öne sürme. Sağlıklı bir çıkarım yazılamıyorsa boş string döndür.",
                 },
             },
             "required": ["brief_summary", "detailed_summary", "key_facts", "why_it_matters"],
@@ -59,11 +59,20 @@ _SYSTEM_PROMPT = (
     "- Kişi, kurum, tarih, sayı ve iddiaları doğru aktar.\n"
     "- Kaynaklar arasında önemli bir fark veya çelişki varsa kısaca belirt.\n"
     "- brief_summary 1-2 cümle, detailed_summary birkaç kısa paragraf olsun.\n"
-    "- key_facts 3-6 maddelik, OLAYIN KENDİSİNE ait somut ve tekrar etmeyen bilgi noktaları içersin. "
-    "Yalnızca yayın tarihi, kaynak adı, URL veya makale başlığı gibi meta verileri tekrar etme; bunlar yalnızca haber değeri taşıdığında kullanılabilir.\n"
-    "- why_it_matters bölümünde, kaynaklarda açıkça desteklenen veya doğrudan çıkarılabilir pratik önemi yaz. "
-    "Desteklenmeyen genel bilgi, muhtemel ama kanıtlanmamış sonuç veya spekülatif siyasi/ekonomik/jeopolitik etki ekleme. "
-    "Kaynaklar anlamlı bir önem ifade etmiyorsa, yalnızca verili gerçeklere dayanan çok kısa ve tutarlı bir ifade yaz; hiçbir şey yazamıyorsan boş string döndür.\n"
+    "- key_facts, OLAYIN KENDİSİNE ait somut bilgi noktalarından oluşsun. "
+    "Kaynak adı, yayın tarihi, URL veya makale başlığı gibi meta verileri tekrar etme. "
+    "Kaynaklar sınırlı bilgi içeriyorsa daha az madde yaz; 3-6 hedefine ulaşmak için uydurma veya 'kaynak daha fazla ayrıntı vermiyor' gibi dolgu kullanma.\n"
+    "- why_it_matters bölümünde YALNIZCA şu iki tür önem ifadesine izin verilir:\n"
+    "  1) Kaynak metinde açıkça belirtilen önem veya sonuç.\n"
+    "  2) Verilen somut gerçeklerden doğrudan, yakın çıkarım gerektirmeden izlenebilen, dış bilgi veya spekülasyon gerektirmeyen bir sonuç.\n"
+    "- Aşağıdakileri YAPMA:\n"
+    "  - Kişi, kurum veya tarafların niyet, motivasyon, strateji, amaç veya istenen kamu tepkisini çıkarma.\n"
+    "  - Desteklenmeyen gelecekteki siyasi, sosyal, ekonomik, hukuki, güvenlik, sağlık veya pratik etkiler uydurma.\n"
+    "  - 'Genel sağduyu' kabulünü gerçekmiş gibi yazma.\n"
+    "  - Bir açıklamanın 'destek arayacağını', 'farkındalık yaratacağını' veya 'sorumluluğu belirlemeye yardımcı olacağını' gibi muhtemel ama kaynakta doğrudan denmemiş sonuçlar öne sürme.\n"
+    "- Örnek uygun çıkarım: Kaynak 'sürecin ilk hukuki adımı ve komisyon incelemesine girdiğini' belirtiyorsa, 'söz konusu sürecin yasama aşaması başladı' denebilir.\n"
+    "- Örnek uygun çıkarım: Kaynak '232 yerel yönetici partiden ayrıldığını' belirtiyorsa, 'partinin yerel yönetici sayısı azaldı' denebilir.\n"
+    "- why_it_matters bölümünde sağlıklı bir kaynakçı çıkarımı yapılamıyorsa boş string döndür.\n"
     "- Yazım tarzı: tarafsız, olgun, editoryal, gereksiz sıfat ve yapay dolgu cümlelerden kaçın.\n"
     "- Çıktı JSON formatında ve aşağıdaki alanları içermeli: brief_summary, detailed_summary, key_facts, why_it_matters.\n"
 )
