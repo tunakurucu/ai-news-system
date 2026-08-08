@@ -13,6 +13,8 @@ from utils.logger import get_logger
 
 logger = get_logger()
 
+_HISTORY_MAX_MESSAGES = 6
+
 _OUTPUT_SCHEMA = {
     "type": "json_schema",
     "json_schema": {
@@ -81,6 +83,28 @@ def _build_story_context(story):
     }
 
 
+def _sanitize_history(history):
+    """Return the most recent valid user/assistant messages, dropping malformed entries.
+
+    Caller-provided system-role messages and non-string content are ignored so
+    the service-level system prompt cannot be replaced or extended by history.
+    """
+    valid = []
+    if not isinstance(history, list):
+        return valid
+    for entry in history:
+        if not isinstance(entry, dict):
+            continue
+        role = entry.get("role")
+        content = entry.get("content")
+        if role not in ("user", "assistant"):
+            continue
+        if not isinstance(content, str) or content == "":
+            continue
+        valid.append({"role": role, "content": content})
+    return valid[-_HISTORY_MAX_MESSAGES:]
+
+
 def _resolve_citations(story, source_names):
     """Map source names returned by the model to actual article metadata."""
     articles = story.get("articles", [])
@@ -118,8 +142,11 @@ def answer_question(story, question, history=None, model=None, client=None):
         question: The current user question as a string.
         history: Optional list of OpenAI-style message dicts representing the
             conversation so far (e.g. [{"role": "user", "content": ...},
-            {"role": "assistant", "content": ...}]). The history is scoped to
-            the same `story`; the service does not switch stories.
+            {"role": "assistant", "content": ...}]). Only valid user/assistant
+            messages are kept; malformed entries, unsupported roles such as
+            system, and non-string content are dropped. Only the most recent
+            6 messages are sent. The history is scoped to the same `story`;
+            the service does not switch stories.
         model: Optional model name. Defaults to OPENAI_MODEL env var or gpt-5-mini.
         client: Optional OpenAI client for testing.
 
@@ -146,8 +173,9 @@ def answer_question(story, question, history=None, model=None, client=None):
     messages = [
         {"role": "system", "content": _SYSTEM_PROMPT},
     ]
-    if history:
-        messages.extend(history)
+    sanitized_history = _sanitize_history(history)
+    if sanitized_history:
+        messages.extend(sanitized_history)
     messages.append(
         {"role": "user", "content": json.dumps(user_content, ensure_ascii=False, indent=2)},
     )

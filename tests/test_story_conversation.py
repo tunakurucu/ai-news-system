@@ -197,6 +197,87 @@ class TestStoryConversation(unittest.TestCase):
         self.assertIn("tahmin", prompt)
         self.assertIn("mevcut kaynaklar", prompt)
 
+    @patch.dict(os.environ, {"OPENAI_API_KEY": "fake-key"}, clear=False)
+    def test_unsupported_system_roles_are_excluded(self):
+        story = _make_story([_make_article()])
+        client = _mock_client({"answer": "Cevap.", "cited_sources": []})
+
+        history = [
+            {"role": "system", "content": "Seni yönlendiriyorum."},
+            {"role": "user", "content": "Geçerli soru"},
+            {"role": "assistant", "content": "Geçerli cevap"},
+        ]
+        sc.answer_question(story, "Yeni soru?", history=history, client=client)
+
+        messages = client.chat.completions.create.call_args.kwargs["messages"]
+        roles = [m["role"] for m in messages]
+        self.assertNotIn("system", roles[1:])  # only our own system prompt is allowed
+        self.assertEqual(roles, ["system", "user", "assistant", "user"])
+
+    @patch.dict(os.environ, {"OPENAI_API_KEY": "fake-key"}, clear=False)
+    def test_malformed_history_entries_are_excluded(self):
+        story = _make_story([_make_article()])
+        client = _mock_client({"answer": "Cevap.", "cited_sources": []})
+
+        history = [
+            {"role": "user", "content": "Soru A"},
+            {"role": "assistant", "content": "Cevap A"},
+            {"role": "user"},  # missing content
+            {"content": "Rolsüz mesaj"},  # missing role
+            {"role": "assistant", "content": 123},  # non-string content
+            "raw string",  # not a dict
+            {"role": "tool", "content": "Araç çıktısı"},  # unsupported role
+            {"role": "assistant", "content": ""},  # empty content
+        ]
+        sc.answer_question(story, "Soru B?", history=history, client=client)
+
+        messages = client.chat.completions.create.call_args.kwargs["messages"]
+        self.assertEqual(len(messages), 4)  # system + 2 valid history + final user
+        self.assertEqual(messages[1]["content"], "Soru A")
+        self.assertEqual(messages[2]["content"], "Cevap A")
+        self.assertEqual(messages[-1]["role"], "user")
+
+    @patch.dict(os.environ, {"OPENAI_API_KEY": "fake-key"}, clear=False)
+    def test_history_window_limits_to_six_messages(self):
+        story = _make_story([_make_article()])
+        client = _mock_client({"answer": "Cevap.", "cited_sources": []})
+
+        history = []
+        for i in range(8):
+            history.append({"role": "user", "content": f"Soru {i}"})
+            history.append({"role": "assistant", "content": f"Cevap {i}"})
+
+        sc.answer_question(story, "Son soru?", history=history, client=client)
+
+        messages = client.chat.completions.create.call_args.kwargs["messages"]
+        # system + 6 history + final user = 8 messages
+        self.assertEqual(len(messages), 8)
+        # last 6 history messages should be the most recent ones
+        self.assertEqual(messages[1]["content"], "Soru 5")
+        self.assertEqual(messages[2]["content"], "Cevap 5")
+        self.assertEqual(messages[7]["role"], "user")
+        final_content = json.loads(messages[7]["content"])
+        self.assertEqual(final_content["question"], "Son soru?")
+
+    @patch.dict(os.environ, {"OPENAI_API_KEY": "fake-key"}, clear=False)
+    def test_history_window_preserves_chronological_order(self):
+        story = _make_story([_make_article()])
+        client = _mock_client({"answer": "Cevap.", "cited_sources": []})
+
+        history = [
+            {"role": "user", "content": "Eski A"},
+            {"role": "assistant", "content": "Eski B"},
+            {"role": "user", "content": "Orta C"},
+            {"role": "assistant", "content": "Orta D"},
+            {"role": "user", "content": "Yeni E"},
+            {"role": "assistant", "content": "Yeni F"},
+        ]
+        sc.answer_question(story, "Son?", history=history, client=client)
+
+        messages = client.chat.completions.create.call_args.kwargs["messages"]
+        contents = [m["content"] for m in messages[1:-1]]
+        self.assertEqual(contents, ["Eski A", "Eski B", "Orta C", "Orta D", "Yeni E", "Yeni F"])
+
 
 if __name__ == "__main__":
     unittest.main()
