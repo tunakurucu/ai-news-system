@@ -278,6 +278,44 @@ class TestStoryConversation(unittest.TestCase):
         contents = [m["content"] for m in messages[1:-1]]
         self.assertEqual(contents, ["Eski A", "Eski B", "Orta C", "Orta D", "Yeni E", "Yeni F"])
 
+    @patch.dict(os.environ, {"OPENAI_API_KEY": "fake-key"}, clear=False)
+    def test_allegations_distinguished_from_arrest_legal_basis(self):
+        allegation_summary = (
+            "Soruşturma kapsamında rüşvet, irtikap, resmi belgede sahtecilik, "
+            "görevi kötüye kullanma ve imar kirliliğine neden olma suçlamalarına yer veriliyor."
+        )
+        articles = [
+            _make_article(
+                source="TRT Haber",
+                title="Belediye başkanı tutuklandı",
+                summary=allegation_summary,
+                link="http://trt.example/tutuklama",
+            ),
+        ]
+        story = _make_story(articles, title="Belediye başkanı tutuklandı")
+        client = _mock_client({
+            "answer": (
+                "Kaynaklar tutuklamanın hukuki gerekçesini ayrıntılandırmıyor. "
+                "TRT Haber'e göre soruşturma rüşvet, irtikap, resmi belgede sahtecilik, "
+                "görevi kötüye kullanma ve imar kirliliğine neden olma suçlamalarını kapsıyor."
+            ),
+            "cited_sources": ["TRT Haber"],
+        })
+
+        result = sc.answer_question(story, "Bu soruşturmada neden tutuklandılar?", client=client)
+
+        self.assertIn("hukuki gerekçesini", result["answer"])
+        self.assertNotIn("nedeniyle tutuklandı", result["answer"])
+        self.assertEqual(result["citations"], [
+            {"source": "TRT Haber", "title": "Belediye başkanı tutuklandı", "link": "http://trt.example/tutuklama"},
+        ])
+
+        # The system prompt must carry the instruction that prevents overstating allegations as cause.
+        messages = client.chat.completions.create.call_args.kwargs["messages"]
+        system_prompt = messages[0]["content"].lower()
+        self.assertIn("hukuki gerekçesini", system_prompt)
+        self.assertIn("nedeniyle tutuklandı", system_prompt)
+
 
 if __name__ == "__main__":
     unittest.main()

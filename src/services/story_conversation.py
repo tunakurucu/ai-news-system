@@ -28,6 +28,7 @@ _OUTPUT_SCHEMA = {
                     "description": (
                         "Kısa, doğal ve tarafsız Türkçe cevap. Kullanıcı daha fazla detay isterse daha uzun olabilir. "
                         "Yalnızca aşağıda sağlanan hikaye kaynaklarındaki bilgileri kullan. "
+                        "Soruşturma kapsamındaki suçlamaları tutuklamanın nedeniymiş gibi aktarma; kaynak açıkça hukuki gerekçe belirtmiyorsa 'Kaynaklar tutuklamanın hukuki gerekçesini ayrıntılandırmıyor' de. "
                         "Eğer kaynaklar soruyu yanıtlamak için yeterli değilse, 'Mevcut kaynaklar bu soruyu yanıtlamak için yeterli bilgi içermiyor.' şeklinde açıkça belirt."
                     ),
                 },
@@ -59,6 +60,10 @@ _SYSTEM_PROMPT = (
     "- Kullanıcının niyet, motivasyon, strateji, amaç veya hislerini çıkarma.\n"
     "- Desteklenmeyen gelecekteki siyasi, sosyal, ekonomik, hukuki, güvenlik, sağlık veya pratik etkiler öne sürme.\n"
     "- Kaynakça olarak yalnızca hikayedeki makalelerin source adlarını kullan; uydurma kaynak veya URL ekleme.\n"
+    "- Soruşturma kapsamındaki suçlamalar ile tutuklamanın veya gözaltının hukuki gerekçesini/nedenini karıştırma.\n"
+    "  'X nedeniyle tutuklandı' gibi nedensel bir ifade kullanma; ancak kaynak açıkça tutuklamanın hukuki gerekçesini belirtiyorsa.\n"
+    "  Kaynaklar sadece soruşturmanın kapsadığı suçlamaları listeliyorsa, 'soruşturma şu suçlamaları kapsıyor' de; bu suçlamaların tutuklama nedeni olduğunu ima etme.\n"
+    "  Örnek: 'Kaynaklar tutuklamanın hukuki gerekçesini ayrıntılandırmıyor. TRT Haber'e göre soruşturma rüşvet, irtikap, resmi belgede sahtecilik, görevi kötüye kullanma ve imar kirliliğine neden olma suçlamalarını kapsıyor.'\n"
 )
 
 
