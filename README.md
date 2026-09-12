@@ -51,6 +51,14 @@ OPENAI_MODEL=gpt-5-mini
 
 Never commit a real API key.
 
+## GitHub automation
+
+The `Daily AI News` workflow can run on a schedule or manually. Generated archive data is stored on the `archive-data` branch.
+
+Add `OPENAI_API_KEY` as a repository secret to enable story synthesis. Newsletter delivery is off by default. To enable it, set the `SEND_NEWSLETTER` repository variable to `true` and add `RESEND_API_KEY` and `NEWSLETTER_TO` as secrets.
+
+Optional repository variables are `OPENAI_MODEL`, `NEWSLETTER_FROM`, and `NEWSLETTER_SITE_URL`.
+
 ## Current status
 
 The collection, cleanup, categorization, story clustering, grounded synthesis, archive, search, and publishing flows are implemented. Voice and video generation remain future work.
