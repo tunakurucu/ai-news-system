@@ -58,10 +58,13 @@ jobs:
 
       - name: Run AI News System
         env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL || 'gpt-5-mini' }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           NEWSLETTER_TO: ${{ secrets.NEWSLETTER_TO }}
-          NEWSLETTER_FROM: "AI News <onboarding@resend.dev>"
-          SEND_NEWSLETTER: "true"
+          NEWSLETTER_FROM: ${{ vars.NEWSLETTER_FROM || 'AI News <onboarding@resend.dev>' }}
+          NEWSLETTER_SITE_URL: ${{ vars.NEWSLETTER_SITE_URL || 'https://tunakurucu.github.io/ai-news-system/' }}
+          SEND_NEWSLETTER: ${{ vars.SEND_NEWSLETTER || 'false' }}
         run: python src/main.py
       
       - name: Save persistent archive
