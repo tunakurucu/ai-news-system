@@ -1,7 +1,0 @@
-python-dotenv
-requests
-feedparser
-openai
-moviepy
-pydub
-resend
