@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">13 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">13 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>genel</strong> 23</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>gümrük</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Okullarda güvenlik seferberliği: 31 bin okul bahçe görevlisi sahada</h3>
+        <p>İçişleri Bakanı Mustafa Çiftçi, 2026-2027 eğitim öğretim yılında öğrencilerin huzur ve güven içinde eğitim görmesi amacıyla okul ve çevrelerinde güvenlik tedbirlerinin artırılacağını söyledi. 81 ilde 31 bin okul bahçe görevlisi için planlama tamamlandı.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 13 Eylül 2026, 12:38</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/okullarda-guvenlik-seferberligi-31-bin-okul-bahce-gorevlisi-sahada-956698.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 13 Eylül 2026, 12:30</span>
+            </div>
+            <h3>Dışişleri Bakanı Hakan Fidan Suriye&#x27;de</h3>
+            <p>Dışişleri Bakanı Hakan Fidan Suriye&#x27;ye ziyaret gerçekleştiriyor. Fidan, Suriye Dışişleri Bakanı Esad Hasan Şeybani ile görüşecek. Suriye Cumhurbaşkanı Şara tarafından da kabul edilmesi bekleniyor. Bakan Fidan&#x27;ın temaslarında, terör örgütü YPG/SDG&#x27;nin entegrasyon süreci ve kendini feshetmesine ilişkin gelişmeler öncelikli gündem maddeleri.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/disisleri-bakani-hakan-fidan-suriyede-956691.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 13 Eylül 2026, 10:13</span>
+            </div>
+            <h3>Yemen savaşın eşiğinde: &#x27;Birbirimize sarılıp ölmeyi bekliyoruz&#x27;</h3>
+            <p>İran destekli Husiler ile Suudi Arabistan destekli ve uluslararası alanda tanınan hükümet arasındaki ateşkesin çökeceğine dair endişeler artarken, Yemen&#x27;in kuzeybatı bölgeleri üzerindeki semalarda savaş uçaklarının sesi yeniden duyuluyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c36lkde7ke8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 13 Eylül 2026, 12:42</span>
+            </div>
+            <h3>Evlilik hazırlığındaki gençlere 1191 firmadan indirim desteği</h3>
+            <p>Aile ve Sosyal Hizmetler Bakanlığınca hayata geçirilen &quot;Evlenecek Gençlerin Desteklenmesi Projesi&quot; kapsamında, gençlere indirim desteği sağlayan firma sayısı yerel düzeyde 1147, ulusal düzeyde 44 olmak üzere 1191&#x27;e ulaştı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/evlilik-hazirligindaki-genclere-1191-firmadan-indirim-destegi-956699.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 13 Eylül 2026, 11:21</span>
+            </div>
+            <h3>İstanbul Havalimanı&#x27;nın yeni pisti için açılış tarihi belli oldu</h3>
+            <p>İstanbul Havalimanı&#x27;nın 4. ana pisti, Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın katılımlarıyla 18 Eylül&#x27;de hizmete açılacak. Bununla birlikte havalimanındaki pist sayısı 6&#x27;ya çıkmış olacak.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbul-havalimaninin-yeni-pisti-icin-acilis-tarihi-belli-oldu-956695.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="okullarda güvenlik seferberliği: 31 bin okul bahçe görevlisi sahada i̇çişleri bakanı mustafa çiftçi, 2026-2027 eğitim öğretim yılında öğrencilerin huzur ve güven içinde eğitim görmesi amacıyla okul ve çevrelerinde güvenlik tedbirlerinin artırılacağını söyledi. 81 ilde 31 bin okul bahçe görevlisi için planlama tamamlandı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 13 Eylül 2026, 12:38</span>
+        </div>
+        <h3>Okullarda güvenlik seferberliği: 31 bin okul bahçe görevlisi sahada</h3>
+        <p>İçişleri Bakanı Mustafa Çiftçi, 2026-2027 eğitim öğretim yılında öğrencilerin huzur ve güven içinde eğitim görmesi amacıyla okul ve çevrelerinde güvenlik tedbirlerinin artırılacağını söyledi. 81 ilde 31 bin okul bahçe görevlisi için planlama tamamlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Eylül 2026, 12:38</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/okullarda-guvenlik-seferberligi-31-bin-okul-bahce-gorevlisi-sahada-956698.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul havalimanı&#x27;nın yeni pisti için açılış tarihi belli oldu i̇stanbul havalimanı&#x27;nın 4. ana pisti, cumhurbaşkanı recep tayyip erdoğan&#x27;ın katılımlarıyla 18 eylül&#x27;de hizmete açılacak. bununla birlikte havalimanındaki pist sayısı 6&#x27;ya çıkmış olacak. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 13 Eylül 2026, 11:21</span>
+        </div>
+        <h3>İstanbul Havalimanı&#x27;nın yeni pisti için açılış tarihi belli oldu</h3>
+        <p>İstanbul Havalimanı&#x27;nın 4. ana pisti, Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın katılımlarıyla 18 Eylül&#x27;de hizmete açılacak. Bununla birlikte havalimanındaki pist sayısı 6&#x27;ya çıkmış olacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Eylül 2026, 11:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbul-havalimaninin-yeni-pisti-icin-acilis-tarihi-belli-oldu-956695.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rusya: ukrayna&#x27;da lojistik merkezi, enerji ve demir yolu altyapı tesislerini vurduk rusya savunma bakanlığı, ukrayna&#x27;da lojistik merkezi, enerji ve demir yolu altyapı tesislerini vurduklarını bildirdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 13 Eylül 2026, 10:57</span>
+        </div>
+        <h3>Rusya: Ukrayna&#x27;da lojistik merkezi, enerji ve demir yolu altyapı tesislerini vurduk</h3>
+        <p>Rusya Savunma Bakanlığı, Ukrayna&#x27;da lojistik merkezi, enerji ve demir yolu altyapı tesislerini vurduklarını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Eylül 2026, 10:57</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/rusya-ukraynada-lojistik-merkezi-enerji-ve-demir-yolu-altyapi-tesislerini-vurduk-956692.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kurulmasına öncülük ettiği &quot;umut evleri&quot;yle gençlerin hayata tutunmalarına destek oluyor darülaceze&#x27;de başlayan gönüllülüğünü 53 yıldır sürdüren emekli hemşire gürak, devlet korumasındaki çocukların 18 yaşını doldurduktan sonra da hayata tutunabilmeleri için hayırseverlerin de desteğiyle &quot;umut evleri&quot;nin kurulmasına öncülük etti. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Eylül 2026, 11:26</span>
+        </div>
+        <h3>Kurulmasına öncülük ettiği &quot;Umut Evleri&quot;yle gençlerin hayata tutunmalarına destek oluyor</h3>
+        <p>Darülaceze&#x27;de başlayan gönüllülüğünü 53 yıldır sürdüren emekli hemşire Gürak, devlet korumasındaki çocukların 18 yaşını doldurduktan sonra da hayata tutunabilmeleri için hayırseverlerin de desteğiyle &quot;Umut Evleri&quot;nin kurulmasına öncülük etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Eylül 2026, 11:26</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kurulmasina-onculuk-ettigi-umut-evleriyle-genclerin-hayata-tutunmalarina-destek-oluyor/4055692" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="lgbt&#x27;cilerin tezi bilimsel temeli kalmadığı için kültürel olarak işlenmeye çalışılıyor üsküdar üniversitesi kurucu rektörü prof. dr. tarhan, lgbt taraftarlarının cinsel kimlik ve eşcinselliğin genetik bir temele dayandığı yönündeki görüşlerinin, bu alanda belirleyici bir gen ortaya konulamaması nedeniyle çürüdüğünü bildirdi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Eylül 2026, 10:12</span>
+        </div>
+        <h3>LGBT&#x27;cilerin tezi bilimsel temeli kalmadığı için kültürel olarak işlenmeye çalışılıyor</h3>
+        <p>Üsküdar Üniversitesi Kurucu Rektörü Prof. Dr. Tarhan, LGBT taraftarlarının cinsel kimlik ve eşcinselliğin genetik bir temele dayandığı yönündeki görüşlerinin, bu alanda belirleyici bir gen ortaya konulamaması nedeniyle çürüdüğünü bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Eylül 2026, 10:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/lgbtcilerin-tezi-bilimsel-temeli-kalmadigi-icin-kulturel-olarak-islenmeye-calisiliyor/4055630" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">23 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="dışişleri bakanı hakan fidan suriye&#x27;de dışişleri bakanı hakan fidan suriye&#x27;ye ziyaret gerçekleştiriyor. fidan, suriye dışişleri bakanı esad hasan şeybani ile görüşecek. suriye cumhurbaşkanı şara tarafından da kabul edilmesi bekleniyor. bakan fidan&#x27;ın temaslarında, terör örgütü ypg/sdg&#x27;nin entegrasyon süreci ve kendini feshetmesine ilişkin gelişmeler öncelikli gündem maddeleri. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 13 Eylül 2026, 12:30</span>
+        </div>
+        <h3>Dışişleri Bakanı Hakan Fidan Suriye&#x27;de</h3>
+        <p>Dışişleri Bakanı Hakan Fidan Suriye&#x27;ye ziyaret gerçekleştiriyor. Fidan, Suriye Dışişleri Bakanı Esad Hasan Şeybani ile görüşecek. Suriye Cumhurbaşkanı Şara tarafından da kabul edilmesi bekleniyor. Bakan Fidan&#x27;ın temaslarında, terör örgütü YPG/SDG&#x27;nin entegrasyon süreci ve kendini feshetmesine ilişkin gelişmeler öncelikli gündem maddeleri.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Eylül 2026, 12:30</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/disisleri-bakani-hakan-fidan-suriyede-956691.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yemen savaşın eşiğinde: &#x27;birbirimize sarılıp ölmeyi bekliyoruz&#x27; i̇ran destekli husiler ile suudi arabistan destekli ve uluslararası alanda tanınan hükümet arasındaki ateşkesin çökeceğine dair endişeler artarken, yemen&#x27;in kuzeybatı bölgeleri üzerindeki semalarda savaş uçaklarının sesi yeniden duyuluyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 13 Eylül 2026, 10:13</span>
+        </div>
+        <h3>Yemen savaşın eşiğinde: &#x27;Birbirimize sarılıp ölmeyi bekliyoruz&#x27;</h3>
+        <p>İran destekli Husiler ile Suudi Arabistan destekli ve uluslararası alanda tanınan hükümet arasındaki ateşkesin çökeceğine dair endişeler artarken, Yemen&#x27;in kuzeybatı bölgeleri üzerindeki semalarda savaş uçaklarının sesi yeniden duyuluyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Eylül 2026, 10:13</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c36lkde7ke8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="evlilik hazırlığındaki gençlere 1191 firmadan indirim desteği aile ve sosyal hizmetler bakanlığınca hayata geçirilen &quot;evlenecek gençlerin desteklenmesi projesi&quot; kapsamında, gençlere indirim desteği sağlayan firma sayısı yerel düzeyde 1147, ulusal düzeyde 44 olmak üzere 1191&#x27;e ulaştı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 13 Eylül 2026, 12:42</span>
+        </div>
+        <h3>Evlilik hazırlığındaki gençlere 1191 firmadan indirim desteği</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanlığınca hayata geçirilen &quot;Evlenecek Gençlerin Desteklenmesi Projesi&quot; kapsamında, gençlere indirim desteği sağlayan firma sayısı yerel düzeyde 1147, ulusal düzeyde 44 olmak üzere 1191&#x27;e ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Eylül 2026, 12:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/evlilik-hazirligindaki-genclere-1191-firmadan-indirim-destegi-956699.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="lgbt kavramlarına maruz kalan çocuklar cinsiyet kimliği kriziyle karşı karşıya marmara üniversitesi i̇letişim fakültesi bilişim ana bilim dalı öğretim üyesi prof. dr. işıklı, lgbt ve cinsiyet kavramlarıyla ilgili erken yaşta çok fazla içeriğe maruz kalan çocukların, cinsiyet kimliği kriziyle karşı karşıya olduğunu belirtti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Eylül 2026, 11:19</span>
+        </div>
+        <h3>LGBT kavramlarına maruz kalan çocuklar cinsiyet kimliği kriziyle karşı karşıya</h3>
+        <p>Marmara Üniversitesi İletişim Fakültesi Bilişim Ana Bilim Dalı Öğretim Üyesi Prof. Dr. Işıklı, LGBT ve cinsiyet kavramlarıyla ilgili erken yaşta çok fazla içeriğe maruz kalan çocukların, cinsiyet kimliği kriziyle karşı karşıya olduğunu belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Eylül 2026, 11:19</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/lgbt-kavramlarina-maruz-kalan-cocuklar-cinsiyet-kimligi-kriziyle-karsi-karsiya/4055689" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="evlenecek gençlere indirim desteği sağlayan firma sayısı 1191&#x27;e yükseldi aile ve sosyal hizmetler bakanlığınca hayata geçirilen &quot;evlenecek gençlerin desteklenmesi projesi&quot; kapsamında, gençlere indirim desteği sağlayan firma sayısı yerel düzeyde 1147, ulusal düzeyde 44 olmak üzere 1191&#x27;e ulaştı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Eylül 2026, 11:35</span>
+        </div>
+        <h3>Evlenecek gençlere indirim desteği sağlayan firma sayısı 1191&#x27;e yükseldi</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanlığınca hayata geçirilen &quot;Evlenecek Gençlerin Desteklenmesi Projesi&quot; kapsamında, gençlere indirim desteği sağlayan firma sayısı yerel düzeyde 1147, ulusal düzeyde 44 olmak üzere 1191&#x27;e ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Eylül 2026, 11:35</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/evlenecek-genclere-indirim-destegi-saglayan-firma-sayisi-1191e-yukseldi/4055700" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milli eğitim bakanı tekin: maarif modelimizin &#x27;yetkin ve erdemli insan&#x27; anlayışı eğitime bakışımızı tayin ediyor bakan tekin &quot;türkiye yüzyılı maarif modeli ile yeni eğitim öğretim yılına girerken iki yılın tecrübesini de yanımıza alıyoruz. modelimizin merkezinde yer alan &#x27;yetkin ve erdemli insan&#x27; anlayışı eğitime bakışımızın istikametini tayin ediyor&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Eylül 2026, 11:03</span>
+        </div>
+        <h3>Milli Eğitim Bakanı Tekin: Maarif Modelimizin &#x27;yetkin ve erdemli insan&#x27; anlayışı eğitime bakışımızı tayin ediyor</h3>
+        <p>Bakan Tekin &quot;Türkiye Yüzyılı Maarif Modeli ile yeni eğitim öğretim yılına girerken iki yılın tecrübesini de yanımıza alıyoruz. Modelimizin merkezinde yer alan &#x27;yetkin ve erdemli insan&#x27; anlayışı eğitime bakışımızın istikametini tayin ediyor&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Eylül 2026, 11:03</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/milli-egitim-bakani-tekinden-yeni-egitim-ogretim-yili-mesaji/4055667" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dışişleri bakanlığı, irak&#x27;tan suudi arabistan&#x27;a düzenlenen si̇ha saldırısını kınadı irak, i̇ran sınırındaki bir bölgeden gelen saldırıyla ilgili soruşturma başlattı ve bir komutanı görevden aldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 13 Eylül 2026, 12:03</span>
+        </div>
+        <h3>Dışişleri Bakanlığı, Irak&#x27;tan Suudi Arabistan&#x27;a düzenlenen SİHA saldırısını kınadı</h3>
+        <p>Irak, İran sınırındaki bir bölgeden gelen saldırıyla ilgili soruşturma başlattı ve bir komutanı görevden aldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Eylül 2026, 12:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c62e097r6rqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="aşil kalkanı: türkiye ve yunanistan arasındaki yumuşama bitiyor mu? türkiye ve yunanistan&#x27;ın son dönemde yaptığı karşılıklı deniz parkı ve deniz mekânsal planlama açıklamaları, hava sahası ihlali iddiaları ve farklı bölgesel aktörlerle hizalanmaları ege&#x27;de suların tekrar kızışabileceğine işaret ediyor. peki ege&#x27;nin iki kıyısında gerilim tekrar artacak mı? yakınlaşma dönemi sona mı erecek? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 12 Eylül 2026, 10:16</span>
+        </div>
+        <h3>Aşil Kalkanı: Türkiye ve Yunanistan arasındaki yumuşama bitiyor mu?</h3>
+        <p>Türkiye ve Yunanistan&#x27;ın son dönemde yaptığı karşılıklı deniz parkı ve deniz mekânsal planlama açıklamaları, hava sahası ihlali iddiaları ve farklı bölgesel aktörlerle hizalanmaları Ege&#x27;de suların tekrar kızışabileceğine işaret ediyor. Peki Ege&#x27;nin iki kıyısında gerilim tekrar artacak mı? Yakınlaşma dönemi sona mı erecek?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Eylül 2026, 10:16</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c4g7vdwzp1yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇sveç&#x27;te genel seçim öncesi sağ ve sol bloklar arasında başa baş yarış başbakan ulf kristersson, aşırı sağcı i̇sveç demokratları&#x27;na kabinede yer sözü verdi ancak rakip sol blok anketlerde az farkla önde. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 12 Eylül 2026, 17:47</span>
+        </div>
+        <h3>İsveç&#x27;te genel seçim öncesi sağ ve sol bloklar arasında başa baş yarış</h3>
+        <p>Başbakan Ulf Kristersson, aşırı sağcı İsveç Demokratları&#x27;na kabinede yer sözü verdi ancak rakip sol blok anketlerde az farkla önde.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Eylül 2026, 17:47</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3wj9nzy2nzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kırtasiye ürünlerinde sıkı denetim: 5,9 milyon ürün incelendi ağustos boyunca ve eylülün ilk 10 gününde yapılan kırtasiye denetimlerinde, toplam 33 bin 182 firma denetlendi, 5 milyon 952 bin ürün incelendi ve toplam 182 milyon 559 bin lira idari yaptırım uygulandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 13 Eylül 2026, 11:11</span>
+        </div>
+        <h3>Kırtasiye ürünlerinde sıkı denetim: 5,9 milyon ürün incelendi</h3>
+        <p>Ağustos boyunca ve eylülün ilk 10 gününde yapılan kırtasiye denetimlerinde, toplam 33 bin 182 firma denetlendi, 5 milyon 952 bin ürün incelendi ve toplam 182 milyon 559 bin lira idari yaptırım uygulandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Eylül 2026, 11:11</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/kirtasiye-urunlerinde-siki-denetim-59-milyon-urun-incelendi-956694.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dışişleri bakanı fidan, 13-14 eylül&#x27;de suriye&#x27;yi ziyaret edecek dışişleri bakanı hakan fidan, 13-14 eylül&#x27;de suriye&#x27;ye ziyarette bulunacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Eylül 2026, 12:33</span>
+        </div>
+        <h3>Dışişleri Bakanı Fidan, 13-14 Eylül&#x27;de Suriye&#x27;yi ziyaret edecek</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, 13-14 Eylül&#x27;de Suriye&#x27;ye ziyarette bulunacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Eylül 2026, 12:33</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/disisleri-bakani-fidan-13-14-eylulde-suriyeyi-ziyaret-edecek/4055747" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akademisyenler yumurtalık kanserinin tespitini hızlandıracak test geliştirdi çankırı karatekin üniversitesi ve çanakkale onsekiz mart üniversitesindeki bilim insanları, yumurtalık kanserinin tespitinde kullanılabilecek, yaklaşık 30 saniyede sonuç verebilen ve düşük maliyetle üretilebilen test sistemi geliştirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Eylül 2026, 12:11</span>
+        </div>
+        <h3>Akademisyenler yumurtalık kanserinin tespitini hızlandıracak test geliştirdi</h3>
+        <p>Çankırı Karatekin Üniversitesi ve Çanakkale Onsekiz Mart Üniversitesindeki bilim insanları, yumurtalık kanserinin tespitinde kullanılabilecek, yaklaşık 30 saniyede sonuç verebilen ve düşük maliyetle üretilebilen test sistemi geliştirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Eylül 2026, 12:11</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/akademisyenler-yumurtalik-kanserinin-tespitini-hizlandiracak-test-gelistirdi/4055729" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="öğrencilere yeni eğitim döneminde uyku düzeni uyarısı trakya üniversitesi tıp fakültesi fizyoloji ana bilim dalı başkanı prof. dr. öztürk, yaz tatilinde geç yatıp geç kalkmaya alışan öğrencilerin yeni eğitim döneminde uyku düzenlerini kademeli olarak değiştirmeleri gerektiğini söyledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Eylül 2026, 11:18</span>
+        </div>
+        <h3>Öğrencilere yeni eğitim döneminde uyku düzeni uyarısı</h3>
+        <p>Trakya Üniversitesi Tıp Fakültesi Fizyoloji Ana Bilim Dalı Başkanı Prof. Dr. Öztürk, yaz tatilinde geç yatıp geç kalkmaya alışan öğrencilerin yeni eğitim döneminde uyku düzenlerini kademeli olarak değiştirmeleri gerektiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Eylül 2026, 11:18</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ogrencilere-yeni-egitim-doneminde-uyku-duzeni-uyarisi/4055688" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeni eğitim öğretim yılının ilk ders zili yarın çalacak milli eğitim bakanlığına (meb) bağlı ilk ve ortaöğretim kurumlarında 2026-2027 eğitim-öğretim yılında &quot;maarifin kalbinde oyun&quot; teması esas alınacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Eylül 2026, 10:15</span>
+        </div>
+        <h3>Yeni eğitim öğretim yılının ilk ders zili yarın çalacak</h3>
+        <p>Milli Eğitim Bakanlığına (MEB) bağlı ilk ve ortaöğretim kurumlarında 2026-2027 eğitim-öğretim yılında &quot;Maarifin Kalbinde Oyun&quot; teması esas alınacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Eylül 2026, 10:15</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yeni-egitim-ogretim-yilinin-ilk-ders-zili-yarin-calacak/4055633" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kaos gl&#x27;ye yönelik &#x27;müstehcenlik&#x27; soruşturmasında yöneticiler gözaltına alındı kaos gl derneği yönetim ve denetim kurulu üyeleri, evlerine yapılan baskınlarda gözaltına alındı ve dernek ofisinde arama yapıldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 13 Eylül 2026, 11:56</span>
+        </div>
+        <h3>Kaos GL&#x27;ye yönelik &#x27;müstehcenlik&#x27; soruşturmasında yöneticiler gözaltına alındı</h3>
+        <p>Kaos GL Derneği yönetim ve denetim kurulu üyeleri, evlerine yapılan baskınlarda gözaltına alındı ve dernek ofisinde arama yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Eylül 2026, 11:56</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c624e4q594zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hindistan&#x27;daki su sorununun çözümünde antik su sistemlerinden nasıl yararlanılıyor? su kıtlığı ve iklim değişikliği toplulukları, yüzyıllar önce inşa edilmiş geleneksel su yapılarını yeniden canlandırmaya ve bunları 21. yüzyılda tekrar kullanıma açmaya yöneltiyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 13 Eylül 2026, 10:27</span>
+        </div>
+        <h3>Hindistan&#x27;daki su sorununun çözümünde antik su sistemlerinden nasıl yararlanılıyor?</h3>
+        <p>Su kıtlığı ve iklim değişikliği toplulukları, yüzyıllar önce inşa edilmiş geleneksel su yapılarını yeniden canlandırmaya ve bunları 21. yüzyılda tekrar kullanıma açmaya yöneltiyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Eylül 2026, 10:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yj3y4nw68o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="onlarca yıl en iyi arkadaşlardı, dna testiyle kardeş oldukları anlaşıldı meena geltink ve minal tijssen, 1980&#x27;lerde mumbai&#x27;deki yetimhanelerden evlat edinildiler ve hollanda&#x27;da büyüdüler. yıllar sonra ise kardeş oldukları ortaya çıktı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 13 Eylül 2026, 11:43</span>
+        </div>
+        <h3>Onlarca yıl en iyi arkadaşlardı, DNA testiyle kardeş oldukları anlaşıldı</h3>
+        <p>Meena Geltink ve Minal Tijssen, 1980&#x27;lerde Mumbai&#x27;deki yetimhanelerden evlat edinildiler ve Hollanda&#x27;da büyüdüler. Yıllar sonra ise kardeş oldukları ortaya çıktı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Eylül 2026, 11:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cy4zd24g507o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kadınlar neden erkeklerden daha fazla migren atağı geçiriyor? hormonlar, yetersiz uyku ve stres, kadınların bu yıpratıcı nörolojik rahatsızlığa daha yatkın olmasının nedenlerini açıklamaya yardımcı oluyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 13 Eylül 2026, 10:15</span>
+        </div>
+        <h3>Kadınlar neden erkeklerden daha fazla migren atağı geçiriyor?</h3>
+        <p>Hormonlar, yetersiz uyku ve stres, kadınların bu yıpratıcı nörolojik rahatsızlığa daha yatkın olmasının nedenlerini açıklamaya yardımcı oluyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Eylül 2026, 10:15</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gkddz9d10o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kaşif kozinoğlu soruşturması: gazeteci selahattin günday tutuklandı eski mi̇t görevlisi kaşif kozinoğlu&#x27;nun ölümüne ilişkin soruşturma kapsamında düzenlenen ikinci operasyonda gözaltına alınan dokuz zanlı adliyeye sevk edildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 12 Eylül 2026, 19:37</span>
+        </div>
+        <h3>Kaşif Kozinoğlu soruşturması: Gazeteci Selahattin Günday tutuklandı</h3>
+        <p>Eski MİT görevlisi Kaşif Kozinoğlu&#x27;nun ölümüne ilişkin soruşturma kapsamında düzenlenen ikinci operasyonda gözaltına alınan dokuz zanlı adliyeye sevk edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Eylül 2026, 19:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwyzxq2g545o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;vanlı kara haydır&#x27;ın i̇stanbul&#x27;da yakalanan eşi çağla öz van&#x27;a götürüldü &quot;vanlı kara haydar&quot; olarak bilinen ve sosyal medyadaki paylaşımların ardından tutuklanan mehmet fatih tançalan&#x27;ın i̇stanbul&#x27;da gözaltına alınan eşi çağla öz tançalan van&#x27;a götürüldü. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 13 Eylül 2026, 12:48</span>
+        </div>
+        <h3>&#x27;Vanlı Kara Haydır&#x27;ın İstanbul&#x27;da yakalanan eşi Çağla Öz Van&#x27;a götürüldü</h3>
+        <p>&quot;Vanlı Kara Haydar&quot; olarak bilinen ve sosyal medyadaki paylaşımların ardından tutuklanan Mehmet Fatih Tançalan&#x27;ın İstanbul&#x27;da gözaltına alınan eşi Çağla Öz Tançalan Van&#x27;a götürüldü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Eylül 2026, 12:48</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/vanli-kara-haydirin-istanbulda-yakalanan-esi-cagla-oz-vana-goturuldu-956700.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇kiz öğrencilerin buluşma noktası: bu okuldan 212 ikiz mezun oldu i̇zmir&#x27;de bugüne kadar 212 ikizin mezun olduğu makbule süleyman alkan ortaokulunda yeni eğitim yılında 9 ikiz öğrenci daha kayıt yaptırdı. okuldaki ikiz öğrenci sayısı 26 oldu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 13 Eylül 2026, 11:27</span>
+        </div>
+        <h3>İkiz öğrencilerin buluşma noktası: Bu okuldan 212 ikiz mezun oldu</h3>
+        <p>İzmir&#x27;de bugüne kadar 212 ikizin mezun olduğu Makbule Süleyman Alkan Ortaokulunda yeni eğitim yılında 9 ikiz öğrenci daha kayıt yaptırdı. Okuldaki ikiz öğrenci sayısı 26 oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Eylül 2026, 11:27</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/yasam/ikiz-ogrencilerin-bulusma-noktasi-bu-okuldan-212-ikiz-mezun-oldu-956696.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kırsal kalkınma yatırımlarına 12,5 milyar liralık hibe desteği 2026 yılı kırsal kalkınma yatırım programı (kkyp) kapsamında, toplamda 12,5 milyar liralık hibe desteği sağlanacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 13 Eylül 2026, 11:00</span>
+        </div>
+        <h3>Kırsal kalkınma yatırımlarına 12,5 milyar liralık hibe desteği</h3>
+        <p>2026 Yılı Kırsal Kalkınma Yatırım Programı (KKYP) kapsamında, toplamda 12,5 milyar liralık hibe desteği sağlanacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Eylül 2026, 11:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/kirsal-kalkinma-yatirimlarina-125-milyar-liralik-hibe-destegi-956693.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk&#x27;ün büyük zaferi sakarya meydan muharebesi&#x27;nin 105. yıl dönümü başkomutan gazi mustafa kemal atatürk&#x27;ün önderliğinde 22 gün süren yoğun çatışmaların ardından zaferle sonuçlanan sakarya meydan muharebesi, &quot;türk&#x27;ün zaferi&quot; olarak tarihe geçti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Eylül 2026, 12:10</span>
+        </div>
+        <h3>Türk&#x27;ün büyük zaferi Sakarya Meydan Muharebesi&#x27;nin 105. yıl dönümü</h3>
+        <p>Başkomutan Gazi Mustafa Kemal Atatürk&#x27;ün önderliğinde 22 gün süren yoğun çatışmaların ardından zaferle sonuçlanan Sakarya Meydan Muharebesi, &quot;Türk&#x27;ün zaferi&quot; olarak tarihe geçti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Eylül 2026, 12:10</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkun-buyuk-zaferi-sakarya-meydan-muharebesinin-105-yil-donumu/4055727" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="anthropic&#x27;in patronu: yapay zeka geliştirme çalışmaları yavaşlamalı önde gelen yapay zeka şirketlerinden anthropic&#x27;in başkanı, yapay zeka modellerinin geliştirilme hızının yavaşlatılması ve yakından izlenmesi çağrısında bulundu. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 12 Eylül 2026, 19:04</span>
+        </div>
+        <h3>Anthropic&#x27;in patronu: Yapay zeka geliştirme çalışmaları yavaşlamalı</h3>
+        <p>Önde gelen yapay zeka şirketlerinden Anthropic&#x27;in başkanı, yapay zeka modellerinin geliştirilme hızının yavaşlatılması ve yakından izlenmesi çağrısında bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Eylül 2026, 19:04</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cg7knd5nk28o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="mersin limanı&#x27;nda 350 kilo uyuşturucu madde ele geçirildi mersin emniyet müdürlüğünce düzenlenen operasyonda, mersin limanı&#x27;na gelen bir gemi içerisinde gizlenmiş halde 350 kg kokain uyuşturucu maddesi ele geçirildi, 9 şüpheli hakkında işlem başlatıldı. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 13 Eylül 2026, 11:35</span>
+        </div>
+        <h3>Mersin Limanı&#x27;nda 350 kilo uyuşturucu madde ele geçirildi</h3>
+        <p>Mersin Emniyet Müdürlüğünce düzenlenen operasyonda, Mersin Limanı&#x27;na gelen bir gemi içerisinde gizlenmiş halde 350 kg kokain uyuşturucu maddesi ele geçirildi, 9 şüpheli hakkında işlem başlatıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Eylül 2026, 11:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/mersin-limaninda-350-kilo-uyusturucu-madde-ele-gecirildi-956697.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
