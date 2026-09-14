@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">14 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">14 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 4</span><span class="stat-item"><strong>teknoloji</strong> 2</span><span class="stat-item"><strong>genel</strong> 21</span><span class="stat-item"><strong>ekonomi</strong> 3</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Boris Johnson&#x27;ın geçtiği Ukrayna sınırı kısa bir süre sonra Rusya tarafından vuruldu</h3>
+        <p>Eski İngiltere Başbakanı Boris Johnson ve üst düzey Avrupalı güvenlik yetkililerinin geçişinden kısa bir süre sonra, Rusya&#x27;ya ait bir insansız hava aracı Ukrayna-Polonya sınırına yakın bir trene isabet etti.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 13 Eylül 2026, 20:09</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c207gpxnrggo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">BBC Türkçe · 13 Eylül 2026, 19:33</span>
+            </div>
+            <h3>Eski Anthropic araştırmacısı Coxon BBC&#x27;ye konuştu: &#x27;Yapay zeka çalışanları insanlığın geleceği konusunda gerçekten endişeli&#x27;</h3>
+            <p>Yapay zeka şirketi Anthropic&#x27;ten ayrılan araştırmacı Jacob Coxon BBC&#x27;ye konuştu. Bu teknoloji üzerinde çalışan kişilerin, teknolojinin ilerleme hızından ve insanlığın geleceğinden &quot;gerçekten korktuklarını&quot; söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cx2zdeyzzqro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 14 Eylül 2026, 11:32</span>
+            </div>
+            <h3>Gazze Sağlık Müdüründen kritik uyarı: DSÖ 19 Eylül&#x27;den itibaren hastanelere yakıt tedarikini durduracak</h3>
+            <p>Gazze Şeridi&#x27;ndeki Sağlık Bakanlığı Genel Müdürü Munir el-Burş, Dünya Sağlık Örgütünün (DSÖ) fon yetersizliği nedeniyle 19 Eylül&#x27;den itibaren Gazze&#x27;deki 20&#x27;den fazla hastane ve sağlık merkezine dizel yakıt tedarikini durduracağını belirterek, İsrail&#x27;in neden olduğu durumun bir yakıt krizi değil sistematik bir öldürme politikası olduğunu söyledi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/gazze-saglik-mudurunden-kritik-uyari-dso-19-eylulden-itibaren-hastanelere-yakit-tedarikini-durduracak-956767.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 14 Eylül 2026, 12:14</span>
+            </div>
+            <h3>&#x27;Ailem güvende&#x27;: KaosGL yöneticilerinin gözaltına alındığı operasyonlara tepkiler ne oldu?</h3>
+            <p>Kaos GL Derneği yönetim ve denetim kurulu üyeleri, evlerine yapılan baskınlarda gözaltına alındı ve dernek ofisinde arama yapıldı. Adalet Bakanı Akın Gürlek Türkiye genelinde Ailem güvende ile 15 ilde LGBTİ+ dernekleri ile mekanlarının da hedef alındığı operasyonlar düzenlendiğini açıkladı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c624e4q594zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 14 Eylül 2026, 10:25</span>
+            </div>
+            <h3>TOKİ kiralık sosyal konut projesi için başvurular bugün başlıyor</h3>
+            <p>Toplu Konut İdaresi&#x27;nin İstanbul&#x27;un iki yakasında uygun fiyatlarla kiraya vereceği sosyal konutların başvuru şartlarını ve özellikleri açıkladı. Peki proje kiraları etkileyebilir mi, başka illere de uygulanabilir mi? Uzmanlara sorduk.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ce8e6y8rp2mo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">4 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="boris johnson&#x27;ın geçtiği ukrayna sınırı kısa bir süre sonra rusya tarafından vuruldu eski i̇ngiltere başbakanı boris johnson ve üst düzey avrupalı güvenlik yetkililerinin geçişinden kısa bir süre sonra, rusya&#x27;ya ait bir insansız hava aracı ukrayna-polonya sınırına yakın bir trene isabet etti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 13 Eylül 2026, 20:09</span>
+        </div>
+        <h3>Boris Johnson&#x27;ın geçtiği Ukrayna sınırı kısa bir süre sonra Rusya tarafından vuruldu</h3>
+        <p>Eski İngiltere Başbakanı Boris Johnson ve üst düzey Avrupalı güvenlik yetkililerinin geçişinden kısa bir süre sonra, Rusya&#x27;ya ait bir insansız hava aracı Ukrayna-Polonya sınırına yakın bir trene isabet etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Eylül 2026, 20:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c207gpxnrggo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="toki̇ kiralık sosyal konut projesi için başvurular bugün başlıyor toplu konut i̇daresi&#x27;nin i̇stanbul&#x27;un iki yakasında uygun fiyatlarla kiraya vereceği sosyal konutların başvuru şartlarını ve özellikleri açıkladı. peki proje kiraları etkileyebilir mi, başka illere de uygulanabilir mi? uzmanlara sorduk. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 14 Eylül 2026, 10:25</span>
+        </div>
+        <h3>TOKİ kiralık sosyal konut projesi için başvurular bugün başlıyor</h3>
+        <p>Toplu Konut İdaresi&#x27;nin İstanbul&#x27;un iki yakasında uygun fiyatlarla kiraya vereceği sosyal konutların başvuru şartlarını ve özellikleri açıkladı. Peki proje kiraları etkileyebilir mi, başka illere de uygulanabilir mi? Uzmanlara sorduk.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 14 Eylül 2026, 10:25</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ce8e6y8rp2mo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeni eğitim öğretim yılının ilk ders zili çaldı milli eğitim bakanlığına (meb) bağlı ilk ve ortaöğretim kurumlarında 2026-2027 eğitim-öğretim yılı için ilk ders zili çaldı. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 14 Eylül 2026, 09:45</span>
+        </div>
+        <h3>Yeni eğitim öğretim yılının ilk ders zili çaldı</h3>
+        <p>Milli Eğitim Bakanlığına (MEB) bağlı ilk ve ortaöğretim kurumlarında 2026-2027 eğitim-öğretim yılı için ilk ders zili çaldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 14 Eylül 2026, 09:45</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yeni-egitim-ogretim-yilinin-ilk-ders-zili-caldi/4056343" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇sveç&#x27;te başa baş seçimde sol blok az farkla önde i̇sveç&#x27;te sol ve sağ kanat siyasi bloklar, pazar günü yapılan genel seçimlerde kıyasıya bir yarış içinde. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 14 Eylül 2026, 08:59</span>
+        </div>
+        <h3>İsveç&#x27;te başa baş seçimde sol blok az farkla önde</h3>
+        <p>İsveç&#x27;te sol ve sağ kanat siyasi bloklar, Pazar günü yapılan genel seçimlerde kıyasıya bir yarış içinde.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 14 Eylül 2026, 08:59</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3wj9nzy2nzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="eski anthropic araştırmacısı coxon bbc&#x27;ye konuştu: &#x27;yapay zeka çalışanları insanlığın geleceği konusunda gerçekten endişeli&#x27; yapay zeka şirketi anthropic&#x27;ten ayrılan araştırmacı jacob coxon bbc&#x27;ye konuştu. bu teknoloji üzerinde çalışan kişilerin, teknolojinin ilerleme hızından ve insanlığın geleceğinden &quot;gerçekten korktuklarını&quot; söyledi. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 13 Eylül 2026, 19:33</span>
+        </div>
+        <h3>Eski Anthropic araştırmacısı Coxon BBC&#x27;ye konuştu: &#x27;Yapay zeka çalışanları insanlığın geleceği konusunda gerçekten endişeli&#x27;</h3>
+        <p>Yapay zeka şirketi Anthropic&#x27;ten ayrılan araştırmacı Jacob Coxon BBC&#x27;ye konuştu. Bu teknoloji üzerinde çalışan kişilerin, teknolojinin ilerleme hızından ve insanlığın geleceğinden &quot;gerçekten korktuklarını&quot; söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Eylül 2026, 19:33</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx2zdeyzzqro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="adalet bakanlığı faili meçhul dosyaları güncel teknolojiyle yeniden mercek altına aldı adalet bakanlığı faili meçhul suçları araştırma daire başkanlığı, kurulduğu günden bu yana 52 maktulün bulunduğu 46 dosyayı çözüme kavuşturdu. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 14 Eylül 2026, 12:54</span>
+        </div>
+        <h3>Adalet Bakanlığı faili meçhul dosyaları güncel teknolojiyle yeniden mercek altına aldı</h3>
+        <p>Adalet Bakanlığı Faili Meçhul Suçları Araştırma Daire Başkanlığı, kurulduğu günden bu yana 52 maktulün bulunduğu 46 dosyayı çözüme kavuşturdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 14 Eylül 2026, 12:54</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/adalet-bakanligi-faili-mechul-dosyalari-guncel-teknolojiyle-yeniden-mercek-altina-aldi/4056576" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">21 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="gazze sağlık müdüründen kritik uyarı: dsö 19 eylül&#x27;den itibaren hastanelere yakıt tedarikini durduracak gazze şeridi&#x27;ndeki sağlık bakanlığı genel müdürü munir el-burş, dünya sağlık örgütünün (dsö) fon yetersizliği nedeniyle 19 eylül&#x27;den itibaren gazze&#x27;deki 20&#x27;den fazla hastane ve sağlık merkezine dizel yakıt tedarikini durduracağını belirterek, i̇srail&#x27;in neden olduğu durumun bir yakıt krizi değil sistematik bir öldürme politikası olduğunu söyledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 14 Eylül 2026, 11:32</span>
+        </div>
+        <h3>Gazze Sağlık Müdüründen kritik uyarı: DSÖ 19 Eylül&#x27;den itibaren hastanelere yakıt tedarikini durduracak</h3>
+        <p>Gazze Şeridi&#x27;ndeki Sağlık Bakanlığı Genel Müdürü Munir el-Burş, Dünya Sağlık Örgütünün (DSÖ) fon yetersizliği nedeniyle 19 Eylül&#x27;den itibaren Gazze&#x27;deki 20&#x27;den fazla hastane ve sağlık merkezine dizel yakıt tedarikini durduracağını belirterek, İsrail&#x27;in neden olduğu durumun bir yakıt krizi değil sistematik bir öldürme politikası olduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 14 Eylül 2026, 11:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/gazze-saglik-mudurunden-kritik-uyari-dso-19-eylulden-itibaren-hastanelere-yakit-tedarikini-durduracak-956767.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;ailem güvende&#x27;: kaosgl yöneticilerinin gözaltına alındığı operasyonlara tepkiler ne oldu? kaos gl derneği yönetim ve denetim kurulu üyeleri, evlerine yapılan baskınlarda gözaltına alındı ve dernek ofisinde arama yapıldı. adalet bakanı akın gürlek türkiye genelinde ailem güvende ile 15 ilde lgbti̇+ dernekleri ile mekanlarının da hedef alındığı operasyonlar düzenlendiğini açıkladı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 14 Eylül 2026, 12:14</span>
+        </div>
+        <h3>&#x27;Ailem güvende&#x27;: KaosGL yöneticilerinin gözaltına alındığı operasyonlara tepkiler ne oldu?</h3>
+        <p>Kaos GL Derneği yönetim ve denetim kurulu üyeleri, evlerine yapılan baskınlarda gözaltına alındı ve dernek ofisinde arama yapıldı. Adalet Bakanı Akın Gürlek Türkiye genelinde Ailem güvende ile 15 ilde LGBTİ+ dernekleri ile mekanlarının da hedef alındığı operasyonlar düzenlendiğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 14 Eylül 2026, 12:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c624e4q594zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="8 ayda yaklaşık 35 ton uyuşturucu ve 87,1 milyon uyuşturucu hap ele geçirildi i̇çişleri bakanlığınca uyuşturucuyla mücadele kapsamında yılın 8 ayında yürütülen çalışmalarda yaklaşık 35 ton uyuşturucu madde ile 87,1 milyon uyuşturucu hap ele geçirildi. narkotik suçlarla ilgili çalışmalar sonucu 31 bin 754 kişi tutuklandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 14 Eylül 2026, 12:17</span>
+        </div>
+        <h3>8 ayda yaklaşık 35 ton uyuşturucu ve 87,1 milyon uyuşturucu hap ele geçirildi</h3>
+        <p>İçişleri Bakanlığınca uyuşturucuyla mücadele kapsamında yılın 8 ayında yürütülen çalışmalarda yaklaşık 35 ton uyuşturucu madde ile 87,1 milyon uyuşturucu hap ele geçirildi. Narkotik suçlarla ilgili çalışmalar sonucu 31 bin 754 kişi tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 14 Eylül 2026, 12:17</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/8-ayda-yaklasik-35-ton-uyusturucu-ve-871-milyon-uyusturucu-hap-ele-gecirildi-956775.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fransa&#x27;da 15 yaş altı çocukların sosyal medya kullanımına ilişkin yeni düzenleme hazır fransa cumhurbaşkanı emmanuel macron, anayasa konseyi&#x27;nin 15 yaş altı çocukların sosyal medya kullanımına yönelik düzenlemeyi, ifade özgürlüğüne &quot;orantısız müdahale&quot; teşkil ettiği gerekçesiyle ağustosta iptal etmesinin ardından taahhüt ettiği yeni düzenlemenin hazır olduğunu bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 14 Eylül 2026, 12:06</span>
+        </div>
+        <h3>Fransa&#x27;da 15 yaş altı çocukların sosyal medya kullanımına ilişkin yeni düzenleme hazır</h3>
+        <p>Fransa Cumhurbaşkanı Emmanuel Macron, Anayasa Konseyi&#x27;nin 15 yaş altı çocukların sosyal medya kullanımına yönelik düzenlemeyi, ifade özgürlüğüne &quot;orantısız müdahale&quot; teşkil ettiği gerekçesiyle ağustosta iptal etmesinin ardından taahhüt ettiği yeni düzenlemenin hazır olduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 14 Eylül 2026, 12:06</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/fransada-15-yas-alti-cocuklarin-sosyal-medya-kullanimina-iliskin-yeni-duzenleme-hazir-956773.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ankara&#x27;da 66 milyon yıllık fosil keşfi kültür ve turizm bakanı mehmet nuri ersoy, ankara&#x27;nın gölbaşı ilçesindeki külhöyük kazılarında, 66 milyon yıl önce tetis denizi kıyısında yaşamış gastropoda fosilinin keşfine ilişkin, &quot;fosilin, binlerce yıl önce külhöyük sakinleri tarafından yerleşime taşınmış olabileceği değerlendirmesi ise keşfi daha da dikkat çekici kılıyor&quot; ifadesini kullandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 14 Eylül 2026, 11:28</span>
+        </div>
+        <h3>Ankara&#x27;da 66 milyon yıllık fosil keşfi</h3>
+        <p>Kültür ve Turizm Bakanı Mehmet Nuri Ersoy, Ankara&#x27;nın Gölbaşı ilçesindeki Külhöyük kazılarında, 66 milyon yıl önce Tetis Denizi kıyısında yaşamış Gastropoda fosilinin keşfine ilişkin, &quot;Fosilin, binlerce yıl önce Külhöyük sakinleri tarafından yerleşime taşınmış olabileceği değerlendirmesi ise keşfi daha da dikkat çekici kılıyor&quot; ifadesini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 14 Eylül 2026, 11:28</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/ankarada-66-milyon-yillik-fosil-kesfi-956766.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;sokaklar güvende&quot; operasyonlarında 2 bin 447 şüpheli hakkında adli işlem yapıldı adalet bakanı akın gürlek, 78 cumhuriyet başsavcılığınca yürütülen soruşturmalar kapsamında ülke genelindeki &quot;sokaklar güvende&quot; operasyonlarında 2 bin 447 şüpheli hakkında adli işlem gerçekleştirildiğini, 148 operasyon düzenlendiğini bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 14 Eylül 2026, 09:20</span>
+        </div>
+        <h3>&quot;Sokaklar Güvende&quot; operasyonlarında 2 bin 447 şüpheli hakkında adli işlem yapıldı</h3>
+        <p>Adalet Bakanı Akın Gürlek, 78 Cumhuriyet Başsavcılığınca yürütülen soruşturmalar kapsamında ülke genelindeki &quot;Sokaklar Güvende&quot; operasyonlarında 2 bin 447 şüpheli hakkında adli işlem gerçekleştirildiğini, 148 operasyon düzenlendiğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 14 Eylül 2026, 09:20</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sokaklar-guvende-operasyonlarinda-2-bin-447-supheli-hakkinda-adli-islem-yapildi/4056318" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="suriye&#x27;de akaryakıt zamlarına karşı protestolar yayılıyor suriye&#x27;de akaryakıt fiyatlarındaki son artışlara karşı protestolar halep, haseke, deyrizor ve rakka kırsalındaki çok sayıda kasaba ve köye yayıldı. yanan lastiklerle yolları kapatan göstericiler, çok sayıda noktada suriye&#x27;nin iç kesimlerine ham petrol tankerlerinin geçişine izin vermedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 14 Eylül 2026, 12:15</span>
+        </div>
+        <h3>Suriye&#x27;de akaryakıt zamlarına karşı protestolar yayılıyor</h3>
+        <p>Suriye&#x27;de akaryakıt fiyatlarındaki son artışlara karşı protestolar Halep, Haseke, Deyrizor ve Rakka kırsalındaki çok sayıda kasaba ve köye yayıldı. Yanan lastiklerle yolları kapatan göstericiler, çok sayıda noktada Suriye&#x27;nin iç kesimlerine ham petrol tankerlerinin geçişine izin vermedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 14 Eylül 2026, 12:15</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3eq0zyjd02o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye, libya&#x27;da karşıt trablus ve bingazi yönetimleri arasında nasıl arabulucu oldu? ankara libya’da son dönemde trablus’un yanı sıra bingazi yönetimi ile de ilişkilerini geliştiriyor. bu politika değişikliği çerçevesinde iki rakip yönetimden üst düzey temsilciler mi̇t&#x27;in ev sahipliğinde geçen hafta türkiye’de biraraya geldi. peki türkiye libya politikası ile neyi amaçlıyor? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 14 Eylül 2026, 02:01</span>
+        </div>
+        <h3>Türkiye, Libya&#x27;da karşıt Trablus ve Bingazi yönetimleri arasında nasıl arabulucu oldu?</h3>
+        <p>Ankara Libya’da son dönemde Trablus’un yanı sıra Bingazi yönetimi ile de ilişkilerini geliştiriyor. Bu politika değişikliği çerçevesinde iki rakip yönetimden üst düzey temsilciler MİT&#x27;in ev sahipliğinde geçen hafta Türkiye’de biraraya geldi. Peki Türkiye Libya politikası ile neyi amaçlıyor?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 14 Eylül 2026, 02:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cdr7nd8pgkyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="babülmendep boğazı: husilerin ilerleyişi kızıldeniz&#x27;de bir deniz taşımacılığı krizini tetikleyebilir mi? i̇ran destekli husiler, bir hafta süren hızlı ilerleyişin ardından artık yemen&#x27;in kızıldeniz kıyılarının tamamını kontrol ediyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 14 Eylül 2026, 02:01</span>
+        </div>
+        <h3>Babülmendep Boğazı: Husilerin ilerleyişi Kızıldeniz&#x27;de bir deniz taşımacılığı krizini tetikleyebilir mi?</h3>
+        <p>İran destekli Husiler, bir hafta süren hızlı ilerleyişin ardından artık Yemen&#x27;in Kızıldeniz kıyılarının tamamını kontrol ediyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 14 Eylül 2026, 02:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ce35vpjkn39o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kaşif kozinoğlu soruşturması: gazeteci selahattin günday tutuklandı eski mi̇t görevlisi kaşif kozinoğlu&#x27;nun ölümüne ilişkin soruşturma kapsamında düzenlenen ikinci operasyonda gözaltına alınan dokuz kişinin adliye işlemleri tamamlandı. i̇kinci operasyon kapsamında gazeteci selahattin günday ile birlikte iki acil tıp teknisyenini tutuklandı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 14 Eylül 2026, 11:27</span>
+        </div>
+        <h3>Kaşif Kozinoğlu soruşturması: Gazeteci Selahattin Günday tutuklandı</h3>
+        <p>Eski MİT görevlisi Kaşif Kozinoğlu&#x27;nun ölümüne ilişkin soruşturma kapsamında düzenlenen ikinci operasyonda gözaltına alınan dokuz kişinin adliye işlemleri tamamlandı. İkinci operasyon kapsamında gazeteci Selahattin Günday ile birlikte iki acil tıp teknisyenini tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 14 Eylül 2026, 11:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwyzxq2g545o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sivas&#x27;ta kaybolan bebeğin kardeşleri devlet korumasına alındı aile ve sosyal hizmetler bakanlığı, sivas&#x27;ın divriği ilçesinde kayıp olduğu bildirilen 11 aylık bebeğin ailesinin diğer 4 çocuğunun devlet korumasına alındığını belirtti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 14 Eylül 2026, 12:33</span>
+        </div>
+        <h3>Sivas&#x27;ta kaybolan bebeğin kardeşleri devlet korumasına alındı</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanlığı, Sivas&#x27;ın Divriği ilçesinde kayıp olduğu bildirilen 11 aylık bebeğin ailesinin diğer 4 çocuğunun devlet korumasına alındığını belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 14 Eylül 2026, 12:33</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/sivasta-kaybolan-bebegin-kardesleri-devlet-korumasina-alindi-956776.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="vanlı kara haydar&#x27;ın eşi ve 3 şüpheli adliyede &quot;vanlı kara haydar&quot; olarak bilinen ve sosyal medya paylaşımlarının ardından tutuklanan mehmet fatih tançalan&#x27;ın eşi çağla öz tançalan, kayınvalidesi, kuzeni ve altınların bulunduğu evin sahibi adliyeye sevk edildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 14 Eylül 2026, 12:10</span>
+        </div>
+        <h3>Vanlı Kara Haydar&#x27;ın eşi ve 3 şüpheli adliyede</h3>
+        <p>&quot;Vanlı Kara Haydar&quot; olarak bilinen ve sosyal medya paylaşımlarının ardından tutuklanan Mehmet Fatih Tançalan&#x27;ın eşi Çağla Öz Tançalan, kayınvalidesi, kuzeni ve altınların bulunduğu evin sahibi adliyeye sevk edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 14 Eylül 2026, 12:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/vanli-kara-haydarin-esi-ve-3-supheli-adliyede-956774.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rapor: himalayalar bölgesindeki buzullar son 10 yılda yüzde 65 daha hızlı eridi nepal&#x27;de buzul çökmesi kaynaklı olduğu değerlendirilen sel felaketi sonrası yayımlanan raporda, himalayalar bölgesindeki buzul kütle kaybının son 10 yılda eskiye kıyasla yüzde 65 daha hızlı olduğu ortaya kondu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 14 Eylül 2026, 11:36</span>
+        </div>
+        <h3>Rapor: Himalayalar bölgesindeki buzullar son 10 yılda yüzde 65 daha hızlı eridi</h3>
+        <p>Nepal&#x27;de buzul çökmesi kaynaklı olduğu değerlendirilen sel felaketi sonrası yayımlanan raporda, Himalayalar bölgesindeki buzul kütle kaybının son 10 yılda eskiye kıyasla yüzde 65 daha hızlı olduğu ortaya kondu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 14 Eylül 2026, 11:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/rapor-himalayalar-bolgesindeki-buzullar-son-10-yilda-yuzde-65-daha-hizli-eridi-956769.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="lgbt içeriklerine karşı ailelere ekran duyarlılığı çağrısı prof. dr. emir kaya, &quot;lgbt aklı, bağışıklık geliştiren bir virüs gibi sürekli yeni kamuflajlarla çocukların zihnine girebilmektedir. çocuklar nasıl tek başına denize bırakılmıyorsa tek başına ekran karşısına da bırakılmamalıdır.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 14 Eylül 2026, 11:15</span>
+        </div>
+        <h3>LGBT içeriklerine karşı ailelere ekran duyarlılığı çağrısı</h3>
+        <p>Prof. Dr. Emir Kaya, &quot;LGBT aklı, bağışıklık geliştiren bir virüs gibi sürekli yeni kamuflajlarla çocukların zihnine girebilmektedir. Çocuklar nasıl tek başına denize bırakılmıyorsa tek başına ekran karşısına da bırakılmamalıdır.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 14 Eylül 2026, 11:15</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/lgbt-iceriklerine-karsi-ailelere-ekran-duyarliligi-cagrisi/4056456" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yılın 8 ayında yaklaşık 35 ton uyuşturucu ve 87,1 milyon uyuşturucu hap ele geçirildi i̇çişleri bakanlığınca uyuşturucuyla mücadele kapsamında yılın 8 ayında yürütülen çalışmalarda yaklaşık 35 ton uyuşturucu madde ile 87,1 milyon uyuşturucu hap ele geçirildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 14 Eylül 2026, 11:06</span>
+        </div>
+        <h3>Yılın 8 ayında yaklaşık 35 ton uyuşturucu ve 87,1 milyon uyuşturucu hap ele geçirildi</h3>
+        <p>İçişleri Bakanlığınca uyuşturucuyla mücadele kapsamında yılın 8 ayında yürütülen çalışmalarda yaklaşık 35 ton uyuşturucu madde ile 87,1 milyon uyuşturucu hap ele geçirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 14 Eylül 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yilin-8-ayinda-yaklasik-35-ton-uyusturucu-ve-87-1-milyon-uyusturucu-hap-ele-gecirildi/4056442" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;yeni nesil suç örgütlerine&quot; yönelik operasyonlarda 1008 şüpheli hakkında gözaltı kararı i̇çişleri bakanlığı, 48 ilde &quot;yeni nesil suç örgütlerine&quot; yönelik operasyonlarda 1008 şüpheli hakkında gözaltı kararı verildiğini bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 14 Eylül 2026, 10:46</span>
+        </div>
+        <h3>&quot;Yeni nesil suç örgütlerine&quot; yönelik operasyonlarda 1008 şüpheli hakkında gözaltı kararı</h3>
+        <p>İçişleri Bakanlığı, 48 ilde &quot;yeni nesil suç örgütlerine&quot; yönelik operasyonlarda 1008 şüpheli hakkında gözaltı kararı verildiğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 14 Eylül 2026, 10:46</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yeni-nesil-suc-orgutlerine-yonelik-operasyonlarda-1008-supheli-hakkinda-gozalti-karari/4056405" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="diş sıkanların oranı giderek artıyor, peki ne yapmalı? milyonlarca insan bunu yapıyor, ancak çok azımız bunun farkında; oysa doğru tedavi hayat değiştirici olabilir. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 13 Eylül 2026, 13:54</span>
+        </div>
+        <h3>Diş sıkanların oranı giderek artıyor, peki ne yapmalı?</h3>
+        <p>Milyonlarca insan bunu yapıyor, ancak çok azımız bunun farkında; oysa doğru tedavi hayat değiştirici olabilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Eylül 2026, 13:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm27w7g20rjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cop31 başkanlığı gençlik i̇klim şampiyonu higgins iklim stratejilerinde gençlerin önemine dikkati çekti cop31 başkanlığı gençlik i̇klim şampiyonu sally higgins, türkiye&#x27;de düzenlenecek cop31&#x27;in önemine dikkati çekerek, &quot;gençlerin ortak olarak yer almadığı hiçbir iklim stratejisi başarılı olamaz.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 14 Eylül 2026, 12:49</span>
+        </div>
+        <h3>COP31 Başkanlığı Gençlik İklim Şampiyonu Higgins iklim stratejilerinde gençlerin önemine dikkati çekti</h3>
+        <p>COP31 Başkanlığı Gençlik İklim Şampiyonu Sally Higgins, Türkiye&#x27;de düzenlenecek COP31&#x27;in önemine dikkati çekerek, &quot;Gençlerin ortak olarak yer almadığı hiçbir iklim stratejisi başarılı olamaz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 14 Eylül 2026, 12:49</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cop31-baskanligi-genclik-iklim-sampiyonu-higgins-iklim-stratejilerinde-genclerin-onemine-dikkati-cekti/4056559" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;de 11 aylık su yılı yağışları son 66 yılın zirvesinde türkiye genelinde 2026 su yılının 11 aylık döneminde yağışlar, geçen yılın aynı dönemine göre yüzde 77 artarak son 66 yılın en yüksek seviyesine ulaştı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 14 Eylül 2026, 11:01</span>
+        </div>
+        <h3>Türkiye&#x27;de 11 aylık su yılı yağışları son 66 yılın zirvesinde</h3>
+        <p>Türkiye genelinde 2026 su yılının 11 aylık döneminde yağışlar, geçen yılın aynı dönemine göre yüzde 77 artarak son 66 yılın en yüksek seviyesine ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 14 Eylül 2026, 11:01</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiyede-11-aylik-su-yili-yagislari-son-66-yilin-zirvesinde/4056429" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="okul çevrelerinde denetim yapıldı ankara ve i̇stanbul&#x27;da yeni eğitim-öğretim yılının başlamasıyla polis ekipleri, okul çevrelerinde çocukların korunmasına yönelik denetim yaptı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 14 Eylül 2026, 10:54</span>
+        </div>
+        <h3>Okul çevrelerinde denetim yapıldı</h3>
+        <p>Ankara ve İstanbul&#x27;da yeni eğitim-öğretim yılının başlamasıyla polis ekipleri, okul çevrelerinde çocukların korunmasına yönelik denetim yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 14 Eylül 2026, 10:54</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/okul-cevrelerinde-denetim-yapildi/4056416" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mi̇ksen&#x27;den şile belediye başkan vekili sacit terzi&#x27;ye ziyaret mahalli i̇dareler kamu i̇şveren sendikası (mi̇ksen) genel başkanı fatih sultan mehmet çiçek, şile belediye başkan vekili sacit terzi&#x27;yi makamında ziyaret etti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 14 Eylül 2026, 10:13</span>
+        </div>
+        <h3>MİKSEN&#x27;den Şile Belediye Başkan Vekili Sacit Terzi&#x27;ye ziyaret</h3>
+        <p>Mahalli İdareler Kamu İşveren Sendikası (MİKSEN) Genel Başkanı Fatih Sultan Mehmet Çiçek, Şile Belediye Başkan Vekili Sacit Terzi&#x27;yi makamında ziyaret etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 14 Eylül 2026, 10:13</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/miksenden-sile-belediye-baskan-vekili-sacit-terziye-ziyaret/4056371" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="güneşin elektrik üretimindeki payı 10 yılda 28 kat arttı güneş enerjisinin elektrik üretimindeki payı 2016-2026 döneminde 28 kat artışla yüzde 11,6&#x27;ya, rüzgarın payı 1,1 kat artışla yüzde 12,1&#x27;e yükseldi. güneş ve rüzgarın toplam kurulu gücü ise 42 bin 865 megavata ulaştı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 14 Eylül 2026, 11:41</span>
+        </div>
+        <h3>Güneşin elektrik üretimindeki payı 10 yılda 28 kat arttı</h3>
+        <p>Güneş enerjisinin elektrik üretimindeki payı 2016-2026 döneminde 28 kat artışla yüzde 11,6&#x27;ya, rüzgarın payı 1,1 kat artışla yüzde 12,1&#x27;e yükseldi. Güneş ve rüzgarın toplam kurulu gücü ise 42 bin 865 megavata ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 14 Eylül 2026, 11:41</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/gunesin-elektrik-uretimindeki-payi-10-yilda-28-kat-artti-956772.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;nin komşularına ihracatı 18,2 milyar doları aştı türkiye&#x27;nin komşu ülkelere yaptığı ihracat, ocak-ağustos döneminde geçen yılın aynı dönemine göre yüzde 2,6 artarak 18,2 milyar dolara yükseldi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 14 Eylül 2026, 11:43</span>
+        </div>
+        <h3>Türkiye&#x27;nin komşularına ihracatı 18,2 milyar doları aştı</h3>
+        <p>Türkiye&#x27;nin komşu ülkelere yaptığı ihracat, ocak-ağustos döneminde geçen yılın aynı dönemine göre yüzde 2,6 artarak 18,2 milyar dolara yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 14 Eylül 2026, 11:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyenin-komsularina-ihracati-182-milyar-dolari-asti-956771.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="brent petrolün varili 106,78 dolardan işlem görüyor brent petrolün varili, uluslararası vadeli piyasalarda 106,78 dolardan işlem görüyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 14 Eylül 2026, 11:34</span>
+        </div>
+        <h3>Brent petrolün varili 106,78 dolardan işlem görüyor</h3>
+        <p>Brent petrolün varili, uluslararası vadeli piyasalarda 106,78 dolardan işlem görüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 14 Eylül 2026, 11:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/brent-petrolun-varili-10678-dolardan-islem-goruyor-956768.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
