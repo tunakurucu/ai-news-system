@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">15 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">15 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 29</span><span class="stat-item"><strong>teknoloji</strong> 2</span><span class="stat-item"><strong>ekonomi</strong> 2</span><span class="stat-item"><strong>genel</strong> 19</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>gümrük</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">TEKNOLOJI</span>
+        </div>
+        <h3>Anthropic&#x27;in kurucu ortağı: Yapay zekayı &#x27;acil durdurma düğmesinin&#x27; zorunlu olması gerekebilir</h3>
+        <p>Dünyanın en büyük yapay zeka şirketlerinden birinin kurucu ortağı, üçüncü bir taraf tarafından kontrol edilebilen bir yapay zeka &quot;acil durdurma düğmesinin&quot; şirketler için zorunlu hale getirilmesi gerekebileceğini söyledi.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 15 Eylül 2026, 01:58</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cx2zd5yj113o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 15 Eylül 2026, 12:15</span>
+            </div>
+            <h3>Bakan Gürlek: Yatırımcımız hukuk düzenine güvenmeli</h3>
+            <p>Adalet Bakanı Akın Gürlek, &quot;Güçlü bir ekonomi ancak öngörülebilir bir hukuk düzeni ve güven veren bir adalet sistemi üzerine kalıcı hale gelecektir. Bizim görevimiz reel ekonomimiz üzerinde geçmişten gelen mevzuat yüklerini ya da hukuki boşluklardan kaynaklanan baskıları tek tek ortadan kaldırmaktır&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-gurlek-yatirimcimiz-hukuk-duzenine-guvenmeli-956887.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 15 Eylül 2026, 11:05</span>
+            </div>
+            <h3>Sıfır atık ilk kez COP gündeminde</h3>
+            <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı İklim Değişikliği Başkanı Prof. Dr. Halil Hasar, Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın eşi Emine Erdoğan&#x27;ın himayesinde başlatılan sıfır atığın, Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi&#x27;nin 31. Taraflar Konferansı (COP31) ile ilk kez COP gündemine taşınacağını açıkladı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/cevre/sifir-atik-ilk-kez-cop-gundeminde-956877.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 15 Eylül 2026, 11:15</span>
+            </div>
+            <h3>Evrensel gazetesi ve Af Örgütü&#x27;nün de aralarında bulunduğu çok sayıda hesaba erişim engeli</h3>
+            <p>İfade Özgürlüğü Derneği aralarında Evrensel gazetesi, Af Örgütü (Amnesty Türkiye) ve İsmail Korkmaz Vakfı&#x27;nın da bulunduğu çok sayıda örgütün sosyal medya hesapları için erişim engeli kararı verildiğini duyurdu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cv62knwzzlpgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 14 Eylül 2026, 15:15</span>
+            </div>
+            <h3>Galler, İskoçya ve Kuzey İrlanda liderleri: Merkezi yönetim devri bitiyor</h3>
+            <p>Galler, İskoçya ve Kuzey İrlanda özerk yönetimleri başbakanları, İngiltere&#x27;nin de dahil olduğu Birleşik Krallık&#x27;ta Londra&#x27;daki merkezi yönetimi ifade eden &quot;Westminster&#x27;ın devrinin sona erdiğini&quot; ve Birleşik Krallık hükümetinin &quot;anayasal değişikliklere hazırlanması gerektiğini&quot; açıkladılar.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c6pwlkvgnyl0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="anthropic&#x27;in kurucu ortağı: yapay zekayı &#x27;acil durdurma düğmesinin&#x27; zorunlu olması gerekebilir dünyanın en büyük yapay zeka şirketlerinden birinin kurucu ortağı, üçüncü bir taraf tarafından kontrol edilebilen bir yapay zeka &quot;acil durdurma düğmesinin&quot; şirketler için zorunlu hale getirilmesi gerekebileceğini söyledi. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 15 Eylül 2026, 01:58</span>
+        </div>
+        <h3>Anthropic&#x27;in kurucu ortağı: Yapay zekayı &#x27;acil durdurma düğmesinin&#x27; zorunlu olması gerekebilir</h3>
+        <p>Dünyanın en büyük yapay zeka şirketlerinden birinin kurucu ortağı, üçüncü bir taraf tarafından kontrol edilebilen bir yapay zeka &quot;acil durdurma düğmesinin&quot; şirketler için zorunlu hale getirilmesi gerekebileceğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Eylül 2026, 01:58</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx2zd5yj113o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ngiltere&#x27;de akıl sağlığı merkezinde hasta cinayeti: olay nasıl gelişti, ihmaller neler? londra&#x27;nın doğusundaki, i̇ngiltere sağlık hizmetleri&#x27;ne (nhs) bağlı akıl sağlığı merkezinde bir hastanın başka bir hasta tarafından öldürüldüğü gece, personelin uyuduğu, telefonlarıyla ilgilendiği ve kayıtları tahrif ettiği soruşturmada ortaya çıktı. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 15 Eylül 2026, 08:12</span>
+        </div>
+        <h3>İngiltere&#x27;de akıl sağlığı merkezinde hasta cinayeti: Olay nasıl gelişti, ihmaller neler?</h3>
+        <p>Londra&#x27;nın doğusundaki, İngiltere Sağlık Hizmetleri&#x27;ne (NHS) bağlı akıl sağlığı merkezinde bir hastanın başka bir hasta tarafından öldürüldüğü gece, personelin uyuduğu, telefonlarıyla ilgilendiği ve kayıtları tahrif ettiği soruşturmada ortaya çıktı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Eylül 2026, 08:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9j3d87le55lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan gürlek: yatırımcımız hukuk düzenine güvenmeli adalet bakanı akın gürlek, &quot;güçlü bir ekonomi ancak öngörülebilir bir hukuk düzeni ve güven veren bir adalet sistemi üzerine kalıcı hale gelecektir. bizim görevimiz reel ekonomimiz üzerinde geçmişten gelen mevzuat yüklerini ya da hukuki boşluklardan kaynaklanan baskıları tek tek ortadan kaldırmaktır&quot; dedi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 15 Eylül 2026, 12:15</span>
+        </div>
+        <h3>Bakan Gürlek: Yatırımcımız hukuk düzenine güvenmeli</h3>
+        <p>Adalet Bakanı Akın Gürlek, &quot;Güçlü bir ekonomi ancak öngörülebilir bir hukuk düzeni ve güven veren bir adalet sistemi üzerine kalıcı hale gelecektir. Bizim görevimiz reel ekonomimiz üzerinde geçmişten gelen mevzuat yüklerini ya da hukuki boşluklardan kaynaklanan baskıları tek tek ortadan kaldırmaktır&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Eylül 2026, 12:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-gurlek-yatirimcimiz-hukuk-duzenine-guvenmeli-956887.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sahte para operasyonunda 357 bin liralık sahte banknot ele geçirildi i̇stanbul&#x27;da sahte para üretimine yönelik operasyon düzenleyen ekipler, 11 şüpheliyi gözaltına aldı. adreslerde 357 bin 400 lira ve 500 dolar sahte banknot ile çeşitli sahte altınlar ele geçirildi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 15 Eylül 2026, 11:01</span>
+        </div>
+        <h3>Sahte para operasyonunda 357 bin liralık sahte banknot ele geçirildi</h3>
+        <p>İstanbul&#x27;da sahte para üretimine yönelik operasyon düzenleyen ekipler, 11 şüpheliyi gözaltına aldı. Adreslerde 357 bin 400 lira ve 500 dolar sahte banknot ile çeşitli sahte altınlar ele geçirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Eylül 2026, 11:01</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/sahte-para-operasyonunda-357-bin-liralik-sahte-banknot-ele-gecirildi-956876.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">19 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="sıfır atık ilk kez cop gündeminde çevre, şehircilik ve i̇klim değişikliği bakanlığı i̇klim değişikliği başkanı prof. dr. halil hasar, cumhurbaşkanı recep tayyip erdoğan&#x27;ın eşi emine erdoğan&#x27;ın himayesinde başlatılan sıfır atığın, birleşmiş milletler i̇klim değişikliği çerçeve sözleşmesi&#x27;nin 31. taraflar konferansı (cop31) ile ilk kez cop gündemine taşınacağını açıkladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Eylül 2026, 11:05</span>
+        </div>
+        <h3>Sıfır atık ilk kez COP gündeminde</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı İklim Değişikliği Başkanı Prof. Dr. Halil Hasar, Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın eşi Emine Erdoğan&#x27;ın himayesinde başlatılan sıfır atığın, Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi&#x27;nin 31. Taraflar Konferansı (COP31) ile ilk kez COP gündemine taşınacağını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Eylül 2026, 11:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/cevre/sifir-atik-ilk-kez-cop-gundeminde-956877.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="galler, i̇skoçya ve kuzey i̇rlanda liderleri: merkezi yönetim devri bitiyor galler, i̇skoçya ve kuzey i̇rlanda özerk yönetimleri başbakanları, i̇ngiltere&#x27;nin de dahil olduğu birleşik krallık&#x27;ta londra&#x27;daki merkezi yönetimi ifade eden &quot;westminster&#x27;ın devrinin sona erdiğini&quot; ve birleşik krallık hükümetinin &quot;anayasal değişikliklere hazırlanması gerektiğini&quot; açıkladılar. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 14 Eylül 2026, 15:15</span>
+        </div>
+        <h3>Galler, İskoçya ve Kuzey İrlanda liderleri: Merkezi yönetim devri bitiyor</h3>
+        <p>Galler, İskoçya ve Kuzey İrlanda özerk yönetimleri başbakanları, İngiltere&#x27;nin de dahil olduğu Birleşik Krallık&#x27;ta Londra&#x27;daki merkezi yönetimi ifade eden &quot;Westminster&#x27;ın devrinin sona erdiğini&quot; ve Birleşik Krallık hükümetinin &quot;anayasal değişikliklere hazırlanması gerektiğini&quot; açıkladılar.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 14 Eylül 2026, 15:15</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6pwlkvgnyl0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sonbahar geldi, orman yangını tehlikesi geçmedi uzmanlar, sonbahara girilmesine karşın orman yangınları açısından riskin devam ettiğini belirterek, yangına hassas bölgelerde önleyici tedbirlerin meteorolojik koşullara göre sürdürülmesinin önemli olduğunu söyledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Eylül 2026, 11:54</span>
+        </div>
+        <h3>Sonbahar geldi, orman yangını tehlikesi geçmedi</h3>
+        <p>Uzmanlar, sonbahara girilmesine karşın orman yangınları açısından riskin devam ettiğini belirterek, yangına hassas bölgelerde önleyici tedbirlerin meteorolojik koşullara göre sürdürülmesinin önemli olduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Eylül 2026, 11:54</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/cevre/sonbahar-geldi-orman-yangini-tehlikesi-gecmedi-956883.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="chp&#x27;nin temyizden feragat kararı: kurultay ve yargıtay sürecini nasıl etkileyebilir? chp, &quot;mutlak butlan&quot; kararına karşı özgür özel ekibinin yaptığı temyiz başvurusundan feragat etti. chp yönetimi, kararın olağan kongre takviminin gecikmemesi amacıyla alındığını açıkladı. özel ve yönetimi, feragat kararının dosyanın yargıtay tarafından incelenmesini engellemeyeceğini savunuyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 15 Eylül 2026, 02:22</span>
+        </div>
+        <h3>CHP&#x27;nin temyizden feragat kararı: Kurultay ve Yargıtay sürecini nasıl etkileyebilir?</h3>
+        <p>CHP, &quot;mutlak butlan&quot; kararına karşı Özgür Özel ekibinin yaptığı temyiz başvurusundan feragat etti. CHP yönetimi, kararın olağan kongre takviminin gecikmemesi amacıyla alındığını açıkladı. Özel ve yönetimi, feragat kararının dosyanın Yargıtay tarafından incelenmesini engellemeyeceğini savunuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Eylül 2026, 02:22</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c670lryj945eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;ailem güvende&#x27; operasyonlarına karşı i̇zmir&#x27;de düzenlenen protestoya polis müdahalesi türkiye genelinde aralarında lgbti̇+ aktivistlerinin de olduğu çok sayıda kişinin tutuklanması ya da gözaltına alınasının ardından 14 eylül pazartesi akşamı i̇zmir&#x27;de protesto gösterisi düzenlendi. i̇nsan hakları derneği, gösteride biri avukat iki kişinin &quot;darbedilerek gözaltına alındığını&quot; duyurdu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 15 Eylül 2026, 02:55</span>
+        </div>
+        <h3>&#x27;Ailem güvende&#x27; operasyonlarına karşı İzmir&#x27;de düzenlenen protestoya polis müdahalesi</h3>
+        <p>Türkiye genelinde aralarında LGBTİ+ aktivistlerinin de olduğu çok sayıda kişinin tutuklanması ya da gözaltına alınasının ardından 14 Eylül Pazartesi akşamı İzmir&#x27;de protesto gösterisi düzenlendi. İnsan Hakları Derneği, gösteride biri avukat iki kişinin &quot;darbedilerek gözaltına alındığını&quot; duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Eylül 2026, 02:55</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c624e4q594zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye kültür yolu festivali&#x27;nin yeni durağı ankara kültür ve turizm bakanlığı, türkiye kültür yolu festivali&#x27;nin 19. durağının ankara olacağını açıkladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Eylül 2026, 11:59</span>
+        </div>
+        <h3>Türkiye Kültür Yolu Festivali&#x27;nin yeni durağı Ankara</h3>
+        <p>Kültür ve Turizm Bakanlığı, Türkiye Kültür Yolu Festivali&#x27;nin 19. durağının Ankara olacağını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Eylül 2026, 11:59</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/kultur-sanat/turkiye-kultur-yolu-festivalinin-yeni-duragi-ankara-956885.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milli havacılıkta önemli bir adım daha: hürkuşii&#x27;ye askeri tip sertifikası verildi türkiye&#x27;de yerli olarak geliştirilen bir hava platformuna, uluslararası standartlara uygun ve tamamen milli insan kaynağıyla yürütülen kapsamlı sertifikasyon süreci sonunda ilk kez askeri tip sertifikası verildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Eylül 2026, 11:35</span>
+        </div>
+        <h3>Milli havacılıkta önemli bir adım daha: HÜRKUŞII&#x27;ye askeri tip sertifikası verildi</h3>
+        <p>Türkiye&#x27;de yerli olarak geliştirilen bir hava platformuna, uluslararası standartlara uygun ve tamamen milli insan kaynağıyla yürütülen kapsamlı sertifikasyon süreci sonunda ilk kez Askeri Tip Sertifikası verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Eylül 2026, 11:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/savunma/milli-havacilikta-onemli-bir-adim-daha-hurkus-iiye-askeri-tip-sertifikasi-verildi-956882.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="şanlıurfa&#x27;da tefecilik operasyonu: 1,5 milyar liralık para hareketliliği şanlıurfa&#x27;da &quot;yeni nesil suç örgütleri&quot;ne finansman sağladıkları ve tefecilik yaptıkları belirlenen 7 şüpheli, jandarma ekiplerince düzenlenen operasyonla yakalandı. şüphelilerin hesaplarında yaklaşık 1,5 milyar liralık para hareketliliği tespit edildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Eylül 2026, 11:26</span>
+        </div>
+        <h3>Şanlıurfa&#x27;da tefecilik operasyonu: 1,5 milyar liralık para hareketliliği</h3>
+        <p>Şanlıurfa&#x27;da &quot;Yeni Nesil Suç Örgütleri&quot;ne finansman sağladıkları ve tefecilik yaptıkları belirlenen 7 şüpheli, jandarma ekiplerince düzenlenen operasyonla yakalandı. Şüphelilerin hesaplarında yaklaşık 1,5 milyar liralık para hareketliliği tespit edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Eylül 2026, 11:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/sanliurfada-tefecilik-operasyonu-15-milyar-liralik-para-hareketliligi-956881.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gülistan doku soruşturmasında 4 zanlı daha tutuklandı tunceli&#x27;de 5 ocak 2020&#x27;den beri haber alınamayan üniversite öğrencisi gülistan doku ile ilgili son soruşturma kapsamında adliyeye sevk edilen 5 zanlıdan 4&#x27;ü tutuklandı, 1&#x27;i adli kontrol şartıyla serbest bırakıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Eylül 2026, 11:20</span>
+        </div>
+        <h3>Gülistan Doku soruşturmasında 4 zanlı daha tutuklandı</h3>
+        <p>Tunceli&#x27;de 5 Ocak 2020&#x27;den beri haber alınamayan üniversite öğrencisi Gülistan Doku ile ilgili son soruşturma kapsamında adliyeye sevk edilen 5 zanlıdan 4&#x27;ü tutuklandı, 1&#x27;i adli kontrol şartıyla serbest bırakıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Eylül 2026, 11:20</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/gulistan-doku-sorusturmasinda-4-zanli-daha-tutuklandi-956880.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="40 ülkeden gelen adli tıp ve adli bilimler uzmanları antalya&#x27;da buluşacak uluslararası 21. adli tıp günleri kongresi, dünyanın farklı ülkelerinden adli tıp ve adli bilimler uzmanlarını antalya&#x27;da buluşturacak ve &quot;dünyada bağımlılık ve bilirkişilik&quot; başta olmak üzere alanın güncel konularını ele alacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Eylül 2026, 11:18</span>
+        </div>
+        <h3>40 ülkeden gelen adli tıp ve adli bilimler uzmanları Antalya&#x27;da buluşacak</h3>
+        <p>Uluslararası 21. Adli Tıp Günleri Kongresi, dünyanın farklı ülkelerinden adli tıp ve adli bilimler uzmanlarını Antalya&#x27;da buluşturacak ve &quot;Dünyada Bağımlılık ve Bilirkişilik&quot; başta olmak üzere alanın güncel konularını ele alacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Eylül 2026, 11:18</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/40-ulkeden-gelen-adli-tip-ve-adli-bilimler-uzmanlari-antalyada-bulusacak/4057517" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msü rektörü afyoncu&#x27;dan lgbt&#x27;ye karşı &quot;aile yapısının korunması&quot; çağrısı milli savunma üniversitesi (msü) rektörü prof. dr. erhan afyoncu, lgbt içeriklerinin özellikle dijital platformlar, diziler ve oyunlar aracılığıyla normalleştirilmeye çalışıldığını belirterek, aile yapısının korunması gerektiğini söyledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Eylül 2026, 11:05</span>
+        </div>
+        <h3>MSÜ Rektörü Afyoncu&#x27;dan LGBT&#x27;ye karşı &quot;aile yapısının korunması&quot; çağrısı</h3>
+        <p>Milli Savunma Üniversitesi (MSÜ) Rektörü Prof. Dr. Erhan Afyoncu, LGBT içeriklerinin özellikle dijital platformlar, diziler ve oyunlar aracılığıyla normalleştirilmeye çalışıldığını belirterek, aile yapısının korunması gerektiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Eylül 2026, 11:05</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/msu-rektoru-afyoncudan-lgbtye-karsi-aile-yapisinin-korunmasi-cagrisi/4057474" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="maarif modeli&#x27;ne geçişte son yıl: i̇ki farklı müfredat okullarda nasıl uygulanacak? türkiye&#x27;nin maarif model ile kademeli müfredat geçişi, 2026-2027 eğitim öğretim yılında üçüncü yılına giriyor. bu model sınıflarda nasıl uygulanıyor, eski müfredattan farkı ne? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 15 Eylül 2026, 08:07</span>
+        </div>
+        <h3>Maarif Modeli&#x27;ne geçişte son yıl: İki farklı müfredat okullarda nasıl uygulanacak?</h3>
+        <p>Türkiye&#x27;nin Maarif Model ile kademeli müfredat geçişi, 2026-2027 eğitim öğretim yılında üçüncü yılına giriyor. Bu model sınıflarda nasıl uygulanıyor, eski müfredattan farkı ne?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Eylül 2026, 08:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5yej7v0nz9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="seferihisar belediyesi&#x27;nde &#x27;rüşvet&#x27; soruşturmasında 47 kişi adliyeye sevk edildi i̇zmir&#x27;in seferihisar belediyesin&#x27;e yönelik &quot;rüşvet&quot; ve &quot;usulsüzlük&quot; iddialarıyla başlatılan soruşturma kapsamında gözaltına alınan 47 kişi adliyeye sevk edildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 15 Eylül 2026, 10:40</span>
+        </div>
+        <h3>Seferihisar Belediyesi&#x27;nde &#x27;rüşvet&#x27; soruşturmasında 47 kişi adliyeye sevk edildi</h3>
+        <p>İzmir&#x27;in Seferihisar Belediyesin&#x27;e yönelik &quot;rüşvet&quot; ve &quot;usulsüzlük&quot; iddialarıyla başlatılan soruşturma kapsamında gözaltına alınan 47 kişi adliyeye sevk edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Eylül 2026, 10:40</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c1eygdvp8w8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="soykırımcı i̇srail&#x27;in gazze&#x27;ye düzenlediği saldırılarda can kaybı 73 bin 789&#x27;a yükseldi soykırımcı i̇srail ordusunun ateşkese rağmen gazze şeridi&#x27;ne düzenlediği saldırılarda son 24 saatte 3 kişinin daha yaşamını yitirmesiyle ekim 2023&#x27;ten bu yana toplam can kaybı 73 bin 789&#x27;a çıktı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Eylül 2026, 11:53</span>
+        </div>
+        <h3>Soykırımcı İsrail&#x27;in Gazze&#x27;ye düzenlediği saldırılarda can kaybı 73 bin 789&#x27;a yükseldi</h3>
+        <p>Soykırımcı İsrail ordusunun ateşkese rağmen Gazze Şeridi&#x27;ne düzenlediği saldırılarda son 24 saatte 3 kişinin daha yaşamını yitirmesiyle Ekim 2023&#x27;ten bu yana toplam can kaybı 73 bin 789&#x27;a çıktı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Eylül 2026, 11:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/soykirimci-israilin-gazzeye-duzenledigi-saldirilarda-can-kaybi-73-bin-789a-yukseldi-956884.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="su altı belgesel yapımcısı ceylan, neum su altı film festivali&#x27;nde büyük ödül&#x27;ü kazandı su altı belgesel yapımcısı ve görüntü yönetmeni tahsin ceylan, &quot;marine turtles&quot; filminin neum su altı film festivali&#x27;nde büyük ödül&#x27;e layık görülmesinin mutluluk verici olduğunu belirtti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Eylül 2026, 11:36</span>
+        </div>
+        <h3>Su altı belgesel yapımcısı Ceylan, Neum Su Altı Film Festivali&#x27;nde Büyük Ödül&#x27;ü kazandı</h3>
+        <p>Su altı belgesel yapımcısı ve görüntü yönetmeni Tahsin Ceylan, &quot;Marine Turtles&quot; filminin Neum Su Altı Film Festivali&#x27;nde Büyük Ödül&#x27;e layık görülmesinin mutluluk verici olduğunu belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Eylül 2026, 11:36</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/su-alti-belgesel-yapimcisi-ceylan-neum-su-alti-film-festivalinde-buyuk-odulu-kazandi/4057541" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeşilay yeni dönemde adana&#x27;daki 500 bin öğrenciye bağımlılıkla mücadeleyi anlatacak türkiye yeşilay cemiyeti, yeni eğitim-öğretim yılında adana&#x27;daki 500 bin öğrenciyi bağımlılıkla mücadele yöntemleri konusunda bilgilendirecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Eylül 2026, 11:09</span>
+        </div>
+        <h3>Yeşilay yeni dönemde Adana&#x27;daki 500 bin öğrenciye bağımlılıkla mücadeleyi anlatacak</h3>
+        <p>Türkiye Yeşilay Cemiyeti, yeni eğitim-öğretim yılında Adana&#x27;daki 500 bin öğrenciyi bağımlılıkla mücadele yöntemleri konusunda bilgilendirecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Eylül 2026, 11:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yesilay-yeni-donemde-adanadaki-500-bin-ogrenciye-bagimlilikla-mucadeleyi-anlatacak/4057492" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="antalya&#x27;da kırmızı led uygulaması, caretta caretta yavrularının denize ulaşmasına yardımcı oldu antalya&#x27;nın manavgat ilçesinde caretta carettaların yuvalama alanı olan sahil şeridinde uygulanan kırmızı led aydınlatma, yavru deniz kaplumbağalarının güvenle denize ulaşmasına katkı sağladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Eylül 2026, 11:40</span>
+        </div>
+        <h3>Antalya&#x27;da kırmızı LED uygulaması, caretta caretta yavrularının denize ulaşmasına yardımcı oldu</h3>
+        <p>Antalya&#x27;nın Manavgat ilçesinde caretta carettaların yuvalama alanı olan sahil şeridinde uygulanan kırmızı LED aydınlatma, yavru deniz kaplumbağalarının güvenle denize ulaşmasına katkı sağladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Eylül 2026, 11:40</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/antalyada-kirmizi-led-uygulamasi-caretta-caretta-yavrularinin-denize-ulasmasina-yardimci-oldu/4057553" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="devlet korumasındaki çocuklara 40 yıldır sevgiyle uzanan el şimdilerde anadolu&#x27;daki öğrencilere ulaşıyor yaşının ilerlemesi nedeniyle çocuk evleri sitesi&#x27;ne eskisi kadar gidemeyen fatma merzuka kiper, ördüğü atkı, bere, hırka ve yelekleri öğretmenleri vasıtasıyla ihtiyaç sahibi öğrencilere gönderiyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Eylül 2026, 11:10</span>
+        </div>
+        <h3>Devlet korumasındaki çocuklara 40 yıldır sevgiyle uzanan el şimdilerde Anadolu&#x27;daki öğrencilere ulaşıyor</h3>
+        <p>Yaşının ilerlemesi nedeniyle Çocuk Evleri Sitesi&#x27;ne eskisi kadar gidemeyen Fatma Merzuka Kiper, ördüğü atkı, bere, hırka ve yelekleri öğretmenleri vasıtasıyla ihtiyaç sahibi öğrencilere gönderiyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Eylül 2026, 11:10</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/devlet-korumasindaki-cocuklara-40-yildir-sevgiyle-uzanan-el-simdilerde-anadoludaki-ogrencilere-ulasiyor/4057494" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kadavradan rahim nakli sayesinde dünyaya gelen ömer özkan eğitim hayatına ilk adımı attı antalya&#x27;da kadavradan rahim nakli sonrası uygulanan tedaviyle anne olan derya sert&#x27;in 6 yaşına giren oğlu ömer özkan sert, mersin&#x27;in anamur ilçesinde ana sınıfına başladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Eylül 2026, 11:11</span>
+        </div>
+        <h3>Kadavradan rahim nakli sayesinde dünyaya gelen Ömer Özkan eğitim hayatına ilk adımı attı</h3>
+        <p>Antalya&#x27;da kadavradan rahim nakli sonrası uygulanan tedaviyle anne olan Derya Sert&#x27;in 6 yaşına giren oğlu Ömer Özkan Sert, Mersin&#x27;in Anamur ilçesinde ana sınıfına başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Eylül 2026, 11:11</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kadavradan-rahim-nakli-sayesinde-dunyaya-gelen-omer-ozkan-egitim-hayatina-ilk-adimi-atti/4057498" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="evrensel gazetesi ve af örgütü&#x27;nün de aralarında bulunduğu çok sayıda hesaba erişim engeli i̇fade özgürlüğü derneği aralarında evrensel gazetesi, af örgütü (amnesty türkiye) ve i̇smail korkmaz vakfı&#x27;nın da bulunduğu çok sayıda örgütün sosyal medya hesapları için erişim engeli kararı verildiğini duyurdu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 15 Eylül 2026, 11:15</span>
+        </div>
+        <h3>Evrensel gazetesi ve Af Örgütü&#x27;nün de aralarında bulunduğu çok sayıda hesaba erişim engeli</h3>
+        <p>İfade Özgürlüğü Derneği aralarında Evrensel gazetesi, Af Örgütü (Amnesty Türkiye) ve İsmail Korkmaz Vakfı&#x27;nın da bulunduğu çok sayıda örgütün sosyal medya hesapları için erişim engeli kararı verildiğini duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Eylül 2026, 11:15</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cv62knwzzlpgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="silivri açıklarında bulunan cesedin batan geminin birinci kaptanına ait olduğu belirlendi silivri açıklarında batan &quot;tuğberk i̇mamoğlu&quot; gemisindeki 10 kişilik kayıp mürettebata ulaşmak için yürütülen çalışmalar sırasında bulunan cansız erkek bedeninin, batan geminin birinci kaptanı yaşar kayhan&#x27;a ait olduğu tespit edildi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Eylül 2026, 11:28</span>
+        </div>
+        <h3>Silivri açıklarında bulunan cesedin batan geminin birinci kaptanına ait olduğu belirlendi</h3>
+        <p>Silivri açıklarında batan &quot;Tuğberk İmamoğlu&quot; gemisindeki 10 kişilik kayıp mürettebata ulaşmak için yürütülen çalışmalar sırasında bulunan cansız erkek bedeninin, batan geminin birinci kaptanı Yaşar Kayhan&#x27;a ait olduğu tespit edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Eylül 2026, 11:28</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/silivri-aciklarinda-bulunan-cesedin-batan-geminin-birinci-kaptanina-ait-oldugu-belirlendi/4057530" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd uzayda silahlarının bulunduğunu ilk kez açıkça kabul etti abd hava kuvvetleri bakanı troy meink, abd&#x27;nin yörüngede bir uzay silahı konuşlandırdığını kabul etti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 15 Eylül 2026, 12:09</span>
+        </div>
+        <h3>ABD uzayda silahlarının bulunduğunu ilk kez açıkça kabul etti</h3>
+        <p>ABD Hava Kuvvetleri Bakanı Troy Meink, ABD&#x27;nin yörüngede bir uzay silahı konuşlandırdığını kabul etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Eylül 2026, 12:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5lymd84glvzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="obezite ve yanlış beslenme prostat kanseri riskini artırıyor antalya amerikan hastanesi medikal onkoloji bölümünden prof. dr. hakan şat bozcuk, erkeklerde sık görülen prostat kanseri riskini, obezite, hareketsizlik ve sağlıksız beslenmenin artırdığını söyledi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Eylül 2026, 11:17</span>
+        </div>
+        <h3>Obezite ve yanlış beslenme prostat kanseri riskini artırıyor</h3>
+        <p>Antalya Amerikan Hastanesi Medikal Onkoloji Bölümünden Prof. Dr. Hakan Şat Bozcuk, erkeklerde sık görülen prostat kanseri riskini, obezite, hareketsizlik ve sağlıksız beslenmenin artırdığını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Eylül 2026, 11:17</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/obezite-ve-yanlis-beslenme-prostat-kanseri-riskini-artiriyor/4057511" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="78. emmy ödülleri&#x27;nde kazananlar belli oldu abd&#x27;nin dizi endüstrisindeki en prestijli ödüllerinden emmy ödülleri töreni los angeles&#x27;ta düzenlendi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 15 Eylül 2026, 09:23</span>
+        </div>
+        <h3>78. Emmy Ödülleri&#x27;nde kazananlar belli oldu</h3>
+        <p>ABD&#x27;nin dizi endüstrisindeki en prestijli ödüllerinden Emmy Ödülleri töreni Los Angeles&#x27;ta düzenlendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Eylül 2026, 09:23</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmqxvq3wrdz8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="etna yanardağı&#x27;nın kül püskürtmesi hava ulaşımını olumsuz etkilemeye devam ediyor i̇talya&#x27;nın sicilya adası&#x27;ndaki aktif yanardağ etna&#x27;nın dünden bu yana yoğun biçimde kül püskürtmesi nedeniyle, hava ulaşımının hala olumsuz etkilendiği ve katanya havalimanı&#x27;nın iç ve dış hat uçuşlarının bir süre daha yapılamayacağı bildirildi. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 15 Eylül 2026, 12:19</span>
+        </div>
+        <h3>Etna Yanardağı&#x27;nın kül püskürtmesi hava ulaşımını olumsuz etkilemeye devam ediyor</h3>
+        <p>İtalya&#x27;nın Sicilya Adası&#x27;ndaki aktif yanardağ Etna&#x27;nın dünden bu yana yoğun biçimde kül püskürtmesi nedeniyle, hava ulaşımının hala olumsuz etkilendiği ve Katanya Havalimanı&#x27;nın iç ve dış hat uçuşlarının bir süre daha yapılamayacağı bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Eylül 2026, 12:19</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/etna-yanardaginin-kul-puskurtmesi-hava-ulasimini-olumsuz-etkilemeye-devam-ediyor-956888.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
