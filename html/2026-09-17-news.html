@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">17 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">17 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>genel</strong> 18</span><span class="stat-item"><strong>ekonomi</strong> 3</span><span class="stat-item"><strong>teknoloji</strong> 2</span><span class="stat-item"><strong>dünya</strong> 6</span><span class="stat-item"><strong>gümrük</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">GENEL</span>
+        </div>
+        <h3>Eski Kosova lideri Haşim Taçi 25 yıl hapis cezası aldı</h3>
+        <p>Kosova&#x27;nın Sırbistan&#x27;dan bağımsızlık mücadelesi verdiği dönemde Kosova Kurtuluş Ordusu&#x27;nun (UÇK) başında olan eski Cumhurbaşkanı Haşim Taçi savaş suçu nedeniyle 25 yıl hapis cezasına çarptırıldı. Taçi&#x27;nin destekçileri karar sonrası eylem düzenledi.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 16 Eylül 2026, 17:04</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c914dr5433v6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 17 Eylül 2026, 10:01</span>
+            </div>
+            <h3>Piyasalardaki düşüş sonrası Finansal İstikrar Komitesi&#x27;nden açıklama: Yapısal risk yok, tedbirler uygulanacak</h3>
+            <p>Piyasalardaki sert düşüşten sonra Hazine ve Maliye Bakanı Mehmet Şimşek başkanlığında bu sabah olağanüstü toplanan Finansal İstikrar Komitesi, piyasalarda yapısal bir risk bulunmadığını ve gerekli tedbirlerin uygulanacağı açıkladı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmgqdegq5n8eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">BBC Türkçe · 17 Eylül 2026, 11:52</span>
+            </div>
+            <h3>Microsoft CEO&#x27;su: &#x27;Teknolojinin yapay zekayı insan gibi ele alması yanlış ve yanıltıcı&#x27;</h3>
+            <p>Mustafa Süleyman&#x27;a göre, rakip yapay zeka firması Anthropic, Claude&#x27;a &quot;bilinçli olabileceğini&quot; öğretiyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmvgy3p9qg09o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 17 Eylül 2026, 12:17</span>
+            </div>
+            <h3>LGBTİ+ derneklerine soruşturmada en az 80 kişi tutuklandı</h3>
+            <p>LGBTİ+ derneklerine karşı &quot;Ailem Güvende&quot; adı altında yürütülen soruşturma kapsamında en az 80 kişi tutuklandı. İstanbul&#x27;da soruşturmalara karşı eylem düzenlediği için gözaltına alınan 106 kişi ise serbest bırakıldı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c624e4q594zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 16 Eylül 2026, 16:35</span>
+            </div>
+            <h3>AB tarihinde bir ilk: Kanada&#x27;ya &#x27;ortak üyelik&#x27; desteği</h3>
+            <p>Avrupa Birliği (AB) Komisyonu Başkanı Ursula von der Leyen, Kanada&#x27;nın ortak üye olması fikrine destek verdi. Bu fikrin önündeki en önemli engel ise AB&#x27;de &quot;ortak üyelik&quot; statüsünün bulunmaması. Güven Özalp&#x27;in haberi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c6wyzn2585jqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">18 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="eski kosova lideri haşim taçi 25 yıl hapis cezası aldı kosova&#x27;nın sırbistan&#x27;dan bağımsızlık mücadelesi verdiği dönemde kosova kurtuluş ordusu&#x27;nun (uçk) başında olan eski cumhurbaşkanı haşim taçi savaş suçu nedeniyle 25 yıl hapis cezasına çarptırıldı. taçi&#x27;nin destekçileri karar sonrası eylem düzenledi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 16 Eylül 2026, 17:04</span>
+        </div>
+        <h3>Eski Kosova lideri Haşim Taçi 25 yıl hapis cezası aldı</h3>
+        <p>Kosova&#x27;nın Sırbistan&#x27;dan bağımsızlık mücadelesi verdiği dönemde Kosova Kurtuluş Ordusu&#x27;nun (UÇK) başında olan eski Cumhurbaşkanı Haşim Taçi savaş suçu nedeniyle 25 yıl hapis cezasına çarptırıldı. Taçi&#x27;nin destekçileri karar sonrası eylem düzenledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 16 Eylül 2026, 17:04</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c914dr5433v6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb: bölgesel istikrarı tehdit eden girişimler bir an önce sona erdirilmeli milli savunma bakanlığı, &quot;geçtiğimiz hafta sonu suudi arabistan’ı hedef alan i̇ha saldırısı ile husiler tarafından gerçekleştirilen eylemleri kınıyor, bölgesel istikrarı tehdit eden bu tür girişimlerin bir an önce sona erdirilmesi gerektiğini ifade ediyoruz&quot; açıklamasını yaptı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Eylül 2026, 12:00</span>
+        </div>
+        <h3>MSB: Bölgesel istikrarı tehdit eden girişimler bir an önce sona erdirilmeli</h3>
+        <p>Milli Savunma Bakanlığı, &quot;Geçtiğimiz hafta sonu Suudi Arabistan’ı hedef alan İHA saldırısı ile Husiler tarafından gerçekleştirilen eylemleri kınıyor, bölgesel istikrarı tehdit eden bu tür girişimlerin bir an önce sona erdirilmesi gerektiğini ifade ediyoruz&quot; açıklamasını yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Eylül 2026, 12:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/msb-bolgesel-istikrari-tehdit-eden-girisimler-bir-an-once-sona-erdirilmeli-957126.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yks ve lgs deneme takvimi belli oldu milli eğitim bakanlığınca mebi̇ bireysel öğrenme platformu üzerinden 2026-2027 eğitim öğretim yılı boyunca türkiye genelinde gerçekleştirilecek 12 yükseköğretim kurumları sınavı (yks) ve 10 liselere geçiş sistemi (lgs) denemesinin takvimi belli oldu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Eylül 2026, 11:33</span>
+        </div>
+        <h3>YKS ve LGS deneme takvimi belli oldu</h3>
+        <p>Milli Eğitim Bakanlığınca MEBİ Bireysel Öğrenme Platformu üzerinden 2026-2027 eğitim öğretim yılı boyunca Türkiye genelinde gerçekleştirilecek 12 Yükseköğretim Kurumları Sınavı (YKS) ve 10 Liselere Geçiş Sistemi (LGS) denemesinin takvimi belli oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Eylül 2026, 11:33</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/yks-ve-lgs-deneme-takvimi-belli-oldu-957121.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, idamlarının 65. yılında menderes ve bakanlarını andı cumhurbaşkanı recep tayyip erdoğan, idam edilişlerinin 65. yılında başbakan adnan menderes, dışişleri bakanı fatin rüştü zorlu ve maliye bakanı hasan polatkan&#x27;ı rahmetle andı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Eylül 2026, 11:05</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, idamlarının 65. yılında Menderes ve bakanlarını andı</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, idam edilişlerinin 65. yılında Başbakan Adnan Menderes, Dışişleri Bakanı Fatin Rüştü Zorlu ve Maliye Bakanı Hasan Polatkan&#x27;ı rahmetle andı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Eylül 2026, 11:05</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-idamlarinin-65-yilinda-menderes-ve-bakanlarini-andi/4059744" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="wmo: dünya genelindeki nehirler, 2025&#x27;te son 35 yılın en kurak dönemlerinden birini yaşadı dünya meteoroloji örgütü (wmo), 2025&#x27;te dünya genelindeki nehirlerde son 35 yılın en kurak dönemlerinden birinin yaşandığını ve 1991&#x27;den beri son 7 yılın &quot;normal&quot; debiye sahip nehirlerin en az görüldüğü dönem olduğunu bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Eylül 2026, 12:29</span>
+        </div>
+        <h3>WMO: Dünya genelindeki nehirler, 2025&#x27;te son 35 yılın en kurak dönemlerinden birini yaşadı</h3>
+        <p>Dünya Meteoroloji Örgütü (WMO), 2025&#x27;te dünya genelindeki nehirlerde son 35 yılın en kurak dönemlerinden birinin yaşandığını ve 1991&#x27;den beri son 7 yılın &quot;normal&quot; debiye sahip nehirlerin en az görüldüğü dönem olduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Eylül 2026, 12:29</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/wmo-dunya-genelindeki-nehirler-2025te-son-35-yilin-en-kurak-donemlerinden-birini-yasadi-957131.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kktc cumhurbaşkanı erhürman ile gkry lideri hristodulidis arasındaki görüşme ara bölgede başladı kuzey kıbrıs türk cumhuriyeti (kktc) cumhurbaşkanı tufan erhürman&#x27;ın, güney kıbrıs rum yönetimi (gkry) lideri nikos hristodulidis ile görüşmesi ara bölgede başladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Eylül 2026, 12:05</span>
+        </div>
+        <h3>KKTC Cumhurbaşkanı Erhürman ile GKRY lideri Hristodulidis arasındaki görüşme ara bölgede başladı</h3>
+        <p>Kuzey Kıbrıs Türk Cumhuriyeti (KKTC) Cumhurbaşkanı Tufan Erhürman&#x27;ın, Güney Kıbrıs Rum Yönetimi (GKRY) Lideri Nikos Hristodulidis ile görüşmesi ara bölgede başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Eylül 2026, 12:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/kktc-cumhurbaskani-erhurman-ile-gkry-lideri-hristodulidis-arasindaki-gorusme-ara-bolgede-basladi-957129.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="20 ilde yeni nesil organize suç örgütlerine operasyon: 178 gözaltı i̇stanbul emniyet müdürlüğü tarafından 20 ilde düzenlenen eş zamanlı operasyonlarda, 12 ayrı organize suç örgütüne mensup 178 şüpheli yakalandı. &quot;yeni nesil&quot; olarak tanımlanan suç örgütlerinin faaliyetlerinin deşifre edilmesine yönelik yürütülen çalışmalarda gözaltına alınan şüpheliler adliyeye sevk edildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Eylül 2026, 11:45</span>
+        </div>
+        <h3>20 ilde yeni nesil organize suç örgütlerine operasyon: 178 gözaltı</h3>
+        <p>İstanbul Emniyet Müdürlüğü tarafından 20 ilde düzenlenen eş zamanlı operasyonlarda, 12 ayrı organize suç örgütüne mensup 178 şüpheli yakalandı. &quot;Yeni nesil&quot; olarak tanımlanan suç örgütlerinin faaliyetlerinin deşifre edilmesine yönelik yürütülen çalışmalarda gözaltına alınan şüpheliler adliyeye sevk edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Eylül 2026, 11:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/20-ilde-yeni-nesil-organize-suc-orgutlerine-operasyon-178-gozalti-957124.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="şehir hastanelerinde dev hizmet kapasitesi türkiye genelinde hizmet veren 27 şehir hastanesi, yaklaşık 40 bin yatak kapasitesiyle teşhisten tedaviye, ameliyattan rehabilitasyona kadar birçok sağlık hizmetini aynı kampüs içerisinde vatandaşlara sunuyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Eylül 2026, 11:24</span>
+        </div>
+        <h3>Şehir hastanelerinde dev hizmet kapasitesi</h3>
+        <p>Türkiye genelinde hizmet veren 27 şehir hastanesi, yaklaşık 40 bin yatak kapasitesiyle teşhisten tedaviye, ameliyattan rehabilitasyona kadar birçok sağlık hizmetini aynı kampüs içerisinde vatandaşlara sunuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Eylül 2026, 11:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/sehir-hastanelerinde-dev-hizmet-kapasitesi-957120.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb: suudi arabistan&#x27;ı hedef alan i̇ha saldırısı ile husiler tarafından gerçekleştirilen eylemleri kınıyoruz msb sözcüsü tuğamiral aktürk, &quot;suudi arabistan&#x27;ı hedef alan i̇ha saldırısı ile husiler tarafından gerçekleştirilen eylemleri kınıyor, bölgesel istikrarı tehdit eden bu tür girişimlerin bir an önce sona erdirilmesi gerektiğini ifade ediyoruz.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Eylül 2026, 12:34</span>
+        </div>
+        <h3>MSB: Suudi Arabistan&#x27;ı hedef alan İHA saldırısı ile Husiler tarafından gerçekleştirilen eylemleri kınıyoruz</h3>
+        <p>MSB Sözcüsü Tuğamiral Aktürk, &quot;Suudi Arabistan&#x27;ı hedef alan İHA saldırısı ile Husiler tarafından gerçekleştirilen eylemleri kınıyor, bölgesel istikrarı tehdit eden bu tür girişimlerin bir an önce sona erdirilmesi gerektiğini ifade ediyoruz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Eylül 2026, 12:34</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/msb-suudi-arabistani-hedef-alan-iha-saldirisi-ile-husiler-tarafindan-gerceklestirilen-eylemleri-kiniyoruz/4059886" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="et ve sütteki yeni düzenlemeler hem tüketicinin sağlığına hem ürünlerin kalitesine kalkan olacak tarım ve orman bakanlığının et ve süte yönelik düzenlemelerinin hem tüketici sağlığı hem ürünlerin standart ve kalitesine katkı sağlaması bekleniyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Eylül 2026, 11:06</span>
+        </div>
+        <h3>Et ve sütteki yeni düzenlemeler hem tüketicinin sağlığına hem ürünlerin kalitesine kalkan olacak</h3>
+        <p>Tarım ve Orman Bakanlığının et ve süte yönelik düzenlemelerinin hem tüketici sağlığı hem ürünlerin standart ve kalitesine katkı sağlaması bekleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Eylül 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/et-ve-sutteki-yeni-duzenlemeler-hem-tuketicinin-sagligina-hem-urunlerin-kalitesine-kalkan-olacak/4059748" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="prenses diana&#x27;nın kardeşinin kitabındaki iddia: kral charles &#x27;çok geçmeden unutacağız&#x27; dedi galler prensesi diana&#x27;nın kardeşi kont spencer, kral charles&#x27;ın diana&#x27;nın ölümünden kısa bir süre sonra &quot;çok geçmeden unutacağız&quot; dediğini iddia etti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Eylül 2026, 01:12</span>
+        </div>
+        <h3>Prenses Diana&#x27;nın kardeşinin kitabındaki iddia: Kral Charles &#x27;Çok geçmeden unutacağız&#x27; dedi</h3>
+        <p>Galler Prensesi Diana&#x27;nın kardeşi Kont Spencer, Kral Charles&#x27;ın Diana&#x27;nın ölümünden kısa bir süre sonra &quot;Çok geçmeden unutacağız&quot; dediğini iddia etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Eylül 2026, 01:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw4gr510j3edo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sinemalarda 9 yeni film türkiye&#x27;deki sinema salonlarında bu hafta komediden drama, aksiyon ve gerilimden animasyona 9 film vizyona girecek. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Eylül 2026, 12:39</span>
+        </div>
+        <h3>Sinemalarda 9 yeni film</h3>
+        <p>Türkiye&#x27;deki sinema salonlarında bu hafta komediden drama, aksiyon ve gerilimden animasyona 9 film vizyona girecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Eylül 2026, 12:39</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/kultur-sanat/sinemalarda-9-yeni-film-957132.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇letişim başkanlığı vesayet i̇nşalarına karşı milli i̇rade mücadelesi paneli düzenleyecek i̇letişim başkanlığınca yarın i̇stanbul&#x27;da &quot;vesayet i̇nşalarına karşı milli i̇rade mücadelesi paneli&quot; düzenlenecek. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Eylül 2026, 12:11</span>
+        </div>
+        <h3>İletişim Başkanlığı Vesayet İnşalarına Karşı Milli İrade Mücadelesi Paneli düzenleyecek</h3>
+        <p>İletişim Başkanlığınca yarın İstanbul&#x27;da &quot;Vesayet İnşalarına Karşı Milli İrade Mücadelesi Paneli&quot; düzenlenecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Eylül 2026, 12:11</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/iletisim-baskanligi-vesayet-insalarina-karsi-milli-irade-mucadelesi-paneli-duzenleyecek-957130.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="esad rejiminden kaçan suriyeli, duvar örerek sakladığı kütüphanesine yıllar sonra kavuştu suriye&#x27;de esad rejimi saldırılarından endişe ederek gösterilerin başladığı dönemde evindeki kütüphaneyi duvar örerek saklayan suriyeli adam, kitaplarına yıllar sonra kavuştu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Eylül 2026, 11:30</span>
+        </div>
+        <h3>Esad rejiminden kaçan Suriyeli, duvar örerek sakladığı kütüphanesine yıllar sonra kavuştu</h3>
+        <p>Suriye&#x27;de Esad rejimi saldırılarından endişe ederek gösterilerin başladığı dönemde evindeki kütüphaneyi duvar örerek saklayan Suriyeli adam, kitaplarına yıllar sonra kavuştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Eylül 2026, 11:30</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/esad-rejiminden-kacan-suriyeli-duvar-orerek-sakladigi-kutuphanesine-yillar-sonra-kavustu-957123.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇letişim başkanlığı &quot;vesayet i̇nşalarına karşı milli i̇rade mücadelesi paneli&quot; düzenleyecek cumhurbaşkanlığı i̇letişim başkanlığınca yarın i̇stanbul&#x27;da &quot;vesayet i̇nşalarına karşı milli i̇rade mücadelesi paneli&quot; düzenlenecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Eylül 2026, 12:08</span>
+        </div>
+        <h3>İletişim Başkanlığı &quot;Vesayet İnşalarına Karşı Milli İrade Mücadelesi Paneli&quot; düzenleyecek</h3>
+        <p>Cumhurbaşkanlığı İletişim Başkanlığınca yarın İstanbul&#x27;da &quot;Vesayet İnşalarına Karşı Milli İrade Mücadelesi Paneli&quot; düzenlenecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Eylül 2026, 12:08</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iletisim-baskanligi-vesayet-insalarina-karsi-milli-irade-mucadelesi-paneli-duzenleyecek-/4059853" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da yeni nesil suç örgütlerine yönelik operasyonda yakalanan 178 şüpheli adliyede i̇stanbul merkezli 20 ilde yeni nesil suç örgütlerine yönelik düzenlenen operasyonda gözaltına alınan 178 şüpheli adliyeye sevk edildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Eylül 2026, 11:59</span>
+        </div>
+        <h3>İstanbul&#x27;da yeni nesil suç örgütlerine yönelik operasyonda yakalanan 178 şüpheli adliyede</h3>
+        <p>İstanbul merkezli 20 ilde yeni nesil suç örgütlerine yönelik düzenlenen operasyonda gözaltına alınan 178 şüpheli adliyeye sevk edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Eylül 2026, 11:59</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-yeni-nesil-suc-orgutlerine-yonelik-operasyonda-yakalanan-178-supheli-adliyede-/4059846" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;mavi vatan&quot;ın isimsiz kahramanları: &quot;degak timi&quot; sahil güvenlik karadeniz bölge komutanlığı&#x27;nda faaliyet gösteren dalış, emniyet, güvenlik, arama ve kurtarma (degak) timi, &quot;mavi vatan&quot;daki zorlu mesaisini başarıyla sürdürüyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Eylül 2026, 11:36</span>
+        </div>
+        <h3>&quot;Mavi vatan&quot;ın isimsiz kahramanları: &quot;DEGAK Timi&quot;</h3>
+        <p>Sahil Güvenlik Karadeniz Bölge Komutanlığı&#x27;nda faaliyet gösteren Dalış, Emniyet, Güvenlik, Arama ve Kurtarma (DEGAK) Timi, &quot;mavi vatan&quot;daki zorlu mesaisini başarıyla sürdürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Eylül 2026, 11:36</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mavi-vatanin-isimsiz-kahramanlari-degak-timi/4059803" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kozinoğlu&#x27;nun ölümüne ilişkin soruşturmada 3 zanlı daha gözaltına alındı eski mi̇t görevlisi kaşif kozinoğlu&#x27;nun cezaevinde ölümüne ilişkin yeniden başlatılan soruşturma kapsamında, olay tarihinde görevli 2 savcı ile kozinoğlu&#x27;nun koğuş arkadaşı gözaltına alındı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Eylül 2026, 11:04</span>
+        </div>
+        <h3>Kozinoğlu&#x27;nun ölümüne ilişkin soruşturmada 3 zanlı daha gözaltına alındı</h3>
+        <p>Eski MİT görevlisi Kaşif Kozinoğlu&#x27;nun cezaevinde ölümüne ilişkin yeniden başlatılan soruşturma kapsamında, olay tarihinde görevli 2 savcı ile Kozinoğlu&#x27;nun koğuş arkadaşı gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Eylül 2026, 11:04</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kozinoglunun-olumune-iliskin-sorusturmada-3-zanli-daha-gozaltina-alindi/4059743" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="piyasalardaki düşüş sonrası finansal i̇stikrar komitesi&#x27;nden açıklama: yapısal risk yok, tedbirler uygulanacak piyasalardaki sert düşüşten sonra hazine ve maliye bakanı mehmet şimşek başkanlığında bu sabah olağanüstü toplanan finansal i̇stikrar komitesi, piyasalarda yapısal bir risk bulunmadığını ve gerekli tedbirlerin uygulanacağı açıkladı. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 17 Eylül 2026, 10:01</span>
+        </div>
+        <h3>Piyasalardaki düşüş sonrası Finansal İstikrar Komitesi&#x27;nden açıklama: Yapısal risk yok, tedbirler uygulanacak</h3>
+        <p>Piyasalardaki sert düşüşten sonra Hazine ve Maliye Bakanı Mehmet Şimşek başkanlığında bu sabah olağanüstü toplanan Finansal İstikrar Komitesi, piyasalarda yapısal bir risk bulunmadığını ve gerekli tedbirlerin uygulanacağı açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Eylül 2026, 10:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmgqdegq5n8eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;de kobi̇&#x27;lerin çok uluslu şirketlerle bağları güçleniyor ekonomik i̇şbirliği ve kalkınma örgütünün (oecd) raporuna göre, türkiye ekonomisinde katma değerin yüzde 41,2&#x27;sini ve istihdamın yüzde 68,5&#x27;ini oluşturan küçük ve orta büyüklükteki işletmelerin (kobi̇) küresel değer zincirlerine entegrasyonu derinleşirken, çok uluslu şirketlerle tedarik ve iş birliği bağlantıları da güçleniyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 17 Eylül 2026, 11:52</span>
+        </div>
+        <h3>Türkiye&#x27;de KOBİ&#x27;lerin çok uluslu şirketlerle bağları güçleniyor</h3>
+        <p>Ekonomik İşbirliği ve Kalkınma Örgütünün (OECD) raporuna göre, Türkiye ekonomisinde katma değerin yüzde 41,2&#x27;sini ve istihdamın yüzde 68,5&#x27;ini oluşturan küçük ve orta büyüklükteki işletmelerin (KOBİ) küresel değer zincirlerine entegrasyonu derinleşirken, çok uluslu şirketlerle tedarik ve iş birliği bağlantıları da güçleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Eylül 2026, 11:52</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyede-kobilerin-cok-uluslu-sirketlerle-baglari-gucleniyor-957128.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd merkez bankası fed üç yıl sonra faiz artırdı abd merkez bankası (fed) üç yıl sonra ilk kez faiz artırdı. fed piyasaların beklediği gibi 25 baz puanlık bir artışla, faizleri %3,75- % 4 bandına yükseltti. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 17 Eylül 2026, 01:54</span>
+        </div>
+        <h3>ABD Merkez Bankası Fed üç yıl sonra faiz artırdı</h3>
+        <p>ABD Merkez Bankası (Fed) üç yıl sonra ilk kez faiz artırdı. Fed piyasaların beklediği gibi 25 baz puanlık bir artışla, faizleri %3,75- % 4 bandına yükseltti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Eylül 2026, 01:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm986j2pn06ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="microsoft ceo&#x27;su: &#x27;teknolojinin yapay zekayı insan gibi ele alması yanlış ve yanıltıcı&#x27; mustafa süleyman&#x27;a göre, rakip yapay zeka firması anthropic, claude&#x27;a &quot;bilinçli olabileceğini&quot; öğretiyor. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 17 Eylül 2026, 11:52</span>
+        </div>
+        <h3>Microsoft CEO&#x27;su: &#x27;Teknolojinin yapay zekayı insan gibi ele alması yanlış ve yanıltıcı&#x27;</h3>
+        <p>Mustafa Süleyman&#x27;a göre, rakip yapay zeka firması Anthropic, Claude&#x27;a &quot;bilinçli olabileceğini&quot; öğretiyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Eylül 2026, 11:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmvgy3p9qg09o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="otobüste duyduğu konuşmanın peşinden gitti, 25 yıllık gönüllü annelik başladı huzurevindeki gönüllülüğün ardından tesadüfen duyduğu bir otobüs sohbetiyle yolu devlet korumasındaki çocuklarla kesişen şivazar akdere, 25 yılı aşkın süredir çocukların yanında yer alıyor. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Eylül 2026, 11:03</span>
+        </div>
+        <h3>Otobüste duyduğu konuşmanın peşinden gitti, 25 yıllık gönüllü annelik başladı</h3>
+        <p>Huzurevindeki gönüllülüğün ardından tesadüfen duyduğu bir otobüs sohbetiyle yolu devlet korumasındaki çocuklarla kesişen Şivazar Akdere, 25 yılı aşkın süredir çocukların yanında yer alıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Eylül 2026, 11:03</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/otobuste-duydugu-konusmanin-pesinden-gitti-25-yillik-gonullu-annelik-basladi/4059739" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="lgbti̇+ derneklerine soruşturmada en az 80 kişi tutuklandı lgbti̇+ derneklerine karşı &quot;ailem güvende&quot; adı altında yürütülen soruşturma kapsamında en az 80 kişi tutuklandı. i̇stanbul&#x27;da soruşturmalara karşı eylem düzenlediği için gözaltına alınan 106 kişi ise serbest bırakıldı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 17 Eylül 2026, 12:17</span>
+        </div>
+        <h3>LGBTİ+ derneklerine soruşturmada en az 80 kişi tutuklandı</h3>
+        <p>LGBTİ+ derneklerine karşı &quot;Ailem Güvende&quot; adı altında yürütülen soruşturma kapsamında en az 80 kişi tutuklandı. İstanbul&#x27;da soruşturmalara karşı eylem düzenlediği için gözaltına alınan 106 kişi ise serbest bırakıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Eylül 2026, 12:17</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c624e4q594zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ab tarihinde bir ilk: kanada&#x27;ya &#x27;ortak üyelik&#x27; desteği avrupa birliği (ab) komisyonu başkanı ursula von der leyen, kanada&#x27;nın ortak üye olması fikrine destek verdi. bu fikrin önündeki en önemli engel ise ab&#x27;de &quot;ortak üyelik&quot; statüsünün bulunmaması. güven özalp&#x27;in haberi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 16 Eylül 2026, 16:35</span>
+        </div>
+        <h3>AB tarihinde bir ilk: Kanada&#x27;ya &#x27;ortak üyelik&#x27; desteği</h3>
+        <p>Avrupa Birliği (AB) Komisyonu Başkanı Ursula von der Leyen, Kanada&#x27;nın ortak üye olması fikrine destek verdi. Bu fikrin önündeki en önemli engel ise AB&#x27;de &quot;ortak üyelik&quot; statüsünün bulunmaması. Güven Özalp&#x27;in haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 16 Eylül 2026, 16:35</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6wyzn2585jqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="van afad ekipleri yurt dışındaki olası afetlerde can kurtarmaya hazırlanıyor van i̇l afet ve acil durum müdürlüğü ekipleri, birleşmiş milletler çatısı altında bulunan uluslararası arama kurtarma danışma grubu&#x27;nun yapılanması kapsamında ulusal bazda akredite olabilmek için uygulanan sınavı başarıyla tamamlamayı hedefliyor. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Eylül 2026, 11:42</span>
+        </div>
+        <h3>Van AFAD ekipleri yurt dışındaki olası afetlerde can kurtarmaya hazırlanıyor</h3>
+        <p>Van İl Afet ve Acil Durum Müdürlüğü ekipleri, Birleşmiş Milletler çatısı altında bulunan Uluslararası Arama Kurtarma Danışma Grubu&#x27;nun yapılanması kapsamında ulusal bazda akredite olabilmek için uygulanan sınavı başarıyla tamamlamayı hedefliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Eylül 2026, 11:42</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/van-afad-ekipleri-yurt-disindaki-olasi-afetlerde-can-kurtarmaya-hazirlaniyor/4059817" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="adnan menderes&#x27;in idamının üzerinden 65 yıl geçti türk demokrasisi için unutulmayacak bir kara leke olarak tarih sayfalarına kazınan merhum başbakan adnan menderes&#x27;in 17 eylül 1961&#x27;de idam edilmesinin üzerinden 65 yıl geçti. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Eylül 2026, 11:09</span>
+        </div>
+        <h3>Adnan Menderes&#x27;in idamının üzerinden 65 yıl geçti</h3>
+        <p>Türk demokrasisi için unutulmayacak bir kara leke olarak tarih sayfalarına kazınan merhum Başbakan Adnan Menderes&#x27;in 17 Eylül 1961&#x27;de idam edilmesinin üzerinden 65 yıl geçti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Eylül 2026, 11:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/adnan-menderesin-idaminin-uzerinden-65-yil-gecti/4059754" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran&#x27;ın abd üslerine verdiği yoğun hasarı gösteren fotoğraflar bbc&#x27;nin abd&#x27;deki ortağı cbs, i̇ran&#x27;ın ortadoğu&#x27;daki birçok abd tesisine düzenlediği saldırılar sonucu oluşan yaygın hasarı gösteren görüntüler elde etti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 17 Eylül 2026, 08:45</span>
+        </div>
+        <h3>İran&#x27;ın ABD üslerine verdiği yoğun hasarı gösteren fotoğraflar</h3>
+        <p>BBC&#x27;nin ABD&#x27;deki ortağı CBS, İran&#x27;ın Ortadoğu&#x27;daki birçok ABD tesisine düzenlediği saldırılar sonucu oluşan yaygın hasarı gösteren görüntüler elde etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Eylül 2026, 08:45</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvj64wjekd5do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mekke yakınlarında i̇ha düşürüldü, abd suudi arabistan&#x27;a seyahat uyarısını güncelledi suudi arabistan&#x27;daki aramco petrol tesisini ve bir hava üssünü vurduklarını öne süren husiler, mekke&#x27;yi hedef aldıkları iddiasını ise reddetti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 17 Eylül 2026, 09:09</span>
+        </div>
+        <h3>Mekke yakınlarında İHA düşürüldü, ABD Suudi Arabistan&#x27;a seyahat uyarısını güncelledi</h3>
+        <p>Suudi Arabistan&#x27;daki Aramco petrol tesisini ve bir hava üssünü vurduklarını öne süren Husiler, Mekke&#x27;yi hedef aldıkları iddiasını ise reddetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Eylül 2026, 09:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cxnvlgp65d47o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="motorin 100 lira eşiğini aştı: akaryakıt fiyatları neden artıyor? motorin fiyatları 17 eylül itibarıyla zamlanarak ilk kez 100 lirayı aştı. gece yarısı motorinin litre fiyatına gelen 4 lira 62 kuruşluk zammın ardından akaryatın fiyatı ilk kez üç haneye çıktı. uzmanlar, küresel gelişmeler ve kademeli vergi artışıyla birlikte akaryakıt fiyatlarının ilerleyen aylarda daha da artmasını bekliyor. gümrük bbc türkçe" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">BBC Türkçe · 17 Eylül 2026, 10:28</span>
+        </div>
+        <h3>Motorin 100 lira eşiğini aştı: Akaryakıt fiyatları neden artıyor?</h3>
+        <p>Motorin fiyatları 17 Eylül itibarıyla zamlanarak ilk kez 100 lirayı aştı. Gece yarısı motorinin litre fiyatına gelen 4 lira 62 kuruşluk zammın ardından akaryatın fiyatı ilk kez üç haneye çıktı. Uzmanlar, küresel gelişmeler ve kademeli vergi artışıyla birlikte akaryakıt fiyatlarının ilerleyen aylarda daha da artmasını bekliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Eylül 2026, 10:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cp80k4806xjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
