@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">19 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">19 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>teknoloji</strong> 3</span><span class="stat-item"><strong>ekonomi</strong> 4</span><span class="stat-item"><strong>genel</strong> 19</span><span class="stat-item"><strong>dünya</strong> 3</span><span class="stat-item"><strong>spor</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">TEKNOLOJI</span>
+        </div>
+        <h3>Çin, ABD&#x27;li teknoloji devlerinin yapay zekayı yavaşlatma çağrılarına ne diyor?</h3>
+        <p>Yapay zekânın müthiş bir hızla ilerlemesiyle birlikte, sektörün en önde gelen liderlerinden bazıları, bunun beraberinde getirebileceği potansiyel riskler konusunda uyarıda bulundu. Ancak bu tehditle mücadele çabaları, dünyanın iki önde gelen yapay zekâ süper gücü olan Çin ve ABD arasındaki yoğun rekabet nedeniyle karmaşıklaşabilir.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 19 Eylül 2026, 10:48</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c6x2zpz9n8glo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 19 Eylül 2026, 11:39</span>
+            </div>
+            <h3>TEKNOFEST 2026da NSosyalin geleceğini gençler tasarlıyor</h3>
+            <p>332 takımın başvurduğu NSosyal İnovasyon Yarışması’nda 22 takım finale kaldı. Türkiye, Azerbaycan ve Kırgızistan’dan finalistlerin yer aldığı yarışmada gençler; yapay zekadan içerik ekonomisine, kullanıcı deneyiminden dijital refaha uzanan yenilikçi sosyal medya çözümleri geliştirmek için yarışıyor.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/teknofest-2026da-nsosyalin-gelecegini-gencler-tasarliyor-957351.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 18 Eylül 2026, 12:44</span>
+            </div>
+            <h3>Borsadaki fon krizi nasıl çıktı, yatırımcılar risk altında mı?</h3>
+            <p>Borsa İstanbul&#x27;da günlerdir süren düşüşün ardından hükümet piyasada krizi önlemek için sert önlemler açıkladı. Peki kriz nasıl başladı? Sorunlu fonlarda varlığı bulunan yatırımcılar nasıl etkilenecek?</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cxvgyvndqepyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 18 Eylül 2026, 19:17</span>
+            </div>
+            <h3>Berlin&#x27;de seçim: Türkiye kökenli sosyalist Elif Eralp, Berlin&#x27;in Mamdani&#x27;si mi olacak?</h3>
+            <p>Türk asıllı Alman siyasetçi Elif Eralp, Berlin&#x27;in ilk sosyalist ve göçmen kökenli eyalet başbakanı olabilir. Peki New York Belediye Başkanı Zohran Mamdani&#x27;ye benzetilen Sol Parti&#x27;nin Türkiye kökenli adayı Elif Eralp kim? &quot;Aşırı sağcı AfD&#x27;nin panzehiri&quot; olarak nitelendirilmesinin gerisinde ne yatıyor?</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 18 Eylül 2026, 16:00</span>
+            </div>
+            <h3>Hindistan&#x27;da kızının eğitimi için yalınayak koşan anneye ödül</h3>
+            <p>Kimilerine göre Ramabai Ranveer&#x27;in üç bin rupi ödüllü yalınayak üç kilometrelik koşusu, annelerin fedakarlığını ve çocuklarını yoksulluktan kurtarmak için ne kadar ileri gidebileceklerini simgeliyor. Diğerlerine göre ise bu koşu, Hindistan&#x27;ın eğitim sistemini saran çürümeyi ve sosyal hareketlilik için bir araç olabileceğine inanmanın boşluğunu özetliyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ck87vr2j8dx4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="çin, abd&#x27;li teknoloji devlerinin yapay zekayı yavaşlatma çağrılarına ne diyor? yapay zekânın müthiş bir hızla ilerlemesiyle birlikte, sektörün en önde gelen liderlerinden bazıları, bunun beraberinde getirebileceği potansiyel riskler konusunda uyarıda bulundu. ancak bu tehditle mücadele çabaları, dünyanın iki önde gelen yapay zekâ süper gücü olan çin ve abd arasındaki yoğun rekabet nedeniyle karmaşıklaşabilir. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 19 Eylül 2026, 10:48</span>
+        </div>
+        <h3>Çin, ABD&#x27;li teknoloji devlerinin yapay zekayı yavaşlatma çağrılarına ne diyor?</h3>
+        <p>Yapay zekânın müthiş bir hızla ilerlemesiyle birlikte, sektörün en önde gelen liderlerinden bazıları, bunun beraberinde getirebileceği potansiyel riskler konusunda uyarıda bulundu. Ancak bu tehditle mücadele çabaları, dünyanın iki önde gelen yapay zekâ süper gücü olan Çin ve ABD arasındaki yoğun rekabet nedeniyle karmaşıklaşabilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Eylül 2026, 10:48</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6x2zpz9n8glo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rojin kabaiş soruşturması: &#x27;fethi kabir talebinde bulunabiliriz&#x27; bbc türkçe&#x27;ye konuşan kabaiş ailesinin avukatı abdurrahman karabulut gözaltına alınan bir çiftin ifadelerinin alındığını, dna örneklerinin toplandığını, telefonlarına el konulup, evlerinde arama yapıldığını açıkladı. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 18 Eylül 2026, 18:40</span>
+        </div>
+        <h3>Rojin Kabaiş soruşturması: &#x27;Fethi kabir talebinde bulunabiliriz&#x27;</h3>
+        <p>BBC Türkçe&#x27;ye konuşan Kabaiş ailesinin avukatı Abdurrahman Karabulut gözaltına alınan bir çiftin ifadelerinin alındığını, DNA örneklerinin toplandığını, telefonlarına el konulup, evlerinde arama yapıldığını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 18 Eylül 2026, 18:40</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqpve8g4vzglo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nvidia ceo&#x27;su huang, yapay zekayı olabildiğince hızlı geliştirme çağrısı yaptı abd merkezli çip üreticisi nvidia&#x27;nın üst yöneticisi (ceo) jensen huang, yapay zekanın ellerinden geldiğince hızlı şekilde geliştirilmesi gerektiğini söyledi. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 19 Eylül 2026, 10:54</span>
+        </div>
+        <h3>Nvidia CEO&#x27;su Huang, yapay zekayı olabildiğince hızlı geliştirme çağrısı yaptı</h3>
+        <p>ABD merkezli çip üreticisi Nvidia&#x27;nın Üst Yöneticisi (CEO) Jensen Huang, yapay zekanın ellerinden geldiğince hızlı şekilde geliştirilmesi gerektiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Eylül 2026, 10:54</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/nvidia-ceosu-huang-yapay-zekayi-olabildigince-hizli-gelistirme-cagrisi-yapti-957345.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">4 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="teknofest 2026da nsosyalin geleceğini gençler tasarlıyor 332 takımın başvurduğu nsosyal i̇novasyon yarışması’nda 22 takım finale kaldı. türkiye, azerbaycan ve kırgızistan’dan finalistlerin yer aldığı yarışmada gençler; yapay zekadan içerik ekonomisine, kullanıcı deneyiminden dijital refaha uzanan yenilikçi sosyal medya çözümleri geliştirmek için yarışıyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 19 Eylül 2026, 11:39</span>
+        </div>
+        <h3>TEKNOFEST 2026da NSosyalin geleceğini gençler tasarlıyor</h3>
+        <p>332 takımın başvurduğu NSosyal İnovasyon Yarışması’nda 22 takım finale kaldı. Türkiye, Azerbaycan ve Kırgızistan’dan finalistlerin yer aldığı yarışmada gençler; yapay zekadan içerik ekonomisine, kullanıcı deneyiminden dijital refaha uzanan yenilikçi sosyal medya çözümleri geliştirmek için yarışıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Eylül 2026, 11:39</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/teknofest-2026da-nsosyalin-gelecegini-gencler-tasarliyor-957351.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="borsadaki fon krizi nasıl çıktı, yatırımcılar risk altında mı? borsa i̇stanbul&#x27;da günlerdir süren düşüşün ardından hükümet piyasada krizi önlemek için sert önlemler açıkladı. peki kriz nasıl başladı? sorunlu fonlarda varlığı bulunan yatırımcılar nasıl etkilenecek? ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 18 Eylül 2026, 12:44</span>
+        </div>
+        <h3>Borsadaki fon krizi nasıl çıktı, yatırımcılar risk altında mı?</h3>
+        <p>Borsa İstanbul&#x27;da günlerdir süren düşüşün ardından hükümet piyasada krizi önlemek için sert önlemler açıkladı. Peki kriz nasıl başladı? Sorunlu fonlarda varlığı bulunan yatırımcılar nasıl etkilenecek?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 18 Eylül 2026, 12:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cxvgyvndqepyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gümrükler muhafaza ekipleri 8 ayda 19 bin 247 puroya el koydu ticaret bakanlığı gümrükler muhafaza ekipleri, kaçakçılıkla mücadele ve kamu sağlığının korunması hedefiyle 8 ayda 202,8 milyon liralık tütün mamulleri ve ilgili malzemelere el koyarken, 19 bin 247 puro ele geçirdi. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 11:10</span>
+        </div>
+        <h3>Gümrükler Muhafaza ekipleri 8 ayda 19 bin 247 puroya el koydu</h3>
+        <p>Ticaret Bakanlığı Gümrükler Muhafaza ekipleri, kaçakçılıkla mücadele ve kamu sağlığının korunması hedefiyle 8 ayda 202,8 milyon liralık tütün mamulleri ve ilgili malzemelere el koyarken, 19 bin 247 puro ele geçirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 11:10</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/gumrukler-muhafaza-ekipleri-8-ayda-19-bin-247-puroya-el-koydu/4061762" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="büyümeyi ve ülke refahını artıracak kamu yatırımlarına öncelik verilecek türkiye&#x27;de gelecek üç yılda büyümeye, özel kesim yatırımlarını desteklemeye, bölgelerin gelişme potansiyelini harekete geçirmeye, üretim, istihdam ve ülke refahını artırmaya azami katkı sağlayacak kamu yatırımları öncelikli olacak. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 19 Eylül 2026, 11:18</span>
+        </div>
+        <h3>Büyümeyi ve ülke refahını artıracak kamu yatırımlarına öncelik verilecek</h3>
+        <p>Türkiye&#x27;de gelecek üç yılda büyümeye, özel kesim yatırımlarını desteklemeye, bölgelerin gelişme potansiyelini harekete geçirmeye, üretim, istihdam ve ülke refahını artırmaya azami katkı sağlayacak kamu yatırımları öncelikli olacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Eylül 2026, 11:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/buyumeyi-ve-ulke-refahini-artiracak-kamu-yatirimlarina-oncelik-verilecek-957348.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">19 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="berlin&#x27;de seçim: türkiye kökenli sosyalist elif eralp, berlin&#x27;in mamdani&#x27;si mi olacak? türk asıllı alman siyasetçi elif eralp, berlin&#x27;in ilk sosyalist ve göçmen kökenli eyalet başbakanı olabilir. peki new york belediye başkanı zohran mamdani&#x27;ye benzetilen sol parti&#x27;nin türkiye kökenli adayı elif eralp kim? &quot;aşırı sağcı afd&#x27;nin panzehiri&quot; olarak nitelendirilmesinin gerisinde ne yatıyor? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 18 Eylül 2026, 19:17</span>
+        </div>
+        <h3>Berlin&#x27;de seçim: Türkiye kökenli sosyalist Elif Eralp, Berlin&#x27;in Mamdani&#x27;si mi olacak?</h3>
+        <p>Türk asıllı Alman siyasetçi Elif Eralp, Berlin&#x27;in ilk sosyalist ve göçmen kökenli eyalet başbakanı olabilir. Peki New York Belediye Başkanı Zohran Mamdani&#x27;ye benzetilen Sol Parti&#x27;nin Türkiye kökenli adayı Elif Eralp kim? &quot;Aşırı sağcı AfD&#x27;nin panzehiri&quot; olarak nitelendirilmesinin gerisinde ne yatıyor?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 18 Eylül 2026, 19:17</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan kurum: 5 yıllık akıllı şehir eylem planımız hazır çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, &quot;5 yıllık akıllı şehir eylem planımız hazır. her alanda vatandaşımızın hayatını kolaylaştıracak 50 akıllı şehir uygulamasını hayata geçireceğimiz düzenlemeler resmi gazete’de yayımlandı&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 19 Eylül 2026, 11:24</span>
+        </div>
+        <h3>Bakan Kurum: 5 yıllık akıllı şehir eylem planımız hazır</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, &quot;5 yıllık akıllı şehir eylem planımız hazır. Her alanda vatandaşımızın hayatını kolaylaştıracak 50 akıllı şehir uygulamasını hayata geçireceğimiz düzenlemeler Resmi Gazete’de yayımlandı&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Eylül 2026, 11:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-kurum-5-yillik-akilli-sehir-eylem-planimiz-hazir-957349.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kozinoğlu soruşturmasında gözaltına alınan hasan atilla uğur kimdir? eski mi̇t mensubu kaşif kozinoğlu&#x27;nun 2011 yılında silivri cezaevi&#x27;nde hayatını kaybetmesiyle ilgili yeniden başlatılan soruşturmada, koğuş arkadaşı emekli albay hasan atilla uğur&#x27;un da aralarında bulunduğu dört şüpheli hakimliğe sevk edildi genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 19 Eylül 2026, 12:00</span>
+        </div>
+        <h3>Kozinoğlu soruşturmasında gözaltına alınan Hasan Atilla Uğur kimdir?</h3>
+        <p>Eski MİT mensubu Kaşif Kozinoğlu&#x27;nun 2011 yılında Silivri Cezaevi&#x27;nde hayatını kaybetmesiyle ilgili yeniden başlatılan soruşturmada, koğuş arkadaşı emekli Albay Hasan Atilla Uğur&#x27;un da aralarında bulunduğu dört şüpheli hakimliğe sevk edildi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Eylül 2026, 12:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr780xjyn53vo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="5 soruda tarım arazilerinde yeni dönem tarım ve orman bakanlığınca başlatılan işlenmeyen tarım arazilerinin sezonluk kiralanmasına yönelik 1 eylül&#x27;de başlayan ilan süreci devam ediyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 19 Eylül 2026, 11:32</span>
+        </div>
+        <h3>5 soruda tarım arazilerinde yeni dönem</h3>
+        <p>Tarım ve Orman Bakanlığınca başlatılan işlenmeyen tarım arazilerinin sezonluk kiralanmasına yönelik 1 Eylül&#x27;de başlayan ilan süreci devam ediyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Eylül 2026, 11:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/5-soruda-tarim-arazilerinde-yeni-donem-957350.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail bağlantılı dolandırıcılık şebekesine operasyon: 201 gözaltı i̇stanbul cumhuriyet başsavcılığı koordinesinde, mi̇t i̇stanbul bölge başkanlığı ve i̇stanbul emniyet müdürlüğü ile birlikte yürütülen i̇srail bağlantılı uluslararası dolandırıcılık şebekesine yönelik operasyon kapsamında 248 şahıs hakkında yürütülen çalışmalarda 201 kişi gözaltına alındı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 19 Eylül 2026, 11:04</span>
+        </div>
+        <h3>İsrail bağlantılı dolandırıcılık şebekesine operasyon: 201 gözaltı</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı koordinesinde, MİT İstanbul Bölge Başkanlığı ve İstanbul Emniyet Müdürlüğü ile birlikte yürütülen İsrail bağlantılı uluslararası dolandırıcılık şebekesine yönelik operasyon kapsamında 248 şahıs hakkında yürütülen çalışmalarda 201 kişi gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Eylül 2026, 11:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/israil-baglantili-dolandiricilik-sebekesine-operasyon-201-gozalti-957346.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kullanım dışı mühimmat, tsk tesisinde &quot;sıfır atık&quot; ilkesiyle geri kazanılıyor türk silahlı kuvvetleri (tsk) mühimmat ayırma ve ayıklama tesisi&#x27;nde (maat), kullanım dışı klasik mühimmat, roket, füze ve mayınlar, güvenli biçimde ana parçalarına ayrılarak imha veya geri kazanım süreçlerine alınıyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 11:27</span>
+        </div>
+        <h3>Kullanım dışı mühimmat, TSK tesisinde &quot;sıfır atık&quot; ilkesiyle geri kazanılıyor</h3>
+        <p>Türk Silahlı Kuvvetleri (TSK) Mühimmat Ayırma ve Ayıklama Tesisi&#x27;nde (MAAT), kullanım dışı klasik mühimmat, roket, füze ve mayınlar, güvenli biçimde ana parçalarına ayrılarak imha veya geri kazanım süreçlerine alınıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 11:27</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kullanim-disi-muhimmat-tsk-tesisinde-sifir-atik-ilkesiyle-geri-kazaniliyor/4061779" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeni parti&#x27;nin yol haritası: kurultay, örgütlenme, seçim hazırlığı ve &#x27;yedek parti&#x27; hesabı özgür özel&#x27;in genel başkanlığında 91 milletvekilinin kurduğu yeni̇ parti, kuruluşunun ilk 2,5 ayını geride bırakırken önümüzdeki aylarda örgütlenme ve kurultay çalışmalarına ağırlık verecek. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 19 Eylül 2026, 10:37</span>
+        </div>
+        <h3>Yeni Parti&#x27;nin yol haritası: Kurultay, örgütlenme, seçim hazırlığı ve &#x27;yedek parti&#x27; hesabı</h3>
+        <p>Özgür Özel&#x27;in genel başkanlığında 91 milletvekilinin kurduğu YENİ Parti, kuruluşunun ilk 2,5 ayını geride bırakırken önümüzdeki aylarda örgütlenme ve kurultay çalışmalarına ağırlık verecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Eylül 2026, 10:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9770ey850m2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kadınlar dayanıklılık koşusunda erkeklerden daha mı iyi? son aylarda kadınlar bazı önemli dayanıklılık yarışlarında erkekleri geride bıraktılar. peki kadınlar bu tür mücadelelere daha mı uygunlar? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 19 Eylül 2026, 11:07</span>
+        </div>
+        <h3>Kadınlar dayanıklılık koşusunda erkeklerden daha mı iyi?</h3>
+        <p>Son aylarda kadınlar bazı önemli dayanıklılık yarışlarında erkekleri geride bıraktılar. Peki kadınlar bu tür mücadelelere daha mı uygunlar?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Eylül 2026, 11:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cjrx0lzqelpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;akşamdan kalmak gibi&#x27;: partnerinizin horlaması sağlığınızı nasıl etkiliyor? bbc&#x27;ye konuşan uzmanlar, horlayan birinin yanında uyumanın sağlığınız üzerinde olumsuz etkisi olabileceğini söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 19 Eylül 2026, 11:09</span>
+        </div>
+        <h3>&#x27;Akşamdan kalmak gibi&#x27;: Partnerinizin horlaması sağlığınızı nasıl etkiliyor?</h3>
+        <p>BBC&#x27;ye konuşan uzmanlar, horlayan birinin yanında uyumanın sağlığınız üzerinde olumsuz etkisi olabileceğini söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Eylül 2026, 11:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm2qez849zdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yargıtay: gelirleri denk olan eşe yoksulluk nafakası bağlanması hukuka aykırı yargıtay 2. hukuk dairesi, boşandığı eşiyle aynı gelir düzeyinde olup düzenli geliri bulunan kadına nafaka bağlanması yönündeki yerel mahkeme kararını hukuka aykırı bularak bozdu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 19 Eylül 2026, 11:35</span>
+        </div>
+        <h3>Yargıtay: Gelirleri denk olan eşe yoksulluk nafakası bağlanması hukuka aykırı</h3>
+        <p>Yargıtay 2. Hukuk Dairesi, boşandığı eşiyle aynı gelir düzeyinde olup düzenli geliri bulunan kadına nafaka bağlanması yönündeki yerel mahkeme kararını hukuka aykırı bularak bozdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Eylül 2026, 11:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/yargitay-gelirleri-denk-olan-ese-yoksulluk-nafakasi-baglanmasi-hukuka-aykiri-957352.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk kızılay&#x27;ın aktif kök hücre bağışçı adayı sayısı 1 milyon 250 bini geçti türk kızılay, bu yılın ilk 8 ayında 39 bin 631 yeni bağışçı adayının katılımıyla toplamda 1 milyon 251 bin 677 aktif kök hücre bağışçı adayına ulaştı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 19 Eylül 2026, 10:49</span>
+        </div>
+        <h3>Türk Kızılay&#x27;ın aktif kök hücre bağışçı adayı sayısı 1 milyon 250 bini geçti</h3>
+        <p>Türk Kızılay, bu yılın ilk 8 ayında 39 bin 631 yeni bağışçı adayının katılımıyla toplamda 1 milyon 251 bin 677 aktif kök hücre bağışçı adayına ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Eylül 2026, 10:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/saglik/turk-kizilayin-aktif-kok-hucre-bagisci-adayi-sayisi-1-milyon-250-bini-gecti-957344.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="özel harekatın &quot;vefalı dostları&quot; köpekler operasyonlarda başarıyı artırıyor emniyet genel müdürlüğü (egm) özel harekat başkanlığının &quot;vefalı dostları&quot; köpekler, özel ve zorlu eğitimlerden geçerek suçla mücadelede aktif rol alıyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 11:48</span>
+        </div>
+        <h3>Özel harekatın &quot;vefalı dostları&quot; köpekler operasyonlarda başarıyı artırıyor</h3>
+        <p>Emniyet Genel Müdürlüğü (EGM) Özel Harekat Başkanlığının &quot;vefalı dostları&quot; köpekler, özel ve zorlu eğitimlerden geçerek suçla mücadelede aktif rol alıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 11:48</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ozel-harekatin-vefali-dostlari-kopekler-operasyonlarda-basariyi-artiriyor/4061795" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kemik iliği bağışı hayat kurtarıyor lösemi ve diğer kan hastalıklarıyla mücadelede hayati önem taşıyan kemik iliği bağışı, nakil bekleyen hastalara umut oluyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 11:11</span>
+        </div>
+        <h3>Kemik iliği bağışı hayat kurtarıyor</h3>
+        <p>Lösemi ve diğer kan hastalıklarıyla mücadelede hayati önem taşıyan kemik iliği bağışı, nakil bekleyen hastalara umut oluyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 11:11</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kemik-iligi-bagisi-hayat-kurtariyor/4061767" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;de geçen ay 66 &quot;meteorolojik afet&quot; kayıtlara geçti türkiye genelinde ağustosta büyük çoğunluğu dolu, şiddetli yağış ve sel olmak üzere 66 şiddetli meteorolojik olay meydana geldi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 11:12</span>
+        </div>
+        <h3>Türkiye&#x27;de geçen ay 66 &quot;meteorolojik afet&quot; kayıtlara geçti</h3>
+        <p>Türkiye genelinde ağustosta büyük çoğunluğu dolu, şiddetli yağış ve sel olmak üzere 66 şiddetli meteorolojik olay meydana geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 11:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiyede-gecen-ay-66-meteorolojik-afet-kayitlara-gecti/4061768" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yargıtay, boşandığı eşiyle aynı gelir düzeyindeki kadına nafaka bağlanması kararını bozdu yargıtay 2. hukuk dairesi, boşandığı eşiyle aynı gelir düzeyinde olup düzenli geliri bulunan kadına nafaka bağlanması yönündeki yerel mahkeme kararını hukuka aykırı bularak bozdu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 11:19</span>
+        </div>
+        <h3>Yargıtay, boşandığı eşiyle aynı gelir düzeyindeki kadına nafaka bağlanması kararını bozdu</h3>
+        <p>Yargıtay 2. Hukuk Dairesi, boşandığı eşiyle aynı gelir düzeyinde olup düzenli geliri bulunan kadına nafaka bağlanması yönündeki yerel mahkeme kararını hukuka aykırı bularak bozdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 11:19</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yargitay-bosandigi-esiyle-ayni-gelir-duzeyindeki-kadina-nafaka-baglanmasi-kararini-bozdu/4061774" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk kızılay&#x27;ın aktif kök hücre bağışçı adayı sayısı 1 milyon 251 bin 677&#x27;ye ulaştı türk kızılay, bu yılın ilk 8 ayında 39 bin 631 yeni bağışçı adayının katılımıyla toplamda 1 milyon 251 bin 677 aktif kök hücre bağışçı adayına ulaştı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 10:50</span>
+        </div>
+        <h3>Türk Kızılay&#x27;ın aktif kök hücre bağışçı adayı sayısı 1 milyon 251 bin 677&#x27;ye ulaştı</h3>
+        <p>Türk Kızılay, bu yılın ilk 8 ayında 39 bin 631 yeni bağışçı adayının katılımıyla toplamda 1 milyon 251 bin 677 aktif kök hücre bağışçı adayına ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 10:50</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-kizilayin-aktif-kok-hucre-bagisci-adayi-sayisi-1-milyon-251-bin-677ye-ulasti/4061747" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kozinoğlu&#x27;nun ölümüne ilişkin soruşturmada 2 şüpheli tutuklandı eski mi̇t görevlisi kaşif kozinoğlu&#x27;nun cezaevinde ölümüne ilişkin yeniden başlatılan soruşturma kapsamında 2 şüpheli tutuklandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 10:36</span>
+        </div>
+        <h3>Kozinoğlu&#x27;nun ölümüne ilişkin soruşturmada 2 şüpheli tutuklandı</h3>
+        <p>Eski MİT görevlisi Kaşif Kozinoğlu&#x27;nun cezaevinde ölümüne ilişkin yeniden başlatılan soruşturma kapsamında 2 şüpheli tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 10:36</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kozinoglunun-olumune-iliskin-sorusturmada-2-supheli-tutuklandi/4061739" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="diyarbakır&#x27;da &quot;sokaklar güvende&quot; operasyonunda yakalanan 26 zanlı tutuklandı diyarbakır&#x27;da düzenlenen &quot;sokaklar güvende&quot; operasyonunda gözaltına alınan 38 şüpheliden 26&#x27;sı tutuklandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 10:18</span>
+        </div>
+        <h3>Diyarbakır&#x27;da &quot;Sokaklar Güvende&quot; operasyonunda yakalanan 26 zanlı tutuklandı</h3>
+        <p>Diyarbakır&#x27;da düzenlenen &quot;Sokaklar Güvende&quot; operasyonunda gözaltına alınan 38 şüpheliden 26&#x27;sı tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 10:18</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/diyarbakirda-sokaklar-guvende-operasyonunda-yakalanan-26-zanli-tutuklandi/4061729" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rize&#x27;de etkili olan sağanak hayatı olumsuz etkiledi rize&#x27;de dün akşam ve gece saatlerinden itibaren etkisini artıran yağış, hayatı olumsuz etkiledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 10:00</span>
+        </div>
+        <h3>Rize&#x27;de etkili olan sağanak hayatı olumsuz etkiledi</h3>
+        <p>Rize&#x27;de dün akşam ve gece saatlerinden itibaren etkisini artıran yağış, hayatı olumsuz etkiledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 10:00</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/rizede-etkili-olan-saganak-hayati-olumsuz-etkiledi/4061719" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="hindistan&#x27;da kızının eğitimi için yalınayak koşan anneye ödül kimilerine göre ramabai ranveer&#x27;in üç bin rupi ödüllü yalınayak üç kilometrelik koşusu, annelerin fedakarlığını ve çocuklarını yoksulluktan kurtarmak için ne kadar ileri gidebileceklerini simgeliyor. diğerlerine göre ise bu koşu, hindistan&#x27;ın eğitim sistemini saran çürümeyi ve sosyal hareketlilik için bir araç olabileceğine inanmanın boşluğunu özetliyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 18 Eylül 2026, 16:00</span>
+        </div>
+        <h3>Hindistan&#x27;da kızının eğitimi için yalınayak koşan anneye ödül</h3>
+        <p>Kimilerine göre Ramabai Ranveer&#x27;in üç bin rupi ödüllü yalınayak üç kilometrelik koşusu, annelerin fedakarlığını ve çocuklarını yoksulluktan kurtarmak için ne kadar ileri gidebileceklerini simgeliyor. Diğerlerine göre ise bu koşu, Hindistan&#x27;ın eğitim sistemini saran çürümeyi ve sosyal hareketlilik için bir araç olabileceğine inanmanın boşluğunu özetliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 18 Eylül 2026, 16:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck87vr2j8dx4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="adana&#x27;da çöp evde yaşayan anne ve 3 çocuğu sıcak yuvaya kavuşturuldu adana&#x27;nın seyhan ilçesinde komşuların ci̇mer başvurusu üzerine harekete geçen ekipler, &quot;çöp ev&quot;de sağlıksız koşullarda yaşayan anne ile 3 çocuğunun yaşam şartlarını iyileştirdi; temizlenip baştan aşağı yenilenen evlerine kavuşturulan aile için çok yönlü sosyal ve psikolojik destek süreci başlatıldı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 19 Eylül 2026, 11:14</span>
+        </div>
+        <h3>Adana&#x27;da çöp evde yaşayan anne ve 3 çocuğu sıcak yuvaya kavuşturuldu</h3>
+        <p>Adana&#x27;nın Seyhan ilçesinde komşuların CİMER başvurusu üzerine harekete geçen ekipler, &quot;çöp ev&quot;de sağlıksız koşullarda yaşayan anne ile 3 çocuğunun yaşam şartlarını iyileştirdi; temizlenip baştan aşağı yenilenen evlerine kavuşturulan aile için çok yönlü sosyal ve psikolojik destek süreci başlatıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Eylül 2026, 11:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/adanada-cop-evde-yasayan-anne-ve-3-cocugu-sicak-yuvaya-kavusturuldu-957347.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd ve danimarka, grönland&#x27;ın güvenliği konusunda anlaşmaya vardı trump, anlaşmanın abd&#x27;ye &quot;grönland&#x27;da güvenlik ve diğer tüm ihtiyaçlar üzerinde kalıcı kontrol&quot; sağlayacağını söyledi, ancak danimarkalı yetkililer tarafından ayrıntılar henüz doğrulanmadı dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 19 Eylül 2026, 01:26</span>
+        </div>
+        <h3>ABD ve Danimarka, Grönland&#x27;ın güvenliği konusunda anlaşmaya vardı</h3>
+        <p>Trump, anlaşmanın ABD&#x27;ye &quot;Grönland&#x27;da güvenlik ve diğer tüm ihtiyaçlar üzerinde kalıcı kontrol&quot; sağlayacağını söyledi, ancak Danimarkalı yetkililer tarafından ayrıntılar henüz doğrulanmadı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Eylül 2026, 01:26</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6r7d1nlrylmo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cumhurbaşkanlığı kupasında dev derbi trt 1de fenerbahçe tarfin ile beşiktaş’ı karşı karşıya getirecek 39. erkekler cumhurbaşkanlığı kupası mücadelesi, 22 eylül salı günü saat 20.00’de trt 1’den canlı yayınlanacak. spor trt haber" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">TRT Haber · 19 Eylül 2026, 11:44</span>
+        </div>
+        <h3>Cumhurbaşkanlığı Kupasında dev derbi TRT 1de</h3>
+        <p>Fenerbahçe Tarfin ile Beşiktaş’ı karşı karşıya getirecek 39. Erkekler Cumhurbaşkanlığı Kupası mücadelesi, 22 Eylül Salı günü saat 20.00’de TRT 1’den canlı yayınlanacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 19 Eylül 2026, 11:44</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskanligi-kupasinda-dev-derbi-trt-1de-957353.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
