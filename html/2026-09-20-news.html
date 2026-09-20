@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">20 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">20 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 3</span><span class="stat-item"><strong>dünya</strong> 8</span><span class="stat-item"><strong>genel</strong> 17</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>spor</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>Türkiye&#x27;nin dünya turizminden aldığı pay artırılacak</h3>
+        <p>Kültür ve Turizm Bakan Yardımcısı Nadir Alpaslan, Türkiye&#x27;nin turizm gelirlerinin son 8 yılda 30 milyar dolardan 65 milyar dolara yükseldiğini belirterek, 81 ilde turizmi 12 aya yaymak için çalışma yürüttüklerini söyledi.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 20 Eylül 2026, 11:40</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyenin-dunya-turizminden-aldigi-pay-artirilacak-957427.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 20 Eylül 2026, 10:44</span>
+            </div>
+            <h3>Almanya&#x27;da kritik seçimler: Merz için sandıkta varoluş sınavı</h3>
+            <p>Almanya&#x27;da Mecklenburg-Vorpommern ve Berlin&#x27;de yapılan eyalet seçimleri, sadece Başbakan Friedrich Merz için değil, partisi CDU için de önemli bir dönüm noktası. Aşırı sağcı AfD yükselişini sürdürürken, seçmen desteği dibe vuran Merz&#x27;in liderliğindeki CDU, tarihinde ilk kez bir eyalette yüzde 5&#x27;lik seçim barajını aşamama riskiyle karşı karşıya.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c3n07w988kdpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 20 Eylül 2026, 11:45</span>
+            </div>
+            <h3>Emine Erdoğan&#x27;ın New York diplomasisi</h3>
+            <p>Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın eşi, Birleşmiş Milletler (BM) Sıfır Atık Yüksek Düzeyli Şahsiyetler Danışma Kurulu Başkanı Emine Erdoğan, New York&#x27;ta iklim, sürdürülebilir kalkınma ve çocuklar için güvenli dijital sistemler temalı toplantılarda katılımcılara hitap edecek.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/emine-erdoganin-new-york-diplomasisi-957428.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 20 Eylül 2026, 11:38</span>
+            </div>
+            <h3>TOKİ&#x27;nin indirim kampanyası salı günü başlıyor</h3>
+            <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Toplu Konut İdaresi Başkanlığının (TOKİ), geri ödemeleri devam eden konut ve iş yerleri için düzenlediği yüzde 25 indirim kampanyası 22 Eylül&#x27;de başlayacak.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/tokinin-indirim-kampanyasi-sali-gunu-basliyor-957426.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 20 Eylül 2026, 10:47</span>
+            </div>
+            <h3>Berlin&#x27;de seçim: Türkiye kökenli sosyalist Elif Eralp, Berlin&#x27;in Mamdani&#x27;si mi olacak?</h3>
+            <p>Türk asıllı Alman siyasetçi Elif Eralp, Berlin&#x27;in ilk sosyalist ve göçmen kökenli eyalet başbakanı olabilir. Peki New York Belediye Başkanı Zohran Mamdani&#x27;ye benzetilen Sol Parti&#x27;nin Türkiye kökenli adayı Elif Eralp kim? &quot;Aşırı sağcı AfD&#x27;nin panzehiri&quot; olarak nitelendirilmesinin gerisinde ne yatıyor?</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye&#x27;nin dünya turizminden aldığı pay artırılacak kültür ve turizm bakan yardımcısı nadir alpaslan, türkiye&#x27;nin turizm gelirlerinin son 8 yılda 30 milyar dolardan 65 milyar dolara yükseldiğini belirterek, 81 ilde turizmi 12 aya yaymak için çalışma yürüttüklerini söyledi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 20 Eylül 2026, 11:40</span>
+        </div>
+        <h3>Türkiye&#x27;nin dünya turizminden aldığı pay artırılacak</h3>
+        <p>Kültür ve Turizm Bakan Yardımcısı Nadir Alpaslan, Türkiye&#x27;nin turizm gelirlerinin son 8 yılda 30 milyar dolardan 65 milyar dolara yükseldiğini belirterek, 81 ilde turizmi 12 aya yaymak için çalışma yürüttüklerini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Eylül 2026, 11:40</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyenin-dunya-turizminden-aldigi-pay-artirilacak-957427.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd, türkiye&#x27;nin ikinci büyük ihracat pazarı oldu türkiye&#x27;nin abd&#x27;ye ihracatı, bu yılın ocak-ağustos döneminde geçen yılın aynı dönemine göre yüzde 12,9 artarak 9 milyar 636,7 milyon dolara ulaşırken, abd, türkiye&#x27;nin en fazla ihracat yaptığı ikinci ülke oldu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 20 Eylül 2026, 11:36</span>
+        </div>
+        <h3>ABD, Türkiye&#x27;nin ikinci büyük ihracat pazarı oldu</h3>
+        <p>Türkiye&#x27;nin ABD&#x27;ye ihracatı, bu yılın ocak-ağustos döneminde geçen yılın aynı dönemine göre yüzde 12,9 artarak 9 milyar 636,7 milyon dolara ulaşırken, ABD, Türkiye&#x27;nin en fazla ihracat yaptığı ikinci ülke oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Eylül 2026, 11:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/abd-turkiyenin-ikinci-buyuk-ihracat-pazari-oldu-957425.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="borsa soruşturmasında şirket yöneticisi beş kişi daha gözaltına alındı i̇stanbul cumhuriyet başsavcılığı&#x27;nın sermaye piyasası işlemlerine ilişkin yürüttüğü soruşturma kapsamında pusula portföy&#x27;ün yöneticilerinden serdar turhan ile tera yatırım yöneticileri emre tezmen, alper öztürk, emre alkin ve kerem alkin gözaltına alındı. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 19 Eylül 2026, 18:57</span>
+        </div>
+        <h3>Borsa soruşturmasında şirket yöneticisi beş kişi daha gözaltına alındı</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı&#x27;nın sermaye piyasası işlemlerine ilişkin yürüttüğü soruşturma kapsamında Pusula Portföy&#x27;ün yöneticilerinden Serdar Turhan ile Tera Yatırım yöneticileri Emre Tezmen, Alper Öztürk, Emre Alkin ve Kerem Alkin gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Eylül 2026, 18:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqkg08p7v814o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">8 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="almanya&#x27;da kritik seçimler: merz için sandıkta varoluş sınavı almanya&#x27;da mecklenburg-vorpommern ve berlin&#x27;de yapılan eyalet seçimleri, sadece başbakan friedrich merz için değil, partisi cdu için de önemli bir dönüm noktası. aşırı sağcı afd yükselişini sürdürürken, seçmen desteği dibe vuran merz&#x27;in liderliğindeki cdu, tarihinde ilk kez bir eyalette yüzde 5&#x27;lik seçim barajını aşamama riskiyle karşı karşıya. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 20 Eylül 2026, 10:44</span>
+        </div>
+        <h3>Almanya&#x27;da kritik seçimler: Merz için sandıkta varoluş sınavı</h3>
+        <p>Almanya&#x27;da Mecklenburg-Vorpommern ve Berlin&#x27;de yapılan eyalet seçimleri, sadece Başbakan Friedrich Merz için değil, partisi CDU için de önemli bir dönüm noktası. Aşırı sağcı AfD yükselişini sürdürürken, seçmen desteği dibe vuran Merz&#x27;in liderliğindeki CDU, tarihinde ilk kez bir eyalette yüzde 5&#x27;lik seçim barajını aşamama riskiyle karşı karşıya.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Eylül 2026, 10:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3n07w988kdpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="emine erdoğan&#x27;ın new york diplomasisi cumhurbaşkanı recep tayyip erdoğan&#x27;ın eşi, birleşmiş milletler (bm) sıfır atık yüksek düzeyli şahsiyetler danışma kurulu başkanı emine erdoğan, new york&#x27;ta iklim, sürdürülebilir kalkınma ve çocuklar için güvenli dijital sistemler temalı toplantılarda katılımcılara hitap edecek. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 20 Eylül 2026, 11:45</span>
+        </div>
+        <h3>Emine Erdoğan&#x27;ın New York diplomasisi</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın eşi, Birleşmiş Milletler (BM) Sıfır Atık Yüksek Düzeyli Şahsiyetler Danışma Kurulu Başkanı Emine Erdoğan, New York&#x27;ta iklim, sürdürülebilir kalkınma ve çocuklar için güvenli dijital sistemler temalı toplantılarda katılımcılara hitap edecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Eylül 2026, 11:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/emine-erdoganin-new-york-diplomasisi-957428.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="toki̇&#x27;nin indirim kampanyası salı günü başlıyor çevre, şehircilik ve i̇klim değişikliği bakanlığı toplu konut i̇daresi başkanlığının (toki̇), geri ödemeleri devam eden konut ve iş yerleri için düzenlediği yüzde 25 indirim kampanyası 22 eylül&#x27;de başlayacak. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 20 Eylül 2026, 11:38</span>
+        </div>
+        <h3>TOKİ&#x27;nin indirim kampanyası salı günü başlıyor</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Toplu Konut İdaresi Başkanlığının (TOKİ), geri ödemeleri devam eden konut ve iş yerleri için düzenlediği yüzde 25 indirim kampanyası 22 Eylül&#x27;de başlayacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Eylül 2026, 11:38</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/tokinin-indirim-kampanyasi-sali-gunu-basliyor-957426.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bm üyesi ülkelerin liderleri, 81&#x27;inci genel kurul için new york&#x27;ta bir araya gelecek dünyanın en önemli diplomatik buluşmalarından biri olarak nitelendirilen ve çok sayıda ülkenin liderini bir araya getiren birleşmiş milletler (bm) genel kurulu&#x27;nun 81. oturumu, 22 eylül&#x27;de new york&#x27;ta başlayacak. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 20 Eylül 2026, 11:43</span>
+        </div>
+        <h3>BM üyesi ülkelerin liderleri, 81&#x27;inci Genel Kurul için New York&#x27;ta bir araya gelecek</h3>
+        <p>Dünyanın en önemli diplomatik buluşmalarından biri olarak nitelendirilen ve çok sayıda ülkenin liderini bir araya getiren Birleşmiş Milletler (BM) Genel Kurulu&#x27;nun 81. oturumu, 22 Eylül&#x27;de New York&#x27;ta başlayacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Eylül 2026, 11:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/bm-uyesi-ulkelerin-liderleri-81inci-genel-kurul-icin-new-yorkta-bir-araya-gelecek-957430.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="emine erdoğan&#x27;ın abd&#x27;de gündemi iklim, kalkınma ve çocuklar olacak birleşmiş milletler (bm) sıfır atık yüksek düzeyli şahsiyetler danışma kurulu başkanı emine erdoğan, new york&#x27;ta iklim, sürdürülebilir kalkınma ve çocuklar için güvenli dijital sistemler temalı toplantılarda katılımcılara hitap edecek. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Eylül 2026, 11:02</span>
+        </div>
+        <h3>Emine Erdoğan&#x27;ın ABD&#x27;de gündemi iklim, kalkınma ve çocuklar olacak</h3>
+        <p>Birleşmiş Milletler (BM) Sıfır Atık Yüksek Düzeyli Şahsiyetler Danışma Kurulu Başkanı Emine Erdoğan, New York&#x27;ta iklim, sürdürülebilir kalkınma ve çocuklar için güvenli dijital sistemler temalı toplantılarda katılımcılara hitap edecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Eylül 2026, 11:02</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/emine-erdoganin-abdde-gundemi-iklim-kalkinma-ve-cocuklar-olacak/4062365" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan bm 81. genel kurulu genel görüşmelerine katılmak üzere yarın abd&#x27;ye gidecek cumhurbaşkanlığı i̇letişim başkanı burhanettin duran, cumhurbaşkanı recep tayyip erdoğan&#x27;ın, birleşmiş milletler (bm) 81. genel kurulu genel görüşmelerine katılmak üzere 20-23 eylül tarihlerinde abd&#x27;yi ziyaret edeceğini bildirdi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 21:50</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan BM 81. Genel Kurulu genel görüşmelerine katılmak üzere yarın ABD&#x27;ye gidecek</h3>
+        <p>Cumhurbaşkanlığı İletişim Başkanı Burhanettin Duran, Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın, Birleşmiş Milletler (BM) 81. Genel Kurulu genel görüşmelerine katılmak üzere 20-23 Eylül tarihlerinde ABD&#x27;yi ziyaret edeceğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 21:50</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-bm-81-genel-kurulu-genel-gorusmelerine-katilmak-uzere-yarin-abdye-gidecek/4062194" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan fidan: &#x27;suudi arabistan&#x27;a yönelik ciddi saldırılar var, askeri ihtiyaçları karşılamada sıkıntı olmaz&#x27; abd, suudi arabistan ile husiler arasındaki çatışmaların &quot;hızla tırmanabileceği&quot; uyarısında bulunurken, dışişleri bakanı hakan fidan riyad&#x27;a askeri konularda yardım yapılabileceği sinyalini verdi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 20 Eylül 2026, 11:48</span>
+        </div>
+        <h3>Bakan Fidan: &#x27;Suudi Arabistan&#x27;a yönelik ciddi saldırılar var, askeri ihtiyaçları karşılamada sıkıntı olmaz&#x27;</h3>
+        <p>ABD, Suudi Arabistan ile Husiler arasındaki çatışmaların &quot;hızla tırmanabileceği&quot; uyarısında bulunurken, Dışişleri Bakanı Hakan Fidan Riyad&#x27;a askeri konularda yardım yapılabileceği sinyalini verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Eylül 2026, 11:48</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq39m3gwrxr3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ellerinizi toprağa bulaştırmanın sağlığa faydaları ellerimizi toprağa sokmak ve çimlere, ağaçlara ya da yosunlara dokunmak, cildimiz ve bağışıklık sistemimiz için çok çeşitli faydalar sağlıyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 20 Eylül 2026, 12:15</span>
+        </div>
+        <h3>Ellerinizi toprağa bulaştırmanın sağlığa faydaları</h3>
+        <p>Ellerimizi toprağa sokmak ve çimlere, ağaçlara ya da yosunlara dokunmak, cildimiz ve bağışıklık sistemimiz için çok çeşitli faydalar sağlıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Eylül 2026, 12:15</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c4gvp1y7dn0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">17 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="berlin&#x27;de seçim: türkiye kökenli sosyalist elif eralp, berlin&#x27;in mamdani&#x27;si mi olacak? türk asıllı alman siyasetçi elif eralp, berlin&#x27;in ilk sosyalist ve göçmen kökenli eyalet başbakanı olabilir. peki new york belediye başkanı zohran mamdani&#x27;ye benzetilen sol parti&#x27;nin türkiye kökenli adayı elif eralp kim? &quot;aşırı sağcı afd&#x27;nin panzehiri&quot; olarak nitelendirilmesinin gerisinde ne yatıyor? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Eylül 2026, 10:47</span>
+        </div>
+        <h3>Berlin&#x27;de seçim: Türkiye kökenli sosyalist Elif Eralp, Berlin&#x27;in Mamdani&#x27;si mi olacak?</h3>
+        <p>Türk asıllı Alman siyasetçi Elif Eralp, Berlin&#x27;in ilk sosyalist ve göçmen kökenli eyalet başbakanı olabilir. Peki New York Belediye Başkanı Zohran Mamdani&#x27;ye benzetilen Sol Parti&#x27;nin Türkiye kökenli adayı Elif Eralp kim? &quot;Aşırı sağcı AfD&#x27;nin panzehiri&quot; olarak nitelendirilmesinin gerisinde ne yatıyor?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Eylül 2026, 10:47</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, bm kürsüsünde dünyaya seslenecek cumhurbaşkanı recep tayyip erdoğan, bm 81. genel kurulu&#x27;nda 22 eylül salı günü kürsüye çıkacak. 2005 yılından bu yana küresel sorunlara karşı &#x27;daha adil bir dünya&#x27; vizyonunu savunan erdoğan, new york’tan dünyaya bir kez daha küresel vicdanın sesi olacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Eylül 2026, 11:19</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, BM kürsüsünde dünyaya seslenecek</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, BM 81. Genel Kurulu&#x27;nda 22 Eylül Salı günü kürsüye çıkacak. 2005 yılından bu yana küresel sorunlara karşı &#x27;daha adil bir dünya&#x27; vizyonunu savunan Erdoğan, New York’tan dünyaya bir kez daha küresel vicdanın sesi olacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Eylül 2026, 11:19</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-bm-kursusunde-dunyaya-seslenecek-957422.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ki faili meçhul dosya daha yürütülen çalışmalarla aydınlatıldı adalet bakanı akın gürlek, i̇stanbul gaziosmanpaşa&#x27;da 2018&#x27;de işlenen cinayet ile osmaniye&#x27;nin düziçi ilçesinde kaybolan ayşegül yaşar&#x27;ın ölümüne ilişkin dosyanın, yeniden yürütülen çalışmalar sonucunda aydınlatıldığını duyurdu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Eylül 2026, 10:49</span>
+        </div>
+        <h3>İki faili meçhul dosya daha yürütülen çalışmalarla aydınlatıldı</h3>
+        <p>Adalet Bakanı Akın Gürlek, İstanbul Gaziosmanpaşa&#x27;da 2018&#x27;de işlenen cinayet ile Osmaniye&#x27;nin Düziçi ilçesinde kaybolan Ayşegül Yaşar&#x27;ın ölümüne ilişkin dosyanın, yeniden yürütülen çalışmalar sonucunda aydınlatıldığını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Eylül 2026, 10:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/iki-faili-mechul-dosya-daha-yurutulen-calismalarla-aydinlatildi-957421.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı yardımcısı yılmaz: kktc, dünyayla entegre şekilde refahını artırmaya devam edecektir cumhurbaşkanı yardımcısı cevdet yılmaz, &quot;çok farklı yöntemlerle, suyuyla, enerjisiyle, dijital altyapılarıyla kuzey kıbrıs türk cumhuriyeti dünyayla entegre bir şekilde refahını artırmaya, kalkınmasını yükseltmeye devam edecektir.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 19 Eylül 2026, 20:04</span>
+        </div>
+        <h3>Cumhurbaşkanı Yardımcısı Yılmaz: KKTC, dünyayla entegre şekilde refahını artırmaya devam edecektir</h3>
+        <p>Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, &quot;Çok farklı yöntemlerle, suyuyla, enerjisiyle, dijital altyapılarıyla Kuzey Kıbrıs Türk Cumhuriyeti dünyayla entegre bir şekilde refahını artırmaya, kalkınmasını yükseltmeye devam edecektir.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 19 Eylül 2026, 20:04</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-yardimcisi-yilmaz-kktc-dunyayla-entegre-sekilde-refahini-artirmaya-devam-edecektir/4062136" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="babülmendep boğazı: husiler suudi arabistan&#x27;ın stratejik zayıf noktasına nasıl ulaştı? i̇ran&#x27;ın hürmüz boğazı&#x27;nı kapatmasından bu yana dünyanın en önemli deniz koridorlarından biri olan babülmendep boğazı&#x27;na kadar ilerleyen son husi saldırısı, tahran&#x27;a washington üzerinde daha fazla nüfuz kazandırmış olabilir. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Eylül 2026, 10:21</span>
+        </div>
+        <h3>Babülmendep Boğazı: Husiler Suudi Arabistan&#x27;ın stratejik zayıf noktasına nasıl ulaştı?</h3>
+        <p>İran&#x27;ın Hürmüz Boğazı&#x27;nı kapatmasından bu yana dünyanın en önemli deniz koridorlarından biri olan Babülmendep Boğazı&#x27;na kadar ilerleyen son Husi saldırısı, Tahran&#x27;a Washington üzerinde daha fazla nüfuz kazandırmış olabilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Eylül 2026, 10:21</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmwyz95vwv17o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="savaş yaklaşıyor olabilir: peki i̇ngiltere psikolojik olarak hazır mı? i̇ngiliz hükümeti olası bir savaşa karşı hazırlıklarını artırırken uzmanlar, toplumun askeri tehditlere psikolojik olarak ne kadar hazır olduğunu tartışıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 19 Eylül 2026, 12:08</span>
+        </div>
+        <h3>Savaş yaklaşıyor olabilir: Peki İngiltere psikolojik olarak hazır mı?</h3>
+        <p>İngiliz hükümeti olası bir savaşa karşı hazırlıklarını artırırken uzmanlar, toplumun askeri tehditlere psikolojik olarak ne kadar hazır olduğunu tartışıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Eylül 2026, 12:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqp8d4n99z21o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da balık tezgahlarında tercih palamut oldu i̇stanbul&#x27;da ağustosta en çok tercih edilen su ürünü palamut oldu. ağustosta satılan 874 ton su ürününün 156 ton 7 kilogramını palamut oluşturdu. palamudu levrek, çipura, sardalya, mırlan, istavrit, somon, tekir izledi genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Eylül 2026, 11:35</span>
+        </div>
+        <h3>İstanbul&#x27;da balık tezgahlarında tercih palamut oldu</h3>
+        <p>İstanbul&#x27;da ağustosta en çok tercih edilen su ürünü palamut oldu. Ağustosta satılan 874 ton su ürününün 156 ton 7 kilogramını palamut oluşturdu. Palamudu levrek, çipura, sardalya, mırlan, istavrit, somon, tekir izledi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Eylül 2026, 11:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-balik-tezgahlarinda-tercih-palamut-oldu-957424.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hava sıcaklıkları hissedilir derecede düşecek yeni haftada ülke genelinde mevsim normallerinde seyreden hava sıcaklıklarının, hafta ortasından itibaren kuzey, iç ve batı kesimlerde hissedilir derecede azalarak normallerin altına düşeceği öngörülüyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Eylül 2026, 11:29</span>
+        </div>
+        <h3>Hava sıcaklıkları hissedilir derecede düşecek</h3>
+        <p>Yeni haftada ülke genelinde mevsim normallerinde seyreden hava sıcaklıklarının, hafta ortasından itibaren kuzey, iç ve batı kesimlerde hissedilir derecede azalarak normallerin altına düşeceği öngörülüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Eylül 2026, 11:29</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/hava-sicakliklari-hissedilir-derecede-dusecek-957423.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="adalet bakanı gürlek, iki faili meçhul cinayetin aydınlatıldığını duyurdu adalet bakanı akın gürlek, farklı tarihlerde i̇stanbul&#x27;un gaziosmanpaşa ve osmaniye&#x27;nin düziçi ilçesinde işlenen faili meçhul iki cinayetin aydınlatıldığını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Eylül 2026, 11:30</span>
+        </div>
+        <h3>Adalet Bakanı Gürlek, iki faili meçhul cinayetin aydınlatıldığını duyurdu</h3>
+        <p>Adalet Bakanı Akın Gürlek, farklı tarihlerde İstanbul&#x27;un Gaziosmanpaşa ve Osmaniye&#x27;nin Düziçi ilçesinde işlenen faili meçhul iki cinayetin aydınlatıldığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Eylül 2026, 11:30</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/adalet-bakani-gurlek-iki-faili-mechul-cinayetin-aydinlatildigini-duyurdu/4062388" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, 16&#x27;ncı kez birleşmiş milletler genel kurulu&#x27;na hitap edecek cumhurbaşkanı recep tayyip erdoğan, birleşmiş milletler (bm) 81. genel kurulu&#x27;na 22 eylül salı günü 16&#x27;ncı kez hitap edecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Eylül 2026, 11:20</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, 16&#x27;ncı kez Birleşmiş Milletler Genel Kurulu&#x27;na hitap edecek</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Birleşmiş Milletler (BM) 81. Genel Kurulu&#x27;na 22 Eylül Salı günü 16&#x27;ncı kez hitap edecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Eylül 2026, 11:20</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-16nci-kez-birlesmis-milletler-genel-kuruluna-hitap-edecek/4062383" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;den 90 üniversite en az bir bilim alanında dünya liginde yer aldı odtü enformatik enstitüsü bünyesinde yer alan university ranking by academic performance araştırma laboratuvarınca açıklanan &quot;2025-2026 dünya alan sıralaması&quot;nda, türkiye&#x27;den 90 üniversite en az bir bilim alanı ile sıralamaya girme başarısı gösterdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Eylül 2026, 11:15</span>
+        </div>
+        <h3>Türkiye&#x27;den 90 üniversite en az bir bilim alanında dünya liginde yer aldı</h3>
+        <p>ODTÜ Enformatik Enstitüsü bünyesinde yer alan University Ranking by Academic Performance Araştırma Laboratuvarınca açıklanan &quot;2025-2026 dünya alan sıralaması&quot;nda, Türkiye&#x27;den 90 üniversite en az bir bilim alanı ile sıralamaya girme başarısı gösterdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Eylül 2026, 11:15</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiyeden-90-universite-en-az-bir-bilim-alaninda-dunya-liginde-yer-aldi/4062378" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="her yıl yaklaşık 10 milyon kişiye tanı konulan demans hastalığında risk belli oranda önlenebilir dünya genelinde 57 milyondan fazla kişinin demansla (bunama) yaşadığı ve bu rakamın 2050&#x27;ye kadar 139 milyona çıkacağı öngörülürken, tam tedavisi olmasa da demans riskinin belli oranda &quot;önlenebilir veya geciktirilebilir&quot; olduğu değerlendiriliyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Eylül 2026, 11:07</span>
+        </div>
+        <h3>Her yıl yaklaşık 10 milyon kişiye tanı konulan demans hastalığında risk belli oranda önlenebilir</h3>
+        <p>Dünya genelinde 57 milyondan fazla kişinin demansla (bunama) yaşadığı ve bu rakamın 2050&#x27;ye kadar 139 milyona çıkacağı öngörülürken, tam tedavisi olmasa da demans riskinin belli oranda &quot;önlenebilir veya geciktirilebilir&quot; olduğu değerlendiriliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Eylül 2026, 11:07</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/her-yil-yaklasik-10-milyon-kisiye-tani-konulan-demans-hastaliginda-risk-belli-oranda-onlenebilir/4062370" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakü&#x27;nün kurtuluşunun 108. yılı vesilesiyle ankara&#x27;da anma programı düzenlendi azerbaycan&#x27;ın başkenti bakü&#x27;nün, kafkas i̇slam ordusu olarak adlandırılan osmanlı ordusu tarafından ermeni ve bolşevik çetelerinden kurtarılmasının 108. yılı vesilesiyle ankara&#x27;da bir anma programı düzenlendi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Eylül 2026, 14:24</span>
+        </div>
+        <h3>Bakü&#x27;nün kurtuluşunun 108. yılı vesilesiyle Ankara&#x27;da anma programı düzenlendi</h3>
+        <p>Azerbaycan&#x27;ın başkenti Bakü&#x27;nün, Kafkas İslam Ordusu olarak adlandırılan Osmanlı ordusu tarafından Ermeni ve Bolşevik çetelerinden kurtarılmasının 108. yılı vesilesiyle Ankara&#x27;da bir anma programı düzenlendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Eylül 2026, 14:24</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakunun-kurtulusunun-108-yili-vesilesiyle-ankarada-anma-programi-duzenlendi/4057837" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="son 2 yılda 15 halk plajı ücretsiz kullanıma açıldı çevre, şehircilik ve i̇klim değişikliği bakanlığınca ege, akdeniz ve marmara kıyılarında son 2 yılda sıfır atık konseptiyle düzenlenen 15 halk plajı ücretsiz kullanıma sunuldu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Eylül 2026, 10:46</span>
+        </div>
+        <h3>Son 2 yılda 15 halk plajı ücretsiz kullanıma açıldı</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığınca Ege, Akdeniz ve Marmara kıyılarında son 2 yılda sıfır atık konseptiyle düzenlenen 15 halk plajı ücretsiz kullanıma sunuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Eylül 2026, 10:46</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/son-2-yilda-15-halk-plaji-ucretsiz-kullanima-acildi/4062354" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeni parti&#x27;nin yol haritası: kurultay, örgütlenme, seçim hazırlığı ve &#x27;yedek parti&#x27; hesabı özgür özel&#x27;in genel başkanlığında 91 milletvekilinin kurduğu yeni parti, kuruluşunun ilk 2,5 ayını geride bırakırken önümüzdeki aylarda örgütlenme ve kurultay çalışmalarına ağırlık verecek. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 19 Eylül 2026, 10:37</span>
+        </div>
+        <h3>Yeni Parti&#x27;nin yol haritası: Kurultay, örgütlenme, seçim hazırlığı ve &#x27;yedek parti&#x27; hesabı</h3>
+        <p>Özgür Özel&#x27;in genel başkanlığında 91 milletvekilinin kurduğu Yeni Parti, kuruluşunun ilk 2,5 ayını geride bırakırken önümüzdeki aylarda örgütlenme ve kurultay çalışmalarına ağırlık verecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Eylül 2026, 10:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9770ey850m2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kadınlar dayanıklılık koşusunda erkeklerden daha mı iyi? son aylarda kadınlar bazı önemli dayanıklılık yarışlarında erkekleri geride bıraktılar. peki kadınlar bu tür mücadelelere daha mı uygunlar? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Eylül 2026, 12:12</span>
+        </div>
+        <h3>Kadınlar dayanıklılık koşusunda erkeklerden daha mı iyi?</h3>
+        <p>Son aylarda kadınlar bazı önemli dayanıklılık yarışlarında erkekleri geride bıraktılar. Peki kadınlar bu tür mücadelelere daha mı uygunlar?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Eylül 2026, 12:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cjrx0lzqelpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;alihan kuriş çıkar amaçlı suç örgütü&quot; soruşturmasında 29 şüpheli hakkında gözaltı kararı ankara cumhuriyet başsavcılığınca &quot;alihan kuriş çıkar amaçlı suç örgütü&quot; soruşturması kapsamında 29 şüphelinin gözaltına alınmasına, 23 şirkete kayyum atanmasına karar verildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Eylül 2026, 10:00</span>
+        </div>
+        <h3>&quot;Alihan Kuriş çıkar amaçlı suç örgütü&quot; soruşturmasında 29 şüpheli hakkında gözaltı kararı</h3>
+        <p>Ankara Cumhuriyet Başsavcılığınca &quot;Alihan Kuriş çıkar amaçlı suç örgütü&quot; soruşturması kapsamında 29 şüphelinin gözaltına alınmasına, 23 şirkete kayyum atanmasına karar verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Eylül 2026, 10:00</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/alihan-kuris-cikar-amacli-suc-orgutu-sorusturmasinda-29-supheli-hakkinda-gozalti-karari-/4062336" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="yapay zeka gerçekten insanlığı yok edebilir mi ve nasıl? araştırmacılar, yapay zekanın kontrolden çıkmasının riskleri konusunda sert uyarılarda bulundular. bbc siber muhabiri joe tidy, akıllarındaki bazı senaryoları inceledi. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 20 Eylül 2026, 10:13</span>
+        </div>
+        <h3>Yapay zeka gerçekten insanlığı yok edebilir mi ve nasıl?</h3>
+        <p>Araştırmacılar, yapay zekanın kontrolden çıkmasının riskleri konusunda sert uyarılarda bulundular. BBC Siber Muhabiri Joe Tidy, akıllarındaki bazı senaryoları inceledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Eylül 2026, 10:13</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c60qx37080qjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="futbolda milli mesai başlıyor uefa uluslar a ligi 1. grup&#x27;ta fransa, i̇talya ve belçika ile karşılaşacak a milli futbol takımı, yarın riva&#x27;da toplanarak ilk antremanını yapacak. spor trt haber" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">TRT Haber · 20 Eylül 2026, 11:43</span>
+        </div>
+        <h3>Futbolda milli mesai başlıyor</h3>
+        <p>UEFA Uluslar A Ligi 1. Grup&#x27;ta Fransa, İtalya ve Belçika ile karşılaşacak A Milli Futbol Takımı, yarın Riva&#x27;da toplanarak ilk antremanını yapacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Eylül 2026, 11:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/futbolda-milli-mesai-basliyor-957429.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
