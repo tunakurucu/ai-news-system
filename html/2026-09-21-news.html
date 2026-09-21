@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">21 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">21 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 11</span><span class="stat-item"><strong>genel</strong> 15</span><span class="stat-item"><strong>ekonomi</strong> 3</span><span class="stat-item"><strong>spor</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Rusya&#x27;da Duma seçimlerinin galibi Putinin Birleşik Rusya partisi oldu</h3>
+        <p>Rusya’da parlamentonun alt kanadı Devlet Duması için yapılan milletvekili seçiminde kesin olmayan ilk sonuçlara göre Rusya Devlet Başkanı Vladimir Putin’in partisi Birleşik Rusya yüzde 57,82 oy alarak birinci oldu.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 21 Eylül 2026, 12:42</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/rusyada-duma-secimlerinin-galibi-putinin-birlesik-rusya-partisi-oldu-957522.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 21 Eylül 2026, 12:00</span>
+            </div>
+            <h3>Rusya&#x27;daki seçimlerde sürpriz yok ama Kremlin&#x27;in sonuçları nasıl değerlendireceği önemli</h3>
+            <p>Vladimir Putin&#x27;in Rusya&#x27;daki parlamento seçimlerinin sonuçlarına dayanarak Rusların büyük çoğunluğunun Ukrayna&#x27;daki &quot;özel askeri operasyonu&quot; desteklediğini iddia etmesi muhtemel. BBC Rusya editörü Steve Rosenberg&#x27;in haberi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cm5ydr0kxp4xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 21 Eylül 2026, 12:51</span>
+            </div>
+            <h3>Berlin&#x27;de seçimleri kazanan Sol Parti&#x27;nin başbakan adayı Elif Eralp kimdir?</h3>
+            <p>Kamu yayıncıları ARD ve ZDF&#x27;nin sandık çıkış anketlerine göre, Sol Parti (Die Linke), Başbakan Friedrich Merz&#x27;in liderliğindeki merkez sağ CDU&#x27;yu mağlup etti. Sol Parti&#x27;nin adayı Elif Eralp %25 civarındaki oy oranı ile önde görünüyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 21 Eylül 2026, 09:04</span>
+            </div>
+            <h3>TOKİ&#x27;de %25 indirim yarın başlıyor: Kampanya hakkında bilinenler</h3>
+            <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Toplu Konut İdaresi Başkanlığı (TOKİ), geri ödemeleri devam eden konut ve iş yerleri için %25 indirim kampanyası düzenliyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cwq63p5q76r0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 21 Eylül 2026, 12:54</span>
+            </div>
+            <h3>Cumhurbaşkanı Erdoğan BM kürsüsünden dünyaya seslenecek</h3>
+            <p>Cumhurbaşkanı Erdoğan, Birleşmiş Milletler 81. Genel Kurulu&#x27;na katılmak ve çeşitli temaslarda bulunmak üzere ABD&#x27;nin New York şehrine gitti. Cumhurbaşkanı Erdoğan, New York&#x27;taki Türkevi&#x27;nde vatandaşlar tarafından yoğun ilgiyle karşılandı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-bm-kursusunden-dunyaya-seslenecek-957525.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">11 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="rusya&#x27;da duma seçimlerinin galibi putinin birleşik rusya partisi oldu rusya’da parlamentonun alt kanadı devlet duması için yapılan milletvekili seçiminde kesin olmayan ilk sonuçlara göre rusya devlet başkanı vladimir putin’in partisi birleşik rusya yüzde 57,82 oy alarak birinci oldu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 21 Eylül 2026, 12:42</span>
+        </div>
+        <h3>Rusya&#x27;da Duma seçimlerinin galibi Putinin Birleşik Rusya partisi oldu</h3>
+        <p>Rusya’da parlamentonun alt kanadı Devlet Duması için yapılan milletvekili seçiminde kesin olmayan ilk sonuçlara göre Rusya Devlet Başkanı Vladimir Putin’in partisi Birleşik Rusya yüzde 57,82 oy alarak birinci oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Eylül 2026, 12:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/rusyada-duma-secimlerinin-galibi-putinin-birlesik-rusya-partisi-oldu-957522.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rusya&#x27;daki seçimlerde sürpriz yok ama kremlin&#x27;in sonuçları nasıl değerlendireceği önemli vladimir putin&#x27;in rusya&#x27;daki parlamento seçimlerinin sonuçlarına dayanarak rusların büyük çoğunluğunun ukrayna&#x27;daki &quot;özel askeri operasyonu&quot; desteklediğini iddia etmesi muhtemel. bbc rusya editörü steve rosenberg&#x27;in haberi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 12:00</span>
+        </div>
+        <h3>Rusya&#x27;daki seçimlerde sürpriz yok ama Kremlin&#x27;in sonuçları nasıl değerlendireceği önemli</h3>
+        <p>Vladimir Putin&#x27;in Rusya&#x27;daki parlamento seçimlerinin sonuçlarına dayanarak Rusların büyük çoğunluğunun Ukrayna&#x27;daki &quot;özel askeri operasyonu&quot; desteklediğini iddia etmesi muhtemel. BBC Rusya editörü Steve Rosenberg&#x27;in haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 12:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm5ydr0kxp4xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="toki̇&#x27;de %25 indirim yarın başlıyor: kampanya hakkında bilinenler çevre, şehircilik ve i̇klim değişikliği bakanlığı toplu konut i̇daresi başkanlığı (toki̇), geri ödemeleri devam eden konut ve iş yerleri için %25 indirim kampanyası düzenliyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 09:04</span>
+        </div>
+        <h3>TOKİ&#x27;de %25 indirim yarın başlıyor: Kampanya hakkında bilinenler</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Toplu Konut İdaresi Başkanlığı (TOKİ), geri ödemeleri devam eden konut ve iş yerleri için %25 indirim kampanyası düzenliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 09:04</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwq63p5q76r0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan bm kürsüsünden dünyaya seslenecek cumhurbaşkanı erdoğan, birleşmiş milletler 81. genel kurulu&#x27;na katılmak ve çeşitli temaslarda bulunmak üzere abd&#x27;nin new york şehrine gitti. cumhurbaşkanı erdoğan, new york&#x27;taki türkevi&#x27;nde vatandaşlar tarafından yoğun ilgiyle karşılandı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 21 Eylül 2026, 12:54</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan BM kürsüsünden dünyaya seslenecek</h3>
+        <p>Cumhurbaşkanı Erdoğan, Birleşmiş Milletler 81. Genel Kurulu&#x27;na katılmak ve çeşitli temaslarda bulunmak üzere ABD&#x27;nin New York şehrine gitti. Cumhurbaşkanı Erdoğan, New York&#x27;taki Türkevi&#x27;nde vatandaşlar tarafından yoğun ilgiyle karşılandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Eylül 2026, 12:54</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-bm-kursusunden-dunyaya-seslenecek-957525.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sıfır atık iklim politikalarının merkezine taşınacak sıfır atık vakfı başkanı ve cop31 yüksek düzeyli i̇klim şampiyonu samed ağırbaş, sıfır atığın yalnızca atık azaltımı değil iklim politikalarının önemli unsuru olarak ele alındığını, cop31&#x27;in sıfır atık yaklaşımı için dönüm noktası olacağını söyledi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Eylül 2026, 11:16</span>
+        </div>
+        <h3>Sıfır atık iklim politikalarının merkezine taşınacak</h3>
+        <p>Sıfır Atık Vakfı Başkanı ve COP31 Yüksek Düzeyli İklim Şampiyonu Samed Ağırbaş, sıfır atığın yalnızca atık azaltımı değil iklim politikalarının önemli unsuru olarak ele alındığını, COP31&#x27;in sıfır atık yaklaşımı için dönüm noktası olacağını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Eylül 2026, 11:16</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sifir-atik-iklim-politikalarinin-merkezine-tasinacak/4063043" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="uykunuzu takip etmek uyumanızı kötüleştirebilir mi? uykunuzu iyileştirmek için yaptığınız şeyler uykunuzu kötüleştirebilir. peki nelere dikkat etmek lazım? dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 03:06</span>
+        </div>
+        <h3>Uykunuzu takip etmek uyumanızı kötüleştirebilir mi?</h3>
+        <p>Uykunuzu iyileştirmek için yaptığınız şeyler uykunuzu kötüleştirebilir. Peki nelere dikkat etmek lazım?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 03:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqx2zp497895o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="boyun kütletmenin gizli tehlikesi: solunum durması ve ani ölüm riski boyun ağrılarını dindirmek için gelişigüzel yapılan &quot;kütletme&quot; gibi hareketlerin bir tedavi yöntemi olmadığı, bunun tehlikeli sonuçlar doğurarak ölüme yol açabileceği bildirildi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 21 Eylül 2026, 12:23</span>
+        </div>
+        <h3>Boyun kütletmenin gizli tehlikesi: Solunum durması ve ani ölüm riski</h3>
+        <p>Boyun ağrılarını dindirmek için gelişigüzel yapılan &quot;kütletme&quot; gibi hareketlerin bir tedavi yöntemi olmadığı, bunun tehlikeli sonuçlar doğurarak ölüme yol açabileceği bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Eylül 2026, 12:23</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/saglik/boyun-kutletmenin-gizli-tehlikesi-solunum-durmasi-ve-ani-olum-riski-957521.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yargıtay ceza genel kurulu başkanı ömeroğlu: yargılamanın temel süjesi insandır yargıtay ceza genel kurulu başkanı ahmet ömeroğlu, &quot;adalet düzeninin içine, hukuk düzeninin merkezine insanı koymadığınızda insanlığınızı kaybedersiniz ve asla adalet üretemezsiniz.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Eylül 2026, 12:49</span>
+        </div>
+        <h3>Yargıtay Ceza Genel Kurulu Başkanı Ömeroğlu: Yargılamanın temel süjesi insandır</h3>
+        <p>Yargıtay Ceza Genel Kurulu Başkanı Ahmet Ömeroğlu, &quot;Adalet düzeninin içine, hukuk düzeninin merkezine insanı koymadığınızda insanlığınızı kaybedersiniz ve asla adalet üretemezsiniz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Eylül 2026, 12:49</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yargitay-ceza-genel-kurulu-baskani-omeroglu-yargilamanin-temel-sujesi-insandir/4063168" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;boyun kütletme&quot; kalıcı hasara ve ölüme yol açabiliyor boyun ağrılarını dindirmek için gelişigüzel yapılan &quot;kütletme&quot; gibi hareketlerin bir tedavi yöntemi olmadığı, bunun tehlikeli sonuçlar doğurarak ölüme yol açabileceği bildirildi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Eylül 2026, 11:40</span>
+        </div>
+        <h3>&quot;Boyun kütletme&quot; kalıcı hasara ve ölüme yol açabiliyor</h3>
+        <p>Boyun ağrılarını dindirmek için gelişigüzel yapılan &quot;kütletme&quot; gibi hareketlerin bir tedavi yöntemi olmadığı, bunun tehlikeli sonuçlar doğurarak ölüme yol açabileceği bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Eylül 2026, 11:40</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/boyun-kutletme-kalici-hasara-ve-olume-yol-acabiliyor/4063075" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul merkezli &quot;usulsüz vatandaşlık&quot; operasyonunda 73 zanlı yakalandı i̇stanbul merkezli 13 ilde düzenlenen operasyonda, türk vatandaşlığı için muvazaalı gayrimenkul satışları ile usulsüz işlemler yaptığı iddia edilen toplam 73 şüpheli gözaltına alındı. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Eylül 2026, 10:46</span>
+        </div>
+        <h3>İstanbul merkezli &quot;usulsüz vatandaşlık&quot; operasyonunda 73 zanlı yakalandı</h3>
+        <p>İstanbul merkezli 13 ilde düzenlenen operasyonda, Türk vatandaşlığı için muvazaalı gayrimenkul satışları ile usulsüz işlemler yaptığı iddia edilen toplam 73 şüpheli gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Eylül 2026, 10:46</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbul-merkezli-usulsuz-vatandaslik-operasyonunda-73-zanli-yakalandi/4062988" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ukrayna&#x27;dan moskova&#x27;ya yüzlerce i̇ha ile &#x27;en büyük&#x27; saldırı moskova belediye başkanı, ukrayna&#x27;nın bugüne kadarki en büyük insansız hava aracı saldırısını düzenlediğini, şehrin ana petrol rafinerisi ve bir apartmanın vurulduğunu söyledi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 01:45</span>
+        </div>
+        <h3>Ukrayna&#x27;dan Moskova&#x27;ya yüzlerce İHA ile &#x27;en büyük&#x27; saldırı</h3>
+        <p>Moskova belediye başkanı, Ukrayna&#x27;nın bugüne kadarki en büyük insansız hava aracı saldırısını düzenlediğini, şehrin ana petrol rafinerisi ve bir apartmanın vurulduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 01:45</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c207gpxnrggo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">15 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="berlin&#x27;de seçimleri kazanan sol parti&#x27;nin başbakan adayı elif eralp kimdir? kamu yayıncıları ard ve zdf&#x27;nin sandık çıkış anketlerine göre, sol parti (die linke), başbakan friedrich merz&#x27;in liderliğindeki merkez sağ cdu&#x27;yu mağlup etti. sol parti&#x27;nin adayı elif eralp %25 civarındaki oy oranı ile önde görünüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 12:51</span>
+        </div>
+        <h3>Berlin&#x27;de seçimleri kazanan Sol Parti&#x27;nin başbakan adayı Elif Eralp kimdir?</h3>
+        <p>Kamu yayıncıları ARD ve ZDF&#x27;nin sandık çıkış anketlerine göre, Sol Parti (Die Linke), Başbakan Friedrich Merz&#x27;in liderliğindeki merkez sağ CDU&#x27;yu mağlup etti. Sol Parti&#x27;nin adayı Elif Eralp %25 civarındaki oy oranı ile önde görünüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 12:51</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;kişisel veri&quot; soruşturmasında 6 avukatlık ofisi ile 20 şirkette eş zamanlı operasyon adalet bakanı akın gürlek, vatandaşların kişisel verilerini ele geçirenlere yönelik soruşturma kapsamında düzenlenen operasyonda, 6 avukatlık ofisi ile 20 şirkette eş zamanlı arama ve gözaltı işlemleri başlatıldığını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Eylül 2026, 12:56</span>
+        </div>
+        <h3>&quot;Kişisel veri&quot; soruşturmasında 6 avukatlık ofisi ile 20 şirkette eş zamanlı operasyon</h3>
+        <p>Adalet Bakanı Akın Gürlek, vatandaşların kişisel verilerini ele geçirenlere yönelik soruşturma kapsamında düzenlenen operasyonda, 6 avukatlık ofisi ile 20 şirkette eş zamanlı arama ve gözaltı işlemleri başlatıldığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Eylül 2026, 12:56</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kisisel-veri-sorusturmasinda-6-avukatlik-ofisi-ile-20-sirkette-es-zamanli-operasyon/4063173" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="adalet bakan yardımcısı ayyıldız: adli tıp ve adli bilimler kurumlarının sabit kalması düşünülemez adalet bakan yardımcısı sedat ayyıldız, &quot;adli tıp ve adli bilimler kurumlarının sabit kalması düşünülemez. dünyadaki gelişmeleri takip eden ve bu gelişmelere yön verebilen kurumlara ihtiyacımız var.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Eylül 2026, 12:28</span>
+        </div>
+        <h3>Adalet Bakan Yardımcısı Ayyıldız: Adli tıp ve adli bilimler kurumlarının sabit kalması düşünülemez</h3>
+        <p>Adalet Bakan Yardımcısı Sedat Ayyıldız, &quot;Adli tıp ve adli bilimler kurumlarının sabit kalması düşünülemez. Dünyadaki gelişmeleri takip eden ve bu gelişmelere yön verebilen kurumlara ihtiyacımız var.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Eylül 2026, 12:28</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/adalet-bakan-yardimcisi-ayyildiz-adli-tip-ve-adli-bilimler-kurumlarinin-sabit-kalmasi-dusunulemez/4063146" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="almanya başbakanı merz, eyalet seçimlerindeki &#x27;felakete&#x27; rağmen görevde kalacağı mesajı verdi sandık çıkış anketleri, merz&#x27;in merkez sağ cdu partisinin berlin ve mecklenburg-vorpommern eyaletlerinde ağır kayıplar yaşadığını gösteriyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Eylül 2026, 20:23</span>
+        </div>
+        <h3>Almanya Başbakanı Merz, eyalet seçimlerindeki &#x27;felakete&#x27; rağmen görevde kalacağı mesajı verdi</h3>
+        <p>Sandık çıkış anketleri, Merz&#x27;in merkez sağ CDU partisinin Berlin ve Mecklenburg-Vorpommern eyaletlerinde ağır kayıplar yaşadığını gösteriyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Eylül 2026, 20:23</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cjly4p21g5e1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kaşif kozinoğlu soruşturmasında son gelişmeler neler? eski mi̇t görevlisi kaşif kozinoğlu&#x27;nun ölümüne ilişkin soruşturma kapsamında son olarak gözaltına alınan dört kişiden biri serbest bırakıldı. diğer üç kişinin bugün adliyeye sevk edilmeleri bekleniyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 09:32</span>
+        </div>
+        <h3>Kaşif Kozinoğlu soruşturmasında son gelişmeler neler?</h3>
+        <p>Eski MİT görevlisi Kaşif Kozinoğlu&#x27;nun ölümüne ilişkin soruşturma kapsamında son olarak gözaltına alınan dört kişiden biri serbest bırakıldı. Diğer üç kişinin bugün adliyeye sevk edilmeleri bekleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 09:32</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwyzxq2g545o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="slovenya&#x27;da muhalefet, i̇srail&#x27;le yakınlaşma nedeniyle dışişleri bakanı hakkında gensoru önergesi verecek slovenya&#x27;da muhalefet partileri, hükümetin katil i̇srail&#x27;le yakınlaşma politikası ve dış politikada izlediği yeni çizgi nedeniyle dışişleri bakanı tone kajzer hakkında gensoru önergesi sunacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 21 Eylül 2026, 12:14</span>
+        </div>
+        <h3>Slovenya&#x27;da muhalefet, İsrail&#x27;le yakınlaşma nedeniyle Dışişleri Bakanı hakkında gensoru önergesi verecek</h3>
+        <p>Slovenya&#x27;da muhalefet partileri, hükümetin katil İsrail&#x27;le yakınlaşma politikası ve dış politikada izlediği yeni çizgi nedeniyle Dışişleri Bakanı Tone Kajzer hakkında gensoru önergesi sunacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Eylül 2026, 12:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/slovenyada-muhalefet-israille-yakinlasma-nedeniyle-disisleri-bakani-hakkinda-gensoru-onergesi-verecek-957520.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dünyada her 3 saniyede bir kişiye demans tanısı konuluyor dünya genelinde 55-57 milyon kişide demans olduğu, yaklaşık her 3 saniyede bir kişide demans geliştiği tahmin edilirken, alzheimer hastalığı ve demans türkiye&#x27;de de halk sağlığını etkileyen önemli sorunlar arasında bulunuyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 21 Eylül 2026, 11:44</span>
+        </div>
+        <h3>Dünyada her 3 saniyede bir kişiye demans tanısı konuluyor</h3>
+        <p>Dünya genelinde 55-57 milyon kişide demans olduğu, yaklaşık her 3 saniyede bir kişide demans geliştiği tahmin edilirken, Alzheimer hastalığı ve demans Türkiye&#x27;de de halk sağlığını etkileyen önemli sorunlar arasında bulunuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Eylül 2026, 11:44</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/saglik/dunyada-her-3-saniyede-bir-kisiye-demans-tanisi-konuluyor-957516.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trafik kazası verilerini kazanç kapısına dönüştürenlere operasyon i̇stanbul merkezli 4 ilde, trafik kazası mağdurlarının kişisel verileriyle 15,6 milyar lira haksız kazanç sağlayan yapıya operasyon düzenlendi. 6 avukatlık ofisi ve 20 şirkette eş zamanlı arama yapılan soruşturmada, 825 şüpheli hakkında yasal işlem başlatıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 21 Eylül 2026, 11:26</span>
+        </div>
+        <h3>Trafik kazası verilerini kazanç kapısına dönüştürenlere operasyon</h3>
+        <p>İstanbul merkezli 4 ilde, trafik kazası mağdurlarının kişisel verileriyle 15,6 milyar lira haksız kazanç sağlayan yapıya operasyon düzenlendi. 6 avukatlık ofisi ve 20 şirkette eş zamanlı arama yapılan soruşturmada, 825 şüpheli hakkında yasal işlem başlatıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Eylül 2026, 11:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/trafik-kazasi-verilerini-kazanc-kapisina-donusturenlere-operasyon-957515.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="adli tıp kurumu başkanı aslıyüksek: hedefimiz, bilimsel, objektif ve güvenilir bilirkişilik hizmeti sunmak adli tıp kurumu başkanı ve uluslararası 21. adli tıp günleri kongresi başkanı hızır aslıyüksek, &quot;yaptığımız her inceleme ve hazırladığımız her rapor ile yargı makamlarının maddi gerçeğe ulaşmasına katkı sunmayı amaçlıyoruz.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Eylül 2026, 12:26</span>
+        </div>
+        <h3>Adli Tıp Kurumu Başkanı Aslıyüksek: Hedefimiz, bilimsel, objektif ve güvenilir bilirkişilik hizmeti sunmak</h3>
+        <p>Adli Tıp Kurumu Başkanı ve Uluslararası 21. Adli Tıp Günleri Kongresi Başkanı Hızır Aslıyüksek, &quot;Yaptığımız her inceleme ve hazırladığımız her rapor ile yargı makamlarının maddi gerçeğe ulaşmasına katkı sunmayı amaçlıyoruz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Eylül 2026, 12:26</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/adli-tip-kurumu-baskani-asliyuksek-hedefimiz-bilimsel-objektif-ve-guvenilir-bilirkisilik-hizmeti-sunmak/4063141" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="demans dünyada yaklaşık 57 milyon kişiyi etkiliyor sağlık bakanlığı, alzheimer&#x27;ın tüm demans vakalarının yaklaşık yüzde 60-70&#x27;ini oluşturan en yaygın demans türü olduğunu ve dünya genelinde 55-57 milyon kişide demans bulunduğunu bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Eylül 2026, 12:34</span>
+        </div>
+        <h3>Demans dünyada yaklaşık 57 milyon kişiyi etkiliyor</h3>
+        <p>Sağlık Bakanlığı, Alzheimer&#x27;ın tüm demans vakalarının yaklaşık yüzde 60-70&#x27;ini oluşturan en yaygın demans türü olduğunu ve dünya genelinde 55-57 milyon kişide demans bulunduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Eylül 2026, 12:34</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/demans-dunyada-yaklasik-57-milyon-kisiyi-etkiliyor/4063154" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cindy crawford&#x27;ın oğlu presley gerber 27 yaşında hayatını kaybetti modellik yapan gerber, 20 eylül pazar günü bir rehabilitasyon merkezinde hayatını kaybetti. ölüm nedeni açıklanmadı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 09:58</span>
+        </div>
+        <h3>Cindy Crawford&#x27;ın oğlu Presley Gerber 27 yaşında hayatını kaybetti</h3>
+        <p>Modellik yapan Gerber, 20 Eylül Pazar günü bir rehabilitasyon merkezinde hayatını kaybetti. Ölüm nedeni açıklanmadı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 09:58</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm5ye7l3685do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ateşkese rağmen soykırımcı i̇srail saldırılarının sürdüğü gazze&#x27;de hastanelere son 24 saatte 4 cenaze getirildi ateşkese rağmen soykırımcı i̇srail saldırılarının devam ettiği gazze&#x27;de son 24 saatte 4 kişinin cenazesinin hastanelere getirildiği bildirildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 21 Eylül 2026, 12:52</span>
+        </div>
+        <h3>Ateşkese rağmen soykırımcı İsrail saldırılarının sürdüğü Gazze&#x27;de hastanelere son 24 saatte 4 cenaze getirildi</h3>
+        <p>Ateşkese rağmen soykırımcı İsrail saldırılarının devam ettiği Gazze&#x27;de son 24 saatte 4 kişinin cenazesinin hastanelere getirildiği bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Eylül 2026, 12:52</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ateskese-ragmen-soykirimci-israil-saldirilarinin-surdugu-gazzede-hastanelere-son-24-saatte-4-cenaze-getirildi-957524.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mi̇t koordinesinde uyuşturucu operasyonu: 6 gözaltı milli i̇stihbarat teşkilatı (mi̇t) ve adana emniyet müdürlüğünün düzenlediği ortak operasyonda 375 bin uyuşturucu hap ele geçirildi, 6 şüpheli gözaltına alındı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 21 Eylül 2026, 11:49</span>
+        </div>
+        <h3>MİT koordinesinde uyuşturucu operasyonu: 6 gözaltı</h3>
+        <p>Milli İstihbarat Teşkilatı (MİT) ve Adana Emniyet Müdürlüğünün düzenlediği ortak operasyonda 375 bin uyuşturucu hap ele geçirildi, 6 şüpheli gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Eylül 2026, 11:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/mit-koordinesinde-uyusturucu-operasyonu-6-gozalti-957517.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mi̇t koordinesindeki operasyonda 375 bin uyuşturucu hap ele geçirildi milli i̇stihbarat teşkilatı (mi̇t) ve adana emniyet müdürlüğünün düzenlediği ortak operasyonda 375 bin uyuşturucu hap ele geçirildi, 6 şüpheli gözaltına alındı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Eylül 2026, 11:48</span>
+        </div>
+        <h3>MİT koordinesindeki operasyonda 375 bin uyuşturucu hap ele geçirildi</h3>
+        <p>Milli İstihbarat Teşkilatı (MİT) ve Adana Emniyet Müdürlüğünün düzenlediği ortak operasyonda 375 bin uyuşturucu hap ele geçirildi, 6 şüpheli gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Eylül 2026, 11:48</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mit-koordinesindeki-operasyonda-375-bin-uyusturucu-hap-ele-gecirildi/4063091" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;i̇srail bağlantılı forex dolandırıcılığı&quot; operasyonunda gözaltına alınan 211 şüpheli adliyede i̇stanbul&#x27;da, i̇srail bağlantılı uluslararası yasa dışı forex dolandırıcılığına yönelik düzenlenen operasyonda gözaltına alınan 211 şüpheli adliyeye sevk edildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Eylül 2026, 10:04</span>
+        </div>
+        <h3>&quot;İsrail bağlantılı forex dolandırıcılığı&quot; operasyonunda gözaltına alınan 211 şüpheli adliyede</h3>
+        <p>İstanbul&#x27;da, İsrail bağlantılı uluslararası yasa dışı forex dolandırıcılığına yönelik düzenlenen operasyonda gözaltına alınan 211 şüpheli adliyeye sevk edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Eylül 2026, 10:04</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/israil-baglantili-forex-dolandiriciligi-operasyonunda-gozaltina-alinan-211-supheli-adliyede/4062945" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="katılımevim soruşturmasında 15 kişi gözaltına alındı i̇stanbul cumhuriyet başsavcılığı, katılımevim tasarruf finansman aş paylarında &quot;piyasa dolandırıcılığı&quot; yapıldığı iddiasıyla yürütülen soruşturmada 21 eylül&#x27;de 15 kişinin gözaltına alındığını, firari 10 şüphelinin arandığını açıkladı ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 13:03</span>
+        </div>
+        <h3>Katılımevim soruşturmasında 15 kişi gözaltına alındı</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı, Katılımevim Tasarruf Finansman AŞ paylarında &quot;piyasa dolandırıcılığı&quot; yapıldığı iddiasıyla yürütülen soruşturmada 21 Eylül&#x27;de 15 kişinin gözaltına alındığını, firari 10 şüphelinin arandığını açıkladı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 13:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqkg08p7v814o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="spk fonların tasfiye sürecini altı aya uzattı sermaye piyasası kurulu (spk) tasfiyesine karar verilen 131 yatırım fonunun tasfiye sürecini üç aydan altı aya çıkardı. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 01:27</span>
+        </div>
+        <h3>SPK fonların tasfiye sürecini altı aya uzattı</h3>
+        <p>Sermaye Piyasası Kurulu (SPK) tasfiyesine karar verilen 131 yatırım fonunun tasfiye sürecini üç aydan altı aya çıkardı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 01:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq36l32j8w1lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ngiltere deniz ticaret operasyonları: hürmüz boğazı&#x27;nda petrol tankeri vuruldu i̇ngiltere deniz ticaret operasyonları (ukmto), hürmüz boğazı&#x27;nda bir petrol tankerinin vurulduğunu ve mürettebattan 2 kişinin yaralandığını bildirdi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 21 Eylül 2026, 12:51</span>
+        </div>
+        <h3>İngiltere Deniz Ticaret Operasyonları: Hürmüz Boğazı&#x27;nda petrol tankeri vuruldu</h3>
+        <p>İngiltere Deniz Ticaret Operasyonları (UKMTO), Hürmüz Boğazı&#x27;nda bir petrol tankerinin vurulduğunu ve mürettebattan 2 kişinin yaralandığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Eylül 2026, 12:51</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ingiltere-deniz-ticaret-operasyonlari-hurmuz-bogazinda-petrol-tankeri-vuruldu-957523.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="basketbolda cumhurbaşkanlığı kupası&#x27;nın sahibi yarın belli olacak basketbol 39. erkekler cumhurbaşkanlığı kupası&#x27;nda fenerbahçe tarfin ile beşiktaş, 22 eylül salı günü saat 20.00&#x27;de sinan erdem spor salonu&#x27;nda karşı karşıya gelecek. mücadele trt 1&#x27;den canlı yayınlanacak. spor trt haber" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">TRT Haber · 21 Eylül 2026, 12:08</span>
+        </div>
+        <h3>Basketbolda Cumhurbaşkanlığı Kupası&#x27;nın sahibi yarın belli olacak</h3>
+        <p>Basketbol 39. Erkekler Cumhurbaşkanlığı Kupası&#x27;nda Fenerbahçe Tarfin ile Beşiktaş, 22 Eylül Salı günü saat 20.00&#x27;de Sinan Erdem Spor Salonu&#x27;nda karşı karşıya gelecek. Mücadele TRT 1&#x27;den canlı yayınlanacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Eylül 2026, 12:08</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/basketbolda-cumhurbaskanligi-kupasinin-sahibi-yarin-belli-olacak-957519.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
