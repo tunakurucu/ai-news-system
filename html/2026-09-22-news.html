@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">22 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">22 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>genel</strong> 23</span><span class="stat-item"><strong>ekonomi</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Merz&#x27;in siyasi krizi, istikrar konusunda takıntılı Almanya için risk oluşturuyor</h3>
+        <p>BBC Avrupa Editörü Katya Adler&#x27;in analizine göre, Almanya&#x27;daki siyasi değişimler Avrupa&#x27;da ve ötesinde yakından izleniyor.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 21 Eylül 2026, 20:26</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cj20723yqvq9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">Anadolu Ajansı · 22 Eylül 2026, 11:13</span>
+            </div>
+            <h3>Aile ve Sosyal Hizmetler Bakanlığı, 9 ayda 26 binden fazla kişiye psikososyal destek sağladı</h3>
+            <p>Aile ve Sosyal Hizmetler Bakanlığınca ocak-eylül döneminde başta orman yangınları olmak üzere ülkenin farklı illerinde yaşanan afet ve acil durumlar sonrasında 26 binden fazla kişiye psikososyal destek verildi.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/aile-ve-sosyal-hizmetler-bakanligi-9-ayda-26-binden-fazla-kisiye-psikososyal-destek-sagladi/4064134" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 22 Eylül 2026, 09:07</span>
+            </div>
+            <h3>İngiltere&#x27;den Suudi Arabistan&#x27;a &#x27;savunma&#x27; amaçlı askeri destek</h3>
+            <p>İngiltere, Yemen&#x27;deki İran destekli Husi milislerinin saldırıları ile mücadele eden Suudi Arabistan&#x27;a &quot;savunma amaçlı havadan havaya yakıt ikmali&quot; desteği sağlayacağını açıkladı. Tek bir uçağı içerecek destek, &quot;belli bir süre için&quot; verilecek.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c63reyd07vq9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 22 Eylül 2026, 02:05</span>
+            </div>
+            <h3>TOKİ&#x27;de %25 indirim bugün başlıyor: Kampanya hakkında bilinenler</h3>
+            <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Toplu Konut İdaresi Başkanlığı (TOKİ), geri ödemeleri devam eden konut ve iş yerleri için %25 indirim kampanyası düzenliyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cwq63p5q76r0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 21 Eylül 2026, 12:51</span>
+            </div>
+            <h3>Berlin&#x27;de seçimleri kazanan Sol Parti&#x27;nin başbakan adayı Elif Eralp kimdir?</h3>
+            <p>Kamu yayıncıları ARD ve ZDF&#x27;nin sandık çıkış anketlerine göre, Sol Parti (Die Linke), Başbakan Friedrich Merz&#x27;in liderliğindeki merkez sağ CDU&#x27;yu mağlup etti. Sol Parti&#x27;nin adayı Elif Eralp %25 civarındaki oy oranı ile önde görünüyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="merz&#x27;in siyasi krizi, istikrar konusunda takıntılı almanya için risk oluşturuyor bbc avrupa editörü katya adler&#x27;in analizine göre, almanya&#x27;daki siyasi değişimler avrupa&#x27;da ve ötesinde yakından izleniyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 20:26</span>
+        </div>
+        <h3>Merz&#x27;in siyasi krizi, istikrar konusunda takıntılı Almanya için risk oluşturuyor</h3>
+        <p>BBC Avrupa Editörü Katya Adler&#x27;in analizine göre, Almanya&#x27;daki siyasi değişimler Avrupa&#x27;da ve ötesinde yakından izleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 20:26</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj20723yqvq9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ngiltere&#x27;den suudi arabistan&#x27;a &#x27;savunma&#x27; amaçlı askeri destek i̇ngiltere, yemen&#x27;deki i̇ran destekli husi milislerinin saldırıları ile mücadele eden suudi arabistan&#x27;a &quot;savunma amaçlı havadan havaya yakıt ikmali&quot; desteği sağlayacağını açıkladı. tek bir uçağı içerecek destek, &quot;belli bir süre için&quot; verilecek. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 22 Eylül 2026, 09:07</span>
+        </div>
+        <h3>İngiltere&#x27;den Suudi Arabistan&#x27;a &#x27;savunma&#x27; amaçlı askeri destek</h3>
+        <p>İngiltere, Yemen&#x27;deki İran destekli Husi milislerinin saldırıları ile mücadele eden Suudi Arabistan&#x27;a &quot;savunma amaçlı havadan havaya yakıt ikmali&quot; desteği sağlayacağını açıkladı. Tek bir uçağı içerecek destek, &quot;belli bir süre için&quot; verilecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Eylül 2026, 09:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c63reyd07vq9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="toki̇&#x27;de %25 indirim bugün başlıyor: kampanya hakkında bilinenler çevre, şehircilik ve i̇klim değişikliği bakanlığı toplu konut i̇daresi başkanlığı (toki̇), geri ödemeleri devam eden konut ve iş yerleri için %25 indirim kampanyası düzenliyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 22 Eylül 2026, 02:05</span>
+        </div>
+        <h3>TOKİ&#x27;de %25 indirim bugün başlıyor: Kampanya hakkında bilinenler</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Toplu Konut İdaresi Başkanlığı (TOKİ), geri ödemeleri devam eden konut ve iş yerleri için %25 indirim kampanyası düzenliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Eylül 2026, 02:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwq63p5q76r0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="malezya&#x27;nın yeni ankara büyükelçisi shaffieq, türkiye&#x27;yi büyük bir açık hava müzesine benzetti malezya&#x27;nın ankara büyükelçisi adlan mohd shaffieq, türkiye&#x27;yi büyük bir açık hava müzesine benzeterek, &quot;çok derin bir kültüre sahip, bu yüzden türkiye&#x27;yi keşfetmek benim için son derece ilgi çekici.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Eylül 2026, 11:54</span>
+        </div>
+        <h3>Malezya&#x27;nın yeni Ankara Büyükelçisi Shaffieq, Türkiye&#x27;yi büyük bir açık hava müzesine benzetti</h3>
+        <p>Malezya&#x27;nın Ankara Büyükelçisi Adlan Mohd Shaffieq, Türkiye&#x27;yi büyük bir açık hava müzesine benzeterek, &quot;Çok derin bir kültüre sahip, bu yüzden Türkiye&#x27;yi keşfetmek benim için son derece ilgi çekici.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Eylül 2026, 11:54</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/malezyanin-yeni-ankara-buyukelcisi-shaffieq-turkiyeyi-buyuk-bir-acik-hava-muzesine-benzetti/4064206" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan göktaş: çocukların güvenliği en başından itibaren dijital sistemlerin içine yerleştirilmelidir aile ve sosyal hizmetler bakanı mahinur özdemir göktaş, &quot;çocukların güvenliği en başından itibaren dijital sistemlerin içine yerleştirilmelidir.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Eylül 2026, 10:43</span>
+        </div>
+        <h3>Bakan Göktaş: Çocukların güvenliği en başından itibaren dijital sistemlerin içine yerleştirilmelidir</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş, &quot;Çocukların güvenliği en başından itibaren dijital sistemlerin içine yerleştirilmelidir.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Eylül 2026, 10:43</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-goktas-cocuklarin-guvenligi-en-basindan-itibaren-dijital-sistemlerin-icine-yerlestirilmelidir/4064087" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">23 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="aile ve sosyal hizmetler bakanlığı, 9 ayda 26 binden fazla kişiye psikososyal destek sağladı aile ve sosyal hizmetler bakanlığınca ocak-eylül döneminde başta orman yangınları olmak üzere ülkenin farklı illerinde yaşanan afet ve acil durumlar sonrasında 26 binden fazla kişiye psikososyal destek verildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Eylül 2026, 11:13</span>
+        </div>
+        <h3>Aile ve Sosyal Hizmetler Bakanlığı, 9 ayda 26 binden fazla kişiye psikososyal destek sağladı</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanlığınca ocak-eylül döneminde başta orman yangınları olmak üzere ülkenin farklı illerinde yaşanan afet ve acil durumlar sonrasında 26 binden fazla kişiye psikososyal destek verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Eylül 2026, 11:13</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/aile-ve-sosyal-hizmetler-bakanligi-9-ayda-26-binden-fazla-kisiye-psikososyal-destek-sagladi/4064134" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="berlin&#x27;de seçimleri kazanan sol parti&#x27;nin başbakan adayı elif eralp kimdir? kamu yayıncıları ard ve zdf&#x27;nin sandık çıkış anketlerine göre, sol parti (die linke), başbakan friedrich merz&#x27;in liderliğindeki merkez sağ cdu&#x27;yu mağlup etti. sol parti&#x27;nin adayı elif eralp %25 civarındaki oy oranı ile önde görünüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 12:51</span>
+        </div>
+        <h3>Berlin&#x27;de seçimleri kazanan Sol Parti&#x27;nin başbakan adayı Elif Eralp kimdir?</h3>
+        <p>Kamu yayıncıları ARD ve ZDF&#x27;nin sandık çıkış anketlerine göre, Sol Parti (Die Linke), Başbakan Friedrich Merz&#x27;in liderliğindeki merkez sağ CDU&#x27;yu mağlup etti. Sol Parti&#x27;nin adayı Elif Eralp %25 civarındaki oy oranı ile önde görünüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 12:51</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmde04w3g3l9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="afet ve acil durumlardan etkilenen 26 binden fazla kişiye psikososyal destek aile ve sosyal hizmetler bakanlığı, ocak-eylül döneminde 45 afet ve acil durumda 26 binden fazla kişiye psikososyal destek verdi. bakanlık ekipleri, 2013&#x27;ten bu yana 329 olayda 6 milyondan fazla kişiye ulaştı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Eylül 2026, 11:51</span>
+        </div>
+        <h3>Afet ve acil durumlardan etkilenen 26 binden fazla kişiye psikososyal destek</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanlığı, ocak-eylül döneminde 45 afet ve acil durumda 26 binden fazla kişiye psikososyal destek verdi. Bakanlık ekipleri, 2013&#x27;ten bu yana 329 olayda 6 milyondan fazla kişiye ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Eylül 2026, 11:51</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/afet-ve-acil-durumlardan-etkilenen-26-binden-fazla-kisiye-psikososyal-destek-957640.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="okul saldırganının annesi, babası ve dedesi de gözaltında adalet bakanı akın gürlek, manisa’nın turgutlu ilçesinde okul binası dışında gerçekleşen silahlı saldırıda 11 öğrencinin yaralandığını belirterek, &quot;anne, baba ve saldırıda kullanılan silahın kullanımında bulunduğu belirlenen dede de gözaltına alınmıştır&quot; bilgisini paylaştı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Eylül 2026, 11:12</span>
+        </div>
+        <h3>Okul saldırganının annesi, babası ve dedesi de gözaltında</h3>
+        <p>Adalet Bakanı Akın Gürlek, Manisa’nın Turgutlu ilçesinde okul binası dışında gerçekleşen silahlı saldırıda 11 öğrencinin yaralandığını belirterek, &quot;Anne, baba ve saldırıda kullanılan silahın kullanımında bulunduğu belirlenen dede de gözaltına alınmıştır&quot; bilgisini paylaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Eylül 2026, 11:12</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/okul-saldirganinin-annesi-babasi-ve-dedesi-de-gozaltinda-957635.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan&#x27;dan bm güvenlik konseyi&#x27;nin veto hakkının kaldırılması çağrısı cumhurbaşkanı recep tayyip erdoğan, bugün birleşmiş milletler 81. genel kurulu&#x27;na hitap edecek. erdoğan konuşması öncesinde bm genel konseyi&#x27;nde veto hakkının kaldırılması çağrısında bulundu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Eylül 2026, 12:23</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan&#x27;dan BM Güvenlik Konseyi&#x27;nin veto hakkının kaldırılması çağrısı</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, bugün Birleşmiş Milletler 81. Genel Kurulu&#x27;na hitap edecek. Erdoğan konuşması öncesinde BM Genel Konseyi&#x27;nde veto hakkının kaldırılması çağrısında bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Eylül 2026, 12:23</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6j4jpklxx0do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="manisa&#x27;da okul önünde silahlı saldırı: i̇kisi ağır 11 yaralı manisa&#x27;nın turgutlu ilçesinde bir okul önünde silahlı saldırı gerçekleşti. saldırgan ile birlikte aile üyelerinden üç kişinin de gözaltına alındığı açıklandı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Eylül 2026, 11:19</span>
+        </div>
+        <h3>Manisa&#x27;da okul önünde silahlı saldırı: İkisi ağır 11 yaralı</h3>
+        <p>Manisa&#x27;nın Turgutlu ilçesinde bir okul önünde silahlı saldırı gerçekleşti. Saldırgan ile birlikte aile üyelerinden üç kişinin de gözaltına alındığı açıklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Eylül 2026, 11:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq5y4z071pz6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="g7&#x27;den i̇ran&#x27;a husilere desteği bırakma çağrısı g7 ülkelerinin dışişleri bakanları ortak bir açıklamada, i̇ran&#x27;a yemen&#x27;deki husi milislerine verdiği silah ve desteği sona erdirme çağrısı yaptı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Eylül 2026, 12:03</span>
+        </div>
+        <h3>G7&#x27;den İran&#x27;a Husilere desteği bırakma çağrısı</h3>
+        <p>G7 ülkelerinin dışişleri bakanları ortak bir açıklamada, İran&#x27;a Yemen&#x27;deki Husi milislerine verdiği silah ve desteği sona erdirme çağrısı yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Eylül 2026, 12:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj3v4yk5xxdlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tbmm başkanı kurtulmuş&#x27;tan manisa&#x27;daki saldırıya ilişkin geçmiş olsun mesajı tbmm başkanı numan kurtulmuş, manisa&#x27;nın turgutlu ilçesindeki i̇nci üzmez mesleki ve teknik anadolu lisesi yakınındaki silahlı saldırıya ilişkin, &quot;manisa&#x27;nın turgutlu ilçesinde bir okulun yakınında meydana gelen saldırıdan etkilenen başta öğrencilerimiz ve ailelerimiz olmak üzere herkese geçmiş olsun dileklerimi iletiyorum.&quot; ifadesini kullandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Eylül 2026, 12:18</span>
+        </div>
+        <h3>TBMM Başkanı Kurtulmuş&#x27;tan Manisa&#x27;daki saldırıya ilişkin geçmiş olsun mesajı</h3>
+        <p>TBMM Başkanı Numan Kurtulmuş, Manisa&#x27;nın Turgutlu ilçesindeki İnci Üzmez Mesleki ve Teknik Anadolu Lisesi yakınındaki silahlı saldırıya ilişkin, &quot;Manisa&#x27;nın Turgutlu ilçesinde bir okulun yakınında meydana gelen saldırıdan etkilenen başta öğrencilerimiz ve ailelerimiz olmak üzere herkese geçmiş olsun dileklerimi iletiyorum.&quot; ifadesini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Eylül 2026, 12:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/tbmm-baskani-kurtulmustan-manisadaki-saldiriya-iliskin-gecmis-olsun-mesaji-957643.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇letişim başkanı duran: öğrencilerimizin yaralanması hepimizi derinden üzmüştür i̇letişim başkanı burhanettin duran, &quot;manisa’nın turgutlu ilçesinde, öğrencilerimizin okullarına gittiği sokakta meydana gelen silahlı saldırıda öğrencilerimizin yaralanması hepimizi derinden üzmüştür. olayın ardından güvenlik ve sağlık ekiplerimiz hızla bölgeye intikal etmiş, gerekli müdahalelerde bulunmuştur&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Eylül 2026, 12:11</span>
+        </div>
+        <h3>İletişim Başkanı Duran: Öğrencilerimizin yaralanması hepimizi derinden üzmüştür</h3>
+        <p>İletişim Başkanı Burhanettin Duran, &quot;Manisa’nın Turgutlu ilçesinde, öğrencilerimizin okullarına gittiği sokakta meydana gelen silahlı saldırıda öğrencilerimizin yaralanması hepimizi derinden üzmüştür. Olayın ardından güvenlik ve sağlık ekiplerimiz hızla bölgeye intikal etmiş, gerekli müdahalelerde bulunmuştur&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Eylül 2026, 12:11</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/iletisim-baskani-duran-ogrencilerimizin-yaralanmasi-hepimizi-derinden-uzmustur-957641.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;de saatte 15 kişi sigara nedeniyle yaşamını kaybediyor türkiye&#x27;de yılda yaklaşık 125 bin kişi tütün nedeniyle hayatını kaybediyor. bu rakam, her 4 dakikada ortalama bir kişinin sigaradan yaşamını yitirdiği anlamına geliyor. ölümlerin 25 binini sigara kullanmadığı halde pasif içiciliğe maruz kalanlar oluşturuyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Eylül 2026, 11:10</span>
+        </div>
+        <h3>Türkiye&#x27;de saatte 15 kişi sigara nedeniyle yaşamını kaybediyor</h3>
+        <p>Türkiye&#x27;de yılda yaklaşık 125 bin kişi tütün nedeniyle hayatını kaybediyor. Bu rakam, her 4 dakikada ortalama bir kişinin sigaradan yaşamını yitirdiği anlamına geliyor. Ölümlerin 25 binini sigara kullanmadığı halde pasif içiciliğe maruz kalanlar oluşturuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Eylül 2026, 11:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/saglik/turkiyede-saatte-15-kisi-sigara-nedeniyle-yasamini-kaybediyor-957636.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="adli tıp günleri türkiye&#x27;nin alandaki birikimini uluslararası zemine taşıyor uluslararası 21. adli tıp günleri kongresi sekreteri ve adli tıp kurumu 1. i̇htisas kurulu üyesi prof. dr. adem karbuz, kongre aracılığıyla türkiye&#x27;nin adli tıp alanındaki birikimini uluslararası bilim dünyasıyla paylaşmayı amaçladıklarını söyledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Eylül 2026, 11:10</span>
+        </div>
+        <h3>Adli Tıp Günleri Türkiye&#x27;nin alandaki birikimini uluslararası zemine taşıyor</h3>
+        <p>Uluslararası 21. Adli Tıp Günleri Kongresi Sekreteri ve Adli Tıp Kurumu 1. İhtisas Kurulu Üyesi Prof. Dr. Adem Karbuz, kongre aracılığıyla Türkiye&#x27;nin adli tıp alanındaki birikimini uluslararası bilim dünyasıyla paylaşmayı amaçladıklarını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Eylül 2026, 11:10</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/adli-tip-gunleri-turkiyenin-alandaki-birikimini-uluslararasi-zemine-tasiyor/4064126" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;de her 4 dakikada bir kişi sigaradan hayatını kaybediyor türkiye&#x27;de yılda yaklaşık 125 bin kişi tütün nedeniyle hayatını kaybediyor. bu rakam, her 4 dakikada ortalama bir kişinin yaşamını yitirdiği anlamına geliyor. ölümlerin 25 binini sigara kullanmadığı halde pasif içiciliğe maruz kalanlar oluşturuyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Eylül 2026, 11:03</span>
+        </div>
+        <h3>Türkiye&#x27;de her 4 dakikada bir kişi sigaradan hayatını kaybediyor</h3>
+        <p>Türkiye&#x27;de yılda yaklaşık 125 bin kişi tütün nedeniyle hayatını kaybediyor. Bu rakam, her 4 dakikada ortalama bir kişinin yaşamını yitirdiği anlamına geliyor. Ölümlerin 25 binini sigara kullanmadığı halde pasif içiciliğe maruz kalanlar oluşturuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Eylül 2026, 11:03</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiyede-her-4-dakikada-bir-kisi-sigaradan-hayatini-kaybediyor/4064112" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tütün ve mamulleri 20&#x27;den fazla kanser türüyle doğrudan ilgili i̇stanbul i̇l sağlık müdürlüğü halk sağlığı hizmetleri başkanı dr. m. burhan küçükoğlu, &quot;bizim en büyük halk sağlığı sorunlarından biri olarak nitelendirdiğimiz problemlerden biri, tütün ve tütün mamulleridir.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Eylül 2026, 11:03</span>
+        </div>
+        <h3>Tütün ve mamulleri 20&#x27;den fazla kanser türüyle doğrudan ilgili</h3>
+        <p>İstanbul İl Sağlık Müdürlüğü Halk Sağlığı Hizmetleri Başkanı Dr. M. Burhan Küçükoğlu, &quot;Bizim en büyük halk sağlığı sorunlarından biri olarak nitelendirdiğimiz problemlerden biri, tütün ve tütün mamulleridir.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Eylül 2026, 11:03</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tutun-ve-mamulleri-20den-fazla-kanser-turuyle-dogrudan-ilgili/4064110" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇klim dirençli gıda ve su güvenliği girişimine türkiye öncü olabilir boğaziçi üniversitesi i̇klim değişikliği ve politikaları uygulama ve araştırma merkezi yönetim kurulu üyesi prof. dr. murat türkeş, cop31 sonrasında türkiye&#x27;nin öncülüğünde iklim dirençli gıda ve su güvenliği girişimi başlatılabileceğini kaydetti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Eylül 2026, 11:18</span>
+        </div>
+        <h3>İklim dirençli gıda ve su güvenliği girişimine Türkiye öncü olabilir</h3>
+        <p>Boğaziçi Üniversitesi İklim Değişikliği ve Politikaları Uygulama ve Araştırma Merkezi Yönetim Kurulu Üyesi Prof. Dr. Murat Türkeş, COP31 sonrasında Türkiye&#x27;nin öncülüğünde iklim dirençli gıda ve su güvenliği girişimi başlatılabileceğini kaydetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Eylül 2026, 11:18</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iklim-direncli-gida-ve-su-guvenligi-girisimine-turkiye-oncu-olabilir/4064145" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cindy crawford&#x27;ın oğlu presley gerber&#x27;in ölümüne aşırı doz soruşturması modellik yapan gerber, 20 eylül pazar günü bir rehabilitasyon merkezinde hayatını kaybetti. ölüm nedeni açıklanmadı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Eylül 2026, 23:58</span>
+        </div>
+        <h3>Cindy Crawford&#x27;ın oğlu Presley Gerber&#x27;in ölümüne aşırı doz soruşturması</h3>
+        <p>Modellik yapan Gerber, 20 Eylül Pazar günü bir rehabilitasyon merkezinde hayatını kaybetti. Ölüm nedeni açıklanmadı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Eylül 2026, 23:58</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm5ye7l3685do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hakan tosun davasında karar duruşması bugün görülecek gazeteci, belgeselci ve ekoloji aktivisti hakan tosun cinayeti davasında karar duruşması bugün görülecek genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Eylül 2026, 02:06</span>
+        </div>
+        <h3>Hakan Tosun davasında karar duruşması bugün görülecek</h3>
+        <p>Gazeteci, belgeselci ve ekoloji aktivisti Hakan Tosun cinayeti davasında karar duruşması bugün görülecek</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Eylül 2026, 02:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3v6lv5w05no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇şgalci i̇srail ordusu batı şeria&#x27;da 9 filistinliyi gözaltına aldı i̇şgalci i̇srail ordusu, batı şeria&#x27;da düzenlediği baskınlarda biri kadın ikisi yaşlı 9 filistinliyi gözaltına aldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Eylül 2026, 12:12</span>
+        </div>
+        <h3>İşgalci İsrail ordusu Batı Şeria&#x27;da 9 Filistinliyi gözaltına aldı</h3>
+        <p>İşgalci İsrail ordusu, Batı Şeria&#x27;da düzenlediği baskınlarda biri kadın ikisi yaşlı 9 Filistinliyi gözaltına aldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Eylül 2026, 12:12</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/isgalci-israil-ordusu-bati-seriada-9-filistinliyi-gozaltina-aldi-957644.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ateşkese rağmen katil i̇srail saldırılarını sürdüyor ateşkese rağmen i̇srail saldırılarının sürdüğü gazze&#x27;de son 24 saatte 5 kişi hayatını kaybetti genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Eylül 2026, 12:14</span>
+        </div>
+        <h3>Ateşkese rağmen katil İsrail saldırılarını sürdüyor</h3>
+        <p>Ateşkese rağmen İsrail saldırılarının sürdüğü Gazze&#x27;de son 24 saatte 5 kişi hayatını kaybetti</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Eylül 2026, 12:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ateskese-ragmen-katil-israil-saldirilarini-surduyor-957642.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="birleşmiş milletler&#x27;den naza belgeselinin yönetmenlerinin korunması çağrısı bm&#x27;den katil i̇srail&#x27;in gazze&#x27;deki katliamını anlatan naza belgeselinin yönetmenlerinin korunması çağrısı yapıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Eylül 2026, 11:34</span>
+        </div>
+        <h3>Birleşmiş Milletler&#x27;den NAZA belgeselinin yönetmenlerinin korunması çağrısı</h3>
+        <p>BM&#x27;den Katil İsrail&#x27;in Gazze&#x27;deki katliamını anlatan NAZA belgeselinin yönetmenlerinin korunması çağrısı yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Eylül 2026, 11:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/birlesmis-milletlerden-naza-belgeselinin-yonetmenlerinin-korunmasi-cagrisi-957639.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kpss din hizmetleri alan bilgisi sınavı başvuruları başladı ölçme, seçme ve yerleştirme merkezince (ösym) 1 kasım&#x27;da yapılacak 2026-kpss din hizmetleri alan bilgisi sınavı (dhbt) başvuruları başladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Eylül 2026, 11:40</span>
+        </div>
+        <h3>KPSS Din Hizmetleri Alan Bilgisi Sınavı başvuruları başladı</h3>
+        <p>Ölçme, Seçme ve Yerleştirme Merkezince (ÖSYM) 1 Kasım&#x27;da yapılacak 2026-KPSS Din Hizmetleri Alan Bilgisi Sınavı (DHBT) başvuruları başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Eylül 2026, 11:40</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/kpss-din-hizmetleri-alan-bilgisi-sinavi-basvurulari-basladi-957638.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yatırımlarda öncelik yerli malı olacak kamu-özel iş birliği (köi̇) yöntemiyle yürütülen projeler ile bu modelle uygulanan kamu yatırımlarında, yerli malı kullanılmasına öncelik verilecek. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Eylül 2026, 11:31</span>
+        </div>
+        <h3>Yatırımlarda öncelik yerli malı olacak</h3>
+        <p>Kamu-özel iş birliği (KÖİ) yöntemiyle yürütülen projeler ile bu modelle uygulanan kamu yatırımlarında, yerli malı kullanılmasına öncelik verilecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Eylül 2026, 11:31</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/yatirimlarda-oncelik-yerli-mali-olacak-957637.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="2026-kpss din hizmetleri alan bilgisi sınavı başvuruları başladı ölçme, seçme ve yerleştirme merkezince (ösym) 1 kasım&#x27;da yapılacak 2026-kpss din hizmetleri alan bilgisi sınavı (dhbt) başvuruları başladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Eylül 2026, 11:43</span>
+        </div>
+        <h3>2026-KPSS Din Hizmetleri Alan Bilgisi Sınavı başvuruları başladı</h3>
+        <p>Ölçme, Seçme ve Yerleştirme Merkezince (ÖSYM) 1 Kasım&#x27;da yapılacak 2026-KPSS Din Hizmetleri Alan Bilgisi Sınavı (DHBT) başvuruları başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Eylül 2026, 11:43</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/2026-kpss-din-hizmetleri-alan-bilgisi-sinavi-basvurulari-basladi/4064187" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da sabah saatlerinde trafik yoğunluğu yüzde 70&#x27;e ulaştı i̇stanbul&#x27;da sabah saatlerinde trafik yoğunluğu oluştu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Eylül 2026, 09:35</span>
+        </div>
+        <h3>İstanbul&#x27;da sabah saatlerinde trafik yoğunluğu yüzde 70&#x27;e ulaştı</h3>
+        <p>İstanbul&#x27;da sabah saatlerinde trafik yoğunluğu oluştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Eylül 2026, 09:35</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-sabah-saatlerinde-trafik-yogunlugu-yuzde-70e-ulasti/4063990" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="motorin 100 lirayı gördü: günlük yaşamı ve üretimi nasıl etkileyebilir? türkiye&#x27;de motorinin litre fiyatı 17 eylül&#x27;de yapılan zamla birçok kentte ilk kez üç haneye çıktı ve 100 lirayı aştı. peki, sektörler bu artıştan nasıl etkilenecek? ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 22 Eylül 2026, 02:02</span>
+        </div>
+        <h3>Motorin 100 lirayı gördü: Günlük yaşamı ve üretimi nasıl etkileyebilir?</h3>
+        <p>Türkiye&#x27;de motorinin litre fiyatı 17 Eylül&#x27;de yapılan zamla birçok kentte ilk kez üç haneye çıktı ve 100 lirayı aştı. Peki, sektörler bu artıştan nasıl etkilenecek?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Eylül 2026, 02:02</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c80463wg09d1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fenerbahçe maçlarında karaborsa bilet satan 4 şüpheli hakkında iddianame fenerbahçe&#x27;nin futbol müsabakaları öncesinde karaborsa bilet satışı yaptıkları belirlenen 4 şüpheli hakkında iddianame düzenlendi. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Eylül 2026, 11:07</span>
+        </div>
+        <h3>Fenerbahçe maçlarında karaborsa bilet satan 4 şüpheli hakkında iddianame</h3>
+        <p>Fenerbahçe&#x27;nin futbol müsabakaları öncesinde karaborsa bilet satışı yaptıkları belirlenen 4 şüpheli hakkında iddianame düzenlendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Eylül 2026, 11:07</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/fenerbahce-maclarinda-karaborsa-bilet-satan-4-supheli-hakkinda-iddianame/4064118" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
