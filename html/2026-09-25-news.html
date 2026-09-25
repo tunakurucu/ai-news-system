@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">25 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">25 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 4</span><span class="stat-item"><strong>dünya</strong> 6</span><span class="stat-item"><strong>genel</strong> 18</span><span class="stat-item"><strong>gümrük</strong> 1</span><span class="stat-item"><strong>teknoloji</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>Aliyev: Güney Kafkasya&#x27;da tesis edilen barış yatırımlar için yeni fırsatlar yaratıyor</h3>
+        <p>Azerbaycan Cumhurbaşkanı İlham Aliyev, Güney Kafkasya&#x27;da tesis edilmekte olan barışın bölgesel işbirliği, bağlantılılık, ticaret ve yatırımlar için yeni fırsatlar yarattığını belirterek, ülkesinin yatırımcılara ulaşım, lojistik, enerji, teknoloji ve yeniden yapılanma dahil çeşitli alanlarda imkanlar sunduğunu bildirdi.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 25 Eylül 2026, 12:22</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/azerbaycan/aliyev-guney-kafkasyada-tesis-edilen-baris-yatirimlar-icin-yeni-firsatlar-yaratiyor-958115.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 24 Eylül 2026, 21:53</span>
+            </div>
+            <h3>Erdoğan &#x27;Sorumlulardan hesap sorulacak&#x27; dedi, Şimşek istifa iddiasını yalanladı</h3>
+            <p>Cumhurbaşkanı Erdoğan, Birleşmiş Milletler zirvesi için bulunduğu ABD&#x27;de fon krizine ilişkin konuştu. Erdoğan, &quot;Sorumluluğu olan kim varsa hukuk önünde hesap sorulacaktır&quot; dedi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cq4g53jg5y9no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 25 Eylül 2026, 12:51</span>
+            </div>
+            <h3>İran&#x27;dan İngiltere&#x27;ye: İşgalci ve terörist rejimin kuruluşundaki rolünüzden ötürü hesap vermelisiniz</h3>
+            <p>İran Dışişleri Bakanı Abbas Arakçi, İngiliz hükümeti ve diğer bazı Avrupa hükümetlerinin Orta Doğu’da &quot;işgalci ve terörist bir rejimin&quot; kurulmasında ve sürdürülmesinde oynadıkları rol nedeniyle hesap vermeleri gerektiğini söyledi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/irandan-ingiltereye-isgalci-ve-terorist-rejimin-kurulusundaki-rolunuzden-oturu-hesap-vermelisiniz-958120.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 25 Eylül 2026, 12:14</span>
+            </div>
+            <h3>Bakan Yumaklı: Tarım diplomasisi klasik diplomasi anlayışının önüne geçti</h3>
+            <p>Tarım ve Orman Bakanı İbrahim Yumaklı, gıda arz güvenliğinin ülkeler için milli güvenlik meselesi haline geldiğini belirterek, bu nedenle tarım diplomasisinin klasik diplomasi anlayışının ötesine geçtiğini söyledi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/bakan-yumakli-tarim-diplomasisi-klasik-diplomasi-anlayisinin-onune-gecti-958113.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 25 Eylül 2026, 12:18</span>
+            </div>
+            <h3>Netanyahu&#x27;nun Cumhurbaşkanı Erdoğan&#x27;a sözlerine Türkiye&#x27;den tepkiler: &#x27;Hadsiz ve alçak&#x27;</h3>
+            <p>İsrail Başbakanı Binyamin Netanyahu&#x27;nun, BM&#x27;de yaptığı konuşmada Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;a &quot;tiran&quot; demesine Türkiye&#x27;den bir biri ardına sert tepkiler geldi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ckeq8ez1n4wjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">4 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="aliyev: güney kafkasya&#x27;da tesis edilen barış yatırımlar için yeni fırsatlar yaratıyor azerbaycan cumhurbaşkanı i̇lham aliyev, güney kafkasya&#x27;da tesis edilmekte olan barışın bölgesel işbirliği, bağlantılılık, ticaret ve yatırımlar için yeni fırsatlar yarattığını belirterek, ülkesinin yatırımcılara ulaşım, lojistik, enerji, teknoloji ve yeniden yapılanma dahil çeşitli alanlarda imkanlar sunduğunu bildirdi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 25 Eylül 2026, 12:22</span>
+        </div>
+        <h3>Aliyev: Güney Kafkasya&#x27;da tesis edilen barış yatırımlar için yeni fırsatlar yaratıyor</h3>
+        <p>Azerbaycan Cumhurbaşkanı İlham Aliyev, Güney Kafkasya&#x27;da tesis edilmekte olan barışın bölgesel işbirliği, bağlantılılık, ticaret ve yatırımlar için yeni fırsatlar yarattığını belirterek, ülkesinin yatırımcılara ulaşım, lojistik, enerji, teknoloji ve yeniden yapılanma dahil çeşitli alanlarda imkanlar sunduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Eylül 2026, 12:22</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/azerbaycan/aliyev-guney-kafkasyada-tesis-edilen-baris-yatirimlar-icin-yeni-firsatlar-yaratiyor-958115.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon soruşturmasında merkez bankası eski yöneticisi erhan kilimci dahil 19 kişi daha tutuklandı türkiye&#x27;de sermaye piyasalarında ağır bir türbülansa neden olan fon soruşturmasında aralarında merkez bankası eski başkan yardımcısı erkan kilimci&#x27;nin de olduğu 19 kişi daha tutuklandı. kilimci, tera holding bünyesinde genel müdür olarak görev yapıyordu. son tutuklamalarla birlikte 25 eylül cuma günü itibarıyla tutuklu sayısı 45&#x27;e yükseldi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 11:50</span>
+        </div>
+        <h3>Fon soruşturmasında Merkez Bankası eski yöneticisi Erhan Kilimci dahil 19 kişi daha tutuklandı</h3>
+        <p>Türkiye&#x27;de sermaye piyasalarında ağır bir türbülansa neden olan fon soruşturmasında aralarında Merkez Bankası eski başkan yardımcısı Erkan Kilimci&#x27;nin de olduğu 19 kişi daha tutuklandı. Kilimci, Tera Holding bünyesinde genel müdür olarak görev yapıyordu. Son tutuklamalarla birlikte 25 Eylül Cuma günü itibarıyla tutuklu sayısı 45&#x27;e yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 11:50</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck5ywrewe8dxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler? türkiye&#x27;deki fon krizinin ardından sermaye piyasaları kurulu 21 eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 23 Eylül 2026, 11:09</span>
+        </div>
+        <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+        <p>Türkiye&#x27;deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Eylül 2026, 11:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trump-şi zirvesi: &#x27;harika bir görüşme yaptık&#x27; her iki lider de birlikte çalışma konusunda olumlu ifadeler kullansa da ticaret veya yapay zeka gibi kilit konularda şu ana kadar herhangi bir ilerleme sağlandığına dair bir işaret görülmedi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 08:59</span>
+        </div>
+        <h3>Trump-Şi zirvesi: &#x27;Harika bir görüşme yaptık&#x27;</h3>
+        <p>Her iki lider de birlikte çalışma konusunda olumlu ifadeler kullansa da ticaret veya yapay zeka gibi kilit konularda şu ana kadar herhangi bir ilerleme sağlandığına dair bir işaret görülmedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 08:59</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3rr4vkyz8v2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="erdoğan &#x27;sorumlulardan hesap sorulacak&#x27; dedi, şimşek istifa iddiasını yalanladı cumhurbaşkanı erdoğan, birleşmiş milletler zirvesi için bulunduğu abd&#x27;de fon krizine ilişkin konuştu. erdoğan, &quot;sorumluluğu olan kim varsa hukuk önünde hesap sorulacaktır&quot; dedi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 24 Eylül 2026, 21:53</span>
+        </div>
+        <h3>Erdoğan &#x27;Sorumlulardan hesap sorulacak&#x27; dedi, Şimşek istifa iddiasını yalanladı</h3>
+        <p>Cumhurbaşkanı Erdoğan, Birleşmiş Milletler zirvesi için bulunduğu ABD&#x27;de fon krizine ilişkin konuştu. Erdoğan, &quot;Sorumluluğu olan kim varsa hukuk önünde hesap sorulacaktır&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Eylül 2026, 21:53</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq4g53jg5y9no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran&#x27;dan i̇ngiltere&#x27;ye: i̇şgalci ve terörist rejimin kuruluşundaki rolünüzden ötürü hesap vermelisiniz i̇ran dışişleri bakanı abbas arakçi, i̇ngiliz hükümeti ve diğer bazı avrupa hükümetlerinin orta doğu’da &quot;işgalci ve terörist bir rejimin&quot; kurulmasında ve sürdürülmesinde oynadıkları rol nedeniyle hesap vermeleri gerektiğini söyledi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 25 Eylül 2026, 12:51</span>
+        </div>
+        <h3>İran&#x27;dan İngiltere&#x27;ye: İşgalci ve terörist rejimin kuruluşundaki rolünüzden ötürü hesap vermelisiniz</h3>
+        <p>İran Dışişleri Bakanı Abbas Arakçi, İngiliz hükümeti ve diğer bazı Avrupa hükümetlerinin Orta Doğu’da &quot;işgalci ve terörist bir rejimin&quot; kurulmasında ve sürdürülmesinde oynadıkları rol nedeniyle hesap vermeleri gerektiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Eylül 2026, 12:51</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/irandan-ingiltereye-isgalci-ve-terorist-rejimin-kurulusundaki-rolunuzden-oturu-hesap-vermelisiniz-958120.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan yumaklı: tarım diplomasisi klasik diplomasi anlayışının önüne geçti tarım ve orman bakanı i̇brahim yumaklı, gıda arz güvenliğinin ülkeler için milli güvenlik meselesi haline geldiğini belirterek, bu nedenle tarım diplomasisinin klasik diplomasi anlayışının ötesine geçtiğini söyledi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 25 Eylül 2026, 12:14</span>
+        </div>
+        <h3>Bakan Yumaklı: Tarım diplomasisi klasik diplomasi anlayışının önüne geçti</h3>
+        <p>Tarım ve Orman Bakanı İbrahim Yumaklı, gıda arz güvenliğinin ülkeler için milli güvenlik meselesi haline geldiğini belirterek, bu nedenle tarım diplomasisinin klasik diplomasi anlayışının ötesine geçtiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Eylül 2026, 12:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/bakan-yumakli-tarim-diplomasisi-klasik-diplomasi-anlayisinin-onune-gecti-958113.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="netanyahu&#x27;nun cumhurbaşkanı erdoğan&#x27;a sözlerine türkiye&#x27;den tepkiler: &#x27;hadsiz ve alçak&#x27; i̇srail başbakanı binyamin netanyahu&#x27;nun, bm&#x27;de yaptığı konuşmada cumhurbaşkanı recep tayyip erdoğan&#x27;a &quot;tiran&quot; demesine türkiye&#x27;den bir biri ardına sert tepkiler geldi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 12:18</span>
+        </div>
+        <h3>Netanyahu&#x27;nun Cumhurbaşkanı Erdoğan&#x27;a sözlerine Türkiye&#x27;den tepkiler: &#x27;Hadsiz ve alçak&#x27;</h3>
+        <p>İsrail Başbakanı Binyamin Netanyahu&#x27;nun, BM&#x27;de yaptığı konuşmada Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;a &quot;tiran&quot; demesine Türkiye&#x27;den bir biri ardına sert tepkiler geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 12:18</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckeq8ez1n4wjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tütün düzenlemesinde yeni dönem için toplumdan güçlü destek yeşilay cemiyeti genel başkanı doç. dr. mehmet dinç, tütünle mücadele kapsamındaki yeni düzenlemelere ilişkin toplumun algısını ölçtüklerini belirterek, &quot;toplum sigarayla alakalı düzenlemeye ciddi anlamda ihtiyaç duyuyor.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 11:07</span>
+        </div>
+        <h3>Tütün düzenlemesinde yeni dönem için toplumdan güçlü destek</h3>
+        <p>Yeşilay Cemiyeti Genel Başkanı Doç. Dr. Mehmet Dinç, tütünle mücadele kapsamındaki yeni düzenlemelere ilişkin toplumun algısını ölçtüklerini belirterek, &quot;Toplum sigarayla alakalı düzenlemeye ciddi anlamda ihtiyaç duyuyor.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 11:07</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tutun-duzenlemesinde-yeni-donem-icin-toplumdan-guclu-destek/4068872" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇letişim başkanı duran&#x27;dan kazakistan&#x27;da askeri tatbikatta hayatını kaybedenler için taziye mesajı i̇letişim başkanı burhanettin duran, kazakistan&#x27;da hazar denizi&#x27;nde dün düzenlenen tatbikatta hayatını kaybeden askerler için taziye mesajı yayımladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 25 Eylül 2026, 12:48</span>
+        </div>
+        <h3>İletişim Başkanı Duran&#x27;dan Kazakistan&#x27;da askeri tatbikatta hayatını kaybedenler için taziye mesajı</h3>
+        <p>İletişim Başkanı Burhanettin Duran, Kazakistan&#x27;da Hazar Denizi&#x27;nde dün düzenlenen tatbikatta hayatını kaybeden askerler için taziye mesajı yayımladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Eylül 2026, 12:48</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/iletisim-baskani-durandan-kazakistanda-askeri-tatbikatta-hayatini-kaybedenler-icin-taziye-mesaji-958121.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">18 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇rlanda başbakanı martin: gazze&#x27;de tüm gerçekler ortaya çıktığında dünya utanacak i̇rlanda başbakanı micheal martin, gazze&#x27;deki ateşkese rağmen sahada hiçbir değişiklik olmadığını belirterek, &quot;gazze&#x27;de yaşanan ve yaşanmaya devam eden tüm gerçekler ortaya çıktığında, kanıtlar toplandığında, tanıkların ifadeleri alındığında, gerçek dehşet tamamen açığa çıktığında tüm dünya utanacak.&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Eylül 2026, 12:21</span>
+        </div>
+        <h3>İrlanda Başbakanı Martin: Gazze&#x27;de tüm gerçekler ortaya çıktığında dünya utanacak</h3>
+        <p>İrlanda Başbakanı Micheal Martin, Gazze&#x27;deki ateşkese rağmen sahada hiçbir değişiklik olmadığını belirterek, &quot;Gazze&#x27;de yaşanan ve yaşanmaya devam eden tüm gerçekler ortaya çıktığında, kanıtlar toplandığında, tanıkların ifadeleri alındığında, gerçek dehşet tamamen açığa çıktığında tüm dünya utanacak.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Eylül 2026, 12:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/irlanda-basbakani-martin-gazzede-tum-gercekler-ortaya-ciktiginda-dunya-utanacak-958114.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail, suriye&#x27;nin güneyinde askeri varlığını artırdı mı? sınır bölgelerindeki sakinler, esad yönetiminin düşmesinden bu yana, i̇srail birliklerinin buraya geliş sıklığının ve gözaltı operasyonlarının arttığını, bunun da i̇srail&#x27;in suriye&#x27;nin güneyindeki askeri varlığını genişletmesiyle eşzamanlı gerçekleştiğini söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 02:10</span>
+        </div>
+        <h3>İsrail, Suriye&#x27;nin güneyinde askeri varlığını artırdı mı?</h3>
+        <p>Sınır bölgelerindeki sakinler, Esad yönetiminin düşmesinden bu yana, İsrail birliklerinin buraya geliş sıklığının ve gözaltı operasyonlarının arttığını, bunun da İsrail&#x27;in Suriye&#x27;nin güneyindeki askeri varlığını genişletmesiyle eşzamanlı gerçekleştiğini söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 02:10</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmx2zlgl9l8jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="endonezya&#x27;da i̇slami okuldaki istismar davasında gizli tahliye bbc&#x27;nin araştırmacı gazetecilik birimi bbc eye&#x27;ın soruşturmasına göre, endonezya&#x27;da i̇slami bir yatılı okulda bir öğrenciye cinsel saldırıda bulunmaktan hüküm giyen öğretmen, gizlice cezaevinden erken tahliye edildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 09:23</span>
+        </div>
+        <h3>Endonezya&#x27;da İslami okuldaki istismar davasında gizli tahliye</h3>
+        <p>BBC&#x27;nin araştırmacı gazetecilik birimi BBC Eye&#x27;ın soruşturmasına göre, Endonezya&#x27;da İslami bir yatılı okulda bir öğrenciye cinsel saldırıda bulunmaktan hüküm giyen öğretmen, gizlice cezaevinden erken tahliye edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 09:23</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwq63p09n2qgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon soruşturmasında sekiz kişi daha tutuklandı soruşturma kapsamında gözaltına alınan 21 şüpheli adliyeye sevk edildi. şüphelilerden 8&#x27;i tutuklanırken, 2 kişi adli kontrol şartıyla serbest bırakıldı. 11 şüphelinin ise sulh ceza hakimliği&#x27;ndeki ifadeleri sürüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 02:35</span>
+        </div>
+        <h3>Fon soruşturmasında sekiz kişi daha tutuklandı</h3>
+        <p>Soruşturma kapsamında gözaltına alınan 21 şüpheli adliyeye sevk edildi. Şüphelilerden 8&#x27;i tutuklanırken, 2 kişi adli kontrol şartıyla serbest bırakıldı. 11 şüphelinin ise Sulh Ceza Hakimliği&#x27;ndeki ifadeleri sürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 02:35</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqkg08p7v814o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="muhsin yazıcıoğlu&#x27;nun ölümüne ilişkin soruşturmada ikinci dalga operasyon yapıldı adalet bakanı akın gürlek, muhsin yazıcıoğlu&#x27;nun ölümüne ilişkin soruşturma kapsamındaki ikinci dalga operasyonda 47 şüpheli hakkında adli işlem başlatıldığını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 11:06</span>
+        </div>
+        <h3>Muhsin Yazıcıoğlu&#x27;nun ölümüne ilişkin soruşturmada ikinci dalga operasyon yapıldı</h3>
+        <p>Adalet Bakanı Akın Gürlek, Muhsin Yazıcıoğlu&#x27;nun ölümüne ilişkin soruşturma kapsamındaki ikinci dalga operasyonda 47 şüpheli hakkında adli işlem başlatıldığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/muhsin-yazicioglunun-olumune-iliskin-sorusturmada-ikinci-dalga-operasyon-yapildi/4068871" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="şanlıurfa&#x27;da 5,4 büyüklüğündeki depremin ardından hasar tespit çalışmaları sürüyor şanlıurfa&#x27;da dün meydana gelen 5,4 büyüklüğündeki depremin ardından çevre, şehircilik ve i̇klim değişikliği i̇l müdürlüğü ekiplerinin kent genelindeki hasar tespit çalışmaları devam ediyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 12:04</span>
+        </div>
+        <h3>Şanlıurfa&#x27;da 5,4 büyüklüğündeki depremin ardından hasar tespit çalışmaları sürüyor</h3>
+        <p>Şanlıurfa&#x27;da dün meydana gelen 5,4 büyüklüğündeki depremin ardından Çevre, Şehircilik ve İklim Değişikliği İl Müdürlüğü ekiplerinin kent genelindeki hasar tespit çalışmaları devam ediyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 12:04</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sanliurfada-5-4-buyuklugundeki-depremin-ardindan-hasar-tespit-calismalari-suruyor/4068975" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yenilenebilir enerjide dönüşümün yolu hızlı ve akıllı sistemlerden geçiyor uzmanlar temiz enerji dönüşümünde asıl meselenin daha fazla yenilenebilir kapasite kurmak değil, bu dönüşümü daha hızlı, kapsayıcı ve akıllı bir enerji sistemi inşa edecek şekilde gerçekleştirmek olduğunu vurguluyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 11:36</span>
+        </div>
+        <h3>Yenilenebilir enerjide dönüşümün yolu hızlı ve akıllı sistemlerden geçiyor</h3>
+        <p>Uzmanlar temiz enerji dönüşümünde asıl meselenin daha fazla yenilenebilir kapasite kurmak değil, bu dönüşümü daha hızlı, kapsayıcı ve akıllı bir enerji sistemi inşa edecek şekilde gerçekleştirmek olduğunu vurguluyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 11:36</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yenilenebilir-enerjide-donusumun-yolu-hizli-ve-akilli-sistemlerden-geciyor/4068933" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milli i̇stihbarat akademisinin &quot;almanya&#x27;da aşırı sağ ve liberal demokrasinin temsil krizi&quot; başlıklı analizi yayımlandı milli i̇stihbarat akademisinden (mi̇a) baki laleoğlu&#x27;nun kaleme aldığı &quot;almanya&#x27;da aşırı sağ: liberal demokrasinin temsil krizi&quot; başlıklı analiz yayımlandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 11:20</span>
+        </div>
+        <h3>Milli İstihbarat Akademisinin &quot;Almanya&#x27;da Aşırı Sağ ve Liberal Demokrasinin Temsil Krizi&quot; başlıklı analizi yayımlandı</h3>
+        <p>Milli İstihbarat Akademisinden (MİA) Baki Laleoğlu&#x27;nun kaleme aldığı &quot;Almanya&#x27;da Aşırı Sağ: Liberal Demokrasinin Temsil Krizi&quot; başlıklı analiz yayımlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 11:20</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/milli-istihbarat-akademisinin-almanyada-asiri-sag-ve-liberal-demokrasinin-temsil-krizi-baslikli-analizi-yayimlandi/4068900" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="uefa uluslar ligi: türkiye&#x27;nin ilk sınavı zidane yönetimindeki fransa ile türkiye&#x27;nin ilk kez a ligi&#x27;nde mücadele edece uefa uluslar ligi 24 eylül&#x27;deki karşılaşmalarla başlayacak. türkiye&#x27;nin ilk rakibi 25 eylül cuma günü oynanacak karşılaşmada fransa olacak. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 10:49</span>
+        </div>
+        <h3>UEFA Uluslar Ligi: Türkiye&#x27;nin ilk sınavı Zidane yönetimindeki Fransa ile</h3>
+        <p>Türkiye&#x27;nin ilk kez A Ligi&#x27;nde mücadele edece UEFA Uluslar Ligi 24 Eylül&#x27;deki karşılaşmalarla başlayacak. Türkiye&#x27;nin ilk rakibi 25 Eylül Cuma günü oynanacak karşılaşmada Fransa olacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 10:49</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cve8xk9kwxz5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;tinder eşleşmesi, hastalığımın gizemini çözmemi sağladı&#x27; maria paula vieira, internet üzerinden ilginç biriyle tanışmayı ummuştu, ancak buluştuğu kişi, 30 yıldır çektiği bir rahatsızlığın teşhisini koymasına yardımcı oldu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 10:36</span>
+        </div>
+        <h3>&#x27;Tinder eşleşmesi, hastalığımın gizemini çözmemi sağladı&#x27;</h3>
+        <p>Maria Paula Vieira, internet üzerinden ilginç biriyle tanışmayı ummuştu, ancak buluştuğu kişi, 30 yıldır çektiği bir rahatsızlığın teşhisini koymasına yardımcı oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 10:36</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm93e4wj188po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="almanya&#x27;da çatışma sırasında olay yerinden kaçan 2 kadın polis memuriyetten ihraç edildi almanya&#x27;nın gevelsberg kentinde 2020 yılında yaşanan silahlı çatışma sırasında olay yerini ve vurulan meslektaşlarını terk eden iki kadın polis, görev ihlali nedeniyle memuriyetten ihraç edildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Eylül 2026, 12:50</span>
+        </div>
+        <h3>Almanya&#x27;da çatışma sırasında olay yerinden kaçan 2 kadın polis memuriyetten ihraç edildi</h3>
+        <p>Almanya&#x27;nın Gevelsberg kentinde 2020 yılında yaşanan silahlı çatışma sırasında olay yerini ve vurulan meslektaşlarını terk eden iki kadın polis, görev ihlali nedeniyle memuriyetten ihraç edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Eylül 2026, 12:50</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/almanyada-catisma-sirasinda-olay-yerinden-kacan-2-kadin-polis-memuriyetten-ihrac-edildi-958119.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="antalya&#x27;da uyuşturucu operasyonunda 22 şüpheli gözaltına alındı antalya&#x27;nın alanya ve serik ilçelerinde düzenlenen uyuşturucu operasyonunda 22 şüpheli yakalandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Eylül 2026, 12:46</span>
+        </div>
+        <h3>Antalya&#x27;da uyuşturucu operasyonunda 22 şüpheli gözaltına alındı</h3>
+        <p>Antalya&#x27;nın Alanya ve Serik ilçelerinde düzenlenen uyuşturucu operasyonunda 22 şüpheli yakalandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Eylül 2026, 12:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/antalyada-uyusturucu-operasyonunda-22-supheli-gozaltina-alindi-958118.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bm: çatışmaların yaşandığı yemen&#x27;de son dönemde 134 bin kişi yerinden edildi birleşmiş milletler uluslararası göç örgütü (iom) sözcüsü kennedy okoth omondi, çatışmaların yaşandığı yemen&#x27;de son dönemde 134 bin kişinin yerinden edildiğini söyledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Eylül 2026, 12:41</span>
+        </div>
+        <h3>BM: Çatışmaların yaşandığı Yemen&#x27;de son dönemde 134 bin kişi yerinden edildi</h3>
+        <p>Birleşmiş Milletler Uluslararası Göç Örgütü (IOM) Sözcüsü Kennedy Okoth Omondi, çatışmaların yaşandığı Yemen&#x27;de son dönemde 134 bin kişinin yerinden edildiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Eylül 2026, 12:41</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/bm-catismalarin-yasandigi-yemende-son-donemde-134-bin-kisi-yerinden-edildi-958117.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="endonezya&#x27;da 13 eylül&#x27;de alabora olan feribottaki 52 kişinin cesedine ulaşıldı endonezya&#x27;da 13 eylül&#x27;de alabora olan feribotta bulunan 52 kişinin cesedine günler sonra ulaşıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Eylül 2026, 12:36</span>
+        </div>
+        <h3>Endonezya&#x27;da 13 Eylül&#x27;de alabora olan feribottaki 52 kişinin cesedine ulaşıldı</h3>
+        <p>Endonezya&#x27;da 13 Eylül&#x27;de alabora olan feribotta bulunan 52 kişinin cesedine günler sonra ulaşıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Eylül 2026, 12:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/endonezyada-13-eylulde-alabora-olan-feribottaki-52-kisinin-cesedine-ulasildi-958116.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yabancı uzmanlar türkiye&#x27;deki adli tıp kongresini değerlendirdi adli tıp kurumu tarafından düzenlenen ve anadolu ajansının &quot;global i̇letişim ortağı&quot; olduğu 21. uluslararası adli tıp günleri kongresi, farklı ülkelerden uzmanları bir araya getirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 12:03</span>
+        </div>
+        <h3>Yabancı uzmanlar Türkiye&#x27;deki adli tıp kongresini değerlendirdi</h3>
+        <p>Adli Tıp Kurumu tarafından düzenlenen ve Anadolu Ajansının &quot;Global İletişim Ortağı&quot; olduğu 21. Uluslararası Adli Tıp Günleri Kongresi, farklı ülkelerden uzmanları bir araya getirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 12:03</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yabanci-uzmanlar-turkiyedeki-adli-tip-kongresini-degerlendirdi/4068974" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;de kadınlarda tütün kullanımı 17 yılda yüzde 35 arttı türkiye&#x27;de 2008-2025 döneminde kadınlarda tütün ve tütün ürünleri kullanım oranı yüzde 15,2&#x27;den yüzde 20,6&#x27;ya yükseldi, erkeklerde ise yüzde 47,9&#x27;dan yüzde 46&#x27;ya geriledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 11:03</span>
+        </div>
+        <h3>Türkiye&#x27;de kadınlarda tütün kullanımı 17 yılda yüzde 35 arttı</h3>
+        <p>Türkiye&#x27;de 2008-2025 döneminde kadınlarda tütün ve tütün ürünleri kullanım oranı yüzde 15,2&#x27;den yüzde 20,6&#x27;ya yükseldi, erkeklerde ise yüzde 47,9&#x27;dan yüzde 46&#x27;ya geriledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 11:03</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiyede-kadinlarda-tutun-kullanimi-17-yilda-yuzde-35-artti/4068864" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="afad&#x27;ın obruk duyarlılık haritası&#x27;nda çalışmalar tamamlandı afet ve acil durum yönetimi başkanlığı (afad) tarafından yürütülen obruk duyarlılık haritası çalışması kapsamında konya, karaman ve aksaray&#x27;da 741 obruk kayıt altına alındı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 11:14</span>
+        </div>
+        <h3>AFAD&#x27;ın Obruk Duyarlılık Haritası&#x27;nda çalışmalar tamamlandı</h3>
+        <p>Afet ve Acil Durum Yönetimi Başkanlığı (AFAD) tarafından yürütülen Obruk Duyarlılık Haritası çalışması kapsamında Konya, Karaman ve Aksaray&#x27;da 741 obruk kayıt altına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 11:14</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/afadin-obruk-duyarlilik-haritasinda-calismalar-tamamlandi/4068890" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="terör örgütü deaş&#x27;a yönelik operasyonlarda 83 şüpheli yakalandı terör örgütü deaş&#x27;a yönelik 28 ilde düzenlenen operasyonlarda 83 şüpheli yakalandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 11:31</span>
+        </div>
+        <h3>Terör örgütü DEAŞ&#x27;a yönelik operasyonlarda 83 şüpheli yakalandı</h3>
+        <p>Terör örgütü DEAŞ&#x27;a yönelik 28 ilde düzenlenen operasyonlarda 83 şüpheli yakalandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 11:31</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/teror-orgutu-deasa-yonelik-operasyonlarda-83-supheli-yakalandi/4068927" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="toplam demir yolu ağında 2028 hedefi 17 bin 287 kilometre ulaştırma ve altyapı bakanı uraloğlu, 2053 hedefleri doğrultusunda 4 bin 158 kilometrelik hatta yapım çalışmalarının sürdüğünü, 2028&#x27;de toplam demir yolu ağının 17 bin 287 kilometreye, lojistik merkez sayısının da 12&#x27;den 25&#x27;e çıkarılmasının planlandığını belirtti. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 25 Eylül 2026, 12:01</span>
+        </div>
+        <h3>Toplam demir yolu ağında 2028 hedefi 17 bin 287 kilometre</h3>
+        <p>Ulaştırma ve Altyapı Bakanı Uraloğlu, 2053 hedefleri doğrultusunda 4 bin 158 kilometrelik hatta yapım çalışmalarının sürdüğünü, 2028&#x27;de toplam demir yolu ağının 17 bin 287 kilometreye, lojistik merkez sayısının da 12&#x27;den 25&#x27;e çıkarılmasının planlandığını belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Eylül 2026, 12:01</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/toplam-demir-yolu-aginda-2028-hedefi-17-bin-287-kilometre-958112.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="adli tıp kurumu teknolojik altyapısıyla testlerinde güven veriyor adli tıp kurumu (atk) başkan yardımcısı ahmet bensiz, kurumun adli tıp alanındaki son teknolojileri kullandığını belirterek, yapılan testlerin doğruluğuna güvendiklerini söyledi. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 11:24</span>
+        </div>
+        <h3>Adli Tıp Kurumu teknolojik altyapısıyla testlerinde güven veriyor</h3>
+        <p>Adli Tıp Kurumu (ATK) Başkan Yardımcısı Ahmet Bensiz, kurumun adli tıp alanındaki son teknolojileri kullandığını belirterek, yapılan testlerin doğruluğuna güvendiklerini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 11:24</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/adli-tip-kurumu-teknolojik-altyapisiyla-testlerinde-guven-veriyor/4068907" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
