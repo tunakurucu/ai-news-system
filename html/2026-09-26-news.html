@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">26 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">26 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 6</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>teknoloji</strong> 2</span><span class="stat-item"><strong>genel</strong> 17</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>Enerji arzında Hürmüz sınavı: Kesinti 1970&#x27;lerdeki krizleri ikiye katladı</h3>
+        <p>Hürmüz Boğazı&#x27;nda yaşanan kesinti modern dönemin en büyük enerji arz şoku olarak kayıtlara geçti. Küresel petrol ve gaz arzının yüzde 14’ünün etkilendiği krizde, aksamaların enerji piyasalarına etkisi, 1970&#x27;lerdeki petrol şoklarının iki, 2022 Rusya-Ukrayna savaşındaki en yüksek etkinin ise altı katına ulaştı.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 26 Eylül 2026, 11:53</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/enerji-arzinda-hurmuz-sinavi-kesinti-1970lerdeki-krizleri-ikiye-katladi-958213.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 24 Eylül 2026, 21:53</span>
+            </div>
+            <h3>Erdoğan &#x27;Sorumlulardan hesap sorulacak&#x27; dedi, Şimşek istifa iddiasını yalanladı</h3>
+            <p>Cumhurbaşkanı Erdoğan, Birleşmiş Milletler zirvesi için bulunduğu ABD&#x27;de fon krizine ilişkin konuştu. Erdoğan, &quot;Sorumluluğu olan kim varsa hukuk önünde hesap sorulacaktır&quot; dedi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cq4g53jg5y9no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 26 Eylül 2026, 12:13</span>
+            </div>
+            <h3>Küresel piyasalarda gözler yoğun veri gündemine çevrildi</h3>
+            <p>Küresel pay piyasaları, ABD&#x27;de düzenlenen BM toplantılarındaki diplomatik temasların jeopolitik riskleri azaltabileceği beklentisiyle haftayı pozitif kapattı. Çin ve ABD arasındaki ticaret ateşkesinin uzatılması ve yapay zeka sektöründeki iyimserlik risk iştahını desteklerken, gözler, gelecek hafta ABD&#x27;deki yoğun veri gündemine çevrildi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/kuresel-piyasalarda-gozler-yogun-veri-gundemine-cevrildi-958215.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">TRT Haber · 26 Eylül 2026, 12:03</span>
+            </div>
+            <h3>Yapay zeka, robotik ve uzay teknolojisi yatırımlarının 2026&#x27;da iki kattan fazla artması bekleniyor</h3>
+            <p>Küresel sermayenin yeni nesil teknolojilere yönelmesiyle yapay zeka, robotik ve uzay teknolojilerinin de aralarında bulunduğu 5 teknoloji alanına yönelik yatırımların 2026&#x27;da geçen yıla göre iki kattan fazla artacağı tahmin ediliyor.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/yapay-zeka-robotik-ve-uzay-teknolojisi-yatirimlarinin-2026da-iki-kattan-fazla-artmasi-bekleniyor-958214.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 26 Eylül 2026, 10:07</span>
+            </div>
+            <h3>Eski Doğu Alman eyaletleri nasıl aşırı sağın kalesi haline geldi?</h3>
+            <p>Göç, ekonomik gerileme, birleşmenin ardından yaşananlar ve hatta Nazizm mirası, uzmanların Almanya&#x27;nın doğusundaki oy verme davranışını açıklamak için işaret ettiği faktörlerden bazıları</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ck05ryp4l89jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="enerji arzında hürmüz sınavı: kesinti 1970&#x27;lerdeki krizleri ikiye katladı hürmüz boğazı&#x27;nda yaşanan kesinti modern dönemin en büyük enerji arz şoku olarak kayıtlara geçti. küresel petrol ve gaz arzının yüzde 14’ünün etkilendiği krizde, aksamaların enerji piyasalarına etkisi, 1970&#x27;lerdeki petrol şoklarının iki, 2022 rusya-ukrayna savaşındaki en yüksek etkinin ise altı katına ulaştı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 26 Eylül 2026, 11:53</span>
+        </div>
+        <h3>Enerji arzında Hürmüz sınavı: Kesinti 1970&#x27;lerdeki krizleri ikiye katladı</h3>
+        <p>Hürmüz Boğazı&#x27;nda yaşanan kesinti modern dönemin en büyük enerji arz şoku olarak kayıtlara geçti. Küresel petrol ve gaz arzının yüzde 14’ünün etkilendiği krizde, aksamaların enerji piyasalarına etkisi, 1970&#x27;lerdeki petrol şoklarının iki, 2022 Rusya-Ukrayna savaşındaki en yüksek etkinin ise altı katına ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Eylül 2026, 11:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/enerji-arzinda-hurmuz-sinavi-kesinti-1970lerdeki-krizleri-ikiye-katladi-958213.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="küresel piyasalarda gözler yoğun veri gündemine çevrildi küresel pay piyasaları, abd&#x27;de düzenlenen bm toplantılarındaki diplomatik temasların jeopolitik riskleri azaltabileceği beklentisiyle haftayı pozitif kapattı. çin ve abd arasındaki ticaret ateşkesinin uzatılması ve yapay zeka sektöründeki iyimserlik risk iştahını desteklerken, gözler, gelecek hafta abd&#x27;deki yoğun veri gündemine çevrildi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 26 Eylül 2026, 12:13</span>
+        </div>
+        <h3>Küresel piyasalarda gözler yoğun veri gündemine çevrildi</h3>
+        <p>Küresel pay piyasaları, ABD&#x27;de düzenlenen BM toplantılarındaki diplomatik temasların jeopolitik riskleri azaltabileceği beklentisiyle haftayı pozitif kapattı. Çin ve ABD arasındaki ticaret ateşkesinin uzatılması ve yapay zeka sektöründeki iyimserlik risk iştahını desteklerken, gözler, gelecek hafta ABD&#x27;deki yoğun veri gündemine çevrildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Eylül 2026, 12:13</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/kuresel-piyasalarda-gozler-yogun-veri-gundemine-cevrildi-958215.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="eski doğu alman eyaletleri nasıl aşırı sağın kalesi haline geldi? göç, ekonomik gerileme, birleşmenin ardından yaşananlar ve hatta nazizm mirası, uzmanların almanya&#x27;nın doğusundaki oy verme davranışını açıklamak için işaret ettiği faktörlerden bazıları ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 26 Eylül 2026, 10:07</span>
+        </div>
+        <h3>Eski Doğu Alman eyaletleri nasıl aşırı sağın kalesi haline geldi?</h3>
+        <p>Göç, ekonomik gerileme, birleşmenin ardından yaşananlar ve hatta Nazizm mirası, uzmanların Almanya&#x27;nın doğusundaki oy verme davranışını açıklamak için işaret ettiği faktörlerden bazıları</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Eylül 2026, 10:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck05ryp4l89jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler? türkiye&#x27;deki fon krizinin ardından sermaye piyasaları kurulu 21 eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 23 Eylül 2026, 11:09</span>
+        </div>
+        <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+        <p>Türkiye&#x27;deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Eylül 2026, 11:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gelecek yıl 480 bin baş erkek sığır ithal edilecek tarım ve orman bakanlığı hayvancılık genel müdürlüğü, kamu kurum ve kuruluşları hariç olmak üzere gelecek yıl için toplam 480 bin baş besilik erkek sığır ithalatının planlandığını duyurdu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 26 Eylül 2026, 11:56</span>
+        </div>
+        <h3>Gelecek yıl 480 bin baş erkek sığır ithal edilecek</h3>
+        <p>Tarım ve Orman Bakanlığı Hayvancılık Genel Müdürlüğü, kamu kurum ve kuruluşları hariç olmak üzere gelecek yıl için toplam 480 bin baş besilik erkek sığır ithalatının planlandığını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Eylül 2026, 11:56</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/gelecek-yil-480-bin-bas-erkek-sigir-ithal-edilecek-958212.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinde spk neden eleştiriliyor? kurumu eleştirenler sermaye piyasası kurulu&#x27;nun düzenleme yapmakta geç kaldığı ve düzenlemelerin yetersiz olduğunu savunuyor. peki spk, bu krizin neresinde yer alıyor? ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 26 Eylül 2026, 10:06</span>
+        </div>
+        <h3>Fon krizinde SPK neden eleştiriliyor?</h3>
+        <p>Kurumu eleştirenler Sermaye Piyasası Kurulu&#x27;nun düzenleme yapmakta geç kaldığı ve düzenlemelerin yetersiz olduğunu savunuyor. Peki SPK, bu krizin neresinde yer alıyor?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Eylül 2026, 10:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6kg09x8yjn8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="erdoğan &#x27;sorumlulardan hesap sorulacak&#x27; dedi, şimşek istifa iddiasını yalanladı cumhurbaşkanı erdoğan, birleşmiş milletler zirvesi için bulunduğu abd&#x27;de fon krizine ilişkin konuştu. erdoğan, &quot;sorumluluğu olan kim varsa hukuk önünde hesap sorulacaktır&quot; dedi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 24 Eylül 2026, 21:53</span>
+        </div>
+        <h3>Erdoğan &#x27;Sorumlulardan hesap sorulacak&#x27; dedi, Şimşek istifa iddiasını yalanladı</h3>
+        <p>Cumhurbaşkanı Erdoğan, Birleşmiş Milletler zirvesi için bulunduğu ABD&#x27;de fon krizine ilişkin konuştu. Erdoğan, &quot;Sorumluluğu olan kim varsa hukuk önünde hesap sorulacaktır&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Eylül 2026, 21:53</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq4g53jg5y9no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sivas&#x27;ta büşra bebek için arama çalışmaları sürüyor sivas&#x27;ın divriği ilçesinde 11 aylık büşra bebeğin kaybolmasının ardından başlatılan geniş çaplı arama çalışmaları sürüyor. anne ve babasının tutuklandığı soruşturmada, bebeğin izine henüz rastlanamazken, bölgedeki operasyonlar ekiplerce titizlikle yürütülüyor. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 26 Eylül 2026, 11:49</span>
+        </div>
+        <h3>Sivas&#x27;ta Büşra bebek için arama çalışmaları sürüyor</h3>
+        <p>Sivas&#x27;ın Divriği ilçesinde 11 aylık Büşra bebeğin kaybolmasının ardından başlatılan geniş çaplı arama çalışmaları sürüyor. Anne ve babasının tutuklandığı soruşturmada, bebeğin izine henüz rastlanamazken, bölgedeki operasyonlar ekiplerce titizlikle yürütülüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Eylül 2026, 11:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/sivasta-busra-bebek-icin-arama-calismalari-suruyor-958210.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;nin ilk yerli ve milli tarama gemisi suya indi ulaştırma ve altyapı bakanı abdulkadir uraloğlu, yerli dizaynla türk tersanelerinde ilk kez inşa edilen emici özellikli tarama gemisi uab mavi̇ vatan’ın suya indirildiğini duyurdu. gemi, birkaç aylık seyir tecrübesinin ardından hizmete alınacak. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 26 Eylül 2026, 11:37</span>
+        </div>
+        <h3>Türkiye&#x27;nin ilk yerli ve milli tarama gemisi suya indi</h3>
+        <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, yerli dizaynla Türk tersanelerinde ilk kez inşa edilen emici özellikli tarama gemisi UAB MAVİ VATAN’ın suya indirildiğini duyurdu. Gemi, birkaç aylık seyir tecrübesinin ardından hizmete alınacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Eylül 2026, 11:37</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyenin-ilk-yerli-ve-milli-tarama-gemisi-suya-indi-958208.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran&#x27;dan abd&#x27;ye hürmüz boğazı&#x27;nı yedi gün içinde yeniden açma teklifi i̇ran, haziranda imzalanan mutabakattaki koşulların karşılanması halinde hürmüz boğazı’nı yedi gün içinde yeniden açabileceğini belirterek abd’ye anlaşma teklifinde bulundu dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 26 Eylül 2026, 12:28</span>
+        </div>
+        <h3>İran&#x27;dan ABD&#x27;ye Hürmüz Boğazı&#x27;nı yedi gün içinde yeniden açma teklifi</h3>
+        <p>İran, haziranda imzalanan mutabakattaki koşulların karşılanması halinde Hürmüz Boğazı’nı yedi gün içinde yeniden açabileceğini belirterek ABD’ye anlaşma teklifinde bulundu</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Eylül 2026, 12:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckqxvvzzyjyno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ömer koç&#x27;tan batı&#x27;nın gazze ve i̇srail tutumuna tepki koç holding yönetim kurulu başkanı ömer koç, gazze&#x27;deki gelişmeler üzerinden batı ülkelerinin i̇srail&#x27;e yönelik tutumunu eleştirerek, &quot;abd, i̇ngiltere ve ab&#x27;nin i̇srail&#x27;i koşulsuz desteklemesi, batı&#x27;nın yüz karası olan bu soykırımı mümkün kıldı.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Eylül 2026, 02:27</span>
+        </div>
+        <h3>Ömer Koç&#x27;tan Batı&#x27;nın Gazze ve İsrail tutumuna tepki</h3>
+        <p>Koç Holding Yönetim Kurulu Başkanı Ömer Koç, Gazze&#x27;deki gelişmeler üzerinden Batı ülkelerinin İsrail&#x27;e yönelik tutumunu eleştirerek, &quot;ABD, İngiltere ve AB&#x27;nin İsrail&#x27;i koşulsuz desteklemesi, Batı&#x27;nın yüz karası olan bu soykırımı mümkün kıldı.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Eylül 2026, 02:27</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/omer-koc-tan-bati-nin-gazze-ve-israil-tutumuna-tepki/4069807" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="yapay zeka, robotik ve uzay teknolojisi yatırımlarının 2026&#x27;da iki kattan fazla artması bekleniyor küresel sermayenin yeni nesil teknolojilere yönelmesiyle yapay zeka, robotik ve uzay teknolojilerinin de aralarında bulunduğu 5 teknoloji alanına yönelik yatırımların 2026&#x27;da geçen yıla göre iki kattan fazla artacağı tahmin ediliyor. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 26 Eylül 2026, 12:03</span>
+        </div>
+        <h3>Yapay zeka, robotik ve uzay teknolojisi yatırımlarının 2026&#x27;da iki kattan fazla artması bekleniyor</h3>
+        <p>Küresel sermayenin yeni nesil teknolojilere yönelmesiyle yapay zeka, robotik ve uzay teknolojilerinin de aralarında bulunduğu 5 teknoloji alanına yönelik yatırımların 2026&#x27;da geçen yıla göre iki kattan fazla artacağı tahmin ediliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Eylül 2026, 12:03</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/yapay-zeka-robotik-ve-uzay-teknolojisi-yatirimlarinin-2026da-iki-kattan-fazla-artmasi-bekleniyor-958214.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="manisa merkezli 12 ilde siber dolandırıcılık operasyonunda 14 şüpheli tutuklandı manisa merkezli 12 ilde yatırım vaadiyle dolandırıcılık yaptıkları iddiasıyla gözaltına alınan 16 şüpheliden 14&#x27;ü tutuklandı. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 22:34</span>
+        </div>
+        <h3>Manisa merkezli 12 ilde siber dolandırıcılık operasyonunda 14 şüpheli tutuklandı</h3>
+        <p>Manisa merkezli 12 ilde yatırım vaadiyle dolandırıcılık yaptıkları iddiasıyla gözaltına alınan 16 şüpheliden 14&#x27;ü tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 22:34</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/manisa-merkezli-12-ilde-siber-dolandiricilik-operasyonunda-14-supheli-tutuklandi/4069683" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">17 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="fon krizinde yatırımcıların parası nasıl geri ödenebilir? türkiye&#x27;de 131 yatırım fonunun tasfiye sürecine alınmasının ardından, bu fonlarda birikimi bulunan yüz binlerce yatırımcı parasına ne zaman ve ne ölçüde ulaşabileceğini merak ediyor. toplumun genelinde ise kamunun bu borcu yüklenip yüklenmeyeceği sorusu dile getiriliyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 19:46</span>
+        </div>
+        <h3>Fon krizinde yatırımcıların parası nasıl geri ödenebilir?</h3>
+        <p>Türkiye&#x27;de 131 yatırım fonunun tasfiye sürecine alınmasının ardından, bu fonlarda birikimi bulunan yüz binlerce yatırımcı parasına ne zaman ve ne ölçüde ulaşabileceğini merak ediyor. Toplumun genelinde ise kamunun bu borcu yüklenip yüklenmeyeceği sorusu dile getiriliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 19:46</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cknvlly1vj19o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="şimşek başkanlığındaki fon krizi toplantısı ikinci gününde hazine ve maliye bakanı mehmet şimşek, fonlardaki varlıkların transferi ve yatırımcılarına ödemelerle ilgili iki gündür kurum ve kuruluşlarla toplantı halinde. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 17:22</span>
+        </div>
+        <h3>Şimşek başkanlığındaki fon krizi toplantısı ikinci gününde</h3>
+        <p>Hazine ve Maliye Bakanı Mehmet Şimşek, fonlardaki varlıkların transferi ve yatırımcılarına ödemelerle ilgili iki gündür kurum ve kuruluşlarla toplantı halinde.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 17:22</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck5ywrewe8dxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇çişleri bakanı çiftçi: interpol kanalıyla yurt dışına kaçan suçluların peşini bırakmıyoruz i̇çişleri bakanı mustafa çiftçi, &quot;interpol kanalıyla yurt dışına kaçan suçluların da peşini bırakmıyoruz. bu sene içerisinde 42 ülkeden 640 organize suç örgütü liderini veya üyesini takip ettik ve bunların ülkemize iadesini sağladık.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Eylül 2026, 09:19</span>
+        </div>
+        <h3>İçişleri Bakanı Çiftçi: Interpol kanalıyla yurt dışına kaçan suçluların peşini bırakmıyoruz</h3>
+        <p>İçişleri Bakanı Mustafa Çiftçi, &quot;Interpol kanalıyla yurt dışına kaçan suçluların da peşini bırakmıyoruz. Bu sene içerisinde 42 ülkeden 640 organize suç örgütü liderini veya üyesini takip ettik ve bunların ülkemize iadesini sağladık.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Eylül 2026, 09:19</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/icisleri-bakani-ciftci-interpol-kanaliyla-yurt-disina-kacan-suclularin-pesini-birakmiyoruz/4069859" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan fidan venezuelalı, el salvadorlu ve gine bissaulu mevkidaşlarıyla new york&#x27;ta görüştü dışişleri bakanı hakan fidan, new york&#x27;ta venezuela dışişleri bakanı felix plasencia gonzales, el salvador dışişleri bakanı alexandra hill ve gine bissau dışişleri bakanı fatumata jau ile ayrı ayrı görüştü. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Eylül 2026, 10:29</span>
+        </div>
+        <h3>Bakan Fidan Venezuelalı, El Salvadorlu ve Gine Bissaulu mevkidaşlarıyla New York&#x27;ta görüştü</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, New York&#x27;ta Venezuela Dışişleri Bakanı Felix Plasencia Gonzales, El Salvador Dışişleri Bakanı Alexandra Hill ve Gine Bissau Dışişleri Bakanı Fatumata Jau ile ayrı ayrı görüştü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Eylül 2026, 10:29</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-fidan-venezuelali-el-salvadorlu-ve-gine-bissaulu-mevkidaslariyla-new-yorkta-gorustu/4069901" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon soruşturmasında toplam 45 kişi tutuklandı soruşturma kapsamında gözaltına alınan 21 şüpheli adliyeye sevk edildi. şüphelilerden 8&#x27;i tutuklanırken, 2 kişi adli kontrol şartıyla serbest bırakıldı. 11 şüphelinin ise sulh ceza hakimliği&#x27;ndeki ifadeleri sürüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 17:19</span>
+        </div>
+        <h3>Fon soruşturmasında toplam 45 kişi tutuklandı</h3>
+        <p>Soruşturma kapsamında gözaltına alınan 21 şüpheli adliyeye sevk edildi. Şüphelilerden 8&#x27;i tutuklanırken, 2 kişi adli kontrol şartıyla serbest bırakıldı. 11 şüphelinin ise Sulh Ceza Hakimliği&#x27;ndeki ifadeleri sürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 17:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqkg08p7v814o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="manchester city davasında suçlamaların çoğu kabul edildi: kulübü hangi cezalar bekliyor? bbc&#x27;nin kaynaklara dayandırdığı haberine göre , manchester city, premier lig&#x27;in mali kurallarını ihlal ettiği iddiasıyla yöneltilen 115 suçlamadan biri hariç tümünden suçlu bulundu. peki bundan sonra ne olabilir? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 26 Eylül 2026, 11:52</span>
+        </div>
+        <h3>Manchester City davasında suçlamaların çoğu kabul edildi: Kulübü hangi cezalar bekliyor?</h3>
+        <p>BBC&#x27;nin kaynaklara dayandırdığı haberine göre , Manchester City, Premier Lig&#x27;in mali kurallarını ihlal ettiği iddiasıyla yöneltilen 115 suçlamadan biri hariç tümünden suçlu bulundu. Peki bundan sonra ne olabilir?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Eylül 2026, 11:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm1j44dg0ne8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="antalya körfezi&#x27;nde istilacı türlerin popülasyonu artıyor akdeniz üniversitesi su ürünleri fakültesi öğretim üyesi prof. dr. mehmet gökoğlu, antalya körfezi&#x27;nde yaptıkları dalışlarda kızıldeniz&#x27;den göç eden istilacı balık türlerinin popülasyonunda artış gözlemlediklerini söyledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 26 Eylül 2026, 11:53</span>
+        </div>
+        <h3>Antalya Körfezi&#x27;nde istilacı türlerin popülasyonu artıyor</h3>
+        <p>Akdeniz Üniversitesi Su Ürünleri Fakültesi Öğretim Üyesi Prof. Dr. Mehmet Gökoğlu, Antalya Körfezi&#x27;nde yaptıkları dalışlarda Kızıldeniz&#x27;den göç eden istilacı balık türlerinin popülasyonunda artış gözlemlediklerini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Eylül 2026, 11:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/antalya-korfezinde-istilaci-turlerin-populasyonu-artiyor-958211.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="vanlı kara haydar&#x27;ın otoparkındaki araçlardan servet çıktı i̇stanbul’da düzenlenen operasyonda, &quot;suçtan kaynaklanan malvarlığı değerlerini aklama&quot; soruşturması kapsamında &quot;vanlı kara haydar&quot; olarak bilinen mehmet fatih tançalan&#x27;a ait olduğu tespit edilen iki otomobilde yaklaşık 934 milyon lira değerinde döviz ele geçirildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 26 Eylül 2026, 11:31</span>
+        </div>
+        <h3>Vanlı Kara Haydar&#x27;ın otoparkındaki araçlardan servet çıktı</h3>
+        <p>İstanbul’da düzenlenen operasyonda, &quot;suçtan kaynaklanan malvarlığı değerlerini aklama&quot; soruşturması kapsamında &quot;Vanlı Kara Haydar&quot; olarak bilinen Mehmet Fatih Tançalan&#x27;a ait olduğu tespit edilen iki otomobilde yaklaşık 934 milyon lira değerinde döviz ele geçirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Eylül 2026, 11:31</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/vanli-kara-haydarin-otoparkindaki-araclardan-servet-cikti-958209.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="başsavcılık, son 3 ayda fonlardan çıkış yapan yatırımcıların bilgilerini istedi i̇stanbul cumhuriyet başsavcılığı, merkezi kayıt kuruluşu&#x27;ndan (mkk) temmuz, ağustos ve eylül aylarında fonlardan çıkış yapan yatırımcılara ilişkin adet, tutar ve bakiye bilgilerinin ayrıca tespit edilerek ivedilikle gönderilmesini istedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 26 Eylül 2026, 11:22</span>
+        </div>
+        <h3>Başsavcılık, son 3 ayda fonlardan çıkış yapan yatırımcıların bilgilerini istedi</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı, Merkezi Kayıt Kuruluşu&#x27;ndan (MKK) temmuz, ağustos ve eylül aylarında fonlardan çıkış yapan yatırımcılara ilişkin adet, tutar ve bakiye bilgilerinin ayrıca tespit edilerek ivedilikle gönderilmesini istedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Eylül 2026, 11:22</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bassavcilik-son-3-ayda-fonlardan-cikis-yapan-yatirimcilarin-bilgilerini-istedi-958206.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yurt genelindeki denetimlerde 230 düzensiz göçmen yakalandı i̇çişleri bakanlığı, yurt genelinde düzenlenen denetimlerde 19 göçmen kaçakçısı ve 230 düzensiz göçmenin yakalandığını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Eylül 2026, 12:26</span>
+        </div>
+        <h3>Yurt genelindeki denetimlerde 230 düzensiz göçmen yakalandı</h3>
+        <p>İçişleri Bakanlığı, yurt genelinde düzenlenen denetimlerde 19 göçmen kaçakçısı ve 230 düzensiz göçmenin yakalandığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Eylül 2026, 12:26</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yurt-genelindeki-denetimlerde-230-duzensiz-gocmen-yakalandi/4069981" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dışişleri bakanı fidan, i̇ranlı mevkidaşı erakçi ile new york&#x27;ta görüştü dışişleri bakanı fidan, i̇ran dışişleri bakanı erakçi ile new york&#x27;ta bir araya geldi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Eylül 2026, 23:29</span>
+        </div>
+        <h3>Dışişleri Bakanı Fidan, İranlı mevkidaşı Erakçi ile New York&#x27;ta görüştü</h3>
+        <p>Dışişleri Bakanı Fidan, İran Dışişleri Bakanı Erakçi ile New York&#x27;ta bir araya geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Eylül 2026, 23:29</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/disisleri-bakani-fidan-iranli-mevkidasi-erakci-ile-new-yorkta-gorustu/4069720" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kafein bazı insanları etkilemezken neden bazılarını daha çok uyarıyor? bilim insanları, durumun kafein alışkanlıklarına, yaşam tarzına ve kontrol edemediğimiz bir faktöre, yani genlerimize bağlı olduğunu söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 26 Eylül 2026, 10:08</span>
+        </div>
+        <h3>Kafein bazı insanları etkilemezken neden bazılarını daha çok uyarıyor?</h3>
+        <p>Bilim insanları, durumun kafein alışkanlıklarına, yaşam tarzına ve kontrol edemediğimiz bir faktöre, yani genlerimize bağlı olduğunu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Eylül 2026, 10:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvgl7p841k7no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="korkut, uluslararası heyetlere kabiliyetlerini sergiledi aselsan, 12 ülkeden gelen uluslararası savunma heyetlerine yaptığı atış gösteriminde, korkut 35 hava savunma sistemi&#x27;nin operasyonel kabiliyetlerini başarıyla sergiledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 26 Eylül 2026, 11:21</span>
+        </div>
+        <h3>KORKUT, uluslararası heyetlere kabiliyetlerini sergiledi</h3>
+        <p>ASELSAN, 12 ülkeden gelen uluslararası savunma heyetlerine yaptığı atış gösteriminde, KORKUT 35 Hava Savunma Sistemi&#x27;nin operasyonel kabiliyetlerini başarıyla sergiledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Eylül 2026, 11:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/savunma/korkut-uluslararasi-heyetlere-kabiliyetlerini-sergiledi-958207.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="marmara denizi&#x27;nde akşam saatlerinde fırtına uyarısı i̇stanbul valiliği, marmara denizi&#x27;nde akşam saatlerinden itibaren beklenen fırtına nedeniyle vatandaşların dikkatli olması gerektiğini bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Eylül 2026, 11:36</span>
+        </div>
+        <h3>Marmara Denizi&#x27;nde akşam saatlerinde fırtına uyarısı</h3>
+        <p>İstanbul Valiliği, Marmara Denizi&#x27;nde akşam saatlerinden itibaren beklenen fırtına nedeniyle vatandaşların dikkatli olması gerektiğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Eylül 2026, 11:36</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/marmara-denizinde-aksam-saatlerinde-firtina-uyarisi/4069949" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="45 yıllık sigara bağımlılığından tedaviyle kurtuldu kırklareli&#x27;nde yaşayan mediha kayam, sağlıklı hayat merkezi&#x27;nde uygulanan tedaviyle 45 yıl içtiği sigarayı bıraktı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Eylül 2026, 11:09</span>
+        </div>
+        <h3>45 yıllık sigara bağımlılığından tedaviyle kurtuldu</h3>
+        <p>Kırklareli&#x27;nde yaşayan Mediha Kayam, Sağlıklı Hayat Merkezi&#x27;nde uygulanan tedaviyle 45 yıl içtiği sigarayı bıraktı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Eylül 2026, 11:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/45-yillik-sigara-bagimliligindan-tedaviyle-kurtuldu/4069933" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="manisa&#x27;da okul yakınındaki saldırıya ilişkin 7 şüpheli tutuklandı manisa&#x27;nın turgutlu ilçesinde, okul yakınında 11 öğrencinin yaralandığı silahlı saldırıya ilişkin adliyeye sevk edilen 10 şüpheliden 7&#x27;si tutuklandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Eylül 2026, 00:43</span>
+        </div>
+        <h3>Manisa&#x27;da okul yakınındaki saldırıya ilişkin 7 şüpheli tutuklandı</h3>
+        <p>Manisa&#x27;nın Turgutlu ilçesinde, okul yakınında 11 öğrencinin yaralandığı silahlı saldırıya ilişkin adliyeye sevk edilen 10 şüpheliden 7&#x27;si tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Eylül 2026, 00:43</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/manisada-okul-yakinindaki-saldiriya-iliskin-7-supheli-tutuklandi/4069786" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="devegeçidi baraj gölü&#x27;nde kuraklığın ardından yağış bolluğu bir yıl arayla görüntülendi diyarbakır&#x27;da geçen yıl kuraklık ve yoğun buharlaşma nedeniyle eylül ayında kuruma noktasına gelen devegeçidi baraj gölü, bu yıl yağışların etkisiyle eylül ayında su varlığını korudu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Eylül 2026, 00:11</span>
+        </div>
+        <h3>Devegeçidi Baraj Gölü&#x27;nde kuraklığın ardından yağış bolluğu bir yıl arayla görüntülendi</h3>
+        <p>Diyarbakır&#x27;da geçen yıl kuraklık ve yoğun buharlaşma nedeniyle eylül ayında kuruma noktasına gelen Devegeçidi Baraj Gölü, bu yıl yağışların etkisiyle eylül ayında su varlığını korudu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Eylül 2026, 00:11</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/devegecidi-baraj-golunde-kurakligin-ardindan-yagis-bollugu-bir-yil-arayla-goruntulendi/4069776" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
