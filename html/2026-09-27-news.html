@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">27 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">27 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 5</span><span class="stat-item"><strong>genel</strong> 23</span><span class="stat-item"><strong>dünya</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>Yeni Parti Antalya Milletvekili Mustafa Erdem hakkında soruşturma başlatıldı</h3>
+        <p>Yeni Parti Antalya Milletvekili Mustafa Erdem hakkında, &quot;rüşvet&quot; suçlamasıyla soruşturma başlatıldı.Erdem, son günlerde Antalya Büyükşehir Belediye Başkanı Muhittin Böcek&#x27;in sağlık durumu gerekçe gösterilerek adli süreçte ev hapsine çıkarılması için 5 milyon dolarlık bir para trafiği ve &quot;iş takibi&quot; yürütüldüğü iddialarıyla gündeme geldi. Bu iddiaları reddetti.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 27 Eylül 2026, 12:38</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c62l84n9e190o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 27 Eylül 2026, 11:23</span>
+            </div>
+            <h3>&#x27;Bu, gömülü bir hazinenin hikayesi&#x27;: Milyon dolarlık çömlekleri yağmalayan 1970&#x27;lerin mezar soyguncuları</h3>
+            <p>New York’taki Metropolitan Sanat Müzesi’nin 1972’de 1,2 milyon dolara satın aldığı antik Yunan vazosu, uluslararası tarihi eser kaçakçılığının sembollerinden biri haline geldi. Mezar soyguncularından kaçakçılara, koleksiyonerlerden büyük müzelere uzanan bu ticaret, yalnızca paha biçilmez eserleri değil, geçmişimize ilişkin bilgileri de yok ediyor</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ckm2q9n7vnq7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 25 Eylül 2026, 19:46</span>
+            </div>
+            <h3>Fon krizinde yatırımcıların parası nasıl geri ödenebilir?</h3>
+            <p>Türkiye&#x27;de 131 yatırım fonunun tasfiye sürecine alınmasının ardından, bu fonlarda birikimi bulunan yüz binlerce yatırımcı parasına ne zaman ve ne ölçüde ulaşabileceğini merak ediyor. Toplumun genelinde ise kamunun bu borcu yüklenip yüklenmeyeceği sorusu dile getiriliyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cknvlly1vj19o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 23 Eylül 2026, 11:09</span>
+            </div>
+            <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+            <p>Türkiye&#x27;deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 27 Eylül 2026, 10:29</span>
+            </div>
+            <h3>İran: Hürmüz&#x27;ün için sunduğumuz şartlara ara buluculardan kesin yanıt gelmedi</h3>
+            <p>İran Dışişleri Bakanı Abbas Arakçi, Hürmüz Boğazı&#x27;nın açılması konusunda ABD&#x27;ye ilettikleri şartlara ilişkin henüz ara buluculardan kesin bir yanıt almadıklarını belirtti.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-hurmuzun-icin-sundugumuz-sartlara-ara-buluculardan-kesin-yanit-gelmedi-958286.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="yeni parti antalya milletvekili mustafa erdem hakkında soruşturma başlatıldı yeni parti antalya milletvekili mustafa erdem hakkında, &quot;rüşvet&quot; suçlamasıyla soruşturma başlatıldı.erdem, son günlerde antalya büyükşehir belediye başkanı muhittin böcek&#x27;in sağlık durumu gerekçe gösterilerek adli süreçte ev hapsine çıkarılması için 5 milyon dolarlık bir para trafiği ve &quot;iş takibi&quot; yürütüldüğü iddialarıyla gündeme geldi. bu iddiaları reddetti. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 27 Eylül 2026, 12:38</span>
+        </div>
+        <h3>Yeni Parti Antalya Milletvekili Mustafa Erdem hakkında soruşturma başlatıldı</h3>
+        <p>Yeni Parti Antalya Milletvekili Mustafa Erdem hakkında, &quot;rüşvet&quot; suçlamasıyla soruşturma başlatıldı.Erdem, son günlerde Antalya Büyükşehir Belediye Başkanı Muhittin Böcek&#x27;in sağlık durumu gerekçe gösterilerek adli süreçte ev hapsine çıkarılması için 5 milyon dolarlık bir para trafiği ve &quot;iş takibi&quot; yürütüldüğü iddialarıyla gündeme geldi. Bu iddiaları reddetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Eylül 2026, 12:38</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c62l84n9e190o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;bu, gömülü bir hazinenin hikayesi&#x27;: milyon dolarlık çömlekleri yağmalayan 1970&#x27;lerin mezar soyguncuları new york’taki metropolitan sanat müzesi’nin 1972’de 1,2 milyon dolara satın aldığı antik yunan vazosu, uluslararası tarihi eser kaçakçılığının sembollerinden biri haline geldi. mezar soyguncularından kaçakçılara, koleksiyonerlerden büyük müzelere uzanan bu ticaret, yalnızca paha biçilmez eserleri değil, geçmişimize ilişkin bilgileri de yok ediyor ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 27 Eylül 2026, 11:23</span>
+        </div>
+        <h3>&#x27;Bu, gömülü bir hazinenin hikayesi&#x27;: Milyon dolarlık çömlekleri yağmalayan 1970&#x27;lerin mezar soyguncuları</h3>
+        <p>New York’taki Metropolitan Sanat Müzesi’nin 1972’de 1,2 milyon dolara satın aldığı antik Yunan vazosu, uluslararası tarihi eser kaçakçılığının sembollerinden biri haline geldi. Mezar soyguncularından kaçakçılara, koleksiyonerlerden büyük müzelere uzanan bu ticaret, yalnızca paha biçilmez eserleri değil, geçmişimize ilişkin bilgileri de yok ediyor</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Eylül 2026, 11:23</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckm2q9n7vnq7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler? türkiye&#x27;deki fon krizinin ardından sermaye piyasaları kurulu 21 eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 23 Eylül 2026, 11:09</span>
+        </div>
+        <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+        <p>Türkiye&#x27;deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Eylül 2026, 11:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinde spk neden eleştiriliyor? kurumu eleştirenler sermaye piyasası kurulu&#x27;nun düzenleme yapmakta geç kaldığı ve düzenlemelerin yetersiz olduğunu savunuyor. peki spk, bu krizin neresinde yer alıyor? ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 26 Eylül 2026, 10:06</span>
+        </div>
+        <h3>Fon krizinde SPK neden eleştiriliyor?</h3>
+        <p>Kurumu eleştirenler Sermaye Piyasası Kurulu&#x27;nun düzenleme yapmakta geç kaldığı ve düzenlemelerin yetersiz olduğunu savunuyor. Peki SPK, bu krizin neresinde yer alıyor?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Eylül 2026, 10:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6kg09x8yjn8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="spk, 40 uzman yardımcısı alacak sermaye piyasası kurulu (spk), ankara merkezinde ve/veya i̇stanbul temsilciliğinde görevlendirilmek üzere 40&#x27;a kadar uzman yardımcısı istihdam edecek. kurumun konuya ilişkin sınav ilanı, resmi gazete&#x27;de yayımlandı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 27 Eylül 2026, 11:53</span>
+        </div>
+        <h3>SPK, 40 uzman yardımcısı alacak</h3>
+        <p>Sermaye Piyasası Kurulu (SPK), Ankara merkezinde ve/veya İstanbul temsilciliğinde görevlendirilmek üzere 40&#x27;a kadar uzman yardımcısı istihdam edecek. Kurumun konuya ilişkin sınav ilanı, Resmi Gazete&#x27;de yayımlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Eylül 2026, 11:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/spk-40-uzman-yardimcisi-alacak-958288.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">23 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="fon krizinde yatırımcıların parası nasıl geri ödenebilir? türkiye&#x27;de 131 yatırım fonunun tasfiye sürecine alınmasının ardından, bu fonlarda birikimi bulunan yüz binlerce yatırımcı parasına ne zaman ve ne ölçüde ulaşabileceğini merak ediyor. toplumun genelinde ise kamunun bu borcu yüklenip yüklenmeyeceği sorusu dile getiriliyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 19:46</span>
+        </div>
+        <h3>Fon krizinde yatırımcıların parası nasıl geri ödenebilir?</h3>
+        <p>Türkiye&#x27;de 131 yatırım fonunun tasfiye sürecine alınmasının ardından, bu fonlarda birikimi bulunan yüz binlerce yatırımcı parasına ne zaman ve ne ölçüde ulaşabileceğini merak ediyor. Toplumun genelinde ise kamunun bu borcu yüklenip yüklenmeyeceği sorusu dile getiriliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 19:46</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cknvlly1vj19o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan gürlek: 3 faili meçhul cinayet daha aydınlatıldı faili meçhul suçları araştırma daire başkanlığı koordinasyonunda, cumhuriyet başsavcılıkları ile emniyet ve jandarma teşkilatlarının çalışmaları sonucunda 11, 15 ve 19 yıldır aydınlatılmayı bekleyen 3 faili meçhul dosya daha aydınlatıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Eylül 2026, 10:30</span>
+        </div>
+        <h3>Bakan Gürlek: 3 faili meçhul cinayet daha aydınlatıldı</h3>
+        <p>Faili Meçhul Suçları Araştırma Daire Başkanlığı koordinasyonunda, Cumhuriyet başsavcılıkları ile Emniyet ve Jandarma teşkilatlarının çalışmaları sonucunda 11, 15 ve 19 yıldır aydınlatılmayı bekleyen 3 faili meçhul dosya daha aydınlatıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Eylül 2026, 10:30</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-gurlek-3-faili-mechul-cinayet-daha-aydinlatildi-958284.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan kurum&#x27;dan sıfır atık hareketi&#x27;nin 9. yılına ilişkin paylaşım bakan kurum, &quot;9 yıl önce atılan adım bugün dünyaya yön veriyor. 2017&#x27;de başlayan sıfır atık hareketi, &#x27;atma, dönüştür&#x27; çağrısıyla kaynaklara bakışımızı değiştiren büyük bir dönüşüm başlattı.&quot; ifadelerini kullandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 27 Eylül 2026, 12:17</span>
+        </div>
+        <h3>Bakan Kurum&#x27;dan Sıfır Atık Hareketi&#x27;nin 9. yılına ilişkin paylaşım</h3>
+        <p>Bakan Kurum, &quot;9 yıl önce atılan adım bugün dünyaya yön veriyor. 2017&#x27;de başlayan Sıfır Atık Hareketi, &#x27;atma, dönüştür&#x27; çağrısıyla kaynaklara bakışımızı değiştiren büyük bir dönüşüm başlattı.&quot; ifadelerini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 27 Eylül 2026, 12:17</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-kurumdan-sifir-atik-hareketinin-9-yilina-iliskin-paylasim/4070649" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ak parti genel başkan yardımcısı zorlu 2. karabağ savaşı şehitlerini andı ak parti genel başkan yardımcısı zorlu, &quot;onların kahramanlığı ve fedakarlığı, karabağ&#x27;ın yeniden azerbaycan&#x27;a kavuşmasının en anlamlı mirası olarak milletimizin hafızasında daima yaşayacaktır.&quot; ifadesini kullandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 27 Eylül 2026, 11:35</span>
+        </div>
+        <h3>AK Parti Genel Başkan Yardımcısı Zorlu 2. Karabağ Savaşı şehitlerini andı</h3>
+        <p>AK Parti Genel Başkan Yardımcısı Zorlu, &quot;Onların kahramanlığı ve fedakarlığı, Karabağ&#x27;ın yeniden Azerbaycan&#x27;a kavuşmasının en anlamlı mirası olarak milletimizin hafızasında daima yaşayacaktır.&quot; ifadesini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 27 Eylül 2026, 11:35</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ak-parti-genel-baskan-yardimcisi-zorlu-2-karabag-savasi-sehitlerini-andi/4070623" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye, husi-suudi çatışmasına neden dahil olma eğiliminde? yemen&#x27;de konuşlu husiler&#x27;in suudi arabistan hedeflerine dönük saldırılarını artırmasının ardından çok sayıda ülke çeşitli nedenlerle sürece dahil olmaya çalışıyor. kısa süre önce pakistan ve suudi arabistan ile birlikte mekke i̇ttifakı&#x27;nı kuran türkiye de bu ülkelerden biri. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 27 Eylül 2026, 10:40</span>
+        </div>
+        <h3>Türkiye, Husi-Suudi çatışmasına neden dahil olma eğiliminde?</h3>
+        <p>Yemen&#x27;de konuşlu Husiler&#x27;in Suudi Arabistan hedeflerine dönük saldırılarını artırmasının ardından çok sayıda ülke çeşitli nedenlerle sürece dahil olmaya çalışıyor. Kısa süre önce Pakistan ve Suudi Arabistan ile birlikte Mekke İttifakı&#x27;nı kuran Türkiye de bu ülkelerden biri.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Eylül 2026, 10:40</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvzezz5r73n7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon soruşturmasında 46 şirket, 18 fon ve 42 kişinin malvarlığı donduruldu hazine ve maliye bakanı mehmet şimşek, fonlardaki varlıkların transferi ve yatırımcılarına ödemelerle ilgili iki gündür kurum ve kuruluşlarla toplantı halinde. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 27 Eylül 2026, 11:50</span>
+        </div>
+        <h3>Fon soruşturmasında 46 şirket, 18 fon ve 42 kişinin malvarlığı donduruldu</h3>
+        <p>Hazine ve Maliye Bakanı Mehmet Şimşek, fonlardaki varlıkların transferi ve yatırımcılarına ödemelerle ilgili iki gündür kurum ve kuruluşlarla toplantı halinde.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Eylül 2026, 11:50</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck5ywrewe8dxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="emine erdoğan: sıfır atık yolculuğumuz, sınırlarımızı aşan güçlü bir çevre seferberliğine dönüştü emine erdoğan, sıfır atık hareketi&#x27;nin 9. yılına ilişkin yaptığı paylaşımda, &quot;dokuz yıl önce, toprağın bereketini, suyun kıymetini ve tabiatın dengesini koruma niyetiyle bir adım attık. 2017’de başlayan sıfır atık yolculuğumuz, bugün sınırlarımızı aşan güçlü bir çevre seferberliğine dönüştü&quot; ifadelerine yer verdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Eylül 2026, 12:55</span>
+        </div>
+        <h3>Emine Erdoğan: Sıfır Atık yolculuğumuz, sınırlarımızı aşan güçlü bir çevre seferberliğine dönüştü</h3>
+        <p>Emine Erdoğan, Sıfır Atık Hareketi&#x27;nin 9. yılına ilişkin yaptığı paylaşımda, &quot;Dokuz yıl önce, toprağın bereketini, suyun kıymetini ve tabiatın dengesini koruma niyetiyle bir adım attık. 2017’de başlayan Sıfır Atık yolculuğumuz, bugün sınırlarımızı aşan güçlü bir çevre seferberliğine dönüştü&quot; ifadelerine yer verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Eylül 2026, 12:55</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/emine-erdogan-sifir-atik-yolculugumuz-sinirlarimizi-asan-guclu-bir-cevre-seferberligine-donustu-958293.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tbmm&#x27;de geri dönüşüm seferberliği: 1541 ağaç kurtarıldı tbmm yerleşkesinde 1 ekim 2025-10 ağustos 2026 döneminde, 90 bin 654 kilo atık kağıt geri dönüştürülerek, 1541 ağacın kesilmesi önlendi, 13 bin 667 kilo plastik atığın geri kazanılmasıyla 35 bin 643 litre petrol tasarruf edildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Eylül 2026, 11:45</span>
+        </div>
+        <h3>TBMM&#x27;de geri dönüşüm seferberliği: 1541 ağaç kurtarıldı</h3>
+        <p>TBMM yerleşkesinde 1 Ekim 2025-10 Ağustos 2026 döneminde, 90 bin 654 kilo atık kağıt geri dönüştürülerek, 1541 ağacın kesilmesi önlendi, 13 bin 667 kilo plastik atığın geri kazanılmasıyla 35 bin 643 litre petrol tasarruf edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Eylül 2026, 11:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/cevre/tbmmde-geri-donusum-seferberligi-1541-agac-kurtarildi-958287.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çelik: siyasetimizin alfabesi, her türlü yanlışla sonuna kadar mücadele etmektir ak parti sözcüsü ömer çelik, fon soruşturmalarının tüm boyutlarıyla ele alındığını belirterek, &quot;olayların tüm boyutlarını açığa çıkaracak, karanlıkta hiçbir şey kalmayacak ve gereği yapılacaktır. ak parti’mizde “siyasetimizin alfabesi” her türlü yanlışla sonuna kadar mücadele etmektir&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Eylül 2026, 10:47</span>
+        </div>
+        <h3>Çelik: Siyasetimizin alfabesi, her türlü yanlışla sonuna kadar mücadele etmektir</h3>
+        <p>AK Parti Sözcüsü Ömer Çelik, fon soruşturmalarının tüm boyutlarıyla ele alındığını belirterek, &quot;Olayların tüm boyutlarını açığa çıkaracak, karanlıkta hiçbir şey kalmayacak ve gereği yapılacaktır. AK Parti’mizde “siyasetimizin alfabesi” her türlü yanlışla sonuna kadar mücadele etmektir&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Eylül 2026, 10:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/celik-siyasetimizin-alfabesi-her-turlu-yanlisla-sonuna-kadar-mucadele-etmektir-958285.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇letişim başkanı duran, 2. karabağ savaşı şehitlerini andı cumhurbaşkanlığı i̇letişim başkanı burhanettin duran, 2. karabağ savaşı&#x27;nda şehit olanları rahmetle andı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 27 Eylül 2026, 12:55</span>
+        </div>
+        <h3>İletişim Başkanı Duran, 2. Karabağ Savaşı şehitlerini andı</h3>
+        <p>Cumhurbaşkanlığı İletişim Başkanı Burhanettin Duran, 2. Karabağ Savaşı&#x27;nda şehit olanları rahmetle andı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 27 Eylül 2026, 12:55</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iletisim-baskani-duran-2-karabag-savasi-sehitlerini-andi/4070676" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meclis atık kağıtları geri dönüştürdü, 1541 ağacın kesilmesini önledi tbmm yerleşkesinde 1 ekim 2025-10 ağustos 2026 döneminde, 90 bin 654 kilo atık kağıt geri dönüştürülerek, 1541 ağacın kesilmesi önlendi, 13 bin 667 kilo plastik atığın geri kazanılmasıyla 35 bin 643 litre petrol tasarrufu sağlandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 27 Eylül 2026, 11:57</span>
+        </div>
+        <h3>Meclis atık kağıtları geri dönüştürdü, 1541 ağacın kesilmesini önledi</h3>
+        <p>TBMM yerleşkesinde 1 Ekim 2025-10 Ağustos 2026 döneminde, 90 bin 654 kilo atık kağıt geri dönüştürülerek, 1541 ağacın kesilmesi önlendi, 13 bin 667 kilo plastik atığın geri kazanılmasıyla 35 bin 643 litre petrol tasarrufu sağlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 27 Eylül 2026, 11:57</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/meclis-atik-kagitlari-geri-donusturdu-1541-agacin-kesilmesini-onledi/4070634" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kalp krizi geçirince son paketini poliklinikte kırarak sigarayı bıraktı sivas&#x27;ın zara ilçesinde yaşayan ve 8 yaşından itibaren sigara içen 25 yaşındaki genç, geçirdiği kalp krizinin ardından son sigaralarını poliklinikte kırarak bağımlılıktan kurtuldu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 27 Eylül 2026, 11:06</span>
+        </div>
+        <h3>Kalp krizi geçirince son paketini poliklinikte kırarak sigarayı bıraktı</h3>
+        <p>Sivas&#x27;ın Zara ilçesinde yaşayan ve 8 yaşından itibaren sigara içen 25 yaşındaki genç, geçirdiği kalp krizinin ardından son sigaralarını poliklinikte kırarak bağımlılıktan kurtuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 27 Eylül 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kalp-krizi-gecirince-son-paketini-poliklinikte-kirarak-sigarayi-birakti/4070593" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="40 yıl sigara kullanan koah hastasından gençlere sigarayı bırakma çağrısı i̇lkokul yıllarında başladığı sigarayı 40 yıl kullanan koah hastası ramiz sırakaya, yaşadığı sağlık sorunlarının günlük hayatına ve ailesine etkilerini anlatarak gençlere sigarayı bırakmaları çağrısında bulundu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 27 Eylül 2026, 11:16</span>
+        </div>
+        <h3>40 yıl sigara kullanan KOAH hastasından gençlere sigarayı bırakma çağrısı</h3>
+        <p>İlkokul yıllarında başladığı sigarayı 40 yıl kullanan KOAH hastası Ramiz Sırakaya, yaşadığı sağlık sorunlarının günlük hayatına ve ailesine etkilerini anlatarak gençlere sigarayı bırakmaları çağrısında bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 27 Eylül 2026, 11:16</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/40-yil-sigara-kullanan-koah-hastasindan-genclere-sigarayi-birakma-cagrisi/4070608" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;bilimin çözemediği büyük gizemlerden&#x27;: genel anestezi insan bilinci konusunda ipuçları sunuyor genel anesteziklerin nasıl etki ettiği hala tam olarak anlaşılabilmiş değil ancak yine de bilincin doğasına dair ipuçları sunuyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 27 Eylül 2026, 10:57</span>
+        </div>
+        <h3>&#x27;Bilimin çözemediği büyük gizemlerden&#x27;: Genel anestezi insan bilinci konusunda ipuçları sunuyor</h3>
+        <p>Genel anesteziklerin nasıl etki ettiği hala tam olarak anlaşılabilmiş değil ancak yine de bilincin doğasına dair ipuçları sunuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Eylül 2026, 10:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq14dy07e73go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fatma betül sayan kaya, fon iddiaları sonrasında akp&#x27;deki görevinden istifa etti akp genel başkan yardımcısı fatma betül sayan kaya, hakkında çıkan fon iddiaları nedeniyle görevinden istifa ettiğini duyurdu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 27 Eylül 2026, 11:29</span>
+        </div>
+        <h3>Fatma Betül Sayan Kaya, fon iddiaları sonrasında AKP&#x27;deki görevinden istifa etti</h3>
+        <p>AKP Genel Başkan Yardımcısı Fatma Betül Sayan Kaya, hakkında çıkan fon iddiaları nedeniyle görevinden istifa ettiğini duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Eylül 2026, 11:29</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3rr448q5xdvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tera yatırım ceo&#x27;su emir münir sarpyener gözaltına alındı fon soruşturması kapsamında tera yatırım ceo&#x27;su emir münir sarpyener gözaltına alındı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Eylül 2026, 13:02</span>
+        </div>
+        <h3>Tera Yatırım CEO&#x27;su Emir Münir Sarpyener gözaltına alındı</h3>
+        <p>Fon soruşturması kapsamında Tera Yatırım CEO&#x27;su Emir Münir Sarpyener gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Eylül 2026, 13:02</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/tera-yatirim-ceosu-emir-munir-sarpyener-gozaltina-alindi-958292.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="soykırımcı i̇srail&#x27;in ateşkesten bu yana gazze&#x27;ye düzenlediği saldırılarda 1417 kişi öldü katil i̇srail&#x27;in ateşkesin yürürlüğe girdiği 10 ekim 2025&#x27;ten bu yana gazze şeridi&#x27;ne düzenlediği saldırılarda 1417 kişi hayatını kaybetti, 4 bin 964 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Eylül 2026, 12:03</span>
+        </div>
+        <h3>Soykırımcı İsrail&#x27;in ateşkesten bu yana Gazze&#x27;ye düzenlediği saldırılarda 1417 kişi öldü</h3>
+        <p>Katil İsrail&#x27;in ateşkesin yürürlüğe girdiği 10 Ekim 2025&#x27;ten bu yana Gazze Şeridi&#x27;ne düzenlediği saldırılarda 1417 kişi hayatını kaybetti, 4 bin 964 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Eylül 2026, 12:03</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/soykirimci-israilin-ateskesten-bu-yana-gazzeye-duzenledigi-saldirilarda-1417-kisi-oldu-958291.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="620 bin 464 kişiye 1 milyar 82 milyon lira doğal gaz desteği düzenli doğal gaz tüketim desteği&#x27;nde 2026 ocak-eylül döneminde 620 bin 464 hak sahibine toplam 1 milyar 82 milyon lira destek sağlandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Eylül 2026, 12:07</span>
+        </div>
+        <h3>620 bin 464 kişiye 1 milyar 82 milyon lira doğal gaz desteği</h3>
+        <p>Düzenli Doğal Gaz Tüketim Desteği&#x27;nde 2026 Ocak-Eylül döneminde 620 bin 464 hak sahibine toplam 1 milyar 82 milyon lira destek sağlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Eylül 2026, 12:07</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/620-bin-464-kisiye-1-milyar-82-milyon-lira-dogal-gaz-destegi-958290.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeni parti milletvekili mustafa erdem hakkında soruşturma yeni parti antalya milletvekili mustafa erdem hakkında &quot;rüşvet&quot; suçundan re&#x27;sen soruşturma başlatıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 27 Eylül 2026, 11:59</span>
+        </div>
+        <h3>Yeni Parti Milletvekili Mustafa Erdem hakkında soruşturma</h3>
+        <p>Yeni Parti Antalya Milletvekili Mustafa Erdem hakkında &quot;rüşvet&quot; suçundan re&#x27;sen soruşturma başlatıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Eylül 2026, 11:59</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/yeni-parti-milletvekili-mustafa-erdem-hakkinda-sorusturma-958289.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇letişim başkanı duran&#x27;dan dünya turizm günü paylaşımı cumhurbaşkanlığı i̇letişim başkanı burhanettin duran, 27 eylül dünya turizm günü&#x27;nü kutladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 27 Eylül 2026, 13:12</span>
+        </div>
+        <h3>İletişim Başkanı Duran&#x27;dan Dünya Turizm Günü paylaşımı</h3>
+        <p>Cumhurbaşkanlığı İletişim Başkanı Burhanettin Duran, 27 Eylül Dünya Turizm Günü&#x27;nü kutladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 27 Eylül 2026, 13:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iletisim-baskani-durandan-dunya-turizm-gunu-paylasimi/4070689" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="preveze deniz zaferi kapsamında i̇stanbul boğazı&#x27;ndan geçiş yapıldı preveze deniz zaferi&#x27;nin 488. yıl dönümü ve deniz kuvvetleri günü kapsamında türk deniz kuvvetlerine bağlı 13 gemi ve 2 denizaltılık kortej, i̇stanbul boğazı&#x27;ndan geçti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 27 Eylül 2026, 12:54</span>
+        </div>
+        <h3>Preveze Deniz Zaferi kapsamında İstanbul Boğazı&#x27;ndan geçiş yapıldı</h3>
+        <p>Preveze Deniz Zaferi&#x27;nin 488. yıl dönümü ve Deniz Kuvvetleri Günü kapsamında Türk Deniz Kuvvetlerine bağlı 13 gemi ve 2 denizaltılık kortej, İstanbul Boğazı&#x27;ndan geçti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 27 Eylül 2026, 12:54</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/preveze-deniz-zaferi-kapsaminda-istanbul-bogazindan-gecis-yapildi/4070674" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dilekçe komisyonu&#x27;nun kapısı en çok &quot;çalışma&quot; ile &quot;adalet&quot; konularında çalındı tbmm dilekçe komisyonu&#x27;na 28. dönem 4. yasama yılı&#x27;nda gerçekleştirilen 17 bin 489 başvurunun 3 bin 131&#x27;i çalışma ve sosyal güvenlik, 2 bin 261&#x27;i de adalet hizmetleri konusunda yapıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 27 Eylül 2026, 12:01</span>
+        </div>
+        <h3>Dilekçe Komisyonu&#x27;nun kapısı en çok &quot;çalışma&quot; ile &quot;adalet&quot; konularında çalındı</h3>
+        <p>TBMM Dilekçe Komisyonu&#x27;na 28. Dönem 4. Yasama Yılı&#x27;nda gerçekleştirilen 17 bin 489 başvurunun 3 bin 131&#x27;i çalışma ve sosyal güvenlik, 2 bin 261&#x27;i de adalet hizmetleri konusunda yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 27 Eylül 2026, 12:01</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/dilekce-komisyonunun-kapisi-en-cok-calisma-ile-adalet-konularinda-calindi/4070635" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;den 150 üniversite ui greenmetric 2026&#x27;da yer aldı yükseköğretim kurulu (yök), türkiye&#x27;den 150 üniversitenin, yeşil kampüs uygulamaları ve sürdürülebilirlik performanslarının değerlendirildiği ui greenmetric 2026&#x27;da yer aldığını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 27 Eylül 2026, 12:02</span>
+        </div>
+        <h3>Türkiye&#x27;den 150 üniversite UI GreenMetric 2026&#x27;da yer aldı</h3>
+        <p>Yükseköğretim Kurulu (YÖK), Türkiye&#x27;den 150 üniversitenin, yeşil kampüs uygulamaları ve sürdürülebilirlik performanslarının değerlendirildiği UI GreenMetric 2026&#x27;da yer aldığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 27 Eylül 2026, 12:02</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiyeden-150-universite-ui-greenmetric-2026da-yer-aldi/4070637" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇ran: hürmüz&#x27;ün için sunduğumuz şartlara ara buluculardan kesin yanıt gelmedi i̇ran dışişleri bakanı abbas arakçi, hürmüz boğazı&#x27;nın açılması konusunda abd&#x27;ye ilettikleri şartlara ilişkin henüz ara buluculardan kesin bir yanıt almadıklarını belirtti. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 27 Eylül 2026, 10:29</span>
+        </div>
+        <h3>İran: Hürmüz&#x27;ün için sunduğumuz şartlara ara buluculardan kesin yanıt gelmedi</h3>
+        <p>İran Dışişleri Bakanı Abbas Arakçi, Hürmüz Boğazı&#x27;nın açılması konusunda ABD&#x27;ye ilettikleri şartlara ilişkin henüz ara buluculardan kesin bir yanıt almadıklarını belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 27 Eylül 2026, 10:29</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-hurmuzun-icin-sundugumuz-sartlara-ara-buluculardan-kesin-yanit-gelmedi-958286.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran&#x27;dan trump&#x27;ın hürmüz boğazı teklifini reddetmesinin ardından açıklama: &#x27;tek çözüm müzakere&#x27; abd başkanı donald trump&#x27;ın hürmüz boğazı&#x27;nı yeniden açma teklifini kamuoyu önünde reddetmesinin ardından, tahran&#x27;ın dışişleri yetkilisi, abd ile i̇ran arasındaki çatışmayı yalnızca &quot;müzakereye dayalı bir çözümün&quot; sona erdirebileceğini belirtti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 27 Eylül 2026, 13:17</span>
+        </div>
+        <h3>İran&#x27;dan Trump&#x27;ın Hürmüz Boğazı teklifini reddetmesinin ardından açıklama: &#x27;Tek çözüm müzakere&#x27;</h3>
+        <p>ABD Başkanı Donald Trump&#x27;ın Hürmüz Boğazı&#x27;nı yeniden açma teklifini kamuoyu önünde reddetmesinin ardından, Tahran&#x27;ın dışişleri yetkilisi, ABD ile İran arasındaki çatışmayı yalnızca &quot;müzakereye dayalı bir çözümün&quot; sona erdirebileceğini belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Eylül 2026, 13:17</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckqxvvzzyjyno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
