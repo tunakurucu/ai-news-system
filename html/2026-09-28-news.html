@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">28 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">28 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 4</span><span class="stat-item"><strong>dünya</strong> 7</span><span class="stat-item"><strong>genel</strong> 19</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>SPK&#x27;dan tasfiye süreci için 16 ve 17 Eylül ayrımı</h3>
+        <p>Sermaye Piyasası Kurulu (SPK), krizin merkezindeki yatırım fonlarının Türkiye Elektronik Fon Dağıtım Sistemi&#x27;nde (TEFAS) işleme kapatıldığı gün verilen çıkış emirleriyle ilgili bir açıklama yayımladı. Diğer yandan Hazine ve Maliye Bakanı Mehmet Şimşek, 28 Eylül&#x27;de sosyal medya hesabından yaptığı açıklamada soruşturmanın piyasalara olası etkileriyle ilgili tedbirleri aldıklarını söyledi.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 28 Eylül 2026, 12:50</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c6je85n724zxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 28 Eylül 2026, 12:11</span>
+            </div>
+            <h3>ABD&#x27;nin İran&#x27;a karşı kullandığı İngiliz hava üssüne saldırı soruşturmasıyla ilgili neler biliniyor?</h3>
+            <p>İngiltere&#x27;de ABD hava kuvvetleri tarafından da kullanılan Fairford Hava Üssü yakınlarında &quot;terör eylemi hazırlığı içinde oldukları&quot; şüphesiyle beş kişi gözaltına alındı. Saldırı hazırlığında olduklarından şüphelenilen kişiler, bölgedeki bir kadın çiftçinin ihbarıyla durduruldu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c5vgyjmypd29o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 28 Eylül 2026, 12:53</span>
+            </div>
+            <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+            <p>Türkiye&#x27;deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 25 Eylül 2026, 19:46</span>
+            </div>
+            <h3>Fon krizinde yatırımcıların parası nasıl geri ödenebilir?</h3>
+            <p>Türkiye&#x27;de 131 yatırım fonunun tasfiye sürecine alınmasının ardından, bu fonlarda birikimi bulunan yüz binlerce yatırımcı parasına ne zaman ve ne ölçüde ulaşabileceğini merak ediyor. Toplumun genelinde ise kamunun bu borcu yüklenip yüklenmeyeceği sorusu dile getiriliyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cknvlly1vj19o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 28 Eylül 2026, 13:34</span>
+            </div>
+            <h3>İsrail&#x27;in soykırımcı Bakanı, Gazzelileri göçe zorlamak için yeniden inşa umudunun yok edilmesini istedi</h3>
+            <p>İsrail&#x27;in aşırı sağcı Maliye Bakanı Bezalel Smotrich, Gazze Şeridi&#x27;ndeki Filistinlileri göçe zorlamak için bölgenin yeniden inşa edilmesi umudunun yok edilmesini istedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/israilin-soykirimci-bakani-gazzelileri-goce-zorlamak-icin-yeniden-insa-umudunun-yok-edilmesini-istedi-958415.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">4 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="spk&#x27;dan tasfiye süreci için 16 ve 17 eylül ayrımı sermaye piyasası kurulu (spk), krizin merkezindeki yatırım fonlarının türkiye elektronik fon dağıtım sistemi&#x27;nde (tefas) işleme kapatıldığı gün verilen çıkış emirleriyle ilgili bir açıklama yayımladı. diğer yandan hazine ve maliye bakanı mehmet şimşek, 28 eylül&#x27;de sosyal medya hesabından yaptığı açıklamada soruşturmanın piyasalara olası etkileriyle ilgili tedbirleri aldıklarını söyledi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 28 Eylül 2026, 12:50</span>
+        </div>
+        <h3>SPK&#x27;dan tasfiye süreci için 16 ve 17 Eylül ayrımı</h3>
+        <p>Sermaye Piyasası Kurulu (SPK), krizin merkezindeki yatırım fonlarının Türkiye Elektronik Fon Dağıtım Sistemi&#x27;nde (TEFAS) işleme kapatıldığı gün verilen çıkış emirleriyle ilgili bir açıklama yayımladı. Diğer yandan Hazine ve Maliye Bakanı Mehmet Şimşek, 28 Eylül&#x27;de sosyal medya hesabından yaptığı açıklamada soruşturmanın piyasalara olası etkileriyle ilgili tedbirleri aldıklarını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Eylül 2026, 12:50</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6je85n724zxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler? türkiye&#x27;deki fon krizinin ardından sermaye piyasaları kurulu 21 eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 28 Eylül 2026, 12:53</span>
+        </div>
+        <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+        <p>Türkiye&#x27;deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Eylül 2026, 12:53</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinde spk neden eleştiriliyor? kurumu eleştirenler sermaye piyasası kurulu&#x27;nun düzenleme yapmakta geç kaldığı ve düzenlemelerin yetersiz olduğunu savunuyor. peki spk, bu krizin neresinde yer alıyor? ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 26 Eylül 2026, 10:06</span>
+        </div>
+        <h3>Fon krizinde SPK neden eleştiriliyor?</h3>
+        <p>Kurumu eleştirenler Sermaye Piyasası Kurulu&#x27;nun düzenleme yapmakta geç kaldığı ve düzenlemelerin yetersiz olduğunu savunuyor. Peki SPK, bu krizin neresinde yer alıyor?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Eylül 2026, 10:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6kg09x8yjn8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="haluk görgün: yakında hürkuş&#x27;un ihracat haberlerini paylaşacağız cumhurbaşkanlığı savunma sanayii başkanı haluk görgün, &quot;2027 yılında türk hava kuvvetlerinde hürkuş filolarını göreceğiz. 2028 yılı sonuna kadar da 55 uçağın tamamını hava kuvvetlerimizin envanterine kazandırmayı planlıyoruz. çok yakında hürkuş&#x27;un ihracat haberlerini sizlerle paylaşmaya başlayacağız&quot; dedi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 28 Eylül 2026, 13:18</span>
+        </div>
+        <h3>Haluk Görgün: Yakında HÜRKUŞ&#x27;un ihracat haberlerini paylaşacağız</h3>
+        <p>Cumhurbaşkanlığı Savunma Sanayii Başkanı Haluk Görgün, &quot;2027 yılında Türk Hava Kuvvetlerinde HÜRKUŞ filolarını göreceğiz. 2028 yılı sonuna kadar da 55 uçağın tamamını Hava Kuvvetlerimizin envanterine kazandırmayı planlıyoruz. Çok yakında HÜRKUŞ&#x27;un ihracat haberlerini sizlerle paylaşmaya başlayacağız&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Eylül 2026, 13:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/haluk-gorgun-yakinda-hurkusun-ihracat-haberlerini-paylasacagiz-958414.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">7 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="abd&#x27;nin i̇ran&#x27;a karşı kullandığı i̇ngiliz hava üssüne saldırı soruşturmasıyla ilgili neler biliniyor? i̇ngiltere&#x27;de abd hava kuvvetleri tarafından da kullanılan fairford hava üssü yakınlarında &quot;terör eylemi hazırlığı içinde oldukları&quot; şüphesiyle beş kişi gözaltına alındı. saldırı hazırlığında olduklarından şüphelenilen kişiler, bölgedeki bir kadın çiftçinin ihbarıyla durduruldu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 28 Eylül 2026, 12:11</span>
+        </div>
+        <h3>ABD&#x27;nin İran&#x27;a karşı kullandığı İngiliz hava üssüne saldırı soruşturmasıyla ilgili neler biliniyor?</h3>
+        <p>İngiltere&#x27;de ABD hava kuvvetleri tarafından da kullanılan Fairford Hava Üssü yakınlarında &quot;terör eylemi hazırlığı içinde oldukları&quot; şüphesiyle beş kişi gözaltına alındı. Saldırı hazırlığında olduklarından şüphelenilen kişiler, bölgedeki bir kadın çiftçinin ihbarıyla durduruldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Eylül 2026, 12:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5vgyjmypd29o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail&#x27;in soykırımcı bakanı, gazzelileri göçe zorlamak için yeniden inşa umudunun yok edilmesini istedi i̇srail&#x27;in aşırı sağcı maliye bakanı bezalel smotrich, gazze şeridi&#x27;ndeki filistinlileri göçe zorlamak için bölgenin yeniden inşa edilmesi umudunun yok edilmesini istedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 28 Eylül 2026, 13:34</span>
+        </div>
+        <h3>İsrail&#x27;in soykırımcı Bakanı, Gazzelileri göçe zorlamak için yeniden inşa umudunun yok edilmesini istedi</h3>
+        <p>İsrail&#x27;in aşırı sağcı Maliye Bakanı Bezalel Smotrich, Gazze Şeridi&#x27;ndeki Filistinlileri göçe zorlamak için bölgenin yeniden inşa edilmesi umudunun yok edilmesini istedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Eylül 2026, 13:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/israilin-soykirimci-bakani-gazzelileri-goce-zorlamak-icin-yeniden-insa-umudunun-yok-edilmesini-istedi-958415.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ab, filistin sınır yardım ve polis misyonlarının görev süresini 9 ay uzattı avrupa birliği (ab), gazze şeridi&#x27;nde refah&#x27;taki geçiş noktasında konuşlu ab sınır yardım misyonu (eubam refah) ve ab filistin toprakları polis misyonunun (eupol copps) görev süresini 30 haziran 2027&#x27;ye kadar uzatma kararı aldı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 28 Eylül 2026, 12:57</span>
+        </div>
+        <h3>AB, Filistin sınır yardım ve polis misyonlarının görev süresini 9 ay uzattı</h3>
+        <p>Avrupa Birliği (AB), Gazze Şeridi&#x27;nde Refah&#x27;taki geçiş noktasında konuşlu AB Sınır Yardım Misyonu (EUBAM Refah) ve AB Filistin Toprakları Polis Misyonunun (EUPOL COPPS) görev süresini 30 Haziran 2027&#x27;ye kadar uzatma kararı aldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Eylül 2026, 12:57</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ab-filistin-sinir-yardim-ve-polis-misyonlarinin-gorev-suresini-9-ay-uzatti-958409.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye, i̇ber-amerika konferansı&#x27;na &quot;ortak gözlemci&quot; başvurusunun kabul edilmesinden memnun dışişleri bakanlığı, türkiye&#x27;nin i̇ber-amerika konferansı’na ortak gözlemci olma başvurusunun kabul edilmesinden memnuniyet duyulduğunu bildirdi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Eylül 2026, 12:48</span>
+        </div>
+        <h3>Türkiye, İber-Amerika Konferansı&#x27;na &quot;Ortak Gözlemci&quot; başvurusunun kabul edilmesinden memnun</h3>
+        <p>Dışişleri Bakanlığı, Türkiye&#x27;nin İber-Amerika Konferansı’na Ortak Gözlemci olma başvurusunun kabul edilmesinden memnuniyet duyulduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Eylül 2026, 12:48</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiye-iber-amerika-konferansina-ortak-gozlemci-basvurusunun-kabul-edilmesinden-memnun/4071434" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="savcılıktan deniz göktaş için ceza ve tahliye talebi savcılık çağlayan adliyesi&#x27;nde ilk kez hakim karşısına çıkan tutuklu komedyen deniz göktaş&#x27;ın hakkındaki suçlamalardan ceza almasını isteyerek tahliyesini talep etti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 28 Eylül 2026, 13:32</span>
+        </div>
+        <h3>Savcılıktan Deniz Göktaş için ceza ve tahliye talebi</h3>
+        <p>Savcılık Çağlayan Adliyesi&#x27;nde ilk kez hakim karşısına çıkan tutuklu komedyen Deniz Göktaş&#x27;ın hakkındaki suçlamalardan ceza almasını isteyerek tahliyesini talep etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Eylül 2026, 13:32</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq99d8grynjxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="üç uyku pozisyonu için mükemmel yastığı bulmanın ipuçları dr. chris mccarthy, yastık satın almadan önce dikkate almanız gereken dört noktayı açıklıyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 28 Eylül 2026, 13:54</span>
+        </div>
+        <h3>Üç uyku pozisyonu için mükemmel yastığı bulmanın ipuçları</h3>
+        <p>Dr. Chris McCarthy, yastık satın almadan önce dikkate almanız gereken dört noktayı açıklıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Eylül 2026, 13:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqvgyrkne0m7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="batı karadeniz için fırtına uyarısı batı karadeniz için yarın fırtına uyarısında bulunuldu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 28 Eylül 2026, 13:42</span>
+        </div>
+        <h3>Batı Karadeniz için fırtına uyarısı</h3>
+        <p>Batı Karadeniz için yarın fırtına uyarısında bulunuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Eylül 2026, 13:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/bati-karadeniz-icin-firtina-uyarisi-958416.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">19 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="fon krizinde yatırımcıların parası nasıl geri ödenebilir? türkiye&#x27;de 131 yatırım fonunun tasfiye sürecine alınmasının ardından, bu fonlarda birikimi bulunan yüz binlerce yatırımcı parasına ne zaman ve ne ölçüde ulaşabileceğini merak ediyor. toplumun genelinde ise kamunun bu borcu yüklenip yüklenmeyeceği sorusu dile getiriliyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Eylül 2026, 19:46</span>
+        </div>
+        <h3>Fon krizinde yatırımcıların parası nasıl geri ödenebilir?</h3>
+        <p>Türkiye&#x27;de 131 yatırım fonunun tasfiye sürecine alınmasının ardından, bu fonlarda birikimi bulunan yüz binlerce yatırımcı parasına ne zaman ve ne ölçüde ulaşabileceğini merak ediyor. Toplumun genelinde ise kamunun bu borcu yüklenip yüklenmeyeceği sorusu dile getiriliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Eylül 2026, 19:46</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cknvlly1vj19o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan göktaş, evlilik kredisinden yararlanan yeni evli çiftin ilk misafiri oldu aile ve sosyal hizmetler bakanı mahinur özdemir göktaş, aile ve gençlik fonu kapsamındaki &quot;evlenecek gençlerin desteklenmesi projesi&quot;nden yararlanarak yeni yuva kuran esmanur ve yiğit çetinkaya çiftinin evlerinin ilk konuğu oldu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Eylül 2026, 12:33</span>
+        </div>
+        <h3>Bakan Göktaş, evlilik kredisinden yararlanan yeni evli çiftin ilk misafiri oldu</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş, Aile ve Gençlik Fonu kapsamındaki &quot;Evlenecek Gençlerin Desteklenmesi Projesi&quot;nden yararlanarak yeni yuva kuran Esmanur ve Yiğit Çetinkaya çiftinin evlerinin ilk konuğu oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Eylül 2026, 12:33</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-goktas-evlilik-kredisinden-yararlanan-yeni-evli-ciftin-ilk-misafiri-oldu/4071415" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sırbistan&#x27;da cumhurbaşkanı vucic istifa etti, erken seçimlerin önü açıldı sırbistan cumhurbaşkanı, bir yıldan uzun süredir devam eden öğrenci protestoları ve hükümet yolsuzluğu iddialarına ilişkin artan kamuoyu hoşnutsuzluğunun ardından istifa etti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 28 Eylül 2026, 11:15</span>
+        </div>
+        <h3>Sırbistan&#x27;da Cumhurbaşkanı Vucic istifa etti, erken seçimlerin önü açıldı</h3>
+        <p>Sırbistan Cumhurbaşkanı, bir yıldan uzun süredir devam eden öğrenci protestoları ve hükümet yolsuzluğu iddialarına ilişkin artan kamuoyu hoşnutsuzluğunun ardından istifa etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Eylül 2026, 11:15</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmgjq9wn29pxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="siyasalaskeri casusluk soruşturması: fetö bağlantılı 4 şüpheliye tutuklama talebi masak başkanlığının kritik dijital altyapısının geliştirilmesi ve sürdürülmesi süreçlerinde fetullahçı terör örgütü&#x27;nün (fetö) gizli yapılanmasıyla bağlantılı kişi ve şirketlerin etkili olduğuna yönelik &quot;siyasal veya askeri casusluk&quot; soruşturması kapsamında gözaltına alınan 4 şüpheli tutuklama talebiyle sulh ceza hakimliğine sevk edildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Eylül 2026, 13:43</span>
+        </div>
+        <h3>Siyasalaskeri casusluk soruşturması: FETÖ bağlantılı 4 şüpheliye tutuklama talebi</h3>
+        <p>MASAK Başkanlığının kritik dijital altyapısının geliştirilmesi ve sürdürülmesi süreçlerinde Fetullahçı Terör Örgütü&#x27;nün (FETÖ) gizli yapılanmasıyla bağlantılı kişi ve şirketlerin etkili olduğuna yönelik &quot;siyasal veya askeri casusluk&quot; soruşturması kapsamında gözaltına alınan 4 şüpheli tutuklama talebiyle sulh ceza hakimliğine sevk edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Eylül 2026, 13:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/siyasal-askeri-casusluk-sorusturmasi-feto-baglantili-4-supheliye-tutuklama-talebi-958418.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="soykırımcı i̇srail&#x27;in aşırı sağcı bakanı bengvir, polis korumasında mescidi aksa&#x27;ya baskın düzenledi soykırımcı i̇srail&#x27;in aşırı sağcı ulusal güvenlik bakanı itamar ben-gvir, işgal altındaki doğu kudüs&#x27;te bulunan mescid-i aksa&#x27;ya i̇srail polisinin yoğun koruması altında baskın düzenledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Eylül 2026, 13:18</span>
+        </div>
+        <h3>Soykırımcı İsrail&#x27;in aşırı sağcı bakanı BenGvir, polis korumasında Mescidi Aksa&#x27;ya baskın düzenledi</h3>
+        <p>Soykırımcı İsrail&#x27;in aşırı sağcı Ulusal Güvenlik Bakanı Itamar Ben-Gvir, işgal altındaki Doğu Kudüs&#x27;te bulunan Mescid-i Aksa&#x27;ya İsrail polisinin yoğun koruması altında baskın düzenledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Eylül 2026, 13:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/soykirimci-israilin-asiri-sagci-bakani-ben-gvir-polis-korumasinda-mescid-i-aksaya-baskin-duzenledi-958413.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇dris demir: sigarayı bırakalı 3 ay oldu, sağlık sorunlarımın çoğu gitti kayseri&#x27;de yaşayan 63 yaşındaki işçi emeklisi i̇dris demir günde 3 paket sigara tüketiyordu. sağlık sorunlarından dolayı sigarayı bırakma polikliniği&#x27;ne başvurdu. 3 aydır sigara kullanmayan demir, &quot;merdiven çıkamıyordum, nefesim kesiliyordu. astım bronşit oldum, bacaklarımda varis vardı. sağlık sorunlarımın çoğu gitti&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Eylül 2026, 13:19</span>
+        </div>
+        <h3>İdris Demir: Sigarayı bırakalı 3 ay oldu, sağlık sorunlarımın çoğu gitti</h3>
+        <p>Kayseri&#x27;de yaşayan 63 yaşındaki işçi emeklisi İdris Demir günde 3 paket sigara tüketiyordu. Sağlık sorunlarından dolayı Sigarayı Bırakma Polikliniği&#x27;ne başvurdu. 3 aydır sigara kullanmayan Demir, &quot;Merdiven çıkamıyordum, nefesim kesiliyordu. Astım bronşit oldum, bacaklarımda varis vardı. Sağlık sorunlarımın çoğu gitti&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Eylül 2026, 13:19</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/saglik/idris-demir-sigarayi-birakali-3-ay-oldu-saglik-sorunlarimin-cogu-gitti-958412.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milli dayanışma ve bütünleşme koordinasyon kurulu toplandı milli dayanışma ve bütünleşme koordinasyon kurulu, toplumsal bütünleşmeyi pekiştirecek adımları görüşmek üzere külliye’de bir araya geldi. kanunun uygulanmasına yönelik faaliyetlerin ele alındığı toplantıda, kurumlar arası eşgüdümün önemine vurgu yapıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Eylül 2026, 13:02</span>
+        </div>
+        <h3>Milli Dayanışma ve Bütünleşme Koordinasyon Kurulu toplandı</h3>
+        <p>Milli Dayanışma ve Bütünleşme Koordinasyon Kurulu, toplumsal bütünleşmeyi pekiştirecek adımları görüşmek üzere Külliye’de bir araya geldi. Kanunun uygulanmasına yönelik faaliyetlerin ele alındığı toplantıda, kurumlar arası eşgüdümün önemine vurgu yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Eylül 2026, 13:02</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/milli-dayanisma-ve-butunlesme-koordinasyon-kurulu-toplandi-958410.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gazze&#x27;nin akademik mücadelesi 150 bilim kafe etkinliğinde anlatıldı yükseköğretim kurulu bilim i̇letişimi ofisi koordinasyonunda 1 eylül dünya barış günü&#x27;nde başlatılan &quot;gazze üniversiteleri ile dayanışma programı&quot;, türkiye&#x27;nin her bölgesinde vatandaşları filistinli akademisyen ve öğrencilerle buluşturdu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Eylül 2026, 14:12</span>
+        </div>
+        <h3>Gazze&#x27;nin akademik mücadelesi 150 Bilim Kafe etkinliğinde anlatıldı</h3>
+        <p>Yükseköğretim Kurulu Bilim İletişimi Ofisi koordinasyonunda 1 Eylül Dünya Barış Günü&#x27;nde başlatılan &quot;Gazze Üniversiteleri ile Dayanışma Programı&quot;, Türkiye&#x27;nin her bölgesinde vatandaşları Filistinli akademisyen ve öğrencilerle buluşturdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Eylül 2026, 14:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/gazzenin-akademik-mucadelesi-150-bilim-kafe-etkinliginde-anlatildi/4071526" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da özel halk otobüsünün durakta bekleyenlere çarptığı kazaya ilişkin davada karar çekmeköy&#x27;de, 1 kişinin öldüğü, 4 kişinin yaralandığı i̇ett&#x27;ye bağlı özel halk otobüsünün karıştığı zincirleme trafik kazasına ilişkin 2 müşteki sanıktan şoför hüseyin gezer, 30 yıl hapis cezasına çarptırıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Eylül 2026, 12:16</span>
+        </div>
+        <h3>İstanbul&#x27;da özel halk otobüsünün durakta bekleyenlere çarptığı kazaya ilişkin davada karar</h3>
+        <p>Çekmeköy&#x27;de, 1 kişinin öldüğü, 4 kişinin yaralandığı İETT&#x27;ye bağlı özel halk otobüsünün karıştığı zincirleme trafik kazasına ilişkin 2 müşteki sanıktan şoför Hüseyin Gezer, 30 yıl hapis cezasına çarptırıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Eylül 2026, 12:16</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-ozel-halk-otobusunun-durakta-bekleyenlere-carptigi-kazaya-iliskin-davada-karar/4071386" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye, yeni nesil şehircilik vizyonuyla cop31&#x27;de liderlik üstlenebilir prof. dr. i̇pek gürsel dino, cop31&#x27;in iklim dirençli kentler konusunda önemli fırsatlar sunduğunu, türkiye&#x27;nin afetlere dayanıklı ve çevresel etkisi düşük yeni nesil şehircilik vizyonuyla uluslararası düzeyde liderlik üstlenmesi gerektiğini söyledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Eylül 2026, 11:14</span>
+        </div>
+        <h3>Türkiye, yeni nesil şehircilik vizyonuyla COP31&#x27;de liderlik üstlenebilir</h3>
+        <p>Prof. Dr. İpek Gürsel Dino, COP31&#x27;in iklim dirençli kentler konusunda önemli fırsatlar sunduğunu, Türkiye&#x27;nin afetlere dayanıklı ve çevresel etkisi düşük yeni nesil şehircilik vizyonuyla uluslararası düzeyde liderlik üstlenmesi gerektiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Eylül 2026, 11:14</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiye-yeni-nesil-sehircilik-vizyonuyla-cop31de-liderlik-ustlenebilir/4071308" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kastamonu&#x27;nun &quot;saklı cenneti&quot; saltuklu kanyonu doğa tutkunlarını bekliyor araç ilçesinde saltuklu ve oycalı köyleri arasında yer alan, cibiş çayı&#x27;nın binlerce yıllık yolculuğunda şekillenen 865 metre uzunluğundaki saltuklu kanyonu, berrak suyu, kayalık yapısı ve doğal güzellikleriyle dikkati çekiyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Eylül 2026, 11:54</span>
+        </div>
+        <h3>Kastamonu&#x27;nun &quot;saklı cenneti&quot; Saltuklu Kanyonu doğa tutkunlarını bekliyor</h3>
+        <p>Araç ilçesinde Saltuklu ve Oycalı köyleri arasında yer alan, Cibiş Çayı&#x27;nın binlerce yıllık yolculuğunda şekillenen 865 metre uzunluğundaki Saltuklu Kanyonu, berrak suyu, kayalık yapısı ve doğal güzellikleriyle dikkati çekiyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Eylül 2026, 11:54</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kastamonunun-sakli-cenneti-saltuklu-kanyonu-doga-tutkunlarini-bekliyor/4071354" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇rlanda&#x27;nın, i̇srail maçındaki eylemi: &#x27;dünya çapında farkındalık yarattı&#x27; i̇rlanda cumhuriyeti teknik direktörü heimir hallgrimsson, oyuncularının i̇srail ile maç öncesi törenlere katılmamayı tercih etmelerinin ardından &quot;dünya çapında farkındalık yarattığını&quot; söyledi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 28 Eylül 2026, 09:02</span>
+        </div>
+        <h3>İrlanda&#x27;nın, İsrail maçındaki eylemi: &#x27;Dünya çapında farkındalık yarattı&#x27;</h3>
+        <p>İrlanda Cumhuriyeti teknik direktörü Heimir Hallgrimsson, oyuncularının İsrail ile maç öncesi törenlere katılmamayı tercih etmelerinin ardından &quot;dünya çapında farkındalık yarattığını&quot; söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Eylül 2026, 09:02</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9vgyr88d0d6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fatma betül sayan kaya, fon iddiaları sonrasında akp&#x27;deki görevinden istifa etti akp genel başkan yardımcısı fatma betül sayan kaya, hakkında çıkan fon iddiaları nedeniyle görevinden istifa ettiğini duyurdu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 27 Eylül 2026, 17:03</span>
+        </div>
+        <h3>Fatma Betül Sayan Kaya, fon iddiaları sonrasında AKP&#x27;deki görevinden istifa etti</h3>
+        <p>AKP Genel Başkan Yardımcısı Fatma Betül Sayan Kaya, hakkında çıkan fon iddiaları nedeniyle görevinden istifa ettiğini duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Eylül 2026, 17:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3rr448q5xdvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="güney afrika&#x27;da johannesburg&#x27;un doğusunda bulunan kadın cesedi sayısı 11e yükseldi güney afrika cumhuriyeti’nin gauteng eyaletinde, johannesburg&#x27;un doğusundaki ekurhuleni bölgesinde temmuzdan bu yana bulunan kadın cesedi sayısı 11’e yükseldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Eylül 2026, 13:43</span>
+        </div>
+        <h3>Güney Afrika&#x27;da Johannesburg&#x27;un doğusunda bulunan kadın cesedi sayısı 11e yükseldi</h3>
+        <p>Güney Afrika Cumhuriyeti’nin Gauteng eyaletinde, Johannesburg&#x27;un doğusundaki Ekurhuleni bölgesinde temmuzdan bu yana bulunan kadın cesedi sayısı 11’e yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Eylül 2026, 13:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/guney-afrikada-johannesburgun-dogusunda-bulunan-kadin-cesedi-sayisi-11e-yukseldi-958417.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇şgalci i̇srail ordusu, ateşkese rağmen lübnan&#x27;ın güneyine saldırılarını sürdürdü i̇şgalci i̇srail ordusu, ateşkese ve çerçeve anlaşmasına rağmen lübnan&#x27;ın güneyindeki bölgelere hava ve topçu saldırıları düzenledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Eylül 2026, 13:03</span>
+        </div>
+        <h3>İşgalci İsrail ordusu, ateşkese rağmen Lübnan&#x27;ın güneyine saldırılarını sürdürdü</h3>
+        <p>İşgalci İsrail ordusu, ateşkese ve çerçeve anlaşmasına rağmen Lübnan&#x27;ın güneyindeki bölgelere hava ve topçu saldırıları düzenledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Eylül 2026, 13:03</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/isgalci-israil-ordusu-ateskese-ragmen-lubnanin-guneyine-saldirilarini-surdurdu-958408.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tbmm başkanı kurtulmuş, türkiye&#x27;nin lizbon büyükelçiliğini ziyaret etti tbmm başkanı numan kurtulmuş, portekiz&#x27;deki resmi temasları kapsamında türkiye&#x27;nin lizbon büyükelçiliğini ziyaret etti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Eylül 2026, 12:22</span>
+        </div>
+        <h3>TBMM Başkanı Kurtulmuş, Türkiye&#x27;nin Lizbon Büyükelçiliğini ziyaret etti</h3>
+        <p>TBMM Başkanı Numan Kurtulmuş, Portekiz&#x27;deki resmi temasları kapsamında Türkiye&#x27;nin Lizbon Büyükelçiliğini ziyaret etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Eylül 2026, 12:22</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tbmm-baskani-kurtulmus-turkiyenin-lizbon-buyukelciligini-ziyaret-etti/4071398" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meclis&#x27;te yeni yasama yılı 1 ekim&#x27;de başlıyor tbmm genel kurulu, 51 günlük aranın ardından yasama çalışmalarına 1 ekim&#x27;de başlayacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Eylül 2026, 11:59</span>
+        </div>
+        <h3>Meclis&#x27;te yeni yasama yılı 1 Ekim&#x27;de başlıyor</h3>
+        <p>TBMM Genel Kurulu, 51 günlük aranın ardından yasama çalışmalarına 1 Ekim&#x27;de başlayacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Eylül 2026, 11:59</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mecliste-yeni-yasama-yili-1-ekimde-basliyor/4071362" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da ağustosta en çok karpuz ve domates tüketildi i̇stanbul&#x27;un meyve ve sebze hallerindeki satış rakamlarına göre, ağustos ayında kentte en çok karpuz ve domates tüketildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Eylül 2026, 11:09</span>
+        </div>
+        <h3>İstanbul&#x27;da ağustosta en çok karpuz ve domates tüketildi</h3>
+        <p>İstanbul&#x27;un meyve ve sebze hallerindeki satış rakamlarına göre, ağustos ayında kentte en çok karpuz ve domates tüketildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Eylül 2026, 11:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-agustosta-en-cok-karpuz-ve-domates-tuketildi/4071298" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çocuklarının &quot;baba çok kötü kokuyorsun&quot; sözünden etkilenerek 25 yıl içtiği sigarayı bıraktı van&#x27;da yaşayan yunus sunkur, çocuklarının &quot;baba çok kötü kokuyorsun&quot; demesinden etkilenerek sağlıklı hayat merkezi&#x27;nden aldığı destekle 25 yıl boyunca içtiği sigarayı bıraktı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Eylül 2026, 11:06</span>
+        </div>
+        <h3>Çocuklarının &quot;Baba çok kötü kokuyorsun&quot; sözünden etkilenerek 25 yıl içtiği sigarayı bıraktı</h3>
+        <p>Van&#x27;da yaşayan Yunus Sunkur, çocuklarının &quot;baba çok kötü kokuyorsun&quot; demesinden etkilenerek Sağlıklı Hayat Merkezi&#x27;nden aldığı destekle 25 yıl boyunca içtiği sigarayı bıraktı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Eylül 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cocuklarinin-baba-cok-kotu-kokuyorsun-sozunden-etkilenerek-25-yil-ictigi-sigarayi-birakti/4071288" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
