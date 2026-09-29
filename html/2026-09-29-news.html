@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">29 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">29 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 3</span><span class="stat-item"><strong>genel</strong> 16</span><span class="stat-item"><strong>dünya</strong> 8</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>spor</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>Erdoğan&#x27;dan fon krizi açıklaması: Finansal sistemimizde risk yok</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, kabine toplantısı sonrası yaptığı açıklamada &quot;fon konusunu etraflıca değerlendirdik&quot; dedi. &quot;Yaşanan sorun fon piyasasının sınırlı bir bölümünde meydana gelmiştir. Finansal sistemimize sirayet etmiş herhangi bir risk mevzu bahis değildir&quot; sözlerini ekledi.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 29 Eylül 2026, 12:48</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c6je85n724zxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">Anadolu Ajansı · 29 Eylül 2026, 12:17</span>
+            </div>
+            <h3>Türkiye, New York&#x27;ta yoğun bir iklim diplomasisi yürüttü</h3>
+            <p>COP31 Başkanı ve Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, &quot;Küresel iklim sahnesinde Türkiye farkı. Cumhurbaşkanımız Sayın Recep Tayyip Erdoğan liderliğinde COP31 vizyonumuzu New York&#x27;un her köşesine taşıdık.&quot; ifadelerini kullandı.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiye-new-yorkta-yogun-bir-iklim-diplomasisi-yuruttu/4072385" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 28 Eylül 2026, 16:49</span>
+            </div>
+            <h3>Muhalefetten Fatma Betül Sayan Kaya ve eşi için soruşturma çağrısı</h3>
+            <p>AKP&#x27;deki görevlerinden istifa eden Fatma Betül Sayan Kaya&#x27;nın tasfiye edilen fonlardan yüklü kazanç sağladığı iddialarına tepkiler sürüyor. Yeni Partili yetkililer, Sayan Kaya ve eşi hakkında soruşturma başlatılması çağrıları yaptı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cr93ezxklevvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 28 Eylül 2026, 12:53</span>
+            </div>
+            <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+            <p>Türkiye&#x27;deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 29 Eylül 2026, 13:53</span>
+            </div>
+            <h3>NATO: Rusya&#x27;nın güç kullanma tehdidini ve nükleer söylemlerini kınıyoruz</h3>
+            <p>NATO Sözcüsü Allison Hart, Rusya&#x27;nın İttifak&#x27;a gayriresmi bir belge ilettiğini ve NATO&#x27;nun buna verdiği yanıtta, nükleer silahlara ilişkin sorumsuz söylemler de dahil, güç kullanma tehdidini güçlü biçimde kınadığını bildirdi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/nato-rusyanin-guc-kullanma-tehdidini-ve-nukleer-soylemlerini-kiniyoruz-958525.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="erdoğan&#x27;dan fon krizi açıklaması: finansal sistemimizde risk yok cumhurbaşkanı recep tayyip erdoğan, kabine toplantısı sonrası yaptığı açıklamada &quot;fon konusunu etraflıca değerlendirdik&quot; dedi. &quot;yaşanan sorun fon piyasasının sınırlı bir bölümünde meydana gelmiştir. finansal sistemimize sirayet etmiş herhangi bir risk mevzu bahis değildir&quot; sözlerini ekledi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 29 Eylül 2026, 12:48</span>
+        </div>
+        <h3>Erdoğan&#x27;dan fon krizi açıklaması: Finansal sistemimizde risk yok</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, kabine toplantısı sonrası yaptığı açıklamada &quot;fon konusunu etraflıca değerlendirdik&quot; dedi. &quot;Yaşanan sorun fon piyasasının sınırlı bir bölümünde meydana gelmiştir. Finansal sistemimize sirayet etmiş herhangi bir risk mevzu bahis değildir&quot; sözlerini ekledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Eylül 2026, 12:48</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6je85n724zxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler? türkiye&#x27;deki fon krizinin ardından sermaye piyasaları kurulu 21 eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 28 Eylül 2026, 12:53</span>
+        </div>
+        <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+        <p>Türkiye&#x27;deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Eylül 2026, 12:53</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinde spk neden eleştiriliyor? kurumu eleştirenler sermaye piyasası kurulu&#x27;nun düzenleme yapmakta geç kaldığı ve düzenlemelerin yetersiz olduğunu savunuyor. peki spk, bu krizin neresinde yer alıyor? ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 26 Eylül 2026, 10:06</span>
+        </div>
+        <h3>Fon krizinde SPK neden eleştiriliyor?</h3>
+        <p>Kurumu eleştirenler Sermaye Piyasası Kurulu&#x27;nun düzenleme yapmakta geç kaldığı ve düzenlemelerin yetersiz olduğunu savunuyor. Peki SPK, bu krizin neresinde yer alıyor?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Eylül 2026, 10:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6kg09x8yjn8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">16 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye, new york&#x27;ta yoğun bir iklim diplomasisi yürüttü cop31 başkanı ve çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, &quot;küresel iklim sahnesinde türkiye farkı. cumhurbaşkanımız sayın recep tayyip erdoğan liderliğinde cop31 vizyonumuzu new york&#x27;un her köşesine taşıdık.&quot; ifadelerini kullandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Eylül 2026, 12:17</span>
+        </div>
+        <h3>Türkiye, New York&#x27;ta yoğun bir iklim diplomasisi yürüttü</h3>
+        <p>COP31 Başkanı ve Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, &quot;Küresel iklim sahnesinde Türkiye farkı. Cumhurbaşkanımız Sayın Recep Tayyip Erdoğan liderliğinde COP31 vizyonumuzu New York&#x27;un her köşesine taşıdık.&quot; ifadelerini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Eylül 2026, 12:17</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiye-new-yorkta-yogun-bir-iklim-diplomasisi-yuruttu/4072385" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ak parti sözcüsü çelik&#x27;ten özgür özel&#x27;e tepki ak parti genel başkan yardımcısı ve parti sözcüsü ömer çelik, yeni parti genel başkanı özgür özel&#x27;in, cumhurbaşkanı ve ak parti genel başkanı recep tayyip erdoğan&#x27;a dönük sözlerinin baştan aşağı siyasi cehalet ve siyasi iftiradan ibaret olduğunu belirterek, &quot;bunlarla en net şekilde mücadele edeceğimizden kimsenin kuşkusu olmasın&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Eylül 2026, 13:15</span>
+        </div>
+        <h3>AK Parti Sözcüsü Çelik&#x27;ten Özgür Özel&#x27;e tepki</h3>
+        <p>AK Parti Genel Başkan Yardımcısı ve Parti Sözcüsü Ömer Çelik, Yeni Parti Genel Başkanı Özgür Özel&#x27;in, Cumhurbaşkanı ve AK Parti Genel Başkanı Recep Tayyip Erdoğan&#x27;a dönük sözlerinin baştan aşağı siyasi cehalet ve siyasi iftiradan ibaret olduğunu belirterek, &quot;Bunlarla en net şekilde mücadele edeceğimizden kimsenin kuşkusu olmasın&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Eylül 2026, 13:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/ak-parti-sozcusu-celikten-ozgur-ozele-tepki-958517.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sağlık bakanlığı 117 kalp merkeziyle ileri tanı ve tedavi hizmeti sunuyor sağlık bakanlığı bünyesinde kamu hastanelerinde faaliyet gösteren 117 kalp merkezinde tanı, tedavi ve takip süreçleri yürütülürken, geçen yıl 46, bu yılın ilk yarısında ise 11 kalp nakli gerçekleştirildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Eylül 2026, 13:40</span>
+        </div>
+        <h3>Sağlık Bakanlığı 117 kalp merkeziyle ileri tanı ve tedavi hizmeti sunuyor</h3>
+        <p>Sağlık Bakanlığı bünyesinde kamu hastanelerinde faaliyet gösteren 117 kalp merkezinde tanı, tedavi ve takip süreçleri yürütülürken, geçen yıl 46, bu yılın ilk yarısında ise 11 kalp nakli gerçekleştirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Eylül 2026, 13:40</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/saglik-bakanligi-117-kalp-merkeziyle-ileri-tani-ve-tedavi-hizmeti-sunuyor-/4072482" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="lig tarihinin en büyük disiplin soruşturmasında manchester city&#x27;yi ne bekliyor? bbc&#x27;nin kaynaklara dayandırdığı haberine göre , manchester city, premier lig&#x27;in mali kurallarını ihlal ettiği iddiasıyla yöneltilen 115 suçlamadan biri hariç tümünden suçlu bulundu. peki bundan sonra ne olabilir? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 29 Eylül 2026, 13:20</span>
+        </div>
+        <h3>Lig tarihinin en büyük disiplin soruşturmasında Manchester City&#x27;yi ne bekliyor?</h3>
+        <p>BBC&#x27;nin kaynaklara dayandırdığı haberine göre , Manchester City, Premier Lig&#x27;in mali kurallarını ihlal ettiği iddiasıyla yöneltilen 115 suçlamadan biri hariç tümünden suçlu bulundu. Peki bundan sonra ne olabilir?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Eylül 2026, 13:20</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm1j44dg0ne8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bm&#x27;ye göre fon kesintileri nedeniyle yaklaşık 8,3 milyon yerinden edilmiş kişi yardımlara erişemeyebilir birleşmiş milletler mülteciler yüksek komiserliği (bmmyk), yüksek fon kesintileri nedeniyle yaklaşık 8,3 milyon mülteci ve zorla yerinden edilmiş kişinin, hayati önem taşıyan yardımlara erişimlerini kaybetme tehlikesiyle karşı karşıya olduğunu bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Eylül 2026, 13:42</span>
+        </div>
+        <h3>BM&#x27;ye göre fon kesintileri nedeniyle yaklaşık 8,3 milyon yerinden edilmiş kişi yardımlara erişemeyebilir</h3>
+        <p>Birleşmiş Milletler Mülteciler Yüksek Komiserliği (BMMYK), yüksek fon kesintileri nedeniyle yaklaşık 8,3 milyon mülteci ve zorla yerinden edilmiş kişinin, hayati önem taşıyan yardımlara erişimlerini kaybetme tehlikesiyle karşı karşıya olduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Eylül 2026, 13:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/bmye-gore-fon-kesintileri-nedeniyle-yaklasik-83-milyon-yerinden-edilmis-kisi-yardimlara-erisemeyebilir-958523.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dışişleri bakanı fidan, almanya&#x27;nın kuzey ren-vestfalya eyaleti başbakanı wüst ile görüştü dışişleri bakanı hakan fidan, almanya&#x27;nın kuzey ren-vestfalya eyaleti başbakanı hendrik wüst ile bir araya geldi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Eylül 2026, 13:28</span>
+        </div>
+        <h3>Dışişleri Bakanı Fidan, Almanya&#x27;nın Kuzey Ren-Vestfalya Eyaleti Başbakanı Wüst ile görüştü</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, Almanya&#x27;nın Kuzey Ren-Vestfalya Eyaleti Başbakanı Hendrik Wüst ile bir araya geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Eylül 2026, 13:28</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/disisleri-bakani-fidan-almanyanin-kuzey-ren-vestfalya-eyaleti-basbakani-wust-ile-gorustu/4072462" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="aile hekimi, oğluna doğum günü hediyesi olarak sigarayı bıraktı diyarbakır&#x27;ın merkez kayapınar ilçesindeki di̇ski̇ aile sağlığı merkezi&#x27;nde görev yapan aile hekimi uzman dr. rıdvan çelik, 7 yaşındaki oğluna doğum günü hediyesi olarak sigara bağımlılığından kurtuldu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Eylül 2026, 11:12</span>
+        </div>
+        <h3>Aile hekimi, oğluna doğum günü hediyesi olarak sigarayı bıraktı</h3>
+        <p>Diyarbakır&#x27;ın merkez Kayapınar ilçesindeki DİSKİ Aile Sağlığı Merkezi&#x27;nde görev yapan aile hekimi Uzman Dr. Rıdvan Çelik, 7 yaşındaki oğluna doğum günü hediyesi olarak sigara bağımlılığından kurtuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Eylül 2026, 11:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/aile-hekimi-ogluna-dogum-gunu-hediyesi-olarak-sigarayi-birakti/4072301" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bbc, husilerin ele geçirmeye çalıştığı yemen kentinde bbc gazetecilerin nadiren erişebildiği yemen&#x27;de cephe hattındaki taiz&#x27;e ulaştı ve çevredeki tepelerden yankılanan silah sesleriyle dolu bir şehirde yaşayanlarla konuştu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 29 Eylül 2026, 02:09</span>
+        </div>
+        <h3>BBC, Husilerin ele geçirmeye çalıştığı Yemen kentinde</h3>
+        <p>BBC gazetecilerin nadiren erişebildiği Yemen&#x27;de cephe hattındaki Taiz&#x27;e ulaştı ve çevredeki tepelerden yankılanan silah sesleriyle dolu bir şehirde yaşayanlarla konuştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Eylül 2026, 02:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq4gr1jzv3gdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="katil i̇srail&#x27;in ateşkesten beri gazze&#x27;ye düzenlediği saldırılarda ölenlerin sayısı 1422&#x27;ye yükseldi soykırımcı i̇srail&#x27;in ateşkesin yürürlüğe girdiği 10 ekim 2025&#x27;ten beri gazze şeridi&#x27;ne düzenlediği saldırılarda 1422 kişi hayatını kaybetti, 4 bin 996 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Eylül 2026, 13:38</span>
+        </div>
+        <h3>Katil İsrail&#x27;in ateşkesten beri Gazze&#x27;ye düzenlediği saldırılarda ölenlerin sayısı 1422&#x27;ye yükseldi</h3>
+        <p>Soykırımcı İsrail&#x27;in ateşkesin yürürlüğe girdiği 10 Ekim 2025&#x27;ten beri Gazze Şeridi&#x27;ne düzenlediği saldırılarda 1422 kişi hayatını kaybetti, 4 bin 996 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Eylül 2026, 13:38</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/katil-israilin-ateskesten-beri-gazzeye-duzenledigi-saldirilarda-olenlerin-sayisi-1422ye-yukseldi-958521.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kangal ve ejderha&#x27;dan dronlara karşı çifte savunma aselsan, mini/mikro i̇ha ve yeni nesil fpv dron tehditlerine karşı geliştirdiği kangal fpv 100 ve ejderha ad 210 sistemlerinin kabiliyetlerini sahada sergiledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Eylül 2026, 13:34</span>
+        </div>
+        <h3>KANGAL ve EJDERHA&#x27;dan dronlara karşı çifte savunma</h3>
+        <p>ASELSAN, mini/mikro İHA ve yeni nesil FPV dron tehditlerine karşı geliştirdiği KANGAL FPV 100 ve EJDERHA AD 210 sistemlerinin kabiliyetlerini sahada sergiledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Eylül 2026, 13:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/savunma/kangal-ve-ejderhadan-dronlara-karsi-cifte-savunma-958519.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="düzce&#x27;de fırtına balıkçı barınağını vurdu: 7 tekne battı düzce&#x27;nin akçakoca ilçesinde olumsuz hava koşullarından etkilenen 7 teknede hasar oluştu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Eylül 2026, 13:19</span>
+        </div>
+        <h3>Düzce&#x27;de fırtına balıkçı barınağını vurdu: 7 tekne battı</h3>
+        <p>Düzce&#x27;nin Akçakoca ilçesinde olumsuz hava koşullarından etkilenen 7 teknede hasar oluştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Eylül 2026, 13:19</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/duzcede-firtina-balikci-barinagini-vurdu-7-tekne-batti-958518.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk yıldızları, malatya&#x27;da gösteri uçuşu yapacak türk hava kuvvetlerinin akrobasi timi türk yıldızları, 2 ekim cuma günü malatya&#x27;da gösteri uçuşu gerçekleştirecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Eylül 2026, 13:19</span>
+        </div>
+        <h3>Türk Yıldızları, Malatya&#x27;da gösteri uçuşu yapacak</h3>
+        <p>Türk Hava Kuvvetlerinin akrobasi timi Türk Yıldızları, 2 Ekim Cuma günü Malatya&#x27;da gösteri uçuşu gerçekleştirecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Eylül 2026, 13:19</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-yildizlari-malatyada-gosteri-ucusu-yapacak/4072453" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da aralıklarla süren sağanak hayatı olumsuz etkiledi i̇stanbul&#x27;da önceki gün başlayıp aralıklarla süren sağanak kent genelinde hayatı olumsuz etkiledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Eylül 2026, 11:23</span>
+        </div>
+        <h3>İstanbul&#x27;da aralıklarla süren sağanak hayatı olumsuz etkiledi</h3>
+        <p>İstanbul&#x27;da önceki gün başlayıp aralıklarla süren sağanak kent genelinde hayatı olumsuz etkiledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Eylül 2026, 11:23</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-araliklarla-suren-saganak-hayati-olumsuz-etkiledi/4072316" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="solotürk şanlıurfa&#x27;da prova uçuşu yaptı türk hava kuvvetlerinin akrobasi timi solotürk, teknofest güneydoğu&#x27;nun düzenleneceği şanlıurfa&#x27;da prova uçuşu yaptı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Eylül 2026, 12:25</span>
+        </div>
+        <h3>SOLOTÜRK Şanlıurfa&#x27;da prova uçuşu yaptı</h3>
+        <p>Türk Hava Kuvvetlerinin akrobasi timi SOLOTÜRK, TEKNOFEST Güneydoğu&#x27;nun düzenleneceği Şanlıurfa&#x27;da prova uçuşu yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Eylül 2026, 12:25</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/soloturk-sanliurfada-prova-ucusu-yapti/4072402" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yurt genelinde serin ve yağışlı hava hafta boyunca etkisini sürdürecek türkiye genelinde mevsim normallerinin altında seyreden hava sıcaklıklarının hafta boyunca etkisini sürdürmesi ve birçok bölgede gök gürültülü sağanak görülmesi bekleniyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Eylül 2026, 12:35</span>
+        </div>
+        <h3>Yurt genelinde serin ve yağışlı hava hafta boyunca etkisini sürdürecek</h3>
+        <p>Türkiye genelinde mevsim normallerinin altında seyreden hava sıcaklıklarının hafta boyunca etkisini sürdürmesi ve birçok bölgede gök gürültülü sağanak görülmesi bekleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Eylül 2026, 12:35</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yurt-genelinde-serin-ve-yagisli-hava-hafta-boyunca-etkisini-surdurecek/4072409" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ztuzu&#x27;nda yaklaşık 30 bin caretta caretta yavrusu denize ulaştı muğla&#x27;nın ortaca ilçesindeki i̇ztuzu sahili&#x27;nde kuluçka süresini tamamlayan yaklaşık 30 bin caretta caretta yavrusu denize ulaştı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Eylül 2026, 11:35</span>
+        </div>
+        <h3>İztuzu&#x27;nda yaklaşık 30 bin caretta caretta yavrusu denize ulaştı</h3>
+        <p>Muğla&#x27;nın Ortaca ilçesindeki İztuzu Sahili&#x27;nde kuluçka süresini tamamlayan yaklaşık 30 bin caretta caretta yavrusu denize ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Eylül 2026, 11:35</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iztuzunda-yaklasik-30-bin-caretta-caretta-yavrusu-denize-ulasti/4072331" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">8 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="muhalefetten fatma betül sayan kaya ve eşi için soruşturma çağrısı akp&#x27;deki görevlerinden istifa eden fatma betül sayan kaya&#x27;nın tasfiye edilen fonlardan yüklü kazanç sağladığı iddialarına tepkiler sürüyor. yeni partili yetkililer, sayan kaya ve eşi hakkında soruşturma başlatılması çağrıları yaptı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 28 Eylül 2026, 16:49</span>
+        </div>
+        <h3>Muhalefetten Fatma Betül Sayan Kaya ve eşi için soruşturma çağrısı</h3>
+        <p>AKP&#x27;deki görevlerinden istifa eden Fatma Betül Sayan Kaya&#x27;nın tasfiye edilen fonlardan yüklü kazanç sağladığı iddialarına tepkiler sürüyor. Yeni Partili yetkililer, Sayan Kaya ve eşi hakkında soruşturma başlatılması çağrıları yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Eylül 2026, 16:49</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr93ezxklevvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato: rusya&#x27;nın güç kullanma tehdidini ve nükleer söylemlerini kınıyoruz nato sözcüsü allison hart, rusya&#x27;nın i̇ttifak&#x27;a gayriresmi bir belge ilettiğini ve nato&#x27;nun buna verdiği yanıtta, nükleer silahlara ilişkin sorumsuz söylemler de dahil, güç kullanma tehdidini güçlü biçimde kınadığını bildirdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 29 Eylül 2026, 13:53</span>
+        </div>
+        <h3>NATO: Rusya&#x27;nın güç kullanma tehdidini ve nükleer söylemlerini kınıyoruz</h3>
+        <p>NATO Sözcüsü Allison Hart, Rusya&#x27;nın İttifak&#x27;a gayriresmi bir belge ilettiğini ve NATO&#x27;nun buna verdiği yanıtta, nükleer silahlara ilişkin sorumsuz söylemler de dahil, güç kullanma tehdidini güçlü biçimde kınadığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Eylül 2026, 13:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/nato-rusyanin-guc-kullanma-tehdidini-ve-nukleer-soylemlerini-kiniyoruz-958525.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="terk edilen köyündeki camiye 23 yıldır gönüllü olarak gözü gibi bakıyor kayseri&#x27;de yamula barajı&#x27;nın yapılmasıyla bir kısmı su altında kaldığı için terk edilen kırsal taşhan mahallesi&#x27;nin az sayıdaki sakininden biri olan 73 yaşındaki abdullah özdemir, 23 yıldır mahalle camisinin temizliğini ve bakımını gönüllü olarak yapıyor. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 29 Eylül 2026, 13:37</span>
+        </div>
+        <h3>Terk edilen köyündeki camiye 23 yıldır gönüllü olarak gözü gibi bakıyor</h3>
+        <p>Kayseri&#x27;de Yamula Barajı&#x27;nın yapılmasıyla bir kısmı su altında kaldığı için terk edilen kırsal Taşhan Mahallesi&#x27;nin az sayıdaki sakininden biri olan 73 yaşındaki Abdullah Özdemir, 23 yıldır mahalle camisinin temizliğini ve bakımını gönüllü olarak yapıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Eylül 2026, 13:37</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/yasam/terk-edilen-koyundeki-camiye-23-yildir-gonullu-olarak-gozu-gibi-bakiyor-958522.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="belçika ulusal güvenlik konseyi hibrit saldırıları görüşmek üzere toplanacak belçika genelkurmay başkanı orgeneral frederik vansina, yılın başından bu yana avrupa&#x27;da hibrit saldırılarda artış olduğunu belirterek, hükümetin ulusal güvenlik konseyi&#x27;ni 2 ekim&#x27;de bu konuyu görüşmek üzere toplayacağını açıkladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 29 Eylül 2026, 13:37</span>
+        </div>
+        <h3>Belçika Ulusal Güvenlik Konseyi hibrit saldırıları görüşmek üzere toplanacak</h3>
+        <p>Belçika Genelkurmay Başkanı Orgeneral Frederik Vansina, yılın başından bu yana Avrupa&#x27;da hibrit saldırılarda artış olduğunu belirterek, hükümetin Ulusal Güvenlik Konseyi&#x27;ni 2 Ekim&#x27;de bu konuyu görüşmek üzere toplayacağını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Eylül 2026, 13:37</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/belcika-ulusal-guvenlik-konseyi-hibrit-saldirilari-gorusmek-uzere-toplanacak-958520.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="komedyen deniz göktaş tahliye edildi: &#x27;hayalim, sinem dedetaş ve mehmet pehlivan&#x27;la i̇stanbul&#x27;a dönmekti&#x27; çağlayan adliyesi&#x27;nde ilk kez hakim karşısına çıkan tutuklu komedyen deniz göktaş için tahliye kararı verildi. göktaş akşam saat 21.45 civarında karatepe ceza i̇nfaz kurumundan tahliye edildi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Eylül 2026, 10:52</span>
+        </div>
+        <h3>Komedyen Deniz Göktaş tahliye edildi: &#x27;Hayalim, Sinem Dedetaş ve Mehmet Pehlivan&#x27;la İstanbul&#x27;a dönmekti&#x27;</h3>
+        <p>Çağlayan Adliyesi&#x27;nde ilk kez hakim karşısına çıkan tutuklu komedyen Deniz Göktaş için tahliye kararı verildi. Göktaş akşam saat 21.45 civarında Karatepe Ceza İnfaz kurumundan tahliye edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Eylül 2026, 10:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq99d8grynjxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇talyan basınında türkiye galibiyeti: ‘futbol, değişme cesareti olanları ödüllendirir’ i̇talya&#x27;nın dün akşam oynanan uefa uluslar a ligi 1. grup maçında türkiye&#x27;yi 1-4 mağlup etmesi sonrası, ülkede uzun zamandır hayalkırıklığıyla anılan milli takım için &quot;uyandılar&quot; başlıkları atıldı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Eylül 2026, 09:49</span>
+        </div>
+        <h3>İtalyan basınında Türkiye galibiyeti: ‘Futbol, değişme cesareti olanları ödüllendirir’</h3>
+        <p>İtalya&#x27;nın dün akşam oynanan UEFA Uluslar A Ligi 1. Grup maçında Türkiye&#x27;yi 1-4 mağlup etmesi sonrası, ülkede uzun zamandır hayalkırıklığıyla anılan milli takım için &quot;uyandılar&quot; başlıkları atıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Eylül 2026, 09:49</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq783254d7elo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yurdun kuzeyindeki bazı iller için kuvvetli yağış uyarısı yurdun kuzeyindeki bazı iller için kuvvetli yağış uyarısında bulunuldu. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Eylül 2026, 12:48</span>
+        </div>
+        <h3>Yurdun kuzeyindeki bazı iller için kuvvetli yağış uyarısı</h3>
+        <p>Yurdun kuzeyindeki bazı iller için kuvvetli yağış uyarısında bulunuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Eylül 2026, 12:48</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yurdun-kuzeyindeki-bazi-iller-icin-kuvvetli-yagis-uyarisi/4072420" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;nin irak&#x27;tan çekilişi stratejik bir yeniden konuşlanma mı? irak, abd öncülüğündeki uluslararası koalisyon güçlerinin ülkeden çekilmesini tamamlamaya hazırlandığı kritik bir döneme yaklaşıyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Eylül 2026, 13:19</span>
+        </div>
+        <h3>ABD&#x27;nin Irak&#x27;tan çekilişi stratejik bir yeniden konuşlanma mı?</h3>
+        <p>Irak, ABD öncülüğündeki uluslararası koalisyon güçlerinin ülkeden çekilmesini tamamlamaya hazırlandığı kritik bir döneme yaklaşıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Eylül 2026, 13:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr0j30y53neqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="teknofest güneydoğu yarın şanlıurfa&#x27;da ilklerle kapılarını açıyor neolitik dönemden günümüze uzanan tarihiyle öne çıkan şanlıurfa&#x27;da gerçekleştirilecek teknofest güneydoğu, teknoloji ve bilimin yanı sıra farklı deneyim alanlarıyla ziyaretçilerini geçmişten geleceğe uzanan bir yolculuğa çıkaracak. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 29 Eylül 2026, 13:45</span>
+        </div>
+        <h3>TEKNOFEST Güneydoğu yarın Şanlıurfa&#x27;da ilklerle kapılarını açıyor</h3>
+        <p>Neolitik dönemden günümüze uzanan tarihiyle öne çıkan Şanlıurfa&#x27;da gerçekleştirilecek TEKNOFEST Güneydoğu, teknoloji ve bilimin yanı sıra farklı deneyim alanlarıyla ziyaretçilerini geçmişten geleceğe uzanan bir yolculuğa çıkaracak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Eylül 2026, 13:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/teknofest-guneydogu-yarin-sanliurfada-ilklerle-kapilarini-aciyor-958524.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="hakemler dosyası soruşturmasında hakemler derneğinin kayıtlarına el konuldu i̇stanbul merkezli 4 ilde düzenlenen operasyonda merkez hakem kurulu (mhk) başkanı ferhat gündoğdu&#x27;nun da aralarında bulunduğu 7 şüphelinin gözaltına alındığı operasyonda, türkiye faal futbol hakemleri ve gözlemcileri derneğinin kayıtlarına el konuldu. spor trt haber" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">TRT Haber · 29 Eylül 2026, 13:11</span>
+        </div>
+        <h3>Hakemler dosyası soruşturmasında hakemler derneğinin kayıtlarına el konuldu</h3>
+        <p>İstanbul merkezli 4 ilde düzenlenen operasyonda Merkez Hakem Kurulu (MHK) Başkanı Ferhat Gündoğdu&#x27;nun da aralarında bulunduğu 7 şüphelinin gözaltına alındığı operasyonda, Türkiye Faal Futbol Hakemleri ve Gözlemcileri Derneğinin kayıtlarına el konuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Eylül 2026, 13:11</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/hakemler-dosyasi-sorusturmasinda-hakemler-derneginin-kayitlarina-el-konuldu-958516.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mhk başkanı ferhat gündoğdu dahil yedi kişi gözaltında türkiye futbol federasyonu&#x27;na (tff) bağlı merkez hakem kurulu başkanı ferhat gündoğdu&#x27;nun da aralarında bulunduğu yedi kişi resmi evrakta sahtecilik soruşturması kapsamında gözaltına alındı spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 29 Eylül 2026, 11:04</span>
+        </div>
+        <h3>MHK Başkanı Ferhat Gündoğdu dahil yedi kişi gözaltında</h3>
+        <p>Türkiye Futbol Federasyonu&#x27;na (TFF) bağlı Merkez Hakem Kurulu Başkanı Ferhat Gündoğdu&#x27;nun da aralarında bulunduğu yedi kişi resmi evrakta sahtecilik soruşturması kapsamında gözaltına alındı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Eylül 2026, 11:04</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm62kp4k28gro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
