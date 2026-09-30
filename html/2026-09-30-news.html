@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">30 Eylül 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">30 Eylül 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 4</span><span class="stat-item"><strong>dünya</strong> 6</span><span class="stat-item"><strong>genel</strong> 16</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>spor</strong> 1</span><span class="stat-item"><strong>gümrük</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>Çin üretimi yapay zeka sistemi, nasıl biyolojik silah üretileceğini anlattı</h3>
+        <p>Çinli yapay zeka geliştiricisi Moonshot, araştırmacıların popüler modellerinden ikisini biyolojik silah üretmeyi ve suikast düzenlemeyi nasıl yapacaklarını söylemeye ikna etmelerinden sonra şirket içinde bir inceleme başlattı.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 30 Eylül 2026, 09:34</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c8kg7kp9eegdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 30 Eylül 2026, 12:31</span>
+            </div>
+            <h3>MEB&#x27;den COP31 kapsamında &quot;Maarif İklim İdeathonu&quot;</h3>
+            <p>Milli Eğitim Bakanlığı (MEB), Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi 31. Taraflar Konferansı (COP31) kapsamında 9, 10, 11 ve 12. sınıflarda öğrenim görenler için &quot;Maarif İklim İdeathonu&quot; yarışması düzenleneceğini bildirdi.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mebden-cop31-kapsaminda-maarif-iklim-ideathonu-/4073569" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 29 Eylül 2026, 22:48</span>
+            </div>
+            <h3>Erdoğan: &#x27;Kimse bu partinin aklığına halel getiremez&#x27;</h3>
+            <p>Cumhurbaşkanı Recep Tayyip Erdoğan, fon krizinin patlak vermesi sonrası yaptığı en kapsamlı açıklamada, Devlet Denetleme Kurulu&#x27;nun devreye sokulduğunu söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmlyr78117zzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 29 Eylül 2026, 20:15</span>
+            </div>
+            <h3>Fatma Betül Sayan Kaya ve eşinin tüm mal varlıklarına dondurma kararı</h3>
+            <p>AKP&#x27;deki görevlerinden istifa eden Fatma Betül Sayan Kaya&#x27;nın ve eşinin tüm mal varlıkları için dondurma kararı verildi. Talebin İstanbul Cumhuriyet Başsavcılığı tarafından sermaye piyasası işlemlerine ilişkin yürütülen soruşturma kapsamında geldiği bildirildi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cr93ezxklevvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 28 Eylül 2026, 12:53</span>
+            </div>
+            <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+            <p>Türkiye&#x27;deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">4 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="çin üretimi yapay zeka sistemi, nasıl biyolojik silah üretileceğini anlattı çinli yapay zeka geliştiricisi moonshot, araştırmacıların popüler modellerinden ikisini biyolojik silah üretmeyi ve suikast düzenlemeyi nasıl yapacaklarını söylemeye ikna etmelerinden sonra şirket içinde bir inceleme başlattı. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 30 Eylül 2026, 09:34</span>
+        </div>
+        <h3>Çin üretimi yapay zeka sistemi, nasıl biyolojik silah üretileceğini anlattı</h3>
+        <p>Çinli yapay zeka geliştiricisi Moonshot, araştırmacıların popüler modellerinden ikisini biyolojik silah üretmeyi ve suikast düzenlemeyi nasıl yapacaklarını söylemeye ikna etmelerinden sonra şirket içinde bir inceleme başlattı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Eylül 2026, 09:34</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c8kg7kp9eegdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fatma betül sayan kaya ve eşinin tüm mal varlıklarına dondurma kararı akp&#x27;deki görevlerinden istifa eden fatma betül sayan kaya&#x27;nın ve eşinin tüm mal varlıkları için dondurma kararı verildi. talebin i̇stanbul cumhuriyet başsavcılığı tarafından sermaye piyasası işlemlerine ilişkin yürütülen soruşturma kapsamında geldiği bildirildi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 29 Eylül 2026, 20:15</span>
+        </div>
+        <h3>Fatma Betül Sayan Kaya ve eşinin tüm mal varlıklarına dondurma kararı</h3>
+        <p>AKP&#x27;deki görevlerinden istifa eden Fatma Betül Sayan Kaya&#x27;nın ve eşinin tüm mal varlıkları için dondurma kararı verildi. Talebin İstanbul Cumhuriyet Başsavcılığı tarafından sermaye piyasası işlemlerine ilişkin yürütülen soruşturma kapsamında geldiği bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Eylül 2026, 20:15</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr93ezxklevvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler? türkiye&#x27;deki fon krizinin ardından sermaye piyasaları kurulu 21 eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 28 Eylül 2026, 12:53</span>
+        </div>
+        <h3>Fon krizinde adı geçen şirketler hakkında neler biliniyor, yöneticileri kimler?</h3>
+        <p>Türkiye&#x27;deki fon krizinin ardından Sermaye Piyasaları Kurulu 21 Eylül&#x27;de dokuz şirket ve yöneticilerinin mal varlıklarını dondurdu. Peki bu şirketler hakkında neler biliniyor ve gözaltına alınan yöneticileri kimler? Açık kaynaklarda ve şirketlerin internet sitelerinde yer alan bilgileri inceledik.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Eylül 2026, 12:53</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw783y5xz0xgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tsk&#x27;nın subay ve astsubaylarına yeni nesil yerli tabanca savunma sanayii başkanlığının öytg projesi kapsamında geliştirilen &quot;sar9 mete ce&quot;, zorlu koşullardaki testlerin ardından türk silahlı kuvvetlerinin (tsk) subay ve astsubaylarının kullanımına sunulacak. yeni nesil yerli görev tabancası su, kum, toz ve sıcaklık testlerinin yanı sıra 30 bin atışlık görev ömrüyle zorlu koşullarda sınandı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 30 Eylül 2026, 12:34</span>
+        </div>
+        <h3>TSK&#x27;nın subay ve astsubaylarına yeni nesil yerli tabanca</h3>
+        <p>Savunma Sanayii Başkanlığının ÖYTG projesi kapsamında geliştirilen &quot;SAR9 METE CE&quot;, zorlu koşullardaki testlerin ardından Türk Silahlı Kuvvetlerinin (TSK) subay ve astsubaylarının kullanımına sunulacak. Yeni nesil yerli görev tabancası su, kum, toz ve sıcaklık testlerinin yanı sıra 30 bin atışlık görev ömrüyle zorlu koşullarda sınandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Eylül 2026, 12:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/savunma/tsknin-subay-ve-astsubaylarina-yeni-nesil-yerli-tabanca-958633.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="meb&#x27;den cop31 kapsamında &quot;maarif i̇klim i̇deathonu&quot; milli eğitim bakanlığı (meb), birleşmiş milletler i̇klim değişikliği çerçeve sözleşmesi 31. taraflar konferansı (cop31) kapsamında 9, 10, 11 ve 12. sınıflarda öğrenim görenler için &quot;maarif i̇klim i̇deathonu&quot; yarışması düzenleneceğini bildirdi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Eylül 2026, 12:31</span>
+        </div>
+        <h3>MEB&#x27;den COP31 kapsamında &quot;Maarif İklim İdeathonu&quot;</h3>
+        <p>Milli Eğitim Bakanlığı (MEB), Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi 31. Taraflar Konferansı (COP31) kapsamında 9, 10, 11 ve 12. sınıflarda öğrenim görenler için &quot;Maarif İklim İdeathonu&quot; yarışması düzenleneceğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Eylül 2026, 12:31</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mebden-cop31-kapsaminda-maarif-iklim-ideathonu-/4073569" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tarihi tren venice simplon orient express türkiye&#x27;de paris&#x27;ten hareket eden tarihi venice simplon orient express treni, yılın ikinci seferi için kapıkule garı&#x27;ndan türkiye&#x27;ye giriş yaptı. pasaport kontrolü sonrası i̇stanbul&#x27;a doğru yola çıkan tren, 2 ekim&#x27;de paris&#x27;e dönecek. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 30 Eylül 2026, 13:22</span>
+        </div>
+        <h3>Tarihi tren Venice Simplon Orient Express Türkiye&#x27;de</h3>
+        <p>Paris&#x27;ten hareket eden tarihi Venice Simplon Orient Express treni, yılın ikinci seferi için Kapıkule Garı&#x27;ndan Türkiye&#x27;ye giriş yaptı. Pasaport kontrolü sonrası İstanbul&#x27;a doğru yola çıkan tren, 2 Ekim&#x27;de Paris&#x27;e dönecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Eylül 2026, 13:22</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/tarihi-tren-venice-simplon-orient-express-turkiyede-958640.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ukrayna: rusya&#x27;nın saldırılarında ülke genelinde 5 kişi öldü ve 14 kişi yaralandı ukrayna devlet başkanı volodimir zelenski, rus ordusunun saldırıları nedeniyle ülkesinde 1&#x27;i çocuk 5 kişinin öldüğünü, 14 kişinin yaralandığını bildirdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 30 Eylül 2026, 12:41</span>
+        </div>
+        <h3>Ukrayna: Rusya&#x27;nın saldırılarında ülke genelinde 5 kişi öldü ve 14 kişi yaralandı</h3>
+        <p>Ukrayna Devlet Başkanı Volodimir Zelenski, Rus ordusunun saldırıları nedeniyle ülkesinde 1&#x27;i çocuk 5 kişinin öldüğünü, 14 kişinin yaralandığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Eylül 2026, 12:41</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ukrayna-rusyanin-saldirilarinda-ulke-genelinde-5-kisi-oldu-ve-14-kisi-yaralandi-958635.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="güneydoğu ve doğu akdeniz için kuvvetli yağış uyarısı güneydoğu ve doğu akdeniz için kuvvetli yağış uyarısında bulunuldu. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Eylül 2026, 13:35</span>
+        </div>
+        <h3>Güneydoğu ve Doğu Akdeniz için kuvvetli yağış uyarısı</h3>
+        <p>Güneydoğu ve Doğu Akdeniz için kuvvetli yağış uyarısında bulunuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Eylül 2026, 13:35</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/guneydogu-ve-dogu-akdeniz-icin-kuvvetli-yagis-uyarisi/4073658" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="romanlara konu olan orient express, yılın ikinci seferi için türkiye&#x27;de paris&#x27;ten hareket eden tarihi venice simplon orient express treni, yılın ikinci seferi için kapıkule garı&#x27;ndan türkiye&#x27;ye giriş yaptı. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Eylül 2026, 13:14</span>
+        </div>
+        <h3>Romanlara konu olan Orient Express, yılın ikinci seferi için Türkiye&#x27;de</h3>
+        <p>Paris&#x27;ten hareket eden tarihi Venice Simplon Orient Express treni, yılın ikinci seferi için Kapıkule Garı&#x27;ndan Türkiye&#x27;ye giriş yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Eylül 2026, 13:14</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/romanlara-konu-olan-orient-express-yilin-ikinci-seferi-icin-turkiyede/4073640" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd birlikleri 20 yıl sonra irak&#x27;tan ayrılıyor: bundan sonra ne olacak? abd, saddam hüseyin&#x27;i deviren 2003 yılındaki işgalle başlayan askeri varlığına son vererek irak&#x27;taki kalan birliklerini 30 eylül&#x27;e kadar geri çekmeye hazırlanıyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 30 Eylül 2026, 08:05</span>
+        </div>
+        <h3>ABD birlikleri 20 yıl sonra Irak&#x27;tan ayrılıyor: Bundan sonra ne olacak?</h3>
+        <p>ABD, Saddam Hüseyin&#x27;i deviren 2003 yılındaki işgalle başlayan askeri varlığına son vererek Irak&#x27;taki kalan birliklerini 30 Eylül&#x27;e kadar geri çekmeye hazırlanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Eylül 2026, 08:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c30rekq470wqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">16 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="erdoğan: &#x27;kimse bu partinin aklığına halel getiremez&#x27; cumhurbaşkanı recep tayyip erdoğan, fon krizinin patlak vermesi sonrası yaptığı en kapsamlı açıklamada, devlet denetleme kurulu&#x27;nun devreye sokulduğunu söyledi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 29 Eylül 2026, 22:48</span>
+        </div>
+        <h3>Erdoğan: &#x27;Kimse bu partinin aklığına halel getiremez&#x27;</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, fon krizinin patlak vermesi sonrası yaptığı en kapsamlı açıklamada, Devlet Denetleme Kurulu&#x27;nun devreye sokulduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Eylül 2026, 22:48</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmlyr78117zzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye, soykırımcı i̇srail&#x27;in saldırılarında yaralanan 6 yaşındaki sıla&#x27;nın umudu oldu soykırımcı i̇srail&#x27;in gazze şeridi&#x27;ne düzenlediği saldırıda şarapnel parçasının isabet etmesi sonucu omurgasından yaralanan filistinli sıla ebu kerim, cumhurbaşkanlığı ve sağlık bakanlığının girişimleriyle türkiye&#x27;ye getirildi. 6 yaşındaki sıla, türkiye&#x27;de gerçekleştirilecek ameliyat ve sonrasındaki tedaviyle yeniden sağlığına kavuşmayı bekliyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Eylül 2026, 13:24</span>
+        </div>
+        <h3>Türkiye, soykırımcı İsrail&#x27;in saldırılarında yaralanan 6 yaşındaki Sıla&#x27;nın umudu oldu</h3>
+        <p>Soykırımcı İsrail&#x27;in Gazze Şeridi&#x27;ne düzenlediği saldırıda şarapnel parçasının isabet etmesi sonucu omurgasından yaralanan Filistinli Sıla Ebu Kerim, Cumhurbaşkanlığı ve Sağlık Bakanlığının girişimleriyle Türkiye&#x27;ye getirildi. 6 yaşındaki Sıla, Türkiye&#x27;de gerçekleştirilecek ameliyat ve sonrasındaki tedaviyle yeniden sağlığına kavuşmayı bekliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Eylül 2026, 13:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/turkiye-soykirimci-israilin-saldirilarinda-yaralanan-6-yasindaki-silanin-umudu-oldu-958641.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb &quot;birliğin gücü-2026 tatbikatı&quot; kapsamındaki meskun mahal eğitimlerinden görüntü paylaştı milli savunma bakanlığınca (msb), azerbaycan&#x27;ın ev sahipliğinde, türkiye ve özbekistan&#x27;ın da katılımıyla devam eden &quot;birliğin gücü-2026 tatbikatı&quot; kapsamında gerçekleştirilen meskun mahal eğitimlerinden görüntü paylaşıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Eylül 2026, 12:00</span>
+        </div>
+        <h3>MSB &quot;Birliğin Gücü-2026 Tatbikatı&quot; kapsamındaki meskun mahal eğitimlerinden görüntü paylaştı</h3>
+        <p>Milli Savunma Bakanlığınca (MSB), Azerbaycan&#x27;ın ev sahipliğinde, Türkiye ve Özbekistan&#x27;ın da katılımıyla devam eden &quot;Birliğin Gücü-2026 Tatbikatı&quot; kapsamında gerçekleştirilen meskun mahal eğitimlerinden görüntü paylaşıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Eylül 2026, 12:00</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/msb-birligin-gucu-2026-tatbikati-kapsamindaki-meskun-mahal-egitimlerinden-goruntu-paylasti/4073528" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail&#x27;e giden uçak &#x27;bir pilotun bıçaklanması&#x27; sonrası acil iniş yaptı dubai&#x27;den tel aviv&#x27;e giden bir uçak, kokpitte başlayan fiziki mücadelenin sonrasında suudi arabistan&#x27;a iniş yaptı. i̇smi açıklanmayan bir yolcu jerusalem post gazetesine, bir pilotun diğeri tarafından bıçaklandığını anlattı genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Eylül 2026, 12:52</span>
+        </div>
+        <h3>İsrail&#x27;e giden uçak &#x27;bir pilotun bıçaklanması&#x27; sonrası acil iniş yaptı</h3>
+        <p>Dubai&#x27;den Tel Aviv&#x27;e giden bir uçak, kokpitte başlayan fiziki mücadelenin sonrasında Suudi Arabistan&#x27;a iniş yaptı. İsmi açıklanmayan bir yolcu Jerusalem Post gazetesine, bir pilotun diğeri tarafından bıçaklandığını anlattı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Eylül 2026, 12:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cv70d2y9ny5zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinden etkilenenler anlatıyor: &#x27;tazminatımı yatırdım, yılların emeği var&#x27; türkiye&#x27;de yaşanan fon krizi, tasfiye sürecine alınan fonlarda birikimi bulunan yüz binlerce kişiyi kaygılandırıyor. bir grup fon mağduru, bbc türkçe&#x27;ye yaşadıklarını anlattı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Eylül 2026, 10:28</span>
+        </div>
+        <h3>Fon krizinden etkilenenler anlatıyor: &#x27;Tazminatımı yatırdım, yılların emeği var&#x27;</h3>
+        <p>Türkiye&#x27;de yaşanan fon krizi, tasfiye sürecine alınan fonlarda birikimi bulunan yüz binlerce kişiyi kaygılandırıyor. Bir grup fon mağduru, BBC Türkçe&#x27;ye yaşadıklarını anlattı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Eylül 2026, 10:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmd79qqj3155o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ddk: fon kriziyle ilgili idari ve hukuki inceleme başladı cumhurbaşkanlığı devlet denetleme kurulu (ddk) başkanı salih tanrıkulu, fon kriziyle ilgili olarak inceleme ve denetim çalışmalarına başladıklarını duyurdu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Eylül 2026, 12:11</span>
+        </div>
+        <h3>DDK: Fon kriziyle ilgili idari ve hukuki inceleme başladı</h3>
+        <p>Cumhurbaşkanlığı Devlet Denetleme Kurulu (DDK) Başkanı Salih Tanrıkulu, fon kriziyle ilgili olarak inceleme ve denetim çalışmalarına başladıklarını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Eylül 2026, 12:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c893vr235lg2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ekrem i̇mamoğlu&#x27;dan fon açıklaması: soygunun failleri korunuyor görevden uzaklaştırılan i̇stanbul büyükşehir belediye başkanı ekrem i̇mamoğlu&#x27;nun &quot;siyasal casusluk&quot; suçlamasıyla yargılandığı davanın üçüncü duruşmasında, i̇mamoğlu, i̇mamoğlu&#x27;nun siyasi danışmanı necati özkan, gazeteci merdan yanardağ ve hüseyin gün&#x27;ün tutukluluğunun devamına karar verildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 29 Eylül 2026, 20:49</span>
+        </div>
+        <h3>Ekrem İmamoğlu&#x27;dan fon açıklaması: Soygunun failleri korunuyor</h3>
+        <p>Görevden uzaklaştırılan İstanbul Büyükşehir Belediye Başkanı Ekrem İmamoğlu&#x27;nun &quot;siyasal casusluk&quot; suçlamasıyla yargılandığı davanın üçüncü duruşmasında, İmamoğlu, İmamoğlu&#x27;nun siyasi danışmanı Necati Özkan, gazeteci Merdan Yanardağ ve Hüseyin Gün&#x27;ün tutukluluğunun devamına karar verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Eylül 2026, 20:49</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqm2mjxn2dvvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="4 türk üniversitesi dünyada ilk 500&#x27;de türkiye, 124 üniversiteyle the 2027 dünya üniversite sıralamasında üçüncü sıraya yükseldi. türkiye&#x27;den odtü, koç üniversitesi, sabancı üniversitesi ve boğaziçi üniversitesi dünyanın ilk 500 üniversitesi arasında yer aldı. toplam 13 türk üniversitesi ise ilk 1000&#x27;e girdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Eylül 2026, 12:53</span>
+        </div>
+        <h3>4 Türk üniversitesi dünyada ilk 500&#x27;de</h3>
+        <p>Türkiye, 124 üniversiteyle THE 2027 dünya üniversite sıralamasında üçüncü sıraya yükseldi. Türkiye&#x27;den ODTÜ, Koç Üniversitesi, Sabancı Üniversitesi ve Boğaziçi Üniversitesi dünyanın ilk 500 üniversitesi arasında yer aldı. Toplam 13 Türk üniversitesi ise ilk 1000&#x27;e girdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Eylül 2026, 12:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/4-turk-universitesi-dunyada-ilk-500de-958637.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kaldırımda yürüyen anne ve kızının ölümüne neden olan sürücüye 22,5 yıla kadar hapis istemi konya&#x27;da kaldırımda yürüyen anne ve kızına 113 kilometre hızla çarparak ölümlerine neden olan sürücü hakkında &quot;bilinçli taksirle öldürme&quot; suçundan 2 yıl 8 aydan 22,5 yıla kadar hapis istemiyle dava açıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Eylül 2026, 13:37</span>
+        </div>
+        <h3>Kaldırımda yürüyen anne ve kızının ölümüne neden olan sürücüye 22,5 yıla kadar hapis istemi</h3>
+        <p>Konya&#x27;da kaldırımda yürüyen anne ve kızına 113 kilometre hızla çarparak ölümlerine neden olan sürücü hakkında &quot;bilinçli taksirle öldürme&quot; suçundan 2 yıl 8 aydan 22,5 yıla kadar hapis istemiyle dava açıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Eylül 2026, 13:37</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kaldirimda-yuruyen-anne-ve-kizinin-olumune-neden-olan-surucuye-22-5-yila-kadar-hapis-istemi/4073664" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail saldırılarında yaralanan filistinli sıla, sağlığına türkiye&#x27;de kavuşacak i̇srail&#x27;in gazze şeridi&#x27;ne düzenlediği saldırıda şarapnel parçasının isabet etmesi sonucu omurgasından yaralanarak dik durma ve normal oturma yetisini kaybeden 6 yaşındaki filistinli sıla ebu kerim, türkiye&#x27;de sağlığına kavuşmayı bekliyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Eylül 2026, 13:12</span>
+        </div>
+        <h3>İsrail saldırılarında yaralanan Filistinli Sıla, sağlığına Türkiye&#x27;de kavuşacak</h3>
+        <p>İsrail&#x27;in Gazze Şeridi&#x27;ne düzenlediği saldırıda şarapnel parçasının isabet etmesi sonucu omurgasından yaralanarak dik durma ve normal oturma yetisini kaybeden 6 yaşındaki Filistinli Sıla Ebu Kerim, Türkiye&#x27;de sağlığına kavuşmayı bekliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Eylül 2026, 13:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/israil-saldirilarinda-yaralanan-filistinli-sila-sagligina-turkiyede-kavusacak/4073636" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hakem soruşturmasında var odası incelendi tff hasan doğan millî takımlar kamp ve eğitim tesisleri&#x27;nde bulunan video yardımcı hakem (var) odasında, i̇stanbul mali suçlarla mücadele müdürlüğü ekipleri tarafından inceleme yapıldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Eylül 2026, 13:18</span>
+        </div>
+        <h3>Hakem soruşturmasında VAR odası incelendi</h3>
+        <p>TFF Hasan Doğan Millî Takımlar Kamp ve Eğitim Tesisleri&#x27;nde bulunan Video Yardımcı Hakem (VAR) odasında, İstanbul Mali Suçlarla Mücadele Müdürlüğü ekipleri tarafından inceleme yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Eylül 2026, 13:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/hakem-sorusturmasinda-var-odasi-incelendi-958639.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;de fiber internet abone sayısı 10,7 milyona çıktı türkiye&#x27;de genişbant internet abone sayısı bir yılda yüzde 3,6 artarak 100,8 milyona ulaşırken, fiber internet abone sayısı yüzde 22 artışla 10,7 milyona yükseldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Eylül 2026, 12:42</span>
+        </div>
+        <h3>Türkiye&#x27;de fiber internet abone sayısı 10,7 milyona çıktı</h3>
+        <p>Türkiye&#x27;de genişbant internet abone sayısı bir yılda yüzde 3,6 artarak 100,8 milyona ulaşırken, fiber internet abone sayısı yüzde 22 artışla 10,7 milyona yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Eylül 2026, 12:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/turkiyede-fiber-internet-abone-sayisi-107-milyona-cikti-958636.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bilal erdoğan: dışarıdan manipülasyonlar, toplum mühendislikleri muvaffak olamayacak i̇lim yayma vakfı mütevelli heyeti başkanı necmeddin bilal erdoğan, &quot;dışarıdan manipülasyonlar, toplum mühendislikleri bu ülkede makes bulamayacaktır, muvaffak olamayacaktır.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Eylül 2026, 12:58</span>
+        </div>
+        <h3>Bilal Erdoğan: Dışarıdan manipülasyonlar, toplum mühendislikleri muvaffak olamayacak</h3>
+        <p>İlim Yayma Vakfı Mütevelli Heyeti Başkanı Necmeddin Bilal Erdoğan, &quot;Dışarıdan manipülasyonlar, toplum mühendislikleri bu ülkede makes bulamayacaktır, muvaffak olamayacaktır.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Eylül 2026, 12:58</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bilal-erdogan-disaridan-manipulasyonlar-toplum-muhendislikleri-muvaffak-olamayacak/4073610" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye times higher education 2027 dünya üniversite sıralamasında 3. sıraya yükseldi türkiye&#x27;nin 124 üniversiteyle times higher education (the) 2027 dünya üniversite sıralamasında üçüncü sıraya yükseldiği bildirildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Eylül 2026, 12:47</span>
+        </div>
+        <h3>Türkiye Times Higher Education 2027 dünya üniversite sıralamasında 3. sıraya yükseldi</h3>
+        <p>Türkiye&#x27;nin 124 üniversiteyle Times Higher Education (THE) 2027 dünya üniversite sıralamasında üçüncü sıraya yükseldiği bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Eylül 2026, 12:47</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiye-times-higher-education-2027-dunya-universite-siralamasinda-3-siraya-yukseldi/4073590" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ağrı dağı&#x27;na mevsimin ilk karı yağdı türkiye&#x27;nin en yüksek noktası olan ağrı dağı&#x27;na mevsimin ilk karı yağdı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Eylül 2026, 12:28</span>
+        </div>
+        <h3>Ağrı Dağı&#x27;na mevsimin ilk karı yağdı</h3>
+        <p>Türkiye&#x27;nin en yüksek noktası olan Ağrı Dağı&#x27;na mevsimin ilk karı yağdı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Eylül 2026, 12:28</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/agri-dagina-mevsimin-ilk-kari-yagdi/4073564" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sigara bağımlılığından kurtulanlardan anlamlı çağrı hemşire kadriye rüzkar ve belediye işçisi gökhan yanar, uzun yıllardır kullandıkları sigarayı aldıkları destekle bırakmanın mutluluğunu yaşıyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Eylül 2026, 11:19</span>
+        </div>
+        <h3>Sigara bağımlılığından kurtulanlardan anlamlı çağrı</h3>
+        <p>Hemşire Kadriye Rüzkar ve belediye işçisi Gökhan Yanar, uzun yıllardır kullandıkları sigarayı aldıkları destekle bırakmanın mutluluğunu yaşıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Eylül 2026, 11:19</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sigara-bagimliligindan-kurtulanlardan-anlamli-cagri/4073449" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="teknofest güneydoğu&#x27;da güvenlik taraması yerli ve milli karagöz&#x27;e emanet şanlıurfa&#x27;daki teknofest güneydoğu&#x27;da görev yapan yapay zeka destekli &quot;karagöz&quot;, yüz görüntülerini kayıtlı verilerle karşılaştırarak aranan kişilerin tespitine destek oluyor. karagöz yüz tanıma ve veri tabanı sorgulama işlemlerini kvkk kapsamında gerçekleştirerek jandarma ekiplerinin çalışmalarına da katkı sağlıyor. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 30 Eylül 2026, 13:45</span>
+        </div>
+        <h3>TEKNOFEST Güneydoğu&#x27;da güvenlik taraması yerli ve milli KARAGÖZ&#x27;e emanet</h3>
+        <p>Şanlıurfa&#x27;daki TEKNOFEST Güneydoğu&#x27;da görev yapan yapay zeka destekli &quot;Karagöz&quot;, yüz görüntülerini kayıtlı verilerle karşılaştırarak aranan kişilerin tespitine destek oluyor. KARAGÖZ yüz tanıma ve veri tabanı sorgulama işlemlerini KVKK kapsamında gerçekleştirerek jandarma ekiplerinin çalışmalarına da katkı sağlıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Eylül 2026, 13:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/teknofest-guneydoguda-guvenlik-taramasi-yerli-ve-milli-karagoze-emanet-958642.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="tff: polis tarafından var odasında inceleme gerçekleştirildi türkiye futbol federasyonu (tff), merkez hakem kurulu başkanı ferhat gündoğdu ve bazı üyelerinin gözaltına alındığı soruşturma kapsamında, i̇stanbul mali suçlarla mücadele müdürlüğü ekiplerinin 29 eylül salı günü öğle saatlerinde federasyonun riva&#x27;daki tesislerinde bulunan var odasında inceleme yaptığını açıkladı spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 30 Eylül 2026, 13:24</span>
+        </div>
+        <h3>TFF: Polis tarafından VAR odasında inceleme gerçekleştirildi</h3>
+        <p>Türkiye Futbol Federasyonu (TFF), Merkez Hakem Kurulu Başkanı Ferhat Gündoğdu ve bazı üyelerinin gözaltına alındığı soruşturma kapsamında, İstanbul Mali Suçlarla Mücadele Müdürlüğü ekiplerinin 29 Eylül Salı günü öğle saatlerinde federasyonun Riva&#x27;daki tesislerinde bulunan VAR odasında inceleme yaptığını açıkladı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Eylül 2026, 13:24</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm62kp4k28gro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="fransadan şekerli gıdalara vergi fransa’da 2027 bütçesinde şekerli gıdalara yeni vergi getirilmesi masada. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 30 Eylül 2026, 13:23</span>
+        </div>
+        <h3>Fransadan şekerli gıdalara vergi</h3>
+        <p>Fransa’da 2027 bütçesinde şekerli gıdalara yeni vergi getirilmesi masada.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Eylül 2026, 13:23</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/fransadan-sekerli-gidalara-vergi-958638.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="flydubai&#x27;den tel aviv seferi açıklaması: uçak güvenli şekilde tebük&#x27;e indi flydubai&#x27;den i̇srail seferi açıklaması: &quot;olay yaşanan uçak&quot; güvenli şekilde tebük havalimanı’na indi gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 30 Eylül 2026, 12:33</span>
+        </div>
+        <h3>Flydubai&#x27;den Tel Aviv seferi açıklaması: Uçak güvenli şekilde Tebük&#x27;e indi</h3>
+        <p>Flydubai&#x27;den İsrail seferi açıklaması: &quot;Olay yaşanan uçak&quot; güvenli şekilde Tebük Havalimanı’na indi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Eylül 2026, 12:33</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/flydubaiden-tel-aviv-seferi-aciklamasi-ucak-guvenli-sekilde-tebuke-indi-958634.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
