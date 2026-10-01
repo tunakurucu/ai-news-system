@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">1 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">1 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>genel</strong> 18</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>ekonomi</strong> 5</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>spor</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">GENEL</span>
+        </div>
+        <h3>Özel: &#x27;Asrın soygununu yapanları teker teker atayandan cumhurbaşkanı olmaz&#x27;</h3>
+        <p>Yeni Parti Genel Başkanı Özgür Özel, fon kriziyle ilgili olarak Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;a yaptığı istifa çağrısına benzer bir şekilde &quot;Bu kumpas çetesini, bu kirli çeteyi, asrın soygununu yapanları teker teker atayandan cumhurbaşkanı olmaz&quot; dedi</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 30 Eylül 2026, 14:41</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cqm2mjxn2dvvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 1 Ekim 2026, 13:45</span>
+            </div>
+            <h3>Bakan Şimşek: Yatırımcılara en kısa sürede en yüksek düzeyde ödeme için adımlar atılıyor</h3>
+            <p>Hazine ve Maliye Bakanı Mehmet Şimşek, yürütülen fon soruşturmalarıyla ilgili olarak, &quot;Kurumlarımız, sorunlu fonlarla ilgili çalışmalarını koordinasyon içinde titizlikle sürdürüyor. Yatırımcılara mümkün olan en kısa sürede ve en yüksek düzeyde ödeme yapılabilmesi için gerekli adımlar atılıyor&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-simsek-yatirimcilara-en-kisa-surede-en-yuksek-duzeyde-odeme-icin-adimlar-atiliyor-958786.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 1 Ekim 2026, 02:34</span>
+            </div>
+            <h3>Meclis açılıyor: Yeni dönemde gündemde neler var?</h3>
+            <p>TBMM, yaklaşık iki aylık aranın ardından bugün çalışmalarına yeniden başlayacak. Meclis&quot;te bugün gözler, Cumhurbaşkanı Erdoğan&#x27;ın geleneksel yeni yasama yılı açılış konuşmasında olacak. Yeni yasama yılında Meclis&#x27;i yoğun bir gündem bekliyor. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cx24je1232leo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 1 Ekim 2026, 13:57</span>
+            </div>
+            <h3>SPK: Yüksek kazanç sağlayanlar için gönüllü iade hesapları açıldı</h3>
+            <p>Sermaye Piyasası Kurulu (SPK) yatırım fonlarında tasfiye kararından önce katılma paylarını satarak yüksek kazanç elde edenlerin, bu kazançları gönüllü olarak iade edebilmeleri için her fon adına ayrı ayrı &quot;isteğe bağlı iade hesapları&quot; açıldığını duyurdu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c893vr235lg2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">TRT Haber · 1 Ekim 2026, 13:59</span>
+            </div>
+            <h3>Bill Gates yapay zeka riskleri için yakın zamanı işaret etti</h3>
+            <p>Bill Gates&#x27;e göre, yapay zekanın riskleri faydalarından daha hızlı şekilde ortaya çıkabilir.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/bill-gates-yapay-zeka-riskleri-icin-yakin-zamani-isaret-etti-958789.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">18 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="özel: &#x27;asrın soygununu yapanları teker teker atayandan cumhurbaşkanı olmaz&#x27; yeni parti genel başkanı özgür özel, fon kriziyle ilgili olarak cumhurbaşkanı recep tayyip erdoğan&#x27;a yaptığı istifa çağrısına benzer bir şekilde &quot;bu kumpas çetesini, bu kirli çeteyi, asrın soygununu yapanları teker teker atayandan cumhurbaşkanı olmaz&quot; dedi genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Eylül 2026, 14:41</span>
+        </div>
+        <h3>Özel: &#x27;Asrın soygununu yapanları teker teker atayandan cumhurbaşkanı olmaz&#x27;</h3>
+        <p>Yeni Parti Genel Başkanı Özgür Özel, fon kriziyle ilgili olarak Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;a yaptığı istifa çağrısına benzer bir şekilde &quot;Bu kumpas çetesini, bu kirli çeteyi, asrın soygununu yapanları teker teker atayandan cumhurbaşkanı olmaz&quot; dedi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Eylül 2026, 14:41</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqm2mjxn2dvvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meclis açılıyor: yeni dönemde gündemde neler var? tbmm, yaklaşık iki aylık aranın ardından bugün çalışmalarına yeniden başlayacak. meclis&quot;te bugün gözler, cumhurbaşkanı erdoğan&#x27;ın geleneksel yeni yasama yılı açılış konuşmasında olacak. yeni yasama yılında meclis&#x27;i yoğun bir gündem bekliyor. ankara&#x27;dan ayşe sayın&#x27;ın haberi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Ekim 2026, 02:34</span>
+        </div>
+        <h3>Meclis açılıyor: Yeni dönemde gündemde neler var?</h3>
+        <p>TBMM, yaklaşık iki aylık aranın ardından bugün çalışmalarına yeniden başlayacak. Meclis&quot;te bugün gözler, Cumhurbaşkanı Erdoğan&#x27;ın geleneksel yeni yasama yılı açılış konuşmasında olacak. Yeni yasama yılında Meclis&#x27;i yoğun bir gündem bekliyor. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Ekim 2026, 02:34</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx24je1232leo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gebe okullarında 3 milyonu aşkın anne adayı doğuma hazırlandı sağlık bakanlığınca anne adaylarının doğum öncesi ve sonrası dönemler hakkında bilgi sahibi olmaları ve bilinçli doğum yapmaları amacıyla yürütülen gebe okulları programı kapsamında 2023&#x27;ten bu yana 3 milyondan fazla gebeye eğitim verildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Ekim 2026, 11:12</span>
+        </div>
+        <h3>Gebe okullarında 3 milyonu aşkın anne adayı doğuma hazırlandı</h3>
+        <p>Sağlık Bakanlığınca anne adaylarının doğum öncesi ve sonrası dönemler hakkında bilgi sahibi olmaları ve bilinçli doğum yapmaları amacıyla yürütülen Gebe Okulları programı kapsamında 2023&#x27;ten bu yana 3 milyondan fazla gebeye eğitim verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Ekim 2026, 11:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/gebe-okullarinda-3-milyonu-askin-anne-adayi-doguma-hazirlandi/4074575" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizinden etkilenenler anlatıyor: &#x27;tazminatımı yatırdım, yılların emeği var&#x27; türkiye&#x27;de yaşanan fon krizi, tasfiye sürecine alınan fonlarda birikimi bulunan yüz binlerce kişiyi kaygılandırıyor. bir grup fon mağduru, bbc türkçe&#x27;ye yaşadıklarını anlattı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Eylül 2026, 10:28</span>
+        </div>
+        <h3>Fon krizinden etkilenenler anlatıyor: &#x27;Tazminatımı yatırdım, yılların emeği var&#x27;</h3>
+        <p>Türkiye&#x27;de yaşanan fon krizi, tasfiye sürecine alınan fonlarda birikimi bulunan yüz binlerce kişiyi kaygılandırıyor. Bir grup fon mağduru, BBC Türkçe&#x27;ye yaşadıklarını anlattı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Eylül 2026, 10:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmd79qqj3155o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon soruşturmasında melis sandal&#x27;a yakalama kararı fon soruşturması kapsamında şüpheli sıfatıyla dosyada yer alan şarkıcı mustafa sandal&#x27;ın eşi melis sandal ve babası cihan sütşurup&#x27;un tüm taşınır ve taşınmaz mal varlıklarına el konulmasına hükmedildi. ardından her iki isim hakkında da yakalama kararı çıkarıldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Eylül 2026, 14:31</span>
+        </div>
+        <h3>Fon soruşturmasında Melis Sandal&#x27;a yakalama kararı</h3>
+        <p>Fon soruşturması kapsamında şüpheli sıfatıyla dosyada yer alan şarkıcı Mustafa Sandal&#x27;ın eşi Melis Sandal ve babası Cihan Sütşurup&#x27;un tüm taşınır ve taşınmaz mal varlıklarına el konulmasına hükmedildi. Ardından her iki isim hakkında da yakalama kararı çıkarıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Eylül 2026, 14:31</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm1j4614jppko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fransa&#x27;daki lise öğrencilerinin eylemleri belçika&#x27;ya sıçradı fransa&#x27;da lise öğrencilerinin eğitim koşullarına ilişkin taleplerle başlattığı protesto ve okul blokajlarının ardından belçika&#x27;nın liege kentinde de öğrenciler çok sayıda okulun önünde eylem düzenledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 1 Ekim 2026, 13:56</span>
+        </div>
+        <h3>Fransa&#x27;daki lise öğrencilerinin eylemleri Belçika&#x27;ya sıçradı</h3>
+        <p>Fransa&#x27;da lise öğrencilerinin eğitim koşullarına ilişkin taleplerle başlattığı protesto ve okul blokajlarının ardından Belçika&#x27;nın Liege kentinde de öğrenciler çok sayıda okulun önünde eylem düzenledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Ekim 2026, 13:56</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/fransadaki-lise-ogrencilerinin-eylemleri-belcikaya-sicradi-958788.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan memişoğlu: temmuz 2024&#x27;ten bu yana normal doğum oranımızı yüzde 15,8 artırdık sağlık bakanı kemal memişoğlu, temmuz 2024&#x27;ten bu yana normal doğum oranını yüzde 15,8 artırdıklarını, bu çalışmaları daha da güçlendireceklerini bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Ekim 2026, 14:04</span>
+        </div>
+        <h3>Bakan Memişoğlu: Temmuz 2024&#x27;ten bu yana normal doğum oranımızı yüzde 15,8 artırdık</h3>
+        <p>Sağlık Bakanı Kemal Memişoğlu, Temmuz 2024&#x27;ten bu yana normal doğum oranını yüzde 15,8 artırdıklarını, bu çalışmaları daha da güçlendireceklerini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Ekim 2026, 14:04</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-memisoglu-temmuz-2024ten-bu-yana-normal-dogum-oranimizi-yuzde-15-8-artirdik/4074820" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇klim eğitimi cop31 gündeminin üst sıralarına taşınacak i̇klim bilimci ve unesco himayesinde faaliyet gösteren i̇klim eğitimi ofisi (oce) başkanı eric guilyardi, kasımda antalya&#x27;da düzenlenecek cop31&#x27;in iklim eğitimini küresel gündemin merkezine taşıma noktasında önemli bir fırsat sunduğunu kaydetti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Ekim 2026, 11:04</span>
+        </div>
+        <h3>İklim eğitimi COP31 gündeminin üst sıralarına taşınacak</h3>
+        <p>İklim bilimci ve UNESCO himayesinde faaliyet gösteren İklim Eğitimi Ofisi (OCE) Başkanı Eric Guilyardi, kasımda Antalya&#x27;da düzenlenecek COP31&#x27;in iklim eğitimini küresel gündemin merkezine taşıma noktasında önemli bir fırsat sunduğunu kaydetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Ekim 2026, 11:04</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iklim-egitimi-cop31-gundeminin-ust-siralarina-tasinacak/4074554" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb: son bir haftada 1 pkk&#x27;lı terörist daha teslim oldu milli savunma bakanlığı (msb) sözcüsü tuğamiral zeki aktürk, son bir haftada 1 pkk&#x27;lı teröristin daha teslim olduğunu bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Ekim 2026, 11:20</span>
+        </div>
+        <h3>MSB: Son bir haftada 1 PKK&#x27;lı terörist daha teslim oldu</h3>
+        <p>Milli Savunma Bakanlığı (MSB) Sözcüsü Tuğamiral Zeki Aktürk, son bir haftada 1 PKK&#x27;lı teröristin daha teslim olduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Ekim 2026, 11:20</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/msb-son-bir-haftada-1-pkkli-terorist-daha-teslim-oldu/4074593" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="can atalay süreli açlık grevine başladı: &#x27;bıçak kemiğe dayanmıştır&#x27; gezi parkı davası kapsamında 2022&#x27;de tutuklanan ve 14 mayıs 2023 seçimlerinde türkiye i̇şçi partisi&#x27;nden hatay milletvekili seçilen can atalay açlık grevine başladığını duyurdu genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Ekim 2026, 11:09</span>
+        </div>
+        <h3>Can Atalay süreli açlık grevine başladı: &#x27;Bıçak kemiğe dayanmıştır&#x27;</h3>
+        <p>Gezi Parkı Davası kapsamında 2022&#x27;de tutuklanan ve 14 Mayıs 2023 seçimlerinde Türkiye İşçi Partisi&#x27;nden Hatay milletvekili seçilen Can Atalay açlık grevine başladığını duyurdu</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Ekim 2026, 11:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqm272k7lpzjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mabel matiz&#x27;in &#x27;ha leylim&#x27; klibine müstehcenlik iddianamesi müzisyen mabel matiz hakkında &quot;ha leylim&quot; isimli şarkısının klibine yönelik &quot;müstehcenlik&quot; gerekçesiyle başlatılan soruşturma tamamlandı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Ekim 2026, 12:54</span>
+        </div>
+        <h3>Mabel Matiz&#x27;in &#x27;Ha Leylim&#x27; klibine müstehcenlik iddianamesi</h3>
+        <p>Müzisyen Mabel Matiz hakkında &quot;Ha Leylim&quot; isimli şarkısının klibine yönelik &quot;müstehcenlik&quot; gerekçesiyle başlatılan soruşturma tamamlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Ekim 2026, 12:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cdx8p8ldvg2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mersin büyükşehir belediye başkanı vahap seçer ve 58 kişi gözaltına alındı mersin&#x27;de yapılan operasyonda mersin büyükşehir belediye başkanı vahap seçer dahil 59 kişi gözaltına alındı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Ekim 2026, 13:40</span>
+        </div>
+        <h3>Mersin Büyükşehir Belediye Başkanı Vahap Seçer ve 58 kişi gözaltına alındı</h3>
+        <p>Mersin&#x27;de yapılan operasyonda Mersin Büyükşehir Belediye Başkanı Vahap Seçer dahil 59 kişi gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Ekim 2026, 13:40</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c8zxzx1nnl6wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="külhöyük&#x27;te bulunan 4 bin yıllık tohumlar hitit tıbbına ışık tutacak ankara&#x27;nın gölbaşı ilçesindeki külhöyük kazılarında ortaya çıkarılan 66 milyon yıllık deniz canlısı fosili ve 4 bin yıllık sevgi çiçeği tohumu, bölgenin doğal ve kültürel geçmişine ışık tutuyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 1 Ekim 2026, 13:14</span>
+        </div>
+        <h3>Külhöyük&#x27;te bulunan 4 bin yıllık tohumlar Hitit tıbbına ışık tutacak</h3>
+        <p>Ankara&#x27;nın Gölbaşı ilçesindeki Külhöyük kazılarında ortaya çıkarılan 66 milyon yıllık deniz canlısı fosili ve 4 bin yıllık sevgi çiçeği tohumu, bölgenin doğal ve kültürel geçmişine ışık tutuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Ekim 2026, 13:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/yasam/kulhoyukte-bulunan-4-bin-yillik-tohumlar-hitit-tibbina-isik-tutacak-958779.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tbmm&#x27;de 28. dönem 5. yasama yılı açılışı dolayısıyla tören düzenlendi 28. dönem 5. yasama yılı açılışı dolayısıyla meclis&#x27;teki atatürk anıtı önünde tören yapıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Ekim 2026, 13:50</span>
+        </div>
+        <h3>TBMM&#x27;de 28. Dönem 5. Yasama Yılı açılışı dolayısıyla tören düzenlendi</h3>
+        <p>28. Dönem 5. Yasama Yılı açılışı dolayısıyla Meclis&#x27;teki Atatürk Anıtı önünde tören yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Ekim 2026, 13:50</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tbmmde-28-donem-5-yasama-yili-acilisi-dolayisiyla-toren-duzenlendi/4074800" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kırıkkale belediyesine yönelik rüşvet operasyonunda 3 belediye çalışanı gözaltına alındı kırıkkale belediyesi i̇mar ve şehircilik müdürlüğüne yönelik rüşvet operasyonunda 3 belediye çalışanı gözaltına alındı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Ekim 2026, 12:34</span>
+        </div>
+        <h3>Kırıkkale Belediyesine yönelik rüşvet operasyonunda 3 belediye çalışanı gözaltına alındı</h3>
+        <p>Kırıkkale Belediyesi İmar ve Şehircilik Müdürlüğüne yönelik rüşvet operasyonunda 3 belediye çalışanı gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Ekim 2026, 12:34</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kirikkale-belediyesine-yonelik-rusvet-operasyonunda-3-belediye-calisani-gozaltina-alindi/4074706" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sakarya&#x27;da sağanak sonrası kıyı şeridinde denizin rengi kahverengiye dönüştü sakarya&#x27;nın kocaali ilçesinde sağanak nedeniyle melen çayı ile maden ve hızar derelerinin taşıdığı çamurlu su, karadeniz&#x27;in kıyı kesiminde renk değişimine neden oldu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Ekim 2026, 11:48</span>
+        </div>
+        <h3>Sakarya&#x27;da sağanak sonrası kıyı şeridinde denizin rengi kahverengiye dönüştü</h3>
+        <p>Sakarya&#x27;nın Kocaali ilçesinde sağanak nedeniyle Melen Çayı ile Maden ve Hızar derelerinin taşıdığı çamurlu su, Karadeniz&#x27;in kıyı kesiminde renk değişimine neden oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Ekim 2026, 11:48</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sakaryada-saganak-sonrasi-kiyi-seridinde-denizin-rengi-kahverengiye-donustu/4074643" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mi̇ksen genel başkanı çiçek, üsküdar belediye başkan vekili gültekin&#x27;i ziyaret etti mahalli i̇dareler kamu i̇şveren sendikası (mi̇ksen) genel başkanı fatih sultan mehmet çiçek, üsküdar belediye başkan vekili dündar ziya gültekin&#x27;e ziyarette bulundu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Ekim 2026, 10:40</span>
+        </div>
+        <h3>MİKSEN Genel Başkanı Çiçek, Üsküdar Belediye Başkan Vekili Gültekin&#x27;i ziyaret etti</h3>
+        <p>Mahalli İdareler Kamu İşveren Sendikası (MİKSEN) Genel Başkanı Fatih Sultan Mehmet Çiçek, Üsküdar Belediye Başkan Vekili Dündar Ziya Gültekin&#x27;e ziyarette bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Ekim 2026, 10:40</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/miksen-genel-baskani-cicek-uskudar-belediye-baskan-vekili-gultekini-ziyaret-etti/4074513" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="terör örgütleri deaş ve el kaide ile bağlantılı kişiye ilişkin bilgi güncellendi birleşmiş milletler güvenlik konseyi (bmgk) kararı doğrultusunda, &quot;deaş ve el kaide ile bağlantılı gerçek kişiler&quot; listesindeki kişiye ilişkin bilgi güncellendi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Ekim 2026, 11:28</span>
+        </div>
+        <h3>Terör örgütleri DEAŞ ve El Kaide ile bağlantılı kişiye ilişkin bilgi güncellendi</h3>
+        <p>Birleşmiş Milletler Güvenlik Konseyi (BMGK) kararı doğrultusunda, &quot;DEAŞ ve El Kaide ile Bağlantılı Gerçek Kişiler&quot; listesindeki kişiye ilişkin bilgi güncellendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Ekim 2026, 11:28</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/teror-orgutleri-deas-ve-el-kaide-ile-baglantili-kisiye-iliskin-bilgi-guncellendi/4074608" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan şimşek: yatırımcılara en kısa sürede en yüksek düzeyde ödeme için adımlar atılıyor hazine ve maliye bakanı mehmet şimşek, yürütülen fon soruşturmalarıyla ilgili olarak, &quot;kurumlarımız, sorunlu fonlarla ilgili çalışmalarını koordinasyon içinde titizlikle sürdürüyor. yatırımcılara mümkün olan en kısa sürede ve en yüksek düzeyde ödeme yapılabilmesi için gerekli adımlar atılıyor&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 1 Ekim 2026, 13:45</span>
+        </div>
+        <h3>Bakan Şimşek: Yatırımcılara en kısa sürede en yüksek düzeyde ödeme için adımlar atılıyor</h3>
+        <p>Hazine ve Maliye Bakanı Mehmet Şimşek, yürütülen fon soruşturmalarıyla ilgili olarak, &quot;Kurumlarımız, sorunlu fonlarla ilgili çalışmalarını koordinasyon içinde titizlikle sürdürüyor. Yatırımcılara mümkün olan en kısa sürede ve en yüksek düzeyde ödeme yapılabilmesi için gerekli adımlar atılıyor&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Ekim 2026, 13:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-simsek-yatirimcilara-en-kisa-surede-en-yuksek-duzeyde-odeme-icin-adimlar-atiliyor-958786.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="batı karadeniz ve marmara denizleri için fırtına uyarısı meteoroloji, batı karadeniz ve marmara denizleri için fırtına uyarısında bulundu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 1 Ekim 2026, 13:35</span>
+        </div>
+        <h3>Batı Karadeniz ve Marmara denizleri için fırtına uyarısı</h3>
+        <p>Meteoroloji, Batı Karadeniz ve Marmara denizleri için fırtına uyarısında bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Ekim 2026, 13:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/bati-karadeniz-ve-marmara-denizleri-icin-firtina-uyarisi-958783.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul için sağanak uyarısı meteoroloji, i̇stanbul ve çevre illerde gece saatlerinden itibaren beklenen gök gürültülü sağanak nedeniyle meydana gelebilecek olumsuzluklara karşı uyarıda bulundu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 1 Ekim 2026, 13:25</span>
+        </div>
+        <h3>İstanbul için sağanak uyarısı</h3>
+        <p>Meteoroloji, İstanbul ve çevre illerde gece saatlerinden itibaren beklenen gök gürültülü sağanak nedeniyle meydana gelebilecek olumsuzluklara karşı uyarıda bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Ekim 2026, 13:25</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbul-icin-saganak-uyarisi-958782.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meteorolojiden i̇stanbul ve çevresi için gök gürültülü sağanak uyarısı meteoroloji, i̇stanbul ve çevre illerde gece saatlerinden itibaren beklenen gök gürültülü sağanak nedeniyle meydana gelebilecek olumsuzluklara karşı uyarıda bulundu. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Ekim 2026, 13:22</span>
+        </div>
+        <h3>Meteorolojiden İstanbul ve çevresi için gök gürültülü sağanak uyarısı</h3>
+        <p>Meteoroloji, İstanbul ve çevre illerde gece saatlerinden itibaren beklenen gök gürültülü sağanak nedeniyle meydana gelebilecek olumsuzluklara karşı uyarıda bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Ekim 2026, 13:22</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/meteorolojiden-istanbul-ve-cevresi-icin-gok-gurultulu-saganak-uyarisi/4074750" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="christa pike&#x27;ın idam girişimi neden ölümle sonuçlanmadı? abd&#x27;nin tennessee eyaletinde infazı gerçekleştirilen idam mahkumu christa pike&#x27;ın hayatta kalmasıyla ilgili inceleme başlatılıyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 1 Ekim 2026, 12:56</span>
+        </div>
+        <h3>Christa Pike&#x27;ın idam girişimi neden ölümle sonuçlanmadı?</h3>
+        <p>ABD&#x27;nin Tennessee eyaletinde infazı gerçekleştirilen idam mahkumu Christa Pike&#x27;ın hayatta kalmasıyla ilgili inceleme başlatılıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Ekim 2026, 12:56</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5wyzykre0wno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="spk: yüksek kazanç sağlayanlar için gönüllü iade hesapları açıldı sermaye piyasası kurulu (spk) yatırım fonlarında tasfiye kararından önce katılma paylarını satarak yüksek kazanç elde edenlerin, bu kazançları gönüllü olarak iade edebilmeleri için her fon adına ayrı ayrı &quot;isteğe bağlı iade hesapları&quot; açıldığını duyurdu. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 1 Ekim 2026, 13:57</span>
+        </div>
+        <h3>SPK: Yüksek kazanç sağlayanlar için gönüllü iade hesapları açıldı</h3>
+        <p>Sermaye Piyasası Kurulu (SPK) yatırım fonlarında tasfiye kararından önce katılma paylarını satarak yüksek kazanç elde edenlerin, bu kazançları gönüllü olarak iade edebilmeleri için her fon adına ayrı ayrı &quot;isteğe bağlı iade hesapları&quot; açıldığını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Ekim 2026, 13:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c893vr235lg2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dağlıoğlu: teknofest, bir şeyler üretmek için birçok insana ilham kaynağı oluyor cumhurbaşkanlığı yatırım ve finans ofisi başkanı ahmet burak dağlıoğlu, teknofest&#x27;in, insanlığa faydalı teknoloji alanında üretimde bulunmak isteyen birçok kişiye ilham kaynağı olduğunu belirtti. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 1 Ekim 2026, 13:37</span>
+        </div>
+        <h3>Dağlıoğlu: TEKNOFEST, bir şeyler üretmek için birçok insana ilham kaynağı oluyor</h3>
+        <p>Cumhurbaşkanlığı Yatırım ve Finans Ofisi Başkanı Ahmet Burak Dağlıoğlu, TEKNOFEST&#x27;in, insanlığa faydalı teknoloji alanında üretimde bulunmak isteyen birçok kişiye ilham kaynağı olduğunu belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Ekim 2026, 13:37</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/daglioglu-teknofest-bir-seyler-uretmek-icin-bircok-insana-ilham-kaynagi-oluyor-958785.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mke&#x27;den azerbaycan&#x27;da fişek üretimi ve bmp1 zırhlı piyade araçları için işbirliği makine ve kimya endüstrisi (mke), azerbaycan&#x27;da 7,62 ve 5,56 milimetrelik fişek üretimi yapacak fabrika kurarken ülkenin ordusunun envanterindeki bmp-1 zırhlı piyade araçlarının modernizasyonunu da gerçekleştiriyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 1 Ekim 2026, 13:16</span>
+        </div>
+        <h3>MKE&#x27;den Azerbaycan&#x27;da fişek üretimi ve BMP1 zırhlı piyade araçları için işbirliği</h3>
+        <p>Makine ve Kimya Endüstrisi (MKE), Azerbaycan&#x27;da 7,62 ve 5,56 milimetrelik fişek üretimi yapacak fabrika kurarken ülkenin ordusunun envanterindeki BMP-1 zırhlı piyade araçlarının modernizasyonunu da gerçekleştiriyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Ekim 2026, 13:16</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/savunma/mkeden-azerbaycanda-fisek-uretimi-ve-bmp-1-zirhli-piyade-araclari-icin-isbirligi-958780.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="japonya yabancılardan alınan süresiz oturum izni ücretini 20 kat artırdı japonya, ülkede süresiz oturum izni almak isteyen yabancılardan alınan ücreti 20 katına çıkararak 200 bin yene (bin 270 dolar; 61 bin 915 tl) yükseltti ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 1 Ekim 2026, 14:06</span>
+        </div>
+        <h3>Japonya yabancılardan alınan süresiz oturum izni ücretini 20 kat artırdı</h3>
+        <p>Japonya, ülkede süresiz oturum izni almak isteyen yabancılardan alınan ücreti 20 katına çıkararak 200 bin yene (bin 270 dolar; 61 bin 915 TL) yükseltti</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Ekim 2026, 14:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckvgyg89znzzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milli motorlar gökbey ve kizilelma ile buluşacak tusaş motor sanayii (tei), gökbey genel maksat helikopteri&#x27;nin seri üretim ve kizilelma için geliştirdiği prototip motorları platform üreticilerine teslim etmeye hazırlanıyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 1 Ekim 2026, 13:40</span>
+        </div>
+        <h3>Milli motorlar GÖKBEY ve KIZILELMA ile buluşacak</h3>
+        <p>TUSAŞ Motor Sanayii (TEI), GÖKBEY Genel Maksat Helikopteri&#x27;nin seri üretim ve KIZILELMA için geliştirdiği prototip motorları platform üreticilerine teslim etmeye hazırlanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Ekim 2026, 13:40</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/savunma/milli-motorlar-gokbey-ve-kizilelma-ile-bulusacak-958784.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bill gates yapay zeka riskleri için yakın zamanı işaret etti bill gates&#x27;e göre, yapay zekanın riskleri faydalarından daha hızlı şekilde ortaya çıkabilir. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 1 Ekim 2026, 13:59</span>
+        </div>
+        <h3>Bill Gates yapay zeka riskleri için yakın zamanı işaret etti</h3>
+        <p>Bill Gates&#x27;e göre, yapay zekanın riskleri faydalarından daha hızlı şekilde ortaya çıkabilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Ekim 2026, 13:59</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/bill-gates-yapay-zeka-riskleri-icin-yakin-zamani-isaret-etti-958789.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="kurtulmuş: filistin&#x27;le dayanışmanın güçlü ve anlamlı bir nişanesi tbmm başkanı numan kurtulmuş, konyaspor ile filistin milli takımı arasında konya&#x27;da oynanan dostluk maçına ilişkin, &quot;dostluk maçı mazlum filistin halkıyla sarsılmaz dayanışmamızın güçlü ve anlamlı bir nişanesi olması dolayısıyla bizleri ziyadesiyle memnun etmiştir&quot; dedi. spor trt haber" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">TRT Haber · 1 Ekim 2026, 13:28</span>
+        </div>
+        <h3>Kurtulmuş: Filistin&#x27;le dayanışmanın güçlü ve anlamlı bir nişanesi</h3>
+        <p>TBMM Başkanı Numan Kurtulmuş, Konyaspor ile Filistin Milli Takımı arasında Konya&#x27;da oynanan dostluk maçına ilişkin, &quot;Dostluk maçı mazlum Filistin halkıyla sarsılmaz dayanışmamızın güçlü ve anlamlı bir nişanesi olması dolayısıyla bizleri ziyadesiyle memnun etmiştir&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Ekim 2026, 13:28</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/kurtulmus-filistinle-dayanismanin-guclu-ve-anlamli-bir-nisanesi-958781.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
