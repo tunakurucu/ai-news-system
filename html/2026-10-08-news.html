@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">8 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">8 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 3</span><span class="stat-item"><strong>genel</strong> 19</span><span class="stat-item"><strong>dünya</strong> 7</span><span class="stat-item"><strong>teknoloji</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>TEKNOFEST Güneydoğu&#x27;da kameralar gördü EYEMINER analiz etti</h3>
+        <p>HAVELSAN, yapay zeka destekli video analitik ürünü EYEMINER ile TEKNOFEST Güneydoğu kapsamında, Şanlıurfa GAP Havalimanı festival alanında elde edilen kamera görüntülerini anlık olarak TEKNOFEST Kriz Merkezi’ne ileterek güvenlik ekiplerine gerçek zamanlı izleme, alarm üretimi ve analiz desteği sağladı.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 8 Ekim 2026, 14:12</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/savunma/teknofest-guneydoguda-kameralar-gordu-eyeminer-analiz-etti-959538.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 8 Ekim 2026, 14:28</span>
+            </div>
+            <h3>Hakan Fidan: Türkiye başka bir ülke toprağında saldırı yapmayacak</h3>
+            <p>Dışişleri Bakanı Hakan Fidan, 5 Ekim&#x27;deki son Mekke İttifakı toplantısında karara bağlanan Suudi Arabistan&#x27;a askeri kapasite intikali konusunda açıklama yaptı. Fidan, &quot;Türkiye başka bir ülke toprağına asker gönderip orada bir saldırı yapmayacak&quot; dedi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cq5ynxpz4p01o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 8 Ekim 2026, 13:33</span>
+            </div>
+            <h3>İran, 7 Ekim saldırıları sonrası caydırıcılık stratejisini nasıl değiştirdi?</h3>
+            <p>Hamas&#x27;ın 2023&#x27;teki saldırıları sonrası bölgedeki müttefiklerinin ağır darbeler alması ve doğrudan savaş deneyimi, İran&#x27;ın caydırıcılık stratejisini yeniden şekillendirdi. Tahran, &quot;direniş ekseni&quot;ne kıyasla füze gücüne, SİHA&#x27;lara ve Hürmüz Boğazı üzerindeki etkisine daha fazla ağırlık vermeye başladı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ck7vpe186leeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 8 Ekim 2026, 13:19</span>
+            </div>
+            <h3>Tasfiye edilen fonlardaki yatırımcılara ödemeler nasıl yapılacak?</h3>
+            <p>Fon krizinde 1 milyon TL&#x27;ye kadar yatırımcı ödemelerinin bugün başlaması bekleniyor. Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, 7 Ekim&#x27;de TBMM Genel Kurulu&#x27;nda bu konuda bilgi verdi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ckgeljxrzx9xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 6 Ekim 2026, 15:01</span>
+            </div>
+            <h3>Akın Gürlek: &#x27;Bir işlem yapılmayacak algısı yanlış&#x27;</h3>
+            <p>Fon soruşturmalarıyla ilgili konuşan Adalet Bakanı Akın Gürlek, zararın iki katının karşılanmasının etkin pişmanlık sebebi olduğunu ancak bunun kişiyle ilgili hukuki &quot;işlem yapılmayacağı&quot; anlamına gelmediğini söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cr86zq1lz07yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="teknofest güneydoğu&#x27;da kameralar gördü eyeminer analiz etti havelsan, yapay zeka destekli video analitik ürünü eyeminer ile teknofest güneydoğu kapsamında, şanlıurfa gap havalimanı festival alanında elde edilen kamera görüntülerini anlık olarak teknofest kriz merkezi’ne ileterek güvenlik ekiplerine gerçek zamanlı izleme, alarm üretimi ve analiz desteği sağladı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 8 Ekim 2026, 14:12</span>
+        </div>
+        <h3>TEKNOFEST Güneydoğu&#x27;da kameralar gördü EYEMINER analiz etti</h3>
+        <p>HAVELSAN, yapay zeka destekli video analitik ürünü EYEMINER ile TEKNOFEST Güneydoğu kapsamında, Şanlıurfa GAP Havalimanı festival alanında elde edilen kamera görüntülerini anlık olarak TEKNOFEST Kriz Merkezi’ne ileterek güvenlik ekiplerine gerçek zamanlı izleme, alarm üretimi ve analiz desteği sağladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Ekim 2026, 14:12</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/savunma/teknofest-guneydoguda-kameralar-gordu-eyeminer-analiz-etti-959538.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milli eğitim bakanı tekin: türkiye&#x27;de eğitim süresinin kısaltılması mutlaka gündeme gelecektir milli eğitim bakanı tekin, zorunlu eğitim süresi sebebiyle öğrencilerin üretime ve toplumsal hayata atılmasının uzun sürdüğünü belirterek, &quot;türkiye&#x27;de eğitim süresinin kısaltılması mutlaka gündeme gelecektir.&quot; ifadelerini kullandı. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 8 Ekim 2026, 13:45</span>
+        </div>
+        <h3>Milli Eğitim Bakanı Tekin: Türkiye&#x27;de eğitim süresinin kısaltılması mutlaka gündeme gelecektir</h3>
+        <p>Milli Eğitim Bakanı Tekin, zorunlu eğitim süresi sebebiyle öğrencilerin üretime ve toplumsal hayata atılmasının uzun sürdüğünü belirterek, &quot;Türkiye&#x27;de eğitim süresinin kısaltılması mutlaka gündeme gelecektir.&quot; ifadelerini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 8 Ekim 2026, 13:45</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/milli-egitim-bakani-tekin-turkiyede-egitim-suresinin-kisaltilmasi-mutlaka-gundeme-gelecektir/4082094" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="eylülde en yüksek aylık reel getiri devlet iç borçlanma senetlerinde oldu tüketici fiyat endeksi (tüfe) ile indirgendiğinde eylülde en yüksek aylık reel getiri, yüzde 1,4 ile devlet iç borçlanma senetlerinde (di̇bs) gerçekleşti. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 8 Ekim 2026, 12:55</span>
+        </div>
+        <h3>Eylülde en yüksek aylık reel getiri devlet iç borçlanma senetlerinde oldu</h3>
+        <p>Tüketici fiyat endeksi (TÜFE) ile indirgendiğinde eylülde en yüksek aylık reel getiri, yüzde 1,4 ile devlet iç borçlanma senetlerinde (DİBS) gerçekleşti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Ekim 2026, 12:55</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/eylulde-en-yuksek-aylik-reel-getiri-devlet-ic-borclanma-senetlerinde-oldu-959531.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">19 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="hakan fidan: türkiye başka bir ülke toprağında saldırı yapmayacak dışişleri bakanı hakan fidan, 5 ekim&#x27;deki son mekke i̇ttifakı toplantısında karara bağlanan suudi arabistan&#x27;a askeri kapasite intikali konusunda açıklama yaptı. fidan, &quot;türkiye başka bir ülke toprağına asker gönderip orada bir saldırı yapmayacak&quot; dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 8 Ekim 2026, 14:28</span>
+        </div>
+        <h3>Hakan Fidan: Türkiye başka bir ülke toprağında saldırı yapmayacak</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, 5 Ekim&#x27;deki son Mekke İttifakı toplantısında karara bağlanan Suudi Arabistan&#x27;a askeri kapasite intikali konusunda açıklama yaptı. Fidan, &quot;Türkiye başka bir ülke toprağına asker gönderip orada bir saldırı yapmayacak&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Ekim 2026, 14:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq5ynxpz4p01o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran, 7 ekim saldırıları sonrası caydırıcılık stratejisini nasıl değiştirdi? hamas&#x27;ın 2023&#x27;teki saldırıları sonrası bölgedeki müttefiklerinin ağır darbeler alması ve doğrudan savaş deneyimi, i̇ran&#x27;ın caydırıcılık stratejisini yeniden şekillendirdi. tahran, &quot;direniş ekseni&quot;ne kıyasla füze gücüne, si̇ha&#x27;lara ve hürmüz boğazı üzerindeki etkisine daha fazla ağırlık vermeye başladı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 8 Ekim 2026, 13:33</span>
+        </div>
+        <h3>İran, 7 Ekim saldırıları sonrası caydırıcılık stratejisini nasıl değiştirdi?</h3>
+        <p>Hamas&#x27;ın 2023&#x27;teki saldırıları sonrası bölgedeki müttefiklerinin ağır darbeler alması ve doğrudan savaş deneyimi, İran&#x27;ın caydırıcılık stratejisini yeniden şekillendirdi. Tahran, &quot;direniş ekseni&quot;ne kıyasla füze gücüne, SİHA&#x27;lara ve Hürmüz Boğazı üzerindeki etkisine daha fazla ağırlık vermeye başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Ekim 2026, 13:33</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck7vpe186leeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tasfiye edilen fonlardaki yatırımcılara ödemeler nasıl yapılacak? fon krizinde 1 milyon tl&#x27;ye kadar yatırımcı ödemelerinin bugün başlaması bekleniyor. cumhurbaşkanı yardımcısı cevdet yılmaz, 7 ekim&#x27;de tbmm genel kurulu&#x27;nda bu konuda bilgi verdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 8 Ekim 2026, 13:19</span>
+        </div>
+        <h3>Tasfiye edilen fonlardaki yatırımcılara ödemeler nasıl yapılacak?</h3>
+        <p>Fon krizinde 1 milyon TL&#x27;ye kadar yatırımcı ödemelerinin bugün başlaması bekleniyor. Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, 7 Ekim&#x27;de TBMM Genel Kurulu&#x27;nda bu konuda bilgi verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Ekim 2026, 13:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckgeljxrzx9xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akın gürlek: &#x27;bir işlem yapılmayacak algısı yanlış&#x27; fon soruşturmalarıyla ilgili konuşan adalet bakanı akın gürlek, zararın iki katının karşılanmasının etkin pişmanlık sebebi olduğunu ancak bunun kişiyle ilgili hukuki &quot;işlem yapılmayacağı&quot; anlamına gelmediğini söyledi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 6 Ekim 2026, 15:01</span>
+        </div>
+        <h3>Akın Gürlek: &#x27;Bir işlem yapılmayacak algısı yanlış&#x27;</h3>
+        <p>Fon soruşturmalarıyla ilgili konuşan Adalet Bakanı Akın Gürlek, zararın iki katının karşılanmasının etkin pişmanlık sebebi olduğunu ancak bunun kişiyle ilgili hukuki &quot;işlem yapılmayacağı&quot; anlamına gelmediğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 6 Ekim 2026, 15:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr86zq1lz07yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="lübnan cumhurbaşkanı: anlaşma, i̇srail&#x27;le düşmanlığı bitirmenin tek yolu lübnan cumhurbaşkanı joseph avn, müzakerelerin savaşa alternatif olduğunu, lübnan ile i̇srail arasındaki düşmanlık halini sona erdirmenin tek yolunun anlaşma olduğunu belirtti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 8 Ekim 2026, 13:56</span>
+        </div>
+        <h3>Lübnan Cumhurbaşkanı: Anlaşma, İsrail&#x27;le düşmanlığı bitirmenin tek yolu</h3>
+        <p>Lübnan Cumhurbaşkanı Joseph Avn, müzakerelerin savaşa alternatif olduğunu, Lübnan ile İsrail arasındaki düşmanlık halini sona erdirmenin tek yolunun anlaşma olduğunu belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Ekim 2026, 13:56</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/lubnan-cumhurbaskani-anlasma-israille-dusmanligi-bitirmenin-tek-yolu-959535.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kvkk: i̇şveren, çalışanın kurumsal eposta yazışmalarına serbestçe erişemez kişisel verileri koruma kurulu (kvkk), işverenin cihaz, ağ veya kurumsal sistem üzerinde teknik yetkiye sahip olmasının, çalışanın kişisel e-posta, anlık mesajlaşma ve sosyal medya yazışmalarına erişim hakkı vermediğini bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 8 Ekim 2026, 14:32</span>
+        </div>
+        <h3>KVKK: İşveren, çalışanın kurumsal eposta yazışmalarına serbestçe erişemez</h3>
+        <p>Kişisel Verileri Koruma Kurulu (KVKK), işverenin cihaz, ağ veya kurumsal sistem üzerinde teknik yetkiye sahip olmasının, çalışanın kişisel e-posta, anlık mesajlaşma ve sosyal medya yazışmalarına erişim hakkı vermediğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Ekim 2026, 14:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/kvkk-isveren-calisanin-kurumsal-e-posta-yazismalarina-serbestce-erisemez-959540.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan fidan: karadeniz&#x27;in çatışma cephesine dönüşmesine asla izin vermememiz gerekiyor dışişleri bakanı hakan fidan, &quot;karadeniz&#x27;in yeni bir çatışma cephesine dönüşmesine asla izin vermememiz gerekiyor&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 8 Ekim 2026, 13:47</span>
+        </div>
+        <h3>Bakan Fidan: Karadeniz&#x27;in çatışma cephesine dönüşmesine asla izin vermememiz gerekiyor</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, &quot;Karadeniz&#x27;in yeni bir çatışma cephesine dönüşmesine asla izin vermememiz gerekiyor&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Ekim 2026, 13:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-fidan-karadenizin-catisma-cephesine-donusmesine-asla-izin-vermememiz-gerekiyor-959533.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yahşihan belediyesine yönelik yolsuzluk operasyonunda 9 zanlı yakalandı, 2 bin 31 taşınmaza el konuldu kırıkkale&#x27;nin yahşihan belediyesine yönelik 2 ilde düzenlenen yolsuzluk operasyonunda belediye başkanvekili aydın demirdirek&#x27;in de aralarında bulunduğu 9 zanlı gözaltına alındı, 2 bin 31 taşınmaza el konuldu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 8 Ekim 2026, 13:15</span>
+        </div>
+        <h3>Yahşihan Belediyesine yönelik yolsuzluk operasyonunda 9 zanlı yakalandı, 2 bin 31 taşınmaza el konuldu</h3>
+        <p>Kırıkkale&#x27;nin Yahşihan Belediyesine yönelik 2 ilde düzenlenen yolsuzluk operasyonunda belediye başkanvekili Aydın Demirdirek&#x27;in de aralarında bulunduğu 9 zanlı gözaltına alındı, 2 bin 31 taşınmaza el konuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 8 Ekim 2026, 13:15</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yahsihan-belediyesine-yonelik-yolsuzluk-operasyonunda-9-zanli-yakalandi-2-bin-31-tasinmaza-el-konuldu/4082066" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="maltepe&#x27;de en az iki kişinin öldüğü bina çökmesiyle ilgili neler biliniyor? i̇stanbul&#x27;un maltepe ilçesinde yedi katlı bir binadaki çökme sonucu iki kişi hayatını kaybetti. binanın üç katının çökmesinin ardından enkaz altındaki iki kişi aranıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 8 Ekim 2026, 12:32</span>
+        </div>
+        <h3>Maltepe&#x27;de en az iki kişinin öldüğü bina çökmesiyle ilgili neler biliniyor?</h3>
+        <p>İstanbul&#x27;un Maltepe ilçesinde yedi katlı bir binadaki çökme sonucu iki kişi hayatını kaybetti. Binanın üç katının çökmesinin ardından enkaz altındaki iki kişi aranıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Ekim 2026, 12:32</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj93zg0k2p97o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="christa pike yeniden idamla karşı karşıya kalabilir mi? i̇dam mahkumu christa pike&#x27;ın infazının eyalet adına başarısızlıkla sonuçlanması, tennessee adalet sistemini daha önce hiç karşılaşmadığı bir duruma soktu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 8 Ekim 2026, 12:55</span>
+        </div>
+        <h3>Christa Pike yeniden idamla karşı karşıya kalabilir mi?</h3>
+        <p>İdam mahkumu Christa Pike&#x27;ın infazının eyalet adına başarısızlıkla sonuçlanması, Tennessee adalet sistemini daha önce hiç karşılaşmadığı bir duruma soktu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Ekim 2026, 12:55</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvy0r941ezr7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fatma betül sayan kaya ve eşi i̇lyas kaya ifade verdi: &#x27;özel bilgi ve yönlendirme almadık&#x27; i̇stanbul cumhuriyet başsavcılığı&#x27;nın yürüttüğü fon soruşturmaları kapsamında, fatma betül sayan kaya ve eşi i̇lyas kaya, şüpheli sıfatıyla 7 ekim&#x27;de ifade verdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 8 Ekim 2026, 01:02</span>
+        </div>
+        <h3>Fatma Betül Sayan Kaya ve eşi İlyas Kaya ifade verdi: &#x27;Özel bilgi ve yönlendirme almadık&#x27;</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı&#x27;nın yürüttüğü fon soruşturmaları kapsamında, Fatma Betül Sayan Kaya ve eşi İlyas Kaya, şüpheli sıfatıyla 7 Ekim&#x27;de ifade verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Ekim 2026, 01:02</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw77p42vg76do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon soruşturmasında adı geçen ali emre ballı ölü bulundu fon soruşturmasında adı geçen finansal kurumlar birliği başkanı ali emre ballı i̇stanbul&#x27;da ölü bulundu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 7 Ekim 2026, 09:57</span>
+        </div>
+        <h3>Fon soruşturmasında adı geçen Ali Emre Ballı ölü bulundu</h3>
+        <p>Fon soruşturmasında adı geçen Finansal Kurumlar Birliği Başkanı Ali Emre Ballı İstanbul&#x27;da ölü bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 7 Ekim 2026, 09:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm369p4rk1y0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="maltepe&#x27;de çöken binaya ilişkin 2 kişi gözaltına alındı i̇stanbul maltepe&#x27;de bazı katları çöken 7 katlı binaya ilişkin başlatılan soruşturma kapsamında binanın mimarı h.b. ve şantiye şefi gözaltına alındı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 8 Ekim 2026, 14:21</span>
+        </div>
+        <h3>Maltepe&#x27;de çöken binaya ilişkin 2 kişi gözaltına alındı</h3>
+        <p>İstanbul Maltepe&#x27;de bazı katları çöken 7 katlı binaya ilişkin başlatılan soruşturma kapsamında binanın mimarı H.B. ve şantiye şefi gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Ekim 2026, 14:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/maltepede-coken-binaya-iliskin-2-kisi-gozaltina-alindi-959539.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="2026 nobel edebiyat ödülü sahibini buldu 2026 nobel edebiyat ödülü, kanadalı yazar anne carson&#x27;a verildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 8 Ekim 2026, 14:05</span>
+        </div>
+        <h3>2026 Nobel Edebiyat Ödülü sahibini buldu</h3>
+        <p>2026 Nobel Edebiyat Ödülü, Kanadalı yazar Anne Carson&#x27;a verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Ekim 2026, 14:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/2026-nobel-edebiyat-odulu-sahibini-buldu-959537.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul valisi gül: enkaz altında 3 kişi olduğunu düşünüyoruz maltepe&#x27;de bazı katları çöken 7 katlı binadaki iki kişi hayatını kaybetti. i̇stanbul valisi gül, yaralıların hayati tehlikesinin bulunmadığını, enkaz altında 3 kişi olduğunu düşündüklerini söyledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 8 Ekim 2026, 14:06</span>
+        </div>
+        <h3>İstanbul Valisi Gül: Enkaz altında 3 kişi olduğunu düşünüyoruz</h3>
+        <p>Maltepe&#x27;de bazı katları çöken 7 katlı binadaki iki kişi hayatını kaybetti. İstanbul Valisi Gül, yaralıların hayati tehlikesinin bulunmadığını, enkaz altında 3 kişi olduğunu düşündüklerini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Ekim 2026, 14:06</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbul-valisi-gul-enkaz-altinda-3-kisi-oldugunu-dusunuyoruz-959536.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="muğla&#x27;da kamyonetle otomobil çarpıştı: 1 ölü muğla&#x27;nın milas ilçesinde kamyonet ile otomobilin çarpışması sonucu 1 kişi hayatını kaybetti, 2 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 8 Ekim 2026, 13:27</span>
+        </div>
+        <h3>Muğla&#x27;da kamyonetle otomobil çarpıştı: 1 ölü</h3>
+        <p>Muğla&#x27;nın Milas ilçesinde kamyonet ile otomobilin çarpışması sonucu 1 kişi hayatını kaybetti, 2 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Ekim 2026, 13:27</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/muglada-kamyonetle-otomobil-carpisti-1-olu-959532.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yök&#x27;ün veri analizi okulu &quot;dijital üniversite platformu&quot;na dönüşecek yükseköğretim kurulunca (yök) geçen yıl hayata geçirilen veri analizi okulu, kapsamı genişletilerek, 2026-2027 akademik yılında &quot;dijital üniversite platformu&quot;na dönüşecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 8 Ekim 2026, 13:37</span>
+        </div>
+        <h3>YÖK&#x27;ün Veri Analizi Okulu &quot;Dijital Üniversite Platformu&quot;na dönüşecek</h3>
+        <p>Yükseköğretim Kurulunca (YÖK) geçen yıl hayata geçirilen Veri Analizi Okulu, kapsamı genişletilerek, 2026-2027 akademik yılında &quot;Dijital Üniversite Platformu&quot;na dönüşecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 8 Ekim 2026, 13:37</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yokun-veri-analizi-okulu-dijital-universite-platformuna-donusecek/4082084" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk dünyasının gençleri, &quot;ortak miras, tek yürek&quot; mottosuyla kocaeli&#x27;de buluşacak ak parti türk devletleri ile i̇lişkiler başkanlığı koordinasyonunda düzenlenecek &quot;türk dünyası gençlik buluşması&quot; türk dünyasının farklı coğrafyalarından 500 genci kocaeli&#x27;de bir araya getirecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 8 Ekim 2026, 13:02</span>
+        </div>
+        <h3>Türk dünyasının gençleri, &quot;Ortak Miras, Tek Yürek&quot; mottosuyla Kocaeli&#x27;de buluşacak</h3>
+        <p>AK Parti Türk Devletleri ile İlişkiler Başkanlığı koordinasyonunda düzenlenecek &quot;Türk Dünyası Gençlik Buluşması&quot; Türk dünyasının farklı coğrafyalarından 500 genci Kocaeli&#x27;de bir araya getirecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 8 Ekim 2026, 13:02</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-dunyasinin-gencleri-ortak-miras-tek-yurek-mottosuyla-kocaelide-bulusacak/4082048" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sigarayı bıraktıktan sonra kendilerini yeniden doğmuş gibi hissediyorlar sigara bağımlılığından kurtulan cemal dikici ve hikmet mutu, sağlıklı bir yaşam sürmenin keyfini yaşıyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 8 Ekim 2026, 11:31</span>
+        </div>
+        <h3>Sigarayı bıraktıktan sonra kendilerini yeniden doğmuş gibi hissediyorlar</h3>
+        <p>Sigara bağımlılığından kurtulan Cemal Dikici ve Hikmet Mutu, sağlıklı bir yaşam sürmenin keyfini yaşıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 8 Ekim 2026, 11:31</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sigarayi-biraktiktan-sonra-kendilerini-yeniden-dogmus-gibi-hissediyorlar/4081896" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">7 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="ab: rusya salgın şüphesi hakkında bilgi paylaşmalı avrupa birliği (ab), rusya&#x27;da ortaya çıkan salgın şüphesi hakkında en kısa sürede doğru ve kesin bilgi paylaşılması gerektiğini bildirdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 8 Ekim 2026, 14:34</span>
+        </div>
+        <h3>AB: Rusya salgın şüphesi hakkında bilgi paylaşmalı</h3>
+        <p>Avrupa Birliği (AB), Rusya&#x27;da ortaya çıkan salgın şüphesi hakkında en kısa sürede doğru ve kesin bilgi paylaşılması gerektiğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 8 Ekim 2026, 14:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ab-rusya-salgin-suphesi-hakkinda-bilgi-paylasmali-959541.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan fidan: mekke anlaşması saldırı anlaşması değil dışişleri bakanı fidan, mekke anlaşması ile ilgili, &quot;anlaşmaya taraf olan ülke saldırıya uğradığı zaman, savunması için yanında olursunuz. bu saldırı anlaşması değil.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 8 Ekim 2026, 13:46</span>
+        </div>
+        <h3>Bakan Fidan: Mekke Anlaşması saldırı anlaşması değil</h3>
+        <p>Dışişleri Bakanı Fidan, Mekke Anlaşması ile ilgili, &quot;Anlaşmaya taraf olan ülke saldırıya uğradığı zaman, savunması için yanında olursunuz. Bu saldırı anlaşması değil.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 8 Ekim 2026, 13:46</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-fidan-mekke-anlasmasi-saldiri-anlasmasi-degil/4082098" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb: (mekke savunma i̇ttifakı) askeri kuvvetlerin suudi arabistan&#x27;a konuşlandırılması için gerekli tedbirler görüşüldü msb sözcüsü tuğamiral aktürk, mekke savunma i̇ttifakı stratejik siyasi ve savunma komite toplantısı&#x27;na ilişkin, &quot;askeri kuvvet ve yeteneklerin suudi arabistan&#x27;a sağlanması ve konuşlandırılması için gerekli tedbirler görüşülmüştür.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 8 Ekim 2026, 12:38</span>
+        </div>
+        <h3>MSB: (Mekke Savunma İttifakı) Askeri kuvvetlerin Suudi Arabistan&#x27;a konuşlandırılması için gerekli tedbirler görüşüldü</h3>
+        <p>MSB Sözcüsü Tuğamiral Aktürk, Mekke Savunma İttifakı Stratejik Siyasi ve Savunma Komite Toplantısı&#x27;na ilişkin, &quot;Askeri kuvvet ve yeteneklerin Suudi Arabistan&#x27;a sağlanması ve konuşlandırılması için gerekli tedbirler görüşülmüştür.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 8 Ekim 2026, 12:38</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/msb-mekke-savunma-ittifaki-askeri-kuvvetlerin-suudi-arabistana-konuslandirilmasi-icin-gerekli-tedbirler-gorusuldu/4082007" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="aile ve sosyal hizmetler bakanlığı ile ab türkiye delegasyonu arasında işbirliği protokolü imzalandı aile ve sosyal hizmetler bakanlığı ile avrupa birliği (ab) türkiye delegasyonu arasında &quot;yabancılara yönelik sosyal uyum ve eğitim yardımları programı&quot; işbirliği protokolü imzalandı. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 8 Ekim 2026, 12:10</span>
+        </div>
+        <h3>Aile ve Sosyal Hizmetler Bakanlığı ile AB Türkiye Delegasyonu arasında işbirliği protokolü imzalandı</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanlığı ile Avrupa Birliği (AB) Türkiye Delegasyonu arasında &quot;Yabancılara Yönelik Sosyal Uyum ve Eğitim Yardımları Programı&quot; işbirliği protokolü imzalandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 8 Ekim 2026, 12:10</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/aile-ve-sosyal-hizmetler-bakanligi-ile-ab-turkiye-delegasyonu-arasinda-isbirligi-protokolu-imzalandi/4081972" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="özgür özel&#x27;den cemil tugay açıklaması: i̇hanet edeceğini bilsek aday göstermezdik yeni parti genel başkanı özgür özel, i̇zmir büyükşehir belediye başkanı cemil tugay&#x27;ın akp&#x27;ye katılmasıyla ilgili, &quot;cemil bizim için hain, onlar için kukla&quot; açıklamasını yaptı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 8 Ekim 2026, 14:40</span>
+        </div>
+        <h3>Özgür Özel&#x27;den Cemil Tugay açıklaması: İhanet edeceğini bilsek aday göstermezdik</h3>
+        <p>Yeni Parti Genel Başkanı Özgür Özel, İzmir Büyükşehir Belediye Başkanı Cemil Tugay&#x27;ın AKP&#x27;ye katılmasıyla ilgili, &quot;Cemil bizim için hain, onlar için kukla&quot; açıklamasını yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Ekim 2026, 14:40</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwly4j954m4jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kvkk, işverenin kurumsal e-posta ve iletişim kanallarını denetleme kurallarını belirledi kvkk, işverenlerin çalışanlara tahsis ettiği kurumsal e-posta hesapları ve iş için kullanılan iletişim kanallarının denetlenmesiyle ilgili ilke kararı aldı. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 8 Ekim 2026, 12:55</span>
+        </div>
+        <h3>KVKK, işverenin kurumsal e-posta ve iletişim kanallarını denetleme kurallarını belirledi</h3>
+        <p>KVKK, işverenlerin çalışanlara tahsis ettiği kurumsal e-posta hesapları ve iş için kullanılan iletişim kanallarının denetlenmesiyle ilgili ilke kararı aldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 8 Ekim 2026, 12:55</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kvkk-isverenin-kurumsal-e-posta-ve-iletisim-kanallarini-denetleme-kurallarini-belirledi/4082035" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd ve lübnan insanlığa karşı suç işlemekten aranan suriyeli generali neden &#x27;koruyor&#x27;? gazeteci austin tice&#x27;ın kaçırılmasıyla bağlantılı olduğu belirtilen bassam al-hassan, bilgi karşılığında koruma altına alındı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 8 Ekim 2026, 10:33</span>
+        </div>
+        <h3>ABD ve Lübnan insanlığa karşı suç işlemekten aranan Suriyeli generali neden &#x27;koruyor&#x27;?</h3>
+        <p>Gazeteci Austin Tice&#x27;ın kaçırılmasıyla bağlantılı olduğu belirtilen Bassam al-Hassan, bilgi karşılığında koruma altına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Ekim 2026, 10:33</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmx23p9nelpgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan yumaklı: yapay zeka destekli sulama otomasyon sistemlerini devreye alacağız tarım ve orman bakanı yumaklı, &quot;önümüzdeki yıl 11 ilde 22 bin hektarlık alanda yapay zeka destekli sulama otomasyon sistemlerini devreye alacağız.&quot; dedi. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 8 Ekim 2026, 13:23</span>
+        </div>
+        <h3>Bakan Yumaklı: Yapay zeka destekli sulama otomasyon sistemlerini devreye alacağız</h3>
+        <p>Tarım ve Orman Bakanı Yumaklı, &quot;Önümüzdeki yıl 11 ilde 22 bin hektarlık alanda yapay zeka destekli sulama otomasyon sistemlerini devreye alacağız.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 8 Ekim 2026, 13:23</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-yumakli-yapay-zeka-destekli-sulama-otomasyon-sistemlerini-devreye-alacagiz/4082074" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
