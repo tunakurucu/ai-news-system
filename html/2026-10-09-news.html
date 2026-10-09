@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">9 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">9 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>genel</strong> 21</span><span class="stat-item"><strong>ekonomi</strong> 4</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Adalet Bakanı Gürlek: Adalet paylaşıldıkça barış da çoğalır</h3>
+        <p>Adalet Bakanı Akın Gürlek, &quot;Adaleti yalnızca kendimiz için değil herkes için isteyelim çünkü adalet paylaşıldıkça barış da çoğalır. Hukuk herkes için eşit gözetildiğinde güven de büyür. Adalet evrenselleştiğinde insanların geleceği de güçlenir&quot; dedi.</p>
+        <div class="card-footer">
+            <span class="source">Anadolu Ajansı · 9 Ekim 2026, 14:26</span>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/adalet-bakani-gurlek-adalet-paylasildikca-baris-da-cogalir/4083422" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 9 Ekim 2026, 13:46</span>
+            </div>
+            <h3>Nobel Barış Ödülü, Gazze savaş suçları soruşturma komisyonu başkanı Navi Pillay&#x27;e verildi</h3>
+            <p>Eski BM İnsan Hakları Yüksek Komiseri Navi Pillay, 2026 Nobel Barış Ödülü&#x27;nü kazandı. Güney Afrikalı hukukçu, Eylül 2025&#x27;te İsrail&#x27;in &quot;Gazze&#x27;de soykırım işlediği&quot; sonucuna varan BM soruşturma komisyonuna başkanlık etmişti.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c6wyr1ln2z8eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 9 Ekim 2026, 10:23</span>
+            </div>
+            <h3>Keskin nişancılar ve havan topları: Yemen&#x27;de çocukların tehlikeli okul yolu</h3>
+            <p>BBC Dünya Servici, uluslararası basından çok az erişimin olduğu Taiz&#x27;de savaştan etkilenen çocuklarla, öğretmenlerle ve ailelerle konuştu. 10 yaşındaki Rafeef doktor olmak istiyor. Ancak her okula gidişinde, sırtı keskin nişancılara dönük bir şekilde yokuş yukarı yürümek zorunda kalıyor: &quot;Korkuyorum&quot; diyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cm4g12gydw28o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 9 Ekim 2026, 02:02</span>
+            </div>
+            <h3>Fon krizi AKP&#x27;de nasıl tartışılıyor, hangi adımlar atılabilir?</h3>
+            <p>AKP kulislerinde krizin, şimdiye kadar parti yönetiminde en fazla rahatsızlık yaratan konulardan biri olduğu belirtilirken, sadece sorumluların değil, sistemdeki zafiyetlerin de ortaya çıkarılması gerektiği görüşü dile getiriliyor</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmkg7n4xd0p1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+            </div>
+            <h3>Akın Gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27;</h3>
+            <p>Adalet Bakanı Akın Gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. Sabah&#x27;ta 9 Ekim&#x27;de yayımlanan habere göre, Gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c5rmy7wkek47o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="adalet bakanı gürlek: adalet paylaşıldıkça barış da çoğalır adalet bakanı akın gürlek, &quot;adaleti yalnızca kendimiz için değil herkes için isteyelim çünkü adalet paylaşıldıkça barış da çoğalır. hukuk herkes için eşit gözetildiğinde güven de büyür. adalet evrenselleştiğinde insanların geleceği de güçlenir&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 9 Ekim 2026, 14:26</span>
+        </div>
+        <h3>Adalet Bakanı Gürlek: Adalet paylaşıldıkça barış da çoğalır</h3>
+        <p>Adalet Bakanı Akın Gürlek, &quot;Adaleti yalnızca kendimiz için değil herkes için isteyelim çünkü adalet paylaşıldıkça barış da çoğalır. Hukuk herkes için eşit gözetildiğinde güven de büyür. Adalet evrenselleştiğinde insanların geleceği de güçlenir&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 9 Ekim 2026, 14:26</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/adalet-bakani-gurlek-adalet-paylasildikca-baris-da-cogalir/4083422" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akın gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27; adalet bakanı akın gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. sabah&#x27;ta 9 ekim&#x27;de yayımlanan habere göre, gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+        </div>
+        <h3>Akın Gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27;</h3>
+        <p>Adalet Bakanı Akın Gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. Sabah&#x27;ta 9 Ekim&#x27;de yayımlanan habere göre, Gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5rmy7wkek47o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="eski kanada başbakanı trudeau: pek çok kanadalı abd&#x27;ye seyahat etme konusunda endişeli eski kanada başbakanı justin trudeau, abd başkanı donald trump&#x27;ın kanada&#x27;yı hedef alan söylemleriyle göçmen ve sınır politikalarının kanadalılar arasında abd&#x27;ye seyahat konusunda endişeye yol açtığını belirterek, &quot;hayatlarında ilk kez abd sınırını geçmekten endişe duyan pek çok kanadalı var.&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 9 Ekim 2026, 13:05</span>
+        </div>
+        <h3>Eski Kanada Başbakanı Trudeau: Pek çok Kanadalı ABD&#x27;ye seyahat etme konusunda endişeli</h3>
+        <p>Eski Kanada Başbakanı Justin Trudeau, ABD Başkanı Donald Trump&#x27;ın Kanada&#x27;yı hedef alan söylemleriyle göçmen ve sınır politikalarının Kanadalılar arasında ABD&#x27;ye seyahat konusunda endişeye yol açtığını belirterek, &quot;Hayatlarında ilk kez ABD sınırını geçmekten endişe duyan pek çok Kanadalı var.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Ekim 2026, 13:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/eski-kanada-basbakani-trudeau-pek-cok-kanadali-abdye-seyahat-etme-konusunda-endiseli-959650.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="öğretmenler günü 81 ilde çeşitli etkinliklerle kutlanacak milli eğitim bakanlığınca (meb), 81 il valiliğine 24 kasım öğretmenler günü kapsamında yurt içinde ve dış temsilciliklerde düzenlenecek etkinliklere ilişkin genelge gönderildi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 9 Ekim 2026, 13:31</span>
+        </div>
+        <h3>Öğretmenler Günü 81 ilde çeşitli etkinliklerle kutlanacak</h3>
+        <p>Milli Eğitim Bakanlığınca (MEB), 81 il valiliğine 24 Kasım Öğretmenler Günü kapsamında yurt içinde ve dış temsilciliklerde düzenlenecek etkinliklere ilişkin genelge gönderildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 9 Ekim 2026, 13:31</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ogretmenler-gunu-81-ilde-cesitli-etkinliklerle-kutlanacak/4083330" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="2026 nobel barış ödülü&#x27;nü kazanan navi pillay&#x27;dan trump&#x27;a esprili gönderme barış ve uluslararası hukuka yönelik çalışmalarından dolayı 2026 nobel barış ödülü&#x27;ne layık görülen navi pillay, abd başkanı donald trump&#x27;ın ödülü kendisinin hak ettiğine yönelik açıklamalarına gönderme yaparak, &quot;biraz daha alkışlarsanız bu ödülü trump ile paylaşabilirim&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 9 Ekim 2026, 14:27</span>
+        </div>
+        <h3>2026 Nobel Barış Ödülü&#x27;nü kazanan Navi Pillay&#x27;dan Trump&#x27;a esprili gönderme</h3>
+        <p>Barış ve uluslararası hukuka yönelik çalışmalarından dolayı 2026 Nobel Barış Ödülü&#x27;ne layık görülen Navi Pillay, ABD Başkanı Donald Trump&#x27;ın ödülü kendisinin hak ettiğine yönelik açıklamalarına gönderme yaparak, &quot;Biraz daha alkışlarsanız bu ödülü Trump ile paylaşabilirim&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Ekim 2026, 14:27</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/2026-nobel-baris-odulunu-kazanan-navi-pillaydan-trumpa-esprili-gonderme-959658.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">21 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="nobel barış ödülü, gazze savaş suçları soruşturma komisyonu başkanı navi pillay&#x27;e verildi eski bm i̇nsan hakları yüksek komiseri navi pillay, 2026 nobel barış ödülü&#x27;nü kazandı. güney afrikalı hukukçu, eylül 2025&#x27;te i̇srail&#x27;in &quot;gazze&#x27;de soykırım işlediği&quot; sonucuna varan bm soruşturma komisyonuna başkanlık etmişti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 13:46</span>
+        </div>
+        <h3>Nobel Barış Ödülü, Gazze savaş suçları soruşturma komisyonu başkanı Navi Pillay&#x27;e verildi</h3>
+        <p>Eski BM İnsan Hakları Yüksek Komiseri Navi Pillay, 2026 Nobel Barış Ödülü&#x27;nü kazandı. Güney Afrikalı hukukçu, Eylül 2025&#x27;te İsrail&#x27;in &quot;Gazze&#x27;de soykırım işlediği&quot; sonucuna varan BM soruşturma komisyonuna başkanlık etmişti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 13:46</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6wyr1ln2z8eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="keskin nişancılar ve havan topları: yemen&#x27;de çocukların tehlikeli okul yolu bbc dünya servici, uluslararası basından çok az erişimin olduğu taiz&#x27;de savaştan etkilenen çocuklarla, öğretmenlerle ve ailelerle konuştu. 10 yaşındaki rafeef doktor olmak istiyor. ancak her okula gidişinde, sırtı keskin nişancılara dönük bir şekilde yokuş yukarı yürümek zorunda kalıyor: &quot;korkuyorum&quot; diyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 10:23</span>
+        </div>
+        <h3>Keskin nişancılar ve havan topları: Yemen&#x27;de çocukların tehlikeli okul yolu</h3>
+        <p>BBC Dünya Servici, uluslararası basından çok az erişimin olduğu Taiz&#x27;de savaştan etkilenen çocuklarla, öğretmenlerle ve ailelerle konuştu. 10 yaşındaki Rafeef doktor olmak istiyor. Ancak her okula gidişinde, sırtı keskin nişancılara dönük bir şekilde yokuş yukarı yürümek zorunda kalıyor: &quot;Korkuyorum&quot; diyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 10:23</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm4g12gydw28o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon krizi akp&#x27;de nasıl tartışılıyor, hangi adımlar atılabilir? akp kulislerinde krizin, şimdiye kadar parti yönetiminde en fazla rahatsızlık yaratan konulardan biri olduğu belirtilirken, sadece sorumluların değil, sistemdeki zafiyetlerin de ortaya çıkarılması gerektiği görüşü dile getiriliyor genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 02:02</span>
+        </div>
+        <h3>Fon krizi AKP&#x27;de nasıl tartışılıyor, hangi adımlar atılabilir?</h3>
+        <p>AKP kulislerinde krizin, şimdiye kadar parti yönetiminde en fazla rahatsızlık yaratan konulardan biri olduğu belirtilirken, sadece sorumluların değil, sistemdeki zafiyetlerin de ortaya çıkarılması gerektiği görüşü dile getiriliyor</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 02:02</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmkg7n4xd0p1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="17 yatırım fonuna ait ödemeler başladı fon krizinde 1 milyon tl&#x27;ye kadar yatırımcı ödemelerinin bugün başlaması bekleniyor. cumhurbaşkanı yardımcısı cevdet yılmaz, 7 ekim&#x27;de tbmm genel kurulu&#x27;nda bu konuda bilgi verdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 8 Ekim 2026, 18:16</span>
+        </div>
+        <h3>17 yatırım fonuna ait ödemeler başladı</h3>
+        <p>Fon krizinde 1 milyon TL&#x27;ye kadar yatırımcı ödemelerinin bugün başlaması bekleniyor. Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, 7 Ekim&#x27;de TBMM Genel Kurulu&#x27;nda bu konuda bilgi verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Ekim 2026, 18:16</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckgeljxrzx9xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan göktaş&#x27;tan fon iddialarıyla ilgili isimlere suç duyurusu aile ve sosyal hizmetler bakanı mahinur özdemir göktaş, şahsını ve ailesini hedef alan &quot;fon&quot; iddialarına ilişkin ümit özlale, cemal enginyurt ve ali mahir başarır hakkında suç duyurusunda bulunduğunu bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 9 Ekim 2026, 14:08</span>
+        </div>
+        <h3>Bakan Göktaş&#x27;tan fon iddialarıyla ilgili isimlere suç duyurusu</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş, şahsını ve ailesini hedef alan &quot;fon&quot; iddialarına ilişkin Ümit Özlale, Cemal Enginyurt ve Ali Mahir Başarır hakkında suç duyurusunda bulunduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Ekim 2026, 14:08</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-goktastan-fon-iddialariyla-ilgili-isimlere-suc-duyurusu-959654.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dört gazeteciye fon iddiaları soruşturması i̇stanbul cumhuriyet başsavcılığı&#x27;nın &quot;kamuoyunu yanıltıcı nitelikle yayın ve paylaşımlar&quot; soruşturmasında sözcü gazetesi editörü mustafa balcı ve şaban sevinç gözaltına alındı. i̇smail saymaz ve murat ağırel&#x27;in &quot;şüpheli&quot; sıfatıyla ifadesi alınacak. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 12:23</span>
+        </div>
+        <h3>Dört gazeteciye fon iddiaları soruşturması</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı&#x27;nın &quot;kamuoyunu yanıltıcı nitelikle yayın ve paylaşımlar&quot; soruşturmasında Sözcü gazetesi editörü Mustafa Balcı ve Şaban Sevinç gözaltına alındı. İsmail Saymaz ve Murat Ağırel&#x27;in &quot;şüpheli&quot; sıfatıyla ifadesi alınacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 12:23</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwvg0e409xp3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="maltepe&#x27;de çöken binada beş kişi hayatını kaybetti i̇stanbul&#x27;un maltepe ilçesinde yedi katlı bir binadaki çökme sonucu hayatını kaybedenlerin sayısı beşe yükseldi. 9 ekim itibarıyla arama kurtarma çalışmaları tamamlandı. üçü çocuk 10 kişinin de yaralı kurtarıldığı bildirildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 08:37</span>
+        </div>
+        <h3>Maltepe&#x27;de çöken binada beş kişi hayatını kaybetti</h3>
+        <p>İstanbul&#x27;un Maltepe ilçesinde yedi katlı bir binadaki çökme sonucu hayatını kaybedenlerin sayısı beşe yükseldi. 9 Ekim itibarıyla arama kurtarma çalışmaları tamamlandı. Üçü çocuk 10 kişinin de yaralı kurtarıldığı bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 08:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj93zg0k2p97o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye yeni bir yağışlı sistemin etkisi altına girecek türkiye yeni bir yağışlı sistemin etkisi altına girmeye hazırlanıyor. hafta sonu yurt genelinde mevsim normalleri civarında seyreden hava sıcaklıkları, önümüzdeki haftanın başından itibaren yerini yağışlı bir sisteme ve kademeli sıcaklık düşüşüne bırakacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 9 Ekim 2026, 14:18</span>
+        </div>
+        <h3>Türkiye yeni bir yağışlı sistemin etkisi altına girecek</h3>
+        <p>Türkiye yeni bir yağışlı sistemin etkisi altına girmeye hazırlanıyor. Hafta sonu yurt genelinde mevsim normalleri civarında seyreden hava sıcaklıkları, önümüzdeki haftanın başından itibaren yerini yağışlı bir sisteme ve kademeli sıcaklık düşüşüne bırakacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Ekim 2026, 14:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/turkiye-yeni-bir-yagisli-sistemin-etkisi-altina-girecek-959657.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bm: gazze&#x27;de ekim 2023&#x27;ten bu yana yaklaşık 50 bin kadın ve kız çocuğu öldü veya yaralandı birleşmiş milletler kadın birimi (un women) cenevre ofisi direktörü sofia calltorp, gazze&#x27;de ekim 2023&#x27;ten bu yana yaklaşık 50 bin kadın ve kız çocuğunun öldürüldüğünü veya ağır yaralandığını tahmin ettiklerini bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 9 Ekim 2026, 14:20</span>
+        </div>
+        <h3>BM: Gazze&#x27;de Ekim 2023&#x27;ten bu yana yaklaşık 50 bin kadın ve kız çocuğu öldü veya yaralandı</h3>
+        <p>Birleşmiş Milletler Kadın Birimi (UN Women) Cenevre Ofisi Direktörü Sofia Calltorp, Gazze&#x27;de Ekim 2023&#x27;ten bu yana yaklaşık 50 bin kadın ve kız çocuğunun öldürüldüğünü veya ağır yaralandığını tahmin ettiklerini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Ekim 2026, 14:20</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/bm-gazzede-ekim-2023ten-bu-yana-yaklasik-50-bin-kadin-ve-kiz-cocugu-oldu-veya-yaralandi-959656.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="maltepe&#x27;de kısmen çöken binanın bilirkişi ön raporu trt haber&#x27;de maltepe&#x27;de 7 katlı binanın çökmesine ilişkin bilirkişi ön raporuna trt haber ulaştı. ruhsat harici, sonradan yapımı gerçekleştirilen 4 katın yıkımına karar verildiği ancak kararın uygulanmadığı tespit edildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 9 Ekim 2026, 13:19</span>
+        </div>
+        <h3>Maltepe&#x27;de kısmen çöken binanın bilirkişi ön raporu TRT Haber&#x27;de</h3>
+        <p>Maltepe&#x27;de 7 katlı binanın çökmesine ilişkin bilirkişi ön raporuna TRT Haber ulaştı. Ruhsat harici, sonradan yapımı gerçekleştirilen 4 katın yıkımına karar verildiği ancak kararın uygulanmadığı tespit edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Ekim 2026, 13:19</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/maltepede-kismen-coken-binanin-bilirkisi-on-raporu-trt-haberde-959652.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="huzurevinde sosyal medyadan arkadaşlık teklifiyle başlayan aşk nikahla taçlandı i̇stanbul&#x27;da aynı huzurevinde yaşayan fatma ile haluk yüksel, önce birbirlerini uzaktan tanımaya çalıştı, ardından sosyal medyada başlayan mesajlaşmaları çay sohbetlerine dönüştü ve huzurevinde yapılan törenle nikah masasına oturdu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 8 Ekim 2026, 11:47</span>
+        </div>
+        <h3>Huzurevinde sosyal medyadan arkadaşlık teklifiyle başlayan aşk nikahla taçlandı</h3>
+        <p>İstanbul&#x27;da aynı huzurevinde yaşayan Fatma ile Haluk Yüksel, önce birbirlerini uzaktan tanımaya çalıştı, ardından sosyal medyada başlayan mesajlaşmaları çay sohbetlerine dönüştü ve huzurevinde yapılan törenle nikah masasına oturdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 8 Ekim 2026, 11:47</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/huzurevinde-sosyal-medyadan-arkadaslik-teklifiyle-baslayan-ask-nikahla-taclandi/4081933" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sigara bağımlılığından kurtulup sağlıklı hayata adım attılar samsun&#x27;da 52 yaşındaki fatih soydeğer, gençlik özentisiyle başlayıp yaklaşık 30 yıl içtiği sigarayı sağlık sorunları yaşayınca bıraktı, çankırı&#x27;da yaşayan 58 yaşındaki c.g. de yaklaşık 40 yıllık sigara bağımlılığından kurtuldu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 9 Ekim 2026, 11:06</span>
+        </div>
+        <h3>Sigara bağımlılığından kurtulup sağlıklı hayata adım attılar</h3>
+        <p>Samsun&#x27;da 52 yaşındaki Fatih Soydeğer, gençlik özentisiyle başlayıp yaklaşık 30 yıl içtiği sigarayı sağlık sorunları yaşayınca bıraktı, Çankırı&#x27;da yaşayan 58 yaşındaki C.G. de yaklaşık 40 yıllık sigara bağımlılığından kurtuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 9 Ekim 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sigara-bagimliligindan-kurtulup-saglikli-hayata-adim-attilar/4083039" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="pentagon: i̇dam mangasıyla infaz canlı yayınlanacak pete hegseth, infazın kamuoyu önünde gerçekleşeceğini söylüyor ancak bbc&#x27;ye konuşan bir hukuk uzmanı, &quot;emsalsiz&quot; kararın &quot;belirsiz bir hukuki zeminde&quot; olduğunu belirtiyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 12:35</span>
+        </div>
+        <h3>Pentagon: İdam mangasıyla infaz canlı yayınlanacak</h3>
+        <p>Pete Hegseth, infazın kamuoyu önünde gerçekleşeceğini söylüyor ancak BBC&#x27;ye konuşan bir hukuk uzmanı, &quot;emsalsiz&quot; kararın &quot;belirsiz bir hukuki zeminde&quot; olduğunu belirtiyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 12:35</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqrmy7w0jpj3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fatma betül sayan kaya ve eşi i̇lyas kaya ifade verdi: &#x27;özel bilgi ve yönlendirme almadık&#x27; i̇stanbul cumhuriyet başsavcılığı&#x27;nın yürüttüğü fon soruşturmaları kapsamında, fatma betül sayan kaya ve eşi i̇lyas kaya, şüpheli sıfatıyla 7 ekim&#x27;de ifade verdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 8 Ekim 2026, 01:02</span>
+        </div>
+        <h3>Fatma Betül Sayan Kaya ve eşi İlyas Kaya ifade verdi: &#x27;Özel bilgi ve yönlendirme almadık&#x27;</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı&#x27;nın yürüttüğü fon soruşturmaları kapsamında, Fatma Betül Sayan Kaya ve eşi İlyas Kaya, şüpheli sıfatıyla 7 Ekim&#x27;de ifade verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Ekim 2026, 01:02</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw77p42vg76do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ak parti genel sekreteri i̇nan: partimize ve hükümetimize operasyon çektirmeyiz ak parti genel sekreteri eyyüp kadir i̇nan, fon dolandırıcılığı iddiaları üzerinden yürütülen tartışmalara ve chp genel başkanı özgür özel&#x27;in açıklamalarına sert tepki gösterdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 9 Ekim 2026, 13:35</span>
+        </div>
+        <h3>AK Parti Genel Sekreteri İnan: Partimize ve hükümetimize operasyon çektirmeyiz</h3>
+        <p>AK Parti Genel Sekreteri Eyyüp Kadir İnan, fon dolandırıcılığı iddiaları üzerinden yürütülen tartışmalara ve CHP Genel Başkanı Özgür Özel&#x27;in açıklamalarına sert tepki gösterdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Ekim 2026, 13:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/ak-parti-genel-sekreteri-inan-partimize-ve-hukumetimize-operasyon-cektirmeyiz-959653.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="doğal gaz ulaştırılan yerleşim yeri sayısı 1000&#x27;e yükseldi türkiye&#x27;de bu yıl doğal gaza erişimi sağlanan yerleşim yeri sayısının 1000&#x27;e çıkarılması hedefleniyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 9 Ekim 2026, 13:14</span>
+        </div>
+        <h3>Doğal gaz ulaştırılan yerleşim yeri sayısı 1000&#x27;e yükseldi</h3>
+        <p>Türkiye&#x27;de bu yıl doğal gaza erişimi sağlanan yerleşim yeri sayısının 1000&#x27;e çıkarılması hedefleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Ekim 2026, 13:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/dogal-gaz-ulastirilan-yerlesim-yeri-sayisi-1000e-yukseldi-959651.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="polonya&#x27;da gece alkol satışı ve alkollü içeceklerin reklamını yasaklayan tasarı kabul edildi polonya parlamentosunun alt kanadı sejm, ülke genelinde gece saatlerinde alkol satışını ve tüm alkollü içeceklerin reklam ve tanıtımını yasaklayan yasa tasarısını kabul etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 9 Ekim 2026, 12:55</span>
+        </div>
+        <h3>Polonya&#x27;da gece alkol satışı ve alkollü içeceklerin reklamını yasaklayan tasarı kabul edildi</h3>
+        <p>Polonya Parlamentosunun alt kanadı Sejm, ülke genelinde gece saatlerinde alkol satışını ve tüm alkollü içeceklerin reklam ve tanıtımını yasaklayan yasa tasarısını kabul etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Ekim 2026, 12:55</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/polonyada-gece-alkol-satisi-ve-alkollu-iceceklerin-reklamini-yasaklayan-tasari-kabul-edildi-959649.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="aydın doğan vakfından dünya kız çocukları günü konferansı aydın doğan vakfı, 11 ekim dünya kız çocukları günü dolayısıyla konferans düzenledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 9 Ekim 2026, 13:30</span>
+        </div>
+        <h3>Aydın Doğan Vakfından Dünya Kız Çocukları Günü Konferansı</h3>
+        <p>Aydın Doğan Vakfı, 11 Ekim Dünya Kız Çocukları Günü dolayısıyla konferans düzenledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 9 Ekim 2026, 13:30</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/aydin-dogan-vakfindan-dunya-kiz-cocuklari-gunu-konferansi/4083329" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="toki̇, 9 ayda 83 bin 504 sosyal konut inşa etti toplu konut i̇daresi başkanlığı (toki̇) yılbaşından bu yana 58 şehirde 83 bin 504 sosyal konutun inşasını tamamladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 9 Ekim 2026, 12:59</span>
+        </div>
+        <h3>TOKİ, 9 ayda 83 bin 504 sosyal konut inşa etti</h3>
+        <p>Toplu Konut İdaresi Başkanlığı (TOKİ) yılbaşından bu yana 58 şehirde 83 bin 504 sosyal konutun inşasını tamamladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 9 Ekim 2026, 12:59</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/toki-9-ayda-83-bin-504-sosyal-konut-insa-etti/4083301" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="uzmanlara göre, mekke savunma i̇ttifakı’nın amacı &quot;caydırıcılık sağlamak&quot; pakistanlı uzmanlar, pakistan, türkiye ve suudi arabistan’ın taraf olduğu mekke savunma i̇ttifakı’nın amacının &quot;çatışma çıkarmak değil caydırıcılık sağlamak&quot; olduğunu söyledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 9 Ekim 2026, 11:15</span>
+        </div>
+        <h3>Uzmanlara göre, Mekke Savunma İttifakı’nın amacı &quot;caydırıcılık sağlamak&quot;</h3>
+        <p>Pakistanlı uzmanlar, Pakistan, Türkiye ve Suudi Arabistan’ın taraf olduğu Mekke Savunma İttifakı’nın amacının &quot;çatışma çıkarmak değil caydırıcılık sağlamak&quot; olduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 9 Ekim 2026, 11:15</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/uzmanlara-gore-mekke-savunma-ittifaki-nin-amaci-caydiricilik-saglamak/4083069" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="elektronik izleme ile 90 bine yakın kişinin denetim ve takibi yapıldı ceza ve tevkifevleri genel müdürü çelebi yılmaz, 2013 yılından bu yana 90 bine yakın kişinin elektronik izleme ile denetim ve takibinin yapıldığını söyledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 9 Ekim 2026, 12:12</span>
+        </div>
+        <h3>Elektronik izleme ile 90 bine yakın kişinin denetim ve takibi yapıldı</h3>
+        <p>Ceza ve Tevkifevleri Genel Müdürü Çelebi Yılmaz, 2013 yılından bu yana 90 bine yakın kişinin elektronik izleme ile denetim ve takibinin yapıldığını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 9 Ekim 2026, 12:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/elektronik-izleme-ile-90-bine-yakin-kisinin-denetim-ve-takibi-yapildi/4083235" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">4 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="karadeniz&#x27;deki istilacı türler avlanarak ekonomiye kazandırılacak küresel iklim değişikliğiyle birlikte karadeniz&#x27;de yaşam sürmeye başlayan mavi yengeç, pasifik istiridyesi gibi istilacı deniz türlerinin avlanarak ekonomiye kazandırılması amacıyla sinop üniversitesi öncülüğünde çalışma başlatıldı. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 9 Ekim 2026, 12:09</span>
+        </div>
+        <h3>Karadeniz&#x27;deki istilacı türler avlanarak ekonomiye kazandırılacak</h3>
+        <p>Küresel iklim değişikliğiyle birlikte Karadeniz&#x27;de yaşam sürmeye başlayan mavi yengeç, Pasifik istiridyesi gibi istilacı deniz türlerinin avlanarak ekonomiye kazandırılması amacıyla Sinop Üniversitesi öncülüğünde çalışma başlatıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 9 Ekim 2026, 12:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/karadenizdeki-istilaci-turler-avlanarak-ekonomiye-kazandirilacak/4083221" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akp&#x27;li iki bakana fon soruları yönelten özlale: &#x27;i̇simler de meblağ da doğru&#x27; akp&#x27;den ticaret bakanı ömer bolat ve aile ve sosyal hizmetler bakanı mahinur özdemir göktaş hakkındaki fon yatırımı sorularını dile getiren yeni partili ümit özlale, iddialarının arkasında durdu. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 12:07</span>
+        </div>
+        <h3>AKP&#x27;li iki bakana fon soruları yönelten Özlale: &#x27;İsimler de meblağ da doğru&#x27;</h3>
+        <p>AKP&#x27;den Ticaret Bakanı Ömer Bolat ve Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş hakkındaki fon yatırımı sorularını dile getiren Yeni Partili Ümit Özlale, iddialarının arkasında durdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 12:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6kg59j745mno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hürjet&#x27;in yapısal parçalarının yüzde 70&#x27;ini tomtaş üretecek cumhuriyetin 100. yılında yeniden kurulan havacılık sanayisi şirketi tomtaş, 500&#x27;den fazla nitelikli personel, güçlü makine parkı ve 25 bin metrekarenin üzerindeki kapalı alanıyla milli havacılık platformlarının seri üretim sürecine güç katacak. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 9 Ekim 2026, 14:10</span>
+        </div>
+        <h3>HÜRJET&#x27;in yapısal parçalarının yüzde 70&#x27;ini TOMTAŞ üretecek</h3>
+        <p>Cumhuriyetin 100. yılında yeniden kurulan havacılık sanayisi şirketi TOMTAŞ, 500&#x27;den fazla nitelikli personel, güçlü makine parkı ve 25 bin metrekarenin üzerindeki kapalı alanıyla milli havacılık platformlarının seri üretim sürecine güç katacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 9 Ekim 2026, 14:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/savunma/hurjetin-yapisal-parcalarinin-yuzde-70ini-tomtas-uretecek-959655.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sıfır atık vakfı ile dei̇k arasında işbirliği protokolü sıfır atık vakfı ile dış ekonomik i̇lişkiler kurulu (dei̇k) arasında türk özel sektöründe sıfır atık ve döngüsel ekonomi yaklaşımının yaygınlaştırılması amacıyla işbirliği protokolü imzalandı. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 9 Ekim 2026, 10:38</span>
+        </div>
+        <h3>Sıfır Atık Vakfı ile DEİK arasında işbirliği protokolü</h3>
+        <p>Sıfır Atık Vakfı ile Dış Ekonomik İlişkiler Kurulu (DEİK) arasında Türk özel sektöründe sıfır atık ve döngüsel ekonomi yaklaşımının yaygınlaştırılması amacıyla işbirliği protokolü imzalandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 9 Ekim 2026, 10:38</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sifir-atik-vakfi-ile-deik-arasinda-isbirligi-protokolu/4082981" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
