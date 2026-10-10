@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">10 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">10 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 29</span><span class="stat-item"><strong>dünya</strong> 9</span><span class="stat-item"><strong>genel</strong> 16</span><span class="stat-item"><strong>teknoloji</strong> 3</span><span class="stat-item"><strong>ekonomi</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>İran savaşında ABD, hangi Avrupa üslerini kullandı?</h3>
+        <p>ABD, İran savaşı, saldırılar, nakliyesi, yakıt ikmali ve destek faaliyetleri için Avrupa&#x27;daki çeşitli üsleri kullandı. Ancak bazı hükümetler üslerinin kullanımına kısıtlamalar getirdi. Bu durum kimi zaman Washington ile gerginliklere yol açtı.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 10 Ekim 2026, 10:17</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmjwedxjxyvpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 10 Ekim 2026, 12:52</span>
+            </div>
+            <h3>Bakan Gürlek&#x27;ten Uluslararası Adalet Zirvesi&#x27;ne ilişkin paylaşım</h3>
+            <p>Adalet Bakanı Akın Gürlek, küresel sorunlar karşısında insan onurunu, hukukun üstünlüğünü ve adalete erişimi esas alan bir dünya düzeni için uluslararası işbirliğini güçlendirmeye devam edeceklerini ifade etti.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-gurlekten-uluslararasi-adalet-zirvesine-iliskin-paylasim/4084318" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 10 Ekim 2026, 10:39</span>
+            </div>
+            <h3>Trump, Rus dizeli anlaşmasını duyurdu, Zelenskiy &#x27;Putin&#x27;e hediye&#x27; dedi</h3>
+            <p>Ukrayna Cumhurbaşkanı bu adımı sert bir şekilde eleştirdi ve bunun &quot;uzatılmaması, aksine sona erdirilmesi gereken bir savaşa yapılan yatırım&quot; olduğunu söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ck5yn6vj8lq0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 10 Ekim 2026, 13:00</span>
+            </div>
+            <h3>Ankara Gar saldırısının 12. yılı: O gün neler yaşandı?</h3>
+            <p>Barış Mitingi için 10 Ekim 2015&#x27;te Ankara Garı önünde toplanan kalabalığa IŞİD tarafından düzenlenen ve 103 kişi hayatını kaybettiği bombalı saldırının üzerinden 12 yıl geçti. Peki o gün neler yaşandı?</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cd1103ddn9ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 9 Ekim 2026, 19:52</span>
+            </div>
+            <h3>AKP&#x27;nin fon teklifi Meclis&#x27;te: Düzenleme neler öngörüyor?</h3>
+            <p>Adalet ve Kalkınma Partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini TBMM Başkanlığı&#x27;na sundu. Net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/crz65plggd37o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">9 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇ran savaşında abd, hangi avrupa üslerini kullandı? abd, i̇ran savaşı, saldırılar, nakliyesi, yakıt ikmali ve destek faaliyetleri için avrupa&#x27;daki çeşitli üsleri kullandı. ancak bazı hükümetler üslerinin kullanımına kısıtlamalar getirdi. bu durum kimi zaman washington ile gerginliklere yol açtı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 10 Ekim 2026, 10:17</span>
+        </div>
+        <h3>İran savaşında ABD, hangi Avrupa üslerini kullandı?</h3>
+        <p>ABD, İran savaşı, saldırılar, nakliyesi, yakıt ikmali ve destek faaliyetleri için Avrupa&#x27;daki çeşitli üsleri kullandı. Ancak bazı hükümetler üslerinin kullanımına kısıtlamalar getirdi. Bu durum kimi zaman Washington ile gerginliklere yol açtı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Ekim 2026, 10:17</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmjwedxjxyvpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan gürlek&#x27;ten uluslararası adalet zirvesi&#x27;ne ilişkin paylaşım adalet bakanı akın gürlek, küresel sorunlar karşısında insan onurunu, hukukun üstünlüğünü ve adalete erişimi esas alan bir dünya düzeni için uluslararası işbirliğini güçlendirmeye devam edeceklerini ifade etti. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 10 Ekim 2026, 12:52</span>
+        </div>
+        <h3>Bakan Gürlek&#x27;ten Uluslararası Adalet Zirvesi&#x27;ne ilişkin paylaşım</h3>
+        <p>Adalet Bakanı Akın Gürlek, küresel sorunlar karşısında insan onurunu, hukukun üstünlüğünü ve adalete erişimi esas alan bir dünya düzeni için uluslararası işbirliğini güçlendirmeye devam edeceklerini ifade etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 10 Ekim 2026, 12:52</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-gurlekten-uluslararasi-adalet-zirvesine-iliskin-paylasim/4084318" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trump, rus dizeli anlaşmasını duyurdu, zelenskiy &#x27;putin&#x27;e hediye&#x27; dedi ukrayna cumhurbaşkanı bu adımı sert bir şekilde eleştirdi ve bunun &quot;uzatılmaması, aksine sona erdirilmesi gereken bir savaşa yapılan yatırım&quot; olduğunu söyledi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 10 Ekim 2026, 10:39</span>
+        </div>
+        <h3>Trump, Rus dizeli anlaşmasını duyurdu, Zelenskiy &#x27;Putin&#x27;e hediye&#x27; dedi</h3>
+        <p>Ukrayna Cumhurbaşkanı bu adımı sert bir şekilde eleştirdi ve bunun &quot;uzatılmaması, aksine sona erdirilmesi gereken bir savaşa yapılan yatırım&quot; olduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Ekim 2026, 10:39</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck5yn6vj8lq0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ankara gar saldırısının 12. yılı: o gün neler yaşandı? barış mitingi için 10 ekim 2015&#x27;te ankara garı önünde toplanan kalabalığa işi̇d tarafından düzenlenen ve 103 kişi hayatını kaybettiği bombalı saldırının üzerinden 12 yıl geçti. peki o gün neler yaşandı? dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 10 Ekim 2026, 13:00</span>
+        </div>
+        <h3>Ankara Gar saldırısının 12. yılı: O gün neler yaşandı?</h3>
+        <p>Barış Mitingi için 10 Ekim 2015&#x27;te Ankara Garı önünde toplanan kalabalığa IŞİD tarafından düzenlenen ve 103 kişi hayatını kaybettiği bombalı saldırının üzerinden 12 yıl geçti. Peki o gün neler yaşandı?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Ekim 2026, 13:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cd1103ddn9ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akp&#x27;nin fon teklifi meclis&#x27;te: düzenleme neler öngörüyor? adalet ve kalkınma partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini tbmm başkanlığı&#x27;na sundu. net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. ankara&#x27;dan ayşe sayın&#x27;ın haberi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 19:52</span>
+        </div>
+        <h3>AKP&#x27;nin fon teklifi Meclis&#x27;te: Düzenleme neler öngörüyor?</h3>
+        <p>Adalet ve Kalkınma Partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini TBMM Başkanlığı&#x27;na sundu. Net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 19:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/crz65plggd37o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akın gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27; adalet bakanı akın gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. sabah&#x27;ta 9 ekim&#x27;de yayımlanan habere göre, gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+        </div>
+        <h3>Akın Gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27;</h3>
+        <p>Adalet Bakanı Akın Gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. Sabah&#x27;ta 9 Ekim&#x27;de yayımlanan habere göre, Gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5rmy7wkek47o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk dünyasından gelen futbolcular türk statüsünde sayılacak ak parti genel başkan yardımcısı kürşad zorlu, türk dünyasından türkiye&#x27;ye gelen futbolcuların yabancı değil &quot;türk statüsünde&quot; oynaması ve iki yılda bir &quot;türk kupası&quot; futbol turnuvası düzenlenmesi için çalışma başlatıldığını söyledi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 10 Ekim 2026, 12:23</span>
+        </div>
+        <h3>Türk dünyasından gelen futbolcular Türk statüsünde sayılacak</h3>
+        <p>AK Parti Genel Başkan Yardımcısı Kürşad Zorlu, Türk dünyasından Türkiye&#x27;ye gelen futbolcuların yabancı değil &quot;Türk statüsünde&quot; oynaması ve iki yılda bir &quot;Türk Kupası&quot; futbol turnuvası düzenlenmesi için çalışma başlatıldığını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Ekim 2026, 12:23</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/spor/turk-dunyasindan-gelen-futbolcular-turk-statusunde-sayilacak-959739.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ukrayna: rusya&#x27;nın zaporijya kentine düzenlediği saldırıda 8 kişi öldü rus ordusunun zaporijya kentine düzenlediği hava saldırısı sonucu en az 8 sivilin hayatını kaybettiği, 12 kişinin de yaralandığı bildirildi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 10 Ekim 2026, 12:42</span>
+        </div>
+        <h3>Ukrayna: Rusya&#x27;nın Zaporijya kentine düzenlediği saldırıda 8 kişi öldü</h3>
+        <p>Rus ordusunun Zaporijya kentine düzenlediği hava saldırısı sonucu en az 8 sivilin hayatını kaybettiği, 12 kişinin de yaralandığı bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Ekim 2026, 12:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ukrayna-rusyanin-zaporijya-kentine-duzenledigi-saldirida-8-kisi-oldu-959740.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mavi medresenin dijital ikizi oluşturuldu sivas&#x27;ta üzerindeki gök mavisi çinilerden dolayı &quot;mavi medrese&quot; olarak da anılan gök medrese&#x27;nin üç boyutlu dijital ikizi oluşturuldu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 10 Ekim 2026, 12:02</span>
+        </div>
+        <h3>Mavi Medresenin dijital ikizi oluşturuldu</h3>
+        <p>Sivas&#x27;ta üzerindeki gök mavisi çinilerden dolayı &quot;Mavi Medrese&quot; olarak da anılan Gök Medrese&#x27;nin üç boyutlu dijital ikizi oluşturuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Ekim 2026, 12:02</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/kultur-sanat/mavi-medresenin-dijital-ikizi-olusturuldu-959737.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">16 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="fon krizi akp&#x27;de nasıl tartışılıyor, hangi adımlar atılabilir? akp kulislerinde krizin, şimdiye kadar parti yönetiminde en fazla rahatsızlık yaratan konulardan biri olduğu belirtilirken, sadece sorumluların değil, sistemdeki zafiyetlerin de ortaya çıkarılması gerektiği görüşü dile getiriliyor genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 02:02</span>
+        </div>
+        <h3>Fon krizi AKP&#x27;de nasıl tartışılıyor, hangi adımlar atılabilir?</h3>
+        <p>AKP kulislerinde krizin, şimdiye kadar parti yönetiminde en fazla rahatsızlık yaratan konulardan biri olduğu belirtilirken, sadece sorumluların değil, sistemdeki zafiyetlerin de ortaya çıkarılması gerektiği görüşü dile getiriliyor</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 02:02</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmkg7n4xd0p1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sağlık bakanı memişoğlu: sigara satışı kimlikle olacak sağlık bakanı kemal memişoğlu, sigara ile mücadele kapsamında yeni düzenlemeler hazırladıklarını belirterek, tütün ürünü satışlarında yaş doğrulama sistemine geçileceğini ve sigaranın görünürlüğünün kısıtlanacağını açıkladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 10 Ekim 2026, 11:58</span>
+        </div>
+        <h3>Sağlık Bakanı Memişoğlu: Sigara satışı kimlikle olacak</h3>
+        <p>Sağlık Bakanı Kemal Memişoğlu, sigara ile mücadele kapsamında yeni düzenlemeler hazırladıklarını belirterek, tütün ürünü satışlarında yaş doğrulama sistemine geçileceğini ve sigaranın görünürlüğünün kısıtlanacağını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Ekim 2026, 11:58</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/saglik-bakani-memisoglu-sigara-satisi-kimlikle-olacak-959736.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sözcü editörü mustafa balcı ve gazeteci şaban sevinç tutuklandı, ağırel ve saymaz&#x27;a ev hapsi kamu görevlilerinin tasfiye sürecindeki fonlardan haksız kazanç elde ettiği iddialarını haberleştiren dört gazeteci hakkında soruşturma başlatıldı. sözcü gazetesi editörü mustafa balcı ve gazeteci şaban sevinç tutuklandı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 10 Ekim 2026, 11:03</span>
+        </div>
+        <h3>Sözcü editörü Mustafa Balcı ve gazeteci Şaban Sevinç tutuklandı, Ağırel ve Saymaz&#x27;a ev hapsi</h3>
+        <p>Kamu görevlilerinin tasfiye sürecindeki fonlardan haksız kazanç elde ettiği iddialarını haberleştiren dört gazeteci hakkında soruşturma başlatıldı. Sözcü gazetesi editörü Mustafa Balcı ve gazeteci Şaban Sevinç tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Ekim 2026, 11:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwvg0e409xp3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="özgür özel, bakan mahinur özdemir göktaş&#x27;ın babasından özür diledi mersin&#x27;deki parti mitinginde konuşan özgür özel, &quot;mahinur hanım, senin baban incindi, ellerinden öperim&quot; dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 19:04</span>
+        </div>
+        <h3>Özgür Özel, Bakan Mahinur Özdemir Göktaş&#x27;ın babasından özür diledi</h3>
+        <p>Mersin&#x27;deki parti mitinginde konuşan Özgür Özel, &quot;Mahinur Hanım, senin baban incindi, ellerinden öperim&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 19:04</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6kg59j745mno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="vanlı kara haydar soruşturmasında 1,5 milyar liraya daha el konuldu ankara cumhuriyet başsavcılığı&#x27;nın &#x27;vanlı kara haydar&#x27; olarak bilinen mehmet fatih tançalan hakkında yürüttüğü soruşturma kapsamında antalya&#x27;daki bir iş yerinde 1 milyar 541 milyon 395 bin tl&#x27;ye el konuldu. soruşturmada ele geçirilen paraların toplamı 2 milyar 475 milyon tl&#x27;ye ulaştı. bu paraların bir kısmının sahte olabileceği değerlendiriliyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 10 Ekim 2026, 13:26</span>
+        </div>
+        <h3>Vanlı Kara Haydar soruşturmasında 1,5 milyar liraya daha el konuldu</h3>
+        <p>Ankara Cumhuriyet Başsavcılığı&#x27;nın &#x27;Vanlı Kara Haydar&#x27; olarak bilinen Mehmet Fatih Tançalan hakkında yürüttüğü soruşturma kapsamında Antalya&#x27;daki bir iş yerinde 1 milyar 541 milyon 395 bin TL&#x27;ye el konuldu. Soruşturmada ele geçirilen paraların toplamı 2 milyar 475 milyon TL&#x27;ye ulaştı. Bu paraların bir kısmının sahte olabileceği değerlendiriliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Ekim 2026, 13:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/vanli-kara-haydar-sorusturmasinda-15-milyar-liraya-daha-el-konuldu-959742.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="33 ilde göçmen kaçakçılığı operasyonu: 47 kişi tutuklandı i̇çişleri bakanlığı, 33 ilde göçmen kaçakçılığıyla mücadele kapsamında düzenlenen operasyonlarda 51 şüphelinin yakalandığını, bunlardan 47&#x27;sinin tutuklandığını bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 10 Ekim 2026, 13:22</span>
+        </div>
+        <h3>33 ilde göçmen kaçakçılığı operasyonu: 47 kişi tutuklandı</h3>
+        <p>İçişleri Bakanlığı, 33 ilde göçmen kaçakçılığıyla mücadele kapsamında düzenlenen operasyonlarda 51 şüphelinin yakalandığını, bunlardan 47&#x27;sinin tutuklandığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Ekim 2026, 13:22</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/33-ilde-gocmen-kacakciligi-operasyonu-47-kisi-tutuklandi-959741.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sosyal medyada sonsuz akış tuzağı sosyal medya platformları, günümüzde kullanıcıları &#x27;sonsuz akış&#x27; döngüsüne hapsederek dijital bir tuzağa dönüştü. uzmanlar, günceli kaçırma korkusuyla (fomo) tetiklenen bu sorunlu kullanımın, bireyler üzerinde depresyon, kaygı ve stres gibi ciddi psikolojik etkiler bıraktığına dikkat çekiyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 10 Ekim 2026, 11:53</span>
+        </div>
+        <h3>Sosyal medyada sonsuz akış tuzağı</h3>
+        <p>Sosyal medya platformları, günümüzde kullanıcıları &#x27;sonsuz akış&#x27; döngüsüne hapsederek dijital bir tuzağa dönüştü. Uzmanlar, günceli kaçırma korkusuyla (FOMO) tetiklenen bu sorunlu kullanımın, bireyler üzerinde depresyon, kaygı ve stres gibi ciddi psikolojik etkiler bıraktığına dikkat çekiyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Ekim 2026, 11:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/saglik/sosyal-medyada-sonsuz-akis-tuzagi-959735.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ak parti genel başkan yardımcısı zorlu: turan dediğimiz idealin açılış kapısı türkiye-azerbaycan kardeşliğidir ak parti genel başkan yardımcısı ve türk devletleri ile i̇lişkiler başkanı kürşad zorlu, &quot;turan dediğimiz idealin açılış kapısı türkiye-azerbaycan kardeşliğidir, dostluğudur, işbirliğidir. bu ilişkiler bugüne kolay gelmedi.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 10 Ekim 2026, 13:43</span>
+        </div>
+        <h3>AK Parti Genel Başkan Yardımcısı Zorlu: Turan dediğimiz idealin açılış kapısı Türkiye-Azerbaycan kardeşliğidir</h3>
+        <p>AK Parti Genel Başkan Yardımcısı ve Türk Devletleri ile İlişkiler Başkanı Kürşad Zorlu, &quot;Turan dediğimiz idealin açılış kapısı Türkiye-Azerbaycan kardeşliğidir, dostluğudur, işbirliğidir. Bu ilişkiler bugüne kolay gelmedi.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 10 Ekim 2026, 13:43</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ak-parti-genel-baskan-yardimcisi-zorlu-turan-dedigimiz-idealin-acilis-kapisi-turkiye-azerbaycan-kardesligidir/4084362" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ataşehir belediyesi akp&#x27;ye geçti ataşehir başkanvekili murat güneş ve eyüpsultan belediye başkanı mithat bülent özmen&#x27;in tutuklanması sonrası i̇stanbul valiliği iki ismin de görevden uzaklaştırıldığını açıkladı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 10 Ekim 2026, 13:08</span>
+        </div>
+        <h3>Ataşehir Belediyesi AKP&#x27;ye geçti</h3>
+        <p>Ataşehir Başkanvekili Murat Güneş ve Eyüpsultan Belediye Başkanı Mithat Bülent Özmen&#x27;in tutuklanması sonrası İstanbul Valiliği iki ismin de görevden uzaklaştırıldığını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Ekim 2026, 13:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmy83n4l3qexo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dondurulmuş yumurtalık dokusundan nasıl çocuk sahibi oldular? kassandra bacon&#x27;dan 23 yıl önce alınan biyopsiler başarılı bir şekilde tekrar vücuduna nakledildi ve bu sayede 44 yaşında bir oğul dünyaya getirebildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 10 Ekim 2026, 10:16</span>
+        </div>
+        <h3>Dondurulmuş yumurtalık dokusundan nasıl çocuk sahibi oldular?</h3>
+        <p>Kassandra Bacon&#x27;dan 23 yıl önce alınan biyopsiler başarılı bir şekilde tekrar vücuduna nakledildi ve bu sayede 44 yaşında bir oğul dünyaya getirebildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Ekim 2026, 10:16</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmly04918v0go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da i̇ett otobüsü kazasında 4 kişi yaralandı sultangazi&#x27;de kontrolden çıkan i̇ett otobüsünün istinat duvarına ve kaldırıma çarpması sonucu 4 yolcu yaralandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 10 Ekim 2026, 13:47</span>
+        </div>
+        <h3>İstanbul&#x27;da İETT otobüsü kazasında 4 kişi yaralandı</h3>
+        <p>Sultangazi&#x27;de kontrolden çıkan İETT otobüsünün istinat duvarına ve kaldırıma çarpması sonucu 4 yolcu yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 10 Ekim 2026, 13:47</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-iett-otobusu-kazasinda-4-kisi-yaralandi/4084365" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="33 ilde göçmen kaçakçılığı operasyonlarında 51 şüpheli yakalandı jandarma genel komutanlığınca 33 ilde düzenlenen göçmen kaçakçılığı operasyonlarında 51 şüpheli yakalandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 10 Ekim 2026, 13:05</span>
+        </div>
+        <h3>33 ilde göçmen kaçakçılığı operasyonlarında 51 şüpheli yakalandı</h3>
+        <p>Jandarma Genel Komutanlığınca 33 ilde düzenlenen göçmen kaçakçılığı operasyonlarında 51 şüpheli yakalandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 10 Ekim 2026, 13:05</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/33-ilde-gocmen-kacakciligi-operasyonlarinda-51-supheli-yakalandi/4084329" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ataşehir belediye başkan vekilliğine ak parti&#x27;li serdar orhan seçildi ataşehir belediye başkan vekilliğine, seçime tek aday olarak giren ak parti&#x27;li meclis üyesi serdar orhan seçildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 10 Ekim 2026, 12:51</span>
+        </div>
+        <h3>Ataşehir Belediye Başkan Vekilliğine AK Parti&#x27;li Serdar Orhan seçildi</h3>
+        <p>Ataşehir Belediye Başkan Vekilliğine, seçime tek aday olarak giren AK Parti&#x27;li Meclis Üyesi Serdar Orhan seçildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 10 Ekim 2026, 12:51</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/atasehir-belediye-baskan-vekilligine-ak-partili-serdar-orhan-secildi/4084316" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sigara zehri genç yaşlı ayırmıyor, kurtulanların yaşam konforu artıyor sigara bağımlılığından kurtulup dumansız hayatla yaşam konforunu artıranlar, bağımlılara tavsiyelerde bulundu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 10 Ekim 2026, 11:20</span>
+        </div>
+        <h3>Sigara zehri genç yaşlı ayırmıyor, kurtulanların yaşam konforu artıyor</h3>
+        <p>Sigara bağımlılığından kurtulup dumansız hayatla yaşam konforunu artıranlar, bağımlılara tavsiyelerde bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 10 Ekim 2026, 11:20</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sigara-zehri-genc-yasli-ayirmiyor-kurtulanlarin-yasam-konforu-artiyor/4084258" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yıllar süren sigara bağımlılığını yedam desteğiyle yendiler trakya&#x27;da yeşilay danışmanlık merkezinden (yedam) aldıkları destekle sigara bağımlılığından kurtulanlar, sağlıklı yaşama &quot;merhaba&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 10 Ekim 2026, 11:08</span>
+        </div>
+        <h3>Yıllar süren sigara bağımlılığını YEDAM desteğiyle yendiler</h3>
+        <p>Trakya&#x27;da Yeşilay Danışmanlık Merkezinden (YEDAM) aldıkları destekle sigara bağımlılığından kurtulanlar, sağlıklı yaşama &quot;merhaba&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 10 Ekim 2026, 11:08</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yillar-suren-sigara-bagimliligini-yedam-destegiyle-yendiler/4084242" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tasfiyesine karar verilen bazı yatırım fonları hakkındaki kanun teklifinin mali etkisi analiz edildi tasfiyesine karar verilen bazı yatırım fonları hakkında kanun teklifi&#x27;nin etki analizi yapıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 10 Ekim 2026, 11:21</span>
+        </div>
+        <h3>Tasfiyesine karar verilen bazı yatırım fonları hakkındaki kanun teklifinin mali etkisi analiz edildi</h3>
+        <p>Tasfiyesine Karar Verilen Bazı Yatırım Fonları Hakkında Kanun Teklifi&#x27;nin etki analizi yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 10 Ekim 2026, 11:21</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tasfiyesine-karar-verilen-bazi-yatirim-fonlari-hakkindaki-kanun-teklifinin-mali-etkisi-analiz-edildi/4084259" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="anthropic yapay zekaya yönelik zalimce davranışları yasakladı yapay zeka geliştiricisi anthropic, kullanıcıların claude adlı modeline karşı sürdürülebilir ve gereksiz yere zalimce veya tacizkar davranışlarda bulunmasını yasaklayan yeni bir politika yürürlüğe koydu. şirket liderlerinin makine bilinçliliği ihtimalini ciddiye alması, bu tür etik koruma önlemlerinin ardındaki temel motivasyonu oluşturuyor. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 10 Ekim 2026, 11:49</span>
+        </div>
+        <h3>Anthropic yapay zekaya yönelik zalimce davranışları yasakladı</h3>
+        <p>Yapay zeka geliştiricisi Anthropic, kullanıcıların Claude adlı modeline karşı sürdürülebilir ve gereksiz yere zalimce veya tacizkar davranışlarda bulunmasını yasaklayan yeni bir politika yürürlüğe koydu. Şirket liderlerinin makine bilinçliliği ihtimalini ciddiye alması, bu tür etik koruma önlemlerinin ardındaki temel motivasyonu oluşturuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Ekim 2026, 11:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/anthropic-yapay-zekaya-yonelik-zalimce-davranislari-yasakladi-959733.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yök üniversitelerde haftanın öne çıkan çalışmalarını paylaştı yükseköğretim kurulu (yök), üniversitelerde havacılık ve uzay teknolojilerinden jeolojik araştırmalara, biyolojik çeşitlilik çalışmalarından uzay araştırmalarına kadar haftanın öne çıkan çalışmalarını paylaştı. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 10 Ekim 2026, 11:41</span>
+        </div>
+        <h3>YÖK üniversitelerde haftanın öne çıkan çalışmalarını paylaştı</h3>
+        <p>Yükseköğretim Kurulu (YÖK), üniversitelerde havacılık ve uzay teknolojilerinden jeolojik araştırmalara, biyolojik çeşitlilik çalışmalarından uzay araştırmalarına kadar haftanın öne çıkan çalışmalarını paylaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 10 Ekim 2026, 11:41</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yok-universitelerde-haftanin-one-cikan-calismalarini-paylasti/4084280" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="anthropic&#x27;in yapay zeka modeli sahte cinayet ihbarında bulundu anthropic şirketinin yapay zeka modelinin abd&#x27;nin pensilvanya eyaletindeki philadelphia şehrinde sahte cinayet ihbarında bulunduğu ortaya çıktı. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 10 Ekim 2026, 12:24</span>
+        </div>
+        <h3>Anthropic&#x27;in yapay zeka modeli sahte cinayet ihbarında bulundu</h3>
+        <p>Anthropic şirketinin yapay zeka modelinin ABD&#x27;nin Pensilvanya eyaletindeki Philadelphia şehrinde sahte cinayet ihbarında bulunduğu ortaya çıktı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Ekim 2026, 12:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/anthropicin-yapay-zeka-modeli-sahte-cinayet-ihbarinda-bulundu-959738.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="çay ihracatı 9 ayda 25 milyon doları aştı türkiye&#x27;nin 9 aylık çay ihracatı 25 milyon 21 bin 548 dolara ulaştı. türk çayı, ocak-eylül döneminde birleşik krallık başta olmak üzere 119 ülke, özerk ve serbest bölgeye satıldı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 10 Ekim 2026, 11:49</span>
+        </div>
+        <h3>Çay ihracatı 9 ayda 25 milyon doları aştı</h3>
+        <p>Türkiye&#x27;nin 9 aylık çay ihracatı 25 milyon 21 bin 548 dolara ulaştı. Türk çayı, ocak-eylül döneminde Birleşik Krallık başta olmak üzere 119 ülke, özerk ve serbest bölgeye satıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 10 Ekim 2026, 11:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/cay-ihracati-9-ayda-25-milyon-dolari-asti-959734.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
