@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">11 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">11 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 29</span><span class="stat-item"><strong>dünya</strong> 10</span><span class="stat-item"><strong>genel</strong> 17</span><span class="stat-item"><strong>ekonomi</strong> 1</span><span class="stat-item"><strong>gümrük</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Trump&#x27;tan, Rus dizeli anlaşmasını eleştiren Zelenskiy&#x27;e tepki: &#x27;Artık gitmeli&#x27;</h3>
+        <p>ABD Başkanı Donald Trump, Rusya ile imzaladıkları dizel yakıt anlaşmasını eleştiren Ukrayna Devlet Başkanı Volodimir Zelenskiy&#x27;nin &quot;gitme vaktinin geldiğini&quot; söyledi. Zelenskiy, Rusya&#x27;ya yönelik yaptırımları askıya alan anlaşma için &quot;Putin&#x27;e hediye&quot; demişti.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 11 Ekim 2026, 12:49</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ck5yn6vj8lq0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 11 Ekim 2026, 13:21</span>
+            </div>
+            <h3>ABD&#x27;nin &#x27;canlı yayında idam infazı&#x27; planına Vatikan&#x27;dan tepki: &#x27;Akılalmaz bir durum&#x27;</h3>
+            <p>ABD yönetiminin, 13 askeri öldüren ABD ordusunda eski binbaşı Nidal Hasan&#x27;ın idam mangasıyla infazının canlı yayınlanacağını açıklamasına Hristiyan dünyasından tepki geldi. Vatikan&#x27;ın &#x27;başbakanı&#x27; sayılan Kardinal Parolin &quot;Ölümü bir gösteriye dönüştürmek kesinlikle kabul edilemez&quot; dedi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cqrmy7w0jpj3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 9 Ekim 2026, 19:52</span>
+            </div>
+            <h3>AKP&#x27;nin fon teklifi Meclis&#x27;te: Düzenleme neler öngörüyor?</h3>
+            <p>Adalet ve Kalkınma Partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini TBMM Başkanlığı&#x27;na sundu. Net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/crz65plggd37o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 9 Ekim 2026, 02:02</span>
+            </div>
+            <h3>Fon krizi AKP&#x27;de nasıl tartışılıyor, hangi adımlar atılabilir?</h3>
+            <p>AKP kulislerinde krizin, şimdiye kadar parti yönetiminde en fazla rahatsızlık yaratan konulardan biri olduğu belirtilirken, sadece sorumluların değil, sistemdeki zafiyetlerin de ortaya çıkarılması gerektiği görüşü dile getiriliyor</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmkg7n4xd0p1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+            </div>
+            <h3>Akın Gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27;</h3>
+            <p>Adalet Bakanı Akın Gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. Sabah&#x27;ta 9 Ekim&#x27;de yayımlanan habere göre, Gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c5rmy7wkek47o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">10 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="trump&#x27;tan, rus dizeli anlaşmasını eleştiren zelenskiy&#x27;e tepki: &#x27;artık gitmeli&#x27; abd başkanı donald trump, rusya ile imzaladıkları dizel yakıt anlaşmasını eleştiren ukrayna devlet başkanı volodimir zelenskiy&#x27;nin &quot;gitme vaktinin geldiğini&quot; söyledi. zelenskiy, rusya&#x27;ya yönelik yaptırımları askıya alan anlaşma için &quot;putin&#x27;e hediye&quot; demişti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 11 Ekim 2026, 12:49</span>
+        </div>
+        <h3>Trump&#x27;tan, Rus dizeli anlaşmasını eleştiren Zelenskiy&#x27;e tepki: &#x27;Artık gitmeli&#x27;</h3>
+        <p>ABD Başkanı Donald Trump, Rusya ile imzaladıkları dizel yakıt anlaşmasını eleştiren Ukrayna Devlet Başkanı Volodimir Zelenskiy&#x27;nin &quot;gitme vaktinin geldiğini&quot; söyledi. Zelenskiy, Rusya&#x27;ya yönelik yaptırımları askıya alan anlaşma için &quot;Putin&#x27;e hediye&quot; demişti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 11 Ekim 2026, 12:49</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck5yn6vj8lq0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;nin &#x27;canlı yayında idam infazı&#x27; planına vatikan&#x27;dan tepki: &#x27;akılalmaz bir durum&#x27; abd yönetiminin, 13 askeri öldüren abd ordusunda eski binbaşı nidal hasan&#x27;ın idam mangasıyla infazının canlı yayınlanacağını açıklamasına hristiyan dünyasından tepki geldi. vatikan&#x27;ın &#x27;başbakanı&#x27; sayılan kardinal parolin &quot;ölümü bir gösteriye dönüştürmek kesinlikle kabul edilemez&quot; dedi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 11 Ekim 2026, 13:21</span>
+        </div>
+        <h3>ABD&#x27;nin &#x27;canlı yayında idam infazı&#x27; planına Vatikan&#x27;dan tepki: &#x27;Akılalmaz bir durum&#x27;</h3>
+        <p>ABD yönetiminin, 13 askeri öldüren ABD ordusunda eski binbaşı Nidal Hasan&#x27;ın idam mangasıyla infazının canlı yayınlanacağını açıklamasına Hristiyan dünyasından tepki geldi. Vatikan&#x27;ın &#x27;başbakanı&#x27; sayılan Kardinal Parolin &quot;Ölümü bir gösteriye dönüştürmek kesinlikle kabul edilemez&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 11 Ekim 2026, 13:21</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqrmy7w0jpj3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akp&#x27;nin fon teklifi meclis&#x27;te: düzenleme neler öngörüyor? adalet ve kalkınma partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini tbmm başkanlığı&#x27;na sundu. net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. ankara&#x27;dan ayşe sayın&#x27;ın haberi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 19:52</span>
+        </div>
+        <h3>AKP&#x27;nin fon teklifi Meclis&#x27;te: Düzenleme neler öngörüyor?</h3>
+        <p>Adalet ve Kalkınma Partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini TBMM Başkanlığı&#x27;na sundu. Net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 19:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/crz65plggd37o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akın gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27; adalet bakanı akın gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. sabah&#x27;ta 9 ekim&#x27;de yayımlanan habere göre, gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+        </div>
+        <h3>Akın Gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27;</h3>
+        <p>Adalet Bakanı Akın Gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. Sabah&#x27;ta 9 Ekim&#x27;de yayımlanan habere göre, Gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5rmy7wkek47o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="turistik doğu ekspresi seferleri 21 aralık&#x27;ta başlayacak ulaştırma ve altyapı bakanı abdulkadir uraloğlu, turistik doğu ekspresi&#x27;nin 2026-2027 kış sezonunda ankara-kars-ankara hattında 70 sefer gerçekleştireceğini, ankara-kars yönündeki seferlerin 21 aralık&#x27;ta, kars-ankara yönündeki seferlerin de 23 aralık&#x27;ta başlayacağını açıkladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 11 Ekim 2026, 13:25</span>
+        </div>
+        <h3>Turistik Doğu Ekspresi seferleri 21 Aralık&#x27;ta başlayacak</h3>
+        <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Turistik Doğu Ekspresi&#x27;nin 2026-2027 kış sezonunda Ankara-Kars-Ankara hattında 70 sefer gerçekleştireceğini, Ankara-Kars yönündeki seferlerin 21 Aralık&#x27;ta, Kars-Ankara yönündeki seferlerin de 23 Aralık&#x27;ta başlayacağını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 11 Ekim 2026, 13:25</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/turistik-dogu-ekspresi-seferleri-21-aralikta-baslayacak-959811.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ab, rus vatandaşlarına yönelik vize kurallarını sıkılaştırmayı planlıyor avrupa birliği&#x27;nin (ab), hibrit saldırılara karşı güvenliğini güçlendirmek amacıyla, üye ülkeleri her yıl turist olarak ziyaret eden yüz binlerce rus vatandaşına yönelik vize kurallarını sıkılaştırmaya hazırlandığı duyuruldu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 11 Ekim 2026, 13:10</span>
+        </div>
+        <h3>AB, Rus vatandaşlarına yönelik vize kurallarını sıkılaştırmayı planlıyor</h3>
+        <p>Avrupa Birliği&#x27;nin (AB), hibrit saldırılara karşı güvenliğini güçlendirmek amacıyla, üye ülkeleri her yıl turist olarak ziyaret eden yüz binlerce Rus vatandaşına yönelik vize kurallarını sıkılaştırmaya hazırlandığı duyuruldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 11 Ekim 2026, 13:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ab-rus-vatandaslarina-yonelik-vize-kurallarini-sikilastirmayi-planliyor-959808.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rusya: odessa&#x27;da veri merkezini ve çernomorsk limanı&#x27;nda bir kuru yük gemisini vurduk rusya savunma bakanlığı, ukrayna&#x27;nın odessa şehrinde bir veri merkezi ile çernomorsk limanı&#x27;nda askeri yük taşıyan bir kuru yük gemisini insansız hava araçlarıyla (i̇ha) vurduklarını bildirdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 11 Ekim 2026, 12:59</span>
+        </div>
+        <h3>Rusya: Odessa&#x27;da veri merkezini ve Çernomorsk Limanı&#x27;nda bir kuru yük gemisini vurduk</h3>
+        <p>Rusya Savunma Bakanlığı, Ukrayna&#x27;nın Odessa şehrinde bir veri merkezi ile Çernomorsk Limanı&#x27;nda askeri yük taşıyan bir kuru yük gemisini insansız hava araçlarıyla (İHA) vurduklarını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 11 Ekim 2026, 12:59</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/rusya-odessada-veri-merkezini-ve-cernomorsk-limaninda-bir-kuru-yuk-gemisini-vurduk-959804.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tbmm&#x27;de bu hafta türk kızılay kanunu teklifi ele alınacak tbmm genel kurulu, türk kızılay derneğinin görev alanına giren faaliyetleri daha etkin bir yapıda yürütebilmesi için görev ve yetkileriyle hak ve muafiyetleri düzenleyen türk kızılay kanunu teklifi&#x27;ni görüşecek. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 11 Ekim 2026, 11:02</span>
+        </div>
+        <h3>TBMM&#x27;de bu hafta Türk Kızılay Kanunu Teklifi ele alınacak</h3>
+        <p>TBMM Genel Kurulu, Türk Kızılay Derneğinin görev alanına giren faaliyetleri daha etkin bir yapıda yürütebilmesi için görev ve yetkileriyle hak ve muafiyetleri düzenleyen Türk Kızılay Kanunu Teklifi&#x27;ni görüşecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 11 Ekim 2026, 11:02</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tbmmde-bu-hafta-turk-kizilay-kanunu-teklifi-ele-alinacak/4084922" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meteorolojiden denizlerde fırtına uyarısı doğu akdeniz&#x27;in doğusu ve batı akdeniz&#x27;in doğusu için fırtına uyarısında bulunuldu. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 11 Ekim 2026, 12:01</span>
+        </div>
+        <h3>Meteorolojiden denizlerde fırtına uyarısı</h3>
+        <p>Doğu Akdeniz&#x27;in doğusu ve Batı Akdeniz&#x27;in doğusu için fırtına uyarısında bulunuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 11 Ekim 2026, 12:01</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/meteorolojiden-denizlerde-firtina-uyarisi/4085000" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akp&#x27;ye geçen cemil tugay: &#x27;erdoğan bana güven verdi&#x27; mutlak butlan kararı sonrası haziran ayında chp&#x27;den istifa eden i̇zmir büyükşehir belediye başkanı cemil tugay 7 ekim&#x27;de akp&#x27;ye katılmasının ardından ilk röportajını yeni asır gazetesine verdi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 11 Ekim 2026, 12:11</span>
+        </div>
+        <h3>AKP&#x27;ye geçen Cemil Tugay: &#x27;Erdoğan bana güven verdi&#x27;</h3>
+        <p>Mutlak butlan kararı sonrası Haziran ayında CHP&#x27;den istifa eden İzmir Büyükşehir Belediye Başkanı Cemil Tugay 7 Ekim&#x27;de AKP&#x27;ye katılmasının ardından ilk röportajını Yeni Asır gazetesine verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 11 Ekim 2026, 12:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmlyl2rx4xjvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">17 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="fon krizi akp&#x27;de nasıl tartışılıyor, hangi adımlar atılabilir? akp kulislerinde krizin, şimdiye kadar parti yönetiminde en fazla rahatsızlık yaratan konulardan biri olduğu belirtilirken, sadece sorumluların değil, sistemdeki zafiyetlerin de ortaya çıkarılması gerektiği görüşü dile getiriliyor genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 02:02</span>
+        </div>
+        <h3>Fon krizi AKP&#x27;de nasıl tartışılıyor, hangi adımlar atılabilir?</h3>
+        <p>AKP kulislerinde krizin, şimdiye kadar parti yönetiminde en fazla rahatsızlık yaratan konulardan biri olduğu belirtilirken, sadece sorumluların değil, sistemdeki zafiyetlerin de ortaya çıkarılması gerektiği görüşü dile getiriliyor</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 02:02</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmkg7n4xd0p1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan memişoğlu: önceliğimiz çocukları tütünün zararlı etkilerinden korumak sağlık bakanı kemal memişoğlu, &quot;vatandaşlarımız müsterih olsun, önceliğimiz 18 yaş altındaki çocuklarımıza yaş doğrulaması yaparak tütün ürünü satışını önlemek ve onları tütünün zararlı etkilerinden korumaktır.&quot; açıklamasında bulundu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 11 Ekim 2026, 13:44</span>
+        </div>
+        <h3>Bakan Memişoğlu: Önceliğimiz çocukları tütünün zararlı etkilerinden korumak</h3>
+        <p>Sağlık Bakanı Kemal Memişoğlu, &quot;Vatandaşlarımız müsterih olsun, önceliğimiz 18 yaş altındaki çocuklarımıza yaş doğrulaması yaparak tütün ürünü satışını önlemek ve onları tütünün zararlı etkilerinden korumaktır.&quot; açıklamasında bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 11 Ekim 2026, 13:44</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-memisoglu-onceligimiz-cocuklari-tutunun-zararli-etkilerinden-korumak-959812.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran&#x27;dan savaş peşinde değiliz mesajı i̇ran dışişleri bakan yardımcısı kazım garibabadi, savaşmayı iyi bildiklerini ancak ülkesinin savaş peşinde olmadığını söyledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 11 Ekim 2026, 13:07</span>
+        </div>
+        <h3>İran&#x27;dan savaş peşinde değiliz mesajı</h3>
+        <p>İran Dışişleri Bakan Yardımcısı Kazım Garibabadi, savaşmayı iyi bildiklerini ancak ülkesinin savaş peşinde olmadığını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 11 Ekim 2026, 13:07</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/irandan-savas-pesinde-degiliz-mesaji-959806.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan memişoğlu: önceliğimiz 18 yaş altındaki çocuklarımızı tütünün zararlı etkilerinden korumak sağlık bakanı kemal memişoğlu, &quot;vatandaşlarımız müsterih olsun, önceliğimiz 18 yaş altındaki çocuklarımıza yaş doğrulaması yaparak tütün ürünü satışını önlemek ve onları tütünün zararlı etkilerinden korumaktır.&quot; açıklamasında bulundu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 11 Ekim 2026, 13:51</span>
+        </div>
+        <h3>Bakan Memişoğlu: Önceliğimiz 18 yaş altındaki çocuklarımızı tütünün zararlı etkilerinden korumak</h3>
+        <p>Sağlık Bakanı Kemal Memişoğlu, &quot;Vatandaşlarımız müsterih olsun, önceliğimiz 18 yaş altındaki çocuklarımıza yaş doğrulaması yaparak tütün ürünü satışını önlemek ve onları tütünün zararlı etkilerinden korumaktır.&quot; açıklamasında bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 11 Ekim 2026, 13:51</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-memisoglu-onceligimiz-18-yas-altindaki-cocuklarimizi-tutunun-zararli-etkilerinden-korumak/4085080" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail tartışması türkiye-azerbaycan ilişkilerini nasıl etkiliyor? türkiye&#x27;de azerbaycan&#x27;ın i̇srail ile ilişkilerine yönelik eleştiriler artarken, azerbaycan&#x27;da bu eleştiriler rahatsızlıkla karşılanıyor. i̇lham aliyev, yeni azerbaycan partisi kurultayı&#x27;ndaki konuşmasında, &quot;bizim işlerimize burnunuzu sokmayın&quot; dedi. her ne kadar aliyev herhangi bir ülkenin adını anmasa da, bu sözlerin hedefinin türkiye olduğu yönünde yorumlar yapıldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 11 Ekim 2026, 10:28</span>
+        </div>
+        <h3>İsrail tartışması Türkiye-Azerbaycan ilişkilerini nasıl etkiliyor?</h3>
+        <p>Türkiye&#x27;de Azerbaycan&#x27;ın İsrail ile ilişkilerine yönelik eleştiriler artarken, Azerbaycan&#x27;da bu eleştiriler rahatsızlıkla karşılanıyor. İlham Aliyev, Yeni Azerbaycan Partisi Kurultayı&#x27;ndaki konuşmasında, &quot;Bizim işlerimize burnunuzu sokmayın&quot; dedi. Her ne kadar Aliyev herhangi bir ülkenin adını anmasa da, bu sözlerin hedefinin Türkiye olduğu yönünde yorumlar yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 11 Ekim 2026, 10:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cxr5y34qjj4eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="özgür özel, bakan mahinur özdemir göktaş&#x27;ın babasından özür diledi mersin&#x27;deki parti mitinginde konuşan özgür özel, &quot;mahinur hanım, senin baban incindi, ellerinden öperim&quot; dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 19:04</span>
+        </div>
+        <h3>Özgür Özel, Bakan Mahinur Özdemir Göktaş&#x27;ın babasından özür diledi</h3>
+        <p>Mersin&#x27;deki parti mitinginde konuşan Özgür Özel, &quot;Mahinur Hanım, senin baban incindi, ellerinden öperim&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 19:04</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6kg59j745mno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı yardımcısı yılmaz, aa editör masası&#x27;na konuk olacak cumhurbaşkanı yardımcısı cevdet yılmaz, anadolu ajansı (aa) editör masası&#x27;na katılacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 11 Ekim 2026, 12:42</span>
+        </div>
+        <h3>Cumhurbaşkanı Yardımcısı Yılmaz, AA Editör Masası&#x27;na konuk olacak</h3>
+        <p>Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, Anadolu Ajansı (AA) Editör Masası&#x27;na katılacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 11 Ekim 2026, 12:42</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-yardimcisi-yilmaz-aa-editor-masasina-konuk-olacak/4085028" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="afad ekipleri munzur çayı&#x27;ndaki zorlu eğitimlerle güçlerine güç katıyor afet ve acil durum yönetimi başkanlığı (afad) bünyesindeki arama kurtarma ekipleri, tunceli&#x27;deki munzur çayı&#x27;nda aldıkları su üstü eğitimleriyle olası afet ve acil durumlara karşı hazırlıklarını sürdürüyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 11 Ekim 2026, 12:36</span>
+        </div>
+        <h3>AFAD ekipleri Munzur Çayı&#x27;ndaki zorlu eğitimlerle güçlerine güç katıyor</h3>
+        <p>Afet ve Acil Durum Yönetimi Başkanlığı (AFAD) bünyesindeki arama kurtarma ekipleri, Tunceli&#x27;deki Munzur Çayı&#x27;nda aldıkları su üstü eğitimleriyle olası afet ve acil durumlara karşı hazırlıklarını sürdürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 11 Ekim 2026, 12:36</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/afad-ekipleri-munzur-cayindaki-zorlu-egitimlerle-guclerine-guc-katiyor/4085023" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;gülümseyen depresyon&#x27; nedir, belirtileri neler? dışarıdan mutlu görünürken içten içe acı çekiyorsanız, atipik bir depresyon türü yaşıyor olabilirsiniz ama gerçek duyguları saklamak ruh sağlığına zarar verebilir. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 11 Ekim 2026, 10:56</span>
+        </div>
+        <h3>&#x27;Gülümseyen depresyon&#x27; nedir, belirtileri neler?</h3>
+        <p>Dışarıdan mutlu görünürken içten içe acı çekiyorsanız, atipik bir depresyon türü yaşıyor olabilirsiniz ama gerçek duyguları saklamak ruh sağlığına zarar verebilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 11 Ekim 2026, 10:56</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c65ynglgegr9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇şgalci i̇srail, ateşkese rağmen lübnan&#x27;ın güneyine hava ve topçu saldırıları düzenledi i̇şgalci i̇srail ordusu, ateşkese ve çerçeve anlaşmasına rağmen lübnan&#x27;ın güneyindeki beldeleri hava ve topçu saldırılarıyla hedef aldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 11 Ekim 2026, 13:12</span>
+        </div>
+        <h3>İşgalci İsrail, ateşkese rağmen Lübnan&#x27;ın güneyine hava ve topçu saldırıları düzenledi</h3>
+        <p>İşgalci İsrail ordusu, ateşkese ve çerçeve anlaşmasına rağmen Lübnan&#x27;ın güneyindeki beldeleri hava ve topçu saldırılarıyla hedef aldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 11 Ekim 2026, 13:12</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/isgalci-israil-ateskese-ragmen-lubnanin-guneyine-hava-ve-topcu-saldirilari-duzenledi-959809.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="katil i̇srail&#x27;in gazze şeridi&#x27;ne düzenlediği saldırılarda can kaybı 74 bin 377&#x27;ye yükseldi katil i̇srail ordusunun gazze şeridi’ne düzenlediği saldırılarda hayatını kaybedenlerin sayısı 74 bin 377&#x27;ye, yaralı sayısı 175 bin 398&#x27;e çıktı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 11 Ekim 2026, 13:09</span>
+        </div>
+        <h3>Katil İsrail&#x27;in Gazze Şeridi&#x27;ne düzenlediği saldırılarda can kaybı 74 bin 377&#x27;ye yükseldi</h3>
+        <p>Katil İsrail ordusunun Gazze Şeridi’ne düzenlediği saldırılarda hayatını kaybedenlerin sayısı 74 bin 377&#x27;ye, yaralı sayısı 175 bin 398&#x27;e çıktı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 11 Ekim 2026, 13:09</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/katil-israilin-gazze-seridine-duzenledigi-saldirilarda-can-kaybi-74-bin-377ye-yukseldi-959807.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="husi saldırılarının hedefindeki riyad&#x27;da okullarda yüz yüze eğitime bir hafta ara verildi yemen&#x27;deki i̇ran destekli husilerin saldırılarının hedefindeki suudi arabistan&#x27;ın başkenti riyad&#x27;daki okullarda yüz yüze eğitime bir hafta ara verilerek uzaktan eğitime geçildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 11 Ekim 2026, 13:01</span>
+        </div>
+        <h3>Husi saldırılarının hedefindeki Riyad&#x27;da okullarda yüz yüze eğitime bir hafta ara verildi</h3>
+        <p>Yemen&#x27;deki İran destekli Husilerin saldırılarının hedefindeki Suudi Arabistan&#x27;ın başkenti Riyad&#x27;daki okullarda yüz yüze eğitime bir hafta ara verilerek uzaktan eğitime geçildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 11 Ekim 2026, 13:01</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/husi-saldirilarinin-hedefindeki-riyadda-okullarda-yuz-yuze-egitime-bir-hafta-ara-verildi-959805.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="manisa&#x27;da yolcu otobüsü ile çekici çarpıştı: 11 ölü, 27 yaralı manisa&#x27;nın akhisar ilçesinde çekici ile tur otobüsünün çarpışması sonucu 11 kişi hayatını kaybetti, 27 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 11 Ekim 2026, 12:32</span>
+        </div>
+        <h3>Manisa&#x27;da yolcu otobüsü ile çekici çarpıştı: 11 ölü, 27 yaralı</h3>
+        <p>Manisa&#x27;nın Akhisar ilçesinde çekici ile tur otobüsünün çarpışması sonucu 11 kişi hayatını kaybetti, 27 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 11 Ekim 2026, 12:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/manisada-yolcu-otobusu-ile-cekici-carpisti-11-olu-27-yarali-959803.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="aldıkları desteklerle yıllar süren sigara bağımlılığından kurtuldular ardahan ve kilis&#x27;te sigara bağımlılığından kurtulup dumansız hayata &quot;merhaba&quot; diyenler, süreçte yaşadıklarını anlatıp bağımlılara tavsiyelerde bulundu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 11 Ekim 2026, 13:06</span>
+        </div>
+        <h3>Aldıkları desteklerle yıllar süren sigara bağımlılığından kurtuldular</h3>
+        <p>Ardahan ve Kilis&#x27;te sigara bağımlılığından kurtulup dumansız hayata &quot;merhaba&quot; diyenler, süreçte yaşadıklarını anlatıp bağımlılara tavsiyelerde bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 11 Ekim 2026, 13:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/aldiklari-desteklerle-yillar-suren-sigara-bagimliligindan-kurtuldular/4085048" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="manisa&#x27;da çekici ile tur otobüsü çarpıştı, 11 kişi hayatını kaybetti, 27 kişi yaralandı manisa&#x27;nın akhisar ilçesinde çekici ile tur otobüsünün çarpışması sonucu 11 kişi hayatını kaybetti, 27 kişi yaralandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 11 Ekim 2026, 12:59</span>
+        </div>
+        <h3>Manisa&#x27;da çekici ile tur otobüsü çarpıştı, 11 kişi hayatını kaybetti, 27 kişi yaralandı</h3>
+        <p>Manisa&#x27;nın Akhisar ilçesinde çekici ile tur otobüsünün çarpışması sonucu 11 kişi hayatını kaybetti, 27 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 11 Ekim 2026, 12:59</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/manisada-cekici-ile-tur-otobusu-carpisti-11-kisi-hayatini-kaybetti-27-kisi-yaralandi/4085043" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sağlık çalışanları sigara bağımlılığından poliklinikteki tedaviyle kurtuldu hatay ve çanakkale&#x27;de uzun yıllar sigara kullanan sağlık çalışanları anıl kabadayı ve sertaç giresunlu, poliklinikteki tedaviyle bağımlılıklarından kurtulup yeniden rahat nefes almaya başladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 11 Ekim 2026, 11:09</span>
+        </div>
+        <h3>Sağlık çalışanları sigara bağımlılığından poliklinikteki tedaviyle kurtuldu</h3>
+        <p>Hatay ve Çanakkale&#x27;de uzun yıllar sigara kullanan sağlık çalışanları Anıl Kabadayı ve Sertaç Giresunlu, poliklinikteki tedaviyle bağımlılıklarından kurtulup yeniden rahat nefes almaya başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 11 Ekim 2026, 11:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/saglik-calisanlari-sigara-bagimliligindan-poliklinikteki-tedaviyle-kurtuldu/4084939" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="süphan dağı&#x27;nın zirvesi karla kaplandı türkiye&#x27;nin üçüncü en yüksek zirvesi olan 4 bin 58 metre rakımlı süphan dağı&#x27;nın zirvesi kar yağışıyla beyaza büründü. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 11 Ekim 2026, 12:31</span>
+        </div>
+        <h3>Süphan Dağı&#x27;nın zirvesi karla kaplandı</h3>
+        <p>Türkiye&#x27;nin üçüncü en yüksek zirvesi olan 4 bin 58 metre rakımlı Süphan Dağı&#x27;nın zirvesi kar yağışıyla beyaza büründü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 11 Ekim 2026, 12:31</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/suphan-daginin-zirvesi-karla-kaplandi/4085019" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bilim olimpiyatlarında tarihi başarı: türkiye 2026da 78 madalya kazandı sanayi ve teknoloji bakanı mehmet fatih kacır, türkiye&#x27;nin 2026 yılında uluslararası bilim olimpiyatlarında toplam 78 madalya kazanarak tarihi bir başarıya ulaştığını duyurdu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 11 Ekim 2026, 13:04</span>
+        </div>
+        <h3>Bilim olimpiyatlarında tarihi başarı: Türkiye 2026da 78 madalya kazandı</h3>
+        <p>Sanayi ve Teknoloji Bakanı Mehmet Fatih Kacır, Türkiye&#x27;nin 2026 yılında uluslararası bilim olimpiyatlarında toplam 78 madalya kazanarak tarihi bir başarıya ulaştığını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 11 Ekim 2026, 13:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bilim-olimpiyatlarinda-tarihi-basari-turkiye-2026da-78-madalya-kazandi-959810.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="riyad&#x27;da havalimanına saldırı: 12 ölü, 300 yaralı suudi arabistan&#x27;ın başkenti riyad&#x27;daki kral halid uluslararası havalimanı&#x27;na düzenlenen saldırıda en az 12 kişi hayatını kaybetti, 300 kişi yaralandı. yemen&#x27;deki husi isyancılar saldırıyı doğrudan üstlenmezken, husilerin sözcüsü tüm havayolu şirketlerine suudi havalimanlarından uzak durmaları uyarısı yaptı. gümrük bbc türkçe" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">BBC Türkçe · 11 Ekim 2026, 11:30</span>
+        </div>
+        <h3>Riyad&#x27;da havalimanına saldırı: 12 ölü, 300 yaralı</h3>
+        <p>Suudi Arabistan&#x27;ın başkenti Riyad&#x27;daki Kral Halid Uluslararası Havalimanı&#x27;na düzenlenen saldırıda en az 12 kişi hayatını kaybetti, 300 kişi yaralandı. Yemen&#x27;deki Husi isyancılar saldırıyı doğrudan üstlenmezken, Husilerin sözcüsü tüm havayolu şirketlerine Suudi havalimanlarından uzak durmaları uyarısı yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 11 Ekim 2026, 11:30</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw8rz5268e26o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
