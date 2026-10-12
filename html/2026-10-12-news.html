@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">12 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">12 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 29</span><span class="stat-item"><strong>dünya</strong> 7</span><span class="stat-item"><strong>ekonomi</strong> 2</span><span class="stat-item"><strong>genel</strong> 20</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan: Güvenli gıdaya erişimi milli güvenliğimizin temel unsuru olarak görüyoruz</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, güvenli gıdaya erişimi sadece bir arz meselesi değil, milli güvenliğin temel bir unsuru olarak gördüklerini belirtti. Erdoğan ayrıca Türkiye&#x27;nin, eski Tarım ve Köy İşleri Bakanı Dr. Mehdi Eker&#x27;i Birleşmiş Milletler Gıda ve Tarım Örgütü (FAO) Genel Direktörlüğü için aday gösterdiğini bildirdi.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 12 Ekim 2026, 15:10</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-guvenli-gidaya-erisimi-milli-guvenligimizin-temel-unsuru-olarak-goruyoruz-959907.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 12 Ekim 2026, 14:24</span>
+            </div>
+            <h3>EuroMed: Gazze&#x27;de 3 yıllık soykırımda 10 binden fazla çocuk uzuv kaybı yaşadı</h3>
+            <p>Avrupa-Akdeniz İnsan Hakları İzleme Örgütü (Euro-Med), İsrail&#x27;in Ekim 2023&#x27;te Gazze Şeridi&#x27;ne başlattığı saldırıları “soykırım” şeklinde niteleyerek, bu süreçte 10 binden fazla Filistinli çocuğun uzuv kaybı yaşadığını ve hayatını kaybedenlerin her 10&#x27;undan 9&#x27;unun sivil olduğunu bildirdi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/euro-med-gazzede-3-yillik-soykirimda-10-binden-fazla-cocuk-uzuv-kaybi-yasadi-959901.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 12 Ekim 2026, 09:17</span>
+            </div>
+            <h3>Rusya NATO ülkelerine saldırabilir mi?</h3>
+            <p>Moskova&#x27;daki yetkililer Rusya&#x27;nın NATO&#x27;nun genişlemesinden mağdur olduğunu söylüyor, ittifakı Rusya&#x27;nın Baltık Denizi&#x27;ndeki toprağı Kaliningrad&#x27;ı ablukaya alma planları yapmakla suçluyor. Peki Rusya&#x27;nın NATO&#x27;ya saldırı tehdidi ne kadar gerçekçi?</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c6g7x0d0le0jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 12 Ekim 2026, 10:49</span>
+            </div>
+            <h3>Cevdet Yılmaz: DDK bütün kurumları inceliyor</h3>
+            <p>Fon skandalı sonrası tasfiye sürecini yönetmek üzere kurulan Fon Koordinasyon Kurulu&#x27;na başkanlık eden Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, ilgili kurumlarla ilgili Devlet Denetleme Kurulu&#x27;nun denetlemesinin sürdüğünü söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cxr5y2jrzjeeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 11 Ekim 2026, 15:51</span>
+            </div>
+            <h3>AKP&#x27;nin fon teklifi Meclis&#x27;te: Düzenleme neler öngörüyor?</h3>
+            <p>Adalet ve Kalkınma Partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini TBMM Başkanlığı&#x27;na sundu. Net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/crz65plggd37o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">7 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cumhurbaşkanı erdoğan: güvenli gıdaya erişimi milli güvenliğimizin temel unsuru olarak görüyoruz cumhurbaşkanı recep tayyip erdoğan, güvenli gıdaya erişimi sadece bir arz meselesi değil, milli güvenliğin temel bir unsuru olarak gördüklerini belirtti. erdoğan ayrıca türkiye&#x27;nin, eski tarım ve köy i̇şleri bakanı dr. mehdi eker&#x27;i birleşmiş milletler gıda ve tarım örgütü (fao) genel direktörlüğü için aday gösterdiğini bildirdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 12 Ekim 2026, 15:10</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan: Güvenli gıdaya erişimi milli güvenliğimizin temel unsuru olarak görüyoruz</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, güvenli gıdaya erişimi sadece bir arz meselesi değil, milli güvenliğin temel bir unsuru olarak gördüklerini belirtti. Erdoğan ayrıca Türkiye&#x27;nin, eski Tarım ve Köy İşleri Bakanı Dr. Mehdi Eker&#x27;i Birleşmiş Milletler Gıda ve Tarım Örgütü (FAO) Genel Direktörlüğü için aday gösterdiğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 12 Ekim 2026, 15:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-guvenli-gidaya-erisimi-milli-guvenligimizin-temel-unsuru-olarak-goruyoruz-959907.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rusya nato ülkelerine saldırabilir mi? moskova&#x27;daki yetkililer rusya&#x27;nın nato&#x27;nun genişlemesinden mağdur olduğunu söylüyor, ittifakı rusya&#x27;nın baltık denizi&#x27;ndeki toprağı kaliningrad&#x27;ı ablukaya alma planları yapmakla suçluyor. peki rusya&#x27;nın nato&#x27;ya saldırı tehdidi ne kadar gerçekçi? dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 12 Ekim 2026, 09:17</span>
+        </div>
+        <h3>Rusya NATO ülkelerine saldırabilir mi?</h3>
+        <p>Moskova&#x27;daki yetkililer Rusya&#x27;nın NATO&#x27;nun genişlemesinden mağdur olduğunu söylüyor, ittifakı Rusya&#x27;nın Baltık Denizi&#x27;ndeki toprağı Kaliningrad&#x27;ı ablukaya alma planları yapmakla suçluyor. Peki Rusya&#x27;nın NATO&#x27;ya saldırı tehdidi ne kadar gerçekçi?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Ekim 2026, 09:17</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6g7x0d0le0jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akp&#x27;nin fon teklifi meclis&#x27;te: düzenleme neler öngörüyor? adalet ve kalkınma partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini tbmm başkanlığı&#x27;na sundu. net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. ankara&#x27;dan ayşe sayın&#x27;ın haberi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 11 Ekim 2026, 15:51</span>
+        </div>
+        <h3>AKP&#x27;nin fon teklifi Meclis&#x27;te: Düzenleme neler öngörüyor?</h3>
+        <p>Adalet ve Kalkınma Partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini TBMM Başkanlığı&#x27;na sundu. Net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 11 Ekim 2026, 15:51</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/crz65plggd37o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akın gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27; adalet bakanı akın gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. sabah&#x27;ta 9 ekim&#x27;de yayımlanan habere göre, gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+        </div>
+        <h3>Akın Gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27;</h3>
+        <p>Adalet Bakanı Akın Gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. Sabah&#x27;ta 9 Ekim&#x27;de yayımlanan habere göre, Gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5rmy7wkek47o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="burnham: rusya brexit oylamasına müdahale etti i̇ngiltere başbakanı andy burnham, rusya&#x27;nın brexit referandumuna müdahale ettiğini söyledi ve benzer faaliyetlerin fransa ile almanya&#x27;da da yürütüldüğü uyarısında bulundu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 12 Ekim 2026, 15:02</span>
+        </div>
+        <h3>Burnham: Rusya Brexit oylamasına müdahale etti</h3>
+        <p>İngiltere Başbakanı Andy Burnham, Rusya&#x27;nın Brexit referandumuna müdahale ettiğini söyledi ve benzer faaliyetlerin Fransa ile Almanya&#x27;da da yürütüldüğü uyarısında bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Ekim 2026, 15:02</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9e8e5je8ln7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bahçeli&#x27;nin &#x27;yürütmede erdoğan, yasamada mhp&#x27; formülü ne anlama geliyor? mhp liderinin açıklamaları, partisinin cumhur i̇ttifakı&#x27;ndan vazgeçmeden ittifak içindeki konumunu güçlendirme arayışı olarak yorumlanıyor. ankara&#x27;dan ayşe sayın&#x27;ın haberi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 12 Ekim 2026, 13:54</span>
+        </div>
+        <h3>Bahçeli&#x27;nin &#x27;Yürütmede Erdoğan, yasamada MHP&#x27; formülü ne anlama geliyor?</h3>
+        <p>MHP liderinin açıklamaları, partisinin Cumhur İttifakı&#x27;ndan vazgeçmeden ittifak içindeki konumunu güçlendirme arayışı olarak yorumlanıyor. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Ekim 2026, 13:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/crx23gv7xdgqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;de 1937&#x27;dan beri yapılmayan halka açık idamlar neden yeniden başlıyor? pentagon, fort hood saldırganı nidal hasan&#x27;ın infazının canlı yayınlanacağını söylüyor, ancak uzmanlar yetkililerin ülkeyi yanlış anladığını öne sürüyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 12 Ekim 2026, 12:37</span>
+        </div>
+        <h3>ABD&#x27;de 1937&#x27;dan beri yapılmayan halka açık idamlar neden yeniden başlıyor?</h3>
+        <p>Pentagon, Fort Hood saldırganı Nidal Hasan&#x27;ın infazının canlı yayınlanacağını söylüyor, ancak uzmanlar yetkililerin ülkeyi yanlış anladığını öne sürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Ekim 2026, 12:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq398ve0de4yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="euromed: gazze&#x27;de 3 yıllık soykırımda 10 binden fazla çocuk uzuv kaybı yaşadı avrupa-akdeniz i̇nsan hakları i̇zleme örgütü (euro-med), i̇srail&#x27;in ekim 2023&#x27;te gazze şeridi&#x27;ne başlattığı saldırıları “soykırım” şeklinde niteleyerek, bu süreçte 10 binden fazla filistinli çocuğun uzuv kaybı yaşadığını ve hayatını kaybedenlerin her 10&#x27;undan 9&#x27;unun sivil olduğunu bildirdi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 12 Ekim 2026, 14:24</span>
+        </div>
+        <h3>EuroMed: Gazze&#x27;de 3 yıllık soykırımda 10 binden fazla çocuk uzuv kaybı yaşadı</h3>
+        <p>Avrupa-Akdeniz İnsan Hakları İzleme Örgütü (Euro-Med), İsrail&#x27;in Ekim 2023&#x27;te Gazze Şeridi&#x27;ne başlattığı saldırıları “soykırım” şeklinde niteleyerek, bu süreçte 10 binden fazla Filistinli çocuğun uzuv kaybı yaşadığını ve hayatını kaybedenlerin her 10&#x27;undan 9&#x27;unun sivil olduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 12 Ekim 2026, 14:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/euro-med-gazzede-3-yillik-soykirimda-10-binden-fazla-cocuk-uzuv-kaybi-yasadi-959901.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fransa&#x27;da süpermarketlere siber saldırı: sıcaklıklara müdahale edildi, donmuş ürünler bozuldu fransa&#x27;da en az 150 süpermarketin soğutma sistemleri siber saldırının hedefi oldu. sisteme uzaktan müdahale eden bilgisayar korsanları, dolaplardaki taze ve dondurulmuş ürünlerin bozulmasına yol açarak milyonlarca euroluk zarara neden oldu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 12 Ekim 2026, 14:40</span>
+        </div>
+        <h3>Fransa&#x27;da süpermarketlere siber saldırı: Sıcaklıklara müdahale edildi, donmuş ürünler bozuldu</h3>
+        <p>Fransa&#x27;da en az 150 süpermarketin soğutma sistemleri siber saldırının hedefi oldu. Sisteme uzaktan müdahale eden bilgisayar korsanları, dolaplardaki taze ve dondurulmuş ürünlerin bozulmasına yol açarak milyonlarca euroluk zarara neden oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 12 Ekim 2026, 14:40</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/fransada-supermarketlere-siber-saldiri-sicakliklara-mudahale-edildi-donmus-urunler-bozuldu-959904.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">20 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cevdet yılmaz: ddk bütün kurumları inceliyor fon skandalı sonrası tasfiye sürecini yönetmek üzere kurulan fon koordinasyon kurulu&#x27;na başkanlık eden cumhurbaşkanı yardımcısı cevdet yılmaz, ilgili kurumlarla ilgili devlet denetleme kurulu&#x27;nun denetlemesinin sürdüğünü söyledi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 12 Ekim 2026, 10:49</span>
+        </div>
+        <h3>Cevdet Yılmaz: DDK bütün kurumları inceliyor</h3>
+        <p>Fon skandalı sonrası tasfiye sürecini yönetmek üzere kurulan Fon Koordinasyon Kurulu&#x27;na başkanlık eden Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, ilgili kurumlarla ilgili Devlet Denetleme Kurulu&#x27;nun denetlemesinin sürdüğünü söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Ekim 2026, 10:49</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cxr5y2jrzjeeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye, suudi arabistan, ürdün ve suriye arasında mega elektrik projesi enerji ve tabii kaynaklar bakanı alparslan bayraktar, türkiye, suudi arabistan, ürdün ve suriye arasında elektrik iletim bağlantısı kurulmasına yönelik mega proje üzerinde görüşmeler yürüttüklerini belirterek, bölgesel enerji işbirliğinin geliştirilmesinin hedeflendiğini açıkladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 12 Ekim 2026, 14:20</span>
+        </div>
+        <h3>Türkiye, Suudi Arabistan, Ürdün ve Suriye arasında mega elektrik projesi</h3>
+        <p>Enerji ve Tabii Kaynaklar Bakanı Alparslan Bayraktar, Türkiye, Suudi Arabistan, Ürdün ve Suriye arasında elektrik iletim bağlantısı kurulmasına yönelik mega proje üzerinde görüşmeler yürüttüklerini belirterek, bölgesel enerji işbirliğinin geliştirilmesinin hedeflendiğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 12 Ekim 2026, 14:20</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiye-suudi-arabistan-urdun-ve-suriye-arasinda-mega-elektrik-projesi-959900.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cop31 dünya basınında çevre, şehircilik ve i̇klim değişikliği bakanlığı, cop31 başkanı ve çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum&#x27;un birleşmiş milletler&#x27;de cop31 eylem gündemi&#x27;ni açıklaması ve fiji&#x27;deki pre-cop etkinliklerine başkanlık etmesinin ardından uluslararası basının cop31&#x27;e ilgisinin daha da arttığını vurguladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 12 Ekim 2026, 14:19</span>
+        </div>
+        <h3>COP31 dünya basınında</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı, COP31 Başkanı ve Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum&#x27;un Birleşmiş Milletler&#x27;de COP31 Eylem Gündemi&#x27;ni açıklaması ve Fiji&#x27;deki Pre-COP etkinliklerine başkanlık etmesinin ardından uluslararası basının COP31&#x27;e ilgisinin daha da arttığını vurguladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 12 Ekim 2026, 14:19</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cop31-dunya-basininda-959899.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan: gıda israfının arttığı bir dünyada ne barıştan, ne huzurdan ne de refahtan bahsedebiliriz cumhurbaşkanı erdoğan, bir yanda kuru ekmek bulamayan milyonların yaşam mücadelesine tanık olunurken diğer yanda gıda israfının arttığı bir dünyada barıştan, huzurdan ve refahtan bahsedilemeyeceğini belirtti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 12 Ekim 2026, 15:10</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan: Gıda israfının arttığı bir dünyada ne barıştan, ne huzurdan ne de refahtan bahsedebiliriz</h3>
+        <p>Cumhurbaşkanı Erdoğan, bir yanda kuru ekmek bulamayan milyonların yaşam mücadelesine tanık olunurken diğer yanda gıda israfının arttığı bir dünyada barıştan, huzurdan ve refahtan bahsedilemeyeceğini belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 12 Ekim 2026, 15:10</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-gida-israfinin-arttigi-bir-dunyada-ne-baristan-ne-huzurdan-ne-de-refahtan-bahsedebiliriz/4086102" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cop31 dünya basınının gündeminde cop31 başkanı ve çevre, şehircilik ve i̇klim değişikliği bakanı kurum&#x27;un bm&#x27;de cop31 eylem gündemi&#x27;ni açıklaması ve fiji&#x27;deki pre-cop etkinliklerine başkanlık etmesinin ardından uluslararası basının cop31&#x27;e ilgisi daha da arttı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 12 Ekim 2026, 14:33</span>
+        </div>
+        <h3>COP31 dünya basınının gündeminde</h3>
+        <p>COP31 Başkanı ve Çevre, Şehircilik ve İklim Değişikliği Bakanı Kurum&#x27;un BM&#x27;de COP31 Eylem Gündemi&#x27;ni açıklaması ve Fiji&#x27;deki Pre-COP etkinliklerine başkanlık etmesinin ardından uluslararası basının COP31&#x27;e ilgisi daha da arttı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 12 Ekim 2026, 14:33</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cop31-dunya-basininin-gundeminde/4086062" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çocukluk çağında kanser nasıl belirtiler gösteriyor? nadir görülmesine rağmen, kanser i̇ngiltere&#x27;de 15 yaş altı çocuklarda hastalık kaynaklı ölümlerin başlıca nedeni ancak ebeveynlerin yalnızca üçte birinden azı belirtiler konusunda bilinçli olduklarını söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 12 Ekim 2026, 12:43</span>
+        </div>
+        <h3>Çocukluk çağında kanser nasıl belirtiler gösteriyor?</h3>
+        <p>Nadir görülmesine rağmen, kanser İngiltere&#x27;de 15 yaş altı çocuklarda hastalık kaynaklı ölümlerin başlıca nedeni ancak ebeveynlerin yalnızca üçte birinden azı belirtiler konusunda bilinçli olduklarını söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Ekim 2026, 12:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmwyvgr44zl0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sözcü editörü mustafa balcı ve gazeteci şaban sevinç tutuklandı, ağırel ve saymaz&#x27;a ev hapsi kamu görevlilerinin tasfiye sürecindeki fonlardan haksız kazanç elde ettiği iddialarını haberleştiren dört gazeteci hakkında soruşturma başlatıldı. sözcü gazetesi editörü mustafa balcı ve gazeteci şaban sevinç tutuklandı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 10 Ekim 2026, 11:03</span>
+        </div>
+        <h3>Sözcü editörü Mustafa Balcı ve gazeteci Şaban Sevinç tutuklandı, Ağırel ve Saymaz&#x27;a ev hapsi</h3>
+        <p>Kamu görevlilerinin tasfiye sürecindeki fonlardan haksız kazanç elde ettiği iddialarını haberleştiren dört gazeteci hakkında soruşturma başlatıldı. Sözcü gazetesi editörü Mustafa Balcı ve gazeteci Şaban Sevinç tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Ekim 2026, 11:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwvg0e409xp3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanlığı kabinesi toplandı cumhurbaşkanlığı kabinesi, cumhurbaşkanı recep tayyip erdoğan başkanlığında toplandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 12 Ekim 2026, 14:52</span>
+        </div>
+        <h3>Cumhurbaşkanlığı Kabinesi toplandı</h3>
+        <p>Cumhurbaşkanlığı Kabinesi, Cumhurbaşkanı Recep Tayyip Erdoğan başkanlığında toplandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 12 Ekim 2026, 14:52</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskanligi-kabinesi-toplandi-959905.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tbmm başkanı kurtulmuş: önümüze barışın, kardeşliğin ve kalkınmanın kapısı açılmıştır tbmm başkanı numan kurtulmuş, terörsüz türkiye süreciyle ilgili, &quot;rapor kapının aralanmasıydı; yasa ise kapının sona kadar açılmasıdır. önümüze yeni bir kapı açılmıştır. bu kapı barışın, kardeşliğin, beraberliğin, beraberliğin ve bütün ülkelerin halklarıyla beraber kalkınmanın kapısıdır ve inşallah bu yolda sonuna kadar yürüyeceğiz&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 12 Ekim 2026, 14:06</span>
+        </div>
+        <h3>TBMM Başkanı Kurtulmuş: Önümüze barışın, kardeşliğin ve kalkınmanın kapısı açılmıştır</h3>
+        <p>TBMM Başkanı Numan Kurtulmuş, Terörsüz Türkiye süreciyle ilgili, &quot;Rapor kapının aralanmasıydı; yasa ise kapının sona kadar açılmasıdır. Önümüze yeni bir kapı açılmıştır. Bu kapı barışın, kardeşliğin, beraberliğin, beraberliğin ve bütün ülkelerin halklarıyla beraber kalkınmanın kapısıdır ve inşallah bu yolda sonuna kadar yürüyeceğiz&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 12 Ekim 2026, 14:06</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/tbmm-baskani-kurtulmus-onumuze-barisin-kardesligin-ve-kalkinmanin-kapisi-acilmistir-959898.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="suriye, mekke i̇ttifakı&#x27;na katılabilir mi? suriye&#x27;de bir medya kuruluşu, ülkenin husilerle süren çatışmada suudi arabistan&#x27;a destek verme ihtimalini değerlendirdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 12 Ekim 2026, 12:55</span>
+        </div>
+        <h3>Suriye, Mekke İttifakı&#x27;na katılabilir mi?</h3>
+        <p>Suriye&#x27;de bir medya kuruluşu, ülkenin Husilerle süren çatışmada Suudi Arabistan&#x27;a destek verme ihtimalini değerlendirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Ekim 2026, 12:55</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cme8ryl0432yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da suç örgütlerine operasyon: 175 tutuklama i̇stanbul&#x27;da suç örgütlerine yönelik son 1 ayda düzenlenen operasyonlarda gözaltına alınan 289 şüpheliden 175&#x27;i tutuklandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 12 Ekim 2026, 14:38</span>
+        </div>
+        <h3>İstanbul&#x27;da suç örgütlerine operasyon: 175 tutuklama</h3>
+        <p>İstanbul&#x27;da suç örgütlerine yönelik son 1 ayda düzenlenen operasyonlarda gözaltına alınan 289 şüpheliden 175&#x27;i tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 12 Ekim 2026, 14:38</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-suc-orgutlerine-operasyon-175-tutuklama-959903.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="görev sırasında şehit olan askerimiz son yolculuğuna uğurlandı ankara&#x27;da görev sırasında rahatsızlanan ve kaldırıldığı hastanede şehit olan piyade uzman çavuş yusuf güneş&#x27;in cenazesi, memleketi kahramanmaraş&#x27;ta toprağa verildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 12 Ekim 2026, 14:24</span>
+        </div>
+        <h3>Görev sırasında şehit olan askerimiz son yolculuğuna uğurlandı</h3>
+        <p>Ankara&#x27;da görev sırasında rahatsızlanan ve kaldırıldığı hastanede şehit olan Piyade Uzman Çavuş Yusuf Güneş&#x27;in cenazesi, memleketi Kahramanmaraş&#x27;ta toprağa verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 12 Ekim 2026, 14:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/gorev-sirasinda-sehit-olan-askerimiz-son-yolculuguna-ugurlandi-959902.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="pkk irak&#x27;ın kuzeyindeki 4 kampı boşalttı güvenlik kaynakları, terör örgütü pkk/kck&#x27;nın irak&#x27;ın kuzeyindeki metina&#x27;nın baze bölgesinde bulunan 4 barınma alanını boşalttığını belirtti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 12 Ekim 2026, 14:02</span>
+        </div>
+        <h3>PKK Irak&#x27;ın kuzeyindeki 4 kampı boşalttı</h3>
+        <p>Güvenlik kaynakları, terör örgütü PKK/KCK&#x27;nın Irak&#x27;ın kuzeyindeki Metina&#x27;nın Baze bölgesinde bulunan 4 barınma alanını boşalttığını belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 12 Ekim 2026, 14:02</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/pkk-irakin-kuzeyindeki-4-kampi-bosaltti-959897.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mardin’de toz taşınımı etkili oldu mardin&#x27;de toz taşınımı hayatı olumsuz etkiledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 12 Ekim 2026, 14:43</span>
+        </div>
+        <h3>Mardin’de toz taşınımı etkili oldu</h3>
+        <p>Mardin&#x27;de toz taşınımı hayatı olumsuz etkiledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 12 Ekim 2026, 14:43</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mardin-de-toz-tasinimi-etkili-oldu/4086073" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da suç örgütlerine yönelik operasyonlarda 175 zanlı tutuklandı i̇stanbul&#x27;da suç örgütlerine yönelik son 1 ayda düzenlenen operasyonlarda gözaltına alınan 289 şüpheliden 175&#x27;i tutuklandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 12 Ekim 2026, 14:36</span>
+        </div>
+        <h3>İstanbul&#x27;da suç örgütlerine yönelik operasyonlarda 175 zanlı tutuklandı</h3>
+        <p>İstanbul&#x27;da suç örgütlerine yönelik son 1 ayda düzenlenen operasyonlarda gözaltına alınan 289 şüpheliden 175&#x27;i tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 12 Ekim 2026, 14:36</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-suc-orgutlerine-yonelik-operasyonlarda-175-zanli-tutuklandi/4086064" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="görev sırasında şehit olan uzman çavuş kahramanmaraş&#x27;ta son yolculuğuna uğurlandı ankara&#x27;da görev sırasında rahatsızlanan ve kaldırıldığı hastanede şehit olan piyade uzman çavuş yusuf güneş&#x27;in cenazesi, memleketi kahramanmaraş&#x27;ta toprağa verildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 12 Ekim 2026, 14:16</span>
+        </div>
+        <h3>Görev sırasında şehit olan uzman çavuş Kahramanmaraş&#x27;ta son yolculuğuna uğurlandı</h3>
+        <p>Ankara&#x27;da görev sırasında rahatsızlanan ve kaldırıldığı hastanede şehit olan Piyade Uzman Çavuş Yusuf Güneş&#x27;in cenazesi, memleketi Kahramanmaraş&#x27;ta toprağa verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 12 Ekim 2026, 14:16</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/gorev-sirasinda-sehit-olan-uzman-cavus-kahramanmarasta-son-yolculuguna-ugurlandi/4086044" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="üsküdar&#x27;daki &quot;filistin dayanışma günleri&quot;nin son gününde çeşitli etkinlikler düzenlendi gazze&#x27;de yaşananlara dikkati çekmek amacıyla üsküdar&#x27;da düzenlenen &quot;filistin dayanışma günleri&quot;nin son gününde çeşitli etkinlikler yapıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 12 Ekim 2026, 14:23</span>
+        </div>
+        <h3>Üsküdar&#x27;daki &quot;Filistin Dayanışma Günleri&quot;nin son gününde çeşitli etkinlikler düzenlendi</h3>
+        <p>Gazze&#x27;de yaşananlara dikkati çekmek amacıyla Üsküdar&#x27;da düzenlenen &quot;Filistin Dayanışma Günleri&quot;nin son gününde çeşitli etkinlikler yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 12 Ekim 2026, 14:23</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/uskudardaki-filistin-dayanisma-gunlerinin-son-gununde-cesitli-etkinlikler-duzenlendi/4086048" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bayburt&#x27;ta yüksek kesimlere kar yağdı bayburt&#x27;ta 3 bin metrenin üzerindeki dağların zirveleri, kar yağışının ardından beyaza büründü. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 12 Ekim 2026, 13:53</span>
+        </div>
+        <h3>Bayburt&#x27;ta yüksek kesimlere kar yağdı</h3>
+        <p>Bayburt&#x27;ta 3 bin metrenin üzerindeki dağların zirveleri, kar yağışının ardından beyaza büründü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 12 Ekim 2026, 13:53</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bayburtta-yuksek-kesimlere-kar-yagdi/4086008" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="terör örgütü pkk/kck irak&#x27;ın kuzeyindeki metina&#x27;da 4 barınma alanını boşalttı güvenlik kaynakları, terör örgütü pkk/kck&#x27;nın irak&#x27;ın kuzeyindeki metina&#x27;nın baze bölgesinde bulunan 4 barınma alanını 8 ekim&#x27;de boşalttığını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 12 Ekim 2026, 14:02</span>
+        </div>
+        <h3>Terör örgütü PKK/KCK Irak&#x27;ın kuzeyindeki Metina&#x27;da 4 barınma alanını boşalttı</h3>
+        <p>Güvenlik kaynakları, terör örgütü PKK/KCK&#x27;nın Irak&#x27;ın kuzeyindeki Metina&#x27;nın Baze bölgesinde bulunan 4 barınma alanını 8 Ekim&#x27;de boşalttığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 12 Ekim 2026, 14:02</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/teror-orgutu-pkk-kck-irakin-kuzeyindeki-metinada-4-barinma-alanini-bosaltti/4086021" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mersin&#x27;de sağanak su baskınlarına neden oldu mersin&#x27;in silifke ve akdeniz ilçelerinde etkili olan sağanak nedeniyle bazı ev ve iş yerlerini su bastı, sürücüler yollarda mahsur kaldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 12 Ekim 2026, 13:18</span>
+        </div>
+        <h3>Mersin&#x27;de sağanak su baskınlarına neden oldu</h3>
+        <p>Mersin&#x27;in Silifke ve Akdeniz ilçelerinde etkili olan sağanak nedeniyle bazı ev ve iş yerlerini su bastı, sürücüler yollarda mahsur kaldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 12 Ekim 2026, 13:18</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mersinde-saganak-su-baskinlarina-neden-oldu-/4085968" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
