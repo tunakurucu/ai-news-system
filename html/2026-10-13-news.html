@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">13 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">13 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>gümrük</strong> 2</span><span class="stat-item"><strong>genel</strong> 20</span><span class="stat-item"><strong>dünya</strong> 7</span><span class="stat-item"><strong>teknoloji</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">GÜMRÜK</span>
+        </div>
+        <h3>BBC görüntüledi: Yemen çölünde küresel etkilere sahip bir savaş sürüyor</h3>
+        <p>Yemen&#x27;deki iç savaş artık dünyanın görmezden gelemeyeceği bir hal aldı. Fakat liman kenti Aden&#x27;de yaralılarla dolu hastanelerden bakıldığında jeopolitik hesaplar çok uzaktaymış gibi görünüyor. BBC&#x27;den Orla Guerin&#x27;in haberi.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 13 Ekim 2026, 13:37</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cq98z5wnz4xeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 12 Ekim 2026, 10:49</span>
+            </div>
+            <h3>Cevdet Yılmaz: DDK bütün kurumları inceliyor</h3>
+            <p>Fon skandalı sonrası tasfiye sürecini yönetmek üzere kurulan Fon Koordinasyon Kurulu&#x27;na başkanlık eden Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, ilgili kurumlarla ilgili Devlet Denetleme Kurulu&#x27;nun denetlemesinin sürdüğünü söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cxr5y2jrzjeeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 11 Ekim 2026, 15:51</span>
+            </div>
+            <h3>AKP&#x27;nin fon teklifi Meclis&#x27;te: Düzenleme neler öngörüyor?</h3>
+            <p>Adalet ve Kalkınma Partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini TBMM Başkanlığı&#x27;na sundu. Net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/crz65plggd37o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+            </div>
+            <h3>Akın Gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27;</h3>
+            <p>Adalet Bakanı Akın Gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. Sabah&#x27;ta 9 Ekim&#x27;de yayımlanan habere göre, Gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c5rmy7wkek47o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 13 Ekim 2026, 15:15</span>
+            </div>
+            <h3>Memişoğlu: Sigara düzenlemesinin insanları ifşa etmekle alakası yok</h3>
+            <p>Sağlık Bakanı Memişoğlu, &quot;18 yaş altına sigara satılması yasak. Biz de bununla ilgili kanun taslağımızda bir çalışma yapıyoruz. Bunun kişisel verilerle, insanları ifşa etme ile alakası yok. Dünyada örnekleri olduğu gibi, gelişmiş ülkede olduğu gibi insanlarımıza satarken özellikle gençlerimize yaşını soracağız.&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/saglik/memisoglu-sigara-duzenlemesinin-insanlari-ifsa-etmekle-alakasi-yok-960006.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bbc görüntüledi: yemen çölünde küresel etkilere sahip bir savaş sürüyor yemen&#x27;deki iç savaş artık dünyanın görmezden gelemeyeceği bir hal aldı. fakat liman kenti aden&#x27;de yaralılarla dolu hastanelerden bakıldığında jeopolitik hesaplar çok uzaktaymış gibi görünüyor. bbc&#x27;den orla guerin&#x27;in haberi. gümrük bbc türkçe" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">BBC Türkçe · 13 Ekim 2026, 13:37</span>
+        </div>
+        <h3>BBC görüntüledi: Yemen çölünde küresel etkilere sahip bir savaş sürüyor</h3>
+        <p>Yemen&#x27;deki iç savaş artık dünyanın görmezden gelemeyeceği bir hal aldı. Fakat liman kenti Aden&#x27;de yaralılarla dolu hastanelerden bakıldığında jeopolitik hesaplar çok uzaktaymış gibi görünüyor. BBC&#x27;den Orla Guerin&#x27;in haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Ekim 2026, 13:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq98z5wnz4xeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nürnberg havalimanı acil durum nedeniyle uçuşlara kapatıldı almanya&#x27;da nürnberg havalimanı&#x27;nın acil durum nedeniyle geçici olarak kapatıldığı bildirildi. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 13 Ekim 2026, 14:14</span>
+        </div>
+        <h3>Nürnberg Havalimanı acil durum nedeniyle uçuşlara kapatıldı</h3>
+        <p>Almanya&#x27;da Nürnberg Havalimanı&#x27;nın acil durum nedeniyle geçici olarak kapatıldığı bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Ekim 2026, 14:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/nurnberg-havalimani-acil-durum-nedeniyle-ucuslara-kapatildi-960000.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">20 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cevdet yılmaz: ddk bütün kurumları inceliyor fon skandalı sonrası tasfiye sürecini yönetmek üzere kurulan fon koordinasyon kurulu&#x27;na başkanlık eden cumhurbaşkanı yardımcısı cevdet yılmaz, ilgili kurumlarla ilgili devlet denetleme kurulu&#x27;nun denetlemesinin sürdüğünü söyledi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 12 Ekim 2026, 10:49</span>
+        </div>
+        <h3>Cevdet Yılmaz: DDK bütün kurumları inceliyor</h3>
+        <p>Fon skandalı sonrası tasfiye sürecini yönetmek üzere kurulan Fon Koordinasyon Kurulu&#x27;na başkanlık eden Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, ilgili kurumlarla ilgili Devlet Denetleme Kurulu&#x27;nun denetlemesinin sürdüğünü söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Ekim 2026, 10:49</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cxr5y2jrzjeeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="memişoğlu: sigara düzenlemesinin insanları ifşa etmekle alakası yok sağlık bakanı memişoğlu, &quot;18 yaş altına sigara satılması yasak. biz de bununla ilgili kanun taslağımızda bir çalışma yapıyoruz. bunun kişisel verilerle, insanları ifşa etme ile alakası yok. dünyada örnekleri olduğu gibi, gelişmiş ülkede olduğu gibi insanlarımıza satarken özellikle gençlerimize yaşını soracağız.&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 13 Ekim 2026, 15:15</span>
+        </div>
+        <h3>Memişoğlu: Sigara düzenlemesinin insanları ifşa etmekle alakası yok</h3>
+        <p>Sağlık Bakanı Memişoğlu, &quot;18 yaş altına sigara satılması yasak. Biz de bununla ilgili kanun taslağımızda bir çalışma yapıyoruz. Bunun kişisel verilerle, insanları ifşa etme ile alakası yok. Dünyada örnekleri olduğu gibi, gelişmiş ülkede olduğu gibi insanlarımıza satarken özellikle gençlerimize yaşını soracağız.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Ekim 2026, 15:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/saglik/memisoglu-sigara-duzenlemesinin-insanlari-ifsa-etmekle-alakasi-yok-960006.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ak parti genel başkan yardımcısı zorlu: fon soruşturması konusunu kısa süre sonra tümüyle çözdüğümüzü göreceksiniz ak parti genel başkan yardımcısı zorlu, fon soruşturmasına ilişkin, &quot;milletimiz bize güvensin. cumhurbaşkanımız olaya tam hakimdir ve gelişmeleri çok yakından takip etmiştir. bu konuyu çok kısa bir süre sonra tümüyle çözdüğümüzü göreceksiniz.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Ekim 2026, 14:39</span>
+        </div>
+        <h3>AK Parti Genel Başkan Yardımcısı Zorlu: Fon soruşturması konusunu kısa süre sonra tümüyle çözdüğümüzü göreceksiniz</h3>
+        <p>AK Parti Genel Başkan Yardımcısı Zorlu, fon soruşturmasına ilişkin, &quot;Milletimiz bize güvensin. Cumhurbaşkanımız olaya tam hakimdir ve gelişmeleri çok yakından takip etmiştir. Bu konuyu çok kısa bir süre sonra tümüyle çözdüğümüzü göreceksiniz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Ekim 2026, 14:39</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ak-parti-genel-baskan-yardimcisi-zorlu-fon-sorusturmasi-konusunu-kisa-sure-sonra-tumuyle-cozdugumuzu-goreceksiniz/4087221" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="erzurum-rize yolu&#x27;ndaki 3 bin 105 metrelik dallıkavak tüneli 16 ekim&#x27;de hizmete açılacak ulaştırma ve altyapı bakanı uraloğlu, erzurum-rize yolu&#x27;nda yapımı tamamlanan 3 bin 105 metre uzunluğundaki çift tüplü dallıkavak tüneli ile birlikte toplam 9 kilometrelik kesimin 16 ekim cuma günü hizmete açılacağını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Ekim 2026, 13:47</span>
+        </div>
+        <h3>Erzurum-Rize Yolu&#x27;ndaki 3 bin 105 metrelik Dallıkavak Tüneli 16 Ekim&#x27;de hizmete açılacak</h3>
+        <p>Ulaştırma ve Altyapı Bakanı Uraloğlu, Erzurum-Rize Yolu&#x27;nda yapımı tamamlanan 3 bin 105 metre uzunluğundaki çift tüplü Dallıkavak Tüneli ile birlikte toplam 9 kilometrelik kesimin 16 Ekim Cuma günü hizmete açılacağını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Ekim 2026, 13:47</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/erzurum-rize-yolundaki-3-bin-105-metrelik-dallikavak-tuneli-16-ekimde-hizmete-acilacak/4087174" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bahçeli: &#x27;suudi arabistan&#x27;a her türlü askeri destek verilmeli&#x27; milliyetçi hareket partisi genel başkanı devlet bahçeli, tbmm&#x27;deki grup toplantısında husilerin saldırılarını artırdığı suudi arabistan&#x27;a karşı &quot;caydırıcı güç&quot; kullanılmasının seçenekler arasında olabileceğini söyledi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 13 Ekim 2026, 12:13</span>
+        </div>
+        <h3>Bahçeli: &#x27;Suudi Arabistan&#x27;a her türlü askeri destek verilmeli&#x27;</h3>
+        <p>Milliyetçi Hareket Partisi Genel Başkanı Devlet Bahçeli, TBMM&#x27;deki grup toplantısında Husilerin saldırılarını artırdığı Suudi Arabistan&#x27;a karşı &quot;caydırıcı güç&quot; kullanılmasının seçenekler arasında olabileceğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Ekim 2026, 12:13</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqj9kevpyl4ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sözcü editörü mustafa balcı ve gazeteci şaban sevinç tutuklandı, ağırel ve saymaz&#x27;a ev hapsi kamu görevlilerinin tasfiye sürecindeki fonlardan haksız kazanç elde ettiği iddialarını haberleştiren dört gazeteci hakkında soruşturma başlatıldı. sözcü gazetesi editörü mustafa balcı ve gazeteci şaban sevinç tutuklandı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 10 Ekim 2026, 11:03</span>
+        </div>
+        <h3>Sözcü editörü Mustafa Balcı ve gazeteci Şaban Sevinç tutuklandı, Ağırel ve Saymaz&#x27;a ev hapsi</h3>
+        <p>Kamu görevlilerinin tasfiye sürecindeki fonlardan haksız kazanç elde ettiği iddialarını haberleştiren dört gazeteci hakkında soruşturma başlatıldı. Sözcü gazetesi editörü Mustafa Balcı ve gazeteci Şaban Sevinç tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 10 Ekim 2026, 11:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwvg0e409xp3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ak parti&#x27;den zeynel emre, şaban sevinç ve timur soykan&#x27;a tazminat davası ak parti genel sekreteri eyyüp kadir i̇nan, partisine yönelik açıklama ve yayınları nedeniyle yeni parti sözcüsü zeynel emre, gazeteciler şaban sevinç, timur soykan ile birgün tv&#x27;ye manevi tazminat davası açtıklarını açıkladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 13 Ekim 2026, 13:58</span>
+        </div>
+        <h3>AK Parti&#x27;den Zeynel Emre, Şaban Sevinç ve Timur Soykan&#x27;a tazminat davası</h3>
+        <p>AK Parti Genel Sekreteri Eyyüp Kadir İnan, partisine yönelik açıklama ve yayınları nedeniyle Yeni Parti Sözcüsü Zeynel Emre, gazeteciler Şaban Sevinç, Timur Soykan ile BirGün TV&#x27;ye manevi tazminat davası açtıklarını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Ekim 2026, 13:58</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/ak-partiden-zeynel-emre-saban-sevinc-ve-timur-soykana-tazminat-davasi-959998.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan memişoğlu: çocuklarımıza, gençlerimize sigara satışını engellemeye çalışıyoruz sağlık bakanı memişoğlu, &quot;sadece 18 yaş altına sigara satılmasını engelleyecek bir yöntemle insanlarımıza, çocuklarımıza, gençlerimize bu zararlı maddenin satılmasını engellemeye çalışıyoruz.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Ekim 2026, 15:08</span>
+        </div>
+        <h3>Bakan Memişoğlu: Çocuklarımıza, gençlerimize sigara satışını engellemeye çalışıyoruz</h3>
+        <p>Sağlık Bakanı Memişoğlu, &quot;Sadece 18 yaş altına sigara satılmasını engelleyecek bir yöntemle insanlarımıza, çocuklarımıza, gençlerimize bu zararlı maddenin satılmasını engellemeye çalışıyoruz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Ekim 2026, 15:08</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-memisoglu-cocuklarimiza-genclerimize-sigara-satisini-engellemeye-calisiyoruz/4087277" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akkuyu ngs&#x27;de tam kapsamlı tatbikat yapıldı akkuyu nükleer güç santrali (ngs) sahasında planlı olarak tam kapsamlı bir acil durum ve yangın tatbikatı yapıldığı bildirildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Ekim 2026, 12:55</span>
+        </div>
+        <h3>Akkuyu NGS&#x27;de tam kapsamlı tatbikat yapıldı</h3>
+        <p>Akkuyu Nükleer Güç Santrali (NGS) sahasında planlı olarak tam kapsamlı bir acil durum ve yangın tatbikatı yapıldığı bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Ekim 2026, 12:55</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/akkuyu-ngsde-tam-kapsamli-tatbikat-yapildi/4087111" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mersin&#x27;de belediye başkan vekili seçimi yapılıyor mersin büyükşehir belediye başkanı vahap seçer&#x27;in tutuklanmasının ve görevden uzaklaştırılmasının ardından yerine geçecek başkan vekili seçimi yapılıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 13 Ekim 2026, 14:43</span>
+        </div>
+        <h3>Mersin&#x27;de belediye başkan vekili seçimi yapılıyor</h3>
+        <p>Mersin Büyükşehir Belediye Başkanı Vahap Seçer&#x27;in tutuklanmasının ve görevden uzaklaştırılmasının ardından yerine geçecek başkan vekili seçimi yapılıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Ekim 2026, 14:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c8zxzx1nnl6wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="breaking bad dizisinin yıldızı rj mitte 34 yaşında hayatını kaybetti serebral palsiyle yaşayan mitte, emmy ödüllü drama dizisinde walter white jr. rolünü canlandırıyordu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 13 Ekim 2026, 14:03</span>
+        </div>
+        <h3>Breaking Bad dizisinin yıldızı RJ Mitte 34 yaşında hayatını kaybetti</h3>
+        <p>Serebral palsiyle yaşayan Mitte, Emmy ödüllü drama dizisinde Walter White Jr. rolünü canlandırıyordu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Ekim 2026, 14:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm8xz8jezr44o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;de son dönemde artan okul saldırıları bize ne anlatıyor? türkiye&#x27;nin farklı kentlerindeki bazı okullarda bu yıl düzenlenen saldırılarda 10&#x27;dan fazla öğrenci hayatını kaybetti. peki bu saldırılar bize ne anlatıyor? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 13 Ekim 2026, 03:05</span>
+        </div>
+        <h3>Türkiye&#x27;de son dönemde artan okul saldırıları bize ne anlatıyor?</h3>
+        <p>Türkiye&#x27;nin farklı kentlerindeki bazı okullarda bu yıl düzenlenen saldırılarda 10&#x27;dan fazla öğrenci hayatını kaybetti. Peki bu saldırılar bize ne anlatıyor?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Ekim 2026, 03:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c84g17z41dyeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇şgalci i̇srailliler mescidi aksa&#x27;ya baskın düzenledi filistin topraklarını gasbeden 130&#x27;dan fazla i̇srailli, işgal altındaki doğu kudüs&#x27;te yer alan mescid-i aksa&#x27;ya baskın düzenledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 13 Ekim 2026, 14:34</span>
+        </div>
+        <h3>İşgalci İsrailliler Mescidi Aksa&#x27;ya baskın düzenledi</h3>
+        <p>Filistin topraklarını gasbeden 130&#x27;dan fazla İsrailli, işgal altındaki Doğu Kudüs&#x27;te yer alan Mescid-i Aksa&#x27;ya baskın düzenledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Ekim 2026, 14:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/isgalci-israilliler-mescid-i-aksaya-baskin-duzenledi-960005.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="danimarka&#x27;da öğretmenlere fiziksel müdahale yetkisi veren yasa tasarısı hazırlandı danimarka&#x27;da öğretmenlerin belirli koşullarda &quot;sınıf düzenini sağlamak amacıyla fiziksel müdahalede&quot; bulunabilmesini öngören yasa tasarısının hazırlandığı belirtildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 13 Ekim 2026, 15:11</span>
+        </div>
+        <h3>Danimarka&#x27;da öğretmenlere fiziksel müdahale yetkisi veren yasa tasarısı hazırlandı</h3>
+        <p>Danimarka&#x27;da öğretmenlerin belirli koşullarda &quot;sınıf düzenini sağlamak amacıyla fiziksel müdahalede&quot; bulunabilmesini öngören yasa tasarısının hazırlandığı belirtildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Ekim 2026, 15:11</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/danimarkada-ogretmenlere-fiziksel-mudahale-yetkisi-veren-yasa-tasarisi-hazirlandi-960004.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da forex dolandırıcılığında yalan makinesi kullanıldığı ortaya çıktı i̇stanbul&#x27;da uluslararası forex dolandırıcılığına yönelik operasyonda şüphelilerin işe girişlerde ve işten çıkışlarda yalan makinesi kullandığı tespit edildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 13 Ekim 2026, 14:59</span>
+        </div>
+        <h3>İstanbul&#x27;da forex dolandırıcılığında yalan makinesi kullanıldığı ortaya çıktı</h3>
+        <p>İstanbul&#x27;da uluslararası forex dolandırıcılığına yönelik operasyonda şüphelilerin işe girişlerde ve işten çıkışlarda yalan makinesi kullandığı tespit edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Ekim 2026, 14:59</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-forex-dolandiriciliginda-yalan-makinesi-kullanildigi-ortaya-cikti-960002.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="boran-8 uluslararası keskin nişancı yarışması başladı jandarma genel komutanlığınca düzenlenen boran-8 uluslararası keskin nişancı yarışması i̇zmir&#x27;in foça ilçesinde başladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Ekim 2026, 14:45</span>
+        </div>
+        <h3>Boran-8 Uluslararası Keskin Nişancı Yarışması başladı</h3>
+        <p>Jandarma Genel Komutanlığınca düzenlenen Boran-8 Uluslararası Keskin Nişancı Yarışması İzmir&#x27;in Foça ilçesinde başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Ekim 2026, 14:45</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/boran-8-uluslararasi-keskin-nisanci-yarismasi-basladi/4087232" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nusret-2026 tatbikatı seçkin gözlemci günü i̇zmir&#x27;de gerçekleştirildi nusret-2026 tatbikatı seçkin gözlemci günü, foça deniz üs komutanlığında gerçekleştirildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Ekim 2026, 13:00</span>
+        </div>
+        <h3>NUSRET-2026 Tatbikatı seçkin gözlemci günü İzmir&#x27;de gerçekleştirildi</h3>
+        <p>NUSRET-2026 Tatbikatı seçkin gözlemci günü, Foça Deniz Üs Komutanlığında gerçekleştirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Ekim 2026, 13:00</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/nusret-2026-tatbikati-seckin-gozlemci-gunu-izmirde-gerceklestirildi/4087118" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="batman merkezli 13 ilde yasa dışı bahis operasyonunda 102 şüpheli yakalandı batman merkezli 13 ilde yasa dışı bahis suçuna yönelik düzenlenen operasyonlarda 102 şüpheli yakalandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Ekim 2026, 13:08</span>
+        </div>
+        <h3>Batman merkezli 13 ilde yasa dışı bahis operasyonunda 102 şüpheli yakalandı</h3>
+        <p>Batman merkezli 13 ilde yasa dışı bahis suçuna yönelik düzenlenen operasyonlarda 102 şüpheli yakalandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Ekim 2026, 13:08</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/batman-merkezli-13-ilde-yasa-disi-bahis-operasyonunda-102-supheli-yakalandi/4087123" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bahçeli: &#x27;terörsüz türkiye&#x27; adımları en kısa zamanda nihayete erdirilecektir mhp genel başkanı bahçeli, &quot;&#x27;terörsüz türkiye&#x27; adımları ciddiyetle ve samimiyetle atılmaya devam edecek ve en kısa zamanda nihayete erdirilecektir.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Ekim 2026, 12:45</span>
+        </div>
+        <h3>Bahçeli: &#x27;Terörsüz Türkiye&#x27; adımları en kısa zamanda nihayete erdirilecektir</h3>
+        <p>MHP Genel Başkanı Bahçeli, &quot;&#x27;Terörsüz Türkiye&#x27; adımları ciddiyetle ve samimiyetle atılmaya devam edecek ve en kısa zamanda nihayete erdirilecektir.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Ekim 2026, 12:45</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bahceli-terorsuz-turkiye-adimlari-en-kisa-zamanda-nihayete-erdirilecektir/4087100" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="arnavutköy’de bir çocuğun akranlarınca kolonyayla yakılıp yaralandığı iddia edildi arnavutköy’de bir çocuğun akranları tarafından sırtına kolonya dökülüp yakılarak yaralandığı öne sürüldü. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Ekim 2026, 12:31</span>
+        </div>
+        <h3>Arnavutköy’de bir çocuğun akranlarınca kolonyayla yakılıp yaralandığı iddia edildi</h3>
+        <p>Arnavutköy’de bir çocuğun akranları tarafından sırtına kolonya dökülüp yakılarak yaralandığı öne sürüldü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Ekim 2026, 12:31</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/arnavutkoy-de-bir-cocugun-akranlarinca-kolonyayla-yakilip-yaralandigi-iddia-edildi/4087076" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">7 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="akp&#x27;nin fon teklifi meclis&#x27;te: düzenleme neler öngörüyor? adalet ve kalkınma partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini tbmm başkanlığı&#x27;na sundu. net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. ankara&#x27;dan ayşe sayın&#x27;ın haberi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 11 Ekim 2026, 15:51</span>
+        </div>
+        <h3>AKP&#x27;nin fon teklifi Meclis&#x27;te: Düzenleme neler öngörüyor?</h3>
+        <p>Adalet ve Kalkınma Partisi, tasfiye halindeki fon yatırımcılarına yapılacak geri ödemelere ilişkin dokuz maddelik yasa teklifini TBMM Başkanlığı&#x27;na sundu. Net yatırım tutarı 1 milyon liranın altında olan yatırımcılar için bu tutara kadar, net yatırım tutarı 1 milyon ve üzerinde olanlar içinse en fazla 1 milyon lira ara ödeme yapılacak. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 11 Ekim 2026, 15:51</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/crz65plggd37o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="akın gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27; adalet bakanı akın gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. sabah&#x27;ta 9 ekim&#x27;de yayımlanan habere göre, gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+        </div>
+        <h3>Akın Gürlek: &#x27;214 kişi üç fondan yaklaşık 188 milyar lira kar elde etti&#x27;</h3>
+        <p>Adalet Bakanı Akın Gürlek, tasfiye edilen fonlardan 100 milyon liranın üzerinde kazanç sağlayan 214 kişinin tespit edildiğini açıkladı. Sabah&#x27;ta 9 Ekim&#x27;de yayımlanan habere göre, Gürlek gazeteye yaptığı açıklamada, bu kişilerin 141&#x27;inin gerçek, 73&#x27;ünün tüzel kişi olduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 9 Ekim 2026, 14:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5rmy7wkek47o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="2026 yılı çeltik alım fiyatları belli oldu toprak mahsulleri ofisi (tmo), çeltik alım fiyatını baldo grubu için ton başına 45 bin lira, cammeo grubu için 43 bin lira, osmancık grubu için 38 bin lira ve diğer çeşitler için 32 bin lira olarak tespit etti. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 13 Ekim 2026, 13:52</span>
+        </div>
+        <h3>2026 yılı çeltik alım fiyatları belli oldu</h3>
+        <p>Toprak Mahsulleri Ofisi (TMO), çeltik alım fiyatını baldo grubu için ton başına 45 bin lira, cammeo grubu için 43 bin lira, Osmancık grubu için 38 bin lira ve diğer çeşitler için 32 bin lira olarak tespit etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Ekim 2026, 13:52</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/2026-yili-celtik-alim-fiyatlari-belli-oldu-959997.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;de somali doğumlu kongre üyesi ilhan omar, evindeki arama için trump&#x27;ı suçladı trump&#x27;ı sert bir şekilde eleştiren omar, aramanın &quot;siyasi düşmanları hedef alma girişimi&quot; olduğunu ve &quot;susturulmayacağını&quot; söyledi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 13 Ekim 2026, 09:36</span>
+        </div>
+        <h3>ABD&#x27;de Somali doğumlu Kongre üyesi Ilhan Omar, evindeki arama için Trump&#x27;ı suçladı</h3>
+        <p>Trump&#x27;ı sert bir şekilde eleştiren Omar, aramanın &quot;siyasi düşmanları hedef alma girişimi&quot; olduğunu ve &quot;susturulmayacağını&quot; söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Ekim 2026, 09:36</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvlydww9n07jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="papa 14. leo hastaneye yatırıldı vatikan devlet başkanı papa 14. leo, akciğerinde tespit edilen kitle (nodül) nedeniyle bugün geçireceği operasyon için hastaneye yatırıldı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 13 Ekim 2026, 15:15</span>
+        </div>
+        <h3>Papa 14. Leo hastaneye yatırıldı</h3>
+        <p>Vatikan Devlet Başkanı Papa 14. Leo, akciğerinde tespit edilen kitle (nodül) nedeniyle bugün geçireceği operasyon için hastaneye yatırıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Ekim 2026, 15:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/papa-14-leo-hastaneye-yatirildi-960007.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kremlin: ab yaptırımları abd ile yakıt anlaşmasını engelleyebilir kremlin, ab&#x27;nin rusya’ya yönelik olası yeni yaptırımlarının moskova ile washington arasındaki dizel yakıt satış anlaşmasının uygulanmasına engel teşkil edebileceğini açıkladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 13 Ekim 2026, 14:06</span>
+        </div>
+        <h3>Kremlin: AB yaptırımları ABD ile yakıt anlaşmasını engelleyebilir</h3>
+        <p>Kremlin, AB&#x27;nin Rusya’ya yönelik olası yeni yaptırımlarının Moskova ile Washington arasındaki dizel yakıt satış anlaşmasının uygulanmasına engel teşkil edebileceğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Ekim 2026, 14:06</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/kremlin-ab-yaptirimlari-abd-ile-yakit-anlasmasini-engelleyebilir-959999.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bazı iller için kuvvetli fırtına ve sağanak uyarısı i̇stanbul geneli için şiddetli fırtına ve sağanak, muğla, antalya, aydın ve denizli çevreleri ile isparta ve burdur&#x27;un güneyi için de gök gürültülü sağanak uyarısında bulunuldu. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 13 Ekim 2026, 13:20</span>
+        </div>
+        <h3>Bazı iller için kuvvetli fırtına ve sağanak uyarısı</h3>
+        <p>İstanbul geneli için şiddetli fırtına ve sağanak, Muğla, Antalya, Aydın ve Denizli çevreleri ile Isparta ve Burdur&#x27;un güneyi için de gök gürültülü sağanak uyarısında bulunuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 13 Ekim 2026, 13:20</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bazi-iller-icin-kuvvetli-firtina-ve-saganak-uyarisi/4087147" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="anthropic&#x27;in yapay zekası sahte cinayet ihbarında bulundu beyaz saray bünyesinde yeni kurulan süper zeka gücü, anthropic&#x27;e ait bir yapay zeka modelinin polise sahte cinayet ihbarında bulunmasının ardından teknoloji şirketlerine bildirim zorunluluğu getirdi. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 13 Ekim 2026, 14:37</span>
+        </div>
+        <h3>Anthropic&#x27;in yapay zekası sahte cinayet ihbarında bulundu</h3>
+        <p>Beyaz Saray bünyesinde yeni kurulan Süper Zeka Gücü, Anthropic&#x27;e ait bir yapay zeka modelinin polise sahte cinayet ihbarında bulunmasının ardından teknoloji şirketlerine bildirim zorunluluğu getirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 13 Ekim 2026, 14:37</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/anthropicin-yapay-zekasi-sahte-cinayet-ihbarinda-bulundu-960001.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
