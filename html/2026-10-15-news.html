@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">15 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">15 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 8</span><span class="stat-item"><strong>gümrük</strong> 3</span><span class="stat-item"><strong>genel</strong> 17</span><span class="stat-item"><strong>ekonomi</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>AB Liderler Zirvesi başladı</h3>
+        <p>Avrupa Birliği (AB) üyesi ülkelerin liderlerini bütçe, enerji fiyatları, Rusya-Ukrayna Savaşı, Orta Doğu&#x27;daki gelişmeler ile genişleme süreci ve göç gibi konuları ele almak üzere iki günlüğüne Brüksel&#x27;de bir araya getiren AB Liderler Zirvesi başladı.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 15 Ekim 2026, 12:09</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/ab-liderler-zirvesi-basladi-960172.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 14 Ekim 2026, 16:17</span>
+            </div>
+            <h3>Başörtüsü protestoları Aliyev hükümeti için tehdit mi?</h3>
+            <p>Cumhurbaşkanı İlham Aliyev&#x27;in hükümeti, başörtüsü nedeniyle düzenlenen protestolar karşısında zor bir tercih ile karşı karşıya. Geri adım atmak, yetkililerin baskıya boyun eğdiği şeklinde görülebilir; sert bir tutum ise dini özgürlüklere yönelik hoşnutsuzluğu derinleştirebilir.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmzxl14edpk7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 15 Ekim 2026, 11:53</span>
+            </div>
+            <h3>Gazze&#x27;deki Sağlık Bakanlığı: İşgalci İsrail iki haftadır hastaların tıbbi tahliyesini engelliyor</h3>
+            <p>İsrail, 21 binden fazla kişinin tıbbi tahliye beklediği ve 2 binden fazla kişinin de bu süreçte can verdiği Gazze Şeridi&#x27;nde, ikinci haftada da hasta ve yaralıların tedavi için bölge dışına çıkmasını engellemeyi sürdürüyor.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/gazzedeki-saglik-bakanligi-isgalci-israil-iki-haftadir-hastalarin-tibbi-tahliyesini-engelliyor-960170.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GÜMRÜK</span>
+                <span class="source">BBC Türkçe · 13 Ekim 2026, 13:37</span>
+            </div>
+            <h3>BBC görüntüledi: Yemen çölünde küresel etkilere sahip bir savaş sürüyor</h3>
+            <p>Yemen&#x27;deki iç savaş artık dünyanın görmezden gelemeyeceği bir hal aldı. Fakat liman kenti Aden&#x27;de yaralılarla dolu hastanelerden bakıldığında jeopolitik hesaplar çok uzaktaymış gibi görünüyor. BBC&#x27;den Orla Guerin&#x27;in haberi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cq98z5wnz4xeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 14 Ekim 2026, 19:28</span>
+            </div>
+            <h3>Fon soruşturmasında eski SPK Başkanı Gönül için soruşturma izni verildi</h3>
+            <p>Türkiye&#x27;de büyük yankıya neden olan fon kriziyle ilgili soruşturmada İstanbul Cumhuriyet Başsavcılığı&#x27;nın SPK Başkanı İbrahim Ömer Gönül için istediği soruşturma izni verildi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ck5ywrewe8dxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">8 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="ab liderler zirvesi başladı avrupa birliği (ab) üyesi ülkelerin liderlerini bütçe, enerji fiyatları, rusya-ukrayna savaşı, orta doğu&#x27;daki gelişmeler ile genişleme süreci ve göç gibi konuları ele almak üzere iki günlüğüne brüksel&#x27;de bir araya getiren ab liderler zirvesi başladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 15 Ekim 2026, 12:09</span>
+        </div>
+        <h3>AB Liderler Zirvesi başladı</h3>
+        <p>Avrupa Birliği (AB) üyesi ülkelerin liderlerini bütçe, enerji fiyatları, Rusya-Ukrayna Savaşı, Orta Doğu&#x27;daki gelişmeler ile genişleme süreci ve göç gibi konuları ele almak üzere iki günlüğüne Brüksel&#x27;de bir araya getiren AB Liderler Zirvesi başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Ekim 2026, 12:09</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ab-liderler-zirvesi-basladi-960172.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="başörtüsü protestoları aliyev hükümeti için tehdit mi? cumhurbaşkanı i̇lham aliyev&#x27;in hükümeti, başörtüsü nedeniyle düzenlenen protestolar karşısında zor bir tercih ile karşı karşıya. geri adım atmak, yetkililerin baskıya boyun eğdiği şeklinde görülebilir; sert bir tutum ise dini özgürlüklere yönelik hoşnutsuzluğu derinleştirebilir. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 14 Ekim 2026, 16:17</span>
+        </div>
+        <h3>Başörtüsü protestoları Aliyev hükümeti için tehdit mi?</h3>
+        <p>Cumhurbaşkanı İlham Aliyev&#x27;in hükümeti, başörtüsü nedeniyle düzenlenen protestolar karşısında zor bir tercih ile karşı karşıya. Geri adım atmak, yetkililerin baskıya boyun eğdiği şeklinde görülebilir; sert bir tutum ise dini özgürlüklere yönelik hoşnutsuzluğu derinleştirebilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 14 Ekim 2026, 16:17</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmzxl14edpk7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gazze&#x27;deki sağlık bakanlığı: i̇şgalci i̇srail iki haftadır hastaların tıbbi tahliyesini engelliyor i̇srail, 21 binden fazla kişinin tıbbi tahliye beklediği ve 2 binden fazla kişinin de bu süreçte can verdiği gazze şeridi&#x27;nde, ikinci haftada da hasta ve yaralıların tedavi için bölge dışına çıkmasını engellemeyi sürdürüyor. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 15 Ekim 2026, 11:53</span>
+        </div>
+        <h3>Gazze&#x27;deki Sağlık Bakanlığı: İşgalci İsrail iki haftadır hastaların tıbbi tahliyesini engelliyor</h3>
+        <p>İsrail, 21 binden fazla kişinin tıbbi tahliye beklediği ve 2 binden fazla kişinin de bu süreçte can verdiği Gazze Şeridi&#x27;nde, ikinci haftada da hasta ve yaralıların tedavi için bölge dışına çıkmasını engellemeyi sürdürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Ekim 2026, 11:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/gazzedeki-saglik-bakanligi-isgalci-israil-iki-haftadir-hastalarin-tibbi-tahliyesini-engelliyor-960170.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon soruşturmasında eski spk başkanı gönül için soruşturma izni verildi türkiye&#x27;de büyük yankıya neden olan fon kriziyle ilgili soruşturmada i̇stanbul cumhuriyet başsavcılığı&#x27;nın spk başkanı i̇brahim ömer gönül için istediği soruşturma izni verildi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 14 Ekim 2026, 19:28</span>
+        </div>
+        <h3>Fon soruşturmasında eski SPK Başkanı Gönül için soruşturma izni verildi</h3>
+        <p>Türkiye&#x27;de büyük yankıya neden olan fon kriziyle ilgili soruşturmada İstanbul Cumhuriyet Başsavcılığı&#x27;nın SPK Başkanı İbrahim Ömer Gönül için istediği soruşturma izni verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 14 Ekim 2026, 19:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck5ywrewe8dxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ş arkadaşının yemeğine salyangoz zehri kattı avustralya&#x27;da bir kadın, iş arkadaşının körili yemeğine salyangoz zehri kattığı iddiasıyla suçlandı. batı avustralya eyaleti polisi, mağdurun şubat ayında iş arkadaşları için bir yemek yaptığını ve bunu sabah molasında paylaştıklarını söyledi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 15 Ekim 2026, 12:14</span>
+        </div>
+        <h3>İş arkadaşının yemeğine salyangoz zehri kattı</h3>
+        <p>Avustralya&#x27;da bir kadın, iş arkadaşının körili yemeğine salyangoz zehri kattığı iddiasıyla suçlandı. Batı Avustralya eyaleti polisi, mağdurun şubat ayında iş arkadaşları için bir yemek yaptığını ve bunu sabah molasında paylaştıklarını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Ekim 2026, 12:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/is-arkadasinin-yemegine-salyangoz-zehri-katti-960173.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tbmm kadın erkek fırsat eşitliği komisyonundan şiddet mağduru kadının &quot;can güvenliği&quot; endişesine hızlı çözüm tbmm kadın erkek fırsat eşitliği komisyonu, şiddet mağduru bir kadının &quot;failin elektronik kelepçesinde arıza tespit edildi, can güvenliğim için kısa sürede yeni kelepçe temin edilmesi gerekiyor&quot; başvurusunu kısa sürede çözüme kavuşturdu. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Ekim 2026, 11:02</span>
+        </div>
+        <h3>TBMM Kadın Erkek Fırsat Eşitliği Komisyonundan şiddet mağduru kadının &quot;can güvenliği&quot; endişesine hızlı çözüm</h3>
+        <p>TBMM Kadın Erkek Fırsat Eşitliği Komisyonu, şiddet mağduru bir kadının &quot;failin elektronik kelepçesinde arıza tespit edildi, can güvenliğim için kısa sürede yeni kelepçe temin edilmesi gerekiyor&quot; başvurusunu kısa sürede çözüme kavuşturdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Ekim 2026, 11:02</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tbmm-kadin-erkek-firsat-esitligi-komisyonundan-siddet-magduru-kadinin-can-guvenligi-endisesine-hizli-cozum/4089339" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trump: erdoğan husiler konusunda &#x27;istediğimi yapacaktır&#x27; donald trump, suudi arabistan&#x27;ı desteklemek üzere, yemen&#x27;e olası bir askeri müdahaleye türkiye&#x27;nin de katılmasını isteyebileceğini söyledi. abd başkanı, 13 ekim&#x27;de alaska&#x27;da katılacağı bir mitingine doğru yola çıkmadan önce beyaz saray&#x27;ın önünde basından gelen soruları yanıtladı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 13 Ekim 2026, 22:47</span>
+        </div>
+        <h3>Trump: Erdoğan Husiler konusunda &#x27;istediğimi yapacaktır&#x27;</h3>
+        <p>Donald Trump, Suudi Arabistan&#x27;ı desteklemek üzere, Yemen&#x27;e olası bir askeri müdahaleye Türkiye&#x27;nin de katılmasını isteyebileceğini söyledi. ABD Başkanı, 13 Ekim&#x27;de Alaska&#x27;da katılacağı bir mitingine doğru yola çıkmadan önce Beyaz Saray&#x27;ın önünde basından gelen soruları yanıtladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Ekim 2026, 22:47</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckz7x9g347yzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="arnavutluk&#x27;ta öğrenci protestoları: hükümet binaları ateşe verildi arnavutluk&#x27;un başkenti tiran&#x27;da, hükümet karşıtı protestoların ikinci gününde binlerce öğrenci sokaklara çıktı. hükümet binaları hedef alındı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 15 Ekim 2026, 09:07</span>
+        </div>
+        <h3>Arnavutluk&#x27;ta öğrenci protestoları: Hükümet binaları ateşe verildi</h3>
+        <p>Arnavutluk&#x27;un başkenti Tiran&#x27;da, hükümet karşıtı protestoların ikinci gününde binlerce öğrenci sokaklara çıktı. Hükümet binaları hedef alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Ekim 2026, 09:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwr7yz0xvl4eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bbc görüntüledi: yemen çölünde küresel etkilere sahip bir savaş sürüyor yemen&#x27;deki iç savaş artık dünyanın görmezden gelemeyeceği bir hal aldı. fakat liman kenti aden&#x27;de yaralılarla dolu hastanelerden bakıldığında jeopolitik hesaplar çok uzaktaymış gibi görünüyor. bbc&#x27;den orla guerin&#x27;in haberi. gümrük bbc türkçe" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">BBC Türkçe · 13 Ekim 2026, 13:37</span>
+        </div>
+        <h3>BBC görüntüledi: Yemen çölünde küresel etkilere sahip bir savaş sürüyor</h3>
+        <p>Yemen&#x27;deki iç savaş artık dünyanın görmezden gelemeyeceği bir hal aldı. Fakat liman kenti Aden&#x27;de yaralılarla dolu hastanelerden bakıldığında jeopolitik hesaplar çok uzaktaymış gibi görünüyor. BBC&#x27;den Orla Guerin&#x27;in haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 13 Ekim 2026, 13:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq98z5wnz4xeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="husiler kimdir, nasıl bu kadar güçlendiler? yemen&#x27;in başkenti sana, uzun süredir husilerin kontrolünde bulunuyor. son günlerde suudi arabistan&#x27;daki havalimanlarını hedef alan saldırılar ve buna karşılık düzenlenen askeri operasyonlarla ülkedeki çatışmalar yeniden alevlendi. gümrük bbc türkçe" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">BBC Türkçe · 12 Ekim 2026, 22:34</span>
+        </div>
+        <h3>Husiler kimdir, nasıl bu kadar güçlendiler?</h3>
+        <p>Yemen&#x27;in başkenti Sana, uzun süredir Husilerin kontrolünde bulunuyor. Son günlerde Suudi Arabistan&#x27;daki havalimanlarını hedef alan saldırılar ve buna karşılık düzenlenen askeri operasyonlarla ülkedeki çatışmalar yeniden alevlendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 12 Ekim 2026, 22:34</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmj4jk7e9ergo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="antalya havalimanı 9 ayda 30 milyondan fazla yolcuya hizmet verdi antalya havalimanı&#x27;nda bu yılın ocak-eylül döneminde yolcu trafiği 30 milyon 144 bin 861 olarak gerçekleşti. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 15 Ekim 2026, 10:50</span>
+        </div>
+        <h3>Antalya Havalimanı 9 ayda 30 milyondan fazla yolcuya hizmet verdi</h3>
+        <p>Antalya Havalimanı&#x27;nda bu yılın ocak-eylül döneminde yolcu trafiği 30 milyon 144 bin 861 olarak gerçekleşti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Ekim 2026, 10:50</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/antalya-havalimani-9-ayda-30-milyondan-fazla-yolcuya-hizmet-verdi-960167.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">17 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇stanbul&#x27;da metrekareye 272 kilogram yağış düştü i̇çişleri bakanı mustafa çiftçi, &quot;i̇stanbul başta olmak üzere marmara bölgesi genelinde son derece yoğun bir yağış kaydedilmiş; i̇stanbul&#x27;da metrekareye düşen yağış miktarı yer yer 272 kilograma kadar ulaşmıştır. maalesef yaşanan bu yoğun yağış neticesinde i̇stanbul ilimizde 2 vatandaşımız hakkın rahmetine kavuşmuştur.&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Ekim 2026, 11:39</span>
+        </div>
+        <h3>İstanbul&#x27;da metrekareye 272 kilogram yağış düştü</h3>
+        <p>İçişleri Bakanı Mustafa Çiftçi, &quot;İstanbul başta olmak üzere Marmara Bölgesi genelinde son derece yoğun bir yağış kaydedilmiş; İstanbul&#x27;da metrekareye düşen yağış miktarı yer yer 272 kilograma kadar ulaşmıştır. Maalesef yaşanan bu yoğun yağış neticesinde İstanbul ilimizde 2 vatandaşımız hakkın rahmetine kavuşmuştur.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Ekim 2026, 11:39</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/istanbulda-metrekareye-272-kilogram-yagis-dustu-960169.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kolombiyanın tel avivdeki büyükelçiliğini kudüse taşıma kararına türkiye&#x27;den kınama dışişleri bakanlığı, kolombiya’nın tel aviv’deki büyükelçiliğini kudüs’e taşıma kararını kınadı. bakanlık, &quot;bu adım, bm güvenlik konseyi’nin 1980 ve 1980 sayılı kararları başta olmak üzere, ilgili bm kararlarını ihlal etmekte ve uluslararası adalet divanı’nın istişari görüşünde vurgulanan hukuki ilkelerle çelişmektedir&quot; açıklamasını yaptı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Ekim 2026, 11:27</span>
+        </div>
+        <h3>Kolombiyanın Tel Avivdeki Büyükelçiliğini Kudüse taşıma kararına Türkiye&#x27;den kınama</h3>
+        <p>Dışişleri Bakanlığı, Kolombiya’nın Tel Aviv’deki Büyükelçiliğini Kudüs’e taşıma kararını kınadı. Bakanlık, &quot;Bu adım, BM Güvenlik Konseyi’nin 1980 ve 1980 sayılı kararları başta olmak üzere, ilgili BM kararlarını ihlal etmekte ve Uluslararası Adalet Divanı’nın istişari görüşünde vurgulanan hukuki ilkelerle çelişmektedir&quot; açıklamasını yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Ekim 2026, 11:27</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/kolombiyanin-tel-avivdeki-buyukelciligini-kuduse-tasima-kararina-turkiyeden-kinama-960168.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dışişleri bakanı fidan, bakü&#x27;deki asya&#x27;da i̇şbirliği ve güven artırıcı önlemler konferansı&#x27;nın 7. zirvesi&#x27;ne katıldı dışişleri bakanı hakan fidan, cumhurbaşkanı recep tayyip erdoğan&#x27;ı temsilen, bakü&#x27;de düzenlenen asya&#x27;da i̇şbirliği ve güven artırıcı önlemler konferansı&#x27;nın (cica) 7. zirvesi&#x27;ne katıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Ekim 2026, 12:29</span>
+        </div>
+        <h3>Dışişleri Bakanı Fidan, Bakü&#x27;deki Asya&#x27;da İşbirliği ve Güven Artırıcı Önlemler Konferansı&#x27;nın 7. Zirvesi&#x27;ne katıldı</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ı temsilen, Bakü&#x27;de düzenlenen Asya&#x27;da İşbirliği ve Güven Artırıcı Önlemler Konferansı&#x27;nın (CICA) 7. Zirvesi&#x27;ne katıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Ekim 2026, 12:29</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/disisleri-bakani-fidan-bakudeki-asyada-isbirligi-ve-guven-artirici-onlemler-konferansinin-7-zirvesine-katildi/4089500" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="husiler, suudi arabistan&#x27;daki petrol devi aramco&#x27;yu hedef aldı yemen&#x27;deki husiler, suudi arabistan öncülüğündeki koalisyonun yemen&#x27;in başkenti sana yakınlarındaki bir yakıt deposunu vurmasının ardından, suudi arabistan&#x27;daki devlet petrol şirketi aramco&#x27;yu hedef aldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 14 Ekim 2026, 16:19</span>
+        </div>
+        <h3>Husiler, Suudi Arabistan&#x27;daki petrol devi Aramco&#x27;yu hedef aldı</h3>
+        <p>Yemen&#x27;deki Husiler, Suudi Arabistan öncülüğündeki koalisyonun Yemen&#x27;in başkenti Sana yakınlarındaki bir yakıt deposunu vurmasının ardından, Suudi Arabistan&#x27;daki devlet petrol şirketi Aramco&#x27;yu hedef aldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 14 Ekim 2026, 16:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqj9kevpyl4ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="pakistan&#x27;da okulun çatısı çöktü: en az 27 öğrenci hayatını kaybetti pakistan&#x27;ın kuzeybatısındaki peşaver kentinde ders sırasında bir okulun çatısının çökmesi sonucu çoğu 13 yaşından küçük en az 27 öğrenci hayatını kaybetti. yerel yetkililer, olayda bir öğretmenin de yaşamını yitirdiğini ve ölü sayısının artabileceğini belirtti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Ekim 2026, 12:18</span>
+        </div>
+        <h3>Pakistan&#x27;da okulun çatısı çöktü: En az 27 öğrenci hayatını kaybetti</h3>
+        <p>Pakistan&#x27;ın kuzeybatısındaki Peşaver kentinde ders sırasında bir okulun çatısının çökmesi sonucu çoğu 13 yaşından küçük en az 27 öğrenci hayatını kaybetti. Yerel yetkililer, olayda bir öğretmenin de yaşamını yitirdiğini ve ölü sayısının artabileceğini belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Ekim 2026, 12:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/pakistanda-okulun-catisi-coktu-en-az-27-ogrenci-hayatini-kaybetti-960175.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb: suudi arabistan&#x27;a askeri destek süreci anayasa ve mevzuat hükümleri doğrultusunda yürütülecek milli savunma bakanlığı, mekke savunma i̇ttifakı kapsamında suudi arabistan’a sağlanacak askeri desteğe ilişkin sürecin anayasa ve ilgili mevzuat hükümleri doğrultusunda yürütüleceğini açıkladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Ekim 2026, 11:43</span>
+        </div>
+        <h3>MSB: Suudi Arabistan&#x27;a askeri destek süreci Anayasa ve mevzuat hükümleri doğrultusunda yürütülecek</h3>
+        <p>Milli Savunma Bakanlığı, Mekke Savunma İttifakı kapsamında Suudi Arabistan’a sağlanacak askeri desteğe ilişkin sürecin Anayasa ve ilgili mevzuat hükümleri doğrultusunda yürütüleceğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Ekim 2026, 11:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/msb-suudi-arabistana-askeri-destek-sureci-anayasa-ve-mevzuat-hukumleri-dogrultusunda-yurutulecek-960171.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇çişleri bakanı çiftçi: 55 bin 560 personelimiz, 6 bin 574 aracımız ve 20 botumuz teyakkuz halindedir i̇çişleri bakanı çiftçi, kuvvetli yağışlardan etkilenen illerdeki son duruma ilişkin, &quot;ülke genelinde toplam 55 bin 560 personelimiz, 6 bin 574 aracımız ve 20 botumuz teyakkuz halindedir.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Ekim 2026, 12:07</span>
+        </div>
+        <h3>İçişleri Bakanı Çiftçi: 55 bin 560 personelimiz, 6 bin 574 aracımız ve 20 botumuz teyakkuz halindedir</h3>
+        <p>İçişleri Bakanı Çiftçi, kuvvetli yağışlardan etkilenen illerdeki son duruma ilişkin, &quot;Ülke genelinde toplam 55 bin 560 personelimiz, 6 bin 574 aracımız ve 20 botumuz teyakkuz halindedir.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Ekim 2026, 12:07</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/icisleri-bakani-ciftci-55-bin-560-personelimiz-6-bin-574-aracimiz-ve-20-botumuz-teyakkuz-halindedir/4089459" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb: geçen hafta 2 pkk&#x27;lı terörist teslim olmuştur milli savunma bakanlığı (msb) sözcüsü tuğamiral zeki aktürk, geçen hafta 2 pkk&#x27;lı teröristin daha teslim olduğunu bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Ekim 2026, 12:07</span>
+        </div>
+        <h3>MSB: Geçen hafta 2 PKK&#x27;lı terörist teslim olmuştur</h3>
+        <p>Milli Savunma Bakanlığı (MSB) Sözcüsü Tuğamiral Zeki Aktürk, geçen hafta 2 PKK&#x27;lı teröristin daha teslim olduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Ekim 2026, 12:07</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/msb-gecen-hafta-2-pkkli-terorist-teslim-olmustur/4089460" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye, kolombiya&#x27;nın tel aviv&#x27;deki büyükelçiliğini kudüs&#x27;e taşıma kararını kınadı dışişleri bakanlığı, kolombiya&#x27;nın tel aviv&#x27;deki büyükelçiliğini kudüs&#x27;e taşıma kararını kınadığını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Ekim 2026, 11:44</span>
+        </div>
+        <h3>Türkiye, Kolombiya&#x27;nın Tel Aviv&#x27;deki Büyükelçiliğini Kudüs&#x27;e taşıma kararını kınadı</h3>
+        <p>Dışişleri Bakanlığı, Kolombiya&#x27;nın Tel Aviv&#x27;deki Büyükelçiliğini Kudüs&#x27;e taşıma kararını kınadığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Ekim 2026, 11:44</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiye-kolombiyanin-tel-avivdeki-buyukelciligini-kuduse-tasima-kararini-kinadi/4089422" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kosovalı hastanın kalbindeki ritim bozukluğu üç boyutlu haritalamayla tedavi edildi kosova&#x27;da yaşayan 34 yaşındaki baygora&#x27;nın yaklaşık 20 yıldır devam eden sağlık sorunlarının ardından tespit edilen kalbindeki ritim bozukluğu, bilkent şehir hastanesi&#x27;nde üç boyutlu haritalama eşliğinde yapılan ablasyon işlemiyle tedavi edildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Ekim 2026, 11:25</span>
+        </div>
+        <h3>Kosovalı hastanın kalbindeki ritim bozukluğu üç boyutlu haritalamayla tedavi edildi</h3>
+        <p>Kosova&#x27;da yaşayan 34 yaşındaki Baygora&#x27;nın yaklaşık 20 yıldır devam eden sağlık sorunlarının ardından tespit edilen kalbindeki ritim bozukluğu, Bilkent Şehir Hastanesi&#x27;nde üç boyutlu haritalama eşliğinde yapılan ablasyon işlemiyle tedavi edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Ekim 2026, 11:25</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kosovali-hastanin-kalbindeki-ritim-bozuklugu-uc-boyutlu-haritalamayla-tedavi-edildi/4089389" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da okullar yarın da tatil edildi i̇stanbul valisi davut gül, kentte etkisini sürdüren şiddetli sağanağa ilişkin, &quot;çocuklarımızın, öğretmenlerimizin, velilerimizin güvenliği her şeyden önce geliyor. dolayısıyla yarın da okullarımız tatil edildi.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Ekim 2026, 10:52</span>
+        </div>
+        <h3>İstanbul&#x27;da okullar yarın da tatil edildi</h3>
+        <p>İstanbul Valisi Davut Gül, kentte etkisini sürdüren şiddetli sağanağa ilişkin, &quot;Çocuklarımızın, öğretmenlerimizin, velilerimizin güvenliği her şeyden önce geliyor. Dolayısıyla yarın da okullarımız tatil edildi.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Ekim 2026, 10:52</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-okullar-yarin-da-tatil-edildi/4089315" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul merkezli uluslararası uyuşturucu operasyonunda sözde &quot;baronlar&quot; deşifre edildi i̇stanbul merkezli 13 ilde uluslararası uyuşturucu suç örgütüne yönelik düzenlenen ve 47 şüphelinin yakalandığı operasyonda örgütün &quot;baron&quot; diye nitelendirilen sözde yönetici kadrosu ortaya çıkarıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Ekim 2026, 10:20</span>
+        </div>
+        <h3>İstanbul merkezli uluslararası uyuşturucu operasyonunda sözde &quot;baronlar&quot; deşifre edildi</h3>
+        <p>İstanbul merkezli 13 ilde uluslararası uyuşturucu suç örgütüne yönelik düzenlenen ve 47 şüphelinin yakalandığı operasyonda örgütün &quot;baron&quot; diye nitelendirilen sözde yönetici kadrosu ortaya çıkarıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Ekim 2026, 10:20</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbul-merkezli-uluslararasi-uyusturucu-operasyonunda-sozde-baronlar-desifre-edildi/4089267" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da &#x27;84 yılın&#x27; en ağır yağışı: i̇ki kişi öldü, okullar cuma günü de tatil i̇stanbul valisi davut gül, 15 ekim&#x27;den sonra 16 ekim cuma günü de okulların tatil edildiğini açıkladı. vali gül, 84 yıldır i̇stanbul&#x27;da en ağır yağışın kaydedildiğini söyledi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 15 Ekim 2026, 10:51</span>
+        </div>
+        <h3>İstanbul&#x27;da &#x27;84 yılın&#x27; en ağır yağışı: İki kişi öldü, okullar cuma günü de tatil</h3>
+        <p>İstanbul Valisi Davut Gül, 15 Ekim&#x27;den sonra 16 Ekim cuma günü de okulların tatil edildiğini açıkladı. Vali Gül, 84 yıldır İstanbul&#x27;da en ağır yağışın kaydedildiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Ekim 2026, 10:51</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9e8l1xvnv40o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="zayıflama iğnelerini çok küçük dozlarda yapmak güvenli mi? bazılerğ ozempic ve wegovy gibi glp-1 ilaçlarının küçük dozlarını alıyorlar, ancak uzmanlar bu uygulamayı destekleyecek çok az kanıt olduğunu söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 15 Ekim 2026, 09:19</span>
+        </div>
+        <h3>Zayıflama iğnelerini çok küçük dozlarda yapmak güvenli mi?</h3>
+        <p>Bazılerğ Ozempic ve Wegovy gibi GLP-1 ilaçlarının küçük dozlarını alıyorlar, ancak uzmanlar bu uygulamayı destekleyecek çok az kanıt olduğunu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Ekim 2026, 09:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9e8l1x823e6o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="roma-real madrid maçı: &#x27;arda güler, real&#x27;e yeniden hayat verdi&#x27; şampiyonlar ligi&#x27;nde roma karşısında real madrid&#x27;in son yedi dakikadaki geri dönüşü ve galibiyeti arda güler&#x27;in asistleriyle de konuşuluyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 15 Ekim 2026, 10:43</span>
+        </div>
+        <h3>Roma-Real Madrid maçı: &#x27;Arda Güler, Real&#x27;e yeniden hayat verdi&#x27;</h3>
+        <p>Şampiyonlar Ligi&#x27;nde Roma karşısında Real Madrid&#x27;in son yedi dakikadaki geri dönüşü ve galibiyeti Arda Güler&#x27;in asistleriyle de konuşuluyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 15 Ekim 2026, 10:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6zjx4p8z4x2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da okullar yarın da tatil i̇stanbul valisi davut gül, i̇stanbul&#x27;da okulların yarın da tatil edildiğini duyurdu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 15 Ekim 2026, 10:49</span>
+        </div>
+        <h3>İstanbul&#x27;da okullar yarın da tatil</h3>
+        <p>İstanbul Valisi Davut Gül, İstanbul&#x27;da okulların yarın da tatil edildiğini duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Ekim 2026, 10:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/istanbulda-okullar-yarin-da-tatil-960166.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="emine erdoğan: kadın çiftçilerimiz, sofralarımıza bereket, ülkemizin yarınlarına güç katıyor emine erdoğan, &quot;toprağa sabrını, alın terini ve sevgisini katan kadın çiftçilerimiz, yetiştirdikleri her ürünle sofralarımıza bereket, ülkemizin yarınlarına güç katıyor.&quot; ifadesini kullandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Ekim 2026, 10:27</span>
+        </div>
+        <h3>Emine Erdoğan: Kadın çiftçilerimiz, sofralarımıza bereket, ülkemizin yarınlarına güç katıyor</h3>
+        <p>Emine Erdoğan, &quot;Toprağa sabrını, alın terini ve sevgisini katan kadın çiftçilerimiz, yetiştirdikleri her ürünle sofralarımıza bereket, ülkemizin yarınlarına güç katıyor.&quot; ifadesini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Ekim 2026, 10:27</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/emine-erdogan-kadin-ciftcilerimiz-sofralarimiza-bereket-ulkemizin-yarinlarina-guc-katiyor/4089277" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan yumaklı: hayatımızın her alanında olduğu gibi, tarımın kalbinde de kadın çiftçilerimizin emeği var tarım ve orman bakanı i̇brahim yumaklı, hayatın her alanında olduğu gibi, tarımın, kalkınmanın ve üretimin kalbinde de kadın çiftçilerin sarsılmaz emeğinin, alın terinin ve eşsiz gayretinin olduğunu bildirdi. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 15 Ekim 2026, 10:41</span>
+        </div>
+        <h3>Bakan Yumaklı: Hayatımızın her alanında olduğu gibi, tarımın kalbinde de kadın çiftçilerimizin emeği var</h3>
+        <p>Tarım ve Orman Bakanı İbrahim Yumaklı, hayatın her alanında olduğu gibi, tarımın, kalkınmanın ve üretimin kalbinde de kadın çiftçilerin sarsılmaz emeğinin, alın terinin ve eşsiz gayretinin olduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 15 Ekim 2026, 10:41</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-yumakli-hayatimizin-her-alaninda-oldugu-gibi-tarimin-kalbinde-de-kadin-ciftcilerimizin-emegi-var/4089297" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;den 9 ayda 39 ülkeye bal ihracatı türkiye&#x27;nin ihraç ürünleri arasında yer alan bal, yılın 9 ayında abd, almanya ve birleşik krallık başta olmak üzere 39 ülkede ağızları tatlandırdı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 15 Ekim 2026, 12:13</span>
+        </div>
+        <h3>Türkiye&#x27;den 9 ayda 39 ülkeye bal ihracatı</h3>
+        <p>Türkiye&#x27;nin ihraç ürünleri arasında yer alan bal, yılın 9 ayında ABD, Almanya ve Birleşik Krallık başta olmak üzere 39 ülkede ağızları tatlandırdı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 15 Ekim 2026, 12:13</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyeden-9-ayda-39-ulkeye-bal-ihracati-960174.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
