@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">17 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">17 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>genel</strong> 22</span><span class="stat-item"><strong>ekonomi</strong> 5</span><span class="stat-item"><strong>dünya</strong> 3</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">GENEL</span>
+        </div>
+        <h3>IPARD III kapsamında 95 projeye 1,2 milyar lira hibe</h3>
+        <p>Tarım ve Orman Bakanı İbrahim Yumaklı, IPARD III Programı&#x27;nın 11. başvuru sonuçlarının açıklandığını bildirerek, &quot;Et, süt, yumurta, su ürünleri ile meyve-sebze işlenmesi ve soğuk hava depoları yatırımlarında 95 proje, 1,2 milyar lira hibe almaya hak kazandı.&quot; ifadesini kullandı.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 17 Ekim 2026, 11:37</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/ipard-iii-kapsaminda-95-projeye-12-milyar-lira-hibe-960395.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">Anadolu Ajansı · 17 Ekim 2026, 10:57</span>
+            </div>
+            <h3>Bakan Gürlek, Interpol&#x27;ün kırmızı bültenle aradığı ABD&#x27;li Schueler&#x27;in yakalandığını bildirdi</h3>
+            <p>Bakan Gürlek, ABD ve Finlandiya&#x27;da 1 milyar dolarlık kripto varlık dolandırıcılığı yaptığı iddiasıyla hakkında Interpol tarafından kırmızı bülten çıkarıldığı bildirilen ABD vatandaşı Richard James Schueler&#x27;in İstanbul&#x27;da yakalandığını belirtti.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-gurlek-interpolun-kirmizi-bultenle-aradigi-abdli-schuelerin-yakalandigini-bildirdi/4091693" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 16 Ekim 2026, 18:06</span>
+            </div>
+            <h3>MSCI&#x27;dan Türkiye kararı: Piyasa sınıflandırması nasıl değişebilir?</h3>
+            <p>Küresel endeks şirketi Morgan Stanley Capital International (MSCI), Türkiye&#x27;deki endekslerine dair bazı işlemleri dondurduğunu açıkladı. Şirket, Türkiye&#x27;de hisse senetleri konusunda gerekli önlemlerin alınmaması durumunda piyasa sınıflandırmasının düşürülmesine dair istişare süreci başlatabileceği mesajını verdi. Peki MSCI açıklaması Türkiye için ne anlama geliyor?</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cm75przp0ldvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 17 Ekim 2026, 11:38</span>
+            </div>
+            <h3>Okulların 2027 yılı pansiyon ücretleri belli oldu</h3>
+            <p>Milli Eğitim Bakanlığına bağlı eğitim kurumlarının pansiyon ücretleri, yeni yılda ilköğretim kurumlarında ve ortaöğretim okullarında 68 bin lira, özel eğitim okullarında 89 bin lira, mesleki eğitim kurumlarında 75 bin lira olacak.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/egitim/okullarin-2027-yili-pansiyon-ucretleri-belli-oldu-960397.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 17 Ekim 2026, 11:30</span>
+            </div>
+            <h3>Bakan Bayraktar: Gabar&#x27;dan yakın zamanda yeni bir müjde verebiliriz</h3>
+            <p>Enerji ve Tabii Kaynaklar Bakanı Alparslan Bayraktar, Türkiye&#x27;nin karada ve denizde petrol ile doğal gaz arama faaliyetlerini kararlılıkla sürdürdüğünü belirterek, Gabar&#x27;daki üretim sahasında yürütülen çalışmalar kapsamında yakın zamanda yeni bir keşif müjdesi verebileceklerini açıkladı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-bayraktar-gabardan-yakin-zamanda-yeni-bir-mujde-verebiliriz-960394.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">22 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="ipard iii kapsamında 95 projeye 1,2 milyar lira hibe tarım ve orman bakanı i̇brahim yumaklı, ipard iii programı&#x27;nın 11. başvuru sonuçlarının açıklandığını bildirerek, &quot;et, süt, yumurta, su ürünleri ile meyve-sebze işlenmesi ve soğuk hava depoları yatırımlarında 95 proje, 1,2 milyar lira hibe almaya hak kazandı.&quot; ifadesini kullandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Ekim 2026, 11:37</span>
+        </div>
+        <h3>IPARD III kapsamında 95 projeye 1,2 milyar lira hibe</h3>
+        <p>Tarım ve Orman Bakanı İbrahim Yumaklı, IPARD III Programı&#x27;nın 11. başvuru sonuçlarının açıklandığını bildirerek, &quot;Et, süt, yumurta, su ürünleri ile meyve-sebze işlenmesi ve soğuk hava depoları yatırımlarında 95 proje, 1,2 milyar lira hibe almaya hak kazandı.&quot; ifadesini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Ekim 2026, 11:37</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/ipard-iii-kapsaminda-95-projeye-12-milyar-lira-hibe-960395.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="okulların 2027 yılı pansiyon ücretleri belli oldu milli eğitim bakanlığına bağlı eğitim kurumlarının pansiyon ücretleri, yeni yılda ilköğretim kurumlarında ve ortaöğretim okullarında 68 bin lira, özel eğitim okullarında 89 bin lira, mesleki eğitim kurumlarında 75 bin lira olacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Ekim 2026, 11:38</span>
+        </div>
+        <h3>Okulların 2027 yılı pansiyon ücretleri belli oldu</h3>
+        <p>Milli Eğitim Bakanlığına bağlı eğitim kurumlarının pansiyon ücretleri, yeni yılda ilköğretim kurumlarında ve ortaöğretim okullarında 68 bin lira, özel eğitim okullarında 89 bin lira, mesleki eğitim kurumlarında 75 bin lira olacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Ekim 2026, 11:38</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/okullarin-2027-yili-pansiyon-ucretleri-belli-oldu-960397.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="okulların 2027 yılı pansiyon ücretleri belirlendi milli eğitim bakanlığına bağlı eğitim kurumlarının pansiyon ücretleri ilköğretim kurumlarında ve ortaöğretim okullarında 68 bin lira, özel eğitim okullarında 89 bin lira, mesleki ve teknik eğitim okullarında 75 bin lira olarak tespit edildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Ekim 2026, 11:06</span>
+        </div>
+        <h3>Okulların 2027 yılı pansiyon ücretleri belirlendi</h3>
+        <p>Milli Eğitim Bakanlığına bağlı eğitim kurumlarının pansiyon ücretleri ilköğretim kurumlarında ve ortaöğretim okullarında 68 bin lira, özel eğitim okullarında 89 bin lira, mesleki ve teknik eğitim okullarında 75 bin lira olarak tespit edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Ekim 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/okullarin-2027-yili-pansiyon-ucretleri-belirlendi/4091705" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yaz dönemi gençlik kampları&#x27;ndan devlet korumasındaki 2 bin 240 çocuk yararlandı aile ve sosyal hizmetler bakanlığına bağlı kuruluşlarda koruma ve bakım altında bulunan çocukların psikososyal gelişimine katkıda bulunmak amacıyla düzenlenen &quot;2026 yılı yaz dönemi gençlik kampları&quot;ndan 2 bin 240 çocuk yararlandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Ekim 2026, 11:32</span>
+        </div>
+        <h3>Yaz Dönemi Gençlik Kampları&#x27;ndan devlet korumasındaki 2 bin 240 çocuk yararlandı</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanlığına bağlı kuruluşlarda koruma ve bakım altında bulunan çocukların psikososyal gelişimine katkıda bulunmak amacıyla düzenlenen &quot;2026 Yılı Yaz Dönemi Gençlik Kampları&quot;ndan 2 bin 240 çocuk yararlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Ekim 2026, 11:32</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yaz-donemi-genclik-kamplarindan-devlet-korumasindaki-2-bin-240-cocuk-yararlandi/4091727" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çeşmeli-taşucu otoyolu&#x27;nun kızkalesi kesimi 19 ekim&#x27;de trafiğe açılacak bakan uraloğlu, çeşmeli-erdemli-silifke-taşucu otoyolu&#x27;nun 52 kilometrelik çeşmeli-kızkalesi kesimindeki yapım çalışmalarının tamamlandığını belirterek, &quot;otoyolumuzu 18 ekim&#x27;i 19 ekim&#x27;e bağlayan gece saat 00.01 itibarıyla trafiğe açacağız.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Ekim 2026, 11:10</span>
+        </div>
+        <h3>Çeşmeli-Taşucu Otoyolu&#x27;nun Kızkalesi kesimi 19 Ekim&#x27;de trafiğe açılacak</h3>
+        <p>Bakan Uraloğlu, Çeşmeli-Erdemli-Silifke-Taşucu Otoyolu&#x27;nun 52 kilometrelik Çeşmeli-Kızkalesi kesimindeki yapım çalışmalarının tamamlandığını belirterek, &quot;Otoyolumuzu 18 Ekim&#x27;i 19 Ekim&#x27;e bağlayan gece saat 00.01 itibarıyla trafiğe açacağız.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Ekim 2026, 11:10</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cesmeli-tasucu-otoyolunun-kizkalesi-kesimi-19-ekimde-trafige-acilacak/4091715" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;a düşen &#x27;rekor&#x27; yağışın sele dönüşmesi nasıl önlenebilirdi? i̇stanbul&#x27;da, 14 ekim&#x27;den beri aralıklı olarak süren yağışlar resmi kayıtların başlamasından bu yana kentte yaşanan en şiddetli hava olayları arasında yerini aldı. bbc türkçe&#x27;ye konuşan uzmanlar yağışın şiddetinden daha çok i̇stanbul&#x27;da kentleşme sorunlarının sellere neden olduğunu söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Ekim 2026, 10:14</span>
+        </div>
+        <h3>İstanbul&#x27;a düşen &#x27;rekor&#x27; yağışın sele dönüşmesi nasıl önlenebilirdi?</h3>
+        <p>İstanbul&#x27;da, 14 Ekim&#x27;den beri aralıklı olarak süren yağışlar resmi kayıtların başlamasından bu yana kentte yaşanan en şiddetli hava olayları arasında yerini aldı. BBC Türkçe&#x27;ye konuşan uzmanlar yağışın şiddetinden daha çok İstanbul&#x27;da kentleşme sorunlarının sellere neden olduğunu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Ekim 2026, 10:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c687zjl55p3qo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fransa&#x27;daki öğrenci eylemleri: ülke kırılma noktasında mı? fransa başbakanı, öğrenci öfkesinin bir silah olarak kullanıldığını öne sürdü. sendikalar ve diğer protestocular da bugün yeniden sokaklara çıkmaya hazırlanıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Ekim 2026, 02:29</span>
+        </div>
+        <h3>Fransa&#x27;daki öğrenci eylemleri: Ülke kırılma noktasında mı?</h3>
+        <p>Fransa Başbakanı, öğrenci öfkesinin bir silah olarak kullanıldığını öne sürdü. Sendikalar ve diğer protestocular da bugün yeniden sokaklara çıkmaya hazırlanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Ekim 2026, 02:29</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c51kd8vm9912o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇mamoğlu&#x27;ndan kılıçdaroğlu&#x27;na &#x27;dava siyasi değil&#x27; tepkisi: &#x27;senin alnını karışlarım&#x27; i̇bb davasında savunmasını sürdüren ekrem i̇mamoğlu, kemal kılıçdaroğlu’nun davanın siyasi olmadığı yönündeki sözlerine “senin alnını karışlarım” diyerek tepki gösterdi. davanın temelinde “i̇stanbul i̇ttifakı”nın başarısına duyulan siyasi husumetin bulunduğunu savunan i̇mamoğlu, “i̇ster bir partinin kayyumu ol, ister ne olursan ol” dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 16 Ekim 2026, 18:32</span>
+        </div>
+        <h3>İmamoğlu&#x27;ndan Kılıçdaroğlu&#x27;na &#x27;Dava siyasi değil&#x27; tepkisi: &#x27;Senin alnını karışlarım&#x27;</h3>
+        <p>İBB davasında savunmasını sürdüren Ekrem İmamoğlu, Kemal Kılıçdaroğlu’nun davanın siyasi olmadığı yönündeki sözlerine “Senin alnını karışlarım” diyerek tepki gösterdi. Davanın temelinde “İstanbul İttifakı”nın başarısına duyulan siyasi husumetin bulunduğunu savunan İmamoğlu, “İster bir partinin kayyumu ol, ister ne olursan ol” dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 16 Ekim 2026, 18:32</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c63dj1xgdkgxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="batı şeria&#x27;da, yahudi yerleşimciler zeytin hasadına saldırdı i̇şgal altındaki batı şeria&#x27;da her yıl yapılan zeytin hasadı sırasında, onlarca maskeli yahudi yerleşimci filistinlilere saldırdı, araçları ve zeytin ağaçlarını ateşe verdi. bbc ekibi, filistin&#x27;in ebu falah köyü yakınlarındaki tarım arazisinde meydana gelen saldırılardan birine tanık oldu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 16 Ekim 2026, 21:20</span>
+        </div>
+        <h3>Batı Şeria&#x27;da, Yahudi yerleşimciler zeytin hasadına saldırdı</h3>
+        <p>İşgal altındaki Batı Şeria&#x27;da her yıl yapılan zeytin hasadı sırasında, onlarca maskeli Yahudi yerleşimci Filistinlilere saldırdı, araçları ve zeytin ağaçlarını ateşe verdi. BBC ekibi, Filistin&#x27;in Ebu Falah köyü yakınlarındaki tarım arazisinde meydana gelen saldırılardan birine tanık oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 16 Ekim 2026, 21:20</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq8rzpez6p31o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çözüm sürecinde dönüş takvimi: dem parti&#x27;nin beklentisi ne? silahsızlanma sürecinin ardından pkk&#x27;lıların dönüşünün nasıl ve ne zaman gerçekleşeceği tartışılıyor. dem parti kaynakları, ilk etapta 200 ila 400 kişinin dönüşünün söz konusu olabileceğini öngörüyor. ankara&#x27;dan ayşe sayın&#x27;ın haberi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 16 Ekim 2026, 15:05</span>
+        </div>
+        <h3>Çözüm sürecinde dönüş takvimi: DEM Parti&#x27;nin beklentisi ne?</h3>
+        <p>Silahsızlanma sürecinin ardından PKK&#x27;lıların dönüşünün nasıl ve ne zaman gerçekleşeceği tartışılıyor. DEM Parti kaynakları, ilk etapta 200 ila 400 kişinin dönüşünün söz konusu olabileceğini öngörüyor. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 16 Ekim 2026, 15:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/crz98kgldqxxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="aranan 912 şahıs yakalandı i̇çişleri bakanlığı, 81 ilde haklarında yakalama kararı verilen ve aranan şahıslara yönelik düzenlenen &quot;aranan şahıslar uygulamasında&quot; 912 şahsın yakalandığını duyurdu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Ekim 2026, 11:02</span>
+        </div>
+        <h3>Aranan 912 şahıs yakalandı</h3>
+        <p>İçişleri Bakanlığı, 81 ilde haklarında yakalama kararı verilen ve aranan şahıslara yönelik düzenlenen &quot;Aranan Şahıslar Uygulamasında&quot; 912 şahsın yakalandığını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Ekim 2026, 11:02</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/aranan-912-sahis-yakalandi-960389.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="emine erdoğan&#x27;dan türkiye maarif vakfı 10. yıl programı&#x27;na ilişkin paylaşım cumhurbaşkanı recep tayyip erdoğan&#x27;ın eşi emine erdoğan, türkiye maarif vakfı 10. yıl programı&#x27;na ilişkin paylaşım yaptı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Ekim 2026, 10:38</span>
+        </div>
+        <h3>Emine Erdoğan&#x27;dan Türkiye Maarif Vakfı 10. Yıl Programı&#x27;na ilişkin paylaşım</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın eşi Emine Erdoğan, Türkiye Maarif Vakfı 10. Yıl Programı&#x27;na ilişkin paylaşım yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Ekim 2026, 10:38</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/emine-erdogandan-turkiye-maarif-vakfi-10-yil-programina-iliskin-paylasim-960388.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="aile ve sosyal hizmetler bakanlığından çocuk güzellik yarışması hakkında suç duyurusu aile ve sosyal hizmetler bakanlığı, antalya&#x27;da 4-13 yaş grubundaki çocukların katılımıyla düzenlenecek yarışma hakkında suç duyurusunda bulunacaklarını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Ekim 2026, 11:45</span>
+        </div>
+        <h3>Aile ve Sosyal Hizmetler Bakanlığından çocuk güzellik yarışması hakkında suç duyurusu</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanlığı, Antalya&#x27;da 4-13 yaş grubundaki çocukların katılımıyla düzenlenecek yarışma hakkında suç duyurusunda bulunacaklarını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Ekim 2026, 11:45</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/aile-ve-sosyal-hizmetler-bakanligindan-cocuk-guzellik-yarismasi-hakkinda-suc-duyurusu/4091737" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇çişleri bakanı çiftçi&#x27;den sel ve su taşkınlarına ilişkin uyarı i̇çişleri bakanı mustafa çiftçi, kuvvetli yağışlar nedeniyle oluşabilecek sel ve su taşkınlarına karşı vatandaşların tedbirli olması ve resmi uyarıları dikkate alması gerektiğini belirtti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Ekim 2026, 11:06</span>
+        </div>
+        <h3>İçişleri Bakanı Çiftçi&#x27;den sel ve su taşkınlarına ilişkin uyarı</h3>
+        <p>İçişleri Bakanı Mustafa Çiftçi, kuvvetli yağışlar nedeniyle oluşabilecek sel ve su taşkınlarına karşı vatandaşların tedbirli olması ve resmi uyarıları dikkate alması gerektiğini belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Ekim 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/icisleri-bakani-ciftciden-sel-ve-su-taskinlarina-iliskin-uyari/4091706" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="muğla büyükşehir belediye başkanı ahmet aras chp&#x27;den istifa ettiğini açıkladı muğla büyükşehir belediye başkanı ahmet aras 16 ekim&#x27;de sosyal medya üzerinden bir açıklama yaparak chp&#x27;den ayrıldığını ifade etti. aras, &quot;görevimi bağımsız olarak sürdürme kararı aldım&quot; dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Ekim 2026, 11:32</span>
+        </div>
+        <h3>Muğla Büyükşehir Belediye Başkanı Ahmet Aras CHP&#x27;den istifa ettiğini açıkladı</h3>
+        <p>Muğla Büyükşehir Belediye Başkanı Ahmet Aras 16 Ekim&#x27;de sosyal medya üzerinden bir açıklama yaparak CHP&#x27;den ayrıldığını ifade etti. Aras, &quot;Görevimi bağımsız olarak sürdürme kararı aldım&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Ekim 2026, 11:32</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq33x5l3p8vko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="maaş beklentisi iş başvurularında nasıl konuşulmalı, türkiye&#x27;de durum ne? uzmanlar, iş görüşmesinde mevcut maaşınız sorulursa ne yapmanız gerektiğini açıklıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Ekim 2026, 10:16</span>
+        </div>
+        <h3>Maaş beklentisi iş başvurularında nasıl konuşulmalı, Türkiye&#x27;de durum ne?</h3>
+        <p>Uzmanlar, iş görüşmesinde mevcut maaşınız sorulursa ne yapmanız gerektiğini açıklıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Ekim 2026, 10:16</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck87z0273qqlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;daki yağışlarda can kaybı dörde çıktı i̇stanbul&#x27;da 14 ekim&#x27;deki yağışlar nedeniyle can kaybı sayısı dörde yükseldi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Ekim 2026, 02:37</span>
+        </div>
+        <h3>İstanbul&#x27;daki yağışlarda can kaybı dörde çıktı</h3>
+        <p>İstanbul&#x27;da 14 Ekim&#x27;deki yağışlar nedeniyle can kaybı sayısı dörde yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Ekim 2026, 02:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9e8l1xvnv40o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇şgalci i̇srailliler, batı şeria&#x27;da filistinlilere ait 20 kuzuyu bıçaklayarak öldürdü i̇şgalci i̇sraillilerin, işgal altındaki batı şeria&#x27;nın ramallah kenti yakınlarındaki kefr malik beldesinde 20 kuzuyu bıçakla saldırarak telef ettiği bildirildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Ekim 2026, 11:47</span>
+        </div>
+        <h3>İşgalci İsrailliler, Batı Şeria&#x27;da Filistinlilere ait 20 kuzuyu bıçaklayarak öldürdü</h3>
+        <p>İşgalci İsraillilerin, işgal altındaki Batı Şeria&#x27;nın Ramallah kenti yakınlarındaki Kefr Malik beldesinde 20 kuzuyu bıçakla saldırarak telef ettiği bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Ekim 2026, 11:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/isgalci-israilliler-bati-seriada-filistinlilere-ait-20-kuzuyu-bicaklayarak-oldurdu-960398.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yargıtay&#x27;dan eski damadından kira isteyen kayınbabaya ret yargıtay 3. hukuk dairesi, kızının boşandığı eşinden kira talep eden kayınbabanın açtığı davanın reddine ilişkin yerel mahkeme kararını hukuka uygun buldu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 17 Ekim 2026, 11:35</span>
+        </div>
+        <h3>Yargıtay&#x27;dan eski damadından kira isteyen kayınbabaya ret</h3>
+        <p>Yargıtay 3. Hukuk Dairesi, kızının boşandığı eşinden kira talep eden kayınbabanın açtığı davanın reddine ilişkin yerel mahkeme kararını hukuka uygun buldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Ekim 2026, 11:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/yargitaydan-eski-damadindan-kira-isteyen-kayinbabaya-ret-960393.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sarıkamış kayak merkezi&#x27;ndeki kurtarma tatbikatı gerçeğini aratmadı kars&#x27;taki sarıkamış kayak merkezi&#x27;nde, telesiyejde meydana gelebilecek arızalar ve soğuk hava nedeniyle rahatsızlanan kişilere yönelik yağış altında kurtarma tatbikatı gerçekleştirildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Ekim 2026, 11:42</span>
+        </div>
+        <h3>Sarıkamış Kayak Merkezi&#x27;ndeki kurtarma tatbikatı gerçeğini aratmadı</h3>
+        <p>Kars&#x27;taki Sarıkamış Kayak Merkezi&#x27;nde, telesiyejde meydana gelebilecek arızalar ve soğuk hava nedeniyle rahatsızlanan kişilere yönelik yağış altında kurtarma tatbikatı gerçekleştirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Ekim 2026, 11:42</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sarikamis-kayak-merkezindeki-kurtarma-tatbikati-gercegini-aratmadi/4091736" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da &quot;breaking bad&quot; dizisini hatırlatan uyuşturucu operasyonu i̇stanbul&#x27;da &quot;breaking bad&quot; dizisindeki gibi karavanı uyuşturucu faaliyetlerinde kullanan 2 şüpheli, 213 kilogram sentetik uyuşturucunun ele geçirildiği operasyonun ardından tutuklandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Ekim 2026, 11:06</span>
+        </div>
+        <h3>İstanbul&#x27;da &quot;Breaking Bad&quot; dizisini hatırlatan uyuşturucu operasyonu</h3>
+        <p>İstanbul&#x27;da &quot;Breaking Bad&quot; dizisindeki gibi karavanı uyuşturucu faaliyetlerinde kullanan 2 şüpheli, 213 kilogram sentetik uyuşturucunun ele geçirildiği operasyonun ardından tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Ekim 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-breaking-bad-dizisini-hatirlatan-uyusturucu-operasyonu/4091707" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tehlikeli maddeler kara yoluyla taşınırken bulundurulması gereken belgeler düzenlendi tehlikeli maddelerin kara yoluyla taşınması sırasında bazı belge ve formların taşıtta bulunması gerekecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Ekim 2026, 10:11</span>
+        </div>
+        <h3>Tehlikeli maddeler kara yoluyla taşınırken bulundurulması gereken belgeler düzenlendi</h3>
+        <p>Tehlikeli maddelerin kara yoluyla taşınması sırasında bazı belge ve formların taşıtta bulunması gerekecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Ekim 2026, 10:11</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tehlikeli-maddeler-kara-yoluyla-tasinirken-bulundurulmasi-gereken-belgeler-duzenlendi/4091654" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan gürlek, interpol&#x27;ün kırmızı bültenle aradığı abd&#x27;li schueler&#x27;in yakalandığını bildirdi bakan gürlek, abd ve finlandiya&#x27;da 1 milyar dolarlık kripto varlık dolandırıcılığı yaptığı iddiasıyla hakkında interpol tarafından kırmızı bülten çıkarıldığı bildirilen abd vatandaşı richard james schueler&#x27;in i̇stanbul&#x27;da yakalandığını belirtti. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Ekim 2026, 10:57</span>
+        </div>
+        <h3>Bakan Gürlek, Interpol&#x27;ün kırmızı bültenle aradığı ABD&#x27;li Schueler&#x27;in yakalandığını bildirdi</h3>
+        <p>Bakan Gürlek, ABD ve Finlandiya&#x27;da 1 milyar dolarlık kripto varlık dolandırıcılığı yaptığı iddiasıyla hakkında Interpol tarafından kırmızı bülten çıkarıldığı bildirilen ABD vatandaşı Richard James Schueler&#x27;in İstanbul&#x27;da yakalandığını belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Ekim 2026, 10:57</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-gurlek-interpolun-kirmizi-bultenle-aradigi-abdli-schuelerin-yakalandigini-bildirdi/4091693" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msci&#x27;dan türkiye kararı: piyasa sınıflandırması nasıl değişebilir? küresel endeks şirketi morgan stanley capital international (msci), türkiye&#x27;deki endekslerine dair bazı işlemleri dondurduğunu açıkladı. şirket, türkiye&#x27;de hisse senetleri konusunda gerekli önlemlerin alınmaması durumunda piyasa sınıflandırmasının düşürülmesine dair istişare süreci başlatabileceği mesajını verdi. peki msci açıklaması türkiye için ne anlama geliyor? ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 16 Ekim 2026, 18:06</span>
+        </div>
+        <h3>MSCI&#x27;dan Türkiye kararı: Piyasa sınıflandırması nasıl değişebilir?</h3>
+        <p>Küresel endeks şirketi Morgan Stanley Capital International (MSCI), Türkiye&#x27;deki endekslerine dair bazı işlemleri dondurduğunu açıkladı. Şirket, Türkiye&#x27;de hisse senetleri konusunda gerekli önlemlerin alınmaması durumunda piyasa sınıflandırmasının düşürülmesine dair istişare süreci başlatabileceği mesajını verdi. Peki MSCI açıklaması Türkiye için ne anlama geliyor?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 16 Ekim 2026, 18:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm75przp0ldvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan bayraktar: gabar&#x27;dan yakın zamanda yeni bir müjde verebiliriz enerji ve tabii kaynaklar bakanı alparslan bayraktar, türkiye&#x27;nin karada ve denizde petrol ile doğal gaz arama faaliyetlerini kararlılıkla sürdürdüğünü belirterek, gabar&#x27;daki üretim sahasında yürütülen çalışmalar kapsamında yakın zamanda yeni bir keşif müjdesi verebileceklerini açıkladı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 17 Ekim 2026, 11:30</span>
+        </div>
+        <h3>Bakan Bayraktar: Gabar&#x27;dan yakın zamanda yeni bir müjde verebiliriz</h3>
+        <p>Enerji ve Tabii Kaynaklar Bakanı Alparslan Bayraktar, Türkiye&#x27;nin karada ve denizde petrol ile doğal gaz arama faaliyetlerini kararlılıkla sürdürdüğünü belirterek, Gabar&#x27;daki üretim sahasında yürütülen çalışmalar kapsamında yakın zamanda yeni bir keşif müjdesi verebileceklerini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Ekim 2026, 11:30</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-bayraktar-gabardan-yakin-zamanda-yeni-bir-mujde-verebiliriz-960394.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="burhanettin duran: karadeniz&#x27;in enerjisi, türkiye&#x27;nin geleceğine güç katıyor i̇letişim başkanı burhanettin duran, türkiye&#x27;nin ilk yüzer üretim platformu osman gazi&#x27;nin bugün gerçekleştirilecek törenle filyos&#x27;tan mavi vatan&#x27;daki görev yerine uğurlanacağını belirterek, &quot;enerjide tam bağımsızlık hedefimize bir adım daha yaklaşıyoruz&quot; dedi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 17 Ekim 2026, 11:23</span>
+        </div>
+        <h3>Burhanettin Duran: Karadeniz&#x27;in enerjisi, Türkiye&#x27;nin geleceğine güç katıyor</h3>
+        <p>İletişim Başkanı Burhanettin Duran, Türkiye&#x27;nin ilk yüzer üretim platformu Osman Gazi&#x27;nin bugün gerçekleştirilecek törenle Filyos&#x27;tan Mavi Vatan&#x27;daki görev yerine uğurlanacağını belirterek, &quot;Enerjide tam bağımsızlık hedefimize bir adım daha yaklaşıyoruz&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Ekim 2026, 11:23</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/burhanettin-duran-karadenizin-enerjisi-turkiyenin-gelecegine-guc-katiyor-960391.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="elektrikli araçlara eylülde 3,1 milyon şarj işlemi yapıldı türkiye&#x27;de eylülde elektrikli araçlara 3 milyon 152 bin 733 şarj işlemi gerçekleştirildi. şarj hizmeti piyasasındaki toplam elektrik tüketimi ise 83 bin 253 megavatsaat oldu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 17 Ekim 2026, 11:23</span>
+        </div>
+        <h3>Elektrikli araçlara eylülde 3,1 milyon şarj işlemi yapıldı</h3>
+        <p>Türkiye&#x27;de eylülde elektrikli araçlara 3 milyon 152 bin 733 şarj işlemi gerçekleştirildi. Şarj hizmeti piyasasındaki toplam elektrik tüketimi ise 83 bin 253 megavatsaat oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Ekim 2026, 11:23</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/elektrikli-araclara-eylulde-31-milyon-sarj-islemi-yapildi-960390.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="dışişleri bakanı fidan, bağdat&#x27;ta mısırlı mevkidaşı abdülati ile görüştü dışişleri bakanı hakan fidan, bağdat&#x27;ta düzenlenen i̇slam i̇şbirliği teşkilatı (i̇i̇t) 52. dışişleri bakanları konseyi (dbk) toplantısı kapsamında mısır dışişleri bakanı bedr abdülati ile bir araya geldi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 17 Ekim 2026, 11:05</span>
+        </div>
+        <h3>Dışişleri Bakanı Fidan, Bağdat&#x27;ta Mısırlı mevkidaşı Abdülati ile görüştü</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, Bağdat&#x27;ta düzenlenen İslam İşbirliği Teşkilatı (İİT) 52. Dışişleri Bakanları Konseyi (DBK) Toplantısı kapsamında Mısır Dışişleri Bakanı Bedr Abdülati ile bir araya geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 17 Ekim 2026, 11:05</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/disisleri-bakani-fidan-bagdatta-misirli-mevkidasi-abdulati-ile-gorustu/4091704" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="starlink interneti ukrayna savaş alanında neden bu kadar önemli? ukrayna&#x27;daki askeri iletişimin omurgasını oluşturan starlink, ülke genelindeki askeri güçlere hayati önem taşıyan yüksek hızlı internet hizmeti sağlıyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 17 Ekim 2026, 10:18</span>
+        </div>
+        <h3>Starlink interneti Ukrayna savaş alanında neden bu kadar önemli?</h3>
+        <p>Ukrayna&#x27;daki askeri iletişimin omurgasını oluşturan Starlink, ülke genelindeki askeri güçlere hayati önem taşıyan yüksek hızlı internet hizmeti sağlıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Ekim 2026, 10:18</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx1l3dz05r8go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bütçeden tarımsal destekler için 235 milyar lira ayrıldı türkiye büyük millet meclisine (tbmm) sunulan 2027 yılı bütçe teklifiyle, tarımsal destekler için 235 milyar lira ve tarım sektörü yatırımları için 268 milyar lira ödenek öngörüldü. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 17 Ekim 2026, 11:28</span>
+        </div>
+        <h3>Bütçeden tarımsal destekler için 235 milyar lira ayrıldı</h3>
+        <p>Türkiye Büyük Millet Meclisine (TBMM) sunulan 2027 yılı bütçe teklifiyle, tarımsal destekler için 235 milyar lira ve tarım sektörü yatırımları için 268 milyar lira ödenek öngörüldü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 17 Ekim 2026, 11:28</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/butceden-tarimsal-destekler-icin-235-milyar-lira-ayrildi-960392.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
