@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">18 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">18 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 29</span><span class="stat-item"><strong>dünya</strong> 5</span><span class="stat-item"><strong>ekonomi</strong> 2</span><span class="stat-item"><strong>genel</strong> 22</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Emniyet ve jandarma ekipleri geçmiş yıllara ait 60 cinayeti aydınlattı</h3>
+        <p>Emniyet ve jandarma ekiplerinin çalışmalarıyla bu sene geçmiş yıllara ait 60 cinayet aydınlatıldı. İçişleri Bakanı Mustafa Çiftçi, &quot;Cinayet işleyip izini kaybettirdiğini, aradan zaman geçtiği için artık bulunamayacağını düşünenler büyük bir yanılgı içerisinde&quot; mesajını paylaştı.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 18 Ekim 2026, 11:08</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/turkiye/emniyet-ve-jandarma-ekipleri-gecmis-yillara-ait-60-cinayeti-aydinlatti-960454.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 18 Ekim 2026, 10:04</span>
+            </div>
+            <h3>Nobel ödüllerinde cinsiyet ayrımı var mı: &#x27;İstatistiklere göre cevap: Evet&#x27;</h3>
+            <p>Tıp, fizik, kimya ve 1969 yılından bu yana verilen ekonomi gibi bilim alanlarındaki ödüllerde kadınların tarihsel temsiliyeti özellikle düşük. 1901 ve 2026 yılları arasında bu dört disiplinde verilen 769 ödülden yalnızca 30&#x27;u kadınlara verildi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c63el5jql99po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 18 Ekim 2026, 11:48</span>
+            </div>
+            <h3>Gelecek yıl ulaştırma programlarına 1 trilyon liranın üzerinde ödenek ayrıldı</h3>
+            <p>Türkiye, gelecek yıl demir yolu ulaşımı, kara yolu ulaşımı, bilgi ve iletişim, deniz yolu ulaşımı ile kombine taşımacılık, lojistik ve tehlikeli mal taşımacılığı programları için 1 trilyon lirayı aşkın harcama yapmayı öngörüyor.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/gelecek-yil-ulastirma-programlarina-1-trilyon-liranin-uzerinde-odenek-ayrildi-960456.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 18 Ekim 2026, 11:12</span>
+            </div>
+            <h3>Türkiye&#x27;nin ticari araç ihracatı 5 milyar doları aştı</h3>
+            <p>Türkiye&#x27;nin hafif ticari araç, kamyonet ve kamyon grubunu kapsayan &#x27;eşya taşımaya mahsus motorlu taşıtlar&#x27; ihracatı, ocak-eylül döneminde 5 milyar 185 milyon 578 bin dolar oldu. Hafif ticari araç, kamyonet ve kamyon ihracatında en çok dış satım Birleşik Krallık&#x27;a yapıldı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyenin-ticari-arac-ihracati-5-milyar-dolari-asti-960455.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 18 Ekim 2026, 11:06</span>
+            </div>
+            <h3>Meclis&#x27;te bütçe maratonu başlıyor</h3>
+            <p>Türkiye Büyük Millet Meclisi&#x27;nin gündemi bu hafta da bir hayli yoğun olacak. Bütçe maratonu Cumhurbaşkanı Yardımcısı Yılmaz&#x27;ın çarşamba günü Plan ve Bütçe Komisyonunda yapacağı sunumla başlayacak. Genel Kurul&#x27;da Türk Kızılay Kanun Teklifi ile fon tasfiyesi ve yatırımcılara yapılacak ödemelere ilişkin düzenlemenin görüşmeleri yapılacak.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/mecliste-butce-maratonu-basliyor-960453.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="emniyet ve jandarma ekipleri geçmiş yıllara ait 60 cinayeti aydınlattı emniyet ve jandarma ekiplerinin çalışmalarıyla bu sene geçmiş yıllara ait 60 cinayet aydınlatıldı. i̇çişleri bakanı mustafa çiftçi, &quot;cinayet işleyip izini kaybettirdiğini, aradan zaman geçtiği için artık bulunamayacağını düşünenler büyük bir yanılgı içerisinde&quot; mesajını paylaştı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 18 Ekim 2026, 11:08</span>
+        </div>
+        <h3>Emniyet ve jandarma ekipleri geçmiş yıllara ait 60 cinayeti aydınlattı</h3>
+        <p>Emniyet ve jandarma ekiplerinin çalışmalarıyla bu sene geçmiş yıllara ait 60 cinayet aydınlatıldı. İçişleri Bakanı Mustafa Çiftçi, &quot;Cinayet işleyip izini kaybettirdiğini, aradan zaman geçtiği için artık bulunamayacağını düşünenler büyük bir yanılgı içerisinde&quot; mesajını paylaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 18 Ekim 2026, 11:08</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/emniyet-ve-jandarma-ekipleri-gecmis-yillara-ait-60-cinayeti-aydinlatti-960454.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gelecek yıl ulaştırma programlarına 1 trilyon liranın üzerinde ödenek ayrıldı türkiye, gelecek yıl demir yolu ulaşımı, kara yolu ulaşımı, bilgi ve iletişim, deniz yolu ulaşımı ile kombine taşımacılık, lojistik ve tehlikeli mal taşımacılığı programları için 1 trilyon lirayı aşkın harcama yapmayı öngörüyor. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 18 Ekim 2026, 11:48</span>
+        </div>
+        <h3>Gelecek yıl ulaştırma programlarına 1 trilyon liranın üzerinde ödenek ayrıldı</h3>
+        <p>Türkiye, gelecek yıl demir yolu ulaşımı, kara yolu ulaşımı, bilgi ve iletişim, deniz yolu ulaşımı ile kombine taşımacılık, lojistik ve tehlikeli mal taşımacılığı programları için 1 trilyon lirayı aşkın harcama yapmayı öngörüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 18 Ekim 2026, 11:48</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/gelecek-yil-ulastirma-programlarina-1-trilyon-liranin-uzerinde-odenek-ayrildi-960456.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye, gelecek yıl ulaştırma programlarına 1 trilyon liranın üzerinde ödenek ayırdı türkiye, gelecek yıl demir yolu ulaşımı, kara yolu ulaşımı, bilgi ve iletişim, deniz yolu ulaşımı ile kombine taşımacılık, lojistik ve tehlikeli mal taşımacılığı programları için 1 trilyon lirayı aşkın harcama yapmayı öngörüyor. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 18 Ekim 2026, 11:05</span>
+        </div>
+        <h3>Türkiye, gelecek yıl ulaştırma programlarına 1 trilyon liranın üzerinde ödenek ayırdı</h3>
+        <p>Türkiye, gelecek yıl demir yolu ulaşımı, kara yolu ulaşımı, bilgi ve iletişim, deniz yolu ulaşımı ile kombine taşımacılık, lojistik ve tehlikeli mal taşımacılığı programları için 1 trilyon lirayı aşkın harcama yapmayı öngörüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 18 Ekim 2026, 11:05</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiye-gelecek-yil-ulastirma-programlarina-1-trilyon-liranin-uzerinde-odenek-ayirdi/4092435" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trump&#x27;tan i̇ran mesajı: orada biraz daha uzun kalabiliriz abd başkanı donald trump, i̇ran&#x27;a yönelik saldırılarda bu ülkenin nükleer kapasitelerini ortadan kaldırdıklarını savunarak, &quot;orada biraz daha uzun kalabiliriz.&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 18 Ekim 2026, 11:10</span>
+        </div>
+        <h3>Trump&#x27;tan İran mesajı: Orada biraz daha uzun kalabiliriz</h3>
+        <p>ABD Başkanı Donald Trump, İran&#x27;a yönelik saldırılarda bu ülkenin nükleer kapasitelerini ortadan kaldırdıklarını savunarak, &quot;Orada biraz daha uzun kalabiliriz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 18 Ekim 2026, 11:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/trumptan-iran-mesaji-orada-biraz-daha-uzun-kalabiliriz-960457.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;de bir aracın futbol sahasındakilere çarpması sonucu 2 kişi öldü, 11 kişi yaralandı abd&#x27;nin kansas eyaletindeki wichita kentinde bir aracın futbol sahasındakilere çarpması sonucu biri 6 yaşındaki çocuk olmak üzere 2 kişi hayatını kaybetti, 11 kişi yaralandı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 18 Ekim 2026, 09:57</span>
+        </div>
+        <h3>ABD&#x27;de bir aracın futbol sahasındakilere çarpması sonucu 2 kişi öldü, 11 kişi yaralandı</h3>
+        <p>ABD&#x27;nin Kansas eyaletindeki Wichita kentinde bir aracın futbol sahasındakilere çarpması sonucu biri 6 yaşındaki çocuk olmak üzere 2 kişi hayatını kaybetti, 11 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 18 Ekim 2026, 09:57</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abdde-bir-aracin-futbol-sahasindakilere-carpmasi-sonucu-2-kisi-oldu-11-kisi-yaralandi-960449.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="nobel ödüllerinde cinsiyet ayrımı var mı: &#x27;i̇statistiklere göre cevap: evet&#x27; tıp, fizik, kimya ve 1969 yılından bu yana verilen ekonomi gibi bilim alanlarındaki ödüllerde kadınların tarihsel temsiliyeti özellikle düşük. 1901 ve 2026 yılları arasında bu dört disiplinde verilen 769 ödülden yalnızca 30&#x27;u kadınlara verildi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 18 Ekim 2026, 10:04</span>
+        </div>
+        <h3>Nobel ödüllerinde cinsiyet ayrımı var mı: &#x27;İstatistiklere göre cevap: Evet&#x27;</h3>
+        <p>Tıp, fizik, kimya ve 1969 yılından bu yana verilen ekonomi gibi bilim alanlarındaki ödüllerde kadınların tarihsel temsiliyeti özellikle düşük. 1901 ve 2026 yılları arasında bu dört disiplinde verilen 769 ödülden yalnızca 30&#x27;u kadınlara verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 18 Ekim 2026, 10:04</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c63el5jql99po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;nin ticari araç ihracatı 5 milyar doları aştı türkiye&#x27;nin hafif ticari araç, kamyonet ve kamyon grubunu kapsayan &#x27;eşya taşımaya mahsus motorlu taşıtlar&#x27; ihracatı, ocak-eylül döneminde 5 milyar 185 milyon 578 bin dolar oldu. hafif ticari araç, kamyonet ve kamyon ihracatında en çok dış satım birleşik krallık&#x27;a yapıldı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 18 Ekim 2026, 11:12</span>
+        </div>
+        <h3>Türkiye&#x27;nin ticari araç ihracatı 5 milyar doları aştı</h3>
+        <p>Türkiye&#x27;nin hafif ticari araç, kamyonet ve kamyon grubunu kapsayan &#x27;eşya taşımaya mahsus motorlu taşıtlar&#x27; ihracatı, ocak-eylül döneminde 5 milyar 185 milyon 578 bin dolar oldu. Hafif ticari araç, kamyonet ve kamyon ihracatında en çok dış satım Birleşik Krallık&#x27;a yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 18 Ekim 2026, 11:12</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyenin-ticari-arac-ihracati-5-milyar-dolari-asti-960455.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">22 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="meclis&#x27;te bütçe maratonu başlıyor türkiye büyük millet meclisi&#x27;nin gündemi bu hafta da bir hayli yoğun olacak. bütçe maratonu cumhurbaşkanı yardımcısı yılmaz&#x27;ın çarşamba günü plan ve bütçe komisyonunda yapacağı sunumla başlayacak. genel kurul&#x27;da türk kızılay kanun teklifi ile fon tasfiyesi ve yatırımcılara yapılacak ödemelere ilişkin düzenlemenin görüşmeleri yapılacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 18 Ekim 2026, 11:06</span>
+        </div>
+        <h3>Meclis&#x27;te bütçe maratonu başlıyor</h3>
+        <p>Türkiye Büyük Millet Meclisi&#x27;nin gündemi bu hafta da bir hayli yoğun olacak. Bütçe maratonu Cumhurbaşkanı Yardımcısı Yılmaz&#x27;ın çarşamba günü Plan ve Bütçe Komisyonunda yapacağı sunumla başlayacak. Genel Kurul&#x27;da Türk Kızılay Kanun Teklifi ile fon tasfiyesi ve yatırımcılara yapılacak ödemelere ilişkin düzenlemenin görüşmeleri yapılacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 18 Ekim 2026, 11:06</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/mecliste-butce-maratonu-basliyor-960453.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da sel: ayazağa&#x27;da üç, pendik&#x27;te iki kişi kayıp i̇stanbul&#x27;un anadolu yakası&#x27;nda etkili olan yağmur nedeniyle pendik&#x27;te iki kişi sel sularına kapılarak kayboldu. 14 ekim&#x27;de etkili olan yağışta ayazağa&#x27;da da üç kişi kaybolmuştu. kaybolan beş kişinin arama kurtarma çalışmaları sürüyor genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 18 Ekim 2026, 11:24</span>
+        </div>
+        <h3>İstanbul&#x27;da sel: Ayazağa&#x27;da üç, Pendik&#x27;te iki kişi kayıp</h3>
+        <p>İstanbul&#x27;un Anadolu Yakası&#x27;nda etkili olan yağmur nedeniyle Pendik&#x27;te iki kişi sel sularına kapılarak kayboldu. 14 Ekim&#x27;de etkili olan yağışta Ayazağa&#x27;da da üç kişi kaybolmuştu. Kaybolan beş kişinin arama kurtarma çalışmaları sürüyor</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 18 Ekim 2026, 11:24</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9e8l1xvnv40o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bbc araştırması: i̇srail ordusu yüzlerce iç soruşturmasının sonuçlarını kamuoyuna açıklamadı bbc&#x27;nin doğrulama birimi bbc verify, i̇srail ordusunun insanları öldürmek ve yaralamakla suçlandığı 254 olayla ilgili açılan soruşturmaların sonuçlarının kamuoyuna açıklanmadığını tespit etti. bu olaylar, gazze, işgal altındaki batı şeria, lübnan ve i̇srail&#x27;de gerçekleşti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 18 Ekim 2026, 10:05</span>
+        </div>
+        <h3>BBC araştırması: İsrail ordusu yüzlerce iç soruşturmasının sonuçlarını kamuoyuna açıklamadı</h3>
+        <p>BBC&#x27;nin doğrulama birimi BBC Verify, İsrail ordusunun insanları öldürmek ve yaralamakla suçlandığı 254 olayla ilgili açılan soruşturmaların sonuçlarının kamuoyuna açıklanmadığını tespit etti. Bu olaylar, Gazze, işgal altındaki Batı Şeria, Lübnan ve İsrail&#x27;de gerçekleşti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 18 Ekim 2026, 10:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqdjv982nl4eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;a düşen &#x27;rekor&#x27; yağışın sele dönüşmesi nasıl önlenebilirdi? i̇stanbul&#x27;da, 14 ekim&#x27;den beri aralıklı olarak süren yağışlar resmi kayıtların başlamasından bu yana kentte yaşanan en şiddetli hava olayları arasında yerini aldı. bbc türkçe&#x27;ye konuşan uzmanlar yağışın şiddetinden daha çok i̇stanbul&#x27;da kentleşme sorunlarının sellere neden olduğunu söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Ekim 2026, 10:14</span>
+        </div>
+        <h3>İstanbul&#x27;a düşen &#x27;rekor&#x27; yağışın sele dönüşmesi nasıl önlenebilirdi?</h3>
+        <p>İstanbul&#x27;da, 14 Ekim&#x27;den beri aralıklı olarak süren yağışlar resmi kayıtların başlamasından bu yana kentte yaşanan en şiddetli hava olayları arasında yerini aldı. BBC Türkçe&#x27;ye konuşan uzmanlar yağışın şiddetinden daha çok İstanbul&#x27;da kentleşme sorunlarının sellere neden olduğunu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Ekim 2026, 10:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c687zjl55p3qo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nordik dillerde neden &#x27;lütfen&#x27; kelimesi bulunmuyor? seyahat ederken nazik ve saygılı olmak çok önemli bir özellik, ancak &quot;lütfen&quot; kelimesinin bir karşılığının olmadığı bir yerde kendinizi nasıl kibarca ifade edebilirsiniz? peki bu ülkelerde yaşayanlar kaba mı? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 18 Ekim 2026, 10:08</span>
+        </div>
+        <h3>Nordik dillerde neden &#x27;lütfen&#x27; kelimesi bulunmuyor?</h3>
+        <p>Seyahat ederken nazik ve saygılı olmak çok önemli bir özellik, ancak &quot;lütfen&quot; kelimesinin bir karşılığının olmadığı bir yerde kendinizi nasıl kibarca ifade edebilirsiniz? Peki bu ülkelerde yaşayanlar kaba mı?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 18 Ekim 2026, 10:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwn73x7zpr5yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dışişleri bakanlığı, azerbaycan&#x27;ın bağımsızlığını yeniden kazanmasının 35. yılını kutladı dışişleri bakanlığı, azerbaycan&#x27;ın bağımsızlığını yeniden kazanmasının 35. yıl dönümünü kutladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 18 Ekim 2026, 11:33</span>
+        </div>
+        <h3>Dışişleri Bakanlığı, Azerbaycan&#x27;ın bağımsızlığını yeniden kazanmasının 35. yılını kutladı</h3>
+        <p>Dışişleri Bakanlığı, Azerbaycan&#x27;ın bağımsızlığını yeniden kazanmasının 35. yıl dönümünü kutladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 18 Ekim 2026, 11:33</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/disisleri-bakanligi-azerbaycanin-bagimsizligini-yeniden-kazanmasinin-35-yilini-kutladi/4092462" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="uzmanlar, okullarda şiddeti önlemede aile-okul işbirliğinin önemini anlattı uzmanlar, okullarda yaşanan şiddet olaylarının önlenmesinde öğrencilerin davranışlarındaki risk işaretlerinin erken fark edilmesinin ve ebeveynlerle okul yönetimleri arasındaki iletişimin güçlendirilmesinin önemine dikkati çekti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 18 Ekim 2026, 11:14</span>
+        </div>
+        <h3>Uzmanlar, okullarda şiddeti önlemede aile-okul işbirliğinin önemini anlattı</h3>
+        <p>Uzmanlar, okullarda yaşanan şiddet olaylarının önlenmesinde öğrencilerin davranışlarındaki risk işaretlerinin erken fark edilmesinin ve ebeveynlerle okul yönetimleri arasındaki iletişimin güçlendirilmesinin önemine dikkati çekti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 18 Ekim 2026, 11:14</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/uzmanlar-okullarda-siddeti-onlemede-aile-okul-isbirliginin-onemini-anlatti/4092446" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;i̇yilik var&quot;da gönüllü sayısı bir ayda 20 bine ulaştı aile ve sosyal hizmetler bakanlığı tarafından hayata geçirilen &quot;i̇yilik var&quot; ile bir ayda 20 bin vatandaş gönüllülük hareketine dahil oldu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 18 Ekim 2026, 10:42</span>
+        </div>
+        <h3>&quot;İyilik Var&quot;da gönüllü sayısı bir ayda 20 bine ulaştı</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanlığı tarafından hayata geçirilen &quot;İyilik Var&quot; ile bir ayda 20 bin vatandaş gönüllülük hareketine dahil oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 18 Ekim 2026, 10:42</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iyilik-varda-gonullu-sayisi-bir-ayda-20-bine-ulasti/4092417" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="paris&#x27;te ve fransa genelinde protestocular polisle çatıştı bugün fransa genelinde artan yakıt fiyatları, hayat pahalılığı ve kötüleşen kamu hizmetlerine karşı düzenlenen protestolara on binlerce kişi katılıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Ekim 2026, 18:44</span>
+        </div>
+        <h3>Paris&#x27;te ve Fransa genelinde protestocular polisle çatıştı</h3>
+        <p>Bugün Fransa genelinde artan yakıt fiyatları, hayat pahalılığı ve kötüleşen kamu hizmetlerine karşı düzenlenen protestolara on binlerce kişi katılıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Ekim 2026, 18:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw8rzp2e2v5xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="neandertallerin yaşamında şiddet ne kadar yaygındı? arkeologlar, kuzey irak&#x27;taki bir mağarada bulunan, 75 bin yıl önce ölmüş bir neandertal&#x27;in göğsünde açılan yaranın, en eski şiddet kanıtlarından biri olabileceğini söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 18 Ekim 2026, 10:07</span>
+        </div>
+        <h3>Neandertallerin yaşamında şiddet ne kadar yaygındı?</h3>
+        <p>Arkeologlar, Kuzey Irak&#x27;taki bir mağarada bulunan, 75 bin yıl önce ölmüş bir Neandertal&#x27;in göğsünde açılan yaranın, en eski şiddet kanıtlarından biri olabileceğini söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 18 Ekim 2026, 10:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq3dj43dr8vdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;menopozu saklıyorsanız, ihtiyacınız olan yardımı alamıyorsunuz demektir&#x27; neredeyse nüfusun yarısını hayatlarının bir döneminde etkilemesine rağmen, perimenopoz ve menopoz belirtileri utanca ve damgalanmaya yol açıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 8 Mart 2026, 13:44</span>
+        </div>
+        <h3>&#x27;Menopozu saklıyorsanız, ihtiyacınız olan yardımı alamıyorsunuz demektir&#x27;</h3>
+        <p>Neredeyse nüfusun yarısını hayatlarının bir döneminde etkilemesine rağmen, perimenopoz ve menopoz belirtileri utanca ve damgalanmaya yol açıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 8 Mart 2026, 13:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c86vy94e675o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇mamoğlu i̇bb davasındaki savunmasını dördüncü günde tamamladı tutuklandıktan sonra görevden uzaklaştırılan i̇stanbul büyükşehir belediye başkanı ekrem i̇mamoğlu, 14 ekim&#x27;de başladığı i̇bb davasındaki savunmasını dördüncü gününde tamamladı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Ekim 2026, 20:09</span>
+        </div>
+        <h3>İmamoğlu İBB davasındaki savunmasını dördüncü günde tamamladı</h3>
+        <p>Tutuklandıktan sonra görevden uzaklaştırılan İstanbul Büyükşehir Belediye Başkanı Ekrem İmamoğlu, 14 Ekim&#x27;de başladığı İBB davasındaki savunmasını dördüncü gününde tamamladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Ekim 2026, 20:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmlyd2xp1jxwo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="muğla büyükşehir belediye başkanı ahmet aras chp&#x27;den istifa ettiğini açıkladı muğla büyükşehir belediye başkanı ahmet aras 16 ekim&#x27;de sosyal medya üzerinden bir açıklama yaparak chp&#x27;den ayrıldığını ifade etti. aras, &quot;görevimi bağımsız olarak sürdürme kararı aldım&quot; dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 17 Ekim 2026, 11:32</span>
+        </div>
+        <h3>Muğla Büyükşehir Belediye Başkanı Ahmet Aras CHP&#x27;den istifa ettiğini açıkladı</h3>
+        <p>Muğla Büyükşehir Belediye Başkanı Ahmet Aras 16 Ekim&#x27;de sosyal medya üzerinden bir açıklama yaparak CHP&#x27;den ayrıldığını ifade etti. Aras, &quot;Görevimi bağımsız olarak sürdürme kararı aldım&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 17 Ekim 2026, 11:32</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq33x5l3p8vko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="arap koalisyonu: suudi arabistan&#x27;da keşif helikopterinin düşmesi sonucu 2 asker öldü suudi arabistan liderliğindeki arap koalisyonu, ülkenin necran bölgesinde teknik arıza nedeniyle keşif helikopterinin düşmesi sonucu 2 subayın hayatını kaybettiğini duyurdu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 18 Ekim 2026, 11:58</span>
+        </div>
+        <h3>Arap Koalisyonu: Suudi Arabistan&#x27;da keşif helikopterinin düşmesi sonucu 2 asker öldü</h3>
+        <p>Suudi Arabistan liderliğindeki Arap Koalisyonu, ülkenin Necran bölgesinde teknik arıza nedeniyle keşif helikopterinin düşmesi sonucu 2 subayın hayatını kaybettiğini duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 18 Ekim 2026, 11:58</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/arap-koalisyonu-suudi-arabistanda-kesif-helikopterinin-dusmesi-sonucu-2-asker-oldu-960458.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gelecek yılın bütçesine pay gelirlerinden 778,9 milyar lira katkı sağlanacak devlet yeni yılda kişi ve kurumlardan alınan paylardan 778 milyar 937 milyon 447 bin lira gelir elde etmeyi hedefliyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 18 Ekim 2026, 11:01</span>
+        </div>
+        <h3>Gelecek yılın bütçesine pay gelirlerinden 778,9 milyar lira katkı sağlanacak</h3>
+        <p>Devlet yeni yılda kişi ve kurumlardan alınan paylardan 778 milyar 937 milyon 447 bin lira gelir elde etmeyi hedefliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 18 Ekim 2026, 11:01</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/gelecek-yilin-butcesine-pay-gelirlerinden-7789-milyar-lira-katki-saglanacak-960452.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sanatçı süleyman saim tekcan vefat etti 2022&#x27;de cumhurbaşkanlığı kültür ve sanat büyük ödülü&#x27;ne layık görülen ressam, sinema oyuncusu ve baskı sanatçısı süleyman saim tekcan, 86 yaşında hayatını kaybetti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 18 Ekim 2026, 10:53</span>
+        </div>
+        <h3>Sanatçı Süleyman Saim Tekcan vefat etti</h3>
+        <p>2022&#x27;de Cumhurbaşkanlığı Kültür ve Sanat Büyük Ödülü&#x27;ne layık görülen ressam, sinema oyuncusu ve baskı sanatçısı Süleyman Saim Tekcan, 86 yaşında hayatını kaybetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 18 Ekim 2026, 10:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/kultur-sanat/sanatci-suleyman-saim-tekcan-vefat-etti-960451.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da barajların doluluk oranı yüzde 50&#x27;yi geçti i̇stanbul&#x27;a su sağlayan barajlardaki ortalama doluluk oranı, son günlerde rekor miktarda görülen sağanak yağmur etkisiyle 4 günde 14,37 puan artarak yüzde 52,43 seviyesine yükseldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 18 Ekim 2026, 10:43</span>
+        </div>
+        <h3>İstanbul&#x27;da barajların doluluk oranı yüzde 50&#x27;yi geçti</h3>
+        <p>İstanbul&#x27;a su sağlayan barajlardaki ortalama doluluk oranı, son günlerde rekor miktarda görülen sağanak yağmur etkisiyle 4 günde 14,37 puan artarak yüzde 52,43 seviyesine yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 18 Ekim 2026, 10:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-barajlarin-doluluk-orani-yuzde-50yi-gecti-960450.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kocaeli&#x27;de sağanağın ardından bazı bölgelerde tarım arazileri ve yollar su altında kaldı kocaeli&#x27;de gece boyunca etkili olan sağanağın ardından bazı bölgelerde tarım arazileri, yollar ve evlerin bahçeleri suyla doldu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 18 Ekim 2026, 11:20</span>
+        </div>
+        <h3>Kocaeli&#x27;de sağanağın ardından bazı bölgelerde tarım arazileri ve yollar su altında kaldı</h3>
+        <p>Kocaeli&#x27;de gece boyunca etkili olan sağanağın ardından bazı bölgelerde tarım arazileri, yollar ve evlerin bahçeleri suyla doldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 18 Ekim 2026, 11:20</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kocaelide-saganagin-ardindan-bazi-bolgelerde-tarim-arazileri-ve-yollar-su-altinda-kaldi/4092451" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sakarya&#x27;da sağanak etkili oldu sakarya&#x27;da sağanak hayatı olumsuz etkiledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 18 Ekim 2026, 11:11</span>
+        </div>
+        <h3>Sakarya&#x27;da sağanak etkili oldu</h3>
+        <p>Sakarya&#x27;da sağanak hayatı olumsuz etkiledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 18 Ekim 2026, 11:11</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sakaryada-saganak-etkili-oldu/4092442" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tbmm&#x27;de tasfiyesine karar verilen bazı yatırım fonlarına ilişkin düzenlemeleri içeren kanun teklifi ele alınacak genel kurul&#x27;da türk kızılay kanunu teklifi&#x27;nin görüşmelerine devam edilecek, tasfiyesine karar verilen bazı yatırım fonlarına ilişkin düzenlemeleri içeren kanun teklifi ele alınacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 18 Ekim 2026, 11:01</span>
+        </div>
+        <h3>TBMM&#x27;de tasfiyesine karar verilen bazı yatırım fonlarına ilişkin düzenlemeleri içeren kanun teklifi ele alınacak</h3>
+        <p>Genel Kurul&#x27;da Türk Kızılay Kanunu Teklifi&#x27;nin görüşmelerine devam edilecek, tasfiyesine karar verilen bazı yatırım fonlarına ilişkin düzenlemeleri içeren kanun teklifi ele alınacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 18 Ekim 2026, 11:01</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tbmmde-tasfiyesine-karar-verilen-bazi-yatirim-fonlarina-iliskin-duzenlemeleri-iceren-kanun-teklifi-ele-alinacak/4092431" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sakarya ve düzce&#x27;nin yüksek kesimlerine kar yağdı sakarya&#x27;nın hendek ilçesindeki yaylalar ile düzce&#x27;nin yüksek kesimleri kar yağışının etkisi ile beyaza büründü. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 18 Ekim 2026, 10:56</span>
+        </div>
+        <h3>Sakarya ve Düzce&#x27;nin yüksek kesimlerine kar yağdı</h3>
+        <p>Sakarya&#x27;nın Hendek ilçesindeki yaylalar ile Düzce&#x27;nin yüksek kesimleri kar yağışının etkisi ile beyaza büründü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 18 Ekim 2026, 10:56</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sakarya-ve-duzcenin-yuksek-kesimlerine-kar-yagdi/4092426" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kars&#x27;ta arizona kanyonlarını andıran bayam kızıllıkları doğaseverlerin yeni rotası kars&#x27;ın kağızman ilçesindeki bayam kızıllıkları, kızıl tonlardaki kayaları ve sıra dışı doğal oluşumlarıyla doğa ve fotoğraf tutkunlarının ilgisini çekiyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 18 Ekim 2026, 10:21</span>
+        </div>
+        <h3>Kars&#x27;ta Arizona kanyonlarını andıran Bayam Kızıllıkları doğaseverlerin yeni rotası</h3>
+        <p>Kars&#x27;ın Kağızman ilçesindeki Bayam Kızıllıkları, kızıl tonlardaki kayaları ve sıra dışı doğal oluşumlarıyla doğa ve fotoğraf tutkunlarının ilgisini çekiyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 18 Ekim 2026, 10:21</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/karsta-arizona-kanyonlarini-andiran-bayam-kizilliklari-dogaseverlerin-yeni-rotasi/4092405" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
