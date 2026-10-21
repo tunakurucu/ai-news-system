@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">21 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">21 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 3</span><span class="stat-item"><strong>dünya</strong> 8</span><span class="stat-item"><strong>genel</strong> 16</span><span class="stat-item"><strong>gümrük</strong> 1</span><span class="stat-item"><strong>teknoloji</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>Kanada&#x27;dan Türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret: &#x27;Yeni bir stratejik ilişkinin başlangıcı&#x27;</h3>
+        <p>Mark Carney bugün Kanada&#x27;dan Türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret gerçekleştiren ilk lider olacak. Ziyaret hem sembolik hem de çok kapsamlı gündemi nedeniyle Türkiye-Kanada ilişkilerinde tarihi bir dönüm noktası olarak değerlendiriliyor. İki ülkenin ekonomi ve savunma alanlarında önemli anlaşmalar imzalaması bekleniyor.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 21 Ekim 2026, 00:39</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c5m2dz18pr4ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 21 Ekim 2026, 12:30</span>
+            </div>
+            <h3>Deprem bölgesindeki 11 ilin ihracatı 15,6 milyar doları aştı</h3>
+            <p>Deprem bölgesindeki 11 ilin ocak-eylül dönemi ihracatı, 2026&#x27;da geçen yılın aynı dönemine göre 1,42 milyar dolar artış gösterdi. Gaziantep yaklaşık 8 milyar dolarla ilk sırada yer alırken, Elazığ&#x27;ın ihracatı yüzde 193,3 yükseldi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/deprem-bolgesindeki-11-ilin-ihracati-156-milyar-dolari-asti-960751.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 21 Ekim 2026, 10:42</span>
+            </div>
+            <h3>Bakan Gürlek: İsrailli yasa dışı yerleşimcilerin vandallıklarına &#x27;Dur&#x27; diyen küresel adalet sistemine ihtiyacımız var</h3>
+            <p>Bakan Gürlek, &quot;OECD ülkelerinin, Gazze&#x27;de yerinden edilen 1,5 milyon insanın haklarını savunmak için en gür sesle haykırması gerekmekte. İsrailli yasa dışı yerleşimcilerin vandallıklarına &#x27;Dur&#x27; diyen küresel adalet sistemine ihtiyacımız var.&quot; dedi.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-gurlek-israilli-yasa-disi-yerlesimcilerin-vandalliklarina-dur-diyen-kuresel-adalet-sistemine-ihtiyacimiz-var/4095360" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 21 Ekim 2026, 11:35</span>
+            </div>
+            <h3>MSB personeline patentli buluşları için kıdemli albay aylığının 14 katına kadar ödül</h3>
+            <p>Milli Savunma Bakanlığı (MSB) personeline, Türk Silahlı Kuvvetleri (TSK) ihtiyaçlarına yönelik geliştirdikleri ürün ve projelere patent alınması durumunda, kıdemli albay aylığının 14 katına kadar fikri gayret ödülü verilebilecek.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/msb-personeline-patentli-buluslari-icin-kidemli-albay-ayliginin-14-katina-kadar-odul/4095467" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 21 Ekim 2026, 10:12</span>
+            </div>
+            <h3>Zelenskiy ile görüşen ABD özel temsilcisi Witkoff, Rusya&#x27;da Putin ile biraraya gelecek</h3>
+            <p>Steve Witkoff, Rusya&#x27;nın Ukrayna ile yıllardır süren çatışmasını sona erdirmeye yönelik önerileri görüşmek üzere St. Petersburg&#x27;a gitti. Witkoff bundan önce Ukrayna Devlet Başkanı Volodimir Zelenskiy ile Oslo&#x27;da görüştü. Bir ABD yetkilisi görüşmeleri &quot;yapıcı&quot; olarak nitelendirdi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cm8xzrxwggv8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="kanada&#x27;dan türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret: &#x27;yeni bir stratejik ilişkinin başlangıcı&#x27; mark carney bugün kanada&#x27;dan türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret gerçekleştiren ilk lider olacak. ziyaret hem sembolik hem de çok kapsamlı gündemi nedeniyle türkiye-kanada ilişkilerinde tarihi bir dönüm noktası olarak değerlendiriliyor. i̇ki ülkenin ekonomi ve savunma alanlarında önemli anlaşmalar imzalaması bekleniyor. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 21 Ekim 2026, 00:39</span>
+        </div>
+        <h3>Kanada&#x27;dan Türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret: &#x27;Yeni bir stratejik ilişkinin başlangıcı&#x27;</h3>
+        <p>Mark Carney bugün Kanada&#x27;dan Türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret gerçekleştiren ilk lider olacak. Ziyaret hem sembolik hem de çok kapsamlı gündemi nedeniyle Türkiye-Kanada ilişkilerinde tarihi bir dönüm noktası olarak değerlendiriliyor. İki ülkenin ekonomi ve savunma alanlarında önemli anlaşmalar imzalaması bekleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Ekim 2026, 00:39</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5m2dz18pr4ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="deprem bölgesindeki 11 ilin ihracatı 15,6 milyar doları aştı deprem bölgesindeki 11 ilin ocak-eylül dönemi ihracatı, 2026&#x27;da geçen yılın aynı dönemine göre 1,42 milyar dolar artış gösterdi. gaziantep yaklaşık 8 milyar dolarla ilk sırada yer alırken, elazığ&#x27;ın ihracatı yüzde 193,3 yükseldi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 21 Ekim 2026, 12:30</span>
+        </div>
+        <h3>Deprem bölgesindeki 11 ilin ihracatı 15,6 milyar doları aştı</h3>
+        <p>Deprem bölgesindeki 11 ilin ocak-eylül dönemi ihracatı, 2026&#x27;da geçen yılın aynı dönemine göre 1,42 milyar dolar artış gösterdi. Gaziantep yaklaşık 8 milyar dolarla ilk sırada yer alırken, Elazığ&#x27;ın ihracatı yüzde 193,3 yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Ekim 2026, 12:30</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/deprem-bolgesindeki-11-ilin-ihracati-156-milyar-dolari-asti-960751.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul merkezli yasa dışı &quot;üreme hücresi&quot; ticareti soruşturmasında 5 zanlı daha yakalandı i̇stanbul merkezli 14 ilde düzenlenen yasa dışı &quot;üreme hücresi&quot; ticaretine yönelik operasyonda 5 şüpheli daha yakalanırken gözaltı sayısı 44&#x27;e yükseldi. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Ekim 2026, 11:29</span>
+        </div>
+        <h3>İstanbul merkezli yasa dışı &quot;üreme hücresi&quot; ticareti soruşturmasında 5 zanlı daha yakalandı</h3>
+        <p>İstanbul merkezli 14 ilde düzenlenen yasa dışı &quot;üreme hücresi&quot; ticaretine yönelik operasyonda 5 şüpheli daha yakalanırken gözaltı sayısı 44&#x27;e yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Ekim 2026, 11:29</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbul-merkezli-yasa-disi-ureme-hucresi-ticareti-sorusturmasinda-5-zanli-daha-yakalandi/4095450" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">8 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan gürlek: i̇srailli yasa dışı yerleşimcilerin vandallıklarına &#x27;dur&#x27; diyen küresel adalet sistemine ihtiyacımız var bakan gürlek, &quot;oecd ülkelerinin, gazze&#x27;de yerinden edilen 1,5 milyon insanın haklarını savunmak için en gür sesle haykırması gerekmekte. i̇srailli yasa dışı yerleşimcilerin vandallıklarına &#x27;dur&#x27; diyen küresel adalet sistemine ihtiyacımız var.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Ekim 2026, 10:42</span>
+        </div>
+        <h3>Bakan Gürlek: İsrailli yasa dışı yerleşimcilerin vandallıklarına &#x27;Dur&#x27; diyen küresel adalet sistemine ihtiyacımız var</h3>
+        <p>Bakan Gürlek, &quot;OECD ülkelerinin, Gazze&#x27;de yerinden edilen 1,5 milyon insanın haklarını savunmak için en gür sesle haykırması gerekmekte. İsrailli yasa dışı yerleşimcilerin vandallıklarına &#x27;Dur&#x27; diyen küresel adalet sistemine ihtiyacımız var.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Ekim 2026, 10:42</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-gurlek-israilli-yasa-disi-yerlesimcilerin-vandalliklarina-dur-diyen-kuresel-adalet-sistemine-ihtiyacimiz-var/4095360" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb personeline patentli buluşları için kıdemli albay aylığının 14 katına kadar ödül milli savunma bakanlığı (msb) personeline, türk silahlı kuvvetleri (tsk) ihtiyaçlarına yönelik geliştirdikleri ürün ve projelere patent alınması durumunda, kıdemli albay aylığının 14 katına kadar fikri gayret ödülü verilebilecek. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Ekim 2026, 11:35</span>
+        </div>
+        <h3>MSB personeline patentli buluşları için kıdemli albay aylığının 14 katına kadar ödül</h3>
+        <p>Milli Savunma Bakanlığı (MSB) personeline, Türk Silahlı Kuvvetleri (TSK) ihtiyaçlarına yönelik geliştirdikleri ürün ve projelere patent alınması durumunda, kıdemli albay aylığının 14 katına kadar fikri gayret ödülü verilebilecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Ekim 2026, 11:35</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/msb-personeline-patentli-buluslari-icin-kidemli-albay-ayliginin-14-katina-kadar-odul/4095467" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="zelenskiy ile görüşen abd özel temsilcisi witkoff, rusya&#x27;da putin ile biraraya gelecek steve witkoff, rusya&#x27;nın ukrayna ile yıllardır süren çatışmasını sona erdirmeye yönelik önerileri görüşmek üzere st. petersburg&#x27;a gitti. witkoff bundan önce ukrayna devlet başkanı volodimir zelenskiy ile oslo&#x27;da görüştü. bir abd yetkilisi görüşmeleri &quot;yapıcı&quot; olarak nitelendirdi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 21 Ekim 2026, 10:12</span>
+        </div>
+        <h3>Zelenskiy ile görüşen ABD özel temsilcisi Witkoff, Rusya&#x27;da Putin ile biraraya gelecek</h3>
+        <p>Steve Witkoff, Rusya&#x27;nın Ukrayna ile yıllardır süren çatışmasını sona erdirmeye yönelik önerileri görüşmek üzere St. Petersburg&#x27;a gitti. Witkoff bundan önce Ukrayna Devlet Başkanı Volodimir Zelenskiy ile Oslo&#x27;da görüştü. Bir ABD yetkilisi görüşmeleri &quot;yapıcı&quot; olarak nitelendirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Ekim 2026, 10:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm8xzrxwggv8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;nin uzay ve havacılık faaliyetleri için 100 milyar liraya yakın ödenek türkiye&#x27;nin uzay ve havacılık faaliyetlerinin geliştirilmesi amacıyla 2027&#x27;de 24 milyar 587 milyon lira, 2028&#x27;de 30 milyar 597 milyon lira, 2029&#x27;da 36 milyar 953 milyon lira olmak üzere gelecek 3 yılda 100 milyar liraya yakın kaynak kullanılması öngörülüyor. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 21 Ekim 2026, 12:25</span>
+        </div>
+        <h3>Türkiye&#x27;nin uzay ve havacılık faaliyetleri için 100 milyar liraya yakın ödenek</h3>
+        <p>Türkiye&#x27;nin uzay ve havacılık faaliyetlerinin geliştirilmesi amacıyla 2027&#x27;de 24 milyar 587 milyon lira, 2028&#x27;de 30 milyar 597 milyon lira, 2029&#x27;da 36 milyar 953 milyon lira olmak üzere gelecek 3 yılda 100 milyar liraya yakın kaynak kullanılması öngörülüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Ekim 2026, 12:25</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/turkiyenin-uzay-ve-havacilik-faaliyetleri-icin-100-milyar-liraya-yakin-odenek-960750.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rusya&#x27;dan abd&#x27;ye dizel taşıyan ilk tankerin yarın yola çıkması planlanıyor rusya başbakan yardımcısı aleksandr novak, abd&#x27;ye dizel taşıyacak ilk tankerin yarın limandan hareket edeceğini söyledi.​​​​​​​ dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 21 Ekim 2026, 12:09</span>
+        </div>
+        <h3>Rusya&#x27;dan ABD&#x27;ye dizel taşıyan ilk tankerin yarın yola çıkması planlanıyor</h3>
+        <p>Rusya Başbakan Yardımcısı Aleksandr Novak, ABD&#x27;ye dizel taşıyacak ilk tankerin yarın limandan hareket edeceğini söyledi.​​​​​​​</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Ekim 2026, 12:09</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/rusyadan-abdye-dizel-tasiyan-ilk-tankerin-yarin-yola-cikmasi-planlaniyor-960749.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan güler, katarlı mevkidaşı ile görüştü milli savunma bakanı yaşar güler, katar başbakan yardımcısı ve savunma bakanı suud bin abdurrahman al sani ile bir araya geldi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 21 Ekim 2026, 11:45</span>
+        </div>
+        <h3>Bakan Güler, Katarlı mevkidaşı ile görüştü</h3>
+        <p>Milli Savunma Bakanı Yaşar Güler, Katar Başbakan Yardımcısı ve Savunma Bakanı Suud bin Abdurrahman Al Sani ile bir araya geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Ekim 2026, 11:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-guler-katarli-mevkidasi-ile-gorustu-960744.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milli savunma bakanı güler, katarlı mevkidaşı al sani ile görüştü milli savunma bakanı yaşar güler, katar başbakan yardımcısı ve savunma bakanı suud bin abdurrahman al sani ile bir araya geldi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Ekim 2026, 11:48</span>
+        </div>
+        <h3>Milli Savunma Bakanı Güler, Katarlı mevkidaşı Al Sani ile görüştü</h3>
+        <p>Milli Savunma Bakanı Yaşar Güler, Katar Başbakan Yardımcısı ve Savunma Bakanı Suud bin Abdurrahman Al Sani ile bir araya geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Ekim 2026, 11:48</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/milli-savunma-bakani-guler-katarli-mevkidasi-al-sani-ile-gorustu/4095482" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="anayasa mahkemesi başkanlığı için seçim süreci yarın başlıyor anayasa mahkemesi (aym) başkanı kadir özkaya&#x27;nın görev süresinin 22 aralık&#x27;ta dolacak olması nedeniyle, başkanlık seçimi için süreç yarın başlıyor. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Ekim 2026, 11:09</span>
+        </div>
+        <h3>Anayasa Mahkemesi Başkanlığı için seçim süreci yarın başlıyor</h3>
+        <p>Anayasa Mahkemesi (AYM) Başkanı Kadir Özkaya&#x27;nın görev süresinin 22 Aralık&#x27;ta dolacak olması nedeniyle, başkanlık seçimi için süreç yarın başlıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Ekim 2026, 11:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/anayasa-mahkemesi-baskanligi-icin-secim-sureci-yarin-basliyor/4095417" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">16 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="emine erdoğan: gazze&#x27;deki 1 milyondan fazla çocuk, çocuk refahından haklarını alabilmenin hayaliyle yaşıyor emine erdoğan, &quot;bugün gazze&#x27;deki 1 milyondan fazla çocuk, çocuk refahından haklarını alabilmenin hayaliyle yaşıyor. unutmayalım ki kimsenin geride kalmadığı bir dünya ancak savaş sirenleri sustuğunda mümkün olabilir.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Ekim 2026, 12:33</span>
+        </div>
+        <h3>Emine Erdoğan: Gazze&#x27;deki 1 milyondan fazla çocuk, çocuk refahından haklarını alabilmenin hayaliyle yaşıyor</h3>
+        <p>Emine Erdoğan, &quot;Bugün Gazze&#x27;deki 1 milyondan fazla çocuk, çocuk refahından haklarını alabilmenin hayaliyle yaşıyor. Unutmayalım ki kimsenin geride kalmadığı bir dünya ancak savaş sirenleri sustuğunda mümkün olabilir.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Ekim 2026, 12:33</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/emine-erdogan-gazzedeki-1-milyondan-fazla-cocuk-cocuk-refahindan-haklarini-alabilmenin-hayaliyle-yasiyor/4095560" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bm&#x27;nin 1,5 derece raporunda türkiye ile ilgili hangi uyarılar var? birleşmiş milletler 21 ekim&#x27;de yayımladığı kritik uyarıda, 1,5 derece eşiğiyle ilgili acilen ve sert önlemler çağrısında bulundu. birleşmiş milletler çevre programı&#x27;nın (unep) emissions gap report 2026 raporu, ülkelerin açıkladığı iklim hedefleri ile ülkelerin gerçekte neden olduğu sera gazı salımları arasında büyük bir uçurum olduğunu söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Ekim 2026, 09:59</span>
+        </div>
+        <h3>BM&#x27;nin 1,5 derece raporunda Türkiye ile ilgili hangi uyarılar var?</h3>
+        <p>Birleşmiş Milletler 21 Ekim&#x27;de yayımladığı kritik uyarıda, 1,5 derece eşiğiyle ilgili acilen ve sert önlemler çağrısında bulundu. Birleşmiş Milletler Çevre Programı&#x27;nın (UNEP) Emissions Gap Report 2026 raporu, ülkelerin açıkladığı iklim hedefleri ile ülkelerin gerçekte neden olduğu sera gazı salımları arasında büyük bir uçurum olduğunu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Ekim 2026, 09:59</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwg7xd7180e2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇talya&#x27;da gösteriler sonrası kararname: reşit olmayanlara gözaltı, milano&#x27;ya 500 ek asker i̇talya&#x27;da başta milano olmak üzere bazı kentlerde geçen hafta sonu hayat pahalılığına karşı yapılan gösterilerde yaşanan şiddet olaylarının ardından hükümet yeni bir kararnameyi kabul etti. yeni tedbirler arasında 14-18 yaş arası çocukların da gözaltına alınması ve olası hasarların bedelini ailelerinin ödemesi de var. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Ekim 2026, 22:14</span>
+        </div>
+        <h3>İtalya&#x27;da gösteriler sonrası kararname: Reşit olmayanlara gözaltı, Milano&#x27;ya 500 ek asker</h3>
+        <p>İtalya&#x27;da başta Milano olmak üzere bazı kentlerde geçen hafta sonu hayat pahalılığına karşı yapılan gösterilerde yaşanan şiddet olaylarının ardından hükümet yeni bir kararnameyi kabul etti. Yeni tedbirler arasında 14-18 yaş arası çocukların da gözaltına alınması ve olası hasarların bedelini ailelerinin ödemesi de var.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Ekim 2026, 22:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cked35py829zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="arnavutluk&#x27;ta başbakanın istifasını isteyen protestocular yedinci günde de polisle çatıştı arnavutluk&#x27;ta başbakanın istifasını isteyen göstericiler, hükümet binalarının ateşe verildiği protestoların yedinci gününde çevik kuvvet polisiyle çatıştı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Ekim 2026, 13:11</span>
+        </div>
+        <h3>Arnavutluk&#x27;ta başbakanın istifasını isteyen protestocular yedinci günde de polisle çatıştı</h3>
+        <p>Arnavutluk&#x27;ta başbakanın istifasını isteyen göstericiler, hükümet binalarının ateşe verildiği protestoların yedinci gününde çevik kuvvet polisiyle çatıştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Ekim 2026, 13:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwr7yz0xvl4eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="chp kurultay ceza davasında mütalaa açıklandı ankara’da chp’nin 38’inci olağan kurultayı’na ilişkin usulsüzlük iddialarıyla açılan davada, savcı mütalaasını açıkladı. duruşma, 11 kasım’a ertelendi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 21 Ekim 2026, 12:08</span>
+        </div>
+        <h3>CHP kurultay ceza davasında mütalaa açıklandı</h3>
+        <p>Ankara’da CHP’nin 38’inci Olağan Kurultayı’na ilişkin usulsüzlük iddialarıyla açılan davada, savcı mütalaasını açıkladı. Duruşma, 11 Kasım’a ertelendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Ekim 2026, 12:08</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/chp-kurultay-ceza-davasinda-mutalaa-aciklandi-960748.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yarısı bizden kampanyası ile dönüşümü tamamlanan konut sayısı 123 bini aştı i̇stanbul&#x27;da kentsel dönüşümü hızlandırmak amacıyla hayata geçirilen &quot;yarısı bizden kampanyası&quot; kapsamında dönüşümü tamamlanan bağımsız bölüm sayısı, 22 eylül&#x27;den bu yana 5 bin 482 artarak 123 bin 396&#x27;ya yükseldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 21 Ekim 2026, 12:01</span>
+        </div>
+        <h3>Yarısı Bizden Kampanyası ile dönüşümü tamamlanan konut sayısı 123 bini aştı</h3>
+        <p>İstanbul&#x27;da kentsel dönüşümü hızlandırmak amacıyla hayata geçirilen &quot;Yarısı Bizden Kampanyası&quot; kapsamında dönüşümü tamamlanan bağımsız bölüm sayısı, 22 Eylül&#x27;den bu yana 5 bin 482 artarak 123 bin 396&#x27;ya yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Ekim 2026, 12:01</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/yarisi-bizden-kampanyasi-ile-donusumu-tamamlanan-konut-sayisi-123-bini-asti-960747.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="uşak&#x27;ta fabrika yangını: gökyüzü siyaha büründü uşak&#x27;ta tekstil geri dönüşüm fabrikasında yangın çıktı. i̇tfaiye ekiplerinin müdahalesi sürerken gökyüzü siyah dumanlarla kaplandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 21 Ekim 2026, 12:00</span>
+        </div>
+        <h3>Uşak&#x27;ta fabrika yangını: Gökyüzü siyaha büründü</h3>
+        <p>Uşak&#x27;ta tekstil geri dönüşüm fabrikasında yangın çıktı. İtfaiye ekiplerinin müdahalesi sürerken gökyüzü siyah dumanlarla kaplandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Ekim 2026, 12:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/usakta-fabrika-yangini-gokyuzu-siyaha-burundu-960746.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, grup toplantısında konuşuyor cumhurbaşkanı ve ak parti genel başkanı recep tayyip erdoğan, partisinin tbmm grup toplantısında konuşuyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 21 Ekim 2026, 11:48</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, grup toplantısında konuşuyor</h3>
+        <p>Cumhurbaşkanı ve AK Parti Genel Başkanı Recep Tayyip Erdoğan, partisinin TBMM grup toplantısında konuşuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Ekim 2026, 11:48</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-grup-toplantisinda-konusuyor-960745.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gürültü tartışmasında komşusunu öldüren sanığa müebbet hapis istemi i̇stanbul&#x27;un kağıthane ilçesinde gürültü nedeniyle yaşanan tartışmada komşusu rıdvan çevik&#x27;i silahla vurarak öldürdüğü belirtilen yusuf avşar hakkında müebbet hapis ve 2 yıldan 4 yıla kadar hapis cezası istemiyle hazırlanan iddianame kabul edildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 21 Ekim 2026, 11:41</span>
+        </div>
+        <h3>Gürültü tartışmasında komşusunu öldüren sanığa müebbet hapis istemi</h3>
+        <p>İstanbul&#x27;un Kağıthane ilçesinde gürültü nedeniyle yaşanan tartışmada komşusu Rıdvan Çevik&#x27;i silahla vurarak öldürdüğü belirtilen Yusuf Avşar hakkında müebbet hapis ve 2 yıldan 4 yıla kadar hapis cezası istemiyle hazırlanan iddianame kabul edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Ekim 2026, 11:41</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/gurultu-tartismasinda-komsusunu-olduren-saniga-muebbet-hapis-istemi-960743.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="canli - cumhurbaşkanı erdoğan konuşuyor cumhurbaşkanı erdoğan, ak parti tbmm grup toplantısı&#x27;nda konuşuyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Ekim 2026, 09:29</span>
+        </div>
+        <h3>CANLI - Cumhurbaşkanı Erdoğan konuşuyor</h3>
+        <p>Cumhurbaşkanı Erdoğan, AK Parti TBMM Grup Toplantısı&#x27;nda konuşuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Ekim 2026, 09:29</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/canli-cumhurbaskani-erdogan-konusuyor/4095262" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da &quot;yarısı bizden&quot; ile bir ayda 5 bin 482 bağımsız bölümün daha dönüşümü tamamlandı i̇stanbul&#x27;da kentsel dönüşümü hızlandırmak amacıyla hayata geçirilen &quot;yarısı bizden kampanyası&quot; kapsamında dönüşümü tamamlanan bağımsız bölüm sayısı, 22 eylül&#x27;den bu yana 5 bin 482 artarak 123 bin 396&#x27;ya yükseldi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Ekim 2026, 11:12</span>
+        </div>
+        <h3>İstanbul&#x27;da &quot;Yarısı Bizden&quot; ile bir ayda 5 bin 482 bağımsız bölümün daha dönüşümü tamamlandı</h3>
+        <p>İstanbul&#x27;da kentsel dönüşümü hızlandırmak amacıyla hayata geçirilen &quot;Yarısı Bizden Kampanyası&quot; kapsamında dönüşümü tamamlanan bağımsız bölüm sayısı, 22 Eylül&#x27;den bu yana 5 bin 482 artarak 123 bin 396&#x27;ya yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Ekim 2026, 11:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-yarisi-bizden-ile-bir-ayda-5-bin-482-bagimsiz-bolumun-daha-donusumu-tamamlandi/4095422" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon soruşturmasında 26 gözaltı, nusret altınbaş hakkında yakalama kararı i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen fon soruşturması kapsamında 31 kişi hakkında daha gözaltı kararı verildi. 26 kişi gözaltına alındı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Ekim 2026, 12:18</span>
+        </div>
+        <h3>Fon soruşturmasında 26 gözaltı, Nusret Altınbaş hakkında yakalama kararı</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen fon soruşturması kapsamında 31 kişi hakkında daha gözaltı kararı verildi. 26 kişi gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Ekim 2026, 12:18</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c574pjl4l40no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gözaltına alınan gazeteci i̇smail arı adliyeye sevk edildi birgün gazetesi, gözaltına alınan muhabiri i̇smail arı&#x27;nın 21 ekim sabah saatlerinde adliyeye sevk edildiğini bildirdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Ekim 2026, 11:59</span>
+        </div>
+        <h3>Gözaltına alınan gazeteci İsmail Arı adliyeye sevk edildi</h3>
+        <p>BirGün gazetesi, gözaltına alınan muhabiri İsmail Arı&#x27;nın 21 Ekim sabah saatlerinde adliyeye sevk edildiğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Ekim 2026, 11:59</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck20re4212ylo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mustafa sarıgül: i̇ddialar yalan, ağırel’in tutuklamasından üzgünüm yeni parti erzincan milletvekili mustafa sarıgül, &quot;suçtan kaynaklanan mal varlığı değerlerini aklama&quot; iddiasıyla yürütülen soruşturmada ailesi ve kendisi hakkındaki iddiaları yalanladı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Ekim 2026, 12:24</span>
+        </div>
+        <h3>Mustafa Sarıgül: İddialar yalan, Ağırel’in tutuklamasından üzgünüm</h3>
+        <p>Yeni Parti Erzincan Milletvekili Mustafa Sarıgül, &quot;suçtan kaynaklanan mal varlığı değerlerini aklama&quot; iddiasıyla yürütülen soruşturmada ailesi ve kendisi hakkındaki iddiaları yalanladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Ekim 2026, 12:24</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmn04q2lnnrxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meclis&#x27;e sunulan 16 maddelik mekke i̇ttifakı anlaşması&#x27;nın içeriği ne? türkiye, pakistan ve suudi arabistan arasında imzalanan mekke i̇ttifakı anlaşması&#x27;na dair kanun teklifi türkiye büyük millet meclisi başkanlığına sunuldu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Ekim 2026, 10:27</span>
+        </div>
+        <h3>Meclis&#x27;e sunulan 16 maddelik Mekke İttifakı Anlaşması&#x27;nın içeriği ne?</h3>
+        <p>Türkiye, Pakistan ve Suudi Arabistan arasında imzalanan Mekke İttifakı Anlaşması&#x27;na dair kanun teklifi Türkiye Büyük Millet Meclisi Başkanlığına sunuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Ekim 2026, 10:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwj0l71r8lq9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bolu belediyesi davasında tanju özcan&#x27;a yedi yıl hapis cezası bolu belediyesi&#x27;ne yönelik davadan tutuklu yargılanan tanju özcan, 7 yıl 3 ay 15 gün hapis cezasına çarptırıldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Ekim 2026, 19:29</span>
+        </div>
+        <h3>Bolu Belediyesi davasında Tanju Özcan&#x27;a yedi yıl hapis cezası</h3>
+        <p>Bolu Belediyesi&#x27;ne yönelik davadan tutuklu yargılanan Tanju Özcan, 7 yıl 3 ay 15 gün hapis cezasına çarptırıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Ekim 2026, 19:29</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqlg9n5pwyqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye&#x27;nin kültürel mirası sınır kapılarında korundu i̇psala ve kapıkule gümrük kapılarında gerçekleştirilen operasyonlarla 7 bini aşkın kültür varlığının yurt dışına kaçırılması önlendi. her iki operasyonda ele geçirilen 7 bini aşkın esere el konulurken olaylarla ilgili adli soruşturma başlatıldı. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 21 Ekim 2026, 11:30</span>
+        </div>
+        <h3>Türkiye&#x27;nin kültürel mirası sınır kapılarında korundu</h3>
+        <p>İpsala ve Kapıkule gümrük kapılarında gerçekleştirilen operasyonlarla 7 bini aşkın kültür varlığının yurt dışına kaçırılması önlendi. Her iki operasyonda ele geçirilen 7 bini aşkın esere el konulurken olaylarla ilgili adli soruşturma başlatıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 21 Ekim 2026, 11:30</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/kultur-sanat/turkiyenin-kulturel-mirasi-sinir-kapilarinda-korundu-960742.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye telecerrahiyle ülkeler arası ameliyatlara hazırlanıyor üroloji uzmanı prof. dr. murat binbay, robotik sistemler aracılığıyla uzaktan ameliyata olanak tanıyan telecerrahinin dünyada uygulanmaya başlandığını, türkiye&#x27;de de hayata geçirilmesine yönelik mevzuat hazırlıklarının sürdüğünü bildirdi. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Ekim 2026, 11:25</span>
+        </div>
+        <h3>Türkiye telecerrahiyle ülkeler arası ameliyatlara hazırlanıyor</h3>
+        <p>Üroloji uzmanı Prof. Dr. Murat Binbay, robotik sistemler aracılığıyla uzaktan ameliyata olanak tanıyan telecerrahinin dünyada uygulanmaya başlandığını, Türkiye&#x27;de de hayata geçirilmesine yönelik mevzuat hazırlıklarının sürdüğünü bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Ekim 2026, 11:25</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiye-telecerrahiyle-ulkeler-arasi-ameliyatlara-hazirlaniyor/4095443" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="uydu vericisiyle izlenen şahin 5 ayda kıtalar arası 6 bin kilometre kanat çırptı iğdır&#x27;dan uydu vericisiyle takibe alınan &quot;ender&quot; isimli şahin, yaklaşık 5 ayda asya&#x27;dan afrika&#x27;ya 6 bin kilometre kanat çırptı. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 21 Ekim 2026, 11:01</span>
+        </div>
+        <h3>Uydu vericisiyle izlenen şahin 5 ayda kıtalar arası 6 bin kilometre kanat çırptı</h3>
+        <p>Iğdır&#x27;dan uydu vericisiyle takibe alınan &quot;Ender&quot; isimli şahin, yaklaşık 5 ayda Asya&#x27;dan Afrika&#x27;ya 6 bin kilometre kanat çırptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 21 Ekim 2026, 11:01</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/uydu-vericisiyle-izlenen-sahin-5-ayda-kitalar-arasi-6-bin-kilometre-kanat-cirpti/4095397" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
