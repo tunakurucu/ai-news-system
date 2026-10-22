@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">22 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">22 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 6</span><span class="stat-item"><strong>genel</strong> 18</span><span class="stat-item"><strong>dünya</strong> 3</span><span class="stat-item"><strong>teknoloji</strong> 3</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>Kanada&#x27;dan Türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret: &#x27;Yeni bir stratejik ilişkinin başlangıcı&#x27;</h3>
+        <p>Mark Carney bugün Kanada&#x27;dan Türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret gerçekleştiren ilk lider olacak. Ziyaret hem sembolik hem de çok kapsamlı gündemi nedeniyle Türkiye-Kanada ilişkilerinde tarihi bir dönüm noktası olarak değerlendiriliyor. İki ülkenin ekonomi ve savunma alanlarında önemli anlaşmalar imzalaması bekleniyor.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 22 Ekim 2026, 03:08</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c5m2dz18pr4ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 22 Ekim 2026, 12:22</span>
+            </div>
+            <h3>Bakan Kacır: OSB&#x27;lerimizin sayısını 374&#x27;e yükselttik</h3>
+            <p>Sanayi ve Teknoloji Bakanı Kacır, 118 hektarlık Burdur Batı ve 38 hektarlık Amasya Gümüşhacıköy organize sanayi bölgelerini (OSB) bugün itibarıyla ilan ettiklerini belirterek &quot;Ülkemize toplam 156 hektarlık yeni planlı sanayi alanı kazandırmış olduk. Böylelikle OSB&#x27;lerimizin sayısını 374&#x27;e yükselttik&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/bakan-kacir-osblerimizin-sayisini-374e-yukselttik-960879.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 22 Ekim 2026, 12:10</span>
+            </div>
+            <h3>Türkiye&#x27;nin ev sahipliğinde R4E3 ülkeleri ilk kez bir araya gelecek</h3>
+            <p>Türkiye, Mısır, Pakistan, Suudi Arabistan, İngiltere, Almanya ve Fransa&#x27;nın dışişleri bakanları, Türkiye&#x27;nin girişimiyle İstanbul&#x27;da ilk kez R4 E3 formatında buluşacak. Toplantılarda bölgesel krizler ve güvenlik alanındaki iş birliği imkanları görüşülecek.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/turkiyenin-ev-sahipliginde-r4e3-ulkeleri-ilk-kez-bir-araya-gelecek-960877.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 22 Ekim 2026, 12:03</span>
+            </div>
+            <h3>Şimşek: Türkiye&#x27;nin borçluluk düzeyinin düşük olması ekonomik şoklara karşı dayanıklılığını artırıyor</h3>
+            <p>Hazine ve Maliye Bakanı Mehmet Şimşek, &quot;Dünya genelinde toplam borcun küresel hasılaya oranı yüzde 300&#x27;ü, gelişmekte olan piyasalarda ise yüzde 230&#x27;u aştı. Türkiye bu açıdan avantajlı bir konumda. Türkiye&#x27;nin borçluluk düzeyinin düşük olması ekonomik şoklara karşı dayanıklılığını artırıyor&quot; diye konuştu.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/simsek-turkiyenin-borcluluk-duzeyinin-dusuk-olmasi-ekonomik-soklara-karsi-dayanikliligini-artiriyor-960876.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 22 Ekim 2026, 12:12</span>
+            </div>
+            <h3>Merkez Bankası faiz kararını açıklayacak: Beklentiler ne yönde?</h3>
+            <p>Türkiye Cumhuriyet Merkez Bankası (TCMB) 22 Ekim&#x27;deki Para Politikası Kurulu (PPK) toplantısında politika faizini açıklayacak. Merkez Bankası&#x27;nın ekim ayı faiz kararına yönelik beklentilerde ise piyasalardaki ayrışma dikkat çekiyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cq8rz0d03r2ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="kanada&#x27;dan türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret: &#x27;yeni bir stratejik ilişkinin başlangıcı&#x27; mark carney bugün kanada&#x27;dan türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret gerçekleştiren ilk lider olacak. ziyaret hem sembolik hem de çok kapsamlı gündemi nedeniyle türkiye-kanada ilişkilerinde tarihi bir dönüm noktası olarak değerlendiriliyor. i̇ki ülkenin ekonomi ve savunma alanlarında önemli anlaşmalar imzalaması bekleniyor. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 03:08</span>
+        </div>
+        <h3>Kanada&#x27;dan Türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret: &#x27;Yeni bir stratejik ilişkinin başlangıcı&#x27;</h3>
+        <p>Mark Carney bugün Kanada&#x27;dan Türkiye&#x27;ye başbakan düzeyinde ilk resmi ziyaret gerçekleştiren ilk lider olacak. Ziyaret hem sembolik hem de çok kapsamlı gündemi nedeniyle Türkiye-Kanada ilişkilerinde tarihi bir dönüm noktası olarak değerlendiriliyor. İki ülkenin ekonomi ve savunma alanlarında önemli anlaşmalar imzalaması bekleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 03:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5m2dz18pr4ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan kacır: osb&#x27;lerimizin sayısını 374&#x27;e yükselttik sanayi ve teknoloji bakanı kacır, 118 hektarlık burdur batı ve 38 hektarlık amasya gümüşhacıköy organize sanayi bölgelerini (osb) bugün itibarıyla ilan ettiklerini belirterek &quot;ülkemize toplam 156 hektarlık yeni planlı sanayi alanı kazandırmış olduk. böylelikle osb&#x27;lerimizin sayısını 374&#x27;e yükselttik&quot; dedi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 22 Ekim 2026, 12:22</span>
+        </div>
+        <h3>Bakan Kacır: OSB&#x27;lerimizin sayısını 374&#x27;e yükselttik</h3>
+        <p>Sanayi ve Teknoloji Bakanı Kacır, 118 hektarlık Burdur Batı ve 38 hektarlık Amasya Gümüşhacıköy organize sanayi bölgelerini (OSB) bugün itibarıyla ilan ettiklerini belirterek &quot;Ülkemize toplam 156 hektarlık yeni planlı sanayi alanı kazandırmış olduk. Böylelikle OSB&#x27;lerimizin sayısını 374&#x27;e yükselttik&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Ekim 2026, 12:22</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/bakan-kacir-osblerimizin-sayisini-374e-yukselttik-960879.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="şimşek: türkiye&#x27;nin borçluluk düzeyinin düşük olması ekonomik şoklara karşı dayanıklılığını artırıyor hazine ve maliye bakanı mehmet şimşek, &quot;dünya genelinde toplam borcun küresel hasılaya oranı yüzde 300&#x27;ü, gelişmekte olan piyasalarda ise yüzde 230&#x27;u aştı. türkiye bu açıdan avantajlı bir konumda. türkiye&#x27;nin borçluluk düzeyinin düşük olması ekonomik şoklara karşı dayanıklılığını artırıyor&quot; diye konuştu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 22 Ekim 2026, 12:03</span>
+        </div>
+        <h3>Şimşek: Türkiye&#x27;nin borçluluk düzeyinin düşük olması ekonomik şoklara karşı dayanıklılığını artırıyor</h3>
+        <p>Hazine ve Maliye Bakanı Mehmet Şimşek, &quot;Dünya genelinde toplam borcun küresel hasılaya oranı yüzde 300&#x27;ü, gelişmekte olan piyasalarda ise yüzde 230&#x27;u aştı. Türkiye bu açıdan avantajlı bir konumda. Türkiye&#x27;nin borçluluk düzeyinin düşük olması ekonomik şoklara karşı dayanıklılığını artırıyor&quot; diye konuştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Ekim 2026, 12:03</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/simsek-turkiyenin-borcluluk-duzeyinin-dusuk-olmasi-ekonomik-soklara-karsi-dayanikliligini-artiriyor-960876.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="merkez bankası faiz kararını açıklayacak: beklentiler ne yönde? türkiye cumhuriyet merkez bankası (tcmb) 22 ekim&#x27;deki para politikası kurulu (ppk) toplantısında politika faizini açıklayacak. merkez bankası&#x27;nın ekim ayı faiz kararına yönelik beklentilerde ise piyasalardaki ayrışma dikkat çekiyor. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 12:12</span>
+        </div>
+        <h3>Merkez Bankası faiz kararını açıklayacak: Beklentiler ne yönde?</h3>
+        <p>Türkiye Cumhuriyet Merkez Bankası (TCMB) 22 Ekim&#x27;deki Para Politikası Kurulu (PPK) toplantısında politika faizini açıklayacak. Merkez Bankası&#x27;nın ekim ayı faiz kararına yönelik beklentilerde ise piyasalardaki ayrışma dikkat çekiyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 12:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq8rz0d03r2ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="deniz salyangozu ihracatı 14 milyon doları aştı türkiye, deniz salyangozu ihracatından yılın 9 ayında 14 milyon 220 bin 783 dolar gelir elde etti. en fazla deniz salyangozu ihraç edilen ülkeler güney kore, çin ve i̇spanya oldu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 22 Ekim 2026, 11:53</span>
+        </div>
+        <h3>Deniz salyangozu ihracatı 14 milyon doları aştı</h3>
+        <p>Türkiye, deniz salyangozu ihracatından yılın 9 ayında 14 milyon 220 bin 783 dolar gelir elde etti. En fazla deniz salyangozu ihraç edilen ülkeler Güney Kore, Çin ve İspanya oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Ekim 2026, 11:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/deniz-salyangozu-ihracati-14-milyon-dolari-asti-960871.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yaş meyve ve sebze ihracatının yüzde 21&#x27;i batı akdeniz&#x27;den türkiye genelinde 9,5 ayda yapılan 3,3 milyar dolarlık yaş meyve ve sebze ihracatının yüzde 21&#x27;i, batı akdeniz i̇hracatçılar birliğince (bai̇b) gerçekleştirildi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 22 Ekim 2026, 12:00</span>
+        </div>
+        <h3>Yaş meyve ve sebze ihracatının yüzde 21&#x27;i Batı Akdeniz&#x27;den</h3>
+        <p>Türkiye genelinde 9,5 ayda yapılan 3,3 milyar dolarlık yaş meyve ve sebze ihracatının yüzde 21&#x27;i, Batı Akdeniz İhracatçılar Birliğince (BAİB) gerçekleştirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Ekim 2026, 12:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/yas-meyve-ve-sebze-ihracatinin-yuzde-21i-bati-akdenizden-960874.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">18 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye&#x27;nin ev sahipliğinde r4e3 ülkeleri ilk kez bir araya gelecek türkiye, mısır, pakistan, suudi arabistan, i̇ngiltere, almanya ve fransa&#x27;nın dışişleri bakanları, türkiye&#x27;nin girişimiyle i̇stanbul&#x27;da ilk kez r4 e3 formatında buluşacak. toplantılarda bölgesel krizler ve güvenlik alanındaki iş birliği imkanları görüşülecek. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Ekim 2026, 12:10</span>
+        </div>
+        <h3>Türkiye&#x27;nin ev sahipliğinde R4E3 ülkeleri ilk kez bir araya gelecek</h3>
+        <p>Türkiye, Mısır, Pakistan, Suudi Arabistan, İngiltere, Almanya ve Fransa&#x27;nın dışişleri bakanları, Türkiye&#x27;nin girişimiyle İstanbul&#x27;da ilk kez R4 E3 formatında buluşacak. Toplantılarda bölgesel krizler ve güvenlik alanındaki iş birliği imkanları görüşülecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Ekim 2026, 12:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/turkiyenin-ev-sahipliginde-r4e3-ulkeleri-ilk-kez-bir-araya-gelecek-960877.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb: deniz yetki alanları muhtırası&#x27;nın onaylanmasını memnuniyetle karşılıyoruz milli savunma bakanlığı, &quot;türkiye ile libya arasında imzalanan deniz yetki alanlarının sınırlandırılmasına i̇lişkin mutabakat muhtırasının libya temsilciler meclisi tarafından onaylanmasını memnuniyetle karşılıyoruz. i̇ki ülkenin doğu akdeniz’deki hak ve menfaatlerinin korunmasına katkı sağlayan bu mutabakatı önemsiyoruz.&quot; açıklamasını yaptı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Ekim 2026, 12:00</span>
+        </div>
+        <h3>MSB: Deniz Yetki Alanları Muhtırası&#x27;nın onaylanmasını memnuniyetle karşılıyoruz</h3>
+        <p>Milli Savunma Bakanlığı, &quot;Türkiye ile Libya arasında imzalanan Deniz Yetki Alanlarının Sınırlandırılmasına İlişkin Mutabakat Muhtırasının Libya Temsilciler Meclisi tarafından onaylanmasını memnuniyetle karşılıyoruz. İki ülkenin Doğu Akdeniz’deki hak ve menfaatlerinin korunmasına katkı sağlayan bu mutabakatı önemsiyoruz.&quot; açıklamasını yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Ekim 2026, 12:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/msb-deniz-yetki-alanlari-muhtirasinin-onaylanmasini-memnuniyetle-karsiliyoruz-960873.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="toki̇ 61 ilde 725 arsayı satışa çıkaracak çevre, şehircilik ve i̇klim değişikliği bakanlığı toplu konut i̇daresi başkanlığı (toki̇), ankara, i̇stanbul ve i̇zmir&#x27;in de aralarında bulunduğu 61 ildeki 725 arsayı 5 ve 6 kasım&#x27;da açık artırma yöntemiyle satışa sunacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Ekim 2026, 11:14</span>
+        </div>
+        <h3>TOKİ 61 ilde 725 arsayı satışa çıkaracak</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı Toplu Konut İdaresi Başkanlığı (TOKİ), Ankara, İstanbul ve İzmir&#x27;in de aralarında bulunduğu 61 ildeki 725 arsayı 5 ve 6 Kasım&#x27;da açık artırma yöntemiyle satışa sunacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Ekim 2026, 11:14</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/toki-61-ilde-725-arsayi-satisa-cikaracak/4096805" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="macron, netanyahu ve trump&#x27;ı fransa&#x27;daki eylemleri istismar etmekle suçladı fransa cumhurbaşkanının yorumu, önümüzdeki haftalarda seçimlerle karşı karşıya olan binyamin netanyahu ve donald trump&#x27;a yönelik açık bir eleştiri niteliğinde. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 00:58</span>
+        </div>
+        <h3>Macron, Netanyahu ve Trump&#x27;ı Fransa&#x27;daki eylemleri istismar etmekle suçladı</h3>
+        <p>Fransa cumhurbaşkanının yorumu, önümüzdeki haftalarda seçimlerle karşı karşıya olan Binyamin Netanyahu ve Donald Trump&#x27;a yönelik açık bir eleştiri niteliğinde.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 00:58</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwx287g6e702o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon soruşturması: eski başbakan danışmanı ertan aydın dahil 5 kişi gözaltına alındı i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen fon soruşturması kapsamında beş kişi daha gözaltına alındı. gözaltına alınanlar arasında eski başbakan danışmanı ertan aydın da var. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 10:38</span>
+        </div>
+        <h3>Fon soruşturması: Eski başbakan danışmanı Ertan Aydın dahil 5 kişi gözaltına alındı</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen fon soruşturması kapsamında beş kişi daha gözaltına alındı. Gözaltına alınanlar arasında eski başbakan danışmanı Ertan Aydın da var.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 10:38</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c574pjl4l40no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="libya’nın türkiye anlaşmasını onaylaması doğu akdeniz&#x27;de dengeleri değiştirebilir mi? libya temsilciler meclisi&#x27;nin 2019 yılında türkiye ile imzalanan deniz yetki alanlarının sınırlandırılması anlaşması&#x27;nı yedi yıl sonra onaylaması, doğu akdeniz&#x27;deki süren rekabet ve müzakereler açısından yeni bir denklemin ortaya çıkmasına neden oldu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Ekim 2026, 23:45</span>
+        </div>
+        <h3>Libya’nın Türkiye anlaşmasını onaylaması Doğu Akdeniz&#x27;de dengeleri değiştirebilir mi?</h3>
+        <p>Libya Temsilciler Meclisi&#x27;nin 2019 yılında Türkiye ile imzalanan Deniz Yetki Alanlarının Sınırlandırılması Anlaşması&#x27;nı yedi yıl sonra onaylaması, Doğu Akdeniz&#x27;deki süren rekabet ve müzakereler açısından yeni bir denklemin ortaya çıkmasına neden oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Ekim 2026, 23:45</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwrkyldnkgndo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb: hürkuş-ii uçağının envantere alınması planlanıyor milli savunma bakanlığı (msb) sözcüsü tuğamiral zeki aktürk, hava kuvvetleri komutanlığınca 2 hürkuş-ii uçağının envantere alınmasının planlandığını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Ekim 2026, 12:13</span>
+        </div>
+        <h3>MSB: HÜRKUŞ-II uçağının envantere alınması planlanıyor</h3>
+        <p>Milli Savunma Bakanlığı (MSB) Sözcüsü Tuğamiral Zeki Aktürk, Hava Kuvvetleri Komutanlığınca 2 HÜRKUŞ-II uçağının envantere alınmasının planlandığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Ekim 2026, 12:13</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/msb-hurkus-ii-ucaginin-envantere-alinmasi-planlaniyor/4096897" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dışişleri bakanı fidan, yarın i̇stanbul&#x27;da r4 ve r4+e3 toplantılarına ev sahipliği yapacak dışişleri bakanı hakan fidan, yarın i̇stanbul&#x27;da r4 (türkiye, mısır, pakistan, suudi arabistan) ve r4+e3 (i̇ngiltere, almanya, fransa) dışişleri bakanları toplantıları&#x27;na ev sahipliği yapacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Ekim 2026, 12:02</span>
+        </div>
+        <h3>Dışişleri Bakanı Fidan, yarın İstanbul&#x27;da R4 ve R4+E3 toplantılarına ev sahipliği yapacak</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, yarın İstanbul&#x27;da R4 (Türkiye, Mısır, Pakistan, Suudi Arabistan) ve R4+E3 (İngiltere, Almanya, Fransa) Dışişleri Bakanları Toplantıları&#x27;na ev sahipliği yapacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Ekim 2026, 12:02</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/disisleri-bakani-fidan-yarin-istanbulda-r4-ve-r4-e3-toplantilarina-ev-sahipligi-yapacak-/4096885" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇klim değişikliği sivrisinek ve kene gibi vektörlerle bulaşan hastalıkların küresel haritasını şekillendiriyor i̇klim değişikliğinin etkisiyle yükselen sıcaklıklar ve ve aşırı hava olayları sivrisinek, kene gibi hastalık taşıyan vektörlerin yaşam alanlarını değiştirirken vektör kaynaklı hastalıkların dünyadaki dağılımını da dönüştürüyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Ekim 2026, 11:16</span>
+        </div>
+        <h3>İklim değişikliği sivrisinek ve kene gibi vektörlerle bulaşan hastalıkların küresel haritasını şekillendiriyor</h3>
+        <p>İklim değişikliğinin etkisiyle yükselen sıcaklıklar ve ve aşırı hava olayları sivrisinek, kene gibi hastalık taşıyan vektörlerin yaşam alanlarını değiştirirken vektör kaynaklı hastalıkların dünyadaki dağılımını da dönüştürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Ekim 2026, 11:16</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iklim-degisikligi-sivrisinek-ve-kene-gibi-vektorlerle-bulasan-hastaliklarin-kuresel-haritasini-sekillendiriyor/4096808" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb&#x27;den müşterek elektronik harp denemeleri-2026 paylaşımı milli savunma bakanlığı (msb), müşterek elektronik harp denemeleri-2026&#x27;ya (mehden-26) ilişkin videolu paylaşım yaptı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Ekim 2026, 10:50</span>
+        </div>
+        <h3>MSB&#x27;den Müşterek Elektronik Harp Denemeleri-2026 paylaşımı</h3>
+        <p>Milli Savunma Bakanlığı (MSB), Müşterek Elektronik Harp Denemeleri-2026&#x27;ya (MEHDEN-26) ilişkin videolu paylaşım yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Ekim 2026, 10:50</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/msbden-musterek-elektronik-harp-denemeleri-2026-paylasimi/4096756" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ti̇hek&#x27;ten belediyelere engelli yaya geçidi cezası ti̇hek, görme engelli bir kişinin işe gidiş ve dönüşlerinde kullandığı güzergahta erişilebilirlik koşullarının sağlanmaması nedeniyle eskişehir büyükşehir belediyesi ile tepebaşı belediyesine 50&#x27;şer bin lira idari para cezası verdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Ekim 2026, 11:06</span>
+        </div>
+        <h3>TİHEK&#x27;ten belediyelere engelli yaya geçidi cezası</h3>
+        <p>TİHEK, görme engelli bir kişinin işe gidiş ve dönüşlerinde kullandığı güzergahta erişilebilirlik koşullarının sağlanmaması nedeniyle Eskişehir Büyükşehir Belediyesi ile Tepebaşı Belediyesine 50&#x27;şer bin lira idari para cezası verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Ekim 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tihekten-belediyelere-engelli-yaya-gecidi-cezasi/4096785" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="anayasa mahkemesi&#x27;nde yeni başkan seçimi süreci başladı anayasa mahkemesi&#x27;nde (aym) başkan kadir özkaya&#x27;nın görev süresinin dolacak olması nedeniyle başkanlık seçim süreci başladı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 12:24</span>
+        </div>
+        <h3>Anayasa Mahkemesi&#x27;nde yeni başkan seçimi süreci başladı</h3>
+        <p>Anayasa Mahkemesi&#x27;nde (AYM) Başkan Kadir Özkaya&#x27;nın görev süresinin dolacak olması nedeniyle başkanlık seçim süreci başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 12:24</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/crd93kgqgjpvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="azerbaycan 31 türk vatandaşını istenmeyen kişi ilan etti, erdoğan aliyev ile görüştü azerbaycan hükümeti 31 türk vatandaşını, ülkedeki okullarda başörtüsünün yasaklanması sonucu doğuran yönetmelik değişikliğine yönelik açıklamaları ve paylaşımları sonrası “istenmeyen kişi” ilan etti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Ekim 2026, 18:33</span>
+        </div>
+        <h3>Azerbaycan 31 Türk vatandaşını istenmeyen kişi ilan etti, Erdoğan Aliyev ile görüştü</h3>
+        <p>Azerbaycan hükümeti 31 Türk vatandaşını, ülkedeki okullarda başörtüsünün yasaklanması sonucu doğuran yönetmelik değişikliğine yönelik açıklamaları ve paylaşımları sonrası “istenmeyen kişi” ilan etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Ekim 2026, 18:33</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqly0zjd1l87o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;müstehcen yayın&#x27; suçlaması: manifest&#x27;in menajeri akış hakkında 3 yıla kadar hapis istemi i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında tutuklanan manifest grubunun menajeri tolga akış hakkında altı aydan üç yıla kadar hapis istemiyle iddianame düzenlendi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 12:43</span>
+        </div>
+        <h3>&#x27;Müstehcen yayın&#x27; suçlaması: Manifest&#x27;in menajeri Akış hakkında 3 yıla kadar hapis istemi</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında tutuklanan Manifest grubunun menajeri Tolga Akış hakkında altı aydan üç yıla kadar hapis istemiyle iddianame düzenlendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 12:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c93eqpwjd7wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çukurova belediye başkanı dahil 49 kişi adliyeye sevk edildi adana&#x27;da çukurova belediyesine yönelik soruşturma kapsamında, aralarında mevcut belediye başkanı emrah kozay ve önceki dönem belediye başkanı soner çetin&#x27;in de bulunduğu 44 kişi gözaltına alındı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 09:19</span>
+        </div>
+        <h3>Çukurova Belediye Başkanı dahil 49 kişi adliyeye sevk edildi</h3>
+        <p>Adana&#x27;da Çukurova Belediyesine yönelik soruşturma kapsamında, aralarında mevcut Belediye Başkanı Emrah Kozay ve önceki dönem belediye başkanı Soner Çetin&#x27;in de bulunduğu 44 kişi gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 09:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq70pxdzldldo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="katil i̇srail&#x27;in gazze&#x27;de bir okula düzenlediği saldırıda aynı aileden 4 kişi yaralandı katil i̇srail ordusunun, gazze şeridi&#x27;nin güneyindeki han yunus kentinde yerinden edilen filistinlilerin kaldığı bir okulu bombalaması sonucu aynı aileden 4 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Ekim 2026, 11:51</span>
+        </div>
+        <h3>Katil İsrail&#x27;in Gazze&#x27;de bir okula düzenlediği saldırıda aynı aileden 4 kişi yaralandı</h3>
+        <p>Katil İsrail ordusunun, Gazze Şeridi&#x27;nin güneyindeki Han Yunus kentinde yerinden edilen Filistinlilerin kaldığı bir okulu bombalaması sonucu aynı aileden 4 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Ekim 2026, 11:51</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/katil-israilin-gazzede-bir-okula-duzenledigi-saldirida-ayni-aileden-4-kisi-yaralandi-960870.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="şehit annelerinin ve eşlerinin ördüğü battaniyeler devlet korumasındaki bebeklere sarıldı evlat acısı yaşayan şehit anneleri ile eşlerinin ellerinden çıkan ve bir annenin şefkatini taşıyan battaniyeler, &quot;i̇lk battaniyem projesi&quot; kapsamında devlet korumasındaki bebeklere örtüldü. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Ekim 2026, 12:34</span>
+        </div>
+        <h3>Şehit annelerinin ve eşlerinin ördüğü battaniyeler devlet korumasındaki bebeklere sarıldı</h3>
+        <p>Evlat acısı yaşayan şehit anneleri ile eşlerinin ellerinden çıkan ve bir annenin şefkatini taşıyan battaniyeler, &quot;İlk Battaniyem Projesi&quot; kapsamında devlet korumasındaki bebeklere örtüldü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Ekim 2026, 12:34</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sehit-annelerinin-ve-eslerinin-ordugu-battaniyeler-devlet-korumasindaki-bebeklere-sarildi/4096938" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trakya&#x27;daki barajların doluluk oranı geçen yıla göre önemli ölçüde arttı trakya’da edirne, kırklareli ve tekirdağ’da bulunan 14 barajın toplam su miktarı, geçen yılın ekim ayına göre 307 milyon 745 bin metreküp arttı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Ekim 2026, 11:27</span>
+        </div>
+        <h3>Trakya&#x27;daki barajların doluluk oranı geçen yıla göre önemli ölçüde arttı</h3>
+        <p>Trakya’da Edirne, Kırklareli ve Tekirdağ’da bulunan 14 barajın toplam su miktarı, geçen yılın ekim ayına göre 307 milyon 745 bin metreküp arttı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Ekim 2026, 11:27</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/trakyadaki-barajlarin-doluluk-orani-gecen-yila-gore-onemli-olcude-artti/4096821" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="php, sunucuları tehdit eden iki kritik güvenlik açığını gidermek için güncelleme yayımladı i̇nternet sitelerinin geliştirilmesinde yaygın olarak kullanılan php programlama dilinde, sunucuların kontrolünün ele geçirilmesine neden olabilecek iki kritik güvenlik açığını gidermek üzere güncelleme yayımlandığı duyuruldu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Ekim 2026, 12:00</span>
+        </div>
+        <h3>PHP, sunucuları tehdit eden iki kritik güvenlik açığını gidermek için güncelleme yayımladı</h3>
+        <p>İnternet sitelerinin geliştirilmesinde yaygın olarak kullanılan PHP programlama dilinde, sunucuların kontrolünün ele geçirilmesine neden olabilecek iki kritik güvenlik açığını gidermek üzere güncelleme yayımlandığı duyuruldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Ekim 2026, 12:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/php-sunuculari-tehdit-eden-iki-kritik-guvenlik-acigini-gidermek-icin-guncelleme-yayimladi-960875.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="batı şeria&#x27;da avrupalı diplomatlar ve muhabire saldıran işgalci i̇srailliler serbest kaldı i̇şgal altındaki batı şeria&#x27;da avrupalı diplomatların araçlarına saldırı ve abd&#x27;li gazeteci heidi levine&#x27;nin yaralanmasıyla ilgili i̇srail makamlarınca gözaltına alınan, filistin topraklarını gasbeden 10 i̇srailliden 9&#x27;u adli kontrol şartıyla serbest bırakıldı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Ekim 2026, 11:52</span>
+        </div>
+        <h3>Batı Şeria&#x27;da Avrupalı diplomatlar ve muhabire saldıran işgalci İsrailliler serbest kaldı</h3>
+        <p>İşgal altındaki Batı Şeria&#x27;da Avrupalı diplomatların araçlarına saldırı ve ABD&#x27;li gazeteci Heidi Levine&#x27;nin yaralanmasıyla ilgili İsrail makamlarınca gözaltına alınan, Filistin topraklarını gasbeden 10 İsrailliden 9&#x27;u adli kontrol şartıyla serbest bırakıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Ekim 2026, 11:52</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/bati-seriada-avrupali-diplomatlar-ve-muhabire-saldiran-isgalci-israilliler-serbest-kaldi-960872.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cop31&#x27;in logosunda türk bayrağının kırmızısı ve anadolu&#x27;nun izleri buluştu türkiye&#x27;nin ev sahipliğinde düzenlenecek cop31&#x27;in logosunda, türk bayrağının kırmızısının yanı sıra anadolu&#x27;nun geleneksel ebru ve çini sanatına, yeniden doğuşu simgeleyen lale motifine yer verildi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Ekim 2026, 11:12</span>
+        </div>
+        <h3>COP31&#x27;in logosunda Türk bayrağının kırmızısı ve Anadolu&#x27;nun izleri buluştu</h3>
+        <p>Türkiye&#x27;nin ev sahipliğinde düzenlenecek COP31&#x27;in logosunda, Türk bayrağının kırmızısının yanı sıra Anadolu&#x27;nun geleneksel ebru ve çini sanatına, yeniden doğuşu simgeleyen lale motifine yer verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Ekim 2026, 11:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cop31in-logosunda-turk-bayraginin-kirmizisi-ve-anadolunun-izleri-bulustu/4096800" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="dünya çapında kritik siber güvenlik açığı: &#x27;türkiye&#x27;de ulusal ölçekte tarama başlatıldı&#x27; i̇nternet genelinde yaygın olarak kullanılan bir programlama dili olan php&#x27;deki güvenlik açıkları, yapay zeka tarafından şimdiye kadar bulunan en önemli açıklar olarak nitelendirildi. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 09:36</span>
+        </div>
+        <h3>Dünya çapında kritik siber güvenlik açığı: &#x27;Türkiye&#x27;de ulusal ölçekte tarama başlatıldı&#x27;</h3>
+        <p>İnternet genelinde yaygın olarak kullanılan bir programlama dili olan PHP&#x27;deki güvenlik açıkları, yapay zeka tarafından şimdiye kadar bulunan en önemli açıklar olarak nitelendirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 09:36</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckjrw0npep1xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="siber güvenlik başkanlığı: edevlet&#x27;in güvenliğini etkileyen bir sorun bulunmadı cumhurbaşkanlığı siber güvenlik başkanlığı, dünya genelinde kullanılan php yazılımında tespit edilen kritik güvenlik açıklarına ilişkin e-devlet kapısı&#x27;nda gerçekleştirilen güvenlik kontrollerinin tamamlandığını ve hizmetlerin güvenliğini olumsuz etkileyen herhangi bir sorun bulunmadığını duyurdu. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 22 Ekim 2026, 12:18</span>
+        </div>
+        <h3>Siber Güvenlik Başkanlığı: eDevlet&#x27;in güvenliğini etkileyen bir sorun bulunmadı</h3>
+        <p>Cumhurbaşkanlığı Siber Güvenlik Başkanlığı, dünya genelinde kullanılan PHP yazılımında tespit edilen kritik güvenlik açıklarına ilişkin e-Devlet Kapısı&#x27;nda gerçekleştirilen güvenlik kontrollerinin tamamlandığını ve hizmetlerin güvenliğini olumsuz etkileyen herhangi bir sorun bulunmadığını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Ekim 2026, 12:18</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/siber-guvenlik-baskanligi-e-devletin-guvenligini-etkileyen-bir-sorun-bulunmadi-960878.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="e-devlet kapısı&#x27;ndaki güvenlik incelemesi tamamlandı cumhurbaşkanlığı siber güvenlik başkanlığı, php yazılımında tespit edilen kritik güvenlik açıklarına ilişkin e-devlet kapısı&#x27;nda gerçekleştirilen güvenlik kontrollerinin tamamlandığını ve herhangi bir sorun bulunmadığını bildirdi. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Ekim 2026, 12:30</span>
+        </div>
+        <h3>e-Devlet Kapısı&#x27;ndaki güvenlik incelemesi tamamlandı</h3>
+        <p>Cumhurbaşkanlığı Siber Güvenlik Başkanlığı, PHP yazılımında tespit edilen kritik güvenlik açıklarına ilişkin e-Devlet Kapısı&#x27;nda gerçekleştirilen güvenlik kontrollerinin tamamlandığını ve herhangi bir sorun bulunmadığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Ekim 2026, 12:30</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/e-devlet-kapisindaki-guvenlik-incelemesi-tamamlandi/4096933" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
