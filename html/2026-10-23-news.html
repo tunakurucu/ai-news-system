@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">23 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">23 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 29</span><span class="stat-item"><strong>dünya</strong> 4</span><span class="stat-item"><strong>ekonomi</strong> 3</span><span class="stat-item"><strong>genel</strong> 21</span><span class="stat-item"><strong>teknoloji</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Almanya&#x27;daki iltica başvurularında &#x27;rüşvetle soruşturma&#x27; iddiası</h3>
+        <p>Haftalık Die Zeit gazetesinin haberine göre suç örgütleri, Almanya&#x27;ya iltica etmek isteyenler için Türkiye&#x27;de bazı savcılara rüşvet vererek &quot;Cumhurbaşkanı Erdoğan&#x27;a hakaret&quot; suçlamasıyla ceza soruşturması açtırıyor. Berlin&#x27;de dikkatler &quot;suç örgütleriyle işbirliği yaptıkları&quot; iddia edilen savcılara çevrildi.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 23 Ekim 2026, 09:13</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmdx3rdpxke1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 22 Ekim 2026, 15:47</span>
+            </div>
+            <h3>Merkez Bankası&#x27;nın 9 ay sonra ilk kez faiz indirmesi ne anlama geliyor?</h3>
+            <p>Türkiye Cumhuriyet Merkez Bankası (TCMB) Para Politikası Kurulu (PPK) bugün politika faizini 100 baz puan indirerek % 36&#x27;ya çekti. Böylece TCMB 9 ay sonra ilk kez faiz indirimine gitmiş oldu. Koç Üniversitesi Öğretim Üyesi Prof. Dr. Selva Demiralp, &quot;Bu, fon krizinin gölgesinde temkinli bir indirim. Kararın yönü sürpriz değildi&quot; diyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c6vg7w1gvg92o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 23 Ekim 2026, 12:00</span>
+            </div>
+            <h3>Emine Erdoğan&#x27;dan Özbekistan ziyaretine ilişkin paylaşım</h3>
+            <p>Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın eşi Emine Erdoğan, &quot;Özbekistan ziyaretimizin, çocukların refahını önceleyen yeni adımlara ve ülkelerimiz arasındaki dayanışmanın güçlenmesine vesile olmasını diliyorum&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/emine-erdogandan-ozbekistan-ziyaretine-iliskin-paylasim-960986.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">TRT Haber · 23 Ekim 2026, 11:55</span>
+            </div>
+            <h3>Bakan Fidan: İsrail, uluslararası sisteme güveni eksiltiyor</h3>
+            <p>Dışişleri Bakanı Hakan Fidan, &quot;İsrail kuvvetlerinin her gün ateşkesi ihlal etmesi uluslararası sisteme olan güveni eksiltiyor ve bu konuda güvensizlik yaratıyor. Bu konuda insani yardım erişmesi ve çocukların özellikle korunması önceliğimiz olmalı&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-fidan-israil-uluslararasi-sisteme-guveni-eksiltiyor-960985.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 23 Ekim 2026, 11:46</span>
+            </div>
+            <h3>ABD&#x27;nin BM Temsilcisi Waltz, İran ile uzun süreli çatışmaya hazır olduklarını belirtti</h3>
+            <p>ABD&#x27;nin Birleşmiş Milletler (BM) Daimi Temsilcisi Mike Waltz, İran&#x27;a yönelik saldırıların, ablukanın ve ekonomik yaptırımların Tahran yönetimini taviz vermeye zorlamasını umduklarını ancak uzun süreli çatışmaya da hazırlıklı olduklarını vurguladı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/abdnin-bm-temsilcisi-waltz-iran-ile-uzun-sureli-catismaya-hazir-olduklarini-belirtti-960981.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">4 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="almanya&#x27;daki iltica başvurularında &#x27;rüşvetle soruşturma&#x27; iddiası haftalık die zeit gazetesinin haberine göre suç örgütleri, almanya&#x27;ya iltica etmek isteyenler için türkiye&#x27;de bazı savcılara rüşvet vererek &quot;cumhurbaşkanı erdoğan&#x27;a hakaret&quot; suçlamasıyla ceza soruşturması açtırıyor. berlin&#x27;de dikkatler &quot;suç örgütleriyle işbirliği yaptıkları&quot; iddia edilen savcılara çevrildi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 23 Ekim 2026, 09:13</span>
+        </div>
+        <h3>Almanya&#x27;daki iltica başvurularında &#x27;rüşvetle soruşturma&#x27; iddiası</h3>
+        <p>Haftalık Die Zeit gazetesinin haberine göre suç örgütleri, Almanya&#x27;ya iltica etmek isteyenler için Türkiye&#x27;de bazı savcılara rüşvet vererek &quot;Cumhurbaşkanı Erdoğan&#x27;a hakaret&quot; suçlamasıyla ceza soruşturması açtırıyor. Berlin&#x27;de dikkatler &quot;suç örgütleriyle işbirliği yaptıkları&quot; iddia edilen savcılara çevrildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Ekim 2026, 09:13</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmdx3rdpxke1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;de cumhuriyetçi genç seçmenlerin i̇srail&#x27;e yönelik olumsuz görüşleri artıyor abd&#x27;de yapılan anket, cumhuriyetçi parti&#x27;nin genç seçmenlerinin i̇srail hükümeti ve halkına yönelik olumsuz görüşlerinin, ileri yaştaki cumhuriyetçilere kıyasla belirgin şekilde yüksek olduğunu ortaya koydu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 23 Ekim 2026, 12:25</span>
+        </div>
+        <h3>ABD&#x27;de Cumhuriyetçi genç seçmenlerin İsrail&#x27;e yönelik olumsuz görüşleri artıyor</h3>
+        <p>ABD&#x27;de yapılan anket, Cumhuriyetçi Parti&#x27;nin genç seçmenlerinin İsrail hükümeti ve halkına yönelik olumsuz görüşlerinin, ileri yaştaki Cumhuriyetçilere kıyasla belirgin şekilde yüksek olduğunu ortaya koydu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Ekim 2026, 12:25</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abdde-cumhuriyetci-genc-secmenlerin-israile-yonelik-olumsuz-gorusleri-artiyor-960989.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yerli turistler aile ziyaretleri için 115,4 milyar lira harcadı yerli turistler, yılın ilk yarısında yurt içindeki aile ziyaretleri için 115,4 milyar lira, tatil için 107,8 milyar lira harcamada bulundu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 23 Ekim 2026, 11:48</span>
+        </div>
+        <h3>Yerli turistler aile ziyaretleri için 115,4 milyar lira harcadı</h3>
+        <p>Yerli turistler, yılın ilk yarısında yurt içindeki aile ziyaretleri için 115,4 milyar lira, tatil için 107,8 milyar lira harcamada bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Ekim 2026, 11:48</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/yerli-turistler-aile-ziyaretleri-icin-1154-milyar-lira-harcadi-960983.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="anne adaylarına sigarayı bırakmaları için özel destek gebelikte sigarayı bırakmak isteyen kadınlara, etlik şehir hastanesi&#x27;nde açılan gebe sigara bırakma polikliniği&#x27;nde özel destek sunuluyor. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 23 Ekim 2026, 11:11</span>
+        </div>
+        <h3>Anne adaylarına sigarayı bırakmaları için özel destek</h3>
+        <p>Gebelikte sigarayı bırakmak isteyen kadınlara, Etlik Şehir Hastanesi&#x27;nde açılan Gebe Sigara Bırakma Polikliniği&#x27;nde özel destek sunuluyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 23 Ekim 2026, 11:11</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/anne-adaylarina-sigarayi-birakmalari-icin-ozel-destek/4098164" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="merkez bankası&#x27;nın 9 ay sonra ilk kez faiz indirmesi ne anlama geliyor? türkiye cumhuriyet merkez bankası (tcmb) para politikası kurulu (ppk) bugün politika faizini 100 baz puan indirerek % 36&#x27;ya çekti. böylece tcmb 9 ay sonra ilk kez faiz indirimine gitmiş oldu. koç üniversitesi öğretim üyesi prof. dr. selva demiralp, &quot;bu, fon krizinin gölgesinde temkinli bir indirim. kararın yönü sürpriz değildi&quot; diyor. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 15:47</span>
+        </div>
+        <h3>Merkez Bankası&#x27;nın 9 ay sonra ilk kez faiz indirmesi ne anlama geliyor?</h3>
+        <p>Türkiye Cumhuriyet Merkez Bankası (TCMB) Para Politikası Kurulu (PPK) bugün politika faizini 100 baz puan indirerek % 36&#x27;ya çekti. Böylece TCMB 9 ay sonra ilk kez faiz indirimine gitmiş oldu. Koç Üniversitesi Öğretim Üyesi Prof. Dr. Selva Demiralp, &quot;Bu, fon krizinin gölgesinde temkinli bir indirim. Kararın yönü sürpriz değildi&quot; diyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 15:47</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6vg7w1gvg92o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;nin bm temsilcisi waltz, i̇ran ile uzun süreli çatışmaya hazır olduklarını belirtti abd&#x27;nin birleşmiş milletler (bm) daimi temsilcisi mike waltz, i̇ran&#x27;a yönelik saldırıların, ablukanın ve ekonomik yaptırımların tahran yönetimini taviz vermeye zorlamasını umduklarını ancak uzun süreli çatışmaya da hazırlıklı olduklarını vurguladı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 23 Ekim 2026, 11:46</span>
+        </div>
+        <h3>ABD&#x27;nin BM Temsilcisi Waltz, İran ile uzun süreli çatışmaya hazır olduklarını belirtti</h3>
+        <p>ABD&#x27;nin Birleşmiş Milletler (BM) Daimi Temsilcisi Mike Waltz, İran&#x27;a yönelik saldırıların, ablukanın ve ekonomik yaptırımların Tahran yönetimini taviz vermeye zorlamasını umduklarını ancak uzun süreli çatışmaya da hazırlıklı olduklarını vurguladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Ekim 2026, 11:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abdnin-bm-temsilcisi-waltz-iran-ile-uzun-sureli-catismaya-hazir-olduklarini-belirtti-960981.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fon soruşturması: spk&#x27;dan 48 kişi hakkında suç duyurusu sermaye piyasası kurulu (spk), fon soruşturmasının odağındaki şirketlerden tera yatırım, tera portföy ve pusula portföy&#x27;ün yönetiminde yer alan ve bazıları tutuklu olan kişiler de dahil olmak üzere 48 kişi hakkında suç duyurusunda bulundu. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 23 Ekim 2026, 00:24</span>
+        </div>
+        <h3>Fon soruşturması: SPK&#x27;dan 48 kişi hakkında suç duyurusu</h3>
+        <p>Sermaye Piyasası Kurulu (SPK), fon soruşturmasının odağındaki şirketlerden Tera Yatırım, Tera Portföy ve Pusula Portföy&#x27;ün yönetiminde yer alan ve bazıları tutuklu olan kişiler de dahil olmak üzere 48 kişi hakkında suç duyurusunda bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Ekim 2026, 00:24</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj5yn01wp4p3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">21 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="emine erdoğan&#x27;dan özbekistan ziyaretine ilişkin paylaşım cumhurbaşkanı recep tayyip erdoğan&#x27;ın eşi emine erdoğan, &quot;özbekistan ziyaretimizin, çocukların refahını önceleyen yeni adımlara ve ülkelerimiz arasındaki dayanışmanın güçlenmesine vesile olmasını diliyorum&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Ekim 2026, 12:00</span>
+        </div>
+        <h3>Emine Erdoğan&#x27;dan Özbekistan ziyaretine ilişkin paylaşım</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın eşi Emine Erdoğan, &quot;Özbekistan ziyaretimizin, çocukların refahını önceleyen yeni adımlara ve ülkelerimiz arasındaki dayanışmanın güçlenmesine vesile olmasını diliyorum&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Ekim 2026, 12:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/emine-erdogandan-ozbekistan-ziyaretine-iliskin-paylasim-960986.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan fidan: i̇srail, uluslararası sisteme güveni eksiltiyor dışişleri bakanı hakan fidan, &quot;i̇srail kuvvetlerinin her gün ateşkesi ihlal etmesi uluslararası sisteme olan güveni eksiltiyor ve bu konuda güvensizlik yaratıyor. bu konuda insani yardım erişmesi ve çocukların özellikle korunması önceliğimiz olmalı&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Ekim 2026, 11:55</span>
+        </div>
+        <h3>Bakan Fidan: İsrail, uluslararası sisteme güveni eksiltiyor</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, &quot;İsrail kuvvetlerinin her gün ateşkesi ihlal etmesi uluslararası sisteme olan güveni eksiltiyor ve bu konuda güvensizlik yaratıyor. Bu konuda insani yardım erişmesi ve çocukların özellikle korunması önceliğimiz olmalı&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Ekim 2026, 11:55</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-fidan-israil-uluslararasi-sisteme-guveni-eksiltiyor-960985.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı yardımcısı yılmaz, macaristan başbakanı magyar ile görüştü cumhurbaşkanı yardımcısı cevdet yılmaz, macaristan başbakanı peter magyar ile bir araya geldi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 23 Ekim 2026, 12:04</span>
+        </div>
+        <h3>Cumhurbaşkanı Yardımcısı Yılmaz, Macaristan Başbakanı Magyar ile görüştü</h3>
+        <p>Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, Macaristan Başbakanı Peter Magyar ile bir araya geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 23 Ekim 2026, 12:04</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-yardimcisi-yilmaz-macaristan-basbakani-magyar-ile-gorustu/4098260" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan fidan: i̇srail kuvvetlerinin her gün ateşkesi ihlal etmesi uluslararası sisteme olan güveni eksiltiyor dışişleri bakanı hakan fidan, &quot;i̇srail kuvvetlerinin her gün ateşkesi ihlal etmesi uluslararası sisteme olan güveni eksiltiyor. bu çerçevede bu anlaşmazlığın adil bir siyasi çözümle çözülebileceğini bir kez daha belirtmek istiyorum.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 23 Ekim 2026, 11:35</span>
+        </div>
+        <h3>Bakan Fidan: İsrail kuvvetlerinin her gün ateşkesi ihlal etmesi uluslararası sisteme olan güveni eksiltiyor</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, &quot;İsrail kuvvetlerinin her gün ateşkesi ihlal etmesi uluslararası sisteme olan güveni eksiltiyor. Bu çerçevede bu anlaşmazlığın adil bir siyasi çözümle çözülebileceğini bir kez daha belirtmek istiyorum.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 23 Ekim 2026, 11:35</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-fidan-israil-kuvvetlerinin-her-gun-ateskesi-ihlal-etmesi-uluslararasi-sisteme-olan-guveni-eksiltiyor/4098216" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye, mekke ve bedir ittifaklarıyla ne hedefliyor? türkiye, &quot;bölgesel sahiplenme&quot; adını verdiği dış politika anlayışı kapsamında ortadoğu&#x27;da güvenlik işbirliğini güçlendirme amaçlı kurumsal adımlar attı. ankara önce suudi arabistan ve pakistan ile mekke, sonra da katar, pakistan ve endonezya ile bedir i̇ttifakı&#x27;nın kurulmasında aktif rol oynadı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Ekim 2026, 02:00</span>
+        </div>
+        <h3>Türkiye, Mekke ve Bedir ittifaklarıyla ne hedefliyor?</h3>
+        <p>Türkiye, &quot;bölgesel sahiplenme&quot; adını verdiği dış politika anlayışı kapsamında Ortadoğu&#x27;da güvenlik işbirliğini güçlendirme amaçlı kurumsal adımlar attı. Ankara önce Suudi Arabistan ve Pakistan ile Mekke, sonra da Katar, Pakistan ve Endonezya ile Bedir İttifakı&#x27;nın kurulmasında aktif rol oynadı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Ekim 2026, 02:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq77pze3nr2ro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;alihan kuriş&#x27; soruşturmasında 19 kişi daha tutuklandı alihan kuriş&#x27;in liderliğinde &quot;çıkar amaçlı suç örgütü kurma ve örgüte üye olma&quot; gibi iddialarla yürütülen soruşturma kapsamında düzenlenen yeni dalga operasyonda gözaltına alınanlardan 19&#x27;u daha tutuklandı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 23:28</span>
+        </div>
+        <h3>&#x27;Alihan Kuriş&#x27; soruşturmasında 19 kişi daha tutuklandı</h3>
+        <p>Alihan Kuriş&#x27;in liderliğinde &quot;çıkar amaçlı suç örgütü kurma ve örgüte üye olma&quot; gibi iddialarla yürütülen soruşturma kapsamında düzenlenen yeni dalga operasyonda gözaltına alınanlardan 19&#x27;u daha tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 23:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cjejpp92gw8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da hava kirliliği arttı: en yüksek ölçüm sultangazi&#x27;de i̇stanbul&#x27;daki hava kirliliği eylül ayında geçen yılın aynı dönemine göre yüzde 3 arttı. partikül madde hava kirliliğinin en fazla ölçüldüğü istasyon metreküp başına 61,73 mikrogramla &quot;sultangazi 3&quot; oldu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Ekim 2026, 12:04</span>
+        </div>
+        <h3>İstanbul&#x27;da hava kirliliği arttı: En yüksek ölçüm Sultangazi&#x27;de</h3>
+        <p>İstanbul&#x27;daki hava kirliliği eylül ayında geçen yılın aynı dönemine göre yüzde 3 arttı. Partikül madde hava kirliliğinin en fazla ölçüldüğü istasyon metreküp başına 61,73 mikrogramla &quot;Sultangazi 3&quot; oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Ekim 2026, 12:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-hava-kirliligi-artti-en-yuksek-olcum-sultangazide-960987.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="deneysel mrna aşısı cilt kanserinin nüksetme riskini yüzde 42 oranında azaltıyor kişiselleştirilmiş ilk mrna kanser aşısının cilt kanserine karşı yürütülen son aşama klinik çalışmada başarılı olduğunun duyulması tıp dünyasında büyük bir heyecan yaratmıştı. şimdi ise aşının başarısının arkasındaki tüm detaylar netleşti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Ekim 2026, 11:47</span>
+        </div>
+        <h3>Deneysel mRNA aşısı cilt kanserinin nüksetme riskini yüzde 42 oranında azaltıyor</h3>
+        <p>Kişiselleştirilmiş ilk mRNA kanser aşısının cilt kanserine karşı yürütülen son aşama klinik çalışmada başarılı olduğunun duyulması tıp dünyasında büyük bir heyecan yaratmıştı. Şimdi ise aşının başarısının arkasındaki tüm detaylar netleşti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Ekim 2026, 11:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/deneysel-mrna-asisi-cilt-kanserinin-nuksetme-riskini-yuzde-42-oraninda-azaltiyor-960984.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="van depreminin 15. yılında hayatını kaybedenler anıldı van&#x27;da 23 ekim 2011&#x27;de meydana gelen 7,2 büyüklüğündeki depremin 15. yıl dönümünde, hayatını kaybedenler erciş ilçesinde kabirleri başında anıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 23 Ekim 2026, 11:38</span>
+        </div>
+        <h3>Van depreminin 15. yılında hayatını kaybedenler anıldı</h3>
+        <p>Van&#x27;da 23 Ekim 2011&#x27;de meydana gelen 7,2 büyüklüğündeki depremin 15. yıl dönümünde, hayatını kaybedenler Erciş ilçesinde kabirleri başında anıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 23 Ekim 2026, 11:38</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/van-depreminin-15-yilinda-hayatini-kaybedenler-anildi/4098222" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;sumud filosu&quot;na yapılan silahlı müdahaleye ilişkin 35 sanığın yargılanmasına başlandı gazze&#x27;ye insani yardım taşıyan küresel sumud filosu&#x27;na silahlı müdahalede bulunulmasına ilişkin, aralarında i̇srail başbakanı binyamin netanyahu&#x27;nun da bulunduğu 35 sanığın yargılanmasına başlandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 23 Ekim 2026, 12:21</span>
+        </div>
+        <h3>&quot;Sumud Filosu&quot;na yapılan silahlı müdahaleye ilişkin 35 sanığın yargılanmasına başlandı</h3>
+        <p>Gazze&#x27;ye insani yardım taşıyan Küresel Sumud Filosu&#x27;na silahlı müdahalede bulunulmasına ilişkin, aralarında İsrail Başbakanı Binyamin Netanyahu&#x27;nun da bulunduğu 35 sanığın yargılanmasına başlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 23 Ekim 2026, 12:21</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sumud-filosuna-yapilan-silahli-mudahaleye-iliskin-35-sanigin-yargilanmasina-baslandi/4098287" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="van depreminin üzerinden 15 yıl geçti, acılar dinmedi van&#x27;da 23 ekim 2011&#x27;de meydana gelen 7,2 büyüklüğündeki depremde yakınlarını kaybedenler, aradan geçen 15 yıla rağmen yaşadıkları acıyı unutamıyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 23 Ekim 2026, 11:07</span>
+        </div>
+        <h3>Van depreminin üzerinden 15 yıl geçti, acılar dinmedi</h3>
+        <p>Van&#x27;da 23 Ekim 2011&#x27;de meydana gelen 7,2 büyüklüğündeki depremde yakınlarını kaybedenler, aradan geçen 15 yıla rağmen yaşadıkları acıyı unutamıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 23 Ekim 2026, 11:07</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/van-depreminin-uzerinden-15-yil-gecti-acilar-dinmedi/4098130" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="zonguldak&#x27;ta maden ocağındaki patlamada 2 işçi öldü, ağır yaralılar var zonguldak&#x27;ın kilimli ilçesindeki bir madendeki patlamada en az iki işçi hayatını kaybetti, beş işçi de yaralandı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Ekim 2026, 12:32</span>
+        </div>
+        <h3>Zonguldak&#x27;ta maden ocağındaki patlamada 2 işçi öldü, ağır yaralılar var</h3>
+        <p>Zonguldak&#x27;ın Kilimli ilçesindeki bir madendeki patlamada en az iki işçi hayatını kaybetti, beş işçi de yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Ekim 2026, 12:32</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cke8rqjp7e7do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="eski türkiye sigorta genel müdürü taha çakmak gözaltında fon soruşturmasında adı geçen ve istifa eden eski türkiye sigorta ve türkiye hayat emeklilik genel müdürü taha çakmak ikinci kez gözaltına alındı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 23 Ekim 2026, 12:14</span>
+        </div>
+        <h3>Eski Türkiye Sigorta Genel Müdürü Taha Çakmak gözaltında</h3>
+        <p>Fon soruşturmasında adı geçen ve istifa eden eski Türkiye Sigorta ve Türkiye Hayat Emeklilik Genel Müdürü Taha Çakmak ikinci kez gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Ekim 2026, 12:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmx2dg4z8qqwo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="call of duty oyunundaki gibi kuzey kore, güney kore&#x27;yi işgal edebilir mi? call of duty oyununda kuzey kore, güney kore&#x27;yi işgal ediyor. bu senaryo ne kadar gerçekçi ve bu gerçekleşse riskler neler olurdu? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 19:49</span>
+        </div>
+        <h3>Call of Duty oyunundaki gibi Kuzey Kore, Güney Kore&#x27;yi işgal edebilir mi?</h3>
+        <p>Call of Duty oyununda Kuzey Kore, Güney Kore&#x27;yi işgal ediyor. Bu senaryo ne kadar gerçekçi ve bu gerçekleşse riskler neler olurdu?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 19:49</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5rmyxp292mxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ngiltere&#x27;de bir emekli, pokémon kartlarını açık artırmada satarak milyoner oldu 15 yıldır tavan arasında saklanan bir hazine bulduğunu söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Ekim 2026, 16:14</span>
+        </div>
+        <h3>İngiltere&#x27;de bir emekli, Pokémon kartlarını açık artırmada satarak milyoner oldu</h3>
+        <p>15 yıldır tavan arasında saklanan bir hazine bulduğunu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Ekim 2026, 16:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9vgrmz06p4zo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="arge merkezi sayısı 1365&#x27;e yükseldi türkiye&#x27;de eylül sonu itibarıyla ar-ge merkezi sayısı 1365&#x27;e, tasarım merkezi sayısı 348&#x27;e yükseldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Ekim 2026, 12:15</span>
+        </div>
+        <h3>ARGE merkezi sayısı 1365&#x27;e yükseldi</h3>
+        <p>Türkiye&#x27;de eylül sonu itibarıyla AR-GE merkezi sayısı 1365&#x27;e, tasarım merkezi sayısı 348&#x27;e yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Ekim 2026, 12:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/ar-ge-merkezi-sayisi-1365e-yukseldi-960988.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kuzey kore&#x27;nin, güney kore sınırına 960 bin mayın döşediği iddia edildi kuzey kore’nin, 2024&#x27;ten bu yana koreler arası sınır boyunca tahmini 960 bin kara mayını döşediği ileri sürüldü. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Ekim 2026, 11:49</span>
+        </div>
+        <h3>Kuzey Kore&#x27;nin, Güney Kore sınırına 960 bin mayın döşediği iddia edildi</h3>
+        <p>Kuzey Kore’nin, 2024&#x27;ten bu yana Koreler arası sınır boyunca tahmini 960 bin kara mayını döşediği ileri sürüldü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Ekim 2026, 11:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/kuzey-korenin-guney-kore-sinirina-960-bin-mayin-dosedigi-iddia-edildi-960982.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bes&#x27;te katılımcı sayısının 19 milyona ulaşması hedefleniyor bireysel emeklilik sistemi&#x27;nde (bes) katılımcı sayısının yıl sonunda 18 milyon 400 bine, 2027&#x27;de de 19 milyona ulaşması hedefleniyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 23 Ekim 2026, 11:21</span>
+        </div>
+        <h3>BES&#x27;te katılımcı sayısının 19 milyona ulaşması hedefleniyor</h3>
+        <p>Bireysel Emeklilik Sistemi&#x27;nde (BES) katılımcı sayısının yıl sonunda 18 milyon 400 bine, 2027&#x27;de de 19 milyona ulaşması hedefleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 23 Ekim 2026, 11:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/beste-katilimci-sayisinin-19-milyona-ulasmasi-hedefleniyor-960980.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="zonguldak&#x27;ta maden ocağında grizu patlamasında 2 kişi öldü, 5 kişi yaralandı zonguldak&#x27;ın kilimli ilçesindeki maden ocağında meydana gelen grizu patlaması sonucu 2 kişi hayatını kaybetti, 5 kişi yaralandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 23 Ekim 2026, 11:27</span>
+        </div>
+        <h3>Zonguldak&#x27;ta maden ocağında grizu patlamasında 2 kişi öldü, 5 kişi yaralandı</h3>
+        <p>Zonguldak&#x27;ın Kilimli ilçesindeki maden ocağında meydana gelen grizu patlaması sonucu 2 kişi hayatını kaybetti, 5 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 23 Ekim 2026, 11:27</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/zonguldakta-maden-ocaginda-grizu-patlamasinda-2-kisi-oldu-5-kisi-yaralandi/4098203" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da hava kirliliği eylülde yüzde 3 arttı i̇stanbul teknik üniversitesi (i̇tü) bünyesinde yapılan çalışma, kentteki hava kirliliğinin eylül ayında geçen yılın aynı dönemine göre yüzde 3 arttığını ortaya koydu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 23 Ekim 2026, 11:06</span>
+        </div>
+        <h3>İstanbul&#x27;da hava kirliliği eylülde yüzde 3 arttı</h3>
+        <p>İstanbul Teknik Üniversitesi (İTÜ) bünyesinde yapılan çalışma, kentteki hava kirliliğinin eylül ayında geçen yılın aynı dönemine göre yüzde 3 arttığını ortaya koydu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 23 Ekim 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-hava-kirliligi-eylulde-yuzde-3-artti/4098123" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milli i̇stihbarat akademisi &quot;i̇srail yayılmacılığının anatomisi&quot; raporunu yayımladı milli i̇stihbarat akademisi (mi̇a) tarafından hazırlanan, &quot;i̇srail yayılmacılığının anatomisi&quot; başlıklı rapor yayımlandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 23 Ekim 2026, 11:08</span>
+        </div>
+        <h3>Milli İstihbarat Akademisi &quot;İsrail Yayılmacılığının Anatomisi&quot; raporunu yayımladı</h3>
+        <p>Milli İstihbarat Akademisi (MİA) tarafından hazırlanan, &quot;İsrail Yayılmacılığının Anatomisi&quot; başlıklı rapor yayımlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 23 Ekim 2026, 11:08</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/milli-istihbarat-akademisi-israil-yayilmaciliginin-anatomisi-raporunu-yayimladi/4098136" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="brezilya seçimlerinde yapay zeka ile yaratılan kadınlar üzerinden para kazananlar brezilya&#x27;daki ikinci tur seçimlerinde yapay zeka ile yaratılan kadınlar, adayları destekleyerek ve kullanıcıları yetişkin içerikli sitelere yönlendirerek kampanya yürütüyor. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 23 Ekim 2026, 10:36</span>
+        </div>
+        <h3>Brezilya seçimlerinde yapay zeka ile yaratılan kadınlar üzerinden para kazananlar</h3>
+        <p>Brezilya&#x27;daki ikinci tur seçimlerinde yapay zeka ile yaratılan kadınlar, adayları destekleyerek ve kullanıcıları yetişkin içerikli sitelere yönlendirerek kampanya yürütüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Ekim 2026, 10:36</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq74pjp8dd7xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
