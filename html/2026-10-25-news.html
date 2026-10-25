@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">25 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">25 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 11</span><span class="stat-item"><strong>genel</strong> 17</span><span class="stat-item"><strong>ekonomi</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Atina&#x27;nın Batı Trakya&#x27;daki müftülüklere yaptığı atamalara Ankara&#x27;dan tepki</h3>
+        <p>Türk Dışişleri Bakanlığı, Yunanistan makamlarına bir çağrı yaparak, Batı Trakya&#x27;daki Türk azınlığın seçtiği müftülerin tanınmasını istedi. Gelişme Yunanistan hükümetinin Gümülcine ve İskeçe müftülüklerine beş yıl için yaptığı atamalar sonrası geldi.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 24 Ekim 2026, 19:28</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cje36w30vwd7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 25 Ekim 2026, 11:03</span>
+            </div>
+            <h3>Reçelde meyve oranı artıyor: 1 kilogramda en az 450 gram meyve</h3>
+            <p>Tarım ve Orman Bakanlığınca görüşe açılan tebliğ taslağına göre, bir kilogram reçelde kullanılacak meyve püresi miktarı en az 450 gram olacak. Ürünlerin ne kadar meyveyle hazırlandığı etikette belirtilirken, gıda işletmecilerine yeni düzenlemeye uyum için 31 Aralık 2027&#x27;ye kadar süre tanınacak.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/saglik/recelde-meyve-orani-artiyor-1-kilogramda-en-az-450-gram-meyve-961123.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 25 Ekim 2026, 11:24</span>
+            </div>
+            <h3>Azerbaycan&#x27;da başörtüsü meselesinde Aliyev&#x27;in imajı nasıl tartışılıyor?</h3>
+            <p>Azerbaycan Cumhurbaşkanı İlham Aliyev&#x27;in yalnızca babası Haydar Aliyev&#x27;in değil, aynı zamanda &quot;Mustafa Kemal Atatürk&#x27;ün de siyasi mirasçısı&quot; olarak tanımlanması Azerbaycan devletinin resmî görüşü değil. Ancak BBC Azerbaycanca Servisi&#x27;nden Könül Xalilova&#x27;ya göre böyle bir kıyaslamanın tam da Türkiye&#x27;de laiklik tartışmalarının yaşandığı bir dönemde gündeme gelmesi tesadüf gibi görünmüyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cq80zxkx40l7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 24 Ekim 2026, 17:35</span>
+            </div>
+            <h3>Mısır neden Suudi Arabistan&#x27;a askeri destek vermek istiyor?</h3>
+            <p>Mısır Cumhurbaşkanı Abdülfettah Sisi kısa süre önce yaptığı açıklamada, Kahire&#x27;nin, Suudi Arabistan&#x27;ın güvenliğini ve egemenliğini savunmak adına Riyad tarafından talep edilecek her türlü önlemi alacağını duyurdu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cm4g14255xqgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 23 Ekim 2026, 19:05</span>
+            </div>
+            <h3>İsrail seçimleri: Netanyahu&#x27;nun baş rakibi Gadi Eisenkot kimdir?</h3>
+            <p>Yaklaşan genel seçimlerde Başbakan Binyamin Netanyahu için en büyük siyasi tehdidi oluşturan eski askeri komutan hakkında bilinenleri derledik.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cq3987zm19lgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">11 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="atina&#x27;nın batı trakya&#x27;daki müftülüklere yaptığı atamalara ankara&#x27;dan tepki türk dışişleri bakanlığı, yunanistan makamlarına bir çağrı yaparak, batı trakya&#x27;daki türk azınlığın seçtiği müftülerin tanınmasını istedi. gelişme yunanistan hükümetinin gümülcine ve i̇skeçe müftülüklerine beş yıl için yaptığı atamalar sonrası geldi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 24 Ekim 2026, 19:28</span>
+        </div>
+        <h3>Atina&#x27;nın Batı Trakya&#x27;daki müftülüklere yaptığı atamalara Ankara&#x27;dan tepki</h3>
+        <p>Türk Dışişleri Bakanlığı, Yunanistan makamlarına bir çağrı yaparak, Batı Trakya&#x27;daki Türk azınlığın seçtiği müftülerin tanınmasını istedi. Gelişme Yunanistan hükümetinin Gümülcine ve İskeçe müftülüklerine beş yıl için yaptığı atamalar sonrası geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Ekim 2026, 19:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cje36w30vwd7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="reçelde meyve oranı artıyor: 1 kilogramda en az 450 gram meyve tarım ve orman bakanlığınca görüşe açılan tebliğ taslağına göre, bir kilogram reçelde kullanılacak meyve püresi miktarı en az 450 gram olacak. ürünlerin ne kadar meyveyle hazırlandığı etikette belirtilirken, gıda işletmecilerine yeni düzenlemeye uyum için 31 aralık 2027&#x27;ye kadar süre tanınacak. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 25 Ekim 2026, 11:03</span>
+        </div>
+        <h3>Reçelde meyve oranı artıyor: 1 kilogramda en az 450 gram meyve</h3>
+        <p>Tarım ve Orman Bakanlığınca görüşe açılan tebliğ taslağına göre, bir kilogram reçelde kullanılacak meyve püresi miktarı en az 450 gram olacak. Ürünlerin ne kadar meyveyle hazırlandığı etikette belirtilirken, gıda işletmecilerine yeni düzenlemeye uyum için 31 Aralık 2027&#x27;ye kadar süre tanınacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Ekim 2026, 11:03</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/saglik/recelde-meyve-orani-artiyor-1-kilogramda-en-az-450-gram-meyve-961123.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mısır neden suudi arabistan&#x27;a askeri destek vermek istiyor? mısır cumhurbaşkanı abdülfettah sisi kısa süre önce yaptığı açıklamada, kahire&#x27;nin, suudi arabistan&#x27;ın güvenliğini ve egemenliğini savunmak adına riyad tarafından talep edilecek her türlü önlemi alacağını duyurdu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 24 Ekim 2026, 17:35</span>
+        </div>
+        <h3>Mısır neden Suudi Arabistan&#x27;a askeri destek vermek istiyor?</h3>
+        <p>Mısır Cumhurbaşkanı Abdülfettah Sisi kısa süre önce yaptığı açıklamada, Kahire&#x27;nin, Suudi Arabistan&#x27;ın güvenliğini ve egemenliğini savunmak adına Riyad tarafından talep edilecek her türlü önlemi alacağını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Ekim 2026, 17:35</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm4g14255xqgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail seçimleri: netanyahu&#x27;nun baş rakibi gadi eisenkot kimdir? yaklaşan genel seçimlerde başbakan binyamin netanyahu için en büyük siyasi tehdidi oluşturan eski askeri komutan hakkında bilinenleri derledik. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 23 Ekim 2026, 19:05</span>
+        </div>
+        <h3>İsrail seçimleri: Netanyahu&#x27;nun baş rakibi Gadi Eisenkot kimdir?</h3>
+        <p>Yaklaşan genel seçimlerde Başbakan Binyamin Netanyahu için en büyük siyasi tehdidi oluşturan eski askeri komutan hakkında bilinenleri derledik.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 23 Ekim 2026, 19:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq3987zm19lgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye ile ermenistan arasındaki ani köprüsü&#x27;nün restorasyonunda yeni aşama ulaştırma ve altyapı bakanı abdulkadir uraloğlu, türkiye ile ermenistan sınırında bulunan tarihi ani köprüsü&#x27;nün yeniden inşası için ihale sürecini tamamladıklarını bildirdi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Ekim 2026, 12:25</span>
+        </div>
+        <h3>Türkiye ile Ermenistan arasındaki Ani Köprüsü&#x27;nün restorasyonunda yeni aşama</h3>
+        <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Türkiye ile Ermenistan sınırında bulunan tarihi Ani Köprüsü&#x27;nün yeniden inşası için ihale sürecini tamamladıklarını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Ekim 2026, 12:25</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiye-ile-ermenistan-arasindaki-ani-koprusunun-restorasyonunda-yeni-asama-/4100112" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="van&#x27;da arama kurtarma köpekleri, afetlerde hayat kurtarmak için eğitiliyor van&#x27;da afet ve acil durum yönetimi başkanlığı (afad) i̇l müdürlüğü bünyesinde görev yapan arama kurtarma köpekleri, olası afetlerde enkaz altında kalanlara ve kayıp kişilere ulaşabilmek için özel eğitimlerden geçiriliyor. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Ekim 2026, 11:01</span>
+        </div>
+        <h3>Van&#x27;da arama kurtarma köpekleri, afetlerde hayat kurtarmak için eğitiliyor</h3>
+        <p>Van&#x27;da Afet ve Acil Durum Yönetimi Başkanlığı (AFAD) İl Müdürlüğü bünyesinde görev yapan arama kurtarma köpekleri, olası afetlerde enkaz altında kalanlara ve kayıp kişilere ulaşabilmek için özel eğitimlerden geçiriliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Ekim 2026, 11:01</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/vanda-arama-kurtarma-kopekleri-afetlerde-hayat-kurtarmak-icin-egitiliyor/4100033" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bm kadın birimi avrupa ve orta asya bölge direktörü, kadınların barış müzakerelerine katılımının önemini vurguladı bm kadın birimi (un women) avrupa ve orta asya bölge direktörü belen sanz luque, kadınların barış müzakerelerine dahil edilmesinin önemine dikkati çekerek &quot;müzakerelerde kadınların resmi olarak yer almasını sağlamasının vakti gelmiştir.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Ekim 2026, 11:07</span>
+        </div>
+        <h3>BM Kadın Birimi Avrupa ve Orta Asya Bölge Direktörü, kadınların barış müzakerelerine katılımının önemini vurguladı</h3>
+        <p>BM Kadın Birimi (UN Women) Avrupa ve Orta Asya Bölge Direktörü Belen Sanz Luque, kadınların barış müzakerelerine dahil edilmesinin önemine dikkati çekerek &quot;Müzakerelerde kadınların resmi olarak yer almasını sağlamasının vakti gelmiştir.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Ekim 2026, 11:07</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bm-kadin-birimi-avrupa-ve-orta-asya-bolge-direktoru-kadinlarin-baris-muzakerelerine-katiliminin-onemini-vurguladi/4100043" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail seçimlerinde arap partileri neden kritik rol oynuyor? i̇srailli araplar arasında seçimlere katılım oranları geleneksel şekilde düşük kalıyor. ancak bu seçimlerde sağcı iktidar koalisyonunu başarısızlığa uğratmak için güçlü bir çaba var. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 24 Ekim 2026, 10:11</span>
+        </div>
+        <h3>İsrail seçimlerinde Arap partileri neden kritik rol oynuyor?</h3>
+        <p>İsrailli Araplar arasında seçimlere katılım oranları geleneksel şekilde düşük kalıyor. Ancak bu seçimlerde sağcı iktidar koalisyonunu başarısızlığa uğratmak için güçlü bir çaba var.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Ekim 2026, 10:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6e9l1nm35l4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sırbistan&#x27;daki erken genel seçimde oy verme işlemi başladı sırbistan&#x27;daki seçmenler, erken genel seçimde oylarını kullanmak için sandık başına gitmeye başladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 25 Ekim 2026, 10:58</span>
+        </div>
+        <h3>Sırbistan&#x27;daki erken genel seçimde oy verme işlemi başladı</h3>
+        <p>Sırbistan&#x27;daki seçmenler, erken genel seçimde oylarını kullanmak için sandık başına gitmeye başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Ekim 2026, 10:58</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/sirbistandaki-erken-genel-secimde-oy-verme-islemi-basladi-961124.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;asrın inşa seferberliği&quot; abd basınının gündeminde türkiye&#x27;nin 6 şubat 2023&#x27;te meydana gelen kahramanmaraş merkezli depremlerin ardından yürüttüğü &quot;asrın inşa seferberliği&quot; abd merkezli usa today ve business insider&#x27;ın yayın platformlarında yer aldı. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Ekim 2026, 10:54</span>
+        </div>
+        <h3>&quot;Asrın inşa seferberliği&quot; ABD basınının gündeminde</h3>
+        <p>Türkiye&#x27;nin 6 Şubat 2023&#x27;te meydana gelen Kahramanmaraş merkezli depremlerin ardından yürüttüğü &quot;asrın inşa seferberliği&quot; ABD merkezli USA TODAY ve Business Insider&#x27;ın yayın platformlarında yer aldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Ekim 2026, 10:54</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/asrin-insa-seferberligi-abd-basininin-gundeminde/4100028" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;de futbol stadyumu yakınındaki silahlı saldırıda 12 kişi yaralandı abd&#x27;nin florida eyaletindeki futbol stadyumu yakınında düzenlenen silahlı saldırıda 6&#x27;sı çocuk 12 kişi yaralandı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 25 Ekim 2026, 11:10</span>
+        </div>
+        <h3>ABD&#x27;de futbol stadyumu yakınındaki silahlı saldırıda 12 kişi yaralandı</h3>
+        <p>ABD&#x27;nin Florida eyaletindeki futbol stadyumu yakınında düzenlenen silahlı saldırıda 6&#x27;sı çocuk 12 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Ekim 2026, 11:10</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abdde-futbol-stadyumu-yakinindaki-silahli-saldirida-12-kisi-yaralandi-961125.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">17 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="azerbaycan&#x27;da başörtüsü meselesinde aliyev&#x27;in imajı nasıl tartışılıyor? azerbaycan cumhurbaşkanı i̇lham aliyev&#x27;in yalnızca babası haydar aliyev&#x27;in değil, aynı zamanda &quot;mustafa kemal atatürk&#x27;ün de siyasi mirasçısı&quot; olarak tanımlanması azerbaycan devletinin resmî görüşü değil. ancak bbc azerbaycanca servisi&#x27;nden könül xalilova&#x27;ya göre böyle bir kıyaslamanın tam da türkiye&#x27;de laiklik tartışmalarının yaşandığı bir dönemde gündeme gelmesi tesadüf gibi görünmüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Ekim 2026, 11:24</span>
+        </div>
+        <h3>Azerbaycan&#x27;da başörtüsü meselesinde Aliyev&#x27;in imajı nasıl tartışılıyor?</h3>
+        <p>Azerbaycan Cumhurbaşkanı İlham Aliyev&#x27;in yalnızca babası Haydar Aliyev&#x27;in değil, aynı zamanda &quot;Mustafa Kemal Atatürk&#x27;ün de siyasi mirasçısı&quot; olarak tanımlanması Azerbaycan devletinin resmî görüşü değil. Ancak BBC Azerbaycanca Servisi&#x27;nden Könül Xalilova&#x27;ya göre böyle bir kıyaslamanın tam da Türkiye&#x27;de laiklik tartışmalarının yaşandığı bir dönemde gündeme gelmesi tesadüf gibi görünmüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Ekim 2026, 11:24</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq80zxkx40l7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ai̇lem engelsiz i̇letişim merkezi 335 bini aşkın çağrıya çeviri desteği sağladı aile ve sosyal hizmetler bakanı mahinur özdemir göktaş, işitme engelli bireylerin kamu hizmetlerine, bilgiye ve sosyal hayata erişimlerini kolaylaştırmak amacıyla hizmete sunulan ai̇lem engelsiz i̇letişim merkezi aracılığıyla bugüne kadar 335 bin 288 çağrının karşılandığını açıkladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Ekim 2026, 11:54</span>
+        </div>
+        <h3>AİLEM Engelsiz İletişim Merkezi 335 bini aşkın çağrıya çeviri desteği sağladı</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş, işitme engelli bireylerin kamu hizmetlerine, bilgiye ve sosyal hayata erişimlerini kolaylaştırmak amacıyla hizmete sunulan AİLEM Engelsiz İletişim Merkezi aracılığıyla bugüne kadar 335 bin 288 çağrının karşılandığını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Ekim 2026, 11:54</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/ailem-engelsiz-iletisim-merkezi-335-bini-askin-cagriya-ceviri-destegi-sagladi-961131.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ai̇lem engelsiz i̇letişim merkezi, 335 bin 288 çağrıya çeviri desteği sağladı bakan göktaş, işitme engelli bireylerin kamu hizmetlerine, bilgiye ve sosyal hayata erişimlerini kolaylaştırmak amacıyla hizmete sunulan ai̇lem engelsiz i̇letişim merkezi aracılığıyla bugüne kadar 335 bin 288 çağrının karşılandığını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Ekim 2026, 11:28</span>
+        </div>
+        <h3>AİLEM Engelsiz İletişim Merkezi, 335 bin 288 çağrıya çeviri desteği sağladı</h3>
+        <p>Bakan Göktaş, işitme engelli bireylerin kamu hizmetlerine, bilgiye ve sosyal hayata erişimlerini kolaylaştırmak amacıyla hizmete sunulan AİLEM Engelsiz İletişim Merkezi aracılığıyla bugüne kadar 335 bin 288 çağrının karşılandığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Ekim 2026, 11:28</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ailem-engelsiz-iletisim-merkezi-335-bin-288-cagriya-ceviri-destegi-sagladi/4100066" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul dahil 10 şehirde &#x27;sansüre hayır, habere özgürlük&#x27; yürüyüşleri i̇stanbul, ankara, i̇zmir ve diyarbakır dahil 10 şehirde basın özgürlüğü yürüşleri yapılıyor. eş zamanlı olarak milliyetçi hareket partisi genel başkan yardımcısı feti yıldız &quot;yalan ve yanıltıcı haberlerler dünyanın her yerinde suçtur&quot; mesajlı bir paylaşım yaptı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Ekim 2026, 14:42</span>
+        </div>
+        <h3>İstanbul dahil 10 şehirde &#x27;Sansüre Hayır, Habere Özgürlük&#x27; yürüyüşleri</h3>
+        <p>İstanbul, Ankara, İzmir ve Diyarbakır dahil 10 şehirde basın özgürlüğü yürüşleri yapılıyor. Eş zamanlı olarak Milliyetçi Hareket Partisi Genel Başkan Yardımcısı Feti Yıldız &quot;yalan ve yanıltıcı haberlerler dünyanın her yerinde suçtur&quot; mesajlı bir paylaşım yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Ekim 2026, 14:42</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw77p30rplj3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tbmm&#x27;ye yazılan ilginç dilekçeler tbmm dilekçe komisyonuna gelen başvurular arasında kadınlara yönelik sosyal medya zorbalığı yasası çıkarılması, üniversitelerde lisans programlarının 3 yıla düşürülmesi, 60 yaş ve üzeri vatandaşlara yeşil pasaport hakkının verilmesi ve tüm belediyelerin &quot;belediye genel müdürlüğü&quot; şeklinde bir kuruma bağlanması gibi talepler dikkati çekti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Ekim 2026, 11:45</span>
+        </div>
+        <h3>TBMM&#x27;ye yazılan ilginç dilekçeler</h3>
+        <p>TBMM Dilekçe Komisyonuna gelen başvurular arasında kadınlara yönelik sosyal medya zorbalığı yasası çıkarılması, üniversitelerde lisans programlarının 3 yıla düşürülmesi, 60 yaş ve üzeri vatandaşlara yeşil pasaport hakkının verilmesi ve tüm belediyelerin &quot;Belediye Genel Müdürlüğü&quot; şeklinde bir kuruma bağlanması gibi talepler dikkati çekti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Ekim 2026, 11:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/tbmmye-yazilan-ilginc-dilekceler-961129.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tbmm&#x27;nin bu haftaki gündem başlıkları tbmm&#x27;de bütçe maratonu başlayacak. plan ve bütçe komisyonunda, 2027 yılı bütçesinin geneli üzerine görüşmeler yapılacak. dışişleri komisyonunda, mekke ortak savunma anlaşması&#x27;nın onaylanmasının uygun bulunduğuna dair kanun teklifi ele alınacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Ekim 2026, 11:30</span>
+        </div>
+        <h3>TBMM&#x27;nin bu haftaki gündem başlıkları</h3>
+        <p>TBMM&#x27;de bütçe maratonu başlayacak. Plan ve Bütçe Komisyonunda, 2027 yılı bütçesinin geneli üzerine görüşmeler yapılacak. Dışişleri Komisyonunda, Mekke Ortak Savunma Anlaşması&#x27;nın onaylanmasının uygun bulunduğuna dair kanun teklifi ele alınacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Ekim 2026, 11:30</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/tbmmnin-bu-haftaki-gundem-basliklari-961127.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇klim krizini anlatan 20 belgesel cop31 öncesi i̇stanbul&#x27;da izleyiciyle buluşacak türkiye&#x27;nin ev sahipliğinde düzenlenecek cop31 öncesinde gerçekleştirilecek belgesel günleri&#x27;nde, uluslararası festivallerde gösterilen ve ödüller kazanan 20 yapım izleyicilerin beğenisine sunulacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Ekim 2026, 11:17</span>
+        </div>
+        <h3>İklim krizini anlatan 20 belgesel COP31 öncesi İstanbul&#x27;da izleyiciyle buluşacak</h3>
+        <p>Türkiye&#x27;nin ev sahipliğinde düzenlenecek COP31 öncesinde gerçekleştirilecek Belgesel Günleri&#x27;nde, uluslararası festivallerde gösterilen ve ödüller kazanan 20 yapım izleyicilerin beğenisine sunulacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Ekim 2026, 11:17</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iklim-krizini-anlatan-20-belgesel-cop31-oncesi-istanbulda-izleyiciyle-bulusacak/4100057" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tbmm&#x27;de bu hafta bütçe maratonu başlayacak tbmm&#x27;de plan ve bütçe komisyonunda, 2027 yılı bütçesinin geneli üzerine görüşmeler yapılacak. dışişleri komisyonunda, mekke ortak savunma anlaşması&#x27;nın onaylanmasının uygun bulunduğuna dair kanun teklifi ele alınacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Ekim 2026, 11:08</span>
+        </div>
+        <h3>TBMM&#x27;de bu hafta bütçe maratonu başlayacak</h3>
+        <p>TBMM&#x27;de Plan ve Bütçe Komisyonunda, 2027 yılı bütçesinin geneli üzerine görüşmeler yapılacak. Dışişleri Komisyonunda, Mekke Ortak Savunma Anlaşması&#x27;nın onaylanmasının uygun bulunduğuna dair kanun teklifi ele alınacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Ekim 2026, 11:08</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tbmmde-bu-hafta-butce-maratonu-baslayacak/4100046" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sırbistan&#x27;da genel seçimler: öğrenci hareketi iktidarı değiştirebilir mi? i̇ki yıllık öğrenci protestolarının ardından sırplar, 25 ekim pazar günü sandığa gidiyor. seçimler sırbistan&#x27;ın geleceğine dair bir referandum olarak nitelendiriliyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Ekim 2026, 11:27</span>
+        </div>
+        <h3>Sırbistan&#x27;da genel seçimler: Öğrenci hareketi iktidarı değiştirebilir mi?</h3>
+        <p>İki yıllık öğrenci protestolarının ardından Sırplar, 25 Ekim Pazar günü sandığa gidiyor. Seçimler Sırbistan&#x27;ın geleceğine dair bir referandum olarak nitelendiriliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Ekim 2026, 11:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqdjv8yvw2myo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="winnie-the-pooh&#x27;ya ilham veren ayının öyküsü 1914&#x27;te kanadalı bir asker tarafından i̇ngiltere&#x27;nin wiltshire bölgesine getirilen winnie adlı bir ayı, yazar alan alexander milne&#x27;e ilham kaynağı olmuştu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Ekim 2026, 11:53</span>
+        </div>
+        <h3>Winnie-the-Pooh&#x27;ya ilham veren ayının öyküsü</h3>
+        <p>1914&#x27;te Kanadalı bir asker tarafından İngiltere&#x27;nin Wiltshire bölgesine getirilen Winnie adlı bir ayı, yazar Alan Alexander Milne&#x27;e ilham kaynağı olmuştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Ekim 2026, 11:53</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6wy4rxlp0wpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bir video oyunuyla partnerinizi aldatabilir misiniz? video oyunlarında kurgusal karakterlerle kurulan romantik ilişkiler giderek daha gerçekçi hale gelirken, bunun gerçek hayattaki partnerler açısından aldatma sayılıp sayılmayacağı tartışılıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Ekim 2026, 15:55</span>
+        </div>
+        <h3>Bir video oyunuyla partnerinizi aldatabilir misiniz?</h3>
+        <p>Video oyunlarında kurgusal karakterlerle kurulan romantik ilişkiler giderek daha gerçekçi hale gelirken, bunun gerçek hayattaki partnerler açısından aldatma sayılıp sayılmayacağı tartışılıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Ekim 2026, 15:55</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmx235yvwxpdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="brezilya&#x27;nın en kötü radyasyon kazasının anıları çöp toplayıcıları tarafından garip, parlayan bir kapsül bulunduğunda, kimse bunun son derece radyoaktif olduğunu ve ona dokunan herkesin hayatını mahvedeceğini fark etmedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Ekim 2026, 10:13</span>
+        </div>
+        <h3>Brezilya&#x27;nın en kötü radyasyon kazasının anıları</h3>
+        <p>Çöp toplayıcıları tarafından garip, parlayan bir kapsül bulunduğunda, kimse bunun son derece radyoaktif olduğunu ve ona dokunan herkesin hayatını mahvedeceğini fark etmedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Ekim 2026, 10:13</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr93z9v1g29ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mardin&#x27;de feci kaza: aynı aileden 6 kişinin cenazesi defnedildi mardin&#x27;in nusaybin ilçesinde sulama kanalına devrilen otomobilde yaşamını yitiren 4&#x27;ü çocuk 6 kişinin cenazesi toprağa verildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Ekim 2026, 12:04</span>
+        </div>
+        <h3>Mardin&#x27;de feci kaza: Aynı aileden 6 kişinin cenazesi defnedildi</h3>
+        <p>Mardin&#x27;in Nusaybin ilçesinde sulama kanalına devrilen otomobilde yaşamını yitiren 4&#x27;ü çocuk 6 kişinin cenazesi toprağa verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Ekim 2026, 12:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/mardinde-feci-kaza-ayni-aileden-6-kisinin-cenazesi-defnedildi-961132.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tüketicilere sahte indirim ve dolandırıcılık uyarısı kasım ayı indirim kampanyalarının yaklaşmasıyla tüketicilerin, sahte indirimlere, kampanya öncesinde yapılan fiyat artışlarına ve taklit alışveriş sitelerine karşı dikkatli olması tavsiye ediliyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Ekim 2026, 11:37</span>
+        </div>
+        <h3>Tüketicilere sahte indirim ve dolandırıcılık uyarısı</h3>
+        <p>Kasım ayı indirim kampanyalarının yaklaşmasıyla tüketicilerin, sahte indirimlere, kampanya öncesinde yapılan fiyat artışlarına ve taklit alışveriş sitelerine karşı dikkatli olması tavsiye ediliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Ekim 2026, 11:37</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/tuketicilere-sahte-indirim-ve-dolandiricilik-uyarisi-961128.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="öğretmen ve öğrencilerden çiftçilerin traktörlerine tarlada ücretsiz bakım desteği erzincan&#x27;da meslek lisesi öğretmen ve öğrencileri, sosyal sorumluluk projesi kapsamında tarlalara giderek çiftçilere ait traktörlerin periyodik bakım ve kontrollerini ücretsiz yapıyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Ekim 2026, 12:23</span>
+        </div>
+        <h3>Öğretmen ve öğrencilerden çiftçilerin traktörlerine tarlada ücretsiz bakım desteği</h3>
+        <p>Erzincan&#x27;da meslek lisesi öğretmen ve öğrencileri, sosyal sorumluluk projesi kapsamında tarlalara giderek çiftçilere ait traktörlerin periyodik bakım ve kontrollerini ücretsiz yapıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Ekim 2026, 12:23</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ogretmen-ve-ogrencilerden-ciftcilerin-traktorlerine-tarlada-ucretsiz-bakim-destegi/4100111" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meclis&#x27;e &quot;60 yaş ve üstü vatandaşlara yeşil pasaport hakkı verilsin&quot; talebi tbmm dilekçe komisyonuna gelen başvurular arasında, 60 yaş ve üzerindeki vatandaşlara yeşil pasaport hakkı tanınması talebi de yer aldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Ekim 2026, 12:16</span>
+        </div>
+        <h3>Meclis&#x27;e &quot;60 yaş ve üstü vatandaşlara yeşil pasaport hakkı verilsin&quot; talebi</h3>
+        <p>TBMM Dilekçe Komisyonuna gelen başvurular arasında, 60 yaş ve üzerindeki vatandaşlara yeşil pasaport hakkı tanınması talebi de yer aldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Ekim 2026, 12:16</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/meclise-60-yas-ve-ustu-vatandaslara-yesil-pasaport-hakki-verilsin-talebi/4100104" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="jandarmanın &quot;yüzen karakolu&quot; karakaya barajı&#x27;nda görev başında malatya, elazığ ve diyarbakır sınırlarındaki karakaya barajı&#x27;nda görev yapan jandarma asayiş bot timi, güvenlik ve denetim görevini sürdürüyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Ekim 2026, 11:13</span>
+        </div>
+        <h3>Jandarmanın &quot;yüzen karakolu&quot; Karakaya Barajı&#x27;nda görev başında</h3>
+        <p>Malatya, Elazığ ve Diyarbakır sınırlarındaki Karakaya Barajı&#x27;nda görev yapan Jandarma Asayiş Bot Timi, güvenlik ve denetim görevini sürdürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Ekim 2026, 11:13</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/jandarmanin-yuzen-karakolu-karakaya-barajinda-gorev-basinda/4100053" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye, eylülde elektriğinin yüzde 70,3&#x27;ünü yerli kaynaklardan üretti türkiye&#x27;nin elektrik kurulu gücü eylül ayı sonu itibarıyla 127 bin 355 megavata ulaşırken yenilenebilir enerji kaynaklarının toplam kurulu güç içindeki payı yüzde 63,1 oldu. aynı dönemde elektrik üretiminin yüzde 70,3&#x27;ü yerli kaynaklardan karşılandı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 25 Ekim 2026, 11:53</span>
+        </div>
+        <h3>Türkiye, eylülde elektriğinin yüzde 70,3&#x27;ünü yerli kaynaklardan üretti</h3>
+        <p>Türkiye&#x27;nin elektrik kurulu gücü eylül ayı sonu itibarıyla 127 bin 355 megavata ulaşırken yenilenebilir enerji kaynaklarının toplam kurulu güç içindeki payı yüzde 63,1 oldu. Aynı dönemde elektrik üretiminin yüzde 70,3&#x27;ü yerli kaynaklardan karşılandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Ekim 2026, 11:53</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiye-eylulde-elektriginin-yuzde-703unu-yerli-kaynaklardan-uretti-961130.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;den 121 ülkeye 197 bin ton turşu ihracatı türkiye, ocak-eylül döneminde 121 ülkeye 197 bin 692 ton turşu ihraç ederek 301 milyon 675 bin dolar gelir elde etti. i̇hracatta yıl sonu hedefi 500 milyon dolar olarak belirlendi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 25 Ekim 2026, 11:12</span>
+        </div>
+        <h3>Türkiye&#x27;den 121 ülkeye 197 bin ton turşu ihracatı</h3>
+        <p>Türkiye, ocak-eylül döneminde 121 ülkeye 197 bin 692 ton turşu ihraç ederek 301 milyon 675 bin dolar gelir elde etti. İhracatta yıl sonu hedefi 500 milyon dolar olarak belirlendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Ekim 2026, 11:12</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyeden-121-ulkeye-197-bin-ton-tursu-ihracati-961126.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
