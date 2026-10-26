@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">26 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">26 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 6</span><span class="stat-item"><strong>genel</strong> 22</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>ekonomi</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>İran: Tahran toplantısı bölge iç güvenliğinin şekillenmesi için başlangıç olabilir</h3>
+        <p>İran Dışişleri Bakanlığı Sözcüsü İsmail Bekayi, Mekke İttifakı üyesi Suudi Arabistan, Pakistan ve Türkiye&#x27;den üst düzey yetkililerin Tahran&#x27;a gerçekleştireceği ziyarete ilişkin, &quot;Tahran toplantısı, bölge iç güvenliğinin şekillenmesi için başlangıç olabilir.&quot; dedi.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 26 Ekim 2026, 13:05</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-tahran-toplantisi-bolge-ic-guvenliginin-sekillenmesi-icin-baslangic-olabilir-961229.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 26 Ekim 2026, 12:19</span>
+            </div>
+            <h3>Cumhurbaşkanı Başdanışmanı Saral istifa etti: &#x27;İnandığım değerlerden geri adım anlamına gelmiyor&#x27;</h3>
+            <p>Cumhurbaşkanı Başdanışmanı Oktay Saral, görevinden istifa ettiğini açıkladı. Saral, sosyal medya hesabından yaptığı paylaşımda, &quot;2016 yılından bu yana büyük bir onur, şeref ve sorumlulukla yürüttüğüm Cumhurbaşkanımız Sayın Recep Tayyip Erdoğan&#x27;ın Başdanışmanlığı görevinden istifamı sunmuş bulunuyorum&quot; dedi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c9zrd444vl5jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 26 Ekim 2026, 11:36</span>
+            </div>
+            <h3>Brezilya&#x27;da Lula benzeri görülmemiş bir seçim zaferi elde etti</h3>
+            <p>Brezilyalılar, yeni devlet başkanlarını seçmek için 25 Ekim Pazar günü sandık başına gitti. Ülkenin Yüksek Seçim Kurulu, görevdeki Lula da Silva&#x27;nın oyların yüzde 51,79&#x27;unu alarak yeniden devlet başkanı seçildiğini ilan etti.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cw0k0ey5en0yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 25 Ekim 2026, 20:44</span>
+            </div>
+            <h3>İstanbul Barosu&#x27;nun yeni başkanı Ümit Kocasakal oldu</h3>
+            <p>Dünyanın en büyük barolarından birisi olan İstanbul Barosu&#x27;nda 128. Olağan Genel Kurul kapsamında başkanlık seçimi için binlerce avukat sandık başındaydı. Cumhuriyetçi Güç Birliği Başkan Adayı Ümit Kocasakal, açılan 126 sandıkta en çok oyu alan başkan adayı oldu ve İstanbul Barosu Başkanı seçildi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cq8jz33m09j1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 26 Ekim 2026, 12:50</span>
+            </div>
+            <h3>Brezilya&#x27;da seçimi kaybeden Bolsonaro, sonuçları tanımadığını duyurdu</h3>
+            <p>Brezilya&#x27;da devlet başkanlığı seçiminin ikinci turunda resmi olmayan sonuçlara göre Luiz Inacio Lula da Silva&#x27;ya yenilen sağcı aday Flavio Bolsonaro, sonuçları tanımadığını ve seçimlerin iptali için yargıya başvuracağını açıkladı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/brezilyada-secimi-kaybeden-bolsonaro-sonuclari-tanimadigini-duyurdu-961227.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇ran: tahran toplantısı bölge iç güvenliğinin şekillenmesi için başlangıç olabilir i̇ran dışişleri bakanlığı sözcüsü i̇smail bekayi, mekke i̇ttifakı üyesi suudi arabistan, pakistan ve türkiye&#x27;den üst düzey yetkililerin tahran&#x27;a gerçekleştireceği ziyarete ilişkin, &quot;tahran toplantısı, bölge iç güvenliğinin şekillenmesi için başlangıç olabilir.&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 26 Ekim 2026, 13:05</span>
+        </div>
+        <h3>İran: Tahran toplantısı bölge iç güvenliğinin şekillenmesi için başlangıç olabilir</h3>
+        <p>İran Dışişleri Bakanlığı Sözcüsü İsmail Bekayi, Mekke İttifakı üyesi Suudi Arabistan, Pakistan ve Türkiye&#x27;den üst düzey yetkililerin Tahran&#x27;a gerçekleştireceği ziyarete ilişkin, &quot;Tahran toplantısı, bölge iç güvenliğinin şekillenmesi için başlangıç olabilir.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Ekim 2026, 13:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-tahran-toplantisi-bolge-ic-guvenliginin-sekillenmesi-icin-baslangic-olabilir-961229.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="brezilya&#x27;da lula benzeri görülmemiş bir seçim zaferi elde etti brezilyalılar, yeni devlet başkanlarını seçmek için 25 ekim pazar günü sandık başına gitti. ülkenin yüksek seçim kurulu, görevdeki lula da silva&#x27;nın oyların yüzde 51,79&#x27;unu alarak yeniden devlet başkanı seçildiğini ilan etti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 26 Ekim 2026, 11:36</span>
+        </div>
+        <h3>Brezilya&#x27;da Lula benzeri görülmemiş bir seçim zaferi elde etti</h3>
+        <p>Brezilyalılar, yeni devlet başkanlarını seçmek için 25 Ekim Pazar günü sandık başına gitti. Ülkenin Yüksek Seçim Kurulu, görevdeki Lula da Silva&#x27;nın oyların yüzde 51,79&#x27;unu alarak yeniden devlet başkanı seçildiğini ilan etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Ekim 2026, 11:36</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw0k0ey5en0yo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul barosu&#x27;nun yeni başkanı ümit kocasakal oldu dünyanın en büyük barolarından birisi olan i̇stanbul barosu&#x27;nda 128. olağan genel kurul kapsamında başkanlık seçimi için binlerce avukat sandık başındaydı. cumhuriyetçi güç birliği başkan adayı ümit kocasakal, açılan 126 sandıkta en çok oyu alan başkan adayı oldu ve i̇stanbul barosu başkanı seçildi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 25 Ekim 2026, 20:44</span>
+        </div>
+        <h3>İstanbul Barosu&#x27;nun yeni başkanı Ümit Kocasakal oldu</h3>
+        <p>Dünyanın en büyük barolarından birisi olan İstanbul Barosu&#x27;nda 128. Olağan Genel Kurul kapsamında başkanlık seçimi için binlerce avukat sandık başındaydı. Cumhuriyetçi Güç Birliği Başkan Adayı Ümit Kocasakal, açılan 126 sandıkta en çok oyu alan başkan adayı oldu ve İstanbul Barosu Başkanı seçildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Ekim 2026, 20:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq8jz33m09j1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="brezilya&#x27;da seçimi kaybeden bolsonaro, sonuçları tanımadığını duyurdu brezilya&#x27;da devlet başkanlığı seçiminin ikinci turunda resmi olmayan sonuçlara göre luiz inacio lula da silva&#x27;ya yenilen sağcı aday flavio bolsonaro, sonuçları tanımadığını ve seçimlerin iptali için yargıya başvuracağını açıkladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 26 Ekim 2026, 12:50</span>
+        </div>
+        <h3>Brezilya&#x27;da seçimi kaybeden Bolsonaro, sonuçları tanımadığını duyurdu</h3>
+        <p>Brezilya&#x27;da devlet başkanlığı seçiminin ikinci turunda resmi olmayan sonuçlara göre Luiz Inacio Lula da Silva&#x27;ya yenilen sağcı aday Flavio Bolsonaro, sonuçları tanımadığını ve seçimlerin iptali için yargıya başvuracağını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Ekim 2026, 12:50</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/brezilyada-secimi-kaybeden-bolsonaro-sonuclari-tanimadigini-duyurdu-961227.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="otobüs kazalarını önlemek için dron ve kamera destekli denetim önerisi türkiye otobüsçüler federasyonu (tofed) genel başkanı birol özcan, şehirler arası yolcu taşımacılığında trafik ihlallerinin önlenmesi için denetimlerin artırılması ve kurallara uymayan sürücülere ağırlaştırılmış cezalar uygulanması gerektiğini belirtti. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 26 Ekim 2026, 12:28</span>
+        </div>
+        <h3>Otobüs kazalarını önlemek için dron ve kamera destekli denetim önerisi</h3>
+        <p>Türkiye Otobüsçüler Federasyonu (TOFED) Genel Başkanı Birol Özcan, şehirler arası yolcu taşımacılığında trafik ihlallerinin önlenmesi için denetimlerin artırılması ve kurallara uymayan sürücülere ağırlaştırılmış cezalar uygulanması gerektiğini belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Ekim 2026, 12:28</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/otobus-kazalarini-onlemek-icin-dron-ve-kamera-destekli-denetim-onerisi-961223.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yurdun kuzeybatı kesimleri için gök gürültülü sağanak uyarısı türkiye&#x27;nin kuzeybatısı için gök gürültülü sağanak uyarısında bulunuldu. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Ekim 2026, 13:16</span>
+        </div>
+        <h3>Yurdun kuzeybatı kesimleri için gök gürültülü sağanak uyarısı</h3>
+        <p>Türkiye&#x27;nin kuzeybatısı için gök gürültülü sağanak uyarısında bulunuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Ekim 2026, 13:16</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yurdun-kuzeybati-kesimleri-icin-gok-gurultulu-saganak-uyarisi/4101066" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">22 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cumhurbaşkanı başdanışmanı saral istifa etti: &#x27;i̇nandığım değerlerden geri adım anlamına gelmiyor&#x27; cumhurbaşkanı başdanışmanı oktay saral, görevinden istifa ettiğini açıkladı. saral, sosyal medya hesabından yaptığı paylaşımda, &quot;2016 yılından bu yana büyük bir onur, şeref ve sorumlulukla yürüttüğüm cumhurbaşkanımız sayın recep tayyip erdoğan&#x27;ın başdanışmanlığı görevinden istifamı sunmuş bulunuyorum&quot; dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 26 Ekim 2026, 12:19</span>
+        </div>
+        <h3>Cumhurbaşkanı Başdanışmanı Saral istifa etti: &#x27;İnandığım değerlerden geri adım anlamına gelmiyor&#x27;</h3>
+        <p>Cumhurbaşkanı Başdanışmanı Oktay Saral, görevinden istifa ettiğini açıkladı. Saral, sosyal medya hesabından yaptığı paylaşımda, &quot;2016 yılından bu yana büyük bir onur, şeref ve sorumlulukla yürüttüğüm Cumhurbaşkanımız Sayın Recep Tayyip Erdoğan&#x27;ın Başdanışmanlığı görevinden istifamı sunmuş bulunuyorum&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Ekim 2026, 12:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9zrd444vl5jo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mekke i̇ttifakı&#x27;nın i̇ran ile ilk teması bugün: türkiye&#x27;yi kalın temsil edecek i̇ranlı ve suudi yetkililerin verdiği bilgiye göre, suudi arabistan, türkiye ve pakistan&#x27;dan üst düzey yetkililer, bölgesel güvenlik konularını görüşmek üzere bugün tahran&#x27;da i̇ranlı yetkililerle bir araya gelecek. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 26 Ekim 2026, 10:30</span>
+        </div>
+        <h3>Mekke İttifakı&#x27;nın İran ile ilk teması bugün: Türkiye&#x27;yi Kalın temsil edecek</h3>
+        <p>İranlı ve Suudi yetkililerin verdiği bilgiye göre, Suudi Arabistan, Türkiye ve Pakistan&#x27;dan üst düzey yetkililer, bölgesel güvenlik konularını görüşmek üzere bugün Tahran&#x27;da İranlı yetkililerle bir araya gelecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Ekim 2026, 10:30</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3x2w09gn4lwo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sırbistan&#x27;da iktidardaki vucic&#x27;in öğrenci hareketine yenilmesi sonrası kutlamalar yapılıyor uzun süredir iktidarda bulunan sağcı popülist lider aleksandar vucic, ülkedeki parlamento seçimlerinde öğrencilerin öncülüğündeki protesto hareketi karşısında yenilgiyi kabul etti. öğrenci listesi&#x27;nin liste başı adayı ilija srdanovic, bbc sırpça servisine verdiği demeçte, &quot;burası özgür bir devlet olacak&quot; dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 26 Ekim 2026, 12:03</span>
+        </div>
+        <h3>Sırbistan&#x27;da iktidardaki Vucic&#x27;in öğrenci hareketine yenilmesi sonrası kutlamalar yapılıyor</h3>
+        <p>Uzun süredir iktidarda bulunan sağcı popülist lider Aleksandar Vucic, ülkedeki parlamento seçimlerinde öğrencilerin öncülüğündeki protesto hareketi karşısında yenilgiyi kabul etti. Öğrenci Listesi&#x27;nin liste başı adayı Ilija Srdanovic, BBC Sırpça servisine verdiği demeçte, &quot;Burası özgür bir devlet olacak&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Ekim 2026, 12:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqdjv8yvw2myo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="binyamin netanyahu: &#x27;bay güvenlik&#x27; i̇srail&#x27;de yedinci kez başbakan olabilir mi? i̇srail&#x27;in en uzun süre görev yapan başbakanı, 27 ekim&#x27;de yapılacak parlamento seçimlerinde bir dönem daha görevde kalmayı umuyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Ekim 2026, 15:54</span>
+        </div>
+        <h3>Binyamin Netanyahu: &#x27;Bay Güvenlik&#x27; İsrail&#x27;de yedinci kez başbakan olabilir mi?</h3>
+        <p>İsrail&#x27;in en uzun süre görev yapan başbakanı, 27 Ekim&#x27;de yapılacak parlamento seçimlerinde bir dönem daha görevde kalmayı umuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Ekim 2026, 15:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c94g1p2m21xlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul dahil 10 şehirde &#x27;sansüre hayır, habere özgürlük&#x27; yürüyüşleri i̇stanbul, ankara, i̇zmir ve diyarbakır dahil 10 şehirde basın özgürlüğü yürüşleri yapılıyor. eş zamanlı olarak milliyetçi hareket partisi genel başkan yardımcısı feti yıldız &quot;yalan ve yanıltıcı haberlerler dünyanın her yerinde suçtur&quot; mesajlı bir paylaşım yaptı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Ekim 2026, 14:42</span>
+        </div>
+        <h3>İstanbul dahil 10 şehirde &#x27;Sansüre Hayır, Habere Özgürlük&#x27; yürüyüşleri</h3>
+        <p>İstanbul, Ankara, İzmir ve Diyarbakır dahil 10 şehirde basın özgürlüğü yürüşleri yapılıyor. Eş zamanlı olarak Milliyetçi Hareket Partisi Genel Başkan Yardımcısı Feti Yıldız &quot;yalan ve yanıltıcı haberlerler dünyanın her yerinde suçtur&quot; mesajlı bir paylaşım yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Ekim 2026, 14:42</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw77p30rplj3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tavşanlı höyük kazılarında 4 bin yıllık pati izleri bulundu kültür ve turizm bakanı mehmet nuri ersoy, tavşanlı höyük&#x27;te yaklaşık 4 bin yıllık pati izleri bulunduğunu duyurdu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 26 Ekim 2026, 12:57</span>
+        </div>
+        <h3>Tavşanlı Höyük kazılarında 4 bin yıllık pati izleri bulundu</h3>
+        <p>Kültür ve Turizm Bakanı Mehmet Nuri Ersoy, Tavşanlı Höyük&#x27;te yaklaşık 4 bin yıllık pati izleri bulunduğunu duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Ekim 2026, 12:57</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/tavsanli-hoyuk-kazilarinda-4-bin-yillik-pati-izleri-bulundu-961228.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ulusal staj programı&#x27;na başvurular bugün başladı çalışma ve sosyal güvenlik bakanı vedat işıkhan, ulusal staj programı başvurularının başladığını duyurdu. program kapsamında üniversite öğrencilerine staj, iş gölgeleme ve eğitim imkanları sunulacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 26 Ekim 2026, 12:47</span>
+        </div>
+        <h3>Ulusal Staj Programı&#x27;na başvurular bugün başladı</h3>
+        <p>Çalışma ve Sosyal Güvenlik Bakanı Vedat Işıkhan, Ulusal Staj Programı başvurularının başladığını duyurdu. Program kapsamında üniversite öğrencilerine staj, iş gölgeleme ve eğitim imkanları sunulacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Ekim 2026, 12:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/ulusal-staj-programina-basvurular-bugun-basladi-961225.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="katil i̇srail saldırılarında hayatını kaybeden filistinlilerin hikayeleri yaşam arşivinde sergileniyor gazze&#x27;de katil i̇srail saldırılarında yaşamını yitiren 74 binden fazla filistinlinin yalnızca birer sayıdan ibaret olmadığına dikkati çekmeyi amaçlayan &quot;yaşam arşivi&quot; sergisi, i̇srail saldırılarında hayatını kaybeden filistinlilerin yaşam öykülerini, fotoğraflarını, anılarını ve yarım kalan hayallerini gözler önüne seriyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 26 Ekim 2026, 12:32</span>
+        </div>
+        <h3>Katil İsrail saldırılarında hayatını kaybeden Filistinlilerin hikayeleri Yaşam Arşivinde sergileniyor</h3>
+        <p>Gazze&#x27;de katil İsrail saldırılarında yaşamını yitiren 74 binden fazla Filistinlinin yalnızca birer sayıdan ibaret olmadığına dikkati çekmeyi amaçlayan &quot;Yaşam Arşivi&quot; sergisi, İsrail saldırılarında hayatını kaybeden Filistinlilerin yaşam öykülerini, fotoğraflarını, anılarını ve yarım kalan hayallerini gözler önüne seriyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Ekim 2026, 12:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/katil-israil-saldirilarinda-hayatini-kaybeden-filistinlilerin-hikayeleri-yasam-arsivinde-sergileniyor-961224.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan gürlek: 2017&#x27;den beri 2 milyondan fazla dosyada mağdur ile şüpheli uzlaştı adalet bakanı akın gürlek, &quot;2017 yılından günümüze kadar 2 milyondan fazla dosyada mağdur ile şüpheli uzlaşmıştır&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 26 Ekim 2026, 12:24</span>
+        </div>
+        <h3>Bakan Gürlek: 2017&#x27;den beri 2 milyondan fazla dosyada mağdur ile şüpheli uzlaştı</h3>
+        <p>Adalet Bakanı Akın Gürlek, &quot;2017 yılından günümüze kadar 2 milyondan fazla dosyada mağdur ile şüpheli uzlaşmıştır&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Ekim 2026, 12:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-gurlek-2017den-beri-2-milyondan-fazla-dosyada-magdur-ile-supheli-uzlasti-961222.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk kızılay, &quot;2. kan elçileri çalıştayı&quot; düzenledi türk kızılay tarafından gençler arasında gönüllü ve düzenli kan bağışı kültürünü yaygınlaştırmak amacıyla yürütülen &quot;gençliğin kanında hayat var&quot; projesi kapsamında &quot;2. kan elçileri çalıştayı&quot; düzenlendi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Ekim 2026, 13:29</span>
+        </div>
+        <h3>Türk Kızılay, &quot;2. Kan Elçileri Çalıştayı&quot; düzenledi</h3>
+        <p>Türk Kızılay tarafından gençler arasında gönüllü ve düzenli kan bağışı kültürünü yaygınlaştırmak amacıyla yürütülen &quot;Gençliğin Kanında Hayat Var&quot; Projesi kapsamında &quot;2. Kan Elçileri Çalıştayı&quot; düzenlendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Ekim 2026, 13:29</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-kizilay-2-kan-elcileri-calistayi-duzenledi/4101085" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milli savunma bakanı güler, kktc başbakanı üstel ile görüştü milli savunma bakanı yaşar güler, kuzey kıbrıs türk cumhuriyeti (kktc) başbakanı ünal üstel ile görüştü. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Ekim 2026, 12:41</span>
+        </div>
+        <h3>Milli Savunma Bakanı Güler, KKTC Başbakanı Üstel ile görüştü</h3>
+        <p>Milli Savunma Bakanı Yaşar Güler, Kuzey Kıbrıs Türk Cumhuriyeti (KKTC) Başbakanı Ünal Üstel ile görüştü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Ekim 2026, 12:41</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/milli-savunma-bakani-guler-kktc-basbakani-ustel-ile-gorustu/4100998" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan gürlek: 2017&#x27;den günümüze kadar 2 milyondan fazla dosyada mağdur ile şüpheli uzlaştı adalet bakanı akın gürlek, &quot;2017 yılından günümüze kadar 2 milyondan fazla dosyada mağdur ile şüpheli uzlaşmıştır.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Ekim 2026, 12:18</span>
+        </div>
+        <h3>Bakan Gürlek: 2017&#x27;den günümüze kadar 2 milyondan fazla dosyada mağdur ile şüpheli uzlaştı</h3>
+        <p>Adalet Bakanı Akın Gürlek, &quot;2017 yılından günümüze kadar 2 milyondan fazla dosyada mağdur ile şüpheli uzlaşmıştır.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Ekim 2026, 12:18</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-gurlek-2017den-gunumuze-kadar-2-milyondan-fazla-dosyada-magdur-ile-supheli-uzlasti/4100961" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="son 1 ayda kırmızı bültenle ve ulusal seviyede aranan 63 suçlu türkiye&#x27;ye getirildi i̇çişleri bakanlığı, son 1 ayda kırmızı bültenle aranan 33, ulusal seviyede aranan 30 olmak üzere toplam 63 suçlunun türkiye&#x27;ye getirildiğini bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Ekim 2026, 11:31</span>
+        </div>
+        <h3>Son 1 ayda kırmızı bültenle ve ulusal seviyede aranan 63 suçlu Türkiye&#x27;ye getirildi</h3>
+        <p>İçişleri Bakanlığı, son 1 ayda kırmızı bültenle aranan 33, ulusal seviyede aranan 30 olmak üzere toplam 63 suçlunun Türkiye&#x27;ye getirildiğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Ekim 2026, 11:31</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/son-1-ayda-kirmizi-bultenle-ve-ulusal-seviyede-aranan-63-suclu-turkiyeye-getirildi/4100862" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk dünyası kadınları ankara&#x27;da diplomasi, liderlik ve ortak geleceği konuşacak ak parti genel merkez kadın kolları başkanlığınca, ortak tarihin oluşturduğu bağı kadınların öncülüğünde işbirliklerine dönüştürmek amacıyla türk devletleri teşkilatı 13. devlet ve hükümet başkanları zirvesi kapsamında yan etkinlikler düzenlenecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Ekim 2026, 11:09</span>
+        </div>
+        <h3>Türk dünyası kadınları Ankara&#x27;da diplomasi, liderlik ve ortak geleceği konuşacak</h3>
+        <p>AK Parti Genel Merkez Kadın Kolları Başkanlığınca, ortak tarihin oluşturduğu bağı kadınların öncülüğünde işbirliklerine dönüştürmek amacıyla Türk Devletleri Teşkilatı 13. Devlet ve Hükümet Başkanları Zirvesi kapsamında yan etkinlikler düzenlenecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Ekim 2026, 11:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-dunyasi-kadinlari-ankarada-diplomasi-liderlik-ve-ortak-gelecegi-konusacak/4100818" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan&#x27;dan şehit albay sayit gökgöz&#x27;ün ailesine taziye mesajı cumhurbaşkanı recep tayyip erdoğan, şehit albay sayit gökgöz&#x27;ün ailesine başsağlığı diledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Ekim 2026, 09:30</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan&#x27;dan şehit Albay Sayit Gökgöz&#x27;ün ailesine taziye mesajı</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, şehit Albay Sayit Gökgöz&#x27;ün ailesine başsağlığı diledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Ekim 2026, 09:30</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogandan-sehit-albay-sayit-gokgozun-ailesine-taziye-mesaji/4100640" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mumyalar ve viking geçitleri: buzlar eriyince ortaya çıkan sırlar i̇klim değişikliği nedeniyle dünyada buzların erime hızı artıyor ve bu durum, binlerce yıldır mükemmel bir şekilde korunmuş antik eserleri gün yüzüne çıkarıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 26 Ekim 2026, 04:01</span>
+        </div>
+        <h3>Mumyalar ve Viking geçitleri: Buzlar eriyince ortaya çıkan sırlar</h3>
+        <p>İklim değişikliği nedeniyle dünyada buzların erime hızı artıyor ve bu durum, binlerce yıldır mükemmel bir şekilde korunmuş antik eserleri gün yüzüne çıkarıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Ekim 2026, 04:01</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6j9kzj1478eo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bolu belediyesi&#x27;ne operasyon: başkan yardımcısı dahil dört kişi gözaltında bolu belediyesi&#x27;ne yönelik &quot;ihaleye fesat karıştırma&quot; ve &quot;zimmet&quot; iddialarıyla düzenlenen operasyonda belediye başkan yardımcısı rasim özdemir&#x27;in de aralarında olduğu dört kişi gözaltına alındı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 26 Ekim 2026, 10:56</span>
+        </div>
+        <h3>Bolu Belediyesi&#x27;ne operasyon: Başkan Yardımcısı dahil dört kişi gözaltında</h3>
+        <p>Bolu Belediyesi&#x27;ne yönelik &quot;ihaleye fesat karıştırma&quot; ve &quot;zimmet&quot; iddialarıyla düzenlenen operasyonda Belediye Başkan Yardımcısı Rasim Özdemir&#x27;in de aralarında olduğu dört kişi gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 26 Ekim 2026, 10:56</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c680z18x71gdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meghan markle&#x27;ın babası hakkındaki istismar iddialarıyla ilgili neler biliniyor? bbc&#x27;nin edindiği bilgiye göre sussex düşesi, babasına gönderdiği bir mektupta genç kızlara cinsel istismarda bulunduğunu kendisinin ve yetkililerin bildiğini söyledi ve onunla iletişimi kesti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Ekim 2026, 17:07</span>
+        </div>
+        <h3>Meghan Markle&#x27;ın babası hakkındaki istismar iddialarıyla ilgili neler biliniyor?</h3>
+        <p>BBC&#x27;nin edindiği bilgiye göre Sussex Düşesi, babasına gönderdiği bir mektupta genç kızlara cinsel istismarda bulunduğunu kendisinin ve yetkililerin bildiğini söyledi ve onunla iletişimi kesti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Ekim 2026, 17:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm70p18ldrwjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="el halil kentinde kuşatmasını sürdüren i̇srail ordusu 2 bin 649 filistinliyi yerinden etti i̇şgal altındaki batı şeria&#x27;nın el halil kentinde dört gündür kuşatmasını sürdüren katil i̇srail ordusu, 2 bin 649 filistinliyi zorla evlerinden çıkararak yerinden etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 26 Ekim 2026, 12:47</span>
+        </div>
+        <h3>El Halil kentinde kuşatmasını sürdüren İsrail ordusu 2 bin 649 Filistinliyi yerinden etti</h3>
+        <p>İşgal altındaki Batı Şeria&#x27;nın El Halil kentinde dört gündür kuşatmasını sürdüren katil İsrail ordusu, 2 bin 649 Filistinliyi zorla evlerinden çıkararak yerinden etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Ekim 2026, 12:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/el-halil-kentinde-kusatmasini-surduren-israil-ordusu-2-bin-649-filistinliyi-yerinden-etti-961226.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="soykırımcı i̇srail gazze&#x27;de çadırlara saldırdı: 800&#x27;den fazla kişi barınaksız kaldı i̇srail ordusu, gazze şeridi&#x27;nde yerinden edilenlerin kaldığı çadırları insansız hava araçlarıyla (i̇ha) hedef alarak 800&#x27;den fazla filistinliyi barınaksız bıraktı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 26 Ekim 2026, 12:19</span>
+        </div>
+        <h3>Soykırımcı İsrail Gazze&#x27;de çadırlara saldırdı: 800&#x27;den fazla kişi barınaksız kaldı</h3>
+        <p>İsrail ordusu, Gazze Şeridi&#x27;nde yerinden edilenlerin kaldığı çadırları insansız hava araçlarıyla (İHA) hedef alarak 800&#x27;den fazla Filistinliyi barınaksız bıraktı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Ekim 2026, 12:19</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/soykirimci-israil-gazzede-cadirlara-saldirdi-800den-fazla-kisi-barinaksiz-kaldi-961221.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da ev ve iş yeri kurşunlama olaylarına ilişkin 13 zanlı yakalandı i̇stanbul&#x27;da ev ve iş yerlerinin kurşunlanmasına ilişkin düzenlenen operasyonda 13 şüpheli gözaltına alındı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Ekim 2026, 12:36</span>
+        </div>
+        <h3>İstanbul&#x27;da ev ve iş yeri kurşunlama olaylarına ilişkin 13 zanlı yakalandı</h3>
+        <p>İstanbul&#x27;da ev ve iş yerlerinin kurşunlanmasına ilişkin düzenlenen operasyonda 13 şüpheli gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Ekim 2026, 12:36</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-ev-ve-is-yeri-kursunlama-olaylarina-iliskin-13-zanli-yakalandi/4100993" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tarihi vazelon manastırı sonbahar renklerine bürünüyor trabzon&#x27;un maçka ilçesindeki tarihi vazelon manastırı ve çevresi, sonbaharın gelişiyle sarı, turuncu ve kahverengi tonlarına bürünüyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Ekim 2026, 10:22</span>
+        </div>
+        <h3>Tarihi Vazelon Manastırı sonbahar renklerine bürünüyor</h3>
+        <p>Trabzon&#x27;un Maçka ilçesindeki tarihi Vazelon Manastırı ve çevresi, sonbaharın gelişiyle sarı, turuncu ve kahverengi tonlarına bürünüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Ekim 2026, 10:22</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tarihi-vazelon-manastiri-sonbahar-renklerine-burunuyor/4100713" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="şehirler arası otobüslerde trafik ihlalleri can güvenliğini tehdit ediyor şehirler arası yolcu otobüslerinde seyir halindeyken şoför değiştirme, otoyolda geri gitme, cep telefonuyla ilgilenme ve hız sınırlarını aşma gibi ihlaller, yüzlerce yolcunun can güvenliğini tehlikeye atıyor. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 26 Ekim 2026, 11:04</span>
+        </div>
+        <h3>Şehirler arası otobüslerde trafik ihlalleri can güvenliğini tehdit ediyor</h3>
+        <p>Şehirler arası yolcu otobüslerinde seyir halindeyken şoför değiştirme, otoyolda geri gitme, cep telefonuyla ilgilenme ve hız sınırlarını aşma gibi ihlaller, yüzlerce yolcunun can güvenliğini tehlikeye atıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 26 Ekim 2026, 11:04</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sehirler-arasi-otobuslerde-trafik-ihlalleri-can-guvenligini-tehdit-ediyor/4100805" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="fon soruşturması kapsamında gözaltına alınan nusret altınbaş adliyede sermaye piyasalarında gerçekleştirilen işlemlere ilişkin yürütülen fon soruşturması kapsamında gözaltına alınan altınbaş holding&#x27;in sahibi şüpheli nusret altınbaş adliyeye sevk edildi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 26 Ekim 2026, 13:09</span>
+        </div>
+        <h3>Fon soruşturması kapsamında gözaltına alınan Nusret Altınbaş adliyede</h3>
+        <p>Sermaye piyasalarında gerçekleştirilen işlemlere ilişkin yürütülen fon soruşturması kapsamında gözaltına alınan Altınbaş Holding&#x27;in sahibi şüpheli Nusret Altınbaş adliyeye sevk edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 26 Ekim 2026, 13:09</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/fon-sorusturmasi-kapsaminda-gozaltina-alinan-nusret-altinbas-adliyede-961230.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
