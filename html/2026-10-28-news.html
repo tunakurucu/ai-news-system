@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">28 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">28 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>genel</strong> 20</span><span class="stat-item"><strong>dünya</strong> 6</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>ekonomi</strong> 3</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">GENEL</span>
+        </div>
+        <h3>İsrail seçim sonuçları: Partiler meclis çoğunluğunu sağlayamıyor</h3>
+        <p>İsrail seçimlerinde oyların %70&#x27;i sayıldı. Merkez Seçim Komitesi&#x27;nin açıkladığı kısmi sonuçlara göre Başbakan Netanyahu&#x27;nun liderliğindeki blok 54 sandalye, rakibi Eisenkot&#x27;un bloğu ise 47 sandalye kazanıyor. Kilit rol oynaması beklenen Arap partileri ise 19 sandalyeyle şimdiden rekor bir sonuç elde etti.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 28 Ekim 2026, 13:35</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c6ewez914w98o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 28 Ekim 2026, 10:35</span>
+            </div>
+            <h3>Mustafa Sarıgül: Soruşturma sonuçlanana kadar Yeni Parti üyeliğimi askıya aldıracağım</h3>
+            <p>Yeni Parti Erzincan Milletvekili Mustafa Sarıgül, kendisi ve ailesine yönelik 16 Ekim&#x27;de başlatılan soruşturmaya tamamlanıncaya kadar Yeni Parti üyeliğinin askıya alınması için partisinin yetkili organlarına başvuracağını duyurdu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmn04q2lnnrxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 28 Ekim 2026, 04:23</span>
+            </div>
+            <h3>Brezilya&#x27;da seçimi kaybeden sağcı lider Bolsonaro ABD&#x27;ye gitti</h3>
+            <p>Brezilya polisi, seçimleri kaybeden sağcı cumhurbaşkanı adayı Flávio Bolsonaro&#x27;nun pasaportlarını teslim etme emrine uymamasının ardından pasaportlarını iptal ettiğini açıkladı. ABD&#x27;den gelen vize onayının ardından Bolsonaro&#x27;nun ABD&#x27;ye gittiği doğrulandı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cwx284my7y5ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 27 Ekim 2026, 19:22</span>
+            </div>
+            <h3>Şiddet mağduru kadınlar için Diyarbakır&#x27;da buluşma: &#x27;Her kapı çaldığında irkiliyorum&#x27;</h3>
+            <p>Diyarbakır&#x27;da kadın örgütlerinin biraraya gelerek oluşturduğu &quot;Amed (Diyarbakır) Şiddetle Mücadele Ağı&quot;, öldürülen ve şüpheli şekilde yaşamını yitiren kadınlar için bir süre önce &quot;Kadın, Adalet ve Hafıza Nöbeti&quot; adıyla haftalık eylem başlatma kararı aldı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cqkg5lp7r4xno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 27 Ekim 2026, 14:06</span>
+            </div>
+            <h3>Trump&#x27;tan senatör adayına &#x27;cihatçı&#x27; suçlaması: &#x27;Metal dedektöründen geçmeli&#x27;</h3>
+            <p>ABD Başkanı Donald Trump, Michigan eyaletinden ABD Senatosuna girmek için yarışacak Demokrat aday Abdul El-Sayed&#x27;e yönelik sözlü saldırısında 11 Eylül olaylarını gündeme getirmesinin ardından tepkiyle karşılandı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cq0k01dpg2jjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">20 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇srail seçim sonuçları: partiler meclis çoğunluğunu sağlayamıyor i̇srail seçimlerinde oyların %70&#x27;i sayıldı. merkez seçim komitesi&#x27;nin açıkladığı kısmi sonuçlara göre başbakan netanyahu&#x27;nun liderliğindeki blok 54 sandalye, rakibi eisenkot&#x27;un bloğu ise 47 sandalye kazanıyor. kilit rol oynaması beklenen arap partileri ise 19 sandalyeyle şimdiden rekor bir sonuç elde etti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 28 Ekim 2026, 13:35</span>
+        </div>
+        <h3>İsrail seçim sonuçları: Partiler meclis çoğunluğunu sağlayamıyor</h3>
+        <p>İsrail seçimlerinde oyların %70&#x27;i sayıldı. Merkez Seçim Komitesi&#x27;nin açıkladığı kısmi sonuçlara göre Başbakan Netanyahu&#x27;nun liderliğindeki blok 54 sandalye, rakibi Eisenkot&#x27;un bloğu ise 47 sandalye kazanıyor. Kilit rol oynaması beklenen Arap partileri ise 19 sandalyeyle şimdiden rekor bir sonuç elde etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Ekim 2026, 13:35</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6ewez914w98o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan kurum, ankara büyükşehir belediye başkanı yavaş&#x27;ı kabul etti çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, ankara büyükşehir belediye başkanı mansur yavaş&#x27;ı bakanlıkta kabul etti. görüşmede başkentin ihtiyaçları, kente değer katacak adımlar ele alındı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Ekim 2026, 13:34</span>
+        </div>
+        <h3>Bakan Kurum, Ankara Büyükşehir Belediye Başkanı Yavaş&#x27;ı kabul etti</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, Ankara Büyükşehir Belediye Başkanı Mansur Yavaş&#x27;ı Bakanlıkta kabul etti. Görüşmede başkentin ihtiyaçları, kente değer katacak adımlar ele alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Ekim 2026, 13:34</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-kurum-ankara-buyuksehir-belediye-baskani-yavasi-kabul-etti-961485.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tdt dışişleri bakanları konseyi toplantısı ankara&#x27;da yapılacak dışişleri bakanı hakan fidan, 29-30 ekim&#x27;de ankara&#x27;da düzenlenecek türk devletleri teşkilatının (tdt) 13. zirvesi kapsamında, yarın gerçekleştirilecek dışişleri bakanları konseyi toplantısı&#x27;na ev sahipliği yapacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Ekim 2026, 13:05</span>
+        </div>
+        <h3>TDT Dışişleri Bakanları Konseyi Toplantısı Ankara&#x27;da yapılacak</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, 29-30 Ekim&#x27;de Ankara&#x27;da düzenlenecek Türk Devletleri Teşkilatının (TDT) 13. Zirvesi kapsamında, yarın gerçekleştirilecek Dışişleri Bakanları Konseyi Toplantısı&#x27;na ev sahipliği yapacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Ekim 2026, 13:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/tdt-disisleri-bakanlari-konseyi-toplantisi-ankarada-yapilacak-961482.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fransa&#x27;daki protestolar perakende sektörünü de vurdu fransa genelinde devam eden kitlesel protestolar ve beraberindeki şiddet olayları alışverişlere olumsuz etki ederken protestolardan etkilenen şehir merkezlerindeki mağazaların satışlarının da yüzde 80 gerilediği açıklandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Ekim 2026, 12:59</span>
+        </div>
+        <h3>Fransa&#x27;daki protestolar perakende sektörünü de vurdu</h3>
+        <p>Fransa genelinde devam eden kitlesel protestolar ve beraberindeki şiddet olayları alışverişlere olumsuz etki ederken protestolardan etkilenen şehir merkezlerindeki mağazaların satışlarının da yüzde 80 gerilediği açıklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Ekim 2026, 12:59</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/fransadaki-protestolar-perakende-sektorunu-de-vurdu-961479.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan güler, sofya&#x27;da türkiye-bulgaristan-romanya savunma bakanları toplantısı&#x27;na katıldı milli savunma bakanı yaşar güler, genelkurmay başkanı orgeneral selçuk bayraktaroğlu ile sofya&#x27;da düzenlenen türkiye-bulgaristan-romanya savunma bakanları ve genelkurmay başkanları toplantısı&#x27;na katıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Ekim 2026, 13:29</span>
+        </div>
+        <h3>Bakan Güler, Sofya&#x27;da Türkiye-Bulgaristan-Romanya Savunma Bakanları Toplantısı&#x27;na katıldı</h3>
+        <p>Milli Savunma Bakanı Yaşar Güler, Genelkurmay Başkanı Orgeneral Selçuk Bayraktaroğlu ile Sofya&#x27;da düzenlenen Türkiye-Bulgaristan-Romanya Savunma Bakanları ve Genelkurmay Başkanları Toplantısı&#x27;na katıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Ekim 2026, 13:29</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-guler-sofyada-turkiye-bulgaristan-romanya-savunma-bakanlari-toplantisina-katildi/4103652" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk devletleri teşkilatı dışişleri bakanları konseyi toplantısı yarın ankara&#x27;da yapılacak dışişleri bakanı hakan fidan, 29-30 ekim&#x27;de ankara&#x27;da düzenlenecek türk devletleri teşkilatının (tdt) 13. zirvesi kapsamında, yarın gerçekleştirilecek dışişleri bakanları konseyi toplantısı&#x27;na ev sahipliği yapacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Ekim 2026, 13:08</span>
+        </div>
+        <h3>Türk Devletleri Teşkilatı Dışişleri Bakanları Konseyi Toplantısı yarın Ankara&#x27;da yapılacak</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, 29-30 Ekim&#x27;de Ankara&#x27;da düzenlenecek Türk Devletleri Teşkilatının (TDT) 13. Zirvesi kapsamında, yarın gerçekleştirilecek Dışişleri Bakanları Konseyi Toplantısı&#x27;na ev sahipliği yapacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Ekim 2026, 13:08</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-devletleri-teskilati-disisleri-bakanlari-konseyi-toplantisi-yarin-ankarada-yapilacak/4103611" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="emekli maaşlarına iyileştirme: yaş ve hane geliri kriterleri tartışılıyor akp kaynaklarının verdiği bilgiye göre yıl sonuna kadar yapılacak düzenlemede, emeklilere normal yıllık zammın yanı sıra, &quot;refah payı&quot; veya &quot;seyyanen zam&quot; seçeneği masada. emekli maaşlarına yapılacak iyileştirmenin miktarında yaş, çalışma durumu, konut sahipliği veyahane geliri gibi kriterlerin esas alınması seçeneği de değerlendiriliyor. ankara&#x27;dan ayşe sayın&#x27;ın haberi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 28 Ekim 2026, 03:17</span>
+        </div>
+        <h3>Emekli maaşlarına iyileştirme: Yaş ve hane geliri kriterleri tartışılıyor</h3>
+        <p>AKP kaynaklarının verdiği bilgiye göre yıl sonuna kadar yapılacak düzenlemede, emeklilere normal yıllık zammın yanı sıra, &quot;refah payı&quot; veya &quot;seyyanen zam&quot; seçeneği masada. Emekli maaşlarına yapılacak iyileştirmenin miktarında yaş, çalışma durumu, konut sahipliği veyahane geliri gibi kriterlerin esas alınması seçeneği de değerlendiriliyor. Ankara&#x27;dan Ayşe Sayın&#x27;ın haberi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Ekim 2026, 03:17</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5y43w14wzm4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ngiltere&#x27;de acil durumlara hazırlık çağrısından sonra konserve ve radyo satışında artış hükümetin kriz ihtimaline karşı stok yapılması çağrısının ardından temel ihtiyaç maddelerinin satışlarında önemli bir artış görüldü. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 27 Ekim 2026, 15:22</span>
+        </div>
+        <h3>İngiltere&#x27;de acil durumlara hazırlık çağrısından sonra konserve ve radyo satışında artış</h3>
+        <p>Hükümetin kriz ihtimaline karşı stok yapılması çağrısının ardından temel ihtiyaç maddelerinin satışlarında önemli bir artış görüldü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Ekim 2026, 15:22</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6j47zlnjqlxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="su bile içemiyordu, 5,5 yıl sonra rahatça yemek yedi nadir görülen akalazya hastalığı nedeniyle 5,5 yıldır yemek yemekte ve su içmekte zorluk yaşıyordu. hastalığı nedeniyle 87 kilodan 46 kiloya kadar düşen arif gedikli, uygulanan ileri tedavinin ardından yeniden normal beslenmeye başladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Ekim 2026, 12:33</span>
+        </div>
+        <h3>Su bile içemiyordu, 5,5 yıl sonra rahatça yemek yedi</h3>
+        <p>Nadir görülen akalazya hastalığı nedeniyle 5,5 yıldır yemek yemekte ve su içmekte zorluk yaşıyordu. Hastalığı nedeniyle 87 kilodan 46 kiloya kadar düşen Arif Gedikli, uygulanan ileri tedavinin ardından yeniden normal beslenmeye başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Ekim 2026, 12:33</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/su-bile-icemiyordu-55-yil-sonra-rahatca-yemek-yedi-961473.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇letişim başkanlığından 8. fon koordinasyon kurulu toplantısı&#x27;na ilişkin açıklama i̇letişim başkanlığı, tbmm&#x27;de kabul edilen 7596 sayılı kanun ve ilgili spk usul ve esas kararı ile süreçleri netleşen olağanüstü tasfiye kapsamında bulunan fonlarla ilgili ilk ara ödemelerin 30 ekim 2026 cuma günü başlamasının öngörüldüğünü duyurdu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Ekim 2026, 13:46</span>
+        </div>
+        <h3>İletişim Başkanlığından 8. Fon Koordinasyon Kurulu Toplantısı&#x27;na ilişkin açıklama</h3>
+        <p>İletişim Başkanlığı, TBMM&#x27;de kabul edilen 7596 sayılı Kanun ve ilgili SPK usul ve esas Kararı ile süreçleri netleşen olağanüstü tasfiye kapsamında bulunan fonlarla ilgili ilk ara ödemelerin 30 Ekim 2026 Cuma günü başlamasının öngörüldüğünü duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Ekim 2026, 13:46</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iletisim-baskanligindan-8-fon-koordinasyon-kurulu-toplantisina-iliskin-aciklama/4103674" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="32 ildeki uyuşturucu operasyonlarında yakalanan 423 şüpheliden 298&#x27;i tutuklandı i̇çişleri bakanlığı, jandarma genel komutanlığı ekiplerince 32 ilde düzenlenen uyuşturucu operasyonlarında yakalanan 423 şüpheliden 298&#x27;inin tutuklandığını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Ekim 2026, 12:43</span>
+        </div>
+        <h3>32 ildeki uyuşturucu operasyonlarında yakalanan 423 şüpheliden 298&#x27;i tutuklandı</h3>
+        <p>İçişleri Bakanlığı, Jandarma Genel Komutanlığı ekiplerince 32 ilde düzenlenen uyuşturucu operasyonlarında yakalanan 423 şüpheliden 298&#x27;inin tutuklandığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Ekim 2026, 12:43</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/32-ildeki-uyusturucu-operasyonlarinda-yakalanan-423-supheliden-298i-tutuklandi/4103585" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="msb: geçen hafta 2 terör örgütü pkk mensubu daha teslim oldu milli savunma bakanlığı (msb) sözcüsü tuğamiral zeki aktürk, geçen hafta 2 terör örgütü pkk mensubunun daha teslim olduğunu bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Ekim 2026, 12:14</span>
+        </div>
+        <h3>MSB: Geçen hafta 2 terör örgütü PKK mensubu daha teslim oldu</h3>
+        <p>Milli Savunma Bakanlığı (MSB) Sözcüsü Tuğamiral Zeki Aktürk, geçen hafta 2 terör örgütü PKK mensubunun daha teslim olduğunu bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Ekim 2026, 12:14</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/msb-gecen-hafta-2-teror-orgutu-pkk-mensubu-daha-teslim-oldu/4103528" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="2027 yılı bütçesi tbmm plan ve bütçe komisyonunda tbmm plan ve bütçe komisyonunda, meclis başkanlığının bütçe ve kesin hesap, kamu denetçiliği kurumunun özel bütçe, bütçe, kesin hesap ve sayıştay raporunun yanı sıra sayıştayın bütçe ve kesin hesabının görüşmelerine başlandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Ekim 2026, 10:17</span>
+        </div>
+        <h3>2027 Yılı Bütçesi TBMM Plan ve Bütçe Komisyonunda</h3>
+        <p>TBMM Plan ve Bütçe Komisyonunda, Meclis Başkanlığının bütçe ve kesin hesap, Kamu Denetçiliği Kurumunun özel bütçe, bütçe, kesin hesap ve Sayıştay raporunun yanı sıra Sayıştayın bütçe ve kesin hesabının görüşmelerine başlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Ekim 2026, 10:17</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/2027-yili-butcesi-tbmm-plan-ve-butce-komisyonunda/4103353" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk yıldızları, ankara&#x27;da prova ve tören uçuşları yapacak türk hava kuvvetlerinin akrobasi timi türk yıldızları, 29 ekim cumhuriyet bayramı kutlamaları ve türk devletleri teşkilatı zirvesi kapsamında ankara semalarında prova ve tören uçuşları gerçekleştirecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Ekim 2026, 11:34</span>
+        </div>
+        <h3>Türk Yıldızları, Ankara&#x27;da prova ve tören uçuşları yapacak</h3>
+        <p>Türk Hava Kuvvetlerinin akrobasi timi Türk Yıldızları, 29 Ekim Cumhuriyet Bayramı kutlamaları ve Türk Devletleri Teşkilatı Zirvesi kapsamında Ankara semalarında prova ve tören uçuşları gerçekleştirecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Ekim 2026, 11:34</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-yildizlari-ankarada-prova-ve-toren-ucuslari-yapacak/4103464" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇spanya&#x27;daki hızlı tren kazasında en az 30 ölü i̇spanya&#x27;nın başkenti madrid&#x27;in güneyindeki toledo kentindeki hızlı tren hattında içlerinde 500&#x27;den fazla yolcunun bulunduğu iki tren çarpıştı. yetkililer can kaybının 30&#x27;a ulaştığını aktardı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 28 Ekim 2026, 13:38</span>
+        </div>
+        <h3>İspanya&#x27;daki hızlı tren kazasında en az 30 ölü</h3>
+        <p>İspanya&#x27;nın başkenti Madrid&#x27;in güneyindeki Toledo kentindeki hızlı tren hattında içlerinde 500&#x27;den fazla yolcunun bulunduğu iki tren çarpıştı. Yetkililer can kaybının 30&#x27;a ulaştığını aktardı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Ekim 2026, 13:38</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmx23v6nx3n2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="katil i̇srail&#x27;in gazze&#x27;ye düzenlediği saldırılarda son 24 saatte 3 kişi hayatını kaybetti katil i̇srail ordusunun ateşkese rağmen gazze şeridi&#x27;ne düzenlediği saldırılarda son 24 saatte 3 kişi yaşamını yitirdi, 11 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Ekim 2026, 12:46</span>
+        </div>
+        <h3>Katil İsrail&#x27;in Gazze&#x27;ye düzenlediği saldırılarda son 24 saatte 3 kişi hayatını kaybetti</h3>
+        <p>Katil İsrail ordusunun ateşkese rağmen Gazze Şeridi&#x27;ne düzenlediği saldırılarda son 24 saatte 3 kişi yaşamını yitirdi, 11 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Ekim 2026, 12:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/katil-israilin-gazzeye-duzenledigi-saldirilarda-son-24-saatte-3-kisi-hayatini-kaybetti-961476.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakırköy belediyesindeki ihale ve irtikap soruşturmasında 62 gözaltı bakırköy belediyesine yönelik &quot;ihaleye fesat karıştırma&quot; ve &quot;irtikap&quot; suçlarına ilişkin soruşturma kapsamında gözaltına alınan şüpheli sayısı 62&#x27;ye yükseldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 28 Ekim 2026, 12:41</span>
+        </div>
+        <h3>Bakırköy Belediyesindeki ihale ve irtikap soruşturmasında 62 gözaltı</h3>
+        <p>Bakırköy Belediyesine yönelik &quot;ihaleye fesat karıştırma&quot; ve &quot;irtikap&quot; suçlarına ilişkin soruşturma kapsamında gözaltına alınan şüpheli sayısı 62&#x27;ye yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Ekim 2026, 12:41</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakirkoy-belediyesindeki-ihale-ve-irtikap-sorusturmasinda-62-gozalti-961472.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakırköy belediyesine yönelik soruşturmada gözaltı sayısı 62 oldu bakırköy belediyesine yönelik &quot;ihaleye fesat karıştırma&quot; ve &quot;irtikap&quot; suçlarına ilişkin soruşturma kapsamında gözaltına alınan şüpheli sayısı 62&#x27;ye yükseldi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Ekim 2026, 12:30</span>
+        </div>
+        <h3>Bakırköy Belediyesine yönelik soruşturmada gözaltı sayısı 62 oldu</h3>
+        <p>Bakırköy Belediyesine yönelik &quot;ihaleye fesat karıştırma&quot; ve &quot;irtikap&quot; suçlarına ilişkin soruşturma kapsamında gözaltına alınan şüpheli sayısı 62&#x27;ye yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Ekim 2026, 12:30</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakirkoy-belediyesine-yonelik-sorusturmada-gozalti-sayisi-62-oldu-/4103562" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="uyuşturucuyla mücadele konusunda gelecek yıl 732 bin kişiye bilgilendirme yapılacak başta çocuklar ve gençler olmak üzere toplumun farklı kesimlerinden 732 bin kişiye uyuşturucuyla mücadele konusunda bilgilendirme yapılması hedefleniyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Ekim 2026, 12:28</span>
+        </div>
+        <h3>Uyuşturucuyla mücadele konusunda gelecek yıl 732 bin kişiye bilgilendirme yapılacak</h3>
+        <p>Başta çocuklar ve gençler olmak üzere toplumun farklı kesimlerinden 732 bin kişiye uyuşturucuyla mücadele konusunda bilgilendirme yapılması hedefleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Ekim 2026, 12:28</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/uyusturucuyla-mucadele-konusunda-gelecek-yil-732-bin-kisiye-bilgilendirme-yapilacak/4103557" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="muğla&#x27;da sağanak yaşamı olumsuz etkiliyor muğla&#x27;nın bodrum, marmaris ve dalaman ilçelerinde etkili olan sağanak nedeniyle yollarda su birikintileri oluştu, araçlar mahsur kaldı, dere taştı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 28 Ekim 2026, 11:37</span>
+        </div>
+        <h3>Muğla&#x27;da sağanak yaşamı olumsuz etkiliyor</h3>
+        <p>Muğla&#x27;nın Bodrum, Marmaris ve Dalaman ilçelerinde etkili olan sağanak nedeniyle yollarda su birikintileri oluştu, araçlar mahsur kaldı, dere taştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 28 Ekim 2026, 11:37</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/muglada-saganak-yasami-olumsuz-etkiliyor/4103471" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="mustafa sarıgül: soruşturma sonuçlanana kadar yeni parti üyeliğimi askıya aldıracağım yeni parti erzincan milletvekili mustafa sarıgül, kendisi ve ailesine yönelik 16 ekim&#x27;de başlatılan soruşturmaya tamamlanıncaya kadar yeni parti üyeliğinin askıya alınması için partisinin yetkili organlarına başvuracağını duyurdu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 28 Ekim 2026, 10:35</span>
+        </div>
+        <h3>Mustafa Sarıgül: Soruşturma sonuçlanana kadar Yeni Parti üyeliğimi askıya aldıracağım</h3>
+        <p>Yeni Parti Erzincan Milletvekili Mustafa Sarıgül, kendisi ve ailesine yönelik 16 Ekim&#x27;de başlatılan soruşturmaya tamamlanıncaya kadar Yeni Parti üyeliğinin askıya alınması için partisinin yetkili organlarına başvuracağını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Ekim 2026, 10:35</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmn04q2lnnrxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="brezilya&#x27;da seçimi kaybeden sağcı lider bolsonaro abd&#x27;ye gitti brezilya polisi, seçimleri kaybeden sağcı cumhurbaşkanı adayı flávio bolsonaro&#x27;nun pasaportlarını teslim etme emrine uymamasının ardından pasaportlarını iptal ettiğini açıkladı. abd&#x27;den gelen vize onayının ardından bolsonaro&#x27;nun abd&#x27;ye gittiği doğrulandı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 28 Ekim 2026, 04:23</span>
+        </div>
+        <h3>Brezilya&#x27;da seçimi kaybeden sağcı lider Bolsonaro ABD&#x27;ye gitti</h3>
+        <p>Brezilya polisi, seçimleri kaybeden sağcı cumhurbaşkanı adayı Flávio Bolsonaro&#x27;nun pasaportlarını teslim etme emrine uymamasının ardından pasaportlarını iptal ettiğini açıkladı. ABD&#x27;den gelen vize onayının ardından Bolsonaro&#x27;nun ABD&#x27;ye gittiği doğrulandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Ekim 2026, 04:23</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwx284my7y5ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="şiddet mağduru kadınlar için diyarbakır&#x27;da buluşma: &#x27;her kapı çaldığında irkiliyorum&#x27; diyarbakır&#x27;da kadın örgütlerinin biraraya gelerek oluşturduğu &quot;amed (diyarbakır) şiddetle mücadele ağı&quot;, öldürülen ve şüpheli şekilde yaşamını yitiren kadınlar için bir süre önce &quot;kadın, adalet ve hafıza nöbeti&quot; adıyla haftalık eylem başlatma kararı aldı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 27 Ekim 2026, 19:22</span>
+        </div>
+        <h3>Şiddet mağduru kadınlar için Diyarbakır&#x27;da buluşma: &#x27;Her kapı çaldığında irkiliyorum&#x27;</h3>
+        <p>Diyarbakır&#x27;da kadın örgütlerinin biraraya gelerek oluşturduğu &quot;Amed (Diyarbakır) Şiddetle Mücadele Ağı&quot;, öldürülen ve şüpheli şekilde yaşamını yitiren kadınlar için bir süre önce &quot;Kadın, Adalet ve Hafıza Nöbeti&quot; adıyla haftalık eylem başlatma kararı aldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Ekim 2026, 19:22</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqkg5lp7r4xno?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trump&#x27;tan senatör adayına &#x27;cihatçı&#x27; suçlaması: &#x27;metal dedektöründen geçmeli&#x27; abd başkanı donald trump, michigan eyaletinden abd senatosuna girmek için yarışacak demokrat aday abdul el-sayed&#x27;e yönelik sözlü saldırısında 11 eylül olaylarını gündeme getirmesinin ardından tepkiyle karşılandı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 27 Ekim 2026, 14:06</span>
+        </div>
+        <h3>Trump&#x27;tan senatör adayına &#x27;cihatçı&#x27; suçlaması: &#x27;Metal dedektöründen geçmeli&#x27;</h3>
+        <p>ABD Başkanı Donald Trump, Michigan eyaletinden ABD Senatosuna girmek için yarışacak Demokrat aday Abdul El-Sayed&#x27;e yönelik sözlü saldırısında 11 Eylül olaylarını gündeme getirmesinin ardından tepkiyle karşılandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Ekim 2026, 14:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq0k01dpg2jjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tasfiye sürecindeki fonlarda ilk ara ödeme cuma günü başlıyor tasfiye sürecindeki yatırım fonları kapsamında bugüne kadar 71 bin 899 hesaba toplam 68 milyar lira ödendi. olağanüstü tasfiye kapsamındaki fonlar için ilk ara ödemeler ise 30 ekim cuma günü başlayacak. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 28 Ekim 2026, 13:27</span>
+        </div>
+        <h3>Tasfiye sürecindeki fonlarda ilk ara ödeme cuma günü başlıyor</h3>
+        <p>Tasfiye sürecindeki yatırım fonları kapsamında bugüne kadar 71 bin 899 hesaba toplam 68 milyar lira ödendi. Olağanüstü tasfiye kapsamındaki fonlar için ilk ara ödemeler ise 30 Ekim Cuma günü başlayacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Ekim 2026, 13:27</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/tasfiye-surecindeki-fonlarda-ilk-ara-odeme-cuma-gunu-basliyor-961484.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fenerbahçe&#x27;de i̇smail kartal yerine geçici olarak dirk kuyt görevlendirildi fenerbahçe, futbol takımının teknik direktörü olarak haziran ayında göreve başlayan i̇smail kartal ile yolların ayrıldığını duyurdu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 28 Ekim 2026, 11:14</span>
+        </div>
+        <h3>Fenerbahçe&#x27;de İsmail Kartal yerine geçici olarak Dirk Kuyt görevlendirildi</h3>
+        <p>Fenerbahçe, futbol takımının teknik direktörü olarak Haziran ayında göreve başlayan İsmail Kartal ile yolların ayrıldığını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Ekim 2026, 11:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3vgxjqk8rzxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="dijital üniversite platformu&#x27;nda başvurular 233 bini aştı yükseköğretim kurulu (yök), dijital üniversite platformu&#x27;na bir yılda 233 bin 229 kişi başvuru yaptı. en fazla talep yapay zeka okulu&#x27;na yapılırken eğitimler 3 kasım&#x27;da başlayacak. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 28 Ekim 2026, 13:12</span>
+        </div>
+        <h3>Dijital Üniversite Platformu&#x27;nda başvurular 233 bini aştı</h3>
+        <p>Yükseköğretim Kurulu (YÖK), Dijital Üniversite Platformu&#x27;na bir yılda 233 bin 229 kişi başvuru yaptı. En fazla talep Yapay Zeka Okulu&#x27;na yapılırken eğitimler 3 Kasım&#x27;da başlayacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Ekim 2026, 13:12</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/dijital-universite-platformunda-basvurular-233-bini-asti-961481.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="antalya&#x27;da hortumda dört işçi hayatını kaybetti: müteahhit ve şantiye şefi gözaltında antalya&#x27;da 26 ekim gece saatlerinde meydana gelen hortumda, site inşaatında çalışan dört işçi hayatını kaybetti, bir işçi yaralandı. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 27 Ekim 2026, 14:17</span>
+        </div>
+        <h3>Antalya&#x27;da hortumda dört işçi hayatını kaybetti: Müteahhit ve şantiye şefi gözaltında</h3>
+        <p>Antalya&#x27;da 26 Ekim gece saatlerinde meydana gelen hortumda, site inşaatında çalışan dört işçi hayatını kaybetti, bir işçi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 27 Ekim 2026, 14:17</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c674p3vwlje2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="borsa günü 11.165,44 puandan tamamladı borsa i̇stanbul&#x27;da bist 100 endeksi, günü yüzde 0,13 değer kazanarak 11.165,44 puandan tamamladı. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 28 Ekim 2026, 13:00</span>
+        </div>
+        <h3>Borsa günü 11.165,44 puandan tamamladı</h3>
+        <p>Borsa İstanbul&#x27;da BIST 100 endeksi, günü yüzde 0,13 değer kazanarak 11.165,44 puandan tamamladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Ekim 2026, 13:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/borsa-gunu-1116544-puandan-tamamladi-961478.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sanayi sektörünün elektrik tüketimi 1,7 milyon terajulü aştı sanayi sektöründe geçen yıl nihai enerji tüketimi 1 milyon 722 bin 856 terajul oldu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 28 Ekim 2026, 12:44</span>
+        </div>
+        <h3>Sanayi sektörünün elektrik tüketimi 1,7 milyon terajulü aştı</h3>
+        <p>Sanayi sektöründe geçen yıl nihai enerji tüketimi 1 milyon 722 bin 856 terajul oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 28 Ekim 2026, 12:44</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/sanayi-sektorunun-elektrik-tuketimi-17-milyon-terajulu-asti-961474.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
