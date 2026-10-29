@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">29 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">29 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>dünya</strong> 6</span><span class="stat-item"><strong>genel</strong> 23</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">TEKNOLOJI</span>
+        </div>
+        <h3>Putin: Elon Musk &#x27;gerçek bir dahi, yakın temastayız &#x27;</h3>
+        <p>Rusya Devlet Başkanı Vladimir Putin, Elon Musk&#x27;ın &quot;gerçek bir dahi&quot; olduğunu belirtti ve uydu teknolojisi konusunda &quot;yakın&quot; temas halinde olduklarını açıkladı.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 29 Ekim 2026, 11:19</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cqjdm88ml7p3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 29 Ekim 2026, 13:15</span>
+            </div>
+            <h3>Gazze&#x27;de 21 bin 468 hasta ve yaralı tahliye bekliyor</h3>
+            <p>Katil İsrail ordusunun soykırıma varan saldırılarıyla 175 binden fazla kişiyi yaraladığı ve tıbbi imkanların kısıtlı olduğu Gazze Şeridi&#x27;nde 21 bin 468 Filistinlinin bölge dışında tedavi olmak için beklediği bildirildi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/dunya/gazzede-21-bin-468-hasta-ve-yarali-tahliye-bekliyor-961618.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">Anadolu Ajansı · 29 Ekim 2026, 11:10</span>
+            </div>
+            <h3>İzmir&#x27;de hedef 5 yılda afetlere dirençli kent</h3>
+            <p>Dokuz Eylül Üniversitesi Deprem Araştırma ve Uygulama Merkezi Müdürü Prof. Dr. Hasan Sözbilir, Deprem Master Planı ve yapı stoku envanteriyle, İzmir&#x27;in afetlere karşı daha dirençli hale getirilmesinin hedeflendiğini söyledi.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/izmirde-hedef-5-yilda-afetlere-direncli-kent/4104646" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 29 Ekim 2026, 14:07</span>
+            </div>
+            <h3>Sinem Dedetaş için tahliye ve ev hapsi kararı</h3>
+            <p>Tutuklandıktan sonra Üsküdar Belediye Başkanlığı görevinden uzaklaştırılan Sinem Dedetaş hakkında tahliye ve ev hapsi kararı verildi. Dedetaş 31 Temmuz&#x27;dan bu yana tutuklu bulunuyordu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ckq6nj1vpzjeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 29 Ekim 2026, 12:59</span>
+            </div>
+            <h3>İspanya&#x27;daki tren kazasında can kaybı 69&#x27;a yükseldi</h3>
+            <p>İspanya&#x27;da en az 69 kişinin hayatını kaybettiği hızlı tren kazası sonrası Madrid&#x27;deki protestoda polis göstericilere müdahale etti. Başkentteki protestoda aşırı sağcı gruplar İspanyol polisiyle çatıştı. Oscar Puente Santiago&#x27;nun istifası istendi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmx23v6nx3n2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="putin: elon musk &#x27;gerçek bir dahi, yakın temastayız &#x27; rusya devlet başkanı vladimir putin, elon musk&#x27;ın &quot;gerçek bir dahi&quot; olduğunu belirtti ve uydu teknolojisi konusunda &quot;yakın&quot; temas halinde olduklarını açıkladı. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 29 Ekim 2026, 11:19</span>
+        </div>
+        <h3>Putin: Elon Musk &#x27;gerçek bir dahi, yakın temastayız &#x27;</h3>
+        <p>Rusya Devlet Başkanı Vladimir Putin, Elon Musk&#x27;ın &quot;gerçek bir dahi&quot; olduğunu belirtti ve uydu teknolojisi konusunda &quot;yakın&quot; temas halinde olduklarını açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Ekim 2026, 11:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqjdm88ml7p3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="gazze&#x27;de 21 bin 468 hasta ve yaralı tahliye bekliyor katil i̇srail ordusunun soykırıma varan saldırılarıyla 175 binden fazla kişiyi yaraladığı ve tıbbi imkanların kısıtlı olduğu gazze şeridi&#x27;nde 21 bin 468 filistinlinin bölge dışında tedavi olmak için beklediği bildirildi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 29 Ekim 2026, 13:15</span>
+        </div>
+        <h3>Gazze&#x27;de 21 bin 468 hasta ve yaralı tahliye bekliyor</h3>
+        <p>Katil İsrail ordusunun soykırıma varan saldırılarıyla 175 binden fazla kişiyi yaraladığı ve tıbbi imkanların kısıtlı olduğu Gazze Şeridi&#x27;nde 21 bin 468 Filistinlinin bölge dışında tedavi olmak için beklediği bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Ekim 2026, 13:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/gazzede-21-bin-468-hasta-ve-yarali-tahliye-bekliyor-961618.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sinem dedetaş için tahliye ve ev hapsi kararı tutuklandıktan sonra üsküdar belediye başkanlığı görevinden uzaklaştırılan sinem dedetaş hakkında tahliye ve ev hapsi kararı verildi. dedetaş 31 temmuz&#x27;dan bu yana tutuklu bulunuyordu. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Ekim 2026, 14:07</span>
+        </div>
+        <h3>Sinem Dedetaş için tahliye ve ev hapsi kararı</h3>
+        <p>Tutuklandıktan sonra Üsküdar Belediye Başkanlığı görevinden uzaklaştırılan Sinem Dedetaş hakkında tahliye ve ev hapsi kararı verildi. Dedetaş 31 Temmuz&#x27;dan bu yana tutuklu bulunuyordu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Ekim 2026, 14:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckq6nj1vpzjeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;ye giden flavio bolsonaro&#x27;dan &#x27;kaçmadım&#x27; açıklaması brezilya&#x27;da seçimi kaybeden sağcı cumhurbaşkanı adayı flavio bolsonaro ve ailesini abd&#x27;ye taşıdığı düşünülen uçak miami&#x27;ye vardı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Ekim 2026, 13:46</span>
+        </div>
+        <h3>ABD&#x27;ye giden Flavio Bolsonaro&#x27;dan &#x27;kaçmadım&#x27; açıklaması</h3>
+        <p>Brezilya&#x27;da seçimi kaybeden sağcı cumhurbaşkanı adayı Flavio Bolsonaro ve ailesini ABD&#x27;ye taşıdığı düşünülen uçak Miami&#x27;ye vardı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Ekim 2026, 13:46</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwx284my7y5ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeni parti&#x27;den sarıgül açıklaması: &#x27;hakkında yoğun iddialar var, şu anda parti ile ilişkisi yok&#x27; erzincan milletvekili mustafa sarıgül, kendisi ve ailesine yönelik 16 ekim&#x27;de başlatılan soruşturma tamamlanıncaya kadar yeni parti üyeliğinin askıya alınması için başvuru yaptı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 28 Ekim 2026, 22:22</span>
+        </div>
+        <h3>Yeni Parti&#x27;den Sarıgül açıklaması: &#x27;Hakkında yoğun iddialar var, şu anda parti ile ilişkisi yok&#x27;</h3>
+        <p>Erzincan Milletvekili Mustafa Sarıgül, kendisi ve ailesine yönelik 16 Ekim&#x27;de başlatılan soruşturma tamamlanıncaya kadar Yeni Parti üyeliğinin askıya alınması için başvuru yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Ekim 2026, 22:22</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cxdd8q9ejvglo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan fidan, yarın abd&#x27;de g20 dışişleri bakanları toplantısı&#x27;na katılacak dışişleri bakanı hakan fidan, 30-31 ekim&#x27;de abd&#x27;nin atlanta kentinde düzenlenecek g20 dışişleri bakanları toplantısı&#x27;na katılacak. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Ekim 2026, 13:09</span>
+        </div>
+        <h3>Bakan Fidan, yarın ABD&#x27;de G20 Dışişleri Bakanları Toplantısı&#x27;na katılacak</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, 30-31 Ekim&#x27;de ABD&#x27;nin Atlanta kentinde düzenlenecek G20 Dışişleri Bakanları Toplantısı&#x27;na katılacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Ekim 2026, 13:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-fidan-yarin-abdde-g20-disisleri-bakanlari-toplantisina-katilacak/4104786" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;li oyuncu hayden panettiere&#x27;nin ölümünün kaza sonucu olduğu belirlendi heroes ve nashville dizilerinin yıldızı, ağustos ayında fentanil, xanax ve diğer bazı ilaçların toksik etkileri nedeniyle hayatını kaybetti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 29 Ekim 2026, 03:07</span>
+        </div>
+        <h3>ABD&#x27;li oyuncu Hayden Panettiere&#x27;nin ölümünün kaza sonucu olduğu belirlendi</h3>
+        <p>Heroes ve Nashville dizilerinin yıldızı, Ağustos ayında fentanil, Xanax ve diğer bazı ilaçların toksik etkileri nedeniyle hayatını kaybetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Ekim 2026, 03:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm62yl58x6gko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">23 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇zmir&#x27;de hedef 5 yılda afetlere dirençli kent dokuz eylül üniversitesi deprem araştırma ve uygulama merkezi müdürü prof. dr. hasan sözbilir, deprem master planı ve yapı stoku envanteriyle, i̇zmir&#x27;in afetlere karşı daha dirençli hale getirilmesinin hedeflendiğini söyledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Ekim 2026, 11:10</span>
+        </div>
+        <h3>İzmir&#x27;de hedef 5 yılda afetlere dirençli kent</h3>
+        <p>Dokuz Eylül Üniversitesi Deprem Araştırma ve Uygulama Merkezi Müdürü Prof. Dr. Hasan Sözbilir, Deprem Master Planı ve yapı stoku envanteriyle, İzmir&#x27;in afetlere karşı daha dirençli hale getirilmesinin hedeflendiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Ekim 2026, 11:10</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/izmirde-hedef-5-yilda-afetlere-direncli-kent/4104646" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇spanya&#x27;daki tren kazasında can kaybı 69&#x27;a yükseldi i̇spanya&#x27;da en az 69 kişinin hayatını kaybettiği hızlı tren kazası sonrası madrid&#x27;deki protestoda polis göstericilere müdahale etti. başkentteki protestoda aşırı sağcı gruplar i̇spanyol polisiyle çatıştı. oscar puente santiago&#x27;nun istifası istendi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 29 Ekim 2026, 12:59</span>
+        </div>
+        <h3>İspanya&#x27;daki tren kazasında can kaybı 69&#x27;a yükseldi</h3>
+        <p>İspanya&#x27;da en az 69 kişinin hayatını kaybettiği hızlı tren kazası sonrası Madrid&#x27;deki protestoda polis göstericilere müdahale etti. Başkentteki protestoda aşırı sağcı gruplar İspanyol polisiyle çatıştı. Oscar Puente Santiago&#x27;nun istifası istendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Ekim 2026, 12:59</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmx23v6nx3n2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, tebrikleri kabul etti cumhurbaşkanı recep tayyip erdoğan, 29 ekim cumhuriyet bayramı tebriklerini kabul etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Ekim 2026, 13:43</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, tebrikleri kabul etti</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, 29 Ekim Cumhuriyet Bayramı tebriklerini kabul etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Ekim 2026, 13:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-tebrikleri-kabul-etti-961621.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan&#x27;ın kırmızı kravatında kaan detayı cumhurbaşkanı recep tayyip erdoğan, 29 ekim cumhuriyet bayramı dolayısıyla anıtkabir&#x27;de düzenlenen törende, milli muharip uçak kaan figürlerinin yer aldığı kırmızı kravatı tercih etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Ekim 2026, 13:33</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan&#x27;ın kırmızı kravatında KAAN detayı</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, 29 Ekim Cumhuriyet Bayramı dolayısıyla Anıtkabir&#x27;de düzenlenen törende, milli muharip uçak KAAN figürlerinin yer aldığı kırmızı kravatı tercih etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Ekim 2026, 13:33</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdoganin-kirmizi-kravatinda-kaan-detayi-961620.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, 29 ekim cumhuriyet bayramı tebriklerini kabul etti cumhurbaşkanı recep tayyip erdoğan, 29 ekim cumhuriyet bayramı tebriklerini kabul etti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Ekim 2026, 13:40</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, 29 Ekim Cumhuriyet Bayramı tebriklerini kabul etti</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, 29 Ekim Cumhuriyet Bayramı tebriklerini kabul etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Ekim 2026, 13:40</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-29-ekim-cumhuriyet-bayrami-tebriklerini-kabul-etti/4104829" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan&#x27;ın kırmızı kaan kravatında &quot;gök vatanda bağımsızlık&quot; vurgusu cumhurbaşkanı erdoğan, 29 ekim cumhuriyet bayramı dolayısıyla anıtkabir&#x27;de düzenlenen törende, milli muharip uçak kaan figürlerinin yer aldığı kırmızı kravatı tercih etti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Ekim 2026, 13:26</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan&#x27;ın kırmızı KAAN kravatında &quot;gök vatanda bağımsızlık&quot; vurgusu</h3>
+        <p>Cumhurbaşkanı Erdoğan, 29 Ekim Cumhuriyet Bayramı dolayısıyla Anıtkabir&#x27;de düzenlenen törende, milli muharip uçak KAAN figürlerinin yer aldığı kırmızı kravatı tercih etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Ekim 2026, 13:26</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdoganin-kirmizi-kaan-kravatinda-gok-vatanda-bagimsizlik-vurgusu/4104802" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan fidan, ankara&#x27;da azerbaycanlı mevkidaşı bayramov ile görüştü dışişleri bakanı hakan fidan, türk devletleri teşkilatı (tdt) 13. zirvesi kapsamında ankara&#x27;da azerbaycan dışişleri bakanı ceyhun bayramov ile bir araya geldi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Ekim 2026, 13:16</span>
+        </div>
+        <h3>Bakan Fidan, Ankara&#x27;da Azerbaycanlı mevkidaşı Bayramov ile görüştü</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, Türk Devletleri Teşkilatı (TDT) 13. Zirvesi kapsamında Ankara&#x27;da Azerbaycan Dışişleri Bakanı Ceyhun Bayramov ile bir araya geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Ekim 2026, 13:16</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-fidan-ankarada-azerbaycanli-mevkidasi-bayramov-ile-gorustu/4104791" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yorgunluk sanılan bazı belirtiler gençlerde inmenin habercisi olabilir prof. dr. semih giray, inmenin yalnızca ileri yaşlarda görülen bir hastalık olmadığını, gençlerde aniden gelişen yüz asimetrisi, kol veya bacakta güç kaybı ile görme ve denge sorunlarının geçiştirilmemesi, hastaneye başvurulması gerektiğini belirtti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Ekim 2026, 11:08</span>
+        </div>
+        <h3>Yorgunluk sanılan bazı belirtiler gençlerde inmenin habercisi olabilir</h3>
+        <p>Prof. Dr. Semih Giray, inmenin yalnızca ileri yaşlarda görülen bir hastalık olmadığını, gençlerde aniden gelişen yüz asimetrisi, kol veya bacakta güç kaybı ile görme ve denge sorunlarının geçiştirilmemesi, hastaneye başvurulması gerektiğini belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Ekim 2026, 11:08</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yorgunluk-sanilan-bazi-belirtiler-genclerde-inmenin-habercisi-olabilir/4104639" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail seçim çıkmazını nasıl aşabilir? olası dört senaryo oyların büyük kısmı sayıldıktan sonra, her şey bir çıkmaza işaret ediyor. en muhtemel sonuç yeni seçimler olabilir. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 29 Ekim 2026, 09:53</span>
+        </div>
+        <h3>İsrail seçim çıkmazını nasıl aşabilir? Olası dört senaryo</h3>
+        <p>Oyların büyük kısmı sayıldıktan sonra, her şey bir çıkmaza işaret ediyor. En muhtemel sonuç yeni seçimler olabilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Ekim 2026, 09:53</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck87zw3p5lx5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bebekken çantalara konularak terk edilen kardeşler yıllar sonra biraraya geldi david mcbride, bebekken terk edildikten sonra on yıllarca annesini aradı. ancak bunun yerine bir kız kardeşi ve bir erkek kardeşi buldu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 29 Ekim 2026, 09:07</span>
+        </div>
+        <h3>Bebekken çantalara konularak terk edilen kardeşler yıllar sonra biraraya geldi</h3>
+        <p>David McBride, bebekken terk edildikten sonra on yıllarca annesini aradı. Ancak bunun yerine bir kız kardeşi ve bir erkek kardeşi buldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Ekim 2026, 09:07</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq77pm63373mo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail seçim sonuçları: netanyahu&#x27;nun bloğu önde ancak meclis çoğunluğunu sağlayamıyor i̇srail&#x27;de 27 ekim salı günü yapılan parlamento seçimlerinde türkiye saatiyle 15.30 itibarıyla oyların %85,6&#x27;sı sayıldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 28 Ekim 2026, 21:24</span>
+        </div>
+        <h3>İsrail seçim sonuçları: Netanyahu&#x27;nun bloğu önde ancak meclis çoğunluğunu sağlayamıyor</h3>
+        <p>İsrail&#x27;de 27 Ekim Salı günü yapılan parlamento seçimlerinde Türkiye saatiyle 15.30 itibarıyla oyların %85,6&#x27;sı sayıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Ekim 2026, 21:24</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6ewez914w98o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dondurulmuş veya konserve gıdalar sağlıklı mı? birçok kişi taze ürünlerin her halükarda en iyi seçenek olduğunu varsayar, ancak uzmanlara göre durum bu kadar basit değil. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 28 Ekim 2026, 19:19</span>
+        </div>
+        <h3>Dondurulmuş veya konserve gıdalar sağlıklı mı?</h3>
+        <p>Birçok kişi taze ürünlerin her halükarda en iyi seçenek olduğunu varsayar, ancak uzmanlara göre durum bu kadar basit değil.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 28 Ekim 2026, 19:19</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9x284ex08lgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇spanya&#x27;da 2 hızlı treninin çarpıştığı kazada ölenlerin sayısı 69&#x27;a çıktı i̇spanya&#x27;nın toledo kenti yakınlarında 2 hızlı yolcu treninin çarpıştığı kazada ölenlerin sayısı 69&#x27;a yükseldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Ekim 2026, 13:51</span>
+        </div>
+        <h3>İspanya&#x27;da 2 hızlı treninin çarpıştığı kazada ölenlerin sayısı 69&#x27;a çıktı</h3>
+        <p>İspanya&#x27;nın Toledo kenti yakınlarında 2 hızlı yolcu treninin çarpıştığı kazada ölenlerin sayısı 69&#x27;a yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Ekim 2026, 13:51</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ispanyada-2-hizli-treninin-carpistigi-kazada-olenlerin-sayisi-69a-cikti-961623.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="güney kore&#x27;de eski devlet başkanı yoon&#x27;un idamı talep edildi güney kore&#x27;de özel yetkili savcılar, &quot;ayaklanmaya liderlik etmekten&quot; suçlu bulunan ve müebbet hapse çarptırılan eski devlet başkanı yoon suk yeol&#x27;a idam cezası verilmesini talep etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Ekim 2026, 13:42</span>
+        </div>
+        <h3>Güney Kore&#x27;de eski devlet başkanı Yoon&#x27;un idamı talep edildi</h3>
+        <p>Güney Kore&#x27;de özel yetkili savcılar, &quot;ayaklanmaya liderlik etmekten&quot; suçlu bulunan ve müebbet hapse çarptırılan eski Devlet Başkanı Yoon Suk Yeol&#x27;a idam cezası verilmesini talep etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Ekim 2026, 13:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/guney-korede-eski-devlet-baskani-yoonun-idami-talep-edildi-961622.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nato&#x27;nun farklı komutanlıklarından türkiye&#x27;ye 29 ekim cumhuriyet bayramı kutlaması brüksel&#x27;deki nato karargahı ve dünyanın çeşitli yerlerindeki nato komutanlıklarının resmi hesaplarından paylaşılan mesajlarla, türkiye cumhuriyeti&#x27;nin kuruluşunun 103. yıl dönümü kutlandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Ekim 2026, 13:33</span>
+        </div>
+        <h3>NATO&#x27;nun farklı komutanlıklarından Türkiye&#x27;ye 29 Ekim Cumhuriyet Bayramı kutlaması</h3>
+        <p>Brüksel&#x27;deki NATO Karargahı ve dünyanın çeşitli yerlerindeki NATO komutanlıklarının resmi hesaplarından paylaşılan mesajlarla, Türkiye Cumhuriyeti&#x27;nin kuruluşunun 103. yıl dönümü kutlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Ekim 2026, 13:33</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/natonun-farkli-komutanliklarindan-turkiyeye-29-ekim-cumhuriyet-bayrami-kutlamasi-961619.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çankırı&#x27;da otomobil devrildi: 1 ölü, 2 yaralı çankırı&#x27;nın çerkeş ilçesinde otomobilin devrilmesi sonucu 1 kişi öldü, 2 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Ekim 2026, 13:15</span>
+        </div>
+        <h3>Çankırı&#x27;da otomobil devrildi: 1 ölü, 2 yaralı</h3>
+        <p>Çankırı&#x27;nın Çerkeş ilçesinde otomobilin devrilmesi sonucu 1 kişi öldü, 2 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Ekim 2026, 13:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/cankirida-otomobil-devrildi-1-olu-2-yarali-961617.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhuriyet&#x27;in 103. yılı coşkuyla kutlanıyor 29 ekim cumhuriyet bayramı ve cumhuriyet&#x27;in ilanının 103. yıl dönümü, yurdun dört bir yanında coşkuyla kutlanıyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Ekim 2026, 13:05</span>
+        </div>
+        <h3>Cumhuriyet&#x27;in 103. yılı coşkuyla kutlanıyor</h3>
+        <p>29 Ekim Cumhuriyet Bayramı ve Cumhuriyet&#x27;in ilanının 103. yıl dönümü, yurdun dört bir yanında coşkuyla kutlanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Ekim 2026, 13:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhuriyetin-103-yili-coskuyla-kutlaniyor-961616.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yabancı misyon temsilcilikleri 29 ekim cumhuriyet bayramı&#x27;nı kutladı türkiye&#x27;deki yabancı misyon temsilcilikleri, 29 ekim cumhuriyet bayramı dolayısıyla kutlama mesajları yayımladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Ekim 2026, 13:04</span>
+        </div>
+        <h3>Yabancı misyon temsilcilikleri 29 Ekim Cumhuriyet Bayramı&#x27;nı kutladı</h3>
+        <p>Türkiye&#x27;deki yabancı misyon temsilcilikleri, 29 Ekim Cumhuriyet Bayramı dolayısıyla kutlama mesajları yayımladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Ekim 2026, 13:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/yabanci-misyon-temsilcilikleri-29-ekim-cumhuriyet-bayramini-kutladi-961615.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇şgalci i̇srail ordusu, el halil&#x27;deki abluka ve saldırılarını 7. gününde sürdürüyor i̇şgalci i̇srail ordusu, batı şeria&#x27;nın güneyindeki el halil kenti ve çevresinde ablukayı 7. gününde sürdürürken, baskın, saldırı ve ihlallerine devam etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 29 Ekim 2026, 12:46</span>
+        </div>
+        <h3>İşgalci İsrail ordusu, El Halil&#x27;deki abluka ve saldırılarını 7. gününde sürdürüyor</h3>
+        <p>İşgalci İsrail ordusu, Batı Şeria&#x27;nın güneyindeki El Halil kenti ve çevresinde ablukayı 7. gününde sürdürürken, baskın, saldırı ve ihlallerine devam etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 29 Ekim 2026, 12:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/isgalci-israil-ordusu-el-halildeki-abluka-ve-saldirilarini-7-gununde-surduruyor-961614.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;deki yabancı misyon temsilcilikleri 29 ekim cumhuriyet bayramı&#x27;nı kutladı türkiye&#x27;deki yabancı misyon temsilcilikleri, 29 ekim cumhuriyet bayramı dolayısıyla kutlama mesajları yayımladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Ekim 2026, 13:19</span>
+        </div>
+        <h3>Türkiye&#x27;deki yabancı misyon temsilcilikleri 29 Ekim Cumhuriyet Bayramı&#x27;nı kutladı</h3>
+        <p>Türkiye&#x27;deki yabancı misyon temsilcilikleri, 29 Ekim Cumhuriyet Bayramı dolayısıyla kutlama mesajları yayımladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Ekim 2026, 13:19</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiyedeki-yabanci-misyon-temsilcilikleri-29-ekim-cumhuriyet-bayramini-kutladi/4104796" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhuriyet’in 103. yılı düzenlenen etkinliklerle kutlanıyor 29 ekim cumhuriyet bayramı ve cumhuriyet&#x27;in 103. yılı yurt genelinde düzenlenen etkinliklerle kutlanıyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Ekim 2026, 13:18</span>
+        </div>
+        <h3>Cumhuriyet’in 103. yılı düzenlenen etkinliklerle kutlanıyor</h3>
+        <p>29 Ekim Cumhuriyet Bayramı ve Cumhuriyet&#x27;in 103. yılı yurt genelinde düzenlenen etkinliklerle kutlanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Ekim 2026, 13:18</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhuriyet-in-103-yili-duzenlenen-etkinliklerle-kutlaniyor/4104794" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sonbahar renklerine bürünen yedigöller, fotoğraf tutkunları ve doğaseverleri cezbediyor bolu&#x27;daki yedigöller milli parkı, sonbaharın renklerine bürünen görüntüsüyle doğa tutkunlarından ve fotoğrafseverlerden yoğun ilgi görüyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Ekim 2026, 11:09</span>
+        </div>
+        <h3>Sonbahar renklerine bürünen Yedigöller, fotoğraf tutkunları ve doğaseverleri cezbediyor</h3>
+        <p>Bolu&#x27;daki Yedigöller Milli Parkı, sonbaharın renklerine bürünen görüntüsüyle doğa tutkunlarından ve fotoğrafseverlerden yoğun ilgi görüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Ekim 2026, 11:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sonbahar-renklerine-burunen-yedigoller-fotograf-tutkunlari-ve-dogaseverleri-cezbediyor/4104644" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="antalya polisi cop31 öncesi zorlu görevlere hazırlanıyor antalya&#x27;da düzenlenecek birleşmiş milletler i̇klim değişikliği konferansı (cop31) öncesinde güvenlik hazırlıkları da sürüyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 29 Ekim 2026, 11:09</span>
+        </div>
+        <h3>Antalya polisi COP31 öncesi zorlu görevlere hazırlanıyor</h3>
+        <p>Antalya&#x27;da düzenlenecek Birleşmiş Milletler İklim Değişikliği Konferansı (COP31) öncesinde güvenlik hazırlıkları da sürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 29 Ekim 2026, 11:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/antalya-polisi-cop31-oncesi-zorlu-gorevlere-hazirlaniyor/4104645" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
