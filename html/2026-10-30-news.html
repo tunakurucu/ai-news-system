@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">30 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">30 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 6</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>dünya</strong> 4</span><span class="stat-item"><strong>genel</strong> 19</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>Borsada yapay zeka depremi: Google 500 milyar dolar değer kaybetti</h3>
+        <p>Teknoloji devi Google&#x27;ın ana şirketi Alphabet, 29 Ekim Perşembe 500 milyar doları (yaklaşık 25 trilyon lira) aşkın kayıp yaşadı. Değer kaybı, şirketin arama motorundaki yapay zeka özeti sebebiyle reklam gelirlerinin düştüğünü açıklamasının ardından geldi.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 30 Ekim 2026, 13:13</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cqe8lpmkpe2xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">Anadolu Ajansı · 30 Ekim 2026, 12:46</span>
+            </div>
+            <h3>Sağlık Bakanı Memişoğlu: Türkiye olarak bilgimizi ve tecrübemizi tüm dünyayla paylaşmaya hazırız</h3>
+            <p>Sağlık Bakanı Memişoğlu, &quot;Aşıdan tıbbi cihaza, biyoteknolojiden yapay zekaya kadar pek çok alanda birbirimizi tamamlayan imkanlarımız var. Türkiye olarak bilgimizi, tecrübemizi ve geliştirdiğimiz çözümleri tüm dünyayla paylaşmaya hazırız.&quot; dedi.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/saglik-bakani-memisoglu-turkiye-olarak-bilgimizi-ve-tecrubemizi-tum-dunyayla-paylasmaya-haziriz/4106088" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">TRT Haber · 30 Ekim 2026, 13:27</span>
+            </div>
+            <h3>Cevdet Yılmaz: TDT ile ekonomik bütünleşmeyi ilerletmeyi hedefliyoruz</h3>
+            <p>Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, Türk Devletleri Teşkilatı (TDT) üyesi devletler ile siyasi istişarelerini güçlendirmeyi, ekonomik bütünleşmeyi ilerletmeyi, enerji ve ulaştırma bağlantılarını geliştirmeyi hedeflediklerini bildirdi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/cevdet-yilmaz-tdt-ile-ekonomik-butunlesmeyi-ilerletmeyi-hedefliyoruz-961729.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 30 Ekim 2026, 13:47</span>
+            </div>
+            <h3>Özbekistan Cumhurbaşkanı Mirziyoyev: Stratejik hedeflerimiz etrafında daha da kenetlenmeliyiz</h3>
+            <p>Özbekistan Cumhurbaşkanı Şevket Mirziyoyev, Türk Devletleri Teşkilatının (TDT) stratejik hedefleri etrafında daha da kenetlenmesi gerektiğini belirterek, bütün güçlerini Türk dayanışması için seferber etmeye hazır olduklarını vurguladı.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ozbekistan-cumhurbaskani-mirziyoyev-stratejik-hedeflerimiz-etrafinda-daha-da-kenetlenmeliyiz/4106165" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">Anadolu Ajansı · 30 Ekim 2026, 13:28</span>
+            </div>
+            <h3>Türkmenistan Devlet Başkanı Berdimuhamedov: Türk devletleri geniş ekonomik imkanlara sahip</h3>
+            <p>Türkmenistan Devlet Başkanı Berdimuhamedov, &quot;Türk devletleri geniş ekonomik imkanlara sahip. Onların verimli kullanılması için enerji, sanayi, ham maddelerin rafine edilmesi ve ekonominin diğer sektörlerinde işbirliğini geliştirmek gereklidir.&quot; dedi.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkmenistan-devlet-baskani-berdimuhamedov-turk-devletleri-genis-ekonomik-imkanlara-sahip/4106136" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="borsada yapay zeka depremi: google 500 milyar dolar değer kaybetti teknoloji devi google&#x27;ın ana şirketi alphabet, 29 ekim perşembe 500 milyar doları (yaklaşık 25 trilyon lira) aşkın kayıp yaşadı. değer kaybı, şirketin arama motorundaki yapay zeka özeti sebebiyle reklam gelirlerinin düştüğünü açıklamasının ardından geldi. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 30 Ekim 2026, 13:13</span>
+        </div>
+        <h3>Borsada yapay zeka depremi: Google 500 milyar dolar değer kaybetti</h3>
+        <p>Teknoloji devi Google&#x27;ın ana şirketi Alphabet, 29 Ekim Perşembe 500 milyar doları (yaklaşık 25 trilyon lira) aşkın kayıp yaşadı. Değer kaybı, şirketin arama motorundaki yapay zeka özeti sebebiyle reklam gelirlerinin düştüğünü açıklamasının ardından geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Ekim 2026, 13:13</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqe8lpmkpe2xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cevdet yılmaz: tdt ile ekonomik bütünleşmeyi ilerletmeyi hedefliyoruz cumhurbaşkanı yardımcısı cevdet yılmaz, türk devletleri teşkilatı (tdt) üyesi devletler ile siyasi istişarelerini güçlendirmeyi, ekonomik bütünleşmeyi ilerletmeyi, enerji ve ulaştırma bağlantılarını geliştirmeyi hedeflediklerini bildirdi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 30 Ekim 2026, 13:27</span>
+        </div>
+        <h3>Cevdet Yılmaz: TDT ile ekonomik bütünleşmeyi ilerletmeyi hedefliyoruz</h3>
+        <p>Cumhurbaşkanı Yardımcısı Cevdet Yılmaz, Türk Devletleri Teşkilatı (TDT) üyesi devletler ile siyasi istişarelerini güçlendirmeyi, ekonomik bütünleşmeyi ilerletmeyi, enerji ve ulaştırma bağlantılarını geliştirmeyi hedeflediklerini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Ekim 2026, 13:27</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cevdet-yilmaz-tdt-ile-ekonomik-butunlesmeyi-ilerletmeyi-hedefliyoruz-961729.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkmenistan devlet başkanı berdimuhamedov: türk devletleri geniş ekonomik imkanlara sahip türkmenistan devlet başkanı berdimuhamedov, &quot;türk devletleri geniş ekonomik imkanlara sahip. onların verimli kullanılması için enerji, sanayi, ham maddelerin rafine edilmesi ve ekonominin diğer sektörlerinde işbirliğini geliştirmek gereklidir.&quot; dedi. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Ekim 2026, 13:28</span>
+        </div>
+        <h3>Türkmenistan Devlet Başkanı Berdimuhamedov: Türk devletleri geniş ekonomik imkanlara sahip</h3>
+        <p>Türkmenistan Devlet Başkanı Berdimuhamedov, &quot;Türk devletleri geniş ekonomik imkanlara sahip. Onların verimli kullanılması için enerji, sanayi, ham maddelerin rafine edilmesi ve ekonominin diğer sektörlerinde işbirliğini geliştirmek gereklidir.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Ekim 2026, 13:28</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkmenistan-devlet-baskani-berdimuhamedov-turk-devletleri-genis-ekonomik-imkanlara-sahip/4106136" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="azerbaycan dışişleri bakanı bayramov: orta koridor&#x27;un geliştirilmesi, ülkelerimizin ekonomik imkanlarını artıracaktır azerbaycan dışişleri bakanı ceyhun bayramov, &quot;orta koridor&#x27;un geliştirilmesi, zengezur koridoru&#x27;nun hayata geçirilmesi ve ülkelerimiz arasındaki ulaşım bağlantılarının genişletilmesi, ülkelerimizin ekonomik imkanlarını artıracaktır.&quot; dedi. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Ekim 2026, 12:17</span>
+        </div>
+        <h3>Azerbaycan Dışişleri Bakanı Bayramov: Orta Koridor&#x27;un geliştirilmesi, ülkelerimizin ekonomik imkanlarını artıracaktır</h3>
+        <p>Azerbaycan Dışişleri Bakanı Ceyhun Bayramov, &quot;Orta Koridor&#x27;un geliştirilmesi, Zengezur Koridoru&#x27;nun hayata geçirilmesi ve ülkelerimiz arasındaki ulaşım bağlantılarının genişletilmesi, ülkelerimizin ekonomik imkanlarını artıracaktır.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Ekim 2026, 12:17</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/azerbaycan-disisleri-bakani-bayramov-orta-koridorun-gelistirilmesi-ulkelerimizin-ekonomik-imkanlarini-artiracaktir/4106044" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="binance&#x27;te &#x27;tarihin en büyük siber saldırısı&#x27;: 6,3 milyar dolarlık kripto varlık etkilendi kripto para devi binance, potansiyel bir siber saldırı sebebiyle 6,3 milyar dolar (yaklaşık 314 milyar lira) değerinde dijital varlığın etkilendiğini belirtti. i̇ki analiz firması, olayın tradertraitor adlı kuzey koreli bir siber saldırı birimi tarafından gerçekleştirildiğini açıkladı. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 30 Ekim 2026, 13:14</span>
+        </div>
+        <h3>Binance&#x27;te &#x27;tarihin en büyük siber saldırısı&#x27;: 6,3 milyar dolarlık kripto varlık etkilendi</h3>
+        <p>Kripto para devi Binance, potansiyel bir siber saldırı sebebiyle 6,3 milyar dolar (yaklaşık 314 milyar lira) değerinde dijital varlığın etkilendiğini belirtti. İki analiz firması, olayın TraderTraitor adlı Kuzey Koreli bir siber saldırı birimi tarafından gerçekleştirildiğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Ekim 2026, 13:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm4g10d03rp8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;nin turizm geliri üçüncü çeyrekte 25,5 milyar dolara ulaştı türkiye&#x27;nin turizm geliri, yılın üçüncü çeyreğinde geçen yılın aynı dönemine göre yüzde 5 artarak 25 milyar 526 milyon 218 bin dolar oldu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 30 Ekim 2026, 13:46</span>
+        </div>
+        <h3>Türkiye&#x27;nin turizm geliri üçüncü çeyrekte 25,5 milyar dolara ulaştı</h3>
+        <p>Türkiye&#x27;nin turizm geliri, yılın üçüncü çeyreğinde geçen yılın aynı dönemine göre yüzde 5 artarak 25 milyar 526 milyon 218 bin dolar oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Ekim 2026, 13:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyenin-turizm-geliri-ucuncu-ceyrekte-255-milyar-dolara-ulasti-961735.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="sağlık bakanı memişoğlu: türkiye olarak bilgimizi ve tecrübemizi tüm dünyayla paylaşmaya hazırız sağlık bakanı memişoğlu, &quot;aşıdan tıbbi cihaza, biyoteknolojiden yapay zekaya kadar pek çok alanda birbirimizi tamamlayan imkanlarımız var. türkiye olarak bilgimizi, tecrübemizi ve geliştirdiğimiz çözümleri tüm dünyayla paylaşmaya hazırız.&quot; dedi. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Ekim 2026, 12:46</span>
+        </div>
+        <h3>Sağlık Bakanı Memişoğlu: Türkiye olarak bilgimizi ve tecrübemizi tüm dünyayla paylaşmaya hazırız</h3>
+        <p>Sağlık Bakanı Memişoğlu, &quot;Aşıdan tıbbi cihaza, biyoteknolojiden yapay zekaya kadar pek çok alanda birbirimizi tamamlayan imkanlarımız var. Türkiye olarak bilgimizi, tecrübemizi ve geliştirdiğimiz çözümleri tüm dünyayla paylaşmaya hazırız.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Ekim 2026, 12:46</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/saglik-bakani-memisoglu-turkiye-olarak-bilgimizi-ve-tecrubemizi-tum-dunyayla-paylasmaya-haziriz/4106088" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">4 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="özbekistan cumhurbaşkanı mirziyoyev: stratejik hedeflerimiz etrafında daha da kenetlenmeliyiz özbekistan cumhurbaşkanı şevket mirziyoyev, türk devletleri teşkilatının (tdt) stratejik hedefleri etrafında daha da kenetlenmesi gerektiğini belirterek, bütün güçlerini türk dayanışması için seferber etmeye hazır olduklarını vurguladı. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Ekim 2026, 13:47</span>
+        </div>
+        <h3>Özbekistan Cumhurbaşkanı Mirziyoyev: Stratejik hedeflerimiz etrafında daha da kenetlenmeliyiz</h3>
+        <p>Özbekistan Cumhurbaşkanı Şevket Mirziyoyev, Türk Devletleri Teşkilatının (TDT) stratejik hedefleri etrafında daha da kenetlenmesi gerektiğini belirterek, bütün güçlerini Türk dayanışması için seferber etmeye hazır olduklarını vurguladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Ekim 2026, 13:47</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ozbekistan-cumhurbaskani-mirziyoyev-stratejik-hedeflerimiz-etrafinda-daha-da-kenetlenmeliyiz/4106165" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, türkmen mevkidaşıyla görüştü cumhurbaşkanı erdoğan, türk devletleri teşkilatı 13. zirvesi için ankara’da bulunan türkmenistan devlet başkanı serdar berdimuhammedov ile cumhurbaşkanlığı külliyesinde bir araya geldi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 30 Ekim 2026, 13:47</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, Türkmen mevkidaşıyla görüştü</h3>
+        <p>Cumhurbaşkanı Erdoğan, Türk Devletleri Teşkilatı 13. Zirvesi için Ankara’da bulunan Türkmenistan Devlet Başkanı Serdar Berdimuhammedov ile Cumhurbaşkanlığı Külliyesinde bir araya geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Ekim 2026, 13:47</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-turkmen-mevkidasiyla-gorustu-961736.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd ara seçimleri neden önemli? yedi temel soru abd&#x27;li seçmenler, donald trump&#x27;ın başkanlığı üzerinde büyük etkisi olabilecek ara seçim için 3 kasım&#x27;da sandık başına gidecek. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 30 Ekim 2026, 13:37</span>
+        </div>
+        <h3>ABD ara seçimleri neden önemli? Yedi temel soru</h3>
+        <p>ABD&#x27;li seçmenler, Donald Trump&#x27;ın başkanlığı üzerinde büyük etkisi olabilecek ara seçim için 3 Kasım&#x27;da sandık başına gidecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Ekim 2026, 13:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmq8nwyxk1gdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="lgs kapsamındaki merkezi sınavın yapılacağı tarih belli oldu liselere geçiş sistemi kapsamındaki merkezi sınav, 13 haziran 2027 pazar günü gerçekleştirilecek dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 30 Ekim 2026, 14:05</span>
+        </div>
+        <h3>LGS kapsamındaki merkezi sınavın yapılacağı tarih belli oldu</h3>
+        <p>Liselere Geçiş Sistemi kapsamındaki merkezi sınav, 13 Haziran 2027 Pazar günü gerçekleştirilecek</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Ekim 2026, 14:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/lgs-kapsamindaki-merkezi-sinavin-yapilacagi-tarih-belli-oldu-961737.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">19 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="aliyev, türk devletleri teşkilatı zirvesi&#x27;ne katılmadı cumhurbaşkanı recep tayyip erdoğan, cumhurbaşkanlığı sarayı&#x27;nda türk devletleri teşkilatı 13. zirvesi devlet başkanları konseyi toplantısı&#x27;na ev sahipliği yaptı. azerbaycan cumhurbaşkanı i̇lham aliyev ise zirveye katılmadı genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Ekim 2026, 11:52</span>
+        </div>
+        <h3>Aliyev, Türk Devletleri Teşkilatı Zirvesi&#x27;ne katılmadı</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Cumhurbaşkanlığı Sarayı&#x27;nda Türk Devletleri Teşkilatı 13. Zirvesi Devlet Başkanları Konseyi Toplantısı&#x27;na ev sahipliği yaptı. Azerbaycan Cumhurbaşkanı İlham Aliyev ise zirveye katılmadı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Ekim 2026, 11:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmrlypdepxy4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;den &#x27;i̇srail seçimlerine müdahale ettiği&#x27; iddialarına yalanlama i̇srail&#x27;in ana muhalefet lideri gadi eisenkot ve arap partilerinin liderleri, koalisyonunun parlamentodaki çoğunluğu kaybettiği seçimlerin ardından &quot;yabancı müdahalesi&quot; iddiasında bulunan başbakan binyamin netanyahu&#x27;yu kınadı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Ekim 2026, 12:05</span>
+        </div>
+        <h3>Türkiye&#x27;den &#x27;İsrail seçimlerine müdahale ettiği&#x27; iddialarına yalanlama</h3>
+        <p>İsrail&#x27;in ana muhalefet lideri Gadi Eisenkot ve Arap partilerinin liderleri, koalisyonunun parlamentodaki çoğunluğu kaybettiği seçimlerin ardından &quot;yabancı müdahalesi&quot; iddiasında bulunan Başbakan Binyamin Netanyahu&#x27;yu kınadı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Ekim 2026, 12:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6d93pd9pxw2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="31 mart yerel seçimlerinden bugüne i̇stanbul&#x27;un belediye dağılımı nasıl değişti? i̇stanbul&#x27;da seçilmiş 26 chp&#x27;li ilçe belediye başkanından 14&#x27;ü çeşitli suçlamalarla soruşturma geçirdi. tutuklu yargılamaların sürdüğü yönetimlerde başkanvekilliği seçimleri yapıldı. bazı belediyelerde yönetimler başkanvekilliği seçimlerinde el değiştirdi ve akp&#x27;ye geçti genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Ekim 2026, 03:14</span>
+        </div>
+        <h3>31 Mart yerel seçimlerinden bugüne İstanbul&#x27;un belediye dağılımı nasıl değişti?</h3>
+        <p>İstanbul&#x27;da seçilmiş 26 CHP&#x27;li ilçe belediye başkanından 14&#x27;ü çeşitli suçlamalarla soruşturma geçirdi. Tutuklu yargılamaların sürdüğü yönetimlerde başkanvekilliği seçimleri yapıldı. Bazı belediyelerde yönetimler başkanvekilliği seçimlerinde el değiştirdi ve AKP&#x27;ye geçti</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Ekim 2026, 03:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck054dlgm8zdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kapadokya&#x27;da peribacası çöktü, üç kişi hayatını kaybetti kapadokya&#x27;da toprak kayması nedeniyle peribacasından kopan kaya parçalarının düşmesi sonucu üç kişi yaşamını yitirdi, beş kişi yaralandı. nevşehir göreme&#x27;de açık hava müzesi girişinde yağış nedeniyle meydana gelen olayda arama kurtarma çalışmaları sona erdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Ekim 2026, 14:02</span>
+        </div>
+        <h3>Kapadokya&#x27;da peribacası çöktü, üç kişi hayatını kaybetti</h3>
+        <p>Kapadokya&#x27;da toprak kayması nedeniyle peribacasından kopan kaya parçalarının düşmesi sonucu üç kişi yaşamını yitirdi, beş kişi yaralandı. Nevşehir Göreme&#x27;de Açık Hava Müzesi girişinde yağış nedeniyle meydana gelen olayda arama kurtarma çalışmaları sona erdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Ekim 2026, 14:02</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwdd8qjqqmnzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gündüzlü ve geçici bakım hizmetleri yaygınlaştırılacak engelli bireylerin bakım hizmetlerine erişiminin artırılması amacıyla 2027 yılında gündüzlü bakım merkezlerinin mevzuat altyapısının tamamlanması, geçici ve misafir bakım hizmetlerinin yaygınlaştırılması planlanıyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Ekim 2026, 13:37</span>
+        </div>
+        <h3>Gündüzlü ve geçici bakım hizmetleri yaygınlaştırılacak</h3>
+        <p>Engelli bireylerin bakım hizmetlerine erişiminin artırılması amacıyla 2027 yılında gündüzlü bakım merkezlerinin mevzuat altyapısının tamamlanması, geçici ve misafir bakım hizmetlerinin yaygınlaştırılması planlanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Ekim 2026, 13:37</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/gunduzlu-ve-gecici-bakim-hizmetleri-yayginlastirilacak-961731.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tse belgelerinin uluslararası tanınırlığı artırılacak türk standardları enstitüsünün (tse) ankara kalite kampüsü ana hizmet binasının gelecek yıl faaliyete geçmesi, belgelendirme ve uygunluk değerlendirme hizmetlerinin uluslararası tanınırlığının artırılması planlanıyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Ekim 2026, 13:35</span>
+        </div>
+        <h3>TSE belgelerinin uluslararası tanınırlığı artırılacak</h3>
+        <p>Türk Standardları Enstitüsünün (TSE) Ankara Kalite Kampüsü ana hizmet binasının gelecek yıl faaliyete geçmesi, belgelendirme ve uygunluk değerlendirme hizmetlerinin uluslararası tanınırlığının artırılması planlanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Ekim 2026, 13:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/tse-belgelerinin-uluslararasi-taninirligi-artirilacak-961730.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="klasik araçlara change tuzağına operasyon: 35 gözaltı i̇stanbul merkezli 6 ilde düzenlenen operasyonda, atıl durumdaki araçların şasi numaralarını yurt dışından getirilen koleksiyonluk araçlarda kullanarak &quot;change oto&quot; dolandırıcılığı yaptıkları iddiasıyla 35 zanlı gözaltına alındı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Ekim 2026, 13:23</span>
+        </div>
+        <h3>Klasik araçlara change tuzağına operasyon: 35 gözaltı</h3>
+        <p>İstanbul merkezli 6 ilde düzenlenen operasyonda, atıl durumdaki araçların şasi numaralarını yurt dışından getirilen koleksiyonluk araçlarda kullanarak &quot;change oto&quot; dolandırıcılığı yaptıkları iddiasıyla 35 zanlı gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Ekim 2026, 13:23</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/klasik-araclara-change-tuzagina-operasyon-35-gozalti-961728.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk dünyası diyalog forumu kapsamında &quot;türk dünyasında diplomaside kadın paneli&quot; düzenlendi cumhurbaşkanlığı i̇letişim başkanlığı tarafından düzenlenen &quot;türk dünyası diyalog forumu&quot; kapsamında &quot;türk dünyasında diplomaside kadın paneli: ortak vizyon, güçlü temsil, sürdürülebilir i̇şbirliği&quot; başlıklı panel gerçekleştirildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Ekim 2026, 13:40</span>
+        </div>
+        <h3>Türk Dünyası Diyalog Forumu kapsamında &quot;Türk Dünyasında Diplomaside Kadın Paneli&quot; düzenlendi</h3>
+        <p>Cumhurbaşkanlığı İletişim Başkanlığı tarafından düzenlenen &quot;Türk Dünyası Diyalog Forumu&quot; kapsamında &quot;Türk Dünyasında Diplomaside Kadın Paneli: Ortak Vizyon, Güçlü Temsil, Sürdürülebilir İşbirliği&quot; başlıklı panel gerçekleştirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Ekim 2026, 13:40</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-dunyasi-diyalog-forumu-kapsaminda-turk-dunyasinda-diplomaside-kadin-paneli-duzenlendi/4106157" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="aym&#x27;den eksik ödenen memur maaşlarına ilişkin ihlal kararı anayasa mahkemesi, &quot;eksik ödenen memur maaşlarının tahsili amacıyla&quot; başlatılan ilamsız icra takiplerinin düşmesine karar verilmesi sonrasında idari yargıda açılan davaların süre aşımından reddedilmesini &quot;mahkemeye erişim hakkının ihlali&quot; kabul etti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Ekim 2026, 13:06</span>
+        </div>
+        <h3>AYM&#x27;den eksik ödenen memur maaşlarına ilişkin ihlal kararı</h3>
+        <p>Anayasa Mahkemesi, &quot;eksik ödenen memur maaşlarının tahsili amacıyla&quot; başlatılan ilamsız icra takiplerinin düşmesine karar verilmesi sonrasında idari yargıda açılan davaların süre aşımından reddedilmesini &quot;mahkemeye erişim hakkının ihlali&quot; kabul etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Ekim 2026, 13:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/aymden-eksik-odenen-memur-maaslarina-iliskin-ihlal-karari/4106120" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mustafa sarıgül, yeni parti&#x27;den istifa etti erzincan milletvekili mustafa sarıgül, kendisi ve ailesine yönelik 16 ekim&#x27;de başlatılan soruşturma tamamlanıncaya kadar yeni parti&#x27;den istifa ettiğini duyurdu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Ekim 2026, 14:03</span>
+        </div>
+        <h3>Mustafa Sarıgül, Yeni Parti&#x27;den istifa etti</h3>
+        <p>Erzincan Milletvekili Mustafa Sarıgül, kendisi ve ailesine yönelik 16 Ekim&#x27;de başlatılan soruşturma tamamlanıncaya kadar Yeni Parti&#x27;den istifa ettiğini duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Ekim 2026, 14:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cxdd8q9ejvglo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hakkında ev hapsi kararı verilen sinem dedetaş tahliye oldu tutuklandıktan sonra üsküdar belediye başkanlığı görevinden uzaklaştırılan sinem dedetaş hakkında tahliye ve ev hapsi kararı verildi. dedetaş 31 temmuz&#x27;dan bu yana tutuklu bulunuyordu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 29 Ekim 2026, 17:10</span>
+        </div>
+        <h3>Hakkında ev hapsi kararı verilen Sinem Dedetaş tahliye oldu</h3>
+        <p>Tutuklandıktan sonra Üsküdar Belediye Başkanlığı görevinden uzaklaştırılan Sinem Dedetaş hakkında tahliye ve ev hapsi kararı verildi. Dedetaş 31 Temmuz&#x27;dan bu yana tutuklu bulunuyordu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Ekim 2026, 17:10</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckq6nj1vpzjeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="star trek efsanesi patrick stewart hayatını kaybetti alzheimer ve demans hastası olan 86 yaşındaki oyuncu patrick stewart 29 ekim çarşamba günü los angeles&#x27;taki evinde hayatını kaybetti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 29 Ekim 2026, 23:38</span>
+        </div>
+        <h3>Star Trek efsanesi Patrick Stewart hayatını kaybetti</h3>
+        <p>Alzheimer ve demans hastası olan 86 yaşındaki oyuncu Patrick Stewart 29 Ekim Çarşamba günü Los Angeles&#x27;taki evinde hayatını kaybetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 29 Ekim 2026, 23:38</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c59vzlv9glleo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;de arge harcamaları geçen yıl 980,4 milyar lirayı aştı türkiye&#x27;de araştırma geliştirme (ar-ge) harcamalarının tutarı, geçen yıl bir önceki yıla göre 328 milyar 607 milyon lira artarak 980 milyar 428 milyon liraya yükseldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Ekim 2026, 13:44</span>
+        </div>
+        <h3>Türkiye&#x27;de ARGE harcamaları geçen yıl 980,4 milyar lirayı aştı</h3>
+        <p>Türkiye&#x27;de araştırma geliştirme (AR-GE) harcamalarının tutarı, geçen yıl bir önceki yıla göre 328 milyar 607 milyon lira artarak 980 milyar 428 milyon liraya yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Ekim 2026, 13:44</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyede-ar-ge-harcamalari-gecen-yil-9804-milyar-lirayi-asti-961734.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;nin elektrik kurulu gücü 140 bin megavatı aşacak türkiye&#x27;de enerji sektöründeki yatırımların gelecek yıl yaklaşık yüzde 30 artması bekleniyor. elektrik kurulu gücünün ise 140 bin 47 megavata ulaşması hedefleniyor. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Ekim 2026, 13:42</span>
+        </div>
+        <h3>Türkiye&#x27;nin elektrik kurulu gücü 140 bin megavatı aşacak</h3>
+        <p>Türkiye&#x27;de enerji sektöründeki yatırımların gelecek yıl yaklaşık yüzde 30 artması bekleniyor. Elektrik kurulu gücünün ise 140 bin 47 megavata ulaşması hedefleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Ekim 2026, 13:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiyenin-elektrik-kurulu-gucu-140-bin-megavati-asacak-961733.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mustafa sarıgül partisinden istifa etti yeni parti erzincan milletvekili mustafa sarıgül, partisinden istifa ettiğini açıkladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 30 Ekim 2026, 13:37</span>
+        </div>
+        <h3>Mustafa Sarıgül partisinden istifa etti</h3>
+        <p>Yeni Parti Erzincan Milletvekili Mustafa Sarıgül, partisinden istifa ettiğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 30 Ekim 2026, 13:37</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/mustafa-sarigul-partisinden-istifa-etti-961732.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk dünyası diyalog forumu&#x27;nda türk dünyasının geleceğinin inşası ele alındı cumhurbaşkanlığı i̇letişim başkanlığı, &quot;türk dünyası diyalog forumu&quot; kapsamında &quot;türk dünyasının büyük stratejisi: geleceği birlikte i̇nşa etmek&quot; konulu yuvarlak masa toplantısı düzenledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Ekim 2026, 13:48</span>
+        </div>
+        <h3>Türk Dünyası Diyalog Forumu&#x27;nda Türk dünyasının geleceğinin inşası ele alındı</h3>
+        <p>Cumhurbaşkanlığı İletişim Başkanlığı, &quot;Türk Dünyası Diyalog Forumu&quot; kapsamında &quot;Türk Dünyasının Büyük Stratejisi: Geleceği Birlikte İnşa Etmek&quot; konulu yuvarlak masa toplantısı düzenledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Ekim 2026, 13:48</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-dunyasi-diyalog-forumunda-turk-dunyasinin-geleceginin-insasi-ele-alindi/4106166" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nevşehir&#x27;de kopan kaya parçalarının bulunduğu alanda enkaz kaldırma çalışması yapılıyor nevşehir&#x27;in göreme beldesinde peribacasından kopan kaya parçalarının bulunduğu alanda enkaz kaldırma çalışması yürütülüyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Ekim 2026, 13:20</span>
+        </div>
+        <h3>Nevşehir&#x27;de kopan kaya parçalarının bulunduğu alanda enkaz kaldırma çalışması yapılıyor</h3>
+        <p>Nevşehir&#x27;in Göreme beldesinde peribacasından kopan kaya parçalarının bulunduğu alanda enkaz kaldırma çalışması yürütülüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Ekim 2026, 13:20</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/nevsehirde-kopan-kaya-parcalarinin-bulundugu-alanda-enkaz-kaldirma-calismasi-yapiliyor/4106129" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ösym hafta sonu 4 sınav yapacak ösym başkanlığınca, 2026-sayıştay eleme yarın, 2026-dus 2. dönem, 2026-sts diş hekimliği 2. dönem ve dhbt 1 kasım pazar günü düzenlenecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Ekim 2026, 13:01</span>
+        </div>
+        <h3>ÖSYM hafta sonu 4 sınav yapacak</h3>
+        <p>ÖSYM Başkanlığınca, 2026-Sayıştay Eleme yarın, 2026-DUS 2. Dönem, 2026-STS Diş Hekimliği 2. Dönem ve DHBT 1 Kasım Pazar günü düzenlenecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Ekim 2026, 13:01</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/osym-hafta-sonu-4-sinav-yapacak/4106108" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk dünyası diyalog forumu kapsamında &quot;türk dünyasında medya ve i̇letişim&quot; paneli yapıldı cumhurbaşkanlığı i̇letişim başkanlığı tarafından düzenlenen &quot;türk dünyası diyalog forumu&quot; kapsamında &quot;türk dünyasında medya ve i̇letişim&quot; paneli düzenlendi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 30 Ekim 2026, 12:44</span>
+        </div>
+        <h3>Türk Dünyası Diyalog Forumu kapsamında &quot;Türk Dünyasında Medya ve İletişim&quot; paneli yapıldı</h3>
+        <p>Cumhurbaşkanlığı İletişim Başkanlığı tarafından düzenlenen &quot;Türk Dünyası Diyalog Forumu&quot; kapsamında &quot;Türk Dünyasında Medya ve İletişim&quot; paneli düzenlendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 30 Ekim 2026, 12:44</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-dunyasi-diyalog-forumu-kapsaminda-turk-dunyasinda-medya-ve-iletisim-paneli-yapildi/4106085" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
