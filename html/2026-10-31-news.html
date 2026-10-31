@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">31 Ekim 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">31 Ekim 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 13</span><span class="stat-item"><strong>ekonomi</strong> 2</span><span class="stat-item"><strong>genel</strong> 13</span><span class="stat-item"><strong>teknoloji</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>ABD, Ukrayna&#x27;ya 500 adet Patriot füzesi satışını onayladı</h3>
+        <p>Amerika Birleşik Devletleri, Rusya&#x27;nın artan hava saldırılarına karşı savunmada kritik rol oynaması beklenen 500 adet Patriot füzesinin Ukrayna&#x27;ya satışını onayladı. Amerikan yapımı füze önleme sistemleri, Rusya&#x27;nın balistik füzelerini düşürmek için kullanılabilecek tek etkili silah.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 31 Ekim 2026, 12:08</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ck87zqz878ydo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 31 Ekim 2026, 11:49</span>
+            </div>
+            <h3>TDT Aile ve Kadın Konseyi için lider eşlerinden destek</h3>
+            <p>TDT Aile ve Kadın Konseyi için Özbekistan Cumhurbaşkanı Şevket Mirziyoyev&#x27;in eşi Ziroat Mirziyoyeva, Kırgızistan Cumhurbaşkanı Sadır Caparov&#x27;un eşi Aygül Caparova ve KKTC Cumhurbaşkanı Tufan Erhürman&#x27;ın eşi Nilden Bektaş Erhürman destek verdi.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tdt-aile-ve-kadin-konseyi-icin-lider-eslerinden-destek/4107146" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 31 Ekim 2026, 13:03</span>
+            </div>
+            <h3>GTA 6: Yılın merakla beklenen oyunu için Türkçe dil desteği gelecek mi?</h3>
+            <p>Rockstar Games&#x27;in 10 yılı aşkın süredir geliştirdiği Grand Theft Auto (GTA) 6, 19 Kasım&#x27;da piyasaya sürülecek. Oyuncular, içerik üreticileri ve sektör profesyonelleri Türkçe dil desteği getirilmesi için kampanya yürütüyor. Peki Rockstar&#x27;ın konuya yaklaşımı ne? Bir GTA oyunu ilk kez Türkçe oynanabilecek mi?</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmvgx3520dewo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 30 Ekim 2026, 21:33</span>
+            </div>
+            <h3>Aliyev&#x27;in katılmadığı Türk Devletleri Zirvesi&#x27;nden hangi sonuçlar çıktı?</h3>
+            <p>Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın ev sahipliğinde gerçekleştirilen 13. Türk Devletleri Teşkilatı liderler zirvesine (TDT) Ankara-Bakü arasında yaşanan gerilim ve Azerbaycan Devlet Başkanı İlham Aliyev&#x27;in katılmaması damga vurdu.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmvg7zwd2xdzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 31 Ekim 2026, 01:43</span>
+            </div>
+            <h3>Polonya&#x27;da siyasi gerginlik: Anayasa Mahkemesi&#x27;ne polis konuşlandırıldı</h3>
+            <p>Polonya&#x27;da hükümet ile Anayasa Mahkemesi başkanı ve yardımcısı arasında tırmanan gerilim üzerine, mahkeme binasına çevik kuvvet polisleri konuşlandırıldı. Başbakan Donald Tusk hükümeti ile ana muhalefetteki sağcı Hukuk ve Adalet Partisi (PiS) liderleri arasında Anayasa Mahkemesi üzerinden bir gerilim yaşanıyor. Gerilimin sebebi PiS hükümeti döneminde atanan Anayasa Mahkemesi üyeleri.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cm0e025gw751o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">13 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="abd, ukrayna&#x27;ya 500 adet patriot füzesi satışını onayladı amerika birleşik devletleri, rusya&#x27;nın artan hava saldırılarına karşı savunmada kritik rol oynaması beklenen 500 adet patriot füzesinin ukrayna&#x27;ya satışını onayladı. amerikan yapımı füze önleme sistemleri, rusya&#x27;nın balistik füzelerini düşürmek için kullanılabilecek tek etkili silah. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 31 Ekim 2026, 12:08</span>
+        </div>
+        <h3>ABD, Ukrayna&#x27;ya 500 adet Patriot füzesi satışını onayladı</h3>
+        <p>Amerika Birleşik Devletleri, Rusya&#x27;nın artan hava saldırılarına karşı savunmada kritik rol oynaması beklenen 500 adet Patriot füzesinin Ukrayna&#x27;ya satışını onayladı. Amerikan yapımı füze önleme sistemleri, Rusya&#x27;nın balistik füzelerini düşürmek için kullanılabilecek tek etkili silah.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 31 Ekim 2026, 12:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck87zqz878ydo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tdt aile ve kadın konseyi için lider eşlerinden destek tdt aile ve kadın konseyi için özbekistan cumhurbaşkanı şevket mirziyoyev&#x27;in eşi ziroat mirziyoyeva, kırgızistan cumhurbaşkanı sadır caparov&#x27;un eşi aygül caparova ve kktc cumhurbaşkanı tufan erhürman&#x27;ın eşi nilden bektaş erhürman destek verdi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 31 Ekim 2026, 11:49</span>
+        </div>
+        <h3>TDT Aile ve Kadın Konseyi için lider eşlerinden destek</h3>
+        <p>TDT Aile ve Kadın Konseyi için Özbekistan Cumhurbaşkanı Şevket Mirziyoyev&#x27;in eşi Ziroat Mirziyoyeva, Kırgızistan Cumhurbaşkanı Sadır Caparov&#x27;un eşi Aygül Caparova ve KKTC Cumhurbaşkanı Tufan Erhürman&#x27;ın eşi Nilden Bektaş Erhürman destek verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 31 Ekim 2026, 11:49</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/tdt-aile-ve-kadin-konseyi-icin-lider-eslerinden-destek/4107146" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sınavsız müdür ve müdür yardımcısı atamalarına 3 yıl şartı getirildi görevde yükselme sınavına tabi olmayan müdür ve müdür yardımcıları ya da daha üst yönetici kadrolarındaki personelin, görevde yükselme sınavına tabi tutulmaksızın genel hükümlere göre atanabilmeleri için bu görevlerde kesintisiz en az 3 yıl asaleten ve fiilen görev yapmış olmaları gerekecek. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 31 Ekim 2026, 13:28</span>
+        </div>
+        <h3>Sınavsız müdür ve müdür yardımcısı atamalarına 3 yıl şartı getirildi</h3>
+        <p>Görevde yükselme sınavına tabi olmayan müdür ve müdür yardımcıları ya da daha üst yönetici kadrolarındaki personelin, görevde yükselme sınavına tabi tutulmaksızın genel hükümlere göre atanabilmeleri için bu görevlerde kesintisiz en az 3 yıl asaleten ve fiilen görev yapmış olmaları gerekecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 31 Ekim 2026, 13:28</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/sinavsiz-mudur-ve-mudur-yardimcisi-atamalarina-3-yil-sarti-getirildi-961817.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;daki kara para aklama soruşturmasında 2 şüpheli daha tutuklandı yurt içinde ve yurt dışında kurulan şirketler aracılığıyla kaynağı belirsiz yüksek miktarda paranın aklandığı iddialarına ilişkin emir ve ömer sarıgül&#x27;ün de aralarında bulunduğu 22 şüphelinin tutuklandığı soruşturmada 2 şüpheli daha tutuklandı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 31 Ekim 2026, 12:45</span>
+        </div>
+        <h3>İstanbul&#x27;daki kara para aklama soruşturmasında 2 şüpheli daha tutuklandı</h3>
+        <p>Yurt içinde ve yurt dışında kurulan şirketler aracılığıyla kaynağı belirsiz yüksek miktarda paranın aklandığı iddialarına ilişkin Emir ve Ömer Sarıgül&#x27;ün de aralarında bulunduğu 22 şüphelinin tutuklandığı soruşturmada 2 şüpheli daha tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 31 Ekim 2026, 12:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/istanbuldaki-kara-para-aklama-sorusturmasinda-2-supheli-daha-tutuklandi-961811.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meslek ortaokullarının sayısının artırılması planlanıyor türkiye&#x27;de eğitim-istihdam ilişkisinin geliştirilmesi için sektöre entegre okul, bölge okulu ve ihtisaslaşmış meslek liseleri yaygınlaştırılacak, mesleki ve teknik anadolu liseleri bünyesinde açılan meslek ortaokulları sayısı artırılacak. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 31 Ekim 2026, 11:08</span>
+        </div>
+        <h3>Meslek ortaokullarının sayısının artırılması planlanıyor</h3>
+        <p>Türkiye&#x27;de eğitim-istihdam ilişkisinin geliştirilmesi için sektöre entegre okul, bölge okulu ve ihtisaslaşmış meslek liseleri yaygınlaştırılacak, mesleki ve teknik Anadolu liseleri bünyesinde açılan meslek ortaokulları sayısı artırılacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 31 Ekim 2026, 11:08</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/meslek-ortaokullarinin-sayisinin-artirilmasi-planlaniyor/4107111" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cop31&#x27;de ulaşım çevre dostu otobüslerle sağlanacak türkiye&#x27;nin kasım ayında ev sahipliği yapacağı birleşmiş milletler (bm) i̇klim değişikliği çerçeve sözleşmesi 31. taraflar konferansı&#x27;nda (cop31) katılımcıların ulaşımı için 25 belediyeden temin edilen 630 &quot;çevre dostu&quot; otobüs kullanılacak. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 31 Ekim 2026, 11:07</span>
+        </div>
+        <h3>COP31&#x27;de ulaşım çevre dostu otobüslerle sağlanacak</h3>
+        <p>Türkiye&#x27;nin kasım ayında ev sahipliği yapacağı Birleşmiş Milletler (BM) İklim Değişikliği Çerçeve Sözleşmesi 31. Taraflar Konferansı&#x27;nda (COP31) katılımcıların ulaşımı için 25 belediyeden temin edilen 630 &quot;çevre dostu&quot; otobüs kullanılacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 31 Ekim 2026, 11:07</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cop31de-ulasim-cevre-dostu-otobuslerle-saglanacak/4107109" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;gazze ya da hiç&#x27;: i̇srail&#x27;e destek, abd ara seçimlerinde gerilim noktası haline geldi michigan, abd&#x27;de 3 kasım&#x27;da yapılacak ara seçimlerde yarışın en çekişmeli geçmesi beklenen yerlerden biri. abd&#x27;nin i̇srail&#x27;e verdiği desteğe dair endişeler gazze tartışmasının her iki tarafındaki michiganlı seçmenlerin oy tercihlerini şekillendiriyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 31 Ekim 2026, 03:43</span>
+        </div>
+        <h3>&#x27;Gazze ya da hiç&#x27;: İsrail&#x27;e destek, ABD ara seçimlerinde gerilim noktası haline geldi</h3>
+        <p>Michigan, ABD&#x27;de 3 Kasım&#x27;da yapılacak ara seçimlerde yarışın en çekişmeli geçmesi beklenen yerlerden biri. ABD&#x27;nin İsrail&#x27;e verdiği desteğe dair endişeler Gazze tartışmasının her iki tarafındaki Michiganlı seçmenlerin oy tercihlerini şekillendiriyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 31 Ekim 2026, 03:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqvg0zd84rd1o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd ara seçimleri neden önemli? yedi temel soru abd&#x27;li seçmenler, donald trump&#x27;ın başkanlığı üzerinde büyük etkisi olabilecek ara seçim için 3 kasım&#x27;da sandık başına gidecek. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 30 Ekim 2026, 13:37</span>
+        </div>
+        <h3>ABD ara seçimleri neden önemli? Yedi temel soru</h3>
+        <p>ABD&#x27;li seçmenler, Donald Trump&#x27;ın başkanlığı üzerinde büyük etkisi olabilecek ara seçim için 3 Kasım&#x27;da sandık başına gidecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Ekim 2026, 13:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmq8nwyxk1gdo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;de idam girişiminden sağ çıkan christa pike: &#x27;acı içinde uyandım&#x27; abd&#x27;de idam cezasına çarptırılan christa pike, eylül ayında başarısızlıkla sonuçlanan infaz girişiminin ardından ilk kez kamuoyuna açıklama yaptı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 30 Ekim 2026, 19:26</span>
+        </div>
+        <h3>ABD&#x27;de idam girişiminden sağ çıkan Christa Pike: &#x27;Acı içinde uyandım&#x27;</h3>
+        <p>ABD&#x27;de idam cezasına çarptırılan Christa Pike, Eylül ayında başarısızlıkla sonuçlanan infaz girişiminin ardından ilk kez kamuoyuna açıklama yaptı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Ekim 2026, 19:26</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6x2v1j3ezn7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="elektrikte mesken sınırı 3 bin kilovatsaat olacak 1 ocak 2027&#x27;den itibaren konutlar ve apartman ortak sayaçları için yıllık tüketim limiti 3 bin kilovatsaat olarak uygulanacak. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 31 Ekim 2026, 12:24</span>
+        </div>
+        <h3>Elektrikte mesken sınırı 3 bin kilovatsaat olacak</h3>
+        <p>1 Ocak 2027&#x27;den itibaren konutlar ve apartman ortak sayaçları için yıllık tüketim limiti 3 bin kilovatsaat olarak uygulanacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 31 Ekim 2026, 12:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/elektrikte-mesken-siniri-3-bin-kilovatsaat-olacak-961810.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="patent ve marka ücret tarifesinde değişik türk patent ve marka kurumunun (türkpatent) bu yıl için uyguladığı ücret tarifesinde düzenleme yapıldı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 31 Ekim 2026, 12:05</span>
+        </div>
+        <h3>Patent ve marka ücret tarifesinde değişik</h3>
+        <p>Türk Patent ve Marka Kurumunun (TÜRKPATENT) bu yıl için uyguladığı ücret tarifesinde düzenleme yapıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 31 Ekim 2026, 12:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/patent-ve-marka-ucret-tarifesinde-degisik-961807.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trump döneminde abd&#x27;nin göç politikası nasıl değişti? abd başkanı donald trump, ikinci döneminde göçmenlere karşı sert adımlar attı. peki trump&#x27;ın yaklaşımı abd&#x27;nin göç politikasını nasıl değiştirdi? dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 31 Ekim 2026, 11:48</span>
+        </div>
+        <h3>Trump döneminde ABD&#x27;nin göç politikası nasıl değişti?</h3>
+        <p>ABD Başkanı Donald Trump, ikinci döneminde göçmenlere karşı sert adımlar attı. Peki Trump&#x27;ın yaklaşımı ABD&#x27;nin göç politikasını nasıl değiştirdi?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 31 Ekim 2026, 11:48</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqrky1552r25o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;nin, körfez ülkelerini i̇ran&#x27;a saldırıların 4 kasım&#x27;da başlayabileceği konusunda uyardığı iddia edildi abd başkanı donald trump yönetiminin, körfez ülkelerini 4 kasım gibi erken bir tarihte i̇ran&#x27;a yönelik &quot;kısa ve yoğun bir saldırı dalgası&quot;na hazır olmaları konusunda uyardığı ileri sürüldü. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 31 Ekim 2026, 12:15</span>
+        </div>
+        <h3>ABD&#x27;nin, Körfez ülkelerini İran&#x27;a saldırıların 4 Kasım&#x27;da başlayabileceği konusunda uyardığı iddia edildi</h3>
+        <p>ABD Başkanı Donald Trump yönetiminin, Körfez ülkelerini 4 Kasım gibi erken bir tarihte İran&#x27;a yönelik &quot;kısa ve yoğun bir saldırı dalgası&quot;na hazır olmaları konusunda uyardığı ileri sürüldü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 31 Ekim 2026, 12:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abdnin-korfez-ulkelerini-irana-saldirilarin-4-kasimda-baslayabilecegi-konusunda-uyardigi-iddia-edildi-961808.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="gta 6: yılın merakla beklenen oyunu için türkçe dil desteği gelecek mi? rockstar games&#x27;in 10 yılı aşkın süredir geliştirdiği grand theft auto (gta) 6, 19 kasım&#x27;da piyasaya sürülecek. oyuncular, içerik üreticileri ve sektör profesyonelleri türkçe dil desteği getirilmesi için kampanya yürütüyor. peki rockstar&#x27;ın konuya yaklaşımı ne? bir gta oyunu ilk kez türkçe oynanabilecek mi? ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 31 Ekim 2026, 13:03</span>
+        </div>
+        <h3>GTA 6: Yılın merakla beklenen oyunu için Türkçe dil desteği gelecek mi?</h3>
+        <p>Rockstar Games&#x27;in 10 yılı aşkın süredir geliştirdiği Grand Theft Auto (GTA) 6, 19 Kasım&#x27;da piyasaya sürülecek. Oyuncular, içerik üreticileri ve sektör profesyonelleri Türkçe dil desteği getirilmesi için kampanya yürütüyor. Peki Rockstar&#x27;ın konuya yaklaşımı ne? Bir GTA oyunu ilk kez Türkçe oynanabilecek mi?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 31 Ekim 2026, 13:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmvgx3520dewo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da iki operasyonda 142 binden fazla elektronik sigara ele geçirildi ticaret bakanlığı gümrükler muhafaza ekiplerince i̇stanbul&#x27;da düzenlenen iki ayrı operasyonda 142 bin 100 elektronik sigaraya el konuldu. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 31 Ekim 2026, 11:09</span>
+        </div>
+        <h3>İstanbul&#x27;da iki operasyonda 142 binden fazla elektronik sigara ele geçirildi</h3>
+        <p>Ticaret Bakanlığı Gümrükler Muhafaza ekiplerince İstanbul&#x27;da düzenlenen iki ayrı operasyonda 142 bin 100 elektronik sigaraya el konuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 31 Ekim 2026, 11:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-iki-operasyonda-142-binden-fazla-elektronik-sigara-ele-gecirildi/4107115" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">13 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="aliyev&#x27;in katılmadığı türk devletleri zirvesi&#x27;nden hangi sonuçlar çıktı? cumhurbaşkanı recep tayyip erdoğan&#x27;ın ev sahipliğinde gerçekleştirilen 13. türk devletleri teşkilatı liderler zirvesine (tdt) ankara-bakü arasında yaşanan gerilim ve azerbaycan devlet başkanı i̇lham aliyev&#x27;in katılmaması damga vurdu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 30 Ekim 2026, 21:33</span>
+        </div>
+        <h3>Aliyev&#x27;in katılmadığı Türk Devletleri Zirvesi&#x27;nden hangi sonuçlar çıktı?</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın ev sahipliğinde gerçekleştirilen 13. Türk Devletleri Teşkilatı liderler zirvesine (TDT) Ankara-Bakü arasında yaşanan gerilim ve Azerbaycan Devlet Başkanı İlham Aliyev&#x27;in katılmaması damga vurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 30 Ekim 2026, 21:33</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmvg7zwd2xdzo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="polonya&#x27;da siyasi gerginlik: anayasa mahkemesi&#x27;ne polis konuşlandırıldı polonya&#x27;da hükümet ile anayasa mahkemesi başkanı ve yardımcısı arasında tırmanan gerilim üzerine, mahkeme binasına çevik kuvvet polisleri konuşlandırıldı. başbakan donald tusk hükümeti ile ana muhalefetteki sağcı hukuk ve adalet partisi (pis) liderleri arasında anayasa mahkemesi üzerinden bir gerilim yaşanıyor. gerilimin sebebi pis hükümeti döneminde atanan anayasa mahkemesi üyeleri. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 31 Ekim 2026, 01:43</span>
+        </div>
+        <h3>Polonya&#x27;da siyasi gerginlik: Anayasa Mahkemesi&#x27;ne polis konuşlandırıldı</h3>
+        <p>Polonya&#x27;da hükümet ile Anayasa Mahkemesi başkanı ve yardımcısı arasında tırmanan gerilim üzerine, mahkeme binasına çevik kuvvet polisleri konuşlandırıldı. Başbakan Donald Tusk hükümeti ile ana muhalefetteki sağcı Hukuk ve Adalet Partisi (PiS) liderleri arasında Anayasa Mahkemesi üzerinden bir gerilim yaşanıyor. Gerilimin sebebi PiS hükümeti döneminde atanan Anayasa Mahkemesi üyeleri.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 31 Ekim 2026, 01:43</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm0e025gw751o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="antalya expo alanı türkiye&#x27;nin en büyük fuar ve kongre merkezine dönüşüyor kültür ve turizm bakanı mehmet nuri ersoy, cop31 i̇klim zirvesi&#x27;nin ardından antalya expo alanında türkiye&#x27;nin en büyük fuar, kongre ve etkinlik merkezlerinden birinin kurulacağını ve tga çatısı altında profesyonel bir yönetim modeline geçileceğini açıkladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 31 Ekim 2026, 12:09</span>
+        </div>
+        <h3>Antalya EXPO alanı Türkiye&#x27;nin en büyük fuar ve kongre merkezine dönüşüyor</h3>
+        <p>Kültür ve Turizm Bakanı Mehmet Nuri Ersoy, COP31 İklim Zirvesi&#x27;nin ardından Antalya EXPO alanında Türkiye&#x27;nin en büyük fuar, kongre ve etkinlik merkezlerinden birinin kurulacağını ve TGA çatısı altında profesyonel bir yönetim modeline geçileceğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 31 Ekim 2026, 12:09</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/antalya-expo-alani-turkiyenin-en-buyuk-fuar-ve-kongre-merkezine-donusuyor-961809.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="milletlerarası anlaşma resmi gazete&#x27;de yayımlandı türk devletleri teşkilatına (tdt) üye devletlerin hükümetleri arasında i̇mzalanan milletlerarası anlaşma, cumhurbaşkanı recep tayyip erdoğan tarafından onaylanmasının ardından resmi gazete&#x27;de yayımlandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 31 Ekim 2026, 11:12</span>
+        </div>
+        <h3>Milletlerarası anlaşma Resmi Gazete&#x27;de yayımlandı</h3>
+        <p>Türk Devletleri Teşkilatına (TDT) Üye Devletlerin Hükümetleri Arasında İmzalanan Milletlerarası Anlaşma, Cumhurbaşkanı Recep Tayyip Erdoğan tarafından onaylanmasının ardından Resmi Gazete&#x27;de yayımlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 31 Ekim 2026, 11:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/milletlerarasi-anlasma-resmi-gazetede-yayimlandi/4107118" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="suriye&#x27;de geçim krizi: &#x27;nüfusun önemli kısmı esad dönemine kıyasla daha kötü durumda&#x27; suriye&#x27;de yakıt fiyatlarındaki artış ve geçim krizi nedeniyle artan hoşnutsuzluk, ahmed şara yönetiminin önündeki en büyük sorun olarak görülüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 31 Ekim 2026, 11:40</span>
+        </div>
+        <h3>Suriye&#x27;de geçim krizi: &#x27;Nüfusun önemli kısmı Esad dönemine kıyasla daha kötü durumda&#x27;</h3>
+        <p>Suriye&#x27;de yakıt fiyatlarındaki artış ve geçim krizi nedeniyle artan hoşnutsuzluk, Ahmed Şara yönetiminin önündeki en büyük sorun olarak görülüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 31 Ekim 2026, 11:40</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwy8l23nylm0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çiğ sütün sağlığa faydalı olduğu doğru mu, içmek güvenli mi? çiğ süte talep artıyor ve internet ünlüleri sağlığa yararlarını övüyor. beslenmeden bağırsak sağlığına, alerjilerden gıda zehirlenmesi riskine kadar, uzmanların pastörize edilmemiş süt tüketimi hakkındaki görüşlerini aldık. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 31 Ekim 2026, 13:12</span>
+        </div>
+        <h3>Çiğ sütün sağlığa faydalı olduğu doğru mu, içmek güvenli mi?</h3>
+        <p>Çiğ süte talep artıyor ve internet ünlüleri sağlığa yararlarını övüyor. Beslenmeden bağırsak sağlığına, alerjilerden gıda zehirlenmesi riskine kadar, uzmanların pastörize edilmemiş süt tüketimi hakkındaki görüşlerini aldık.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 31 Ekim 2026, 13:12</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c623d9ypmj9po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fındık sektörüne sıkı takip sürüyor rekabet kurumu başkanı birol küle, fındık alım-satım pazarının önde gelen 6 teşebbüsü hakkında &quot;ciddi rekabet ihlali&quot; şüphesiyle soruşturma açtıklarını belirterek, &quot;i̇ncelemelerimiz sürecinde çiftçimizi mağdur eden, rekabeti ihlal eden ilave teşebbüsler tespit etmemiz durumunda onları da tereddütsüz soruşturmaya dahil edeceğiz&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 31 Ekim 2026, 13:32</span>
+        </div>
+        <h3>Fındık sektörüne sıkı takip sürüyor</h3>
+        <p>Rekabet Kurumu Başkanı Birol Küle, fındık alım-satım pazarının önde gelen 6 teşebbüsü hakkında &quot;ciddi rekabet ihlali&quot; şüphesiyle soruşturma açtıklarını belirterek, &quot;İncelemelerimiz sürecinde çiftçimizi mağdur eden, rekabeti ihlal eden ilave teşebbüsler tespit etmemiz durumunda onları da tereddütsüz soruşturmaya dahil edeceğiz&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 31 Ekim 2026, 13:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/findik-sektorune-siki-takip-suruyor-961818.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cop31 alanı türkiye&#x27;nin en büyük açık hava sahnesi olacak çevre, şehircilik ve i̇klim değişikliği bakanlığı, antalya&#x27;daki cop31 alanının tamamını copart projesi kapsamında aynı zamanda açık ve kapalı sanat galerisi olarak kullanacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 31 Ekim 2026, 13:23</span>
+        </div>
+        <h3>COP31 alanı Türkiye&#x27;nin en büyük açık hava sahnesi olacak</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanlığı, Antalya&#x27;daki COP31 alanının tamamını COPArt Projesi kapsamında aynı zamanda açık ve kapalı sanat galerisi olarak kullanacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 31 Ekim 2026, 13:23</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cop31-alani-turkiyenin-en-buyuk-acik-hava-sahnesi-olacak-961814.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye ile kuzey makedonya arasında sağlık alanında mutabakat zaptı imzalandı sağlık bakanı kemal memişoğlu, türkiye ile kuzey makedonya arasında sağlık alanındaki işbirliğini geliştirmek amacıyla &quot;sağlık ve tıp bilimleri alanında mutabakat zaptı&quot; imzalandığını bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 31 Ekim 2026, 11:15</span>
+        </div>
+        <h3>Türkiye ile Kuzey Makedonya arasında sağlık alanında mutabakat zaptı imzalandı</h3>
+        <p>Sağlık Bakanı Kemal Memişoğlu, Türkiye ile Kuzey Makedonya arasında sağlık alanındaki işbirliğini geliştirmek amacıyla &quot;Sağlık ve Tıp Bilimleri Alanında Mutabakat Zaptı&quot; imzalandığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 31 Ekim 2026, 11:15</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiye-ile-kuzey-makedonya-arasinda-saglik-alaninda-mutabakat-zapti-imzalandi/4107122" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="üniversite öğrencileri iklim değişikliğinin van ve erçek göllerine etkisini araştırıyor van yüzüncü yıl üniversitesi (yyü) ile ardahan üniversitesi öğrencileri, cop31 türkiye süreciyle bağlantılı proje kapsamında van ve erçek göllerinin iklim değişikliğine karşı dirençlerini araştırmak amacıyla saha çalışması yürütüyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 31 Ekim 2026, 12:27</span>
+        </div>
+        <h3>Üniversite öğrencileri iklim değişikliğinin Van ve Erçek göllerine etkisini araştırıyor</h3>
+        <p>Van Yüzüncü Yıl Üniversitesi (YYÜ) ile Ardahan Üniversitesi öğrencileri, COP31 Türkiye süreciyle bağlantılı proje kapsamında Van ve Erçek göllerinin iklim değişikliğine karşı dirençlerini araştırmak amacıyla saha çalışması yürütüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 31 Ekim 2026, 12:27</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/universite-ogrencileri-iklim-degisikliginin-van-ve-ercek-gollerine-etkisini-arastiriyor/4107190" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="soykırımcı i̇srail&#x27;in saldırıları altındaki gazze&#x27;de can kaybı 74 bin 594&#x27;e yükseldi ateşkese rağmen soykırımcı i̇srail&#x27;in saldırılarını sürdürdüğü gazze şeridi&#x27;nde hayatını kaybedenlerin sayısı son 48 saatte 6 artarak, 74 bin 594&#x27;e yükseldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 31 Ekim 2026, 13:05</span>
+        </div>
+        <h3>Soykırımcı İsrail&#x27;in saldırıları altındaki Gazze&#x27;de can kaybı 74 bin 594&#x27;e yükseldi</h3>
+        <p>Ateşkese rağmen soykırımcı İsrail&#x27;in saldırılarını sürdürdüğü Gazze Şeridi&#x27;nde hayatını kaybedenlerin sayısı son 48 saatte 6 artarak, 74 bin 594&#x27;e yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 31 Ekim 2026, 13:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/soykirimci-israilin-saldirilari-altindaki-gazzede-can-kaybi-74-bin-594e-yukseldi-961813.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sahara çölü&#x27;nde bulunan gül rengi göktaşı 4,1 milyar yıllık mars parçası çıktı sahara çölü&#x27;nde keşfedilen gül rengindeki gizemli göktaşının, kızıl gezegen&#x27;in en eski kabuk yapısına ışık tutan 4,1 milyar yıllık nadir bir mars parçası olduğu nasa araştırmasıyla kanıtlandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 31 Ekim 2026, 13:02</span>
+        </div>
+        <h3>Sahara Çölü&#x27;nde bulunan gül rengi göktaşı 4,1 milyar yıllık Mars parçası çıktı</h3>
+        <p>Sahara Çölü&#x27;nde keşfedilen gül rengindeki gizemli göktaşının, Kızıl Gezegen&#x27;in en eski kabuk yapısına ışık tutan 4,1 milyar yıllık nadir bir Mars parçası olduğu NASA araştırmasıyla kanıtlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 31 Ekim 2026, 13:02</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/sahara-colunde-bulunan-gul-rengi-goktasi-41-milyar-yillik-mars-parcasi-cikti-961812.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="üniversitelerde akademik atama ve yükseltmede merkezi alt sınır düzenlemesi 2027&#x27;de tamamlanacak üniversitelerde akademik personelin atama ve yükseltme kriterlerine merkezi alt sınır getirilmesine yönelik mevzuat çalışmaları gelecek yıl tamamlanacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 31 Ekim 2026, 11:08</span>
+        </div>
+        <h3>Üniversitelerde akademik atama ve yükseltmede merkezi alt sınır düzenlemesi 2027&#x27;de tamamlanacak</h3>
+        <p>Üniversitelerde akademik personelin atama ve yükseltme kriterlerine merkezi alt sınır getirilmesine yönelik mevzuat çalışmaları gelecek yıl tamamlanacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 31 Ekim 2026, 11:08</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/universitelerde-akademik-atama-ve-yukseltmede-merkezi-alt-sinir-duzenlemesi-2027de-tamamlanacak/4107112" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan memişoğlu: en geç 2027&#x27;nin başında tüseb&#x27;den robotik cerrahi cihazı için çağrıya çıkacağız sağlık bakanı kemal memişoğlu, &quot;en geç 2027&#x27;nin başında tüseb&#x27;den robotik cerrahi cihazı için çağrıya çıkacağız. dünyaya &#x27;gelin beraber üretelim bunu&#x27; diyeceğiz.&quot; dedi. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 31 Ekim 2026, 12:45</span>
+        </div>
+        <h3>Bakan Memişoğlu: En geç 2027&#x27;nin başında TÜSEB&#x27;den robotik cerrahi cihazı için çağrıya çıkacağız</h3>
+        <p>Sağlık Bakanı Kemal Memişoğlu, &quot;En geç 2027&#x27;nin başında TÜSEB&#x27;den robotik cerrahi cihazı için çağrıya çıkacağız. Dünyaya &#x27;Gelin beraber üretelim bunu&#x27; diyeceğiz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 31 Ekim 2026, 12:45</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-memisoglu-en-gec-2027nin-basinda-tusebden-robotik-cerrahi-cihazi-icin-cagriya-cikacagiz/4107204" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;türk dünyası diyalog forumu&quot; kapsamında yapay zekanın sınamaları tartışıldı cumhurbaşkanlığı i̇letişim başkanlığı, &quot;türk dünyası diyalog forumu&quot; kapsamında &quot;türk devletleri i̇letişim perspektifi: yapay zeka sınamaları&quot; konulu yuvarlak masa toplantısı düzenledi. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 31 Ekim 2026, 12:26</span>
+        </div>
+        <h3>&quot;Türk Dünyası Diyalog Forumu&quot; kapsamında yapay zekanın sınamaları tartışıldı</h3>
+        <p>Cumhurbaşkanlığı İletişim Başkanlığı, &quot;Türk Dünyası Diyalog Forumu&quot; kapsamında &quot;Türk Devletleri İletişim Perspektifi: Yapay Zeka Sınamaları&quot; konulu yuvarlak masa toplantısı düzenledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 31 Ekim 2026, 12:26</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-dunyasi-diyalog-forumu-kapsaminda-yapay-zekanin-sinamalari-tartisildi/4107189" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
