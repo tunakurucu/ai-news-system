@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">1 Kasım 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">1 Kasım 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 7</span><span class="stat-item"><strong>teknoloji</strong> 2</span><span class="stat-item"><strong>genel</strong> 18</span><span class="stat-item"><strong>ekonomi</strong> 3</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>ABD, Ukrayna&#x27;ya 500 adet Patriot füzesi satışını onayladı</h3>
+        <p>Amerika Birleşik Devletleri, Rusya&#x27;nın artan hava saldırılarına karşı savunmada kritik rol oynaması beklenen 500 adet Patriot füzesinin Ukrayna&#x27;ya satışını onayladı. Amerikan yapımı füze önleme sistemleri, Rusya&#x27;nın balistik füzelerini düşürmek için kullanılabilecek tek etkili silah.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 31 Ekim 2026, 12:08</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ck87zqz878ydo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">TRT Haber · 1 Kasım 2026, 12:32</span>
+            </div>
+            <h3>Bakan Memişoğlu: Robotik cerrahi cihazı Türkiye&#x27;de üretilecek</h3>
+            <p>Sağlık Bakanı Kemal Memişoğlu, yerli robotik cerrahi cihazı geliştirmeyi hedeflediklerini belirterek, en geç 2027&#x27;nin başında TÜSEB aracılığıyla çağrıya çıkacaklarını ve teknolojiyi yazılımıyla birlikte Türkiye&#x27;de üreteceklerini söyledi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/saglik/bakan-memisoglu-robotik-cerrahi-cihazi-turkiyede-uretilecek-961873.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 1 Kasım 2026, 13:52</span>
+            </div>
+            <h3>AK Parti Genel Başkan Yardımcısı Terzioğlu, partisinin sosyal politikalar alanında öncelikli hedeflerini anlattı</h3>
+            <p>Hülya Terzioğlu, &quot;Aile ve Sosyal Hizmetler Bakanlığımızın çalışmalarına sonuna kadar destek vereceğiz. Onların konuşan dili olmak için gayret edeceğiz. Sahayı da bütün açıklığıyla onlara taşıyacağız. Başarı da herhalde bu uyumda olacaktır.&quot; dedi.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ak-parti-genel-baskan-yardimcisi-terzioglu-partisinin-sosyal-politikalar-alaninda-oncelikli-hedeflerini-anlatti/4107941" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 1 Kasım 2026, 12:37</span>
+            </div>
+            <h3>Bakan Göktaş&#x27;tan sosyal medyada yaş sınırlaması yönetmeliğinin yürürlüğe girmesine ilişkin paylaşım</h3>
+            <p>Aile ve Sosyal Hizmetler Bakanı Göktaş, &quot;Çocukların güvenle var olabildiği bir dijital dünya için kritik bir eşik olan yeni dönemin çocuklarımız, ailelerimiz ve milletimiz için hayırlara vesile olmasını diliyorum.&quot; ifadesini kullandı.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-goktastan-sosyal-medyada-yas-sinirlamasi-yonetmeliginin-yururluge-girmesine-iliskin-paylasim/4107877" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 31 Ekim 2026, 16:44</span>
+            </div>
+            <h3>BM Genel Sekreterliği yarışında Türkiye&#x27;nin hamlesi ne anlama geliyor?</h3>
+            <p>Birleşmiş Milletler Genel Sekreteri Antonio Guterres&#x27;in görev süresi 31 Aralık 2026&#x27;da sona erecek. Yerine kimin seçileceğine dair yarışa Türkiye de katıldı. 31 Ekim&#x27;de adaylık başvurusunu yaptığı açıklayan Türkiye, Avrupa Güvenlik ve İşbirliği Teşkilatı (AGİT) Genel Sekreteri görevini yürüten Feridun Sinirlioğlu&#x27;na güveniyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmy0e2x95l48o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">7 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="abd, ukrayna&#x27;ya 500 adet patriot füzesi satışını onayladı amerika birleşik devletleri, rusya&#x27;nın artan hava saldırılarına karşı savunmada kritik rol oynaması beklenen 500 adet patriot füzesinin ukrayna&#x27;ya satışını onayladı. amerikan yapımı füze önleme sistemleri, rusya&#x27;nın balistik füzelerini düşürmek için kullanılabilecek tek etkili silah. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 31 Ekim 2026, 12:08</span>
+        </div>
+        <h3>ABD, Ukrayna&#x27;ya 500 adet Patriot füzesi satışını onayladı</h3>
+        <p>Amerika Birleşik Devletleri, Rusya&#x27;nın artan hava saldırılarına karşı savunmada kritik rol oynaması beklenen 500 adet Patriot füzesinin Ukrayna&#x27;ya satışını onayladı. Amerikan yapımı füze önleme sistemleri, Rusya&#x27;nın balistik füzelerini düşürmek için kullanılabilecek tek etkili silah.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 31 Ekim 2026, 12:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck87zqz878ydo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ak parti genel başkan yardımcısı terzioğlu, partisinin sosyal politikalar alanında öncelikli hedeflerini anlattı hülya terzioğlu, &quot;aile ve sosyal hizmetler bakanlığımızın çalışmalarına sonuna kadar destek vereceğiz. onların konuşan dili olmak için gayret edeceğiz. sahayı da bütün açıklığıyla onlara taşıyacağız. başarı da herhalde bu uyumda olacaktır.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Kasım 2026, 13:52</span>
+        </div>
+        <h3>AK Parti Genel Başkan Yardımcısı Terzioğlu, partisinin sosyal politikalar alanında öncelikli hedeflerini anlattı</h3>
+        <p>Hülya Terzioğlu, &quot;Aile ve Sosyal Hizmetler Bakanlığımızın çalışmalarına sonuna kadar destek vereceğiz. Onların konuşan dili olmak için gayret edeceğiz. Sahayı da bütün açıklığıyla onlara taşıyacağız. Başarı da herhalde bu uyumda olacaktır.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Kasım 2026, 13:52</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ak-parti-genel-baskan-yardimcisi-terzioglu-partisinin-sosyal-politikalar-alaninda-oncelikli-hedeflerini-anlatti/4107941" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan göktaş&#x27;tan sosyal medyada yaş sınırlaması yönetmeliğinin yürürlüğe girmesine ilişkin paylaşım aile ve sosyal hizmetler bakanı göktaş, &quot;çocukların güvenle var olabildiği bir dijital dünya için kritik bir eşik olan yeni dönemin çocuklarımız, ailelerimiz ve milletimiz için hayırlara vesile olmasını diliyorum.&quot; ifadesini kullandı. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Kasım 2026, 12:37</span>
+        </div>
+        <h3>Bakan Göktaş&#x27;tan sosyal medyada yaş sınırlaması yönetmeliğinin yürürlüğe girmesine ilişkin paylaşım</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanı Göktaş, &quot;Çocukların güvenle var olabildiği bir dijital dünya için kritik bir eşik olan yeni dönemin çocuklarımız, ailelerimiz ve milletimiz için hayırlara vesile olmasını diliyorum.&quot; ifadesini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Kasım 2026, 12:37</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-goktastan-sosyal-medyada-yas-sinirlamasi-yonetmeliginin-yururluge-girmesine-iliskin-paylasim/4107877" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bm genel sekreterliği yarışında türkiye&#x27;nin hamlesi ne anlama geliyor? birleşmiş milletler genel sekreteri antonio guterres&#x27;in görev süresi 31 aralık 2026&#x27;da sona erecek. yerine kimin seçileceğine dair yarışa türkiye de katıldı. 31 ekim&#x27;de adaylık başvurusunu yaptığı açıklayan türkiye, avrupa güvenlik ve i̇şbirliği teşkilatı (agi̇t) genel sekreteri görevini yürüten feridun sinirlioğlu&#x27;na güveniyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 31 Ekim 2026, 16:44</span>
+        </div>
+        <h3>BM Genel Sekreterliği yarışında Türkiye&#x27;nin hamlesi ne anlama geliyor?</h3>
+        <p>Birleşmiş Milletler Genel Sekreteri Antonio Guterres&#x27;in görev süresi 31 Aralık 2026&#x27;da sona erecek. Yerine kimin seçileceğine dair yarışa Türkiye de katıldı. 31 Ekim&#x27;de adaylık başvurusunu yaptığı açıklayan Türkiye, Avrupa Güvenlik ve İşbirliği Teşkilatı (AGİT) Genel Sekreteri görevini yürüten Feridun Sinirlioğlu&#x27;na güveniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 31 Ekim 2026, 16:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmy0e2x95l48o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="antalya ile alanya arasında kara yoluyla ulaşım 36 dakikaya düşecek ulaştırma ve altyapı bakanı abdulkadir uraloğlu, antalya-alanya otoyolu&#x27;nun tamamlanmasıyla mevcut güzergahta 2,5 saat süren kara yoluyla seyahatin 36 dakikaya düşeceğini ve yıllık 23,9 milyar lira tasarruf sağlanacağını bildirdi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Kasım 2026, 13:47</span>
+        </div>
+        <h3>Antalya ile Alanya arasında kara yoluyla ulaşım 36 dakikaya düşecek</h3>
+        <p>Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Antalya-Alanya Otoyolu&#x27;nun tamamlanmasıyla mevcut güzergahta 2,5 saat süren kara yoluyla seyahatin 36 dakikaya düşeceğini ve yıllık 23,9 milyar lira tasarruf sağlanacağını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Kasım 2026, 13:47</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/antalya-ile-alanya-arasinda-kara-yoluyla-ulasim-36-dakikaya-dusecek/4107940" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇talya&#x27;nın ankara büyükelçisi manzo, ülkesi ve türkiye&#x27;nin bölgede istikrar için aynı tarafta olduğunu söyledi i̇talya&#x27;nın ankara büyükelçisi giuseppe manzo, türkiye ile i̇talya arasındaki ikili ilişkileri &quot;mükemmel&quot; olarak nitelendirerek, iki ülke arasındaki bu özel bağın çok taraflı platformlara da taşınması ve yansıtılması gerektiğini söyledi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Kasım 2026, 12:26</span>
+        </div>
+        <h3>İtalya&#x27;nın Ankara Büyükelçisi Manzo, ülkesi ve Türkiye&#x27;nin bölgede istikrar için aynı tarafta olduğunu söyledi</h3>
+        <p>İtalya&#x27;nın Ankara Büyükelçisi Giuseppe Manzo, Türkiye ile İtalya arasındaki ikili ilişkileri &quot;mükemmel&quot; olarak nitelendirerek, iki ülke arasındaki bu özel bağın çok taraflı platformlara da taşınması ve yansıtılması gerektiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Kasım 2026, 12:26</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/italyanin-ankara-buyukelcisi-manzo-ulkesi-ve-turkiyenin-bolgede-istikrar-icin-ayni-tarafta-oldugunu-soyledi/4107870" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="avrupa&#x27;da gençler sokakta: onları birleştiren ne? geçtiğimiz ay boyunca avrupa genelinde gençler öncülüğünde gösteriler yapıldı. peki, bu eylemleri birbirine bağlayan ne? bbc avrupa editörü katya adler yazdı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 1 Kasım 2026, 11:02</span>
+        </div>
+        <h3>Avrupa&#x27;da gençler sokakta: Onları birleştiren ne?</h3>
+        <p>Geçtiğimiz ay boyunca Avrupa genelinde gençler öncülüğünde gösteriler yapıldı. Peki, bu eylemleri birbirine bağlayan ne? BBC Avrupa Editörü Katya Adler yazdı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Kasım 2026, 11:02</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmlydeprkeryo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan memişoğlu: robotik cerrahi cihazı türkiye&#x27;de üretilecek sağlık bakanı kemal memişoğlu, yerli robotik cerrahi cihazı geliştirmeyi hedeflediklerini belirterek, en geç 2027&#x27;nin başında tüseb aracılığıyla çağrıya çıkacaklarını ve teknolojiyi yazılımıyla birlikte türkiye&#x27;de üreteceklerini söyledi. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 1 Kasım 2026, 12:32</span>
+        </div>
+        <h3>Bakan Memişoğlu: Robotik cerrahi cihazı Türkiye&#x27;de üretilecek</h3>
+        <p>Sağlık Bakanı Kemal Memişoğlu, yerli robotik cerrahi cihazı geliştirmeyi hedeflediklerini belirterek, en geç 2027&#x27;nin başında TÜSEB aracılığıyla çağrıya çıkacaklarını ve teknolojiyi yazılımıyla birlikte Türkiye&#x27;de üreteceklerini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Kasım 2026, 12:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/saglik/bakan-memisoglu-robotik-cerrahi-cihazi-turkiyede-uretilecek-961873.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="siber tehditlere karşı türksat sorgu kalkanı türksat&#x27;ın yeni nesil bilgi güvenliği yönetim platformu sorgu ile kamu ve özel sektördeki bilgi güvenliği süreçlerinin dijitalleştirilmesi, siber risklerin önceden tespit edilmesi sağlanacak. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 1 Kasım 2026, 11:59</span>
+        </div>
+        <h3>Siber tehditlere karşı TÜRKSAT SORGU kalkanı</h3>
+        <p>TÜRKSAT&#x27;ın yeni nesil bilgi güvenliği yönetim platformu SORGU ile kamu ve özel sektördeki bilgi güvenliği süreçlerinin dijitalleştirilmesi, siber risklerin önceden tespit edilmesi sağlanacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Kasım 2026, 11:59</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/siber-tehditlere-karsi-turksat-sorgu-kalkani-961869.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">18 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="öğrencilerin beceri düzeyleri okul tabanlı izlemeyle belirlenecek milli eğitim bakanlığı (meb), türkiye yüzyılı maarif modeli kapsamında ortaokul ve liselerde türkçe, matematik ve fen bilimleri alanlarında çoktan seçmeli ve açık uçlu soruların yer aldığı &quot;okul tabanlı izleme&quot; uygulamasıyla öğrencilerin öğrenme çıktılarını ve beceri düzeylerini belirleyecek. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 1 Kasım 2026, 12:15</span>
+        </div>
+        <h3>Öğrencilerin beceri düzeyleri okul tabanlı izlemeyle belirlenecek</h3>
+        <p>Milli Eğitim Bakanlığı (MEB), Türkiye Yüzyılı Maarif Modeli kapsamında ortaokul ve liselerde Türkçe, matematik ve fen bilimleri alanlarında çoktan seçmeli ve açık uçlu soruların yer aldığı &quot;okul tabanlı izleme&quot; uygulamasıyla öğrencilerin öğrenme çıktılarını ve beceri düzeylerini belirleyecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Kasım 2026, 12:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/ogrencilerin-beceri-duzeyleri-okul-tabanli-izlemeyle-belirlenecek-961872.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kktc başbakanı üstel, gkry&#x27;nin doğu akdeniz&#x27;de uzatılan işbirliği elini tutması gerektiğini vurguladı kktc başbakanı ünal üstel, güney kıbrıs rum yönetimi&#x27;nin (gkry) sürekli şikayet mektupları yazarak uluslararası platformlarda &quot;sızlanmak&quot; yerine, kıbrıs türk tarafının doğu akdeniz’de uzattığı işbirliği elini tutması gerektiğini vurguladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Kasım 2026, 13:11</span>
+        </div>
+        <h3>KKTC Başbakanı Üstel, GKRY&#x27;nin Doğu Akdeniz&#x27;de uzatılan işbirliği elini tutması gerektiğini vurguladı</h3>
+        <p>KKTC Başbakanı Ünal Üstel, Güney Kıbrıs Rum Yönetimi&#x27;nin (GKRY) sürekli şikayet mektupları yazarak uluslararası platformlarda &quot;sızlanmak&quot; yerine, Kıbrıs Türk tarafının Doğu Akdeniz’de uzattığı işbirliği elini tutması gerektiğini vurguladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Kasım 2026, 13:11</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kktc-basbakani-ustel-gkrynin-dogu-akdenizde-uzatilan-isbirligi-elini-tutmasi-gerektigini-vurguladi/4107911" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="suriye&#x27;de geçim krizi: &#x27;nüfusun önemli kısmı esad dönemine kıyasla daha kötü durumda&#x27; suriye&#x27;de yakıt fiyatlarındaki artış ve geçim krizi nedeniyle artan hoşnutsuzluk, ahmed şara yönetiminin önündeki en büyük sorun olarak görülüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 31 Ekim 2026, 11:40</span>
+        </div>
+        <h3>Suriye&#x27;de geçim krizi: &#x27;Nüfusun önemli kısmı Esad dönemine kıyasla daha kötü durumda&#x27;</h3>
+        <p>Suriye&#x27;de yakıt fiyatlarındaki artış ve geçim krizi nedeniyle artan hoşnutsuzluk, Ahmed Şara yönetiminin önündeki en büyük sorun olarak görülüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 31 Ekim 2026, 11:40</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwy8l23nylm0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, güney kore&#x27;yi ziyaret edecek cumhurbaşkanı recep tayyip erdoğan, kore cumhuriyeti cumhurbaşkanı lee jae myung’un davetine icabetle, 1-4 kasım tarihlerinde seul’u ziyaret edecek. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 1 Kasım 2026, 13:54</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, Güney Kore&#x27;yi ziyaret edecek</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Kore Cumhuriyeti Cumhurbaşkanı Lee Jae Myung’un davetine icabetle, 1-4 Kasım tarihlerinde Seul’u ziyaret edecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Kasım 2026, 13:54</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-guney-koreyi-ziyaret-edecek-961876.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dalyan&#x27;ın güzellikleri sıcak hava balonuyla izlenebilecek doğal güzellikleri, tarihi yapıları ve caretta caretta deniz kaplumbağalarıyla tanınan muğla&#x27;nın ortaca ilçesindeki dalyan mahallesi&#x27;nde bölgenin turizm potansiyeline katkı sağlaması amacıyla &quot;yere bağlı sıcak hava balonu uygulaması&quot; başlatıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Kasım 2026, 13:07</span>
+        </div>
+        <h3>Dalyan&#x27;ın güzellikleri sıcak hava balonuyla izlenebilecek</h3>
+        <p>Doğal güzellikleri, tarihi yapıları ve caretta caretta deniz kaplumbağalarıyla tanınan Muğla&#x27;nın Ortaca ilçesindeki Dalyan Mahallesi&#x27;nde bölgenin turizm potansiyeline katkı sağlaması amacıyla &quot;yere bağlı sıcak hava balonu uygulaması&quot; başlatıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Kasım 2026, 13:07</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/dalyanin-guzellikleri-sicak-hava-balonuyla-izlenebilecek/4107906" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mhp genel başkanı bahçeli&#x27;den 19 yeni il ve 78 yeni ilçe kurulması önerisi bahçeli, milliyetçi hareket partisi&#x27;nin hazırladığı projeyle 19 yeni il ve 78 yeni ilçe kurulmasının öngörüldüğünü belirterek, objektif kriterler doğrultusunda belirlenen ilçelerin il statüsüne çıkarılmasının hedeflendiğini söyledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Kasım 2026, 11:54</span>
+        </div>
+        <h3>MHP Genel Başkanı Bahçeli&#x27;den 19 yeni il ve 78 yeni ilçe kurulması önerisi</h3>
+        <p>Bahçeli, Milliyetçi Hareket Partisi&#x27;nin hazırladığı projeyle 19 yeni il ve 78 yeni ilçe kurulmasının öngörüldüğünü belirterek, objektif kriterler doğrultusunda belirlenen ilçelerin il statüsüne çıkarılmasının hedeflendiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Kasım 2026, 11:54</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mhp-genel-baskani-bahceliden-19-yeni-il-ve-78-yeni-ilce-kurulmasi-onerisi/4107846" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="almanya&#x27;da hayat pahalılığına karşı protestolarda bazı dükkanlar yağmalandı cumartesi günü berlin, hamburg ve frankfurt dahil olmak üzere almanya&#x27;nın çeşitli şehirlerindeki protestolara, fransa&#x27;da da aynı gün yüz binlerce kişinin katıldığı gösteriler eşlik etti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Kasım 2026, 12:49</span>
+        </div>
+        <h3>Almanya&#x27;da hayat pahalılığına karşı protestolarda bazı dükkanlar yağmalandı</h3>
+        <p>Cumartesi günü Berlin, Hamburg ve Frankfurt dahil olmak üzere Almanya&#x27;nın çeşitli şehirlerindeki protestolara, Fransa&#x27;da da aynı gün yüz binlerce kişinin katıldığı gösteriler eşlik etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Kasım 2026, 12:49</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cxp8grj2gqpgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çocuklara yönelik sosyal medya yasağı yürürlüğe girdi türkiye&#x27;de sosyal medya platformlarında yaş sınırlamayı öngören ve yaş doğrulama zorunluluğu getiren yönetmelik yürürlüğe girdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Kasım 2026, 14:10</span>
+        </div>
+        <h3>Çocuklara yönelik sosyal medya yasağı yürürlüğe girdi</h3>
+        <p>Türkiye&#x27;de sosyal medya platformlarında yaş sınırlamayı öngören ve yaş doğrulama zorunluluğu getiren yönetmelik yürürlüğe girdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Kasım 2026, 14:10</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cjy56vqv4l5do?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="keten tohumu gerçekten sağlığa faydalı mı, bilim ne diyor? keten tohumu genellikle besin açısından çok zengin bir kaynak olarak tanıtılıyor ama gerçekten sağlığınızı iyileştirebilir mi? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Kasım 2026, 11:21</span>
+        </div>
+        <h3>Keten tohumu gerçekten sağlığa faydalı mı, bilim ne diyor?</h3>
+        <p>Keten tohumu genellikle besin açısından çok zengin bir kaynak olarak tanıtılıyor ama gerçekten sağlığınızı iyileştirebilir mi?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Kasım 2026, 11:21</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq1m4krm3e29o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çok çaba harcamadan da egzersiz yapabilirsiniz günlük küçük aktiviteler, kalp damar hastalıkları ve hatta ölüm riskimizi azaltabilir. bunu bir toplantıda, uçakta veya bu makaleyi okurken, basit şekillerde deneyebilirsiniz. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 1 Kasım 2026, 12:03</span>
+        </div>
+        <h3>Çok çaba harcamadan da egzersiz yapabilirsiniz</h3>
+        <p>Günlük küçük aktiviteler, kalp damar hastalıkları ve hatta ölüm riskimizi azaltabilir. Bunu bir toplantıda, uçakta veya bu makaleyi okurken, basit şekillerde deneyebilirsiniz.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Kasım 2026, 12:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c680zmv2p9ggo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="28 yıldır yürüyen karl bushby, 58 bin km yol kat ettikten sonra evine döndü dünyayı yürüyerek dolaşan karl bushby, 28 yıl sonra yolculuğunun sonuna neredeyse yaklaştı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 31 Ekim 2026, 19:05</span>
+        </div>
+        <h3>28 yıldır yürüyen Karl Bushby, 58 bin km yol kat ettikten sonra evine döndü</h3>
+        <p>Dünyayı yürüyerek dolaşan Karl Bushby, 28 yıl sonra yolculuğunun sonuna neredeyse yaklaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 31 Ekim 2026, 19:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckm23dng4rlqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="antalyaalanya otoyolu ile 2,5 saatlik yol 36 dakikaya düşecek antalya-alanya otoyolu&#x27;nun tamamlanmasıyla mevcut güzergahta 2,5 saat süren kara yoluyla seyahat 36 dakikaya düşecek ve yıllık 23,9 milyar lira tasarruf sağlanacak. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 1 Kasım 2026, 14:03</span>
+        </div>
+        <h3>AntalyaAlanya Otoyolu ile 2,5 saatlik yol 36 dakikaya düşecek</h3>
+        <p>Antalya-Alanya Otoyolu&#x27;nun tamamlanmasıyla mevcut güzergahta 2,5 saat süren kara yoluyla seyahat 36 dakikaya düşecek ve yıllık 23,9 milyar lira tasarruf sağlanacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Kasım 2026, 14:03</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/antalya-alanya-otoyolu-ile-25-saatlik-yol-36-dakikaya-dusecek-961877.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="burdur&#x27;da iki otomobil çarpıştı: 2 ölü, 4 yaralı burdur&#x27;un çavdır ilçesinde iki otomobilin çarpışması sonucu 2 kişi öldü, 4 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 1 Kasım 2026, 13:17</span>
+        </div>
+        <h3>Burdur&#x27;da iki otomobil çarpıştı: 2 ölü, 4 yaralı</h3>
+        <p>Burdur&#x27;un Çavdır ilçesinde iki otomobilin çarpışması sonucu 2 kişi öldü, 4 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Kasım 2026, 13:17</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/burdurda-iki-otomobil-carpisti-2-olu-4-yarali-961875.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk dünyası diyalog forumu tamamlandı türkiye&#x27;nin ev sahipliği yaptığı türk devletleri teşkilatı (tdt) 13. zirvesi marjında, başkanlık tarafından 30-31 ekim tarihlerinde &quot;türk dünyası diyalog forumu&quot; ankara&#x27;da gerçekleştirildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 1 Kasım 2026, 13:01</span>
+        </div>
+        <h3>Türk Dünyası Diyalog Forumu tamamlandı</h3>
+        <p>Türkiye&#x27;nin ev sahipliği yaptığı Türk Devletleri Teşkilatı (TDT) 13. Zirvesi marjında, başkanlık tarafından 30-31 Ekim tarihlerinde &quot;Türk Dünyası Diyalog Forumu&quot; Ankara&#x27;da gerçekleştirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Kasım 2026, 13:01</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turk-dunyasi/turk-dunyasi-diyalog-forumu-tamamlandi-961874.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇sviçre&#x27;nin zürih ve basel şehirlerindeki gösterilerde olaylar çıktı i̇sviçre&#x27;nin zürih ve basel şehirlerinde protestolarda olaylar çıkarken barikatlar kurup bunları ateşe veren göstericiler polisle çatıştı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 1 Kasım 2026, 12:15</span>
+        </div>
+        <h3>İsviçre&#x27;nin Zürih ve Basel şehirlerindeki gösterilerde olaylar çıktı</h3>
+        <p>İsviçre&#x27;nin Zürih ve Basel şehirlerinde protestolarda olaylar çıkarken barikatlar kurup bunları ateşe veren göstericiler polisle çatıştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Kasım 2026, 12:15</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/isvicrenin-zurih-ve-basel-sehirlerindeki-gosterilerde-olaylar-cikti-961871.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeni haftada yurt genelinde sağanak etkili olacak yurt genelinde yeni haftada sağanak ve yer yer gök gürültülü sağanak etkili olacak, hava sıcaklıkları ise perşembe gününden itibaren batı kesimlerden başlayarak hissedilir derecede azalacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Kasım 2026, 13:56</span>
+        </div>
+        <h3>Yeni haftada yurt genelinde sağanak etkili olacak</h3>
+        <p>Yurt genelinde yeni haftada sağanak ve yer yer gök gürültülü sağanak etkili olacak, hava sıcaklıkları ise perşembe gününden itibaren batı kesimlerden başlayarak hissedilir derecede azalacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Kasım 2026, 13:56</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yeni-haftada-yurt-genelinde-saganak-etkili-olacak/4107944" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="gümüşhane&#x27;deki örümcek ormanları sonbaharın renklerine büründü gümüşhane&#x27;nin kürtün ilçesindeki örümcek ormanları, sonbaharın tüm renklerini barındırıyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Kasım 2026, 12:09</span>
+        </div>
+        <h3>Gümüşhane&#x27;deki Örümcek Ormanları sonbaharın renklerine büründü</h3>
+        <p>Gümüşhane&#x27;nin Kürtün ilçesindeki Örümcek Ormanları, sonbaharın tüm renklerini barındırıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Kasım 2026, 12:09</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/gumushanedeki-orumcek-ormanlari-sonbaharin-renklerine-burundu/4107857" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ağrı dağı milli parkı, nadir görülen gri başlı saz horozlarına ev sahipliği yapıyor genellikle güney asya&#x27;da yaşayan gri başlı saz horozuna (porphyrio poliocephalus), ağrı dağı eteklerindeki karasu sulak alanı ev sahipliği yapıyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 1 Kasım 2026, 11:50</span>
+        </div>
+        <h3>Ağrı Dağı Milli Parkı, nadir görülen gri başlı saz horozlarına ev sahipliği yapıyor</h3>
+        <p>Genellikle Güney Asya&#x27;da yaşayan gri başlı saz horozuna (porphyrio poliocephalus), Ağrı Dağı eteklerindeki Karasu Sulak Alanı ev sahipliği yapıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 1 Kasım 2026, 11:50</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/agri-dagi-milli-parki-nadir-gorulen-gri-basli-saz-horozlarina-ev-sahipligi-yapiyor/4107845" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="borsa i̇stanbul genel müdürü korkmaz enes ergun gözaltına alındı borsa i̇stanbul genel müdürü korkmaz enes ergun, fon soruşturmaları kapsamında gözaltına alındı. i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturmada ergun&#x27;a, &quot;suç işlemek amacıyla kurulan örgüte üye olma&quot; ve rüşvet&quot; suçlamaları yöneltiliyor. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 1 Kasım 2026, 13:42</span>
+        </div>
+        <h3>Borsa İstanbul Genel Müdürü Korkmaz Enes Ergun gözaltına alındı</h3>
+        <p>Borsa İstanbul Genel Müdürü Korkmaz Enes Ergun, fon soruşturmaları kapsamında gözaltına alındı. İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturmada Ergun&#x27;a, &quot;suç işlemek amacıyla kurulan örgüte üye olma&quot; ve rüşvet&quot; suçlamaları yöneltiliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 1 Kasım 2026, 13:42</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqz0vjm7rjedo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kobi̇&#x27;lere 50 milyar liralık yeni nefes kredisi imkanı türkiye odalar ve borsalar birliği (tobb), kredi garanti fonu (kgf) ve bankaların iş birliğiyle yürütülen nefes kredisi&#x27;nde yeni dönem başvuruları 3 kasım&#x27;da başlayacak. yeni dilim kapsamında kobi̇&#x27;lere 50 milyar lira finansman sağlanırken, firma başına kredi limiti 5 milyon liraya yükseltildi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 1 Kasım 2026, 14:22</span>
+        </div>
+        <h3>KOBİ&#x27;lere 50 milyar liralık yeni Nefes Kredisi imkanı</h3>
+        <p>Türkiye Odalar ve Borsalar Birliği (TOBB), Kredi Garanti Fonu (KGF) ve bankaların iş birliğiyle yürütülen Nefes Kredisi&#x27;nde yeni dönem başvuruları 3 Kasım&#x27;da başlayacak. Yeni dilim kapsamında KOBİ&#x27;lere 50 milyar lira finansman sağlanırken, firma başına kredi limiti 5 milyon liraya yükseltildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Kasım 2026, 14:22</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/kobilere-50-milyar-liralik-yeni-nefes-kredisi-imkani-961878.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="spkda yeni dönem: denetim tecrübesi ve piyasa birikimi aynı masada sermaye piyasası kurulunun (spk) yeni yönetimi vergi denetimi, mali suçlarla mücadele ve uluslararası kalkınma finansmanı deneyimini bir araya getirirken, yeni spk başkanı muhsin atcı, başkan vekili ersin başar ekmekci ve kurul üyesi yasemin girici&#x27;nin ortak noktası 20 yılı aşkın tecrübe ve üst düzey yönetim geçmişi olarak dikkati çekiyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 1 Kasım 2026, 12:04</span>
+        </div>
+        <h3>SPKda yeni dönem: Denetim tecrübesi ve piyasa birikimi aynı masada</h3>
+        <p>Sermaye Piyasası Kurulunun (SPK) yeni yönetimi vergi denetimi, mali suçlarla mücadele ve uluslararası kalkınma finansmanı deneyimini bir araya getirirken, yeni SPK Başkanı Muhsin Atcı, Başkan Vekili Ersin Başar Ekmekci ve Kurul Üyesi Yasemin Girici&#x27;nin ortak noktası 20 yılı aşkın tecrübe ve üst düzey yönetim geçmişi olarak dikkati çekiyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 1 Kasım 2026, 12:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/spkda-yeni-donem-denetim-tecrubesi-ve-piyasa-birikimi-ayni-masada-961870.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
