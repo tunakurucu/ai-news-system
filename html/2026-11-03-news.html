@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">3 Kasım 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">3 Kasım 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 8</span><span class="stat-item"><strong>ekonomi</strong> 5</span><span class="stat-item"><strong>genel</strong> 15</span><span class="stat-item"><strong>spor</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Bakan Gürlek: Fon soruşturmasında kapsamlı bir suç yapısı tespit edildi</h3>
+        <p>Adalet Bakanı Akın Gürlek, &quot;Fon soruşturmasında kapsamlı bir suç yapısı tespit edildi. Bu örgütsel yapının içindeki isimler arasında hiyerarşik ve sistemli bir iş birliğinin delillerine ulaştık&quot; dedi.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 3 Kasım 2026, 11:33</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmzxjn4205xqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 3 Kasım 2026, 14:30</span>
+            </div>
+            <h3>Cumhurbaşkanı Erdoğan: Güney Kore ile ortak geçmişimizi müreffeh bir gelecek için yeni ufuklara taşımak istiyoruz</h3>
+            <p>Cumhurbaşkanı Erdoğan, Güney Kore&#x27;de onuruna verilen akşam yemeğindeki konuşmasında, &quot;Ortak geçmişimizi, vatandaşlarımızın müreffeh geleceğine ve dünyada barışın tesisine katkı verebileceğimiz yeni ufuklara taşımak istiyoruz.&quot; dedi.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-guney-kore-ile-ortak-gecmisimizi-mureffeh-bir-gelecek-icin-yeni-ufuklara-tasimak-istiyoruz/4109919" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 3 Kasım 2026, 12:58</span>
+            </div>
+            <h3>Sağlık Bakanı Memişoğlu: İnsanımız raporlu ilacını yazdırmak için hastaneye gitmek zorunda kalmayacak</h3>
+            <p>Bakan Memişoğlu, ilaç raporu bulunan vatandaşların rapor süresince yeniden reçete yazdırmadan ilaçlarını doğrudan alabileceğini belirterek, &quot;Böylece insanımız raporlu ilacını yazdırmak için hastaneye gitmek zorunda kalmayacak.&quot; dedi.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/saglik-bakani-memisoglu-insanimiz-raporlu-ilacini-yazdirmak-icin-hastaneye-gitmek-zorunda-kalmayacak/4109744" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 3 Kasım 2026, 13:52</span>
+            </div>
+            <h3>ABD ara seçimleri: Kim, nasıl kazanabilir ya da kaybedebilir?</h3>
+            <p>ABD&#x27;de seçmenler, Donald Trump&#x27;ın ikinci başkanlık döneminde kalan iki yıllık sürenin nasıl şekilleneceğine karar vermek için bugün sandık başına gitti. Kongre&#x27;nin iki kanadı da şu anda Başkan Trump&#x27;ın mensubu olduğu Cumhuriyetçi Parti&#x27;nin kontrolünde. Trump&#x27;ın görevinde geri kalan süredeki başarısı veya başarısızlığı, bu seçimlerin sonucuna bağlı olabilir.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cj5ynrx0dgego?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 3 Kasım 2026, 14:15</span>
+            </div>
+            <h3>ABD ara seçimleri Ankara-Washington ilişkilerini nasıl etkileyebilir?</h3>
+            <p>Bugünkü ara seçimler, ABD&#x27;nin iç politikasının yanı sıra dış politikasında da önemli değişimlere yol açabilir. Cumhuriyetçilerin, Senato ve Temsilciler Meclisi&#x27;nde çoğunluğu kaybetmesi, Türkiye&#x27;nin savunma sanayi yaptırımlarının kaldırılması ve F-35 savaş uçağı programına geri dönüş çabalarını zorlaştırabilir.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ckqxn781l88po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">8 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan gürlek: fon soruşturmasında kapsamlı bir suç yapısı tespit edildi adalet bakanı akın gürlek, &quot;fon soruşturmasında kapsamlı bir suç yapısı tespit edildi. bu örgütsel yapının içindeki isimler arasında hiyerarşik ve sistemli bir iş birliğinin delillerine ulaştık&quot; dedi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 11:33</span>
+        </div>
+        <h3>Bakan Gürlek: Fon soruşturmasında kapsamlı bir suç yapısı tespit edildi</h3>
+        <p>Adalet Bakanı Akın Gürlek, &quot;Fon soruşturmasında kapsamlı bir suç yapısı tespit edildi. Bu örgütsel yapının içindeki isimler arasında hiyerarşik ve sistemli bir iş birliğinin delillerine ulaştık&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 11:33</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmzxjn4205xqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan: güney kore ile ortak geçmişimizi müreffeh bir gelecek için yeni ufuklara taşımak istiyoruz cumhurbaşkanı erdoğan, güney kore&#x27;de onuruna verilen akşam yemeğindeki konuşmasında, &quot;ortak geçmişimizi, vatandaşlarımızın müreffeh geleceğine ve dünyada barışın tesisine katkı verebileceğimiz yeni ufuklara taşımak istiyoruz.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 3 Kasım 2026, 14:30</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan: Güney Kore ile ortak geçmişimizi müreffeh bir gelecek için yeni ufuklara taşımak istiyoruz</h3>
+        <p>Cumhurbaşkanı Erdoğan, Güney Kore&#x27;de onuruna verilen akşam yemeğindeki konuşmasında, &quot;Ortak geçmişimizi, vatandaşlarımızın müreffeh geleceğine ve dünyada barışın tesisine katkı verebileceğimiz yeni ufuklara taşımak istiyoruz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 3 Kasım 2026, 14:30</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-guney-kore-ile-ortak-gecmisimizi-mureffeh-bir-gelecek-icin-yeni-ufuklara-tasimak-istiyoruz/4109919" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sağlık bakanı memişoğlu: i̇nsanımız raporlu ilacını yazdırmak için hastaneye gitmek zorunda kalmayacak bakan memişoğlu, ilaç raporu bulunan vatandaşların rapor süresince yeniden reçete yazdırmadan ilaçlarını doğrudan alabileceğini belirterek, &quot;böylece insanımız raporlu ilacını yazdırmak için hastaneye gitmek zorunda kalmayacak.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 3 Kasım 2026, 12:58</span>
+        </div>
+        <h3>Sağlık Bakanı Memişoğlu: İnsanımız raporlu ilacını yazdırmak için hastaneye gitmek zorunda kalmayacak</h3>
+        <p>Bakan Memişoğlu, ilaç raporu bulunan vatandaşların rapor süresince yeniden reçete yazdırmadan ilaçlarını doğrudan alabileceğini belirterek, &quot;Böylece insanımız raporlu ilacını yazdırmak için hastaneye gitmek zorunda kalmayacak.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 3 Kasım 2026, 12:58</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/saglik-bakani-memisoglu-insanimiz-raporlu-ilacini-yazdirmak-icin-hastaneye-gitmek-zorunda-kalmayacak/4109744" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd ara seçimleri: kim, nasıl kazanabilir ya da kaybedebilir? abd&#x27;de seçmenler, donald trump&#x27;ın ikinci başkanlık döneminde kalan iki yıllık sürenin nasıl şekilleneceğine karar vermek için bugün sandık başına gitti. kongre&#x27;nin iki kanadı da şu anda başkan trump&#x27;ın mensubu olduğu cumhuriyetçi parti&#x27;nin kontrolünde. trump&#x27;ın görevinde geri kalan süredeki başarısı veya başarısızlığı, bu seçimlerin sonucuna bağlı olabilir. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 13:52</span>
+        </div>
+        <h3>ABD ara seçimleri: Kim, nasıl kazanabilir ya da kaybedebilir?</h3>
+        <p>ABD&#x27;de seçmenler, Donald Trump&#x27;ın ikinci başkanlık döneminde kalan iki yıllık sürenin nasıl şekilleneceğine karar vermek için bugün sandık başına gitti. Kongre&#x27;nin iki kanadı da şu anda Başkan Trump&#x27;ın mensubu olduğu Cumhuriyetçi Parti&#x27;nin kontrolünde. Trump&#x27;ın görevinde geri kalan süredeki başarısı veya başarısızlığı, bu seçimlerin sonucuna bağlı olabilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 13:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cj5ynrx0dgego?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="özel kılıçdaroğlu&#x27;nu neden eleştirdi, emir sarıgül&#x27;ün iddialarına ne yanıt verdi? yeni parti genel başkanı özgür özel, chp genel başkanı kemal kılıçdaroğlu&#x27;nu anayasa değişikliği ve dokunulmazlıkların kaldırılmaları konusunda eleştirdi: &quot;nasıl selahattin başkanın [demirtaş] anayasa değişikliğiyle içeriye girmesine sebep olduysa, gerekirse yeni partili kadrolar için de yaparım&#x27; diyor.&quot; dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 14:59</span>
+        </div>
+        <h3>Özel Kılıçdaroğlu&#x27;nu neden eleştirdi, Emir Sarıgül&#x27;ün iddialarına ne yanıt verdi?</h3>
+        <p>Yeni Parti Genel Başkanı Özgür Özel, CHP Genel Başkanı Kemal Kılıçdaroğlu&#x27;nu anayasa değişikliği ve dokunulmazlıkların kaldırılmaları konusunda eleştirdi: &quot;Nasıl Selahattin Başkanın [Demirtaş] anayasa değişikliğiyle içeriye girmesine sebep olduysa, gerekirse Yeni Partili kadrolar için de yaparım&#x27; diyor.&quot;</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 14:59</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqglwjdx3043o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye, ab&#x27;de tescilli coğrafi işaretli ürün sayısını 80&#x27;e çıkaracak türkiye&#x27;nin avrupa birliği (ab) nezdinde tescillenen coğrafi işaretli ürünlerinin artırılması için çalışmalar sürerken, 46 olan sayının 2027&#x27;de 80&#x27;e yükseltilmesi amaçlanıyor. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 3 Kasım 2026, 13:38</span>
+        </div>
+        <h3>Türkiye, AB&#x27;de tescilli coğrafi işaretli ürün sayısını 80&#x27;e çıkaracak</h3>
+        <p>Türkiye&#x27;nin Avrupa Birliği (AB) nezdinde tescillenen coğrafi işaretli ürünlerinin artırılması için çalışmalar sürerken, 46 olan sayının 2027&#x27;de 80&#x27;e yükseltilmesi amaçlanıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Kasım 2026, 13:38</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiye-abde-tescilli-cografi-isaretli-urun-sayisini-80e-cikaracak-962084.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye&#x27;nin en büyük şehir hastanesi, 534 hastaya organ nakli için umut oldu ankara bilkent şehir hastanesi koordinatör başhekimi prof. dr. levent öztürk, 49 kalp, 53 akciğer, 189 karaciğer, 243 böbrek nakli ameliyatının hastanede yapıldığını bildirdi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 3 Kasım 2026, 14:23</span>
+        </div>
+        <h3>Türkiye&#x27;nin en büyük şehir hastanesi, 534 hastaya organ nakli için umut oldu</h3>
+        <p>Ankara Bilkent Şehir Hastanesi Koordinatör Başhekimi Prof. Dr. Levent Öztürk, 49 kalp, 53 akciğer, 189 karaciğer, 243 böbrek nakli ameliyatının hastanede yapıldığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 3 Kasım 2026, 14:23</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turkiyenin-en-buyuk-sehir-hastanesi-534-hastaya-organ-nakli-icin-umut-oldu-/4109896" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;de ara seçimlerde oy kullanma işlemi başladı abd&#x27;de başkan donald trump yönetiminin yasama gücünü ve kongredeki siyasi dengeyi şekillendirecek ara seçimlerde oy verme işlemi başladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 3 Kasım 2026, 14:36</span>
+        </div>
+        <h3>ABD&#x27;de ara seçimlerde oy kullanma işlemi başladı</h3>
+        <p>ABD&#x27;de Başkan Donald Trump yönetiminin yasama gücünü ve Kongredeki siyasi dengeyi şekillendirecek ara seçimlerde oy verme işlemi başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Kasım 2026, 14:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/abdde-ara-secimlerde-oy-kullanma-islemi-basladi-962090.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">5 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="abd ara seçimleri ankara-washington ilişkilerini nasıl etkileyebilir? bugünkü ara seçimler, abd&#x27;nin iç politikasının yanı sıra dış politikasında da önemli değişimlere yol açabilir. cumhuriyetçilerin, senato ve temsilciler meclisi&#x27;nde çoğunluğu kaybetmesi, türkiye&#x27;nin savunma sanayi yaptırımlarının kaldırılması ve f-35 savaş uçağı programına geri dönüş çabalarını zorlaştırabilir. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 14:15</span>
+        </div>
+        <h3>ABD ara seçimleri Ankara-Washington ilişkilerini nasıl etkileyebilir?</h3>
+        <p>Bugünkü ara seçimler, ABD&#x27;nin iç politikasının yanı sıra dış politikasında da önemli değişimlere yol açabilir. Cumhuriyetçilerin, Senato ve Temsilciler Meclisi&#x27;nde çoğunluğu kaybetmesi, Türkiye&#x27;nin savunma sanayi yaptırımlarının kaldırılması ve F-35 savaş uçağı programına geri dönüş çabalarını zorlaştırabilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 14:15</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ckqxn781l88po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ekim ayı enflasyonu tüi̇k&#x27;e göre yüzde 29,77; enag&#x27;a göre 45,12 enflasyon, tüi̇k verilerine göre ekimde aylık bazda yüzde 2,58, yıllık bazda yüzde 29,77 oldu. akademisyenlerden oluşan bağımsız enflasyon araştırma grubu&#x27;na (enag) göre ise ekimde aylık bazda enflasyon %2,68, yıllık bazda ise %45,12 olarak gerçekleşti. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 10:49</span>
+        </div>
+        <h3>Ekim ayı enflasyonu TÜİK&#x27;e göre yüzde 29,77; ENAG&#x27;a göre 45,12</h3>
+        <p>Enflasyon, TÜİK verilerine göre ekimde aylık bazda yüzde 2,58, yıllık bazda yüzde 29,77 oldu. Akademisyenlerden oluşan bağımsız Enflasyon Araştırma Grubu&#x27;na (ENAG) göre ise ekimde aylık bazda enflasyon %2,68, yıllık bazda ise %45,12 olarak gerçekleşti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 10:49</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cked3j59ld35o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeni nesil aselsan deniz savunma sistemleri euronaval&#x27;da boy gösteriyor aselsan, euronaval 2026&#x27;da yeni nesil deniz savunma sistemlerini uluslararası ziyaretçilerle buluşturuyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 3 Kasım 2026, 14:13</span>
+        </div>
+        <h3>Yeni nesil ASELSAN deniz savunma sistemleri EURONAVAL&#x27;da boy gösteriyor</h3>
+        <p>ASELSAN, EURONAVAL 2026&#x27;da yeni nesil deniz savunma sistemlerini uluslararası ziyaretçilerle buluşturuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Kasım 2026, 14:13</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/savunma/yeni-nesil-aselsan-deniz-savunma-sistemleri-euronavalda-boy-gosteriyor-962088.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiye dış ticarette rekabetini yeni sta&#x27;larla artırılacak türkiye&#x27;nin dış ticarette pazar çeşitliliğini artırma hedefleri doğrultusunda gelecek yıl suriye ile serbest ticaret anlaşmasının (sta) yeniden aktif edilmesi ve çok sayıda ülkeyle ticaret anlaşması müzakerelerinin yürütülmesi hedefleniyor. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 3 Kasım 2026, 13:24</span>
+        </div>
+        <h3>Türkiye dış ticarette rekabetini yeni STA&#x27;larla artırılacak</h3>
+        <p>Türkiye&#x27;nin dış ticarette pazar çeşitliliğini artırma hedefleri doğrultusunda gelecek yıl Suriye ile serbest ticaret anlaşmasının (STA) yeniden aktif edilmesi ve çok sayıda ülkeyle ticaret anlaşması müzakerelerinin yürütülmesi hedefleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Kasım 2026, 13:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/turkiye-dis-ticarette-rekabetini-yeni-stalarla-artirilacak-962083.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="eski borsa i̇stanbul genel müdürü korkmaz enes ergun tutuklandı i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturmada 31 ekim&#x27;de gözaltına alınan eski borsa i̇stanbul genel müdürü korkmaz enes ergun, &quot;rüşvet almak&quot; suçundan tutuklandı. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 09:35</span>
+        </div>
+        <h3>Eski Borsa İstanbul Genel Müdürü Korkmaz Enes Ergun tutuklandı</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturmada 31 Ekim&#x27;de gözaltına alınan eski Borsa İstanbul Genel Müdürü Korkmaz Enes Ergun, &quot;rüşvet almak&quot; suçundan tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 09:35</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqz0vjm7rjedo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">15 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cumhurbaşkanı erdoğan: 24 yıl önce bugün bir anadolu ihtilaline imza attık cumhurbaşkanı recep tayyip erdoğan, &quot;24 yıl önce bugün bir anadolu ihtilaline imza attık, milletimizin teveccühüne ilk kez mazhar olduğumuz 3 kasım 2002 seçimleriyle büyük ve güçlü türkiye’nin kapılarını araladık. allah’ın izniyle aşığı olduğumuz bu millete, sevdalısı olduğumuz bu ülkeye hizmet etmeye devam edeceğiz&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 3 Kasım 2026, 14:38</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan: 24 yıl önce bugün bir Anadolu ihtilaline imza attık</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, &quot;24 yıl önce bugün bir Anadolu ihtilaline imza attık, milletimizin teveccühüne ilk kez mazhar olduğumuz 3 Kasım 2002 seçimleriyle büyük ve güçlü Türkiye’nin kapılarını araladık. Allah’ın izniyle aşığı olduğumuz bu millete, sevdalısı olduğumuz bu ülkeye hizmet etmeye devam edeceğiz&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Kasım 2026, 14:38</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-24-yil-once-bugun-bir-anadolu-ihtilaline-imza-attik-962091.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="erdoğan&#x27;dan güney kore&#x27;ye: uzak ama kalben yakın iki milletiz cumhurbaşkanı recep tayyip erdoğan, &quot;asya&#x27;nın iki ucunda birbirlerinden uzak ama kalben yakın iki milletiz. eğer kader insanları buluşturacaksa, mesafelerin engel olamayacağına en güzel örneğiz.&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 3 Kasım 2026, 14:33</span>
+        </div>
+        <h3>Erdoğan&#x27;dan Güney Kore&#x27;ye: Uzak ama kalben yakın iki milletiz</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, &quot;Asya&#x27;nın iki ucunda birbirlerinden uzak ama kalben yakın iki milletiz. Eğer kader insanları buluşturacaksa, mesafelerin engel olamayacağına en güzel örneğiz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Kasım 2026, 14:33</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/erdogandan-guney-koreye-uzak-ama-kalben-yakin-iki-milletiz-962089.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan&#x27;dan ak parti&#x27;nin iktidara gelişinin 24. yıl dönümüne ilişkin paylaşım cumhurbaşkanı erdoğan, &quot;ak parti olarak biz, çeyrek asır boyunca eserlerimizle aziz milletimizin hizmetkarı olduk. allah&#x27;ın izniyle aşığı olduğumuz bu millete, sevdalısı olduğumuz bu ülkeye hizmet etmeye devam edeceğiz.&quot; ifadesini kullandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 3 Kasım 2026, 15:03</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan&#x27;dan AK Parti&#x27;nin iktidara gelişinin 24. yıl dönümüne ilişkin paylaşım</h3>
+        <p>Cumhurbaşkanı Erdoğan, &quot;AK Parti olarak biz, çeyrek asır boyunca eserlerimizle aziz milletimizin hizmetkarı olduk. Allah&#x27;ın izniyle aşığı olduğumuz bu millete, sevdalısı olduğumuz bu ülkeye hizmet etmeye devam edeceğiz.&quot; ifadesini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 3 Kasım 2026, 15:03</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogandan-ak-partinin-iktidara-gelisinin-24-yil-donumune-iliskin-paylasim/4109967" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan işıkhan: emekli maaşlarında ilave iyileştirmeleri içeren çalışma yapıyoruz çalışma ve sosyal güvenlik bakanı vedat işıkhan, emekli maaşlarına ilişkin, &quot;2027 ocak ayından itibaren geçerli olması hedeflenen mevcut yasal artışlara, ilave iyileştirmeleri de içeren bir çalışma yapıyoruz.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 3 Kasım 2026, 11:29</span>
+        </div>
+        <h3>Bakan Işıkhan: Emekli maaşlarında ilave iyileştirmeleri içeren çalışma yapıyoruz</h3>
+        <p>Çalışma ve Sosyal Güvenlik Bakanı Vedat Işıkhan, emekli maaşlarına ilişkin, &quot;2027 Ocak ayından itibaren geçerli olması hedeflenen mevcut yasal artışlara, ilave iyileştirmeleri de içeren bir çalışma yapıyoruz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 3 Kasım 2026, 11:29</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-isikhan-emekli-maaslarinda-ilave-iyilestirmeleri-iceren-calisma-yapiyoruz/4109508" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan göktaş: aile bireylerinin dijital araçları doğru ve bilinçli kullanmalarına yönelik çalışmalar yürütüyoruz aile ve sosyal hizmetler bakanı göktaş, aile bireylerinin dijital araçları bilinçli kullanmasına yönelik çalışmalar yürüttüklerini belirterek, dijital çağda en etkili güvenlik duvarının bilinçli birey, güçlü aile ve sorumlu toplum olduğunu söyledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 3 Kasım 2026, 13:03</span>
+        </div>
+        <h3>Bakan Göktaş: Aile bireylerinin dijital araçları doğru ve bilinçli kullanmalarına yönelik çalışmalar yürütüyoruz</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanı Göktaş, aile bireylerinin dijital araçları bilinçli kullanmasına yönelik çalışmalar yürüttüklerini belirterek, dijital çağda en etkili güvenlik duvarının bilinçli birey, güçlü aile ve sorumlu toplum olduğunu söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 3 Kasım 2026, 13:03</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-goktas-aile-bireylerinin-dijital-araclari-dogru-ve-bilincli-kullanmalarina-yonelik-calismalar-yurutuyoruz/4109751" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="büyü, fal, ruhlar ve casuslar: i̇ran siyasetinin doğaüstü dünyası ali hamaney’in falla ilgilenmesinden ilgilenmesinden, ahmedinejad yönetiminin &quot;cin çıkaranlar ve falcılarla&quot; bağlantılı olduğu yönündeki suçlamalara ve i̇srail’in büyü ve sihir kullandığına dair iddialara kadar doğaüstü inanışlar i̇ran&#x27;da iktidarın en üst kademelerine nasıl sızdı? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 15:08</span>
+        </div>
+        <h3>Büyü, fal, ruhlar ve casuslar: İran siyasetinin doğaüstü dünyası</h3>
+        <p>Ali Hamaney’in falla ilgilenmesinden ilgilenmesinden, Ahmedinejad yönetiminin &quot;cin çıkaranlar ve falcılarla&quot; bağlantılı olduğu yönündeki suçlamalara ve İsrail’in büyü ve sihir kullandığına dair iddialara kadar doğaüstü inanışlar İran&#x27;da iktidarın en üst kademelerine nasıl sızdı?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 15:08</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwly0xr8dmz0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="emine erdoğan, i̇zzet keribar&#x27;ın güney kore&#x27;de çektiği fotoğraflardan oluşan sergiyi ziyaret etti emine erdoğan, fotoğraf sanatçısı keribar&#x27;ın güney kore&#x27;de açılan sergisine dair, &quot;kendisinin yıllar önce güney kore&#x27;de gönüllü askerlik yaptığı sırada çektiği her bir fotoğraf, sanatsal değerinin yanında tarihin de şahitleridir.&quot; ifadesini kullandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 3 Kasım 2026, 13:14</span>
+        </div>
+        <h3>Emine Erdoğan, İzzet Keribar&#x27;ın Güney Kore&#x27;de çektiği fotoğraflardan oluşan sergiyi ziyaret etti</h3>
+        <p>Emine Erdoğan, fotoğraf sanatçısı Keribar&#x27;ın Güney Kore&#x27;de açılan sergisine dair, &quot;Kendisinin yıllar önce Güney Kore&#x27;de gönüllü askerlik yaptığı sırada çektiği her bir fotoğraf, sanatsal değerinin yanında tarihin de şahitleridir.&quot; ifadesini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 3 Kasım 2026, 13:14</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/emine-erdogan-izzet-keribarin-guney-korede-cektigi-fotograflardan-olusan-sergiyi-ziyaret-etti/4109774" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="30. yılında susurluk skandalı: 3 kasım 1996&#x27;daki kaza sonrası neler yaşandı? 3 kasım 1996&#x27;da yaşanan susurluk kazasını, tetiklediği tartışmaları ve olayın bugüne kadar uzanan etkilerini inceledik. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 13:52</span>
+        </div>
+        <h3>30. yılında Susurluk skandalı: 3 Kasım 1996&#x27;daki kaza sonrası neler yaşandı?</h3>
+        <p>3 Kasım 1996&#x27;da yaşanan Susurluk kazasını, tetiklediği tartışmaları ve olayın bugüne kadar uzanan etkilerini inceledik.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 13:52</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq5e3z1edp9o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇srail&#x27;de muhalefet liderleri, acil hükümet kurma gündemiyle bir araya geldi i̇srail&#x27;de, sandıktan koalisyon belirsizliğinin çıktığı 27 ekim seçimlerinin ardından, muhalefet bloku liderleri &quot;acil hükümet kurma&quot; gündemiyle bir araya geldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 3 Kasım 2026, 12:29</span>
+        </div>
+        <h3>İsrail&#x27;de muhalefet liderleri, acil hükümet kurma gündemiyle bir araya geldi</h3>
+        <p>İsrail&#x27;de, sandıktan koalisyon belirsizliğinin çıktığı 27 Ekim seçimlerinin ardından, muhalefet bloku liderleri &quot;acil hükümet kurma&quot; gündemiyle bir araya geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Kasım 2026, 12:29</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/israilde-muhalefet-liderleri-acil-hukumet-kurma-gundemiyle-bir-araya-geldi-962087.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yargıtay&#x27;dan emsal karar: dede ve babaanne torununu yatılı görebilecek yargıtay, torunlarıyla görüşme süresini yetersiz bulduğu babaanne ve dedenin her ayın ilk hafta sonu ve ağustosun ilk haftası yatılı görüşmesine karar verdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 3 Kasım 2026, 13:57</span>
+        </div>
+        <h3>Yargıtay&#x27;dan emsal karar: Dede ve babaanne torununu yatılı görebilecek</h3>
+        <p>Yargıtay, torunlarıyla görüşme süresini yetersiz bulduğu babaanne ve dedenin her ayın ilk hafta sonu ve ağustosun ilk haftası yatılı görüşmesine karar verdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Kasım 2026, 13:57</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/yargitaydan-emsal-karar-dede-ve-babaanne-torununu-yatili-gorebilecek-962086.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="avukatlık asgari ücret tarifesi belirlendi türkiye barolar birliğince (tbb) hazırlanan yeni avukatlık asgari ücret tarifesi, resmi gazete&#x27;de yayımlanarak yürürlüğe girdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 3 Kasım 2026, 13:41</span>
+        </div>
+        <h3>Avukatlık asgari ücret tarifesi belirlendi</h3>
+        <p>Türkiye Barolar Birliğince (TBB) hazırlanan yeni avukatlık asgari ücret tarifesi, Resmi Gazete&#x27;de yayımlanarak yürürlüğe girdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Kasım 2026, 13:41</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/avukatlik-asgari-ucret-tarifesi-belirlendi-962085.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="soykırımcı i̇srail&#x27;in ateşkese rağmen gazze&#x27;ye düzenlediği saldırılarda son 24 saatte 6 kişi hayatını kaybetti katil i̇srail ordusunun ateşkese rağmen gazze şeridi&#x27;ne düzenlediği saldırılarda son 24 saatte 6 kişi yaşamını yitirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 3 Kasım 2026, 13:22</span>
+        </div>
+        <h3>Soykırımcı İsrail&#x27;in ateşkese rağmen Gazze&#x27;ye düzenlediği saldırılarda son 24 saatte 6 kişi hayatını kaybetti</h3>
+        <p>Katil İsrail ordusunun ateşkese rağmen Gazze Şeridi&#x27;ne düzenlediği saldırılarda son 24 saatte 6 kişi yaşamını yitirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 3 Kasım 2026, 13:22</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/soykirimci-israilin-ateskese-ragmen-gazzeye-duzenledigi-saldirilarda-son-24-saatte-6-kisi-hayatini-kaybetti-962082.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yurt genelinde sıcaklıklar düşecek, yüksek kesimlerde kar görülecek yurt genelinde hafta boyunca etkisini sürdürecek yağışlarla hava sıcaklıkları mevsim normallerinin altına düşecek, hafta sonuna doğru ise yüksek kesimlerde kar görülecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 3 Kasım 2026, 14:44</span>
+        </div>
+        <h3>Yurt genelinde sıcaklıklar düşecek, yüksek kesimlerde kar görülecek</h3>
+        <p>Yurt genelinde hafta boyunca etkisini sürdürecek yağışlarla hava sıcaklıkları mevsim normallerinin altına düşecek, hafta sonuna doğru ise yüksek kesimlerde kar görülecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 3 Kasım 2026, 14:44</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yurt-genelinde-sicakliklar-dusecek-yuksek-kesimlerde-kar-gorulecek/4109940" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trakya&#x27;da sağanak etkisini sürdürüyor edirne, kırklareli ve tekirdağ&#x27;da sağanak yaşamı olumsuz etkilemeye devam ediyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 3 Kasım 2026, 14:28</span>
+        </div>
+        <h3>Trakya&#x27;da sağanak etkisini sürdürüyor</h3>
+        <p>Edirne, Kırklareli ve Tekirdağ&#x27;da sağanak yaşamı olumsuz etkilemeye devam ediyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 3 Kasım 2026, 14:28</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/trakyada-saganak-etkisini-surduruyor/4109908" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇letişim başkanlığından dokuzuncu fon koordinasyon kurulu toplantısı&#x27;na ilişkin açıklama cumhurbaşkanlığı i̇letişim başkanlığı, tasfiye sürecinden sorumlu kurumların koordinasyonunda bu hafta ara ödemelere devam edileceğini duyurdu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 3 Kasım 2026, 13:57</span>
+        </div>
+        <h3>İletişim Başkanlığından Dokuzuncu Fon Koordinasyon Kurulu Toplantısı&#x27;na ilişkin açıklama</h3>
+        <p>Cumhurbaşkanlığı İletişim Başkanlığı, tasfiye sürecinden sorumlu kurumların koordinasyonunda bu hafta ara ödemelere devam edileceğini duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 3 Kasım 2026, 13:57</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iletisim-baskanligindan-dokuzuncu-fon-koordinasyon-kurulu-toplantisina-iliskin-aciklama/4109842" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇spanyol futbolcu jesus de miguel sahadaki çarpışma sonucu hayatını kaybetti tenerife&#x27;nin 30 yaşındaki forvet oyuncusu jesus de miguel, i̇spanya ikinci ligi maçındaki çarpışmada aldığı ağır sakatlığın ardından hayatını kaybetti. spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 14:26</span>
+        </div>
+        <h3>İspanyol futbolcu Jesus De Miguel sahadaki çarpışma sonucu hayatını kaybetti</h3>
+        <p>Tenerife&#x27;nin 30 yaşındaki forvet oyuncusu Jesus de Miguel, İspanya ikinci ligi maçındaki çarpışmada aldığı ağır sakatlığın ardından hayatını kaybetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 14:26</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cx5yn0j3e2yyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="galatasaray, şampiyonlar ligi&#x27;nde evinde stuttgart&#x27;ı ağırlıyor galatasaray, uefa şampiyonlar ligi&#x27;nin dördüncü hafta maçında almanya temsilcisi stuttgart&#x27;ı konuk edecek spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 01:25</span>
+        </div>
+        <h3>Galatasaray, Şampiyonlar Ligi&#x27;nde evinde Stuttgart&#x27;ı ağırlıyor</h3>
+        <p>Galatasaray, UEFA Şampiyonlar Ligi&#x27;nin dördüncü hafta maçında Almanya temsilcisi Stuttgart&#x27;ı konuk edecek</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 01:25</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr62yxwp5jdyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
