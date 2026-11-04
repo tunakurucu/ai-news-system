@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">4 Kasım 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">4 Kasım 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>dünya</strong> 10</span><span class="stat-item"><strong>genel</strong> 15</span><span class="stat-item"><strong>ekonomi</strong> 2</span><span class="stat-item"><strong>spor</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">TEKNOLOJI</span>
+        </div>
+        <h3>Yapay zeka destekli yerli uydu GEZGİN1 için hedef 2028</h3>
+        <p>Türkiye, milli uydu teknolojileri alanındaki çalışmalarına GEZGİN-1 ile devam ediyor. 75 kilogramın altında olması hedeflenen yerli mikro uydu, yüksek çözünürlüklü görüntüleme ve yapay zeka destekli analiz yetenekleriyle 2028&#x27;in son çeyreğinde uzaya gönderilecek.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 4 Kasım 2026, 14:31</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/yapay-zeka-destekli-yerli-uydu-gezgin-1-icin-hedef-2028-962230.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 4 Kasım 2026, 15:27</span>
+            </div>
+            <h3>Hamaney&#x27;den ara seçim mesajı: ABD&#x27;nin politikası değişir sananlar yanılır</h3>
+            <p>İran&#x27;ın dini lideri Ali Hamaney, ABD&#x27;de Trump ve Cumhuriyetçi Parti&#x27;nin yenilgisiyle sonuçlanan ara seçimlerden sonraki ilk açıklamasında ABD politikasında bir değişiklik bekleyen herkesin &quot;ciddi bir yanılgı içinde&quot; olduğunu belirtti.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cxyvrzeldp61o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 4 Kasım 2026, 14:55</span>
+            </div>
+            <h3>Sözcü editörü Mustafa Balcı ve gazeteci Şaban Sevinç için 11 ve 19 yıla kadar hapis istemi</h3>
+            <p>İstanbul Cumhuriyet Başsavcılığı&#x27;nın &quot;kamuoyunu yanıltıcı nitelikle yayın ve paylaşımlar&quot; soruşturmasında tutuklanan Sözcü gazetesi editörü Mustafa Balcı ve gazeteci Şaban Sevinç hakkında iddianame düzenlendi. Üç ayrı suçtan cezalandırılmaları istenen gazetecilerden Sevinç için 18 yıl 11 ay 15 güne, Balcı için ise 10 yıl 10 aya kadar hapis cezası talep edildi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cwvg0e409xp3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 4 Kasım 2026, 06:05</span>
+            </div>
+            <h3>Öcalan&#x27;ın İmralı&#x27;da yeni yere geçişi ne anlama geliyor?</h3>
+            <p>PKK lideri Abdullah Öcalan&#x27;ın İmralı Cezaevi&#x27;nde kendisi için hazırlanan yeni alana geçmesi, yürütülen çözüm sürecinde yeni bir aşamaya geçilip geçilmediği tartışmasını gündeme getirdi. Ankara&#x27;da DEM Partili ve AKP&#x27;li kaynaklara, İmralı&#x27;daki değişikliği nasıl yorumladıklarını sorduk.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cqe9lez7j1r8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 4 Kasım 2026, 07:06</span>
+            </div>
+            <h3>Türkiye-Azerbaycan hattında gerginliğin nedenleri neler?</h3>
+            <p>Ankara-Bakü hattında başörtüsü tartışması ile başlayan gerilim, Cumhurbaşkanı İlham Aliyev&#x27;in Türkiye&#x27;de düzenlenen Türk Devletleri Teşkilatı zirvesine katılmamasıyla gündemde. Peki &quot;tek millet iki devlet&quot; ilkesini benimseyen stratejik ortakların arası nasıl açıldı? Tartışma neden bu noktaya geldi? Diplomatlara ve uzmanlara sorduk.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c8kgev55zxywo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="yapay zeka destekli yerli uydu gezgi̇n1 için hedef 2028 türkiye, milli uydu teknolojileri alanındaki çalışmalarına gezgi̇n-1 ile devam ediyor. 75 kilogramın altında olması hedeflenen yerli mikro uydu, yüksek çözünürlüklü görüntüleme ve yapay zeka destekli analiz yetenekleriyle 2028&#x27;in son çeyreğinde uzaya gönderilecek. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 4 Kasım 2026, 14:31</span>
+        </div>
+        <h3>Yapay zeka destekli yerli uydu GEZGİN1 için hedef 2028</h3>
+        <p>Türkiye, milli uydu teknolojileri alanındaki çalışmalarına GEZGİN-1 ile devam ediyor. 75 kilogramın altında olması hedeflenen yerli mikro uydu, yüksek çözünürlüklü görüntüleme ve yapay zeka destekli analiz yetenekleriyle 2028&#x27;in son çeyreğinde uzaya gönderilecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Kasım 2026, 14:31</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/bilim-teknoloji/yapay-zeka-destekli-yerli-uydu-gezgin-1-icin-hedef-2028-962230.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">10 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="hamaney&#x27;den ara seçim mesajı: abd&#x27;nin politikası değişir sananlar yanılır i̇ran&#x27;ın dini lideri ali hamaney, abd&#x27;de trump ve cumhuriyetçi parti&#x27;nin yenilgisiyle sonuçlanan ara seçimlerden sonraki ilk açıklamasında abd politikasında bir değişiklik bekleyen herkesin &quot;ciddi bir yanılgı içinde&quot; olduğunu belirtti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Kasım 2026, 15:27</span>
+        </div>
+        <h3>Hamaney&#x27;den ara seçim mesajı: ABD&#x27;nin politikası değişir sananlar yanılır</h3>
+        <p>İran&#x27;ın dini lideri Ali Hamaney, ABD&#x27;de Trump ve Cumhuriyetçi Parti&#x27;nin yenilgisiyle sonuçlanan ara seçimlerden sonraki ilk açıklamasında ABD politikasında bir değişiklik bekleyen herkesin &quot;ciddi bir yanılgı içinde&quot; olduğunu belirtti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Kasım 2026, 15:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cxyvrzeldp61o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sözcü editörü mustafa balcı ve gazeteci şaban sevinç için 11 ve 19 yıla kadar hapis istemi i̇stanbul cumhuriyet başsavcılığı&#x27;nın &quot;kamuoyunu yanıltıcı nitelikle yayın ve paylaşımlar&quot; soruşturmasında tutuklanan sözcü gazetesi editörü mustafa balcı ve gazeteci şaban sevinç hakkında iddianame düzenlendi. üç ayrı suçtan cezalandırılmaları istenen gazetecilerden sevinç için 18 yıl 11 ay 15 güne, balcı için ise 10 yıl 10 aya kadar hapis cezası talep edildi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Kasım 2026, 14:55</span>
+        </div>
+        <h3>Sözcü editörü Mustafa Balcı ve gazeteci Şaban Sevinç için 11 ve 19 yıla kadar hapis istemi</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı&#x27;nın &quot;kamuoyunu yanıltıcı nitelikle yayın ve paylaşımlar&quot; soruşturmasında tutuklanan Sözcü gazetesi editörü Mustafa Balcı ve gazeteci Şaban Sevinç hakkında iddianame düzenlendi. Üç ayrı suçtan cezalandırılmaları istenen gazetecilerden Sevinç için 18 yıl 11 ay 15 güne, Balcı için ise 10 yıl 10 aya kadar hapis cezası talep edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Kasım 2026, 14:55</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwvg0e409xp3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="öcalan&#x27;ın i̇mralı&#x27;da yeni yere geçişi ne anlama geliyor? pkk lideri abdullah öcalan&#x27;ın i̇mralı cezaevi&#x27;nde kendisi için hazırlanan yeni alana geçmesi, yürütülen çözüm sürecinde yeni bir aşamaya geçilip geçilmediği tartışmasını gündeme getirdi. ankara&#x27;da dem partili ve akp&#x27;li kaynaklara, i̇mralı&#x27;daki değişikliği nasıl yorumladıklarını sorduk. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Kasım 2026, 06:05</span>
+        </div>
+        <h3>Öcalan&#x27;ın İmralı&#x27;da yeni yere geçişi ne anlama geliyor?</h3>
+        <p>PKK lideri Abdullah Öcalan&#x27;ın İmralı Cezaevi&#x27;nde kendisi için hazırlanan yeni alana geçmesi, yürütülen çözüm sürecinde yeni bir aşamaya geçilip geçilmediği tartışmasını gündeme getirdi. Ankara&#x27;da DEM Partili ve AKP&#x27;li kaynaklara, İmralı&#x27;daki değişikliği nasıl yorumladıklarını sorduk.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Kasım 2026, 06:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqe9lez7j1r8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="zorlu holding yönetim kurulu başkanı ahmet nazif zorlu&#x27;ya son görev 82 yaşında hayatını kaybeden zorlu holding yönetim kurulu başkanı ahmet nazif zorlu için levent&#x27;teki barbaros hayrettin paşa camisi&#x27;nde cenaze töreni düzenlendi. zorlu&#x27;nun naaşı, namazın ardından zincirlikuyu mezarlığı&#x27;na defnedildi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 4 Kasım 2026, 15:11</span>
+        </div>
+        <h3>Zorlu Holding Yönetim Kurulu Başkanı Ahmet Nazif Zorlu&#x27;ya son görev</h3>
+        <p>82 yaşında hayatını kaybeden Zorlu Holding Yönetim Kurulu Başkanı Ahmet Nazif Zorlu için Levent&#x27;teki Barbaros Hayrettin Paşa Camisi&#x27;nde cenaze töreni düzenlendi. Zorlu&#x27;nun naaşı, namazın ardından Zincirlikuyu Mezarlığı&#x27;na defnedildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Kasım 2026, 15:11</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/zorlu-holding-yonetim-kurulu-baskani-ahmet-nazif-zorluya-son-gorev-962233.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="lübnan başbakanından hizbullaha üstü kapalı uyarı: ülkeyi yeni bir savaşa sürüklemeyin lübnan başbakanı nevvaf selam, abd/i̇srail-i̇ran savaşı&#x27;nın yeniden başlama riski karşısında lübnan&#x27;ı yeni bir savaşa sürüklememeye karşı üstü kapalı hizbullah&#x27;a uyarıda bulundu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 4 Kasım 2026, 14:33</span>
+        </div>
+        <h3>Lübnan Başbakanından Hizbullaha üstü kapalı uyarı: Ülkeyi yeni bir savaşa sürüklemeyin</h3>
+        <p>Lübnan Başbakanı Nevvaf Selam, ABD/İsrail-İran Savaşı&#x27;nın yeniden başlama riski karşısında Lübnan&#x27;ı yeni bir savaşa sürüklememeye karşı üstü kapalı Hizbullah&#x27;a uyarıda bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Kasım 2026, 14:33</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/lubnan-basbakanindan-hizbullaha-ustu-kapali-uyari-ulkeyi-yeni-bir-savasa-suruklemeyin-962232.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yağmurda kayganlaşan yol çizgileri motosikletlileri riske atıyor motosiklet ileri sürüş eğitmeni akçay, yağışlı havalarda kayganlaşan yol çizgilerinin rögar kapaklarının ve metal mazgalların motosiklet sürücüleri için denge kaybı ve düşme riski oluşturduğunu, bunun kaymaz malzemeden yapılması gerektiğini bildirdi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 4 Kasım 2026, 11:06</span>
+        </div>
+        <h3>Yağmurda kayganlaşan yol çizgileri motosikletlileri riske atıyor</h3>
+        <p>Motosiklet ileri sürüş eğitmeni Akçay, yağışlı havalarda kayganlaşan yol çizgilerinin rögar kapaklarının ve metal mazgalların motosiklet sürücüleri için denge kaybı ve düşme riski oluşturduğunu, bunun kaymaz malzemeden yapılması gerektiğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 4 Kasım 2026, 11:06</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yagmurda-kayganlasan-yol-cizgileri-motosikletlileri-riske-atiyor/4111126" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;de ara seçimler: demokratlar kongre&#x27;nin iki kanadında da çoğunluğu kazandı abd&#x27;de seçmenler, kongre&#x27;nin hangi partinin kontrolünde olacağını belirlemek için sandığa gitti. demokratlar, senato ve temsilciler meclisi&#x27;nde cumhuriyetçilerin sahip olduğu çoğunluğu ele geçirdi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Kasım 2026, 13:32</span>
+        </div>
+        <h3>ABD&#x27;de ara seçimler: Demokratlar Kongre&#x27;nin iki kanadında da çoğunluğu kazandı</h3>
+        <p>ABD&#x27;de seçmenler, Kongre&#x27;nin hangi partinin kontrolünde olacağını belirlemek için sandığa gitti. Demokratlar, Senato ve Temsilciler Meclisi&#x27;nde Cumhuriyetçilerin sahip olduğu çoğunluğu ele geçirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Kasım 2026, 13:32</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck62yep62nyjo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="abd&#x27;de ara seçimler: &#x27;demokratlar trump&#x27;ın siyasi haritasını paramparça etti&#x27; abd&#x27;de ara seçimlerde demokratlar hem temsilciler meclisi hem de senato&#x27;da çoğunluğu cumhuriyetçilerin elinden aldı. peki seçim sonuçları nasıl yorumlanıyor? demokratların zaferi trump&#x27;ın bundan sonraki başkanlığını nasıl etkileyecek? dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Kasım 2026, 13:48</span>
+        </div>
+        <h3>ABD&#x27;de ara seçimler: &#x27;Demokratlar Trump&#x27;ın siyasi haritasını paramparça etti&#x27;</h3>
+        <p>ABD&#x27;de ara seçimlerde Demokratlar hem Temsilciler Meclisi hem de Senato&#x27;da çoğunluğu Cumhuriyetçilerin elinden aldı. Peki seçim sonuçları nasıl yorumlanıyor? Demokratların zaferi Trump&#x27;ın bundan sonraki başkanlığını nasıl etkileyecek?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Kasım 2026, 13:48</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq4g1rpk0rr5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="florida&#x27;da düşen uçağın kritik parçaları kaza yerinden kilometrelerce uzakta bulundu abd’nin florida eyaletinde, teksas’tan bahamalar’a giden özel uçağın yerleşim bölgesine düşmesi sonucu uçaktaki dokuz kişinin tamamı hayatını kaybetti. olayı soruşturan yetkililer düşen uçağın kritik parçalarının kaza yerinden kilometrelerce uzakta bulunduğunu açıkladı dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 4 Kasım 2026, 07:04</span>
+        </div>
+        <h3>Florida&#x27;da düşen uçağın kritik parçaları kaza yerinden kilometrelerce uzakta bulundu</h3>
+        <p>ABD’nin Florida eyaletinde, Teksas’tan Bahamalar’a giden özel uçağın yerleşim bölgesine düşmesi sonucu uçaktaki dokuz kişinin tamamı hayatını kaybetti. Olayı soruşturan yetkililer düşen uçağın kritik parçalarının kaza yerinden kilometrelerce uzakta bulunduğunu açıkladı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Kasım 2026, 07:04</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/crz65v4wxxljo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="hamaney: abd seçimleri i̇ran politikasını değiştirmeyecek i̇ran lideri mücteba hamaney, abd’deki ara seçim sonuçlarının ardından, amerikan siyasetindeki değişikliklerin washington’ın “i̇ran’a yönelik düşmanlığını” değiştirmeyeceğini söyledi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 4 Kasım 2026, 15:19</span>
+        </div>
+        <h3>Hamaney: ABD seçimleri İran politikasını değiştirmeyecek</h3>
+        <p>İran lideri Mücteba Hamaney, ABD’deki ara seçim sonuçlarının ardından, Amerikan siyasetindeki değişikliklerin Washington’ın “İran’a yönelik düşmanlığını” değiştirmeyeceğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Kasım 2026, 15:19</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/hamaney-abd-secimleri-iran-politikasini-degistirmeyecek-962236.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">15 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="türkiye-azerbaycan hattında gerginliğin nedenleri neler? ankara-bakü hattında başörtüsü tartışması ile başlayan gerilim, cumhurbaşkanı i̇lham aliyev&#x27;in türkiye&#x27;de düzenlenen türk devletleri teşkilatı zirvesine katılmamasıyla gündemde. peki &quot;tek millet iki devlet&quot; ilkesini benimseyen stratejik ortakların arası nasıl açıldı? tartışma neden bu noktaya geldi? diplomatlara ve uzmanlara sorduk. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 4 Kasım 2026, 07:06</span>
+        </div>
+        <h3>Türkiye-Azerbaycan hattında gerginliğin nedenleri neler?</h3>
+        <p>Ankara-Bakü hattında başörtüsü tartışması ile başlayan gerilim, Cumhurbaşkanı İlham Aliyev&#x27;in Türkiye&#x27;de düzenlenen Türk Devletleri Teşkilatı zirvesine katılmamasıyla gündemde. Peki &quot;tek millet iki devlet&quot; ilkesini benimseyen stratejik ortakların arası nasıl açıldı? Tartışma neden bu noktaya geldi? Diplomatlara ve uzmanlara sorduk.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 4 Kasım 2026, 07:06</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c8kgev55zxywo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mustafa sarıgül: partiler, polemikler, soruşturmalar ve yerelden ulusal siyasete uzanan kariyer mustafa sarıgül, 1980&#x27;lerden bu yana sürekli gazete manşetlerinde yer almış bir siyasetçi. son günlerde ise bir kara para aklama soruşturmasındaki iddialar nedeniyle gündemde. peki sarıgül kim ve nasıl bir siyasi geçmişe sahip? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 19:54</span>
+        </div>
+        <h3>Mustafa Sarıgül: Partiler, polemikler, soruşturmalar ve yerelden ulusal siyasete uzanan kariyer</h3>
+        <p>Mustafa Sarıgül, 1980&#x27;lerden bu yana sürekli gazete manşetlerinde yer almış bir siyasetçi. Son günlerde ise bir kara para aklama soruşturmasındaki iddialar nedeniyle gündemde. Peki Sarıgül kim ve nasıl bir siyasi geçmişe sahip?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 19:54</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6n9rnz9lnl5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan memişoğlu&#x27;ndan organ bağışı çağrısı: 32 bin kişi umut bekliyor sağlık bakanı kemal memişoğlu, 188 binden fazla vatandaşın dijital organ bağışı vasiyetini oluşturduğunu belirterek, vatandaşları organ bağışında bulunmaya davet etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 4 Kasım 2026, 15:33</span>
+        </div>
+        <h3>Bakan Memişoğlu&#x27;ndan organ bağışı çağrısı: 32 bin kişi umut bekliyor</h3>
+        <p>Sağlık Bakanı Kemal Memişoğlu, 188 binden fazla vatandaşın dijital organ bağışı vasiyetini oluşturduğunu belirterek, vatandaşları organ bağışında bulunmaya davet etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Kasım 2026, 15:33</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/saglik/bakan-memisoglundan-organ-bagisi-cagrisi-32-bin-kisi-umut-bekliyor-962237.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="vatandaşları 464 milyon lira dolandıran 198 şüpheli tutuklandı 21 ilde nitelikli dolandırıcılık suçuna yönelik düzenlenen operasyonlarda 327 şüpheli yakalandı. vatandaşları 464 milyon lira dolandırdığı belirlenen şüphelilerden 198&#x27;i tutuklanırken, hesaplarında 27 milyar 509 milyon liralık işlem hacmi tespit edildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 4 Kasım 2026, 14:13</span>
+        </div>
+        <h3>Vatandaşları 464 milyon lira dolandıran 198 şüpheli tutuklandı</h3>
+        <p>21 ilde nitelikli dolandırıcılık suçuna yönelik düzenlenen operasyonlarda 327 şüpheli yakalandı. Vatandaşları 464 milyon lira dolandırdığı belirlenen şüphelilerden 198&#x27;i tutuklanırken, hesaplarında 27 milyar 509 milyon liralık işlem hacmi tespit edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Kasım 2026, 14:13</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/vatandaslari-464-milyon-lira-dolandiran-198-supheli-tutuklandi-962228.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sağlık bakanı memişoğlu&#x27;ndan &quot;organ bağışı&quot; çağrısı sağlık bakanı kemal memişoğlu, 188 binden fazla vatandaşın dijital organ bağışı vasiyetini oluşturduğunu belirterek, vatandaşları organ bağışında bulunmaya davet etti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 4 Kasım 2026, 15:27</span>
+        </div>
+        <h3>Sağlık Bakanı Memişoğlu&#x27;ndan &quot;organ bağışı&quot; çağrısı</h3>
+        <p>Sağlık Bakanı Kemal Memişoğlu, 188 binden fazla vatandaşın dijital organ bağışı vasiyetini oluşturduğunu belirterek, vatandaşları organ bağışında bulunmaya davet etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 4 Kasım 2026, 15:27</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/saglik-bakani-memisoglundan-organ-bagisi-cagrisi/4111513" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="okul saldırılarının ardından tehdit içerikli paylaşım yapan sanıklara 4 yıla kadar hapis istemi kahramanmaraş ve şanlıurfa&#x27;daki okul saldırılarının ardından sosyal medyada tehdit içerikli paylaşımlar yaptıkları gerekçesiyle 11&#x27;i tutuklu 13 sanık hakkında 4&#x27;er yıla kadar hapis istemiyle dava açıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 4 Kasım 2026, 12:46</span>
+        </div>
+        <h3>Okul saldırılarının ardından tehdit içerikli paylaşım yapan sanıklara 4 yıla kadar hapis istemi</h3>
+        <p>Kahramanmaraş ve Şanlıurfa&#x27;daki okul saldırılarının ardından sosyal medyada tehdit içerikli paylaşımlar yaptıkları gerekçesiyle 11&#x27;i tutuklu 13 sanık hakkında 4&#x27;er yıla kadar hapis istemiyle dava açıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 4 Kasım 2026, 12:46</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/okul-saldirilarinin-ardindan-tehdit-icerikli-paylasim-yapan-saniklara-4-yila-kadar-hapis-istemi-/4111301" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kadim anadolu mirası cop31 salon isimlerine taşındı cop31 etkinlikleri kapsamında mavi ve yeşil bölgelerdeki salon ve toplantı odalarına, türk-i̇slam medeniyetinden insanlığa iz bırakmış kişilerin yanı sıra çeşitli yer ve kültür unsurlarının isimleri verildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 4 Kasım 2026, 11:36</span>
+        </div>
+        <h3>Kadim Anadolu mirası COP31 salon isimlerine taşındı</h3>
+        <p>COP31 etkinlikleri kapsamında Mavi ve Yeşil bölgelerdeki salon ve toplantı odalarına, Türk-İslam medeniyetinden insanlığa iz bırakmış kişilerin yanı sıra çeşitli yer ve kültür unsurlarının isimleri verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 4 Kasım 2026, 11:36</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kadim-anadolu-mirasi-cop31-salon-isimlerine-tasindi/4111191" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇şgalci i̇srail ordusu, batı şeria&#x27;da 45 filistinliyi gözaltına aldı i̇şgalci i̇srail ordusu, batı şeria&#x27;nın farklı bölgelerine düzenlediği baskınlarda 2&#x27;si gazeteci, 5&#x27;i kadın 45 filistinliyi gözaltına aldı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 4 Kasım 2026, 15:14</span>
+        </div>
+        <h3>İşgalci İsrail ordusu, Batı Şeria&#x27;da 45 Filistinliyi gözaltına aldı</h3>
+        <p>İşgalci İsrail ordusu, Batı Şeria&#x27;nın farklı bölgelerine düzenlediği baskınlarda 2&#x27;si gazeteci, 5&#x27;i kadın 45 Filistinliyi gözaltına aldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Kasım 2026, 15:14</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/isgalci-israil-ordusu-bati-seriada-45-filistinliyi-gozaltina-aldi-962235.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="katil i̇srail&#x27;in gazze&#x27;ye düzenlediği saldırılarda son 24 saatte 3 kişi hayatını kaybetti katil i̇srail ordusunun ateşkese rağmen gazze şeridi&#x27;ne düzenlediği saldırılarda son 24 saatte 3 kişi yaşamını yitirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 4 Kasım 2026, 14:35</span>
+        </div>
+        <h3>Katil İsrail&#x27;in Gazze&#x27;ye düzenlediği saldırılarda son 24 saatte 3 kişi hayatını kaybetti</h3>
+        <p>Katil İsrail ordusunun ateşkese rağmen Gazze Şeridi&#x27;ne düzenlediği saldırılarda son 24 saatte 3 kişi yaşamını yitirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Kasım 2026, 14:35</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/katil-israilin-gazzeye-duzenledigi-saldirilarda-son-24-saatte-3-kisi-hayatini-kaybetti-962231.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da metrobüs kazası: 6 yaralı esenyurt&#x27;ta iki metrobüsün çarpışması sonucu 6 kişi yaralandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 4 Kasım 2026, 14:23</span>
+        </div>
+        <h3>İstanbul&#x27;da metrobüs kazası: 6 yaralı</h3>
+        <p>Esenyurt&#x27;ta iki metrobüsün çarpışması sonucu 6 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Kasım 2026, 14:23</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbulda-metrobus-kazasi-6-yarali-962229.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="zorlu holding yönetim kurulu başkanı ahmet nazif zorlu son yolculuğuna uğurlandı zorlu holding yönetim kurulu başkanı ahmet nazif zorlu, i̇stanbul&#x27;da kılınan cenaze namazının ardından son yolculuğuna uğurlandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 4 Kasım 2026, 14:37</span>
+        </div>
+        <h3>Zorlu Holding Yönetim Kurulu Başkanı Ahmet Nazif Zorlu son yolculuğuna uğurlandı</h3>
+        <p>Zorlu Holding Yönetim Kurulu Başkanı Ahmet Nazif Zorlu, İstanbul&#x27;da kılınan cenaze namazının ardından son yolculuğuna uğurlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 4 Kasım 2026, 14:37</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/zorlu-holding-yonetim-kurulu-baskani-ahmet-nazif-zorlu-son-yolculuguna-ugurlandi/4111450" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da sağanak etkili oluyor i̇stanbul&#x27;da etkili olan sağanağın ardından bazı yollarda ve caddelerde su birikintileri oluştu, otomobil ve motosiklet sürücüleri ilerlemekte güçlük çekti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 4 Kasım 2026, 15:10</span>
+        </div>
+        <h3>İstanbul&#x27;da sağanak etkili oluyor</h3>
+        <p>İstanbul&#x27;da etkili olan sağanağın ardından bazı yollarda ve caddelerde su birikintileri oluştu, otomobil ve motosiklet sürücüleri ilerlemekte güçlük çekti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 4 Kasım 2026, 15:10</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-saganak-etkili-oluyor/4111501" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da iki metrobüsün çarpıştığı kazada 6 kişi yaralandı esenyurt&#x27;ta iki metrobüsün çarpışması sonucu 6 kişi yaralandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 4 Kasım 2026, 15:00</span>
+        </div>
+        <h3>İstanbul&#x27;da iki metrobüsün çarpıştığı kazada 6 kişi yaralandı</h3>
+        <p>Esenyurt&#x27;ta iki metrobüsün çarpışması sonucu 6 kişi yaralandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 4 Kasım 2026, 15:00</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-iki-metrobusun-carpistigi-kazada-6-kisi-yaralandi/4111484" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nitelikli dolandırıcılık operasyonlarında 198 kişi tutuklandı nitelikli dolandırıcılık suçuna yönelik 21 ilde düzenlenen operasyonlarda 198 kişi tutuklandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 4 Kasım 2026, 14:00</span>
+        </div>
+        <h3>Nitelikli dolandırıcılık operasyonlarında 198 kişi tutuklandı</h3>
+        <p>Nitelikli dolandırıcılık suçuna yönelik 21 ilde düzenlenen operasyonlarda 198 kişi tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 4 Kasım 2026, 14:00</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/nitelikli-dolandiricilik-operasyonlarinda-198-kisi-tutuklandi/4111406" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kpss lisans&#x27;ın branş bazında sıralamaları yayımlandı ölçme, seçme ve yerleştirme merkezi başkanlığınca (ösym), 2026 kamu personel seçme sınavı&#x27;na (2026-kpss lisans) katılan adayların sınav sonuçlarına göre branş bazında sıralamaları yayımlandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 4 Kasım 2026, 12:52</span>
+        </div>
+        <h3>KPSS Lisans&#x27;ın branş bazında sıralamaları yayımlandı</h3>
+        <p>Ölçme, Seçme ve Yerleştirme Merkezi Başkanlığınca (ÖSYM), 2026 Kamu Personel Seçme Sınavı&#x27;na (2026-KPSS Lisans) katılan adayların sınav sonuçlarına göre branş bazında sıralamaları yayımlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 4 Kasım 2026, 12:52</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kpss-lisansin-brans-bazinda-siralamalari-yayimlandi/4111308" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bm&#x27;den, iklim değişikliğine uyum finansmanının ihtiyaçların çok gerisinde kaldığı uyarısı birleşmiş milletler çevre programı, küresel sıcaklık artışının sanayi öncesi döneme göre 1,5 derece eşiğini aşması beklenirken iklim değişikliğine uyum için sağlanan finansmanın ihtiyaçların çok gerisinde kaldığı uyarısında bulundu. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 4 Kasım 2026, 14:17</span>
+        </div>
+        <h3>BM&#x27;den, iklim değişikliğine uyum finansmanının ihtiyaçların çok gerisinde kaldığı uyarısı</h3>
+        <p>Birleşmiş Milletler Çevre Programı, küresel sıcaklık artışının sanayi öncesi döneme göre 1,5 derece eşiğini aşması beklenirken iklim değişikliğine uyum için sağlanan finansmanın ihtiyaçların çok gerisinde kaldığı uyarısında bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 4 Kasım 2026, 14:17</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bmden-iklim-degisikligine-uyum-finansmaninin-ihtiyaclarin-cok-gerisinde-kaldigi-uyarisi/4111427" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ssb başkanı görgün: gök vatan&#x27;da hür kanatlarımız güçleniyor savunma sanayii başkanı haluk görgün, &quot;yeni nesil temel eğitim uçağımız hürkuş’un 2 uçağının daha savunma sanayii başkanlığımız ve hava kuvvetleri komutanlığımız tarafından kabul işlemleri tamamlandı. böylece hava kuvvetlerimizin envanterine kazandırılan hürkuş sayısı 4’e ulaştı&quot; dedi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 4 Kasım 2026, 14:04</span>
+        </div>
+        <h3>SSB Başkanı Görgün: Gök Vatan&#x27;da hür kanatlarımız güçleniyor</h3>
+        <p>Savunma Sanayii Başkanı Haluk Görgün, &quot;Yeni nesil temel eğitim uçağımız HÜRKUŞ’un 2 uçağının daha Savunma Sanayii Başkanlığımız ve Hava Kuvvetleri Komutanlığımız tarafından kabul işlemleri tamamlandı. Böylece Hava Kuvvetlerimizin envanterine kazandırılan HÜRKUŞ sayısı 4’e ulaştı&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 4 Kasım 2026, 14:04</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/savunma/ssb-baskani-gorgun-gok-vatanda-hur-kanatlarimiz-gucleniyor-962227.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="emre belözoğlu: fenerbahçe&#x27;nin ikinci kez teknik direktörlük görevine getirdiği eski kaptanı emre belözoğlu, daha önce 2020-2021 sezonunun son 10 haftasında fenerbahçe&#x27;nin başında teknik direktör olarak görev almıştı. belözoğlu&#x27;nun pazar günü oynanacak çorumspor maçında takımın başında yer alması bekleniyor. spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 23:45</span>
+        </div>
+        <h3>Emre Belözoğlu: Fenerbahçe&#x27;nin ikinci kez teknik direktörlük görevine getirdiği eski kaptanı</h3>
+        <p>Emre Belözoğlu, daha önce 2020-2021 sezonunun son 10 haftasında Fenerbahçe&#x27;nin başında teknik direktör olarak görev almıştı. Belözoğlu&#x27;nun Pazar günü oynanacak Çorumspor maçında takımın başında yer alması bekleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 23:45</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmy93wr2w2p0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="galatasaray, şampiyonlar ligi&#x27;nde evinde stuttgart&#x27;ı 2-0 yendi galatasaray, uefa şampiyonlar ligi&#x27;nin dördüncü hafta maçında aleksey batrakov&#x27;un attığı iki golle almanya temsilcisi stuttgart&#x27;ı 2-0 yendi spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 3 Kasım 2026, 22:47</span>
+        </div>
+        <h3>Galatasaray, Şampiyonlar Ligi&#x27;nde evinde Stuttgart&#x27;ı 2-0 yendi</h3>
+        <p>Galatasaray, UEFA Şampiyonlar Ligi&#x27;nin dördüncü hafta maçında Aleksey Batrakov&#x27;un attığı iki golle Almanya temsilcisi Stuttgart&#x27;ı 2-0 yendi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 3 Kasım 2026, 22:47</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr62yxwp5jdyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
