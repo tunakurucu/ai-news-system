@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">20 Kasım 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">20 Kasım 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 29</span><span class="stat-item"><strong>dünya</strong> 8</span><span class="stat-item"><strong>ekonomi</strong> 2</span><span class="stat-item"><strong>genel</strong> 18</span><span class="stat-item"><strong>teknoloji</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Almanya&#x27;da Z kuşağı yeniden sokaklarda: Başbakan Merz baskı altında</h3>
+        <p>Almanya genelinde öğrenciler ve Z Kuşağı hareketi, hükümetin politikalarını protesto etmek için 20 Kasım&#x27;da sokaklara çıkıyor. Hükümete seslerine duyurmak isteyen gençler, kendi geleceklerini ilgilendiren kararlarda söz hakkına sahip olmak istiyor</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 20 Kasım 2026, 09:11</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmrlgxr9nelxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">EKONOMI</span>
+                <span class="source">BBC Türkçe · 20 Kasım 2026, 03:45</span>
+            </div>
+            <h3>Anthropic&#x27;in tarihi halka arzı yapay zeka &#x27;balonu&#x27; tartışmalarını yeniden gündeme taşıdı</h3>
+            <p>Yapay zeka şirketi Anthropic, hisselerinin borsada işlem görmeye başlamasının ardından dünyanın en değerli halka açık şirketlerinden biri haline geldi. Şirketin değeri yaklaşık 1,76 trilyon dolara ulaştı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cqx28d4p72l4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 20 Kasım 2026, 15:45</span>
+            </div>
+            <h3>Bakan Fidan, Avrupa Komisyonu Başkan Yardımcısı Fitto ile Ankara&#x27;da görüştü</h3>
+            <p>Dışişleri Bakanı Hakan Fidan, Avrupa Komisyonu&#x27;nun Uyum ve Reformlardan Sorumlu Başkan Yardımcısı Raffaele Fitto ile Ankara&#x27;daki görüşmesinde, &quot;Türkiye-Avrupa Birliği (AB) ilişkilerinin geleceğinin Güney Kıbrıs Rum Yönetimi (GKRY) tarafından rehin alınmasına izin verilmesinin&quot; doğru bir strateji olmadığını söyledi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-fidan-avrupa-komisyonu-baskan-yardimcisi-fitto-ile-ankarada-gorustu-963975.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 20 Kasım 2026, 03:22</span>
+            </div>
+            <h3>Yeni Parti&#x27;nin komisyona katılmama kararı süreci ve siyasi dengeleri nasıl etkileyebilir?</h3>
+            <p>Yeni Parti Genel Başkanı Özgür Özel&#x27;in, çözüm süreci kapsamında Meclis&#x27;te kurulacak İzleme Komisyonu&#x27;na üye vermeme kararı, parti içinden destek görürken siyasi kulislerde yeni tartışmaları da beraberinde getirdi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c6j9m2e1gvndo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 20 Kasım 2026, 03:27</span>
+            </div>
+            <h3>Elektrifikasyon neden tartışılıyor, Türkiye yüzde 35 hedefini tutturabilir mi?</h3>
+            <p>Antalya&#x27;da düzenlenen Birleşmiş Milletler (BM) iklim konferansı COP31&#x27;in başkanlığının bu yılki en önemli gündem maddelerinden biri de elektrifikasyon taahhüdü. 16 Kasım&#x27;da yayımlanan taslak karar metninde, 2035 yılına kadar nihai enerji tüketiminin %35&#x27;inin elektrikten karşılanması hedefi de yer aldı. Peki hedef tam olarak ne anlama geliyor, kimler bu tahhüdü destekliyor? Daha da önemlisi kömür ya da doğal gazla da olsa elektrifikasyon hedefinin tutturulması iklim hedefleriyle uyumlu olabilir mi?</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/credq8yj8wz0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">8 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="almanya&#x27;da z kuşağı yeniden sokaklarda: başbakan merz baskı altında almanya genelinde öğrenciler ve z kuşağı hareketi, hükümetin politikalarını protesto etmek için 20 kasım&#x27;da sokaklara çıkıyor. hükümete seslerine duyurmak isteyen gençler, kendi geleceklerini ilgilendiren kararlarda söz hakkına sahip olmak istiyor dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 20 Kasım 2026, 09:11</span>
+        </div>
+        <h3>Almanya&#x27;da Z kuşağı yeniden sokaklarda: Başbakan Merz baskı altında</h3>
+        <p>Almanya genelinde öğrenciler ve Z Kuşağı hareketi, hükümetin politikalarını protesto etmek için 20 Kasım&#x27;da sokaklara çıkıyor. Hükümete seslerine duyurmak isteyen gençler, kendi geleceklerini ilgilendiren kararlarda söz hakkına sahip olmak istiyor</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Kasım 2026, 09:11</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmrlgxr9nelxo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan fidan, avrupa komisyonu başkan yardımcısı fitto ile ankara&#x27;da görüştü dışişleri bakanı hakan fidan, avrupa komisyonu&#x27;nun uyum ve reformlardan sorumlu başkan yardımcısı raffaele fitto ile ankara&#x27;daki görüşmesinde, &quot;türkiye-avrupa birliği (ab) ilişkilerinin geleceğinin güney kıbrıs rum yönetimi (gkry) tarafından rehin alınmasına izin verilmesinin&quot; doğru bir strateji olmadığını söyledi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 20 Kasım 2026, 15:45</span>
+        </div>
+        <h3>Bakan Fidan, Avrupa Komisyonu Başkan Yardımcısı Fitto ile Ankara&#x27;da görüştü</h3>
+        <p>Dışişleri Bakanı Hakan Fidan, Avrupa Komisyonu&#x27;nun Uyum ve Reformlardan Sorumlu Başkan Yardımcısı Raffaele Fitto ile Ankara&#x27;daki görüşmesinde, &quot;Türkiye-Avrupa Birliği (AB) ilişkilerinin geleceğinin Güney Kıbrıs Rum Yönetimi (GKRY) tarafından rehin alınmasına izin verilmesinin&quot; doğru bir strateji olmadığını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Kasım 2026, 15:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-fidan-avrupa-komisyonu-baskan-yardimcisi-fitto-ile-ankarada-gorustu-963975.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeni parti&#x27;nin komisyona katılmama kararı süreci ve siyasi dengeleri nasıl etkileyebilir? yeni parti genel başkanı özgür özel&#x27;in, çözüm süreci kapsamında meclis&#x27;te kurulacak i̇zleme komisyonu&#x27;na üye vermeme kararı, parti içinden destek görürken siyasi kulislerde yeni tartışmaları da beraberinde getirdi. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 20 Kasım 2026, 03:22</span>
+        </div>
+        <h3>Yeni Parti&#x27;nin komisyona katılmama kararı süreci ve siyasi dengeleri nasıl etkileyebilir?</h3>
+        <p>Yeni Parti Genel Başkanı Özgür Özel&#x27;in, çözüm süreci kapsamında Meclis&#x27;te kurulacak İzleme Komisyonu&#x27;na üye vermeme kararı, parti içinden destek görürken siyasi kulislerde yeni tartışmaları da beraberinde getirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Kasım 2026, 03:22</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6j9m2e1gvndo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ab ülkelerinde her 4 çocuktan biri yoksulluk veya sosyal dışlanma riski altında avrupa&#x27;da çocuk yoksulluğu ve sosyal koruma sistemlerindeki finansman eksikliklerinin devam ettiği, özellikle dezavantajlı ailelerde yaşayan çocukların temel hizmetlere erişimde güçlüklerle karşılaştığı bildirildi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 20 Kasım 2026, 16:17</span>
+        </div>
+        <h3>AB ülkelerinde her 4 çocuktan biri yoksulluk veya sosyal dışlanma riski altında</h3>
+        <p>Avrupa&#x27;da çocuk yoksulluğu ve sosyal koruma sistemlerindeki finansman eksikliklerinin devam ettiği, özellikle dezavantajlı ailelerde yaşayan çocukların temel hizmetlere erişimde güçlüklerle karşılaştığı bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Kasım 2026, 16:17</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/ab-ulkelerinde-her-4-cocuktan-biri-yoksulluk-veya-sosyal-dislanma-riski-altinda-963979.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mustafa sarıgül&#x27;ün dokunulmazlığının kaldırılması için fezleke hazırlandı 28. dönem erzincan milletvekili mustafa sarıgül hakkında çok sayıda suça istinaden dokunulmazlığının kaldırılması talebiyle fezleke hazırlandı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 20 Kasım 2026, 16:33</span>
+        </div>
+        <h3>Mustafa Sarıgül&#x27;ün dokunulmazlığının kaldırılması için fezleke hazırlandı</h3>
+        <p>28. Dönem Erzincan Milletvekili Mustafa Sarıgül hakkında çok sayıda suça istinaden dokunulmazlığının kaldırılması talebiyle fezleke hazırlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Kasım 2026, 16:33</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/mustafa-sarigulun-dokunulmazliginin-kaldirilmasi-icin-fezleke-hazirlandi-963981.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="zelenski: rusya, ukrayna&#x27;nın enerji ve ulaşım altyapısını hedef aldı ukrayna devlet başkanı volodimir zelenski, rus ordusunun ukrayna’nın enerji ve ulaşım altyapısını hedef alan yoğun hava saldırıları düzenlediğini bildirdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 20 Kasım 2026, 16:32</span>
+        </div>
+        <h3>Zelenski: Rusya, Ukrayna&#x27;nın enerji ve ulaşım altyapısını hedef aldı</h3>
+        <p>Ukrayna Devlet Başkanı Volodimir Zelenski, Rus ordusunun Ukrayna’nın enerji ve ulaşım altyapısını hedef alan yoğun hava saldırıları düzenlediğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Kasım 2026, 16:32</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/zelenski-rusya-ukraynanin-enerji-ve-ulasim-altyapisini-hedef-aldi-963980.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kredi kartı asgari ödeme oranlarına düzenleme bankacılık düzenleme ve denetleme kurumu (bddk) kararıyla limiti 100 ila 200 bin lira olan kredi kartlarının asgari ödeme oranı yüzde 30&#x27;a indirildi. limiti 200 bin liranın üzerinde olan kartlarda ise oran yüzde 40 olarak sabit kaldı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 20 Kasım 2026, 15:48</span>
+        </div>
+        <h3>Kredi kartı asgari ödeme oranlarına düzenleme</h3>
+        <p>Bankacılık Düzenleme ve Denetleme Kurumu (BDDK) kararıyla limiti 100 ila 200 bin lira olan kredi kartlarının asgari ödeme oranı yüzde 30&#x27;a indirildi. Limiti 200 bin liranın üzerinde olan kartlarda ise oran yüzde 40 olarak sabit kaldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Kasım 2026, 15:48</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/kredi-karti-asgari-odeme-oranlarina-duzenleme-963976.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meteorolojiden i̇stanbul dahil 24 il için sarı kodlu uyarı meteoroloji genel müdürlüğü, yarın beklenen gök gürültülü sağanak ve kuvvetli yağış nedeniyle i̇stanbul&#x27;un da aralarında bulunduğu 24 il için sarı kodlu uyarıda bulundu. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Kasım 2026, 14:22</span>
+        </div>
+        <h3>Meteorolojiden İstanbul dahil 24 il için sarı kodlu uyarı</h3>
+        <p>Meteoroloji Genel Müdürlüğü, yarın beklenen gök gürültülü sağanak ve kuvvetli yağış nedeniyle İstanbul&#x27;un da aralarında bulunduğu 24 il için sarı kodlu uyarıda bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Kasım 2026, 14:22</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/meteorolojiden-istanbul-dahil-24-il-icin-sari-kodlu-uyari/4132063" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="anthropic&#x27;in tarihi halka arzı yapay zeka &#x27;balonu&#x27; tartışmalarını yeniden gündeme taşıdı yapay zeka şirketi anthropic, hisselerinin borsada işlem görmeye başlamasının ardından dünyanın en değerli halka açık şirketlerinden biri haline geldi. şirketin değeri yaklaşık 1,76 trilyon dolara ulaştı. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 20 Kasım 2026, 03:45</span>
+        </div>
+        <h3>Anthropic&#x27;in tarihi halka arzı yapay zeka &#x27;balonu&#x27; tartışmalarını yeniden gündeme taşıdı</h3>
+        <p>Yapay zeka şirketi Anthropic, hisselerinin borsada işlem görmeye başlamasının ardından dünyanın en değerli halka açık şirketlerinden biri haline geldi. Şirketin değeri yaklaşık 1,76 trilyon dolara ulaştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Kasım 2026, 03:45</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqx28d4p72l4o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran dışişleri bakanı arakçi: abdnin deniz ablukasının kırılması gerekiyor i̇ran dışişleri bakanı abbas arakçi, i̇ran petrolünün ihracatı için abd ordusunun uyguladığı deniz ablukasının kırılması gerektiğini söyledi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 20 Kasım 2026, 14:57</span>
+        </div>
+        <h3>İran Dışişleri Bakanı Arakçi: ABDnin deniz ablukasının kırılması gerekiyor</h3>
+        <p>İran Dışişleri Bakanı Abbas Arakçi, İran petrolünün ihracatı için ABD ordusunun uyguladığı deniz ablukasının kırılması gerektiğini söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Kasım 2026, 14:57</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-disisleri-bakani-arakci-abdnin-deniz-ablukasinin-kirilmasi-gerekiyor-963972.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">18 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="elektrifikasyon neden tartışılıyor, türkiye yüzde 35 hedefini tutturabilir mi? antalya&#x27;da düzenlenen birleşmiş milletler (bm) iklim konferansı cop31&#x27;in başkanlığının bu yılki en önemli gündem maddelerinden biri de elektrifikasyon taahhüdü. 16 kasım&#x27;da yayımlanan taslak karar metninde, 2035 yılına kadar nihai enerji tüketiminin %35&#x27;inin elektrikten karşılanması hedefi de yer aldı. peki hedef tam olarak ne anlama geliyor, kimler bu tahhüdü destekliyor? daha da önemlisi kömür ya da doğal gazla da olsa elektrifikasyon hedefinin tutturulması iklim hedefleriyle uyumlu olabilir mi? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Kasım 2026, 03:27</span>
+        </div>
+        <h3>Elektrifikasyon neden tartışılıyor, Türkiye yüzde 35 hedefini tutturabilir mi?</h3>
+        <p>Antalya&#x27;da düzenlenen Birleşmiş Milletler (BM) iklim konferansı COP31&#x27;in başkanlığının bu yılki en önemli gündem maddelerinden biri de elektrifikasyon taahhüdü. 16 Kasım&#x27;da yayımlanan taslak karar metninde, 2035 yılına kadar nihai enerji tüketiminin %35&#x27;inin elektrikten karşılanması hedefi de yer aldı. Peki hedef tam olarak ne anlama geliyor, kimler bu tahhüdü destekliyor? Daha da önemlisi kömür ya da doğal gazla da olsa elektrifikasyon hedefinin tutturulması iklim hedefleriyle uyumlu olabilir mi?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Kasım 2026, 03:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/credq8yj8wz0o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="tekirdağ ve antalya ile 7 ilçe belediyesi akp&#x27;ye geçti yeni parti&#x27;den istifa eden tekirdağ belediye başkanı candan yüceer, cumhurbaşkanı recep tayyip erdoğan&#x27;ın taktığı rozetle iktidar partisine katıldı. aynı etkinlikte antalya ve beyoğlu belediyelerinin yanı sıra altı ilçe belediye başkanları da akp&#x27;ye geçti. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 19 Kasım 2026, 15:46</span>
+        </div>
+        <h3>Tekirdağ ve Antalya ile 7 ilçe belediyesi AKP&#x27;ye geçti</h3>
+        <p>Yeni Parti&#x27;den istifa eden Tekirdağ Belediye Başkanı Candan Yüceer, Cumhurbaşkanı Recep Tayyip Erdoğan&#x27;ın taktığı rozetle iktidar partisine katıldı. Aynı etkinlikte Antalya ve Beyoğlu belediyelerinin yanı sıra altı ilçe belediye başkanları da AKP&#x27;ye geçti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 19 Kasım 2026, 15:46</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqdr1xlreey7o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="soykırımcı netanyahu, güvenlik riski iddiasıyla muhalefeti birlik hükümetine zorlamayı sürdürüyor geçici i̇srail başbakanı binyamin netanyahu, &quot;zorlu güvenlik riskiyle&quot; karşı karşıya olduklarını ileri sürerek yashar partisi başkanı gadi eisenkot öncülüğündeki değişim blokuna birlik hükümeti çağrısını yineledi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Kasım 2026, 15:03</span>
+        </div>
+        <h3>Soykırımcı Netanyahu, güvenlik riski iddiasıyla muhalefeti birlik hükümetine zorlamayı sürdürüyor</h3>
+        <p>Geçici İsrail Başbakanı Binyamin Netanyahu, &quot;zorlu güvenlik riskiyle&quot; karşı karşıya olduklarını ileri sürerek Yashar Partisi Başkanı Gadi Eisenkot öncülüğündeki değişim blokuna birlik hükümeti çağrısını yineledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Kasım 2026, 15:03</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/soykirimci-netanyahu-guvenlik-riski-iddiasiyla-muhalefeti-birlik-hukumetine-zorlamayi-surduruyor-963974.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="başak gürkan arslan cinayetine ilişkin davada mütalaa açıklandı ankara&#x27;da çocuğunun gözü önünde işlenen başak gürkan arslan cinayetine ilişkin tutuklanan sanıklar barış arslan ve babası kudret arslan&#x27;ın &quot;canavarca hisle veya eziyet çektirerek kasten öldürme&quot; suçundan yargılanmalarına devam edildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Kasım 2026, 13:56</span>
+        </div>
+        <h3>Başak Gürkan Arslan cinayetine ilişkin davada mütalaa açıklandı</h3>
+        <p>Ankara&#x27;da çocuğunun gözü önünde işlenen Başak Gürkan Arslan cinayetine ilişkin tutuklanan sanıklar Barış Arslan ve babası Kudret Arslan&#x27;ın &quot;canavarca hisle veya eziyet çektirerek kasten öldürme&quot; suçundan yargılanmalarına devam edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Kasım 2026, 13:56</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/basak-gurkan-arslan-cinayetine-iliskin-davada-mutalaa-aciklandi/4132037" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ngiltere&#x27;de kocasının uyuşturucu verdiği kadın, 13 yıl boyunca başka erkeklerin tecavüzüne uğradı kocası tarafından uyuşturulan kadına tecavüz eden dört erkek suçlu bulundu. i̇ngiltere&#x27;de yaşayan joanne&#x27;in davası, fransa&#x27;da toplu tecavüze uğrayan gisèle pelicot&#x27;nun davasıyla çarpıcı benzerlikler taşıyor. uzmanlar, suçun &quot;son derece ağır bir istismar&quot; olduğunu söylüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Kasım 2026, 10:41</span>
+        </div>
+        <h3>İngiltere&#x27;de kocasının uyuşturucu verdiği kadın, 13 yıl boyunca başka erkeklerin tecavüzüne uğradı</h3>
+        <p>Kocası tarafından uyuşturulan kadına tecavüz eden dört erkek suçlu bulundu. İngiltere&#x27;de yaşayan Joanne&#x27;in davası, Fransa&#x27;da toplu tecavüze uğrayan Gisèle Pelicot&#x27;nun davasıyla çarpıcı benzerlikler taşıyor. Uzmanlar, suçun &quot;son derece ağır bir istismar&quot; olduğunu söylüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Kasım 2026, 10:41</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6p9dy1v49jvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="eyüpsultan belediye başkan yardımcısı çağdaş can elmalı tutuklandı ankara cumhuriyet başsavcılığınca eyüpsultan belediyesi&#x27;ne yönelik yürütülen soruşturmada başkan yardımcısı ve özel kalem müdürü çağdaş can elmalı da gözaltına alındı. belediye başkanı mithat bülent özmen aynı soruşkturmada tutuklanmıştı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Kasım 2026, 12:46</span>
+        </div>
+        <h3>Eyüpsultan Belediye Başkan Yardımcısı Çağdaş Can Elmalı tutuklandı</h3>
+        <p>Ankara Cumhuriyet Başsavcılığınca Eyüpsultan Belediyesi&#x27;ne yönelik yürütülen soruşturmada Başkan Yardımcısı ve Özel Kalem Müdürü Çağdaş Can Elmalı da gözaltına alındı. Belediye Başkanı Mithat Bülent Özmen aynı soruşkturmada tutuklanmıştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Kasım 2026, 12:46</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cxyvzvr4y6mgo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="jandarmadan ebeveynlere çocukların dijital dünyasını tanıyın uyarısı üsteğmen sancak, ailelerin yeni nesil suç örgütlerine karşı çocuklarının dijital dünyasını tanıması gerektiğini belirterek, &quot;burada amacımız, çocuğu sürekli kontrol etmek değil, tam tersine, çocukla güvene dayalı bir iletişim kurarak dijital dünyadaki riskleri birlikte fark edebilmek&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Kasım 2026, 15:59</span>
+        </div>
+        <h3>Jandarmadan ebeveynlere çocukların dijital dünyasını tanıyın uyarısı</h3>
+        <p>Üsteğmen Sancak, ailelerin yeni nesil suç örgütlerine karşı çocuklarının dijital dünyasını tanıması gerektiğini belirterek, &quot;Burada amacımız, çocuğu sürekli kontrol etmek değil, tam tersine, çocukla güvene dayalı bir iletişim kurarak dijital dünyadaki riskleri birlikte fark edebilmek&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Kasım 2026, 15:59</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/jandarmadan-ebeveynlere-cocuklarin-dijital-dunyasini-taniyin-uyarisi-963978.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ayasofya&#x27;nın yaklaşık 420 metre tünel hattı temizlendi ayasofya-i kebir cami-i şerifi&#x27;nin restorasyon çalışmaları kapsamında yapının yer altında bulunan tarihi tünel ve mekanlarında yürütülen temizlik, kazı, belgeleme ve güçlendirme çalışmalarında önemli aşama kaydedildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Kasım 2026, 15:52</span>
+        </div>
+        <h3>Ayasofya&#x27;nın yaklaşık 420 metre tünel hattı temizlendi</h3>
+        <p>Ayasofya-i Kebir Cami-i Şerifi&#x27;nin restorasyon çalışmaları kapsamında yapının yer altında bulunan tarihi tünel ve mekanlarında yürütülen temizlik, kazı, belgeleme ve güçlendirme çalışmalarında önemli aşama kaydedildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Kasım 2026, 15:52</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/kultur-sanat/ayasofyanin-yaklasik-420-metre-tunel-hatti-temizlendi-963977.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="114 kişilik ekip, 521 engelli delegenin erişimini kolaylaştırıyor birleşmiş milletler (bm) i̇klim değişikliği çerçeve sözleşmesi 31. taraflar konferansı&#x27;nda (cop31) 102&#x27;si gönüllü 114 kişilik erişilebilirlik ekibi, akreditasyon sistemine kayıtlı 521 engelli delegeye hizmet veriyor. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Kasım 2026, 13:49</span>
+        </div>
+        <h3>114 kişilik ekip, 521 engelli delegenin erişimini kolaylaştırıyor</h3>
+        <p>Birleşmiş Milletler (BM) İklim Değişikliği Çerçeve Sözleşmesi 31. Taraflar Konferansı&#x27;nda (COP31) 102&#x27;si gönüllü 114 kişilik erişilebilirlik ekibi, akreditasyon sistemine kayıtlı 521 engelli delegeye hizmet veriyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Kasım 2026, 13:49</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/114-kisilik-ekip-521-engelli-delegenin-erisimini-kolaylastiriyor/4132031" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sözcü televizyonunun sahibi burak akbay hakkındaki soruşturmada 4 şüpheli hakkında adli kontrol kararı i̇stanbul cumhuriyet başsavcılığınca hakkında yakalama kararı bulunan burak akbay&#x27;a yönelik yürütülen soruşturmada gözaltına alınan 4 şüpheli hakkında adli kontrol tedbiri uygulanmasına karar verildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Kasım 2026, 14:41</span>
+        </div>
+        <h3>Sözcü televizyonunun sahibi Burak Akbay hakkındaki soruşturmada 4 şüpheli hakkında adli kontrol kararı</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığınca hakkında yakalama kararı bulunan Burak Akbay&#x27;a yönelik yürütülen soruşturmada gözaltına alınan 4 şüpheli hakkında adli kontrol tedbiri uygulanmasına karar verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Kasım 2026, 14:41</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sozcu-televizyonunun-sahibi-burak-akbay-hakkindaki-sorusturmada-4-supheli-hakkinda-adli-kontrol-karari/4132088" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan çiftçi &quot;terörsüz türkiye&quot; gündemiyle 8 il valisi ile tunceli&#x27;de görüşecek i̇çişleri bakanı mustafa çiftçi, yarın tunceli&#x27;de &quot;terörsüz türkiye&quot; gündemiyle 8 ilin valisi ve güvenlik birimlerinin yöneticileriyle bir araya gelecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Kasım 2026, 14:29</span>
+        </div>
+        <h3>Bakan Çiftçi &quot;Terörsüz Türkiye&quot; gündemiyle 8 il valisi ile Tunceli&#x27;de görüşecek</h3>
+        <p>İçişleri Bakanı Mustafa Çiftçi, yarın Tunceli&#x27;de &quot;Terörsüz Türkiye&quot; gündemiyle 8 ilin valisi ve güvenlik birimlerinin yöneticileriyle bir araya gelecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Kasım 2026, 14:29</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-ciftci-terorsuz-turkiye-gundemiyle-8-il-valisi-ile-tuncelide-gorusecek/4132072" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cop31&#x27;deki sıfır atık müzesi, dünyanın dört bir yanından gelen katılımcıları ağırladı bm i̇klim değişikliği çerçeve sözleşmesi&#x27;nin 31. taraflar konferansı&#x27;nda (cop31) yer alan ve emine erdoğan tarafından açılışı yapılan sıfır atık müzesi, zirve boyunca dünyanın dört bir yanından gelen katılımcıları ağırladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Kasım 2026, 13:33</span>
+        </div>
+        <h3>COP31&#x27;deki Sıfır Atık Müzesi, dünyanın dört bir yanından gelen katılımcıları ağırladı</h3>
+        <p>BM İklim Değişikliği Çerçeve Sözleşmesi&#x27;nin 31. Taraflar Konferansı&#x27;nda (COP31) yer alan ve Emine Erdoğan tarafından açılışı yapılan Sıfır Atık Müzesi, zirve boyunca dünyanın dört bir yanından gelen katılımcıları ağırladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Kasım 2026, 13:33</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cop31deki-sifir-atik-muzesi-dunyanin-dort-bir-yanindan-gelen-katilimcilari-agirladi/4132016" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="malezya, 10 bin arakanlı müslüman göçmeni türkiye&#x27;ye yerleştirmeyi planlıyor malezya hükümeti, 10 bin arakanlı müslüman göçmeni türkiye&#x27;ye yerleştirmeyi hedeflediğini açıkladı. türk yetkililerden henüz konuyla ilgili bir açıklama yapılmadı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Kasım 2026, 15:34</span>
+        </div>
+        <h3>Malezya, 10 bin Arakanlı Müslüman göçmeni Türkiye&#x27;ye yerleştirmeyi planlıyor</h3>
+        <p>Malezya hükümeti, 10 bin Arakanlı Müslüman göçmeni Türkiye&#x27;ye yerleştirmeyi hedeflediğini açıkladı. Türk yetkililerden henüz konuyla ilgili bir açıklama yapılmadı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Kasım 2026, 15:34</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmn4k8g9xg1no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="pankreas kanserinde tümörü küçülten veya yok eden hap umudu günlük alınan daraxonrasib hapı, en ölümcül kanser türlerinden birine sahip bazı hastalarda tümörleri küçültüyor ve hatta ortadan kaldırabiliyor gibi görünüyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Kasım 2026, 11:13</span>
+        </div>
+        <h3>Pankreas kanserinde tümörü küçülten veya yok eden hap umudu</h3>
+        <p>Günlük alınan daraxonrasib hapı, en ölümcül kanser türlerinden birine sahip bazı hastalarda tümörleri küçültüyor ve hatta ortadan kaldırabiliyor gibi görünüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Kasım 2026, 11:13</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cvze7d61zdwro?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sözcü&#x27;ye operasyon: gözaltındaki dört kişi adliyeye sevk edildi i̇stanbul cumhuriyet başsavcılığı tarafından yürütülen soruşturma kapsamında sözcü medya grubu&#x27;na yönelik operasyonda gözaltına alınan dört kişi adliyeye sevk edildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 20 Kasım 2026, 11:05</span>
+        </div>
+        <h3>Sözcü&#x27;ye operasyon: Gözaltındaki dört kişi adliyeye sevk edildi</h3>
+        <p>İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında Sözcü Medya Grubu&#x27;na yönelik operasyonda gözaltına alınan dört kişi adliyeye sevk edildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 20 Kasım 2026, 11:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmqlq51yvq26o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="myanmar, uad&#x27;nin soykırım kararının adil olmadığını öne sürdü myanmar yönetimi, uluslararası adalet divanı&#x27;nın (uad) myanmar&#x27;ın arakanlı müslümanlara (rohingya) karşı soykırım suçu işlediğine ilişkin kararının &quot;adil olmadığını&quot; iddia etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 20 Kasım 2026, 15:00</span>
+        </div>
+        <h3>Myanmar, UAD&#x27;nin soykırım kararının adil olmadığını öne sürdü</h3>
+        <p>Myanmar yönetimi, Uluslararası Adalet Divanı&#x27;nın (UAD) Myanmar&#x27;ın Arakanlı Müslümanlara (Rohingya) karşı soykırım suçu işlediğine ilişkin kararının &quot;adil olmadığını&quot; iddia etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 20 Kasım 2026, 15:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/myanmar-uadnin-soykirim-kararinin-adil-olmadigini-one-surdu-963973.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cop31&#x27;de 10 günde 2 bin 751 kişiye sağlık hizmeti sunuldu antalya&#x27;da düzenlenen birleşmiş milletler i̇klim değişikliği çerçeve sözleşmesi 31. taraflar konferansı&#x27;nda (cop31) sağlık ekipleri, 10 günde 2 bin 751 kişiye kesintisiz sağlık hizmeti sundu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Kasım 2026, 16:23</span>
+        </div>
+        <h3>COP31&#x27;de 10 günde 2 bin 751 kişiye sağlık hizmeti sunuldu</h3>
+        <p>Antalya&#x27;da düzenlenen Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi 31. Taraflar Konferansı&#x27;nda (COP31) sağlık ekipleri, 10 günde 2 bin 751 kişiye kesintisiz sağlık hizmeti sundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Kasım 2026, 16:23</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cop31de-10-gunde-2-bin-751-kisiye-saglik-hizmeti-sunuldu/4132203" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fetö&#x27;ye yönelik 28 ildeki operasyonlarda 47 şüpheli tutuklandı fetullahçı terör örgütü&#x27;ne (fetö) yönelik polis ekiplerince son 10 günde düzenlenen operasyonlarda yakalanan 83 şüpheliden 47&#x27;si tutuklandı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Kasım 2026, 14:38</span>
+        </div>
+        <h3>FETÖ&#x27;ye yönelik 28 ildeki operasyonlarda 47 şüpheli tutuklandı</h3>
+        <p>Fetullahçı Terör Örgütü&#x27;ne (FETÖ) yönelik polis ekiplerince son 10 günde düzenlenen operasyonlarda yakalanan 83 şüpheliden 47&#x27;si tutuklandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Kasım 2026, 14:38</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/fetoye-yonelik-28-ildeki-operasyonlarda-47-supheli-tutuklandi/4132085" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cop31 gençlik forumu&#x27;nda iklim değişikliği konusunda gençlerin beklentileri konuşuldu türkiye&#x27;nin ev sahipliğinde antalya&#x27;da düzenlenen birleşmiş milletler (bm) i̇klim değişikliği çerçeve sözleşmesi&#x27;nin 31. taraflar konferansı&#x27;nda (cop31) teknoloji çağı gençliğinin iklim değişikliğine ilişkin farkındalığı ve beklentileri konuşuldu. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 20 Kasım 2026, 16:26</span>
+        </div>
+        <h3>COP31 Gençlik Forumu&#x27;nda iklim değişikliği konusunda gençlerin beklentileri konuşuldu</h3>
+        <p>Türkiye&#x27;nin ev sahipliğinde Antalya&#x27;da düzenlenen Birleşmiş Milletler (BM) İklim Değişikliği Çerçeve Sözleşmesi&#x27;nin 31. Taraflar Konferansı&#x27;nda (COP31) teknoloji çağı gençliğinin iklim değişikliğine ilişkin farkındalığı ve beklentileri konuşuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 20 Kasım 2026, 16:26</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cop31-genclik-forumunda-iklim-degisikligi-konusunda-genclerin-beklentileri-konusuldu/4132210" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
