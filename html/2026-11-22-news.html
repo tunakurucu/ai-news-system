@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">22 Kasım 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">22 Kasım 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>ekonomi</strong> 1</span><span class="stat-item"><strong>dünya</strong> 9</span><span class="stat-item"><strong>teknoloji</strong> 1</span><span class="stat-item"><strong>genel</strong> 18</span><span class="stat-item"><strong>gümrük</strong> 1</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">EKONOMI</span>
+        </div>
+        <h3>Anthropic&#x27;in yükselişiyle dolar milyarderi olan yedi kişi kim?</h3>
+        <p>Bir zamanların bilinmeyen girişimi Anthropic, yalnızca beş yıl içinde bir teknoloji devine dönüşerek değeri 1 trilyon doların üzerine çıkan bir şirket haline geldi. Şirketin yedi kurucusu, bugün kağıt üzerinde milyarderler kulübüne katılmış durumda</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 21 Kasım 2026, 11:18</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/ck987ypp95ddo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 22 Kasım 2026, 14:50</span>
+            </div>
+            <h3>Bakan Kurum: Örtü Karar taslak metni için yüksek çoğunlukla bir uzlaşı var</h3>
+            <p>COP31 Başkanı ve Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, zirvedeki son &quot;Örtü Karar&quot; taslak metnine ilişkin, &quot;Gördüğümüz yüksek çoğunlukla bir uzlaşı var. Çok ufak tefek konular kaldı. Bu karar çıktığı zaman çok önemli işler başarmış olacağız.&quot; dedi.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-kurum-ortu-karar-taslak-metni-icin-yuksek-cogunlukla-bir-uzlasi-var-964137.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 22 Kasım 2026, 15:27</span>
+            </div>
+            <h3>COP31: &#x27;Antalya Paktı&#x27; kabul edilmedi, müzakereler çökebilir</h3>
+            <p>20 Kasım Cuma günü sona ermesi gereken Birleşmiş Milletler (BM) iklim konferansı COP31&#x27;de uzayan görüşmelerin ardından Antalya Paktı adı verilen bir taslak yayımlandı. Avrupa Birliği ve Panama&#x27;nın teklifi resmen reddetmesiyle müzakereler çökmenin eşiğine geldi. Antalya&#x27;daki konferanstan son gelişmeleri aktarıyoruz.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c5rmg31g88glo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 22 Kasım 2026, 12:49</span>
+            </div>
+            <h3>Kapadokya&#x27;daki antik yeraltı şehrinden iklim dersleri</h3>
+            <p>Yüzyıllar önce Kapadokyalılar düşmanlarından kaçmak için yer altına sığınmış ve aşırı hava koşullarından da korunmuşlardı. Bugün ise yer altı mağaraları iklim krizinde yeniden bir çözüm sunabilir.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cm702e55rp84o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">BBC Türkçe · 22 Kasım 2026, 12:30</span>
+            </div>
+            <h3>Son dönemde yaşanan teknolojik kesinti, saldırı ve güvenlik açıklarının sebebi ne?</h3>
+            <p>Kesintiler ve bilgi ile teknoloji arızaları yaygın olsa da bu ölçekte yaşanması alışılmadık bir durum. Bunların birbiriyle bağlantılı olduğuna dair hiçbir kanıt yok ame sürekli yaşanan kesintiler endişe verici olabiliyor.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cw7728xx70z5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="anthropic&#x27;in yükselişiyle dolar milyarderi olan yedi kişi kim? bir zamanların bilinmeyen girişimi anthropic, yalnızca beş yıl içinde bir teknoloji devine dönüşerek değeri 1 trilyon doların üzerine çıkan bir şirket haline geldi. şirketin yedi kurucusu, bugün kağıt üzerinde milyarderler kulübüne katılmış durumda ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 21 Kasım 2026, 11:18</span>
+        </div>
+        <h3>Anthropic&#x27;in yükselişiyle dolar milyarderi olan yedi kişi kim?</h3>
+        <p>Bir zamanların bilinmeyen girişimi Anthropic, yalnızca beş yıl içinde bir teknoloji devine dönüşerek değeri 1 trilyon doların üzerine çıkan bir şirket haline geldi. Şirketin yedi kurucusu, bugün kağıt üzerinde milyarderler kulübüne katılmış durumda</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Kasım 2026, 11:18</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck987ypp95ddo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">9 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="bakan kurum: örtü karar taslak metni için yüksek çoğunlukla bir uzlaşı var cop31 başkanı ve çevre, şehircilik ve i̇klim değişikliği bakanı murat kurum, zirvedeki son &quot;örtü karar&quot; taslak metnine ilişkin, &quot;gördüğümüz yüksek çoğunlukla bir uzlaşı var. çok ufak tefek konular kaldı. bu karar çıktığı zaman çok önemli işler başarmış olacağız.&quot; dedi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Kasım 2026, 14:50</span>
+        </div>
+        <h3>Bakan Kurum: Örtü Karar taslak metni için yüksek çoğunlukla bir uzlaşı var</h3>
+        <p>COP31 Başkanı ve Çevre, Şehircilik ve İklim Değişikliği Bakanı Murat Kurum, zirvedeki son &quot;Örtü Karar&quot; taslak metnine ilişkin, &quot;Gördüğümüz yüksek çoğunlukla bir uzlaşı var. Çok ufak tefek konular kaldı. Bu karar çıktığı zaman çok önemli işler başarmış olacağız.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Kasım 2026, 14:50</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-kurum-ortu-karar-taslak-metni-icin-yuksek-cogunlukla-bir-uzlasi-var-964137.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cop31: &#x27;antalya paktı&#x27; kabul edilmedi, müzakereler çökebilir 20 kasım cuma günü sona ermesi gereken birleşmiş milletler (bm) iklim konferansı cop31&#x27;de uzayan görüşmelerin ardından antalya paktı adı verilen bir taslak yayımlandı. avrupa birliği ve panama&#x27;nın teklifi resmen reddetmesiyle müzakereler çökmenin eşiğine geldi. antalya&#x27;daki konferanstan son gelişmeleri aktarıyoruz. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 22 Kasım 2026, 15:27</span>
+        </div>
+        <h3>COP31: &#x27;Antalya Paktı&#x27; kabul edilmedi, müzakereler çökebilir</h3>
+        <p>20 Kasım Cuma günü sona ermesi gereken Birleşmiş Milletler (BM) iklim konferansı COP31&#x27;de uzayan görüşmelerin ardından Antalya Paktı adı verilen bir taslak yayımlandı. Avrupa Birliği ve Panama&#x27;nın teklifi resmen reddetmesiyle müzakereler çökmenin eşiğine geldi. Antalya&#x27;daki konferanstan son gelişmeleri aktarıyoruz.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Kasım 2026, 15:27</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c5rmg31g88glo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kapadokya&#x27;daki antik yeraltı şehrinden iklim dersleri yüzyıllar önce kapadokyalılar düşmanlarından kaçmak için yer altına sığınmış ve aşırı hava koşullarından da korunmuşlardı. bugün ise yer altı mağaraları iklim krizinde yeniden bir çözüm sunabilir. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 22 Kasım 2026, 12:49</span>
+        </div>
+        <h3>Kapadokya&#x27;daki antik yeraltı şehrinden iklim dersleri</h3>
+        <p>Yüzyıllar önce Kapadokyalılar düşmanlarından kaçmak için yer altına sığınmış ve aşırı hava koşullarından da korunmuşlardı. Bugün ise yer altı mağaraları iklim krizinde yeniden bir çözüm sunabilir.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Kasım 2026, 12:49</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm702e55rp84o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="can atalay&#x27;dan ai̇hm kararı sonrası tahliye çağrısı milletvekilliği düşürülmüş tutuklu avukat can atalay, avrupa i̇nsan hakları mahkemesi&#x27;nin (ai̇hm) hakkındaki kararının ardından derhal tahliye edilmesini ve seçildiği hatay milletvekili olarak meclis çalışmalarına katılmasının sağlanmasını istedi dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 21 Kasım 2026, 12:58</span>
+        </div>
+        <h3>Can Atalay&#x27;dan AİHM kararı sonrası tahliye çağrısı</h3>
+        <p>Milletvekilliği düşürülmüş tutuklu avukat Can Atalay, Avrupa İnsan Hakları Mahkemesi&#x27;nin (AİHM) hakkındaki kararının ardından derhal tahliye edilmesini ve seçildiği Hatay milletvekili olarak Meclis çalışmalarına katılmasının sağlanmasını istedi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Kasım 2026, 12:58</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c3y0xnx8vk5ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="22 il için &#x27;sarı&#x27; kodlu uyarı: fırtına ve yağmur geliyor yeni haftanın ilk günlerinde yurt genelinde yağış ve kuvvetli rüzgar etkili olacak. batı karadeniz, marmara ve ege&#x27;de fırtına etkisini gün boyu sürdürecek. yurdun doğusunda ise sağanak, yüksek kesimlerde ise karla karışık yağmur ve kar bekleniyor. 22 il için &#x27;sarı&#x27; kodlu uyarı verilirken burada yaşayan vatandaşlardan tedbirli olmaları istendi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Kasım 2026, 14:21</span>
+        </div>
+        <h3>22 il için &#x27;sarı&#x27; kodlu uyarı: Fırtına ve yağmur geliyor</h3>
+        <p>Yeni haftanın ilk günlerinde yurt genelinde yağış ve kuvvetli rüzgar etkili olacak. Batı Karadeniz, Marmara ve Ege&#x27;de fırtına etkisini gün boyu sürdürecek. Yurdun doğusunda ise sağanak, yüksek kesimlerde ise karla karışık yağmur ve kar bekleniyor. 22 il için &#x27;sarı&#x27; kodlu uyarı verilirken burada yaşayan vatandaşlardan tedbirli olmaları istendi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Kasım 2026, 14:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/22-il-icin-sari-kodlu-uyari-firtina-ve-yagmur-geliyor-964133.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cop31 müzakereleri fosil yakıt tartışmalarında düğümlendi antalya&#x27;da 20 kasım&#x27;da sona ermesi planlanan bm&#x27;nin iklim konferansı cop31&#x27;de ülkeler nihai bir anlaşmaya varamadı. delegeler bir karar metninde uzlaşmak için müzakerelerini sürdürüyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 21 Kasım 2026, 12:37</span>
+        </div>
+        <h3>COP31 müzakereleri fosil yakıt tartışmalarında düğümlendi</h3>
+        <p>Antalya&#x27;da 20 Kasım&#x27;da sona ermesi planlanan BM&#x27;nin iklim konferansı COP31&#x27;de ülkeler nihai bir anlaşmaya varamadı. Delegeler bir karar metninde uzlaşmak için müzakerelerini sürdürüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Kasım 2026, 12:37</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq8j40d29kneo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul için fırtına ve kuvvetli sağanak uyarısı i̇stanbul valiliği, kentte yarın fırtına ve kuvvetli sağanağın beklendiğini açıkladı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Kasım 2026, 15:21</span>
+        </div>
+        <h3>İstanbul için fırtına ve kuvvetli sağanak uyarısı</h3>
+        <p>İstanbul Valiliği, kentte yarın fırtına ve kuvvetli sağanağın beklendiğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Kasım 2026, 15:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/istanbul-icin-firtina-ve-kuvvetli-saganak-uyarisi-964139.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="zelenski: bu hafta ukrayna&#x27;nın 20 bölgesi, rus füzeleriyle vuruldu ukrayna devlet başkanı volodimir zelenski, rus ordusunun son bir haftada ülkesinin 20 farklı bölgesini hedef aldığını bildirdi. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Kasım 2026, 14:33</span>
+        </div>
+        <h3>Zelenski: Bu hafta Ukrayna&#x27;nın 20 bölgesi, Rus füzeleriyle vuruldu</h3>
+        <p>Ukrayna Devlet Başkanı Volodimir Zelenski, Rus ordusunun son bir haftada ülkesinin 20 farklı bölgesini hedef aldığını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Kasım 2026, 14:33</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/zelenski-bu-hafta-ukraynanin-20-bolgesi-rus-fuzeleriyle-vuruldu-964135.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran devrim muhafızları: hürmüz boğazı&#x27;nın doğusunda abd yapımı i̇ha düşürüldü i̇ran devrim muhafızları ordusu, hürmüz boğazı&#x27;nın doğusunda abd yapımı mq-1 tipi insansız hava aracının (i̇ha) ülke hava savunma sistemleri tarafından düşürüldüğünü öne sürdü. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 22 Kasım 2026, 14:13</span>
+        </div>
+        <h3>İran Devrim Muhafızları: Hürmüz Boğazı&#x27;nın doğusunda ABD yapımı İHA düşürüldü</h3>
+        <p>İran Devrim Muhafızları Ordusu, Hürmüz Boğazı&#x27;nın doğusunda ABD yapımı MQ-1 tipi insansız hava aracının (İHA) ülke hava savunma sistemleri tarafından düşürüldüğünü öne sürdü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Kasım 2026, 14:13</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-devrim-muhafizlari-hurmuz-bogazinin-dogusunda-abd-yapimi-iha-dusuruldu-964132.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="son dönemde yaşanan teknolojik kesinti, saldırı ve güvenlik açıklarının sebebi ne? kesintiler ve bilgi ile teknoloji arızaları yaygın olsa da bu ölçekte yaşanması alışılmadık bir durum. bunların birbiriyle bağlantılı olduğuna dair hiçbir kanıt yok ame sürekli yaşanan kesintiler endişe verici olabiliyor. teknoloji bbc türkçe" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">BBC Türkçe · 22 Kasım 2026, 12:30</span>
+        </div>
+        <h3>Son dönemde yaşanan teknolojik kesinti, saldırı ve güvenlik açıklarının sebebi ne?</h3>
+        <p>Kesintiler ve bilgi ile teknoloji arızaları yaygın olsa da bu ölçekte yaşanması alışılmadık bir durum. Bunların birbiriyle bağlantılı olduğuna dair hiçbir kanıt yok ame sürekli yaşanan kesintiler endişe verici olabiliyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Kasım 2026, 12:30</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cw7728xx70z5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">18 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="i̇letişim başkanlığından &quot;türkiye&#x27;nin diplomasi rotası: dört zirvede lider diplomasisi&quot; belgeseli i̇letişim başkanlığı, cumhurbaşkanı erdoğan&#x27;ın nato, bm, tdt ve cop31 zirvelerindeki yoğun diplomasi trafiğini, liderlerle kritik görüşmelerini içeren &quot;türkiye&#x27;nin diplomasi rotası: dört zirvede lider diplomasisi&quot; belgeselini hazırladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Kasım 2026, 13:19</span>
+        </div>
+        <h3>İletişim Başkanlığından &quot;Türkiye&#x27;nin Diplomasi Rotası: Dört Zirvede Lider Diplomasisi&quot; belgeseli</h3>
+        <p>İletişim Başkanlığı, Cumhurbaşkanı Erdoğan&#x27;ın NATO, BM, TDT ve COP31 zirvelerindeki yoğun diplomasi trafiğini, liderlerle kritik görüşmelerini içeren &quot;Türkiye&#x27;nin Diplomasi Rotası: Dört Zirvede Lider Diplomasisi&quot; belgeselini hazırladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Kasım 2026, 13:19</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/iletisim-baskanligindan-turkiyenin-diplomasi-rotasi-dort-zirvede-lider-diplomasisi-belgeseli/4133475" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan kurum: geldiğimiz noktada tarihi bir fırsatın eşiğindeyiz çevre, şehircilik ve i̇klim değişikliği bakanı kurum, cop31 genel kurul kapanış oturumu&#x27;nda yaptığı konuşmada, &quot;son ana kadar uzlaşının imkanlarını aradık, arıyoruz. geldiğimiz noktada tarihi bir fırsatın eşiğindeyiz.&quot; dedi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Kasım 2026, 13:56</span>
+        </div>
+        <h3>Bakan Kurum: Geldiğimiz noktada tarihi bir fırsatın eşiğindeyiz</h3>
+        <p>Çevre, Şehircilik ve İklim Değişikliği Bakanı Kurum, COP31 Genel Kurul Kapanış Oturumu&#x27;nda yaptığı konuşmada, &quot;Son ana kadar uzlaşının imkanlarını aradık, arıyoruz. Geldiğimiz noktada tarihi bir fırsatın eşiğindeyiz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Kasım 2026, 13:56</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-kurum-geldigimiz-noktada-tarihi-bir-firsatin-esigindeyiz/4133513" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&#x27;i̇nsanlar konuşmaktan çekiniyor&#x27;: altı erkekten birinde görülen varikosel hastalığı nedir? dünyanın tedavi edilebilir en yaygın erkek kısırlığı hastalığı olan varikosel, her altı erkekten birini etkiliyor. ancak çoğu erkeğin teşhis alana kadar hastalıktan haberi bile olmuyor. peki bu hastalık teşhis ve tedavi süreci nasıl ilerliyor? ameliyat olanlar ne diyor? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Kasım 2026, 11:36</span>
+        </div>
+        <h3>&#x27;İnsanlar konuşmaktan çekiniyor&#x27;: Altı erkekten birinde görülen varikosel hastalığı nedir?</h3>
+        <p>Dünyanın tedavi edilebilir en yaygın erkek kısırlığı hastalığı olan varikosel, her altı erkekten birini etkiliyor. Ancak çoğu erkeğin teşhis alana kadar hastalıktan haberi bile olmuyor. Peki bu hastalık teşhis ve tedavi süreci nasıl ilerliyor? Ameliyat olanlar ne diyor?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Kasım 2026, 11:36</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm2l5jn0r8q8o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeni &#x27;bond kızı&#x27; kim olacak? pattinson&#x27;ın 007 olarak açıklanmasının ardından yorumcular, başrol kadın oyuncusunun kim olacağını tahmin etmeye çalışıyor. ancak &quot;bond kızı&quot; ile ilgili daha büyük bir soru daha var: bu rol artık değişmeli mi? genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 21 Kasım 2026, 17:46</span>
+        </div>
+        <h3>Yeni &#x27;Bond kızı&#x27; kim olacak?</h3>
+        <p>Pattinson&#x27;ın 007 olarak açıklanmasının ardından yorumcular, başrol kadın oyuncusunun kim olacağını tahmin etmeye çalışıyor. Ancak &quot;Bond kızı&quot; ile ilgili daha büyük bir soru daha var: Bu rol artık değişmeli mi?</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 21 Kasım 2026, 17:46</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqr7g82mg2llo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="oruç reis 50 kişilik ekibiyle pakistan açıklarında görevde oruç reis sismik araştırma gemisi, somali&#x27;deki ilk kıtalararası görevinde de yer alan 50 kişilik mürettebatıyla ikinci yurt dışı görevi kapsamında pakistan açıklarında sismik araştırma çalışmalarına başladı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Kasım 2026, 14:58</span>
+        </div>
+        <h3>Oruç Reis 50 kişilik ekibiyle Pakistan açıklarında görevde</h3>
+        <p>Oruç Reis Sismik Araştırma Gemisi, Somali&#x27;deki ilk kıtalararası görevinde de yer alan 50 kişilik mürettebatıyla ikinci yurt dışı görevi kapsamında Pakistan açıklarında sismik araştırma çalışmalarına başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Kasım 2026, 14:58</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/oruc-reis-50-kisilik-ekibiyle-pakistan-aciklarinda-gorevde-964138.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="arap koalisyonu: husilerin riyad bölgesine yönelik i̇ha saldırısı engellendi yemen&#x27;deki meşru hükümete destek veren suudi arabistan öncülüğündeki arap koalisyonu, i̇ran destekli husilerin suudi arabistan&#x27;ın başkenti riyad bölgesine düzenlediği insansız hava aracı (i̇ha) saldırısının önlendiğini bildirdi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Kasım 2026, 14:45</span>
+        </div>
+        <h3>Arap Koalisyonu: Husilerin Riyad bölgesine yönelik İHA saldırısı engellendi</h3>
+        <p>Yemen&#x27;deki meşru hükümete destek veren Suudi Arabistan öncülüğündeki Arap Koalisyonu, İran destekli Husilerin Suudi Arabistan&#x27;ın başkenti Riyad bölgesine düzenlediği insansız hava aracı (İHA) saldırısının önlendiğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Kasım 2026, 14:45</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/arap-koalisyonu-husilerin-riyad-bolgesine-yonelik-iha-saldirisi-engellendi-964136.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="orman şehidimizin adı okulunda yaşatılacak eskişehir&#x27;in seyitgazi ilçesinde çıkan orman yangınına müdahale ederken şehit olan hilmi şahin&#x27;in adı, memleketi denizli&#x27;nin beyağaç ilçesinde eğitim gördüğü okula verildi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Kasım 2026, 14:00</span>
+        </div>
+        <h3>Orman şehidimizin adı okulunda yaşatılacak</h3>
+        <p>Eskişehir&#x27;in Seyitgazi ilçesinde çıkan orman yangınına müdahale ederken şehit olan Hilmi Şahin&#x27;in adı, memleketi Denizli&#x27;nin Beyağaç ilçesinde eğitim gördüğü okula verildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Kasım 2026, 14:00</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/orman-sehidimizin-adi-okulunda-yasatilacak-964131.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kepez belediyesi&#x27;ne rüşvet soruşturması: 20 gözaltı antalya&#x27;da, kepez belediyesine yönelik yürütülen soruşturma kapsamında &quot;rüşvet&quot;, &quot;kamu kurum ve kuruluşlarının ihalesine fesat karıştırma&quot; ve &quot;edimin ifasına fesat karıştırma&quot; suçlarından 20 zanlı gözaltına alındı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 22 Kasım 2026, 13:43</span>
+        </div>
+        <h3>Kepez Belediyesi&#x27;ne rüşvet soruşturması: 20 gözaltı</h3>
+        <p>Antalya&#x27;da, Kepez Belediyesine yönelik yürütülen soruşturma kapsamında &quot;rüşvet&quot;, &quot;kamu kurum ve kuruluşlarının ihalesine fesat karıştırma&quot; ve &quot;edimin ifasına fesat karıştırma&quot; suçlarından 20 zanlı gözaltına alındı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Kasım 2026, 13:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/turkiye/kepez-belediyesine-rusvet-sorusturmasi-20-gozalti-964130.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="oruç reis&#x27;in 50 kişilik ekibi somali&#x27;den sonra pakistan açıklarında görev yapıyor yerli ve milli imkanlarla geliştirilen oruç reis sismik araştırma gemisi, somali&#x27;deki ilk kıtalararası görevinde de yer alan 50 kişilik mürettebatıyla ikinci yurt dışı görevi kapsamında pakistan açıklarında sismik araştırma çalışmalarına başladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Kasım 2026, 12:56</span>
+        </div>
+        <h3>Oruç Reis&#x27;in 50 kişilik ekibi Somali&#x27;den sonra Pakistan açıklarında görev yapıyor</h3>
+        <p>Yerli ve milli imkanlarla geliştirilen Oruç Reis Sismik Araştırma Gemisi, Somali&#x27;deki ilk kıtalararası görevinde de yer alan 50 kişilik mürettebatıyla ikinci yurt dışı görevi kapsamında Pakistan açıklarında sismik araştırma çalışmalarına başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Kasım 2026, 12:56</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/oruc-reisin-50-kisilik-ekibi-somaliden-sonra-pakistan-aciklarinda-gorev-yapiyor/4133459" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="kadem, &quot;25 kasım kadına yönelik şiddetle mücadele kampanyası&quot;nı tanıttı kadın ve demokrasi vakfı (kadem), &quot;25 kasım kadına yönelik şiddete karşı uluslararası mücadele günü&quot;ne yönelik &quot;güzellik dayatması şiddettir&quot; sloganlı kampanyasını i̇stanbul atatürk kültür merkezi&#x27;nde (akm) tanıttı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Kasım 2026, 12:41</span>
+        </div>
+        <h3>KADEM, &quot;25 Kasım Kadına Yönelik Şiddetle Mücadele Kampanyası&quot;nı tanıttı</h3>
+        <p>Kadın ve Demokrasi Vakfı (KADEM), &quot;25 Kasım Kadına Yönelik Şiddete Karşı Uluslararası Mücadele Günü&quot;ne yönelik &quot;Güzellik Dayatması Şiddettir&quot; sloganlı kampanyasını İstanbul Atatürk Kültür Merkezi&#x27;nde (AKM) tanıttı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Kasım 2026, 12:41</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/kadem-25-kasim-kadina-yonelik-siddetle-mucadele-kampanyasini-tanitti/4133444" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dmm, &quot;malatya ayaklandı&quot; paylaşımlarını yalanladı i̇letişim başkanlığı dezenformasyonla mücadele merkezince (dmm), sosyal medyada &quot;malatya ayaklandı&quot; ifadesiyle dolaşıma sokulan görüntülerin eski tarihli olduğu ve kamuoyunu yanıltmak amacıyla kasıtlı biçimde yeniden servis edildiği bildirildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Kasım 2026, 12:43</span>
+        </div>
+        <h3>DMM, &quot;Malatya ayaklandı&quot; paylaşımlarını yalanladı</h3>
+        <p>İletişim Başkanlığı Dezenformasyonla Mücadele Merkezince (DMM), sosyal medyada &quot;Malatya ayaklandı&quot; ifadesiyle dolaşıma sokulan görüntülerin eski tarihli olduğu ve kamuoyunu yanıltmak amacıyla kasıtlı biçimde yeniden servis edildiği bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Kasım 2026, 12:43</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/dmm-malatya-ayaklandi-paylasimlarini-yalanladi/4133445" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="antalya kepez belediyesi&#x27;ne soruşturma: 20 kişi gözaltına alındı antalya cumhuriyet başsavcılığı tarafından antalya kepez belediyesi&#x27;ne karşı yürütülen soruşturma kapsamında 20 kişinin gözaltına alındığı bildirildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Kasım 2026, 15:14</span>
+        </div>
+        <h3>Antalya Kepez Belediyesi&#x27;ne soruşturma: 20 kişi gözaltına alındı</h3>
+        <p>Antalya Cumhuriyet Başsavcılığı tarafından Antalya Kepez Belediyesi&#x27;ne karşı yürütülen soruşturma kapsamında 20 kişinin gözaltına alındığı bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Kasım 2026, 15:14</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6y0xy47q4wpo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="galler prensesi kate yeni belgeselde kanser yolculuğunu anlatıyor bbc&#x27;nin yeni belgeseli galler prensesi catherine&#x27;in kanser sürecini anlatıyor. prenses, &quot;kanser teşhisinin sizde değiştirdiği şeylerin çok daha derin bir boyutu var&quot; diyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 22 Kasım 2026, 13:04</span>
+        </div>
+        <h3>Galler Prensesi Kate yeni belgeselde kanser yolculuğunu anlatıyor</h3>
+        <p>BBC&#x27;nin yeni belgeseli Galler Prensesi Catherine&#x27;in kanser sürecini anlatıyor. Prenses, &quot;Kanser teşhisinin sizde değiştirdiği şeylerin çok daha derin bir boyutu var&quot; diyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 22 Kasım 2026, 13:04</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6z7490p3l8no?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="genelkurmay başkanı orgeneral bayraktaroğlu, somali&#x27;de bazı temaslarda bulundu genelkurmay başkanı orgeneral selçuk bayraktaroğlu, somali&#x27;de bazı temaslarda bulundu. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Kasım 2026, 13:51</span>
+        </div>
+        <h3>Genelkurmay Başkanı Orgeneral Bayraktaroğlu, Somali&#x27;de bazı temaslarda bulundu</h3>
+        <p>Genelkurmay Başkanı Orgeneral Selçuk Bayraktaroğlu, Somali&#x27;de bazı temaslarda bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Kasım 2026, 13:51</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/genelkurmay-baskani-orgeneral-bayraktaroglu-somalide-bazi-temaslarda-bulundu/4133507" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yabancı dil bilgisi seviye tespit sınavı yapıldı ölçme, seçme ve yerleştirme merkezi (ösym) başkanlığınca yabancı dil bilgisi seviye tespit sınavı (2026-yds/2) yapıldı. sınavın sonuçları 10 aralık&#x27;ta duyurulacak. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Kasım 2026, 13:24</span>
+        </div>
+        <h3>Yabancı Dil Bilgisi Seviye Tespit Sınavı yapıldı</h3>
+        <p>Ölçme, Seçme ve Yerleştirme Merkezi (ÖSYM) Başkanlığınca Yabancı Dil Bilgisi Seviye Tespit Sınavı (2026-YDS/2) yapıldı. Sınavın sonuçları 10 Aralık&#x27;ta duyurulacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Kasım 2026, 13:24</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yabanci-dil-bilgisi-seviye-tespit-sinavi-yapildi/4133478" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türk kızılay&#x27;dan gazze&#x27;ye yaklaşık 25 bin kişilik gıda yardımı türk kızılay, yaklaşık 25 bin kişilik gıda yardımını gazze&#x27;deki ihtiyaç sahiplerine ulaştırdı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Kasım 2026, 12:46</span>
+        </div>
+        <h3>Türk Kızılay&#x27;dan Gazze&#x27;ye yaklaşık 25 bin kişilik gıda yardımı</h3>
+        <p>Türk Kızılay, yaklaşık 25 bin kişilik gıda yardımını Gazze&#x27;deki ihtiyaç sahiplerine ulaştırdı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Kasım 2026, 12:46</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/turk-kizilaydan-gazzeye-yaklasik-25-bin-kisilik-gida-yardimi/4133446" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da bu yıl 4,5 milyonu aşkın ağız ve diş sağlığı muayenesi yapıldı i̇stanbul&#x27;daki kamuya bağlı ağız ve diş sağlığı merkezleri, hastaneleri ve kamu hastanelerinin diş polikliniklerinde bu yıl 4 milyon 535 bin 716 muayenenin gerçekleştirildiği bildirildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Kasım 2026, 13:01</span>
+        </div>
+        <h3>İstanbul&#x27;da bu yıl 4,5 milyonu aşkın ağız ve diş sağlığı muayenesi yapıldı</h3>
+        <p>İstanbul&#x27;daki kamuya bağlı ağız ve diş sağlığı merkezleri, hastaneleri ve kamu hastanelerinin diş polikliniklerinde bu yıl 4 milyon 535 bin 716 muayenenin gerçekleştirildiği bildirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Kasım 2026, 13:01</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-bu-yil-4-5-milyonu-askin-agiz-ve-dis-sagligi-muayenesi-yapildi/4133460" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="erzurum ve ağrı&#x27;da kar etkili oldu erzurum&#x27;da yüksek kesimler ile palandöken kayak merkezi&#x27;nde kar yağışı etkili oldu. ağrı&#x27;da etkili olan kar yağışı da yaşamı olumsuz etkiledi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 22 Kasım 2026, 12:39</span>
+        </div>
+        <h3>Erzurum ve Ağrı&#x27;da kar etkili oldu</h3>
+        <p>Erzurum&#x27;da yüksek kesimler ile Palandöken Kayak Merkezi&#x27;nde kar yağışı etkili oldu. Ağrı&#x27;da etkili olan kar yağışı da yaşamı olumsuz etkiledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 22 Kasım 2026, 12:39</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/erzurum-ve-agrida-kar-etkili-oldu/4133442" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GÜMRÜK</h2>
+        <p class="category-count">1 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="belçika&#x27;da ulusal grev nedeniyle yarın tüm uçuşlar iptal edilecek belçika&#x27;da federal hükümetin kemer sıkma politikalarını protesto etmek amacıyla yarın düzenlenecek ulusal grev ve gösteri nedeniyle ülkedeki havalimanlarında tüm uçuşlar iptal edilirken, toplu ulaşım ve atık toplama hizmetlerinde de ciddi aksamalar yaşanması bekleniyor. gümrük trt haber" data-category="gümrük">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GÜMRÜK</span>
+            <span class="source source-inline">TRT Haber · 22 Kasım 2026, 14:25</span>
+        </div>
+        <h3>Belçika&#x27;da ulusal grev nedeniyle yarın tüm uçuşlar iptal edilecek</h3>
+        <p>Belçika&#x27;da federal hükümetin kemer sıkma politikalarını protesto etmek amacıyla yarın düzenlenecek ulusal grev ve gösteri nedeniyle ülkedeki havalimanlarında tüm uçuşlar iptal edilirken, toplu ulaşım ve atık toplama hizmetlerinde de ciddi aksamalar yaşanması bekleniyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 22 Kasım 2026, 14:25</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/belcikada-ulusal-grev-nedeniyle-yarin-tum-ucuslar-iptal-edilecek-964134.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
