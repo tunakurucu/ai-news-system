@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">24 Kasım 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">24 Kasım 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>dünya</strong> 7</span><span class="stat-item"><strong>genel</strong> 16</span><span class="stat-item"><strong>ekonomi</strong> 4</span><span class="stat-item"><strong>spor</strong> 3</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">DÜNYA</span>
+        </div>
+        <h3>Schengen vize serbestisi için Türkiye&#x27;yi hangi zorluklar bekliyor?</h3>
+        <p>Dışişleri Bakanı Hakan Fidan&#x27;ın son açıklamaları, Türkiye ile AB arasında yıllardır dondurulmuş olan vize serbestisi diyaloğunun yeniden canlandığını ortaya koydu. Ankara&#x27;daki diplomatik kaynaklara göre, vize serbestisi diyaloğu teknik ve siyasi nedenlerden dolayı zorlu bir süreçten geçecek.</p>
+        <div class="card-footer">
+            <span class="source">BBC Türkçe · 24 Kasım 2026, 09:44</span>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c61wr385xervo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 24 Kasım 2026, 16:43</span>
+            </div>
+            <h3>Bakan Tekin öğretmenlere seslendi: Siz var olduğunuz için başarılı olacağız</h3>
+            <p>Milli Eğitim Bakanı Yusuf Tekin, 24 Kasım Öğretmenler günü dolayısıyla eğitimcilerle bir araya geldi. Tekin, &quot;Hem toplumun ihtiyaçlarını, toplumun eğitimden beklentilerini hem uluslararası gelişmeleri, uluslararası yönelimlerini hem de okullarımızın ve öğretmenlerimizin itibarını maksimum düzeyde karşılayacak şekilde çalışıyoruz&quot; açıklamasını yaptı</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/egitim/bakan-tekin-ogretmenlere-seslendi-siz-var-oldugunuz-icin-basarili-olacagiz-964338.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">TRT Haber · 24 Kasım 2026, 16:39</span>
+            </div>
+            <h3>Cumhurbaşkanı Erdoğan: Kafkasya&#x27;nın tarihi bizim de tarihimizdir</h3>
+            <p>Cumhurbaşkanı Recep Tayyip Erdoğan, &quot;Kafkasya&#x27;nın tarihi, bizim de tarihimizdir. Asırlardır bu coğrafyanın acılarını da sevinçlerini de paylaştık. Bugün omuzlarımızda, bu ortak tarihten aldığımız güçle gelecek nesillere barış ve güven içinde yaşayacakları bir bölge bırakma sorumluluğu vardır.&quot; ifadelerini kullandı.</p>
+            <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-kafkasyanin-tarihi-bizim-de-tarihimizdir-964335.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 24 Kasım 2026, 16:37</span>
+            </div>
+            <h3>Cumhurbaşkanı Erdoğan&#x27;dan &quot;Uluslararası Kafkasya Kongresi&quot; mesajı</h3>
+            <p>Cumhurbaşkanı Erdoğan, Kafkasya&#x27;nın tarihinin Türkiye&#x27;nin de tarihi olduğunu belirterek, ortak geçmişten alınan güçle gelecek nesillere barış ve güven içinde yaşayacakları bir bölge bırakma sorumluluğu taşıdıklarını söyledi.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogandan-uluslararasi-kafkasya-kongresi-mesaji/4135948" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 24 Kasım 2026, 17:41</span>
+            </div>
+            <h3>Hikmet Çetin 89 yaşında hayatını kaybetti</h3>
+            <p>Cumhuriyet Halk Partisi&#x27;nin eski liderlerinden Hikmet Çetin, tedavi gördüğü hastanede 89 yaşında hayatını kaybetti. Çetin, CHP genel başkanlığının yanı sıra Dışişleri Bakanı ve NATO&#x27;nun Afganistan&#x27;daki ilk kıdemli sivil temsilcisi olarak görev yapmıştı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/c9p836157vreo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">7 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="schengen vize serbestisi için türkiye&#x27;yi hangi zorluklar bekliyor? dışişleri bakanı hakan fidan&#x27;ın son açıklamaları, türkiye ile ab arasında yıllardır dondurulmuş olan vize serbestisi diyaloğunun yeniden canlandığını ortaya koydu. ankara&#x27;daki diplomatik kaynaklara göre, vize serbestisi diyaloğu teknik ve siyasi nedenlerden dolayı zorlu bir süreçten geçecek. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 24 Kasım 2026, 09:44</span>
+        </div>
+        <h3>Schengen vize serbestisi için Türkiye&#x27;yi hangi zorluklar bekliyor?</h3>
+        <p>Dışişleri Bakanı Hakan Fidan&#x27;ın son açıklamaları, Türkiye ile AB arasında yıllardır dondurulmuş olan vize serbestisi diyaloğunun yeniden canlandığını ortaya koydu. Ankara&#x27;daki diplomatik kaynaklara göre, vize serbestisi diyaloğu teknik ve siyasi nedenlerden dolayı zorlu bir süreçten geçecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Kasım 2026, 09:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c61wr385xervo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan tekin öğretmenlere seslendi: siz var olduğunuz için başarılı olacağız milli eğitim bakanı yusuf tekin, 24 kasım öğretmenler günü dolayısıyla eğitimcilerle bir araya geldi. tekin, &quot;hem toplumun ihtiyaçlarını, toplumun eğitimden beklentilerini hem uluslararası gelişmeleri, uluslararası yönelimlerini hem de okullarımızın ve öğretmenlerimizin itibarını maksimum düzeyde karşılayacak şekilde çalışıyoruz&quot; açıklamasını yaptı dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 24 Kasım 2026, 16:43</span>
+        </div>
+        <h3>Bakan Tekin öğretmenlere seslendi: Siz var olduğunuz için başarılı olacağız</h3>
+        <p>Milli Eğitim Bakanı Yusuf Tekin, 24 Kasım Öğretmenler günü dolayısıyla eğitimcilerle bir araya geldi. Tekin, &quot;Hem toplumun ihtiyaçlarını, toplumun eğitimden beklentilerini hem uluslararası gelişmeleri, uluslararası yönelimlerini hem de okullarımızın ve öğretmenlerimizin itibarını maksimum düzeyde karşılayacak şekilde çalışıyoruz&quot; açıklamasını yaptı</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Kasım 2026, 16:43</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/bakan-tekin-ogretmenlere-seslendi-siz-var-oldugunuz-icin-basarili-olacagiz-964338.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan: kafkasya&#x27;nın tarihi bizim de tarihimizdir cumhurbaşkanı recep tayyip erdoğan, &quot;kafkasya&#x27;nın tarihi, bizim de tarihimizdir. asırlardır bu coğrafyanın acılarını da sevinçlerini de paylaştık. bugün omuzlarımızda, bu ortak tarihten aldığımız güçle gelecek nesillere barış ve güven içinde yaşayacakları bir bölge bırakma sorumluluğu vardır.&quot; ifadelerini kullandı. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 24 Kasım 2026, 16:39</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan: Kafkasya&#x27;nın tarihi bizim de tarihimizdir</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, &quot;Kafkasya&#x27;nın tarihi, bizim de tarihimizdir. Asırlardır bu coğrafyanın acılarını da sevinçlerini de paylaştık. Bugün omuzlarımızda, bu ortak tarihten aldığımız güçle gelecek nesillere barış ve güven içinde yaşayacakları bir bölge bırakma sorumluluğu vardır.&quot; ifadelerini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Kasım 2026, 16:39</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-kafkasyanin-tarihi-bizim-de-tarihimizdir-964335.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan&#x27;dan &quot;uluslararası kafkasya kongresi&quot; mesajı cumhurbaşkanı erdoğan, kafkasya&#x27;nın tarihinin türkiye&#x27;nin de tarihi olduğunu belirterek, ortak geçmişten alınan güçle gelecek nesillere barış ve güven içinde yaşayacakları bir bölge bırakma sorumluluğu taşıdıklarını söyledi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 24 Kasım 2026, 16:37</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan&#x27;dan &quot;Uluslararası Kafkasya Kongresi&quot; mesajı</h3>
+        <p>Cumhurbaşkanı Erdoğan, Kafkasya&#x27;nın tarihinin Türkiye&#x27;nin de tarihi olduğunu belirterek, ortak geçmişten alınan güçle gelecek nesillere barış ve güven içinde yaşayacakları bir bölge bırakma sorumluluğu taşıdıklarını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 24 Kasım 2026, 16:37</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogandan-uluslararasi-kafkasya-kongresi-mesaji/4135948" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="libya&#x27;daki rus gemisine saldırı, ukrayna savaşının yayılmasına dair ne gösteriyor? ukrayna devlet başkanı volodimir zelenskiy, pazar günü biri savaş gemisi olmak üzere rusya&#x27;ya ait iki gemiyi libya kıyılarında vurduklarını kaydetti. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 24 Kasım 2026, 11:22</span>
+        </div>
+        <h3>Libya&#x27;daki Rus gemisine saldırı, Ukrayna savaşının yayılmasına dair ne gösteriyor?</h3>
+        <p>Ukrayna Devlet Başkanı Volodimir Zelenskiy, Pazar günü biri savaş gemisi olmak üzere Rusya&#x27;ya ait iki gemiyi Libya kıyılarında vurduklarını kaydetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Kasım 2026, 11:22</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cwn70zz4zg0lo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="9 bin 400&#x27;den fazla filistinli esir işkence ve açlık çekiyor katil i̇srail&#x27;in hapishanelerindeki 9 bin 400&#x27;den fazla filistinli esirin her gün işkence, aç bırakma ve kötü muameleye maruz kaldığını belirterek, tedavi haklarından mahrum kalmalarının hayatları için ciddi tehdit oluşturduğu uyarısında bulunuldu. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 24 Kasım 2026, 17:19</span>
+        </div>
+        <h3>9 bin 400&#x27;den fazla Filistinli esir işkence ve açlık çekiyor</h3>
+        <p>Katil İsrail&#x27;in hapishanelerindeki 9 bin 400&#x27;den fazla Filistinli esirin her gün işkence, aç bırakma ve kötü muameleye maruz kaldığını belirterek, tedavi haklarından mahrum kalmalarının hayatları için ciddi tehdit oluşturduğu uyarısında bulunuldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Kasım 2026, 17:19</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/9-bin-400den-fazla-filistinli-esir-iskence-ve-aclik-cekiyor-964340.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan göktaş: kreşlerin kamu ve özel sektör eliyle yaygınlaştırılması için bir teşvik paketini devreye alıyoruz aile ve sosyal hizmetler bakanı mahinur özdemir göktaş, 2027&#x27;de kreşlerin kamu ve özel sektör eliyle yaygınlaştırılması için ilk defa bir teşvik paketini devreye alacaklarını bildirdi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 24 Kasım 2026, 12:12</span>
+        </div>
+        <h3>Bakan Göktaş: Kreşlerin kamu ve özel sektör eliyle yaygınlaştırılması için bir teşvik paketini devreye alıyoruz</h3>
+        <p>Aile ve Sosyal Hizmetler Bakanı Mahinur Özdemir Göktaş, 2027&#x27;de kreşlerin kamu ve özel sektör eliyle yaygınlaştırılması için ilk defa bir teşvik paketini devreye alacaklarını bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 24 Kasım 2026, 12:12</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/bakan-goktas-kreslerin-kamu-ve-ozel-sektor-eliyle-yayginlastirilmasi-icin-bir-tesvik-paketini-devreye-aliyoruz/4135510" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">16 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="hikmet çetin 89 yaşında hayatını kaybetti cumhuriyet halk partisi&#x27;nin eski liderlerinden hikmet çetin, tedavi gördüğü hastanede 89 yaşında hayatını kaybetti. çetin, chp genel başkanlığının yanı sıra dışişleri bakanı ve nato&#x27;nun afganistan&#x27;daki ilk kıdemli sivil temsilcisi olarak görev yapmıştı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Kasım 2026, 17:41</span>
+        </div>
+        <h3>Hikmet Çetin 89 yaşında hayatını kaybetti</h3>
+        <p>Cumhuriyet Halk Partisi&#x27;nin eski liderlerinden Hikmet Çetin, tedavi gördüğü hastanede 89 yaşında hayatını kaybetti. Çetin, CHP genel başkanlığının yanı sıra Dışişleri Bakanı ve NATO&#x27;nun Afganistan&#x27;daki ilk kıdemli sivil temsilcisi olarak görev yapmıştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Kasım 2026, 17:41</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c9p836157vreo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="demirtaş: süreci bozacak davranışlardan kaçınmak ahlaki zorunluluktur on yıldır cezaevinde bulunan eski hdp eş genel başkanı selahattin demirtaş yaptığı yeni açıklamada, &quot;sürecin ritmini, motivasyonunu bozacak her türlü davranıştan kaçınmak ahlaki bir zorunluluktur&quot; dedi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Kasım 2026, 16:44</span>
+        </div>
+        <h3>Demirtaş: Süreci bozacak davranışlardan kaçınmak ahlaki zorunluluktur</h3>
+        <p>On yıldır cezaevinde bulunan eski HDP Eş Genel Başkanı Selahattin Demirtaş yaptığı yeni açıklamada, &quot;Sürecin ritmini, motivasyonunu bozacak her türlü davranıştan kaçınmak ahlaki bir zorunluluktur&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Kasım 2026, 16:44</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmwy0wy2gr84o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="nvidia ceo&#x27;su huang&#x27;ın göreve dönmesiyle şirketin hisseleri %31 arttı nvidia yönetim kurulu, evlilik dışı ilişkisiyle ilgili tartışmaların ardından 12 kasım&#x27;da istifa eden ceo jensen huang&#x27;ı derhal geçerli olmak üzere yeniden göreve getirdi. şirketin hisseleri yüzde 30&#x27;un üzerinde artış gösterdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Kasım 2026, 10:35</span>
+        </div>
+        <h3>Nvidia CEO&#x27;su Huang&#x27;ın göreve dönmesiyle şirketin hisseleri %31 arttı</h3>
+        <p>Nvidia yönetim kurulu, evlilik dışı ilişkisiyle ilgili tartışmaların ardından 12 Kasım&#x27;da istifa eden CEO Jensen Huang&#x27;ı derhal geçerli olmak üzere yeniden göreve getirdi. Şirketin hisseleri yüzde 30&#x27;un üzerinde artış gösterdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Kasım 2026, 10:35</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cm5y1evywyrqo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dsö: gazze&#x27;de menenjit vakalarında bildirilen artışı yakından takip ediyoruz dünya sağlık örgütü (dsö) sözcüsü christian lindmeier, gazze&#x27;de menenjit vakalarında bildirilen artışı yakından takip ettiklerini bildirerek, &quot;şu an itibarıyla 533&#x27;ten fazla vaka ve 4 ölüm kaydedildi.&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 24 Kasım 2026, 17:49</span>
+        </div>
+        <h3>DSÖ: Gazze&#x27;de menenjit vakalarında bildirilen artışı yakından takip ediyoruz</h3>
+        <p>Dünya Sağlık Örgütü (DSÖ) Sözcüsü Christian Lindmeier, Gazze&#x27;de menenjit vakalarında bildirilen artışı yakından takip ettiklerini bildirerek, &quot;Şu an itibarıyla 533&#x27;ten fazla vaka ve 4 ölüm kaydedildi.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Kasım 2026, 17:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/dso-gazzede-menenjit-vakalarinda-bildirilen-artisi-yakindan-takip-ediyoruz-964343.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rami kütüphanesi&#x27;nde ileri düzey masal anlatıcılığı eğitimi düzenlenecek rami kütüphanesi, sözlü kültür mirasının önemli unsurlarından masal anlatıcılığı geleneğini yaşatmak ve bu alanda yeni anlatıcılar yetiştirmek amacıyla &quot;drama teknikleri ile i̇leri düzey masal anlatıcılığı eğitimi&quot; programı düzenleyecek. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 24 Kasım 2026, 16:36</span>
+        </div>
+        <h3>Rami Kütüphanesi&#x27;nde ileri düzey masal anlatıcılığı eğitimi düzenlenecek</h3>
+        <p>Rami Kütüphanesi, sözlü kültür mirasının önemli unsurlarından masal anlatıcılığı geleneğini yaşatmak ve bu alanda yeni anlatıcılar yetiştirmek amacıyla &quot;Drama Teknikleri ile İleri Düzey Masal Anlatıcılığı Eğitimi&quot; programı düzenleyecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Kasım 2026, 16:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/rami-kutuphanesinde-ileri-duzey-masal-anlaticiligi-egitimi-duzenlenecek-964336.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="siyasilerden yeni parti grup toplantısı&#x27;nda cumhurbaşkanı erdoğan&#x27;a yönelik sloganlara tepki ak parti genel başkan yardımcısı ve parti sözcüsü ömer çelik ve ak parti genel başkanvekili efkan ala, yeni parti grup toplantısı&#x27;nda cumhurbaşkanı erdoğan&#x27;a yönelik sloganlara tepki gösterdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 24 Kasım 2026, 15:10</span>
+        </div>
+        <h3>Siyasilerden Yeni Parti Grup Toplantısı&#x27;nda Cumhurbaşkanı Erdoğan&#x27;a yönelik sloganlara tepki</h3>
+        <p>AK Parti Genel Başkan Yardımcısı ve Parti Sözcüsü Ömer Çelik ve AK Parti Genel Başkanvekili Efkan Ala, Yeni Parti Grup Toplantısı&#x27;nda Cumhurbaşkanı Erdoğan&#x27;a yönelik sloganlara tepki gösterdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 24 Kasım 2026, 15:10</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/siyasilerden-yeni-parti-grup-toplantisinda-cumhurbaskani-erdogana-yonelik-sloganlara-tepki/4135788" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="&quot;mali suç örgütlerine&quot; yönelik 71 ilde 455 şüpheliye operasyon yapıldı i̇çişleri bakanlığı, 71 ilde &quot;mali suç örgütlerine&quot; yönelik 455 şüpheliye eş zamanlı operasyon düzenlendiğini bildirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 24 Kasım 2026, 14:34</span>
+        </div>
+        <h3>&quot;Mali suç örgütlerine&quot; yönelik 71 ilde 455 şüpheliye operasyon yapıldı</h3>
+        <p>İçişleri Bakanlığı, 71 ilde &quot;mali suç örgütlerine&quot; yönelik 455 şüpheliye eş zamanlı operasyon düzenlendiğini bildirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 24 Kasım 2026, 14:34</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mali-suc-orgutlerine-yonelik-71-ilde-455-supheliye-operasyon-yapildi/4135724" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="fatma betül sayan kaya&#x27;ya ev hapsi kararıyla tahliye fon soruşturmasında tutuklanan fatma betül sayan kaya hakkında ev hapsi ile tahliye kararı verildi. fatma betül sayan kaya 6 kasım&#x27;da şüpheli sıfatıyla ikinci kez ifade vermesi sonrası tutuklanmıştı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Kasım 2026, 13:35</span>
+        </div>
+        <h3>Fatma Betül Sayan Kaya&#x27;ya ev hapsi kararıyla tahliye</h3>
+        <p>Fon soruşturmasında tutuklanan Fatma Betül Sayan Kaya hakkında ev hapsi ile tahliye kararı verildi. Fatma Betül Sayan Kaya 6 Kasım&#x27;da şüpheli sıfatıyla ikinci kez ifade vermesi sonrası tutuklanmıştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Kasım 2026, 13:35</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cv2d9594753go?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="papa francesco: &#x27;şeytanı üç kez gördüm&#x27; geçtiğimiz yıl hayatını kaybeden papa francesco, özel günlüğünden kamuoyuna yansıyan yeni bölümlerde, hayatı boyunca üç kez şeytanı gördüğünü yazıyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 24 Kasım 2026, 15:45</span>
+        </div>
+        <h3>Papa Francesco: &#x27;Şeytanı üç kez gördüm&#x27;</h3>
+        <p>Geçtiğimiz yıl hayatını kaybeden Papa Francesco, özel günlüğünden kamuoyuna yansıyan yeni bölümlerde, hayatı boyunca üç kez şeytanı gördüğünü yazıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Kasım 2026, 15:45</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/ck1wr3w05qd2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yök&#x27;ten uluslararası öğrencilerine kayıt kolaylığı sağlayacak düzenleme türkiye&#x27;ye giriş amacıyla 30 kasım&#x27;dan önce vize başvurusunda bulunan uluslararası öğrenciler, 30 aralık&#x27;a kadar üniversitelerin lisans programlarına kayıt yaptırabilecek. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 24 Kasım 2026, 17:58</span>
+        </div>
+        <h3>YÖK&#x27;ten uluslararası öğrencilerine kayıt kolaylığı sağlayacak düzenleme</h3>
+        <p>Türkiye&#x27;ye giriş amacıyla 30 Kasım&#x27;dan önce vize başvurusunda bulunan uluslararası öğrenciler, 30 Aralık&#x27;a kadar üniversitelerin lisans programlarına kayıt yaptırabilecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Kasım 2026, 17:58</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/yokten-uluslararasi-ogrencilerine-kayit-kolayligi-saglayacak-duzenleme-964344.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="eski tbmm başkanı hikmet çetin yaşamını yitirdi eski tbmm başkanı hikmet çetin 89 yaşında hayatını kaybetti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 24 Kasım 2026, 17:29</span>
+        </div>
+        <h3>Eski TBMM Başkanı Hikmet Çetin yaşamını yitirdi</h3>
+        <p>Eski TBMM Başkanı Hikmet Çetin 89 yaşında hayatını kaybetti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Kasım 2026, 17:29</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/eski-tbmm-baskani-hikmet-cetin-yasamini-yitirdi-964342.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yök&#x27;ten uluslararası öğrencilere kayıt kolaylığı sağlayacak düzenleme türkiye&#x27;ye giriş amacıyla 30 kasım&#x27;dan önce vize başvurusunda bulunan uluslararası öğrenciler, 30 aralık&#x27;a kadar üniversitelerin lisans programlarına kayıt yaptırabilecek. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 24 Kasım 2026, 17:37</span>
+        </div>
+        <h3>YÖK&#x27;ten uluslararası öğrencilere kayıt kolaylığı sağlayacak düzenleme</h3>
+        <p>Türkiye&#x27;ye giriş amacıyla 30 Kasım&#x27;dan önce vize başvurusunda bulunan uluslararası öğrenciler, 30 Aralık&#x27;a kadar üniversitelerin lisans programlarına kayıt yaptırabilecek.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 24 Kasım 2026, 17:37</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/yokten-uluslararasi-ogrencilere-kayit-kolayligi-saglayacak-duzenleme/4136021" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="60 saniyede bugün (24 kasım 2026) türkiye ve dünya gündeminin 60 saniyelik özeti. ajet’in katkılarıyla... genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 24 Kasım 2026, 16:30</span>
+        </div>
+        <h3>60 saniyede bugün (24 Kasım 2026)</h3>
+        <p>Türkiye ve dünya gündeminin 60 saniyelik özeti. AJet’in katkılarıyla...</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 24 Kasım 2026, 16:30</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/60-saniyede-bugun-24-kasim-2026/4135940" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ankara&#x27;da çöken yolun oluşturduğu çukura hafriyat kamyonu düştü ankara&#x27;da bir alışveriş merkezinin açık otoparkında yolun çökmesi sonucu oluşan çukura hafriyat taşıyan kamyon düştü. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 24 Kasım 2026, 16:05</span>
+        </div>
+        <h3>Ankara&#x27;da çöken yolun oluşturduğu çukura hafriyat kamyonu düştü</h3>
+        <p>Ankara&#x27;da bir alışveriş merkezinin açık otoparkında yolun çökmesi sonucu oluşan çukura hafriyat taşıyan kamyon düştü.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 24 Kasım 2026, 16:05</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ankarada-coken-yolun-olusturdugu-cukura-hafriyat-kamyonu-dustu/4135879" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="alanya&#x27;da denizde hortum oluştu antalya&#x27;nın alanya ilçesinde denizde hortum meydana geldi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 24 Kasım 2026, 14:53</span>
+        </div>
+        <h3>Alanya&#x27;da denizde hortum oluştu</h3>
+        <p>Antalya&#x27;nın Alanya ilçesinde denizde hortum meydana geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 24 Kasım 2026, 14:53</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/alanyada-denizde-hortum-olustu/4135767" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="sapanca gölü kıyısındaki kaçak yapıların yıkımı sürüyor sakarya&#x27;da sapanca gölü kıyısındaki kaçak yapılaşmaya karşı başlatılan 2. etap çalışmalarında 8 iskelenin yıkımı gerçekleştirildi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 24 Kasım 2026, 14:46</span>
+        </div>
+        <h3>Sapanca Gölü kıyısındaki kaçak yapıların yıkımı sürüyor</h3>
+        <p>Sakarya&#x27;da Sapanca Gölü kıyısındaki kaçak yapılaşmaya karşı başlatılan 2. etap çalışmalarında 8 iskelenin yıkımı gerçekleştirildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 24 Kasım 2026, 14:46</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/sapanca-golu-kiyisindaki-kacak-yapilarin-yikimi-suruyor/4135753" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">4 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="ak parti genel başkan yardımcısı zorlu, uluslararası kafkasya kongresi&#x27;nde konuştu ak parti genel başkan yardımcısı zorlu, tarihi i̇pek yolu&#x27;nun yeniden canlandırılması, zengezur koridoru&#x27;nun bölgeye sağlayacağı ekonomik ve ticari katkılar ile iğdır&#x27;ın stratejik konumunun ele alınacağı uluslararası kafkasya kongresi&#x27;nde konuştu. ekonomi anadolu ajansı" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">Anadolu Ajansı · 24 Kasım 2026, 14:40</span>
+        </div>
+        <h3>AK Parti Genel Başkan Yardımcısı Zorlu, Uluslararası Kafkasya Kongresi&#x27;nde konuştu</h3>
+        <p>AK Parti Genel Başkan Yardımcısı Zorlu, Tarihi İpek Yolu&#x27;nun yeniden canlandırılması, Zengezur Koridoru&#x27;nun bölgeye sağlayacağı ekonomik ve ticari katkılar ile Iğdır&#x27;ın stratejik konumunun ele alınacağı Uluslararası Kafkasya Kongresi&#x27;nde konuştu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 24 Kasım 2026, 14:40</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ak-parti-genel-baskan-yardimcisi-zorlu-uluslararasi-kafkasya-kongresinde-konustu/4135736" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bahçeli: &#x27;yolsuzluğa hiçbir şekilde müsamaha gösterme niyetinde değiliz&#x27; mhp genel başkanı devlet bahçeli, partisinin meclis grup toplantısında yaptığı konuşmada yolsuzluk, yoksulluk, adalet, orta sınıfın ekonomik durumu ve sürece ilişkin değerlendirmelerde bulundu. ekonomi bbc türkçe" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">BBC Türkçe · 24 Kasım 2026, 13:03</span>
+        </div>
+        <h3>Bahçeli: &#x27;Yolsuzluğa hiçbir şekilde müsamaha gösterme niyetinde değiliz&#x27;</h3>
+        <p>MHP Genel Başkanı Devlet Bahçeli, partisinin Meclis grup toplantısında yaptığı konuşmada yolsuzluk, yoksulluk, adalet, orta sınıfın ekonomik durumu ve sürece ilişkin değerlendirmelerde bulundu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Kasım 2026, 13:03</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqgm3j0zjvgyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="altın, gün sonunda 6 milyon 140 bin liraya çıktı borsa i̇stanbul kıymetli madenler ve kıymetli taşlar piyasası&#x27;nda (kmktp) standart altının kilogram fiyatı, günün sonunda 6 milyon 140 bin liraya yükseldi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 24 Kasım 2026, 17:24</span>
+        </div>
+        <h3>Altın, gün sonunda 6 milyon 140 bin liraya çıktı</h3>
+        <p>Borsa İstanbul Kıymetli Madenler ve Kıymetli Taşlar Piyasası&#x27;nda (KMKTP) standart altının kilogram fiyatı, günün sonunda 6 milyon 140 bin liraya yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Kasım 2026, 17:24</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/altin-gun-sonunda-6-milyon-140-bin-liraya-cikti-964341.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="küresel ham çelik üretimi azaldı küresel ham çelik üretimi ekimde geçen yılın aynı ayına göre yüzde 1,1 azalarak 142,4 milyon ton oldu. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 24 Kasım 2026, 16:49</span>
+        </div>
+        <h3>Küresel ham çelik üretimi azaldı</h3>
+        <p>Küresel ham çelik üretimi ekimde geçen yılın aynı ayına göre yüzde 1,1 azalarak 142,4 milyon ton oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Kasım 2026, 16:49</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/kuresel-ham-celik-uretimi-azaldi-964339.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">SPOR</h2>
+        <p class="category-count">3 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="galatasaray, aston villa karşısına osimhen&#x27;siz çıkıyor galatasaray, uefa şampiyonlar ligi&#x27;nin beşinci haftasında evinde i̇ngiltere temsilcisi aston villa&#x27;yı ağırlıyor. spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 24 Kasım 2026, 14:40</span>
+        </div>
+        <h3>Galatasaray, Aston Villa karşısına Osimhen&#x27;siz çıkıyor</h3>
+        <p>Galatasaray, UEFA Şampiyonlar Ligi&#x27;nin beşinci haftasında evinde İngiltere temsilcisi Aston Villa&#x27;yı ağırlıyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Kasım 2026, 14:40</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cr62yxwp5jdyo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="futbolun yeni genç yıldızı 16 yaşındaki jj gabriel&#x27;i neler bekliyor? yılın en büyük transfer dedikodularından biri, henüz a takımda hiç resmi maça çıkmamış 16 yaşında bir oyuncu etrafında dönüyor. spor bbc türkçe" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">BBC Türkçe · 24 Kasım 2026, 03:28</span>
+        </div>
+        <h3>Futbolun yeni genç yıldızı 16 yaşındaki JJ Gabriel&#x27;i neler bekliyor?</h3>
+        <p>Yılın en büyük transfer dedikodularından biri, henüz A takımda hiç resmi maça çıkmamış 16 yaşında bir oyuncu etrafında dönüyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 24 Kasım 2026, 03:28</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqr7gz4r1kvvo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="dursun özbek: netanyahu hükümeti, kulübümüzü uefa&#x27;ya şikayet etmiş galatasaray başkanı dursun özbek, sarı kırmızılı taraftarların filistin halkına destek amacıyla açtığı pankartlar nedeniyle katil i̇srail hükümeti tarafından uefa&#x27;ya şikayet edildiğini açıkladı. spor trt haber" data-category="spor">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">SPOR</span>
+            <span class="source source-inline">TRT Haber · 24 Kasım 2026, 16:42</span>
+        </div>
+        <h3>Dursun Özbek: Netanyahu hükümeti, kulübümüzü UEFA&#x27;ya şikayet etmiş</h3>
+        <p>Galatasaray Başkanı Dursun Özbek, sarı kırmızılı taraftarların Filistin halkına destek amacıyla açtığı pankartlar nedeniyle katil İsrail hükümeti tarafından UEFA&#x27;ya şikayet edildiğini açıkladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 24 Kasım 2026, 16:42</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/dursun-ozbek-netanyahu-hukumeti-kulubumuzu-uefaya-sikayet-etmis-964337.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
