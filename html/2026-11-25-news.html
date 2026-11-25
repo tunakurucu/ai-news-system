@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Günün Haberleri</title>
+    <link rel="stylesheet" href="assets/css/news.css">
+    <script src="assets/js/news.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="index.html">AI News</a>
+            <button class="menu-toggle" aria-label="Menü" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Güncel</a><a href="archive.html">Arşiv</a><a href="search.html">Arama</a>
+            </nav>
+            <div class="header-date">25 Kasım 2026</div>
+        </div>
+    </header>
+
+    <main class="site-wrapper">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Günün Haberleri</h1>
+            <p class="hero-date">25 Kasım 2026</p>
+            <p class="hero-lead">Bu güne ait derlenmiş haber akışı. Kaynak ve yayın saatleri korunur.</p>
+        </div>
+        <div class="search-box">
+    <span class="search-icon" aria-hidden="true">Ara</span>
+    <input type="text" id="home-search-input" placeholder="Güncel haberlerde ara..." autocomplete="off">
+</div>
+
+        <div class="category-filters">
+            <button class="category-filter-btn active" data-category="all">Tümü</button><button class="category-filter-btn" data-category="ekonomi">Ekonomi</button><button class="category-filter-btn" data-category="teknoloji">Teknoloji</button><button class="category-filter-btn" data-category="dünya">Dünya</button><button class="category-filter-btn" data-category="gümrük">Gümrük</button><button class="category-filter-btn" data-category="spor">Spor</button><button class="category-filter-btn" data-category="genel">Genel</button>
+        </div>
+        <div class="stats-bar" aria-label="Günlük istatistikler"><span class="stat-item"><strong>toplam haber</strong> 30</span><span class="stat-item"><strong>teknoloji</strong> 2</span><span class="stat-item"><strong>dünya</strong> 6</span><span class="stat-item"><strong>genel</strong> 20</span><span class="stat-item"><strong>ekonomi</strong> 2</span></div>
+
+    </section>
+
+    <section class="section">
+        <h2 class="section-title">Bugünün Özeti</h2>
+        <p class="section-intro">Gün içindeki en yüksek önem puanlı gelişmeleri hızlıca kavrayın.</p>
+        <section class="briefing-shell" aria-label="Bugünün özeti">
+    <article class="briefing-lead">
+        <div class="eyebrow-row">
+            <span class="briefing-kicker">1 numaralı gelişme</span>
+            <span class="category-label">TEKNOLOJI</span>
+        </div>
+        <h3>MEB&#x27;in yapay zeka çalışmalarına ödül</h3>
+        <p>Milli Eğitim Bakanlığı (MEB), yapay zekanın eğitim süreçlerinde etkili ve güvenli biçimde kullanılmasına yönelik çalışmalarıyla 2026 Gartner Eye on Innovation Awards for Education&#x27;da K12 kategorisinin kazananı oldu.</p>
+        <div class="card-footer">
+            <span class="source">TRT Haber · 25 Kasım 2026, 17:36</span>
+            <a class="read-link" href="https://www.trthaber.com/haber/egitim/mebin-yapay-zeka-calismalarina-odul-964458.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+    <aside class="briefing-side">
+        <h3 class="briefing-side-title">Hızlı bakış</h3>
+        <ol class="briefing-list"><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">2</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">TEKNOLOJI</span>
+                <span class="source">Anadolu Ajansı · 25 Kasım 2026, 17:34</span>
+            </div>
+            <h3>MEB&#x27;in yapay zeka çalışmalarına &quot;Gartner Eye on Innovation&quot; ödülü</h3>
+            <p>Milli Eğitim Bakanlığı (MEB), yapay zekanın eğitim süreçlerinde etkili ve güvenli biçimde kullanılmasına yönelik çalışmalarıyla 2026 Gartner Eye on Innovation Awards for Education&#x27;da K12 kategorisinin kazananı oldu.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mebin-yapay-zeka-calismalarina-gartner-eye-on-innovation-odulu/4137675" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">3</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">Anadolu Ajansı · 25 Kasım 2026, 09:28</span>
+            </div>
+            <h3>Cumhurbaşkanı Erdoğan: Kadına yönelik şiddetin hiçbir bahanesi ve gerekçesi olamaz</h3>
+            <p>Cumhurbaşkanı Erdoğan, &quot;Kadına yönelik şiddet vicdansızlıktır, insafsızlıktır, insanlıktan nasibini almamışlara mahsus bir alçaklıktır. Onun için kadına yönelik şiddetin hiçbir bahanesi, hiçbir gerekçesi olamaz.&quot; ifadelerini kullandı.</p>
+            <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-kadina-yonelik-siddetin-hicbir-bahanesi-ve-gerekcesi-olamaz/4136630" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">4</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">GENEL</span>
+                <span class="source">BBC Türkçe · 25 Kasım 2026, 15:09</span>
+            </div>
+            <h3>Irak başbakanının petrol sahaları kararı sonrası Erbil-Bağdat gerilimi</h3>
+            <p>Irak&#x27;ta Bağdat yönetiminin petrol kaçakçılığını önleme amacıyla Irak Kürdistan Bölgesel Yönetimi (IKBY) denetimindeki sınır kapıları ve bazı petrol sahalarını kontrolüne alacağını açıklaması, Erbil yönetimi ile ilişkileri gerdi.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cmzx9wg64dxlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li><li class="briefing-item">
+    <article>
+        <div class="briefing-rank" aria-hidden="true">5</div>
+        <div class="briefing-copy">
+            <div class="eyebrow-row">
+                <span class="category-label">DÜNYA</span>
+                <span class="source">BBC Türkçe · 25 Kasım 2026, 12:57</span>
+            </div>
+            <h3>Numan Kurtulmuş: İzleme Komisyonu 19 üyeden oluşacak</h3>
+            <p>TBMM Başkanı Numan Kurtulmuş, Terörsüz Türkiye süreci için mecliste kurulacak İzleme Komisyonu&#x27;nun kurulması için siyasi parti liderlerine yazı gönderildiğini açıkladı. Komisyonda yedi siyasi partinin meclisteki dağılımlarına göre temsil edilmesi planlanıyor. Yeni Parti ve İyi Parti komisyona üye vermeyeceklerini açıklamıştı.</p>
+            <a class="read-link" href="https://www.bbc.com/turkce/articles/cqlymzd4l1r5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+        </div>
+    </article>
+</li></ol>
+    </aside>
+</section>
+
+    </section>
+
+    <section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">TEKNOLOJI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="meb&#x27;in yapay zeka çalışmalarına ödül milli eğitim bakanlığı (meb), yapay zekanın eğitim süreçlerinde etkili ve güvenli biçimde kullanılmasına yönelik çalışmalarıyla 2026 gartner eye on innovation awards for education&#x27;da k12 kategorisinin kazananı oldu. teknoloji trt haber" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">TRT Haber · 25 Kasım 2026, 17:36</span>
+        </div>
+        <h3>MEB&#x27;in yapay zeka çalışmalarına ödül</h3>
+        <p>Milli Eğitim Bakanlığı (MEB), yapay zekanın eğitim süreçlerinde etkili ve güvenli biçimde kullanılmasına yönelik çalışmalarıyla 2026 Gartner Eye on Innovation Awards for Education&#x27;da K12 kategorisinin kazananı oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Kasım 2026, 17:36</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/egitim/mebin-yapay-zeka-calismalarina-odul-964458.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="meb&#x27;in yapay zeka çalışmalarına &quot;gartner eye on innovation&quot; ödülü milli eğitim bakanlığı (meb), yapay zekanın eğitim süreçlerinde etkili ve güvenli biçimde kullanılmasına yönelik çalışmalarıyla 2026 gartner eye on innovation awards for education&#x27;da k12 kategorisinin kazananı oldu. teknoloji anadolu ajansı" data-category="teknoloji">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">TEKNOLOJI</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Kasım 2026, 17:34</span>
+        </div>
+        <h3>MEB&#x27;in yapay zeka çalışmalarına &quot;Gartner Eye on Innovation&quot; ödülü</h3>
+        <p>Milli Eğitim Bakanlığı (MEB), yapay zekanın eğitim süreçlerinde etkili ve güvenli biçimde kullanılmasına yönelik çalışmalarıyla 2026 Gartner Eye on Innovation Awards for Education&#x27;da K12 kategorisinin kazananı oldu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Kasım 2026, 17:34</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mebin-yapay-zeka-calismalarina-gartner-eye-on-innovation-odulu/4137675" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">DÜNYA</h2>
+        <p class="category-count">6 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="cumhurbaşkanı erdoğan: kadına yönelik şiddetin hiçbir bahanesi ve gerekçesi olamaz cumhurbaşkanı erdoğan, &quot;kadına yönelik şiddet vicdansızlıktır, insafsızlıktır, insanlıktan nasibini almamışlara mahsus bir alçaklıktır. onun için kadına yönelik şiddetin hiçbir bahanesi, hiçbir gerekçesi olamaz.&quot; ifadelerini kullandı. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Kasım 2026, 09:28</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan: Kadına yönelik şiddetin hiçbir bahanesi ve gerekçesi olamaz</h3>
+        <p>Cumhurbaşkanı Erdoğan, &quot;Kadına yönelik şiddet vicdansızlıktır, insafsızlıktır, insanlıktan nasibini almamışlara mahsus bir alçaklıktır. Onun için kadına yönelik şiddetin hiçbir bahanesi, hiçbir gerekçesi olamaz.&quot; ifadelerini kullandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Kasım 2026, 09:28</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-kadina-yonelik-siddetin-hicbir-bahanesi-ve-gerekcesi-olamaz/4136630" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="numan kurtulmuş: i̇zleme komisyonu 19 üyeden oluşacak tbmm başkanı numan kurtulmuş, terörsüz türkiye süreci için mecliste kurulacak i̇zleme komisyonu&#x27;nun kurulması için siyasi parti liderlerine yazı gönderildiğini açıkladı. komisyonda yedi siyasi partinin meclisteki dağılımlarına göre temsil edilmesi planlanıyor. yeni parti ve i̇yi parti komisyona üye vermeyeceklerini açıklamıştı. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 25 Kasım 2026, 12:57</span>
+        </div>
+        <h3>Numan Kurtulmuş: İzleme Komisyonu 19 üyeden oluşacak</h3>
+        <p>TBMM Başkanı Numan Kurtulmuş, Terörsüz Türkiye süreci için mecliste kurulacak İzleme Komisyonu&#x27;nun kurulması için siyasi parti liderlerine yazı gönderildiğini açıkladı. Komisyonda yedi siyasi partinin meclisteki dağılımlarına göre temsil edilmesi planlanıyor. Yeni Parti ve İyi Parti komisyona üye vermeyeceklerini açıklamıştı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Kasım 2026, 12:57</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqlymzd4l1r5o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="rusya&#x27;nın kendi verilerine göre ukrayna&#x27;daki savaşta yaklaşık 500 bin kişi öldü rusya i̇statistik kurumu&#x27;nun (rosstat) sızdırılan verileri, ukrayna&#x27;nın topyekün işgaliyle rusya&#x27;daki ölüm oranlarının nasıl değiştirdiğini ortaya koyuyor. dünya bbc türkçe" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">BBC Türkçe · 25 Kasım 2026, 10:05</span>
+        </div>
+        <h3>Rusya&#x27;nın kendi verilerine göre Ukrayna&#x27;daki savaşta yaklaşık 500 bin kişi öldü</h3>
+        <p>Rusya İstatistik Kurumu&#x27;nun (Rosstat) sızdırılan verileri, Ukrayna&#x27;nın topyekün işgaliyle Rusya&#x27;daki ölüm oranlarının nasıl değiştirdiğini ortaya koyuyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Kasım 2026, 10:05</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cqrlg0z9zywwo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇stanbul&#x27;da kar yağışı için en kuvvetli ihtimal ocak-şubat dönemi i̇stanbul büyükşehir belediyesi (i̇bb) afet koordinasyon merkezi (akom), kentte kar yağışı için en kuvvetli ihtimalin ocak ayı başından şubat ortasına kadarki süreçte gerçekleşeceğinin öngörüldüğünü duyurdu. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Kasım 2026, 14:42</span>
+        </div>
+        <h3>İstanbul&#x27;da kar yağışı için en kuvvetli ihtimal ocak-şubat dönemi</h3>
+        <p>İstanbul Büyükşehir Belediyesi (İBB) Afet Koordinasyon Merkezi (AKOM), kentte kar yağışı için en kuvvetli ihtimalin ocak ayı başından şubat ortasına kadarki süreçte gerçekleşeceğinin öngörüldüğünü duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Kasım 2026, 14:42</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/istanbulda-kar-yagisi-icin-en-kuvvetli-ihtimal-ocak-subat-donemi/4137173" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="ak parti kadın kolları başkanı ercan: tek bir kadının dahi şiddete maruz kalmasına asla rıza gösteremeyiz ak parti genel merkez kadın kolları başkanı ercan, &quot;hedefimiz, kadınların korkudan uzak güven içinde yaşadığı ve haklarının korunduğu toplum düzenini daha da güçlendirmektir. tek bir kadının dahi şiddete maruz kalmasına asla rıza gösteremeyiz.&quot; dedi. dünya anadolu ajansı" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Kasım 2026, 14:00</span>
+        </div>
+        <h3>AK Parti Kadın Kolları Başkanı Ercan: Tek bir kadının dahi şiddete maruz kalmasına asla rıza gösteremeyiz</h3>
+        <p>AK Parti Genel Merkez Kadın Kolları Başkanı Ercan, &quot;Hedefimiz, kadınların korkudan uzak güven içinde yaşadığı ve haklarının korunduğu toplum düzenini daha da güçlendirmektir. Tek bir kadının dahi şiddete maruz kalmasına asla rıza gösteremeyiz.&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Kasım 2026, 14:00</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/ak-parti-kadin-kollari-baskani-ercan-tek-bir-kadinin-dahi-siddete-maruz-kalmasina-asla-riza-gosteremeyiz/4137131" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="shakhtar donetsk fenerbahçe maçı trt 1&#x27;de temsilcimiz fenerbahçe, uefa şampiyonlar ligi&#x27;nin beşinci haftasında bugün ukrayna&#x27;nın shakhtar donetsk ekibiyle i̇ngiltere&#x27;de karşı karşıya gelecek. trt 1, tabii, ve trt radyo 1&#x27;den canlı yayınlanacak karşılaşma saat 23.00&#x27;te başlayacak. dünya trt haber" data-category="dünya">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">DÜNYA</span>
+            <span class="source source-inline">TRT Haber · 25 Kasım 2026, 16:25</span>
+        </div>
+        <h3>Shakhtar Donetsk Fenerbahçe maçı TRT 1&#x27;de</h3>
+        <p>Temsilcimiz Fenerbahçe, UEFA Şampiyonlar Ligi&#x27;nin beşinci haftasında bugün Ukrayna&#x27;nın Shakhtar Donetsk ekibiyle İngiltere&#x27;de karşı karşıya gelecek. TRT 1, tabii, ve TRT Radyo 1&#x27;den canlı yayınlanacak karşılaşma saat 23.00&#x27;te başlayacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Kasım 2026, 16:25</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/spor/shakhtar-donetsk-fenerbahce-maci-trt-1de-964450.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">GENEL</h2>
+        <p class="category-count">20 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="irak başbakanının petrol sahaları kararı sonrası erbil-bağdat gerilimi irak&#x27;ta bağdat yönetiminin petrol kaçakçılığını önleme amacıyla irak kürdistan bölgesel yönetimi (ikby) denetimindeki sınır kapıları ve bazı petrol sahalarını kontrolüne alacağını açıklaması, erbil yönetimi ile ilişkileri gerdi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Kasım 2026, 15:09</span>
+        </div>
+        <h3>Irak başbakanının petrol sahaları kararı sonrası Erbil-Bağdat gerilimi</h3>
+        <p>Irak&#x27;ta Bağdat yönetiminin petrol kaçakçılığını önleme amacıyla Irak Kürdistan Bölgesel Yönetimi (IKBY) denetimindeki sınır kapıları ve bazı petrol sahalarını kontrolüne alacağını açıklaması, Erbil yönetimi ile ilişkileri gerdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Kasım 2026, 15:09</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmzx9wg64dxlo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="eski fransa cumhurbaşkanı sarkozy ve eşi carla bruni yargılanacak eski fransa cumhurbaşkanı nicolas sarkozy ve eşi carla bruni-sarkozy, dönemin libya lideri muammer kaddafi&#x27;nin 2007&#x27;de fransa&#x27;daki seçim kampanyasına usulsüz şekilde mali destek sağladığı iddialarıyla ilgili gelecek yıl yargılanacak. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Kasım 2026, 00:21</span>
+        </div>
+        <h3>Eski Fransa Cumhurbaşkanı Sarkozy ve eşi Carla Bruni yargılanacak</h3>
+        <p>Eski Fransa cumhurbaşkanı Nicolas Sarkozy ve eşi Carla Bruni-Sarkozy, dönemin Libya lideri Muammer Kaddafi&#x27;nin 2007&#x27;de Fransa&#x27;daki seçim kampanyasına usulsüz şekilde mali destek sağladığı iddialarıyla ilgili gelecek yıl yargılanacak.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Kasım 2026, 00:21</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmqj5qzzq02qo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="bakan göktaş: kadına şiddetle mücadeleyi bir insan hakları mücadelesi olarak görüyoruz kadına yönelik şiddetle mücadeleyi bir insan hakları mücadelesi olarak gördüklerini ifade eden bakan göktaş, &quot;bu mücadelenin özünde ise insanı yaratılmışların en şereflisi kabul eden, merhameti, adaleti ve insana hürmeti esas alan medeniyet anlayışımız vardır. kadına yönelik şiddetle mücadelemiz de işte bu değerlerden beslenmektedir&quot; dedi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Kasım 2026, 16:57</span>
+        </div>
+        <h3>Bakan Göktaş: Kadına şiddetle mücadeleyi bir insan hakları mücadelesi olarak görüyoruz</h3>
+        <p>Kadına yönelik şiddetle mücadeleyi bir insan hakları mücadelesi olarak gördüklerini ifade eden Bakan Göktaş, &quot;Bu mücadelenin özünde ise insanı yaratılmışların en şereflisi kabul eden, merhameti, adaleti ve insana hürmeti esas alan medeniyet anlayışımız vardır. Kadına yönelik şiddetle mücadelemiz de işte bu değerlerden beslenmektedir&quot; dedi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Kasım 2026, 16:57</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/bakan-goktas-kadina-siddetle-mucadeleyi-bir-insan-haklari-mucadelesi-olarak-goruyoruz-964454.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, güzel sanatlar lisesi öğrencileriyle buluştu cumhurbaşkanı recep tayyip erdoğan, 24 kasım öğretmenler günü dolayısıyla beştepe millet kongre ve kültür merkezi&#x27;nde düzenlenen &quot;öğretmene saygı gecesi&quot; programında gösteri sunan güzel sanatlar lisesi öğrencileriyle bir araya geldi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Kasım 2026, 14:29</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, güzel sanatlar lisesi öğrencileriyle buluştu</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, 24 Kasım Öğretmenler Günü dolayısıyla Beştepe Millet Kongre ve Kültür Merkezi&#x27;nde düzenlenen &quot;Öğretmene Saygı Gecesi&quot; programında gösteri sunan güzel sanatlar lisesi öğrencileriyle bir araya geldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Kasım 2026, 14:29</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-guzel-sanatlar-lisesi-ogrencileriyle-bulustu/4137158" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="libya ordusu komutanı halife hafter&#x27;in türkiye ziyareti neden önemli? libya ulusal ordusu genel komutanı halife hafter ve üç oğlunun 24-25 kasım&#x27;da ankara&#x27;ya yaptıkları ziyaret, türkiye&#x27;nin trablus yönetiminin ardından bingazi&#x27;deki lider kadrosuyla da ilişkilerini güçlendirdiğini göstermesi açısından önem arz ediyordu. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Kasım 2026, 17:31</span>
+        </div>
+        <h3>Libya ordusu komutanı Halife Hafter&#x27;in Türkiye ziyareti neden önemli?</h3>
+        <p>Libya Ulusal Ordusu Genel Komutanı Halife Hafter ve üç oğlunun 24-25 Kasım&#x27;da Ankara&#x27;ya yaptıkları ziyaret, Türkiye&#x27;nin Trablus yönetiminin ardından Bingazi&#x27;deki lider kadrosuyla da ilişkilerini güçlendirdiğini göstermesi açısından önem arz ediyordu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Kasım 2026, 17:31</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6dj1xey8e81o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="çözüm sürecinde gözler mgk&#x27;ya çevrildi: teyit kararı ne zaman çıkacak? i̇ktidarın &quot;terörsüz türkiye&quot; olarak adlandırdığı süreçte, pkk&#x27;nın silah bıraktığının teyidi konusunda gözler 26 kasım perşembe günü yapılması beklenen milli güvenlik kurulu (mgk) toplantısına çevrildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Kasım 2026, 12:02</span>
+        </div>
+        <h3>Çözüm sürecinde gözler MGK&#x27;ya çevrildi: Teyit kararı ne zaman çıkacak?</h3>
+        <p>İktidarın &quot;Terörsüz Türkiye&quot; olarak adlandırdığı süreçte, PKK&#x27;nın silah bıraktığının teyidi konusunda gözler 26 Kasım Perşembe günü yapılması beklenen Milli Güvenlik Kurulu (MGK) toplantısına çevrildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Kasım 2026, 12:02</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c63rg9vy987qo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="25 kasım&#x27;da kadınlar sokağa çıkıyor: &#x27;10 ayda 245 kadın öldürüldü, 274 kadının ölümü şüpheli&#x27; 25 kasım kadına yönelik şiddete karşı uluslararası mücadele günü kapsamında türkiye&#x27;nin çeşitli kentlerinde yürüyüş ve basın açıklamaları düzenlenecek. i̇stanbul&#x27;da tünel&#x27;deki buluşma nedeniyle beyoğlu&#x27;nda bazı yollar trafiğe kapatıldı. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Kasım 2026, 16:32</span>
+        </div>
+        <h3>25 Kasım&#x27;da kadınlar sokağa çıkıyor: &#x27;10 ayda 245 kadın öldürüldü, 274 kadının ölümü şüpheli&#x27;</h3>
+        <p>25 Kasım Kadına Yönelik Şiddete Karşı Uluslararası Mücadele Günü kapsamında Türkiye&#x27;nin çeşitli kentlerinde yürüyüş ve basın açıklamaları düzenlenecek. İstanbul&#x27;da Tünel&#x27;deki buluşma nedeniyle Beyoğlu&#x27;nda bazı yollar trafiğe kapatıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Kasım 2026, 16:32</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cq9vwr742gd3o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ngiltere&#x27;de gençler ve yetişkinlere cinsellik araştırması ne sonuçlar verdi? büyük britanya&#x27;yı oluşturan i̇ngiltere, i̇skoçya ve galler&#x27;de yapılan büyük bir araştırmaya göre özellikle genç ve genç yetişkin britanyalılar, geçmiş nesillere kıyasla daha az cinsel ilişkiye giriyor veya tamamen uzak duruyor. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Kasım 2026, 16:34</span>
+        </div>
+        <h3>İngiltere&#x27;de gençler ve yetişkinlere cinsellik araştırması ne sonuçlar verdi?</h3>
+        <p>Büyük Britanya&#x27;yı oluşturan İngiltere, İskoçya ve Galler&#x27;de yapılan büyük bir araştırmaya göre özellikle genç ve genç yetişkin Britanyalılar, geçmiş nesillere kıyasla daha az cinsel ilişkiye giriyor veya tamamen uzak duruyor.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Kasım 2026, 16:34</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c6lykxd4knmeo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="soykırımcı i̇srail, kasım ayı başından bu yana 16 çocuk ve öğrenciyi öldürdü soykırımcı i̇srail ordusunun gazze kentinin batısındaki bir eve düzenlediği saldırıda 2 kız kardeşin hayatını kaybetmesiyle, kasım ayı başından bu yana öldürülen çocuk ve öğrenci sayısı 16&#x27;ya yükseldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Kasım 2026, 17:26</span>
+        </div>
+        <h3>Soykırımcı İsrail, kasım ayı başından bu yana 16 çocuk ve öğrenciyi öldürdü</h3>
+        <p>Soykırımcı İsrail ordusunun Gazze kentinin batısındaki bir eve düzenlediği saldırıda 2 kız kardeşin hayatını kaybetmesiyle, kasım ayı başından bu yana öldürülen çocuk ve öğrenci sayısı 16&#x27;ya yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Kasım 2026, 17:26</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/soykirimci-israil-kasim-ayi-basindan-bu-yana-16-cocuk-ve-ogrenciyi-oldurdu-964457.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="türkiyelibya deniz yetki anlaşması&#x27;nda son aşama tamamlandı libya temsilciler meclisinin onayladığı türkiye ile libya arasındaki deniz yetki alanlarının sınırlandırılmasına ilişkin anlaşma, harita ve coğrafi koordinatlarıyla birlikte libya resmi gazetesi&#x27;nde yayımlandı. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Kasım 2026, 17:13</span>
+        </div>
+        <h3>TürkiyeLibya Deniz Yetki Anlaşması&#x27;nda son aşama tamamlandı</h3>
+        <p>Libya Temsilciler Meclisinin onayladığı Türkiye ile Libya arasındaki deniz yetki alanlarının sınırlandırılmasına ilişkin anlaşma, harita ve coğrafi koordinatlarıyla birlikte Libya Resmi Gazetesi&#x27;nde yayımlandı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Kasım 2026, 17:13</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/turkiye-libya-deniz-yetki-anlasmasinda-son-asama-tamamlandi-964455.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, maraşel hafter&#x27;i kabul etti cumhurbaşkanı recep tayyip erdoğan, libya ulusal ordusu genel komutanı maraşel halife hafter ve beraberindeki heyeti, cumhurbaşkanlığı külliyesi&#x27;nde kabul etti. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Kasım 2026, 16:51</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, Maraşel Hafter&#x27;i kabul etti</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Libya Ulusal Ordusu Genel Komutanı Maraşel Halife Hafter ve beraberindeki heyeti, Cumhurbaşkanlığı Külliyesi&#x27;nde kabul etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Kasım 2026, 16:51</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-marasel-hafteri-kabul-etti-964451.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="mhp&#x27;de izleme komisyonu üyeleri belli oldu mhp, milli dayanışma ve toplumsal bütünleşmenin güçlendirilmesine dair kanun kapsamında tbmm&#x27;de kurulacak &quot;izleme komisyonu&quot;na, genel başkan yardımcısı feti yıldız ile sakarya milletvekili muhammed levent bülbül&#x27;ü görevlendirdi. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Kasım 2026, 17:21</span>
+        </div>
+        <h3>MHP&#x27;de izleme komisyonu üyeleri belli oldu</h3>
+        <p>MHP, Milli Dayanışma ve Toplumsal Bütünleşmenin Güçlendirilmesine Dair Kanun kapsamında TBMM&#x27;de kurulacak &quot;izleme komisyonu&quot;na, Genel Başkan Yardımcısı Feti Yıldız ile Sakarya Milletvekili Muhammed Levent Bülbül&#x27;ü görevlendirdi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Kasım 2026, 17:21</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/mhpde-izleme-komisyonu-uyeleri-belli-oldu/4137653" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="cumhurbaşkanı erdoğan, libya ulusal ordusu genel komutanı hafter&#x27;i kabul etti cumhurbaşkanı recep tayyip erdoğan, libya ulusal ordusu genel komutanı mareşal halife hafter ve beraberindeki heyeti kabul etti. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Kasım 2026, 17:02</span>
+        </div>
+        <h3>Cumhurbaşkanı Erdoğan, Libya Ulusal Ordusu Genel Komutanı Hafter&#x27;i kabul etti</h3>
+        <p>Cumhurbaşkanı Recep Tayyip Erdoğan, Libya Ulusal Ordusu Genel Komutanı Mareşal Halife Hafter ve beraberindeki heyeti kabul etti.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Kasım 2026, 17:02</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/cumhurbaskani-erdogan-libya-ulusal-ordusu-genel-komutani-hafteri-kabul-etti/4137618" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="yeni parti&#x27;de yeni yönetim kadrosu belirlendi yeni parti genel başkanı özgür özel&#x27;in başkanlığında 25 kasım&#x27;da yapılan ilk parti meclisi toplantısında partinin yeni merkez yönetim kurulu (myk) üyeleri seçildi. genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Kasım 2026, 14:00</span>
+        </div>
+        <h3>Yeni Parti&#x27;de yeni yönetim kadrosu belirlendi</h3>
+        <p>Yeni Parti Genel Başkanı Özgür Özel&#x27;in başkanlığında 25 Kasım&#x27;da yapılan ilk Parti Meclisi toplantısında partinin yeni Merkez Yönetim Kurulu (MYK) üyeleri seçildi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Kasım 2026, 14:00</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/cmrlg02zkp6xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="danıştay, i̇mamoğlu&#x27;nun diploma iptali kararını neye dayandırdı? tutuklanarak i̇stanbul büyükşehir belediye (i̇bb) başkanlığı görevinden uzaklaştırılan ekrem i̇mamoğlu&#x27;nun diploma iptaline karşı danıştay&#x27;a yaptığı temyiz başvurusu reddedildi genel bbc türkçe" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">BBC Türkçe · 25 Kasım 2026, 12:48</span>
+        </div>
+        <h3>Danıştay, İmamoğlu&#x27;nun diploma iptali kararını neye dayandırdı?</h3>
+        <p>Tutuklanarak İstanbul Büyükşehir Belediye (İBB) Başkanlığı görevinden uzaklaştırılan Ekrem İmamoğlu&#x27;nun diploma iptaline karşı Danıştay&#x27;a yaptığı temyiz başvurusu reddedildi</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">BBC Türkçe · 25 Kasım 2026, 12:48</span>
+        <a class="read-link" href="https://www.bbc.com/turkce/articles/c338535pvm2o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="i̇ran ordusu: hürmüz boğazı&#x27;nda bir petrol tankeri deniz mayınına çarparak alev aldı i̇ran ordusu, hürmüz boğazı&#x27;nın doğusunda &quot;izinsiz güzergahı&quot; kullanan bir petrol tankerinin deniz mayınına çarparak alev aldığını duyurdu. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Kasım 2026, 17:46</span>
+        </div>
+        <h3>İran ordusu: Hürmüz Boğazı&#x27;nda bir petrol tankeri deniz mayınına çarparak alev aldı</h3>
+        <p>İran ordusu, Hürmüz Boğazı&#x27;nın doğusunda &quot;izinsiz güzergahı&quot; kullanan bir petrol tankerinin deniz mayınına çarparak alev aldığını duyurdu.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Kasım 2026, 17:46</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/iran-ordusu-hurmuz-bogazinda-bir-petrol-tankeri-deniz-mayinina-carparak-alev-aldi-964459.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="katil i̇srail&#x27;in gazze&#x27;ye saldırılarında hayatını kaybeden filistinlilerin sayısı 6&#x27;ya yükseldi katil i̇srail ordusunun ateşkese rağmen gazze şeridi&#x27;nin çeşitli bölgelerine sabah saatlerinden bu yana düzenlediği saldırılarda hayatını kaybeden filistinlilerin sayısı 6&#x27;ya yükseldi. genel trt haber" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">TRT Haber · 25 Kasım 2026, 17:05</span>
+        </div>
+        <h3>Katil İsrail&#x27;in Gazze&#x27;ye saldırılarında hayatını kaybeden Filistinlilerin sayısı 6&#x27;ya yükseldi</h3>
+        <p>Katil İsrail ordusunun ateşkese rağmen Gazze Şeridi&#x27;nin çeşitli bölgelerine sabah saatlerinden bu yana düzenlediği saldırılarda hayatını kaybeden Filistinlilerin sayısı 6&#x27;ya yükseldi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Kasım 2026, 17:05</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/dunya/katil-israilin-gazzeye-saldirilarinda-hayatini-kaybeden-filistinlilerin-sayisi-6ya-yukseldi-964453.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="60 saniyede bugün (25 kasım 2026) türkiye ve dünya gündeminin 60 saniyelik özeti. ajet’in katkılarıyla... genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Kasım 2026, 16:00</span>
+        </div>
+        <h3>60 saniyede bugün (25 Kasım 2026)</h3>
+        <p>Türkiye ve dünya gündeminin 60 saniyelik özeti. AJet’in katkılarıyla...</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Kasım 2026, 16:00</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/60-saniyede-bugun-25-kasim-2026/4137524" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="erciyes&#x27;te yapay karlama çalışmaları başladı türkiye&#x27;nin önemli kayak merkezlerinden erciyes&#x27;te 2026-2027 kayak sezonu hazırlıkları kapsamında yapay kar üretilmeye başladı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Kasım 2026, 15:41</span>
+        </div>
+        <h3>Erciyes&#x27;te yapay karlama çalışmaları başladı</h3>
+        <p>Türkiye&#x27;nin önemli kayak merkezlerinden Erciyes&#x27;te 2026-2027 kayak sezonu hazırlıkları kapsamında yapay kar üretilmeye başladı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Kasım 2026, 15:41</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/kultur/erciyeste-yapay-karlama-calismalari-basladi/4137459" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="trabzon&#x27;un şalpazarı ilçesinde taşkın ve heyelan meydana geldi trabzon&#x27;un şalpazarı ilçesinde ağasar deresi&#x27;nin taşması sonucu ilk belirlemelere göre bölgedeki bir köprüde hasar oluştu, tedbir amacıyla boşaltılan bazı evler ise yıkıldı. genel anadolu ajansı" data-category="genel">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">GENEL</span>
+            <span class="source source-inline">Anadolu Ajansı · 25 Kasım 2026, 13:55</span>
+        </div>
+        <h3>Trabzon&#x27;un Şalpazarı ilçesinde taşkın ve heyelan meydana geldi</h3>
+        <p>Trabzon&#x27;un Şalpazarı ilçesinde Ağasar Deresi&#x27;nin taşması sonucu ilk belirlemelere göre bölgedeki bir köprüde hasar oluştu, tedbir amacıyla boşaltılan bazı evler ise yıkıldı.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">Anadolu Ajansı · 25 Kasım 2026, 13:55</span>
+        <a class="read-link" href="https://www.aa.com.tr/tr/gundem/trabzonun-salpazari-ilcesinde-taskin-ve-heyelan-meydana-geldi/4137119" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+<section class="category-section">
+    <div class="category-heading">
+        <h2 class="category-title">EKONOMI</h2>
+        <p class="category-count">2 haber</p>
+    </div>
+    <div class="news-list">
+        <article class="news-card" data-search="rusya&#x27;da rafinerilerdeki onarımlar nedeniyle akaryakıt piyasasında sıkıntı yaşanıyor rusya başbakan yardımcısı aleksandr novak, petrol rafinerilerindeki onarım çalışmaları nedeniyle ülkenin akaryakıt piyasasında sıkıntı yaşandığını söyledi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 25 Kasım 2026, 16:51</span>
+        </div>
+        <h3>Rusya&#x27;da rafinerilerdeki onarımlar nedeniyle akaryakıt piyasasında sıkıntı yaşanıyor</h3>
+        <p>Rusya Başbakan Yardımcısı Aleksandr Novak, petrol rafinerilerindeki onarım çalışmaları nedeniyle ülkenin akaryakıt piyasasında sıkıntı yaşandığını söyledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Kasım 2026, 16:51</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/rusyada-rafinerilerdeki-onarimlar-nedeniyle-akaryakit-piyasasinda-sikinti-yasaniyor-964452.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+<article class="news-card" data-search="altın fiyatlarında son durum borsa i̇stanbul kıymetli madenler ve kıymetli taşlar piyasası&#x27;nda (kmktp) standart altının kilogram fiyatı, günün sonunda 6 milyon 10 bin liraya geriledi. ekonomi trt haber" data-category="ekonomi">
+    <div class="news-card-body">
+        <div class="eyebrow-row">
+            <span class="category-label">EKONOMI</span>
+            <span class="source source-inline">TRT Haber · 25 Kasım 2026, 17:21</span>
+        </div>
+        <h3>Altın fiyatlarında son durum</h3>
+        <p>Borsa İstanbul Kıymetli Madenler ve Kıymetli Taşlar Piyasası&#x27;nda (KMKTP) standart altının kilogram fiyatı, günün sonunda 6 milyon 10 bin liraya geriledi.</p>
+    </div>
+    <div class="card-footer">
+        <span class="source source-block">TRT Haber · 25 Kasım 2026, 17:21</span>
+        <a class="read-link" href="https://www.trthaber.com/haber/ekonomi/altin-fiyatlarinda-son-durum-964456.html" target="_blank" rel="noopener noreferrer">Haberi oku</a>
+    </div>
+</article>
+
+    </div>
+</section>
+
+</main>
+
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>AI News — Otomatik olarak oluşturulur</div>
+            <div class="footer-links">
+                <a href="rss_sources.json">RSS Kaynakları</a>
+                <a href="https://github.com/tunakurucu/ai-news-system">GitHub</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
